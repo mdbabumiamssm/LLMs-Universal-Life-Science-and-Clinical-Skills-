@@ -1,10 +1,10 @@
-# Claude Desktop Integration
+# Desktop Integration
 
-This guide covers how to integrate BioMCP with Claude Desktop, enabling AI-powered biomedical research directly in your Claude conversations.
+This guide covers how to integrate BioMCP with desktop applications that support the Model Context Protocol (MCP), such as Claude Desktop, enabling AI-powered biomedical research directly in your conversations.
 
 ## Prerequisites
 
-- [Claude Desktop](https://claude.ai/download) application
+- An MCP-compatible desktop application (e.g., [Claude Desktop](https://claude.ai/download))
 - One of the following:
   - **Option A**: Python 3.10+ and [uv](https://docs.astral.sh/uv/) (recommended)
   - **Option B**: [Docker](https://www.docker.com/products/docker-desktop/)
@@ -25,12 +25,13 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
 ```
 
-#### 2. Configure Claude Desktop
+#### 2. Configure Your Desktop Application
 
-Add BioMCP to your Claude Desktop configuration file:
+Add BioMCP to your application's configuration file (e.g., `claude_desktop_config.json` for Claude Desktop).
 
-**macOS**: `~/Library/Application Support/Claude/claude_desktop_config.json`
-**Windows**: `%APPDATA%\Claude\claude_desktop_config.json`
+**Location (Claude Desktop):**
+- **macOS**: `~/Library/Application Support/Claude/claude_desktop_config.json`
+- **Windows**: `%APPDATA%\Claude\claude_desktop_config.json`
 
 ```json
 {
@@ -72,7 +73,7 @@ ENTRYPOINT ["biomcp", "run"]
 docker build -t biomcp:latest .
 ```
 
-#### 3. Configure Claude Desktop
+#### 3. Configure Your Desktop Application
 
 Add BioMCP to your configuration file:
 
@@ -94,9 +95,9 @@ Add BioMCP to your configuration file:
 
 ## Verification
 
-1. Restart Claude Desktop after updating the configuration
+1. Restart your desktop application after updating the configuration
 2. Start a new conversation
-3. Look for the 🔌 icon indicating MCP is connected
+3. Look for the indicator that MCP is connected (e.g., a plug icon)
 4. Test with: "Can you search for articles about BRAF mutations in melanoma?"
 
 ## Setting Up API Keys
@@ -126,7 +127,7 @@ Enables enhanced cancer genomics queries:
 
 ## Usage Examples
 
-Once configured, you can ask Claude to perform various biomedical research tasks:
+Once configured, you can ask your assistant to perform various biomedical research tasks:
 
 ### Literature Search
 
@@ -161,14 +162,14 @@ BRAF V600E melanoma who has progressed on dabrafenib/trametinib"
 
 ## The Deep Researcher Persona
 
-BioMCP includes a specialized "Deep Researcher" persona that enhances Claude's biomedical research capabilities:
+BioMCP enables advanced research capabilities:
 
-- **Sequential Thinking**: Automatically uses the `think` tool for systematic analysis
+- **Sequential Thinking**: Automatically uses tools for systematic analysis
 - **Comprehensive Coverage**: Searches multiple databases and synthesizes findings
 - **Evidence-Based**: Provides citations and links to primary sources
 - **Clinical Focus**: Understands medical context and terminology
 
-To activate, simply ask biomedical questions naturally. The persona automatically engages for research tasks.
+To activate, simply ask biomedical questions naturally.
 
 ## Troubleshooting
 
@@ -176,7 +177,7 @@ To activate, simply ask biomedical questions naturally. The persona automaticall
 
 1. Verify the configuration file path is correct
 2. Check JSON syntax (no trailing commas)
-3. Ensure Claude Desktop has been restarted
+3. Ensure the application has been restarted
 4. Check that uv or Docker is properly installed
 
 ### "Command Not Found"
@@ -284,7 +285,7 @@ You can run multiple BioMCP instances with different settings:
 
 ## Next Steps
 
-Now that BioMCP is integrated with Claude Desktop:
+Now that BioMCP is integrated with your desktop application:
 
 1. Try the [example queries](#usage-examples) above
 2. Explore [How-to Guides](../how-to-guides/01-find-articles-and-cbioportal-data.md) for specific research workflows
