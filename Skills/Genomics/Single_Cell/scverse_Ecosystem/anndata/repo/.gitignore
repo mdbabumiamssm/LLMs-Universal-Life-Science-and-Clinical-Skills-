@@ -1,0 +1,37 @@
+# Temp files
+.DS_Store
+*~
+
+# Caches for compiled and downloaded files
+__pycache__/
+/*cache/
+/node_modules/
+/data/
+/venv/
+
+# Distribution / packaging
+/dist/
+/ci/min-deps.txt
+/ci/pre-deps.txt
+/requirements*.lock
+/.python-version
+
+# Test results (nunit/junit) and coverage
+/test-data/
+/*coverage*
+
+# jupyter
+.ipynb_checkpoints
+
+# docs
+/docs/generated/
+/docs/_build/
+
+# IDEs
+/.idea/
+
+# Benchmark
+.asv
+benchmark/benchmarks/data
+benchmarks/benchmarks/data
+benchmarks/pkgs

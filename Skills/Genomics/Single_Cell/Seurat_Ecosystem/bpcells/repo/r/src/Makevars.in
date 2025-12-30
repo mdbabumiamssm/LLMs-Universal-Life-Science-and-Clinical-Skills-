@@ -1,0 +1,92 @@
+# CXX_STD = CXX17
+
+PKG_CXXFLAGS = %HDF5_CFLAGS% %HWY_CFLAGS% %ENV_CFLAGS% -Ivendor -std=c++17 -DRCPP_EIGEN -DEIGEN_PERMANENTLY_DISABLE_STUPID_WARNINGS -Wno-ignored-attributes -Wno-unknown-pragmas # -Wall -Wextra -Wpedantic
+PKG_LIBS = -lz %HDF5_LIBS% %CXX_FS_FLAG% %HWY_LIBS% %ENV_LDFLAGS%
+
+# PKG_CXXFLAGS = -Wno-deprecated-declarations -Wno-unused-but-set-variable -fsanitize=undefined %HDF5_CFLAGS% %HWY_CFLAGS% -std=c++17 -DRCPP_EIGEN -DEIGEN_PERMANENTLY_DISABLE_STUPID_WARNINGS -Wno-ignored-attributes -Wno-unknown-pragmas # -Wall -Wextra -Wpedantic
+# PKG_LIBS = -fsanitize=undefined -lz %HDF5_LIBS% %CXX_FS_FLAG% %HWY_LIBS%
+
+OBJECTS=\
+bitpacking_io.o \
+clustering.o \
+fragment_io.o \
+fragment_utils.o \
+matrix_io.o \
+matrix_transforms.o \
+matrix_utils.o \
+R_array_io.o \
+R_highfive_logger.o \
+RcppExports.o \
+bpcells-cpp/arrayIO/array_interfaces.o \
+bpcells-cpp/arrayIO/binaryfile.o \
+bpcells-cpp/arrayIO/bp128.o \
+bpcells-cpp/arrayIO/hdf5.o \
+bpcells-cpp/arrayIO/vector.o \
+bpcells-cpp/fragmentIterators/BedFragments.o \
+bpcells-cpp/fragmentIterators/CellSelect.o \
+bpcells-cpp/fragmentIterators/ChrSelect.o \
+bpcells-cpp/fragmentIterators/FragmentIterator.o \
+bpcells-cpp/fragmentIterators/LengthSelect.o \
+bpcells-cpp/fragmentIterators/MergeFragments.o \
+bpcells-cpp/fragmentIterators/RegionSelect.o \
+bpcells-cpp/fragmentIterators/Rename.o \
+bpcells-cpp/fragmentIterators/ShiftCoords.o \
+bpcells-cpp/fragmentIterators/StoredFragments.o \
+bpcells-cpp/fragmentUtils/BedWriter.o \
+bpcells-cpp/fragmentUtils/FootprintMatrix.o \
+bpcells-cpp/fragmentUtils/InsertionIterator.o \
+bpcells-cpp/matrixIterators/H5DenseMatrixWriter.o \
+bpcells-cpp/matrixIterators/ImportMatrix10xHDF5.o \
+bpcells-cpp/matrixIterators/ImportMatrixAnnDataHDF5.o \
+bpcells-cpp/matrixIterators/PeakMatrix.o \
+bpcells-cpp/matrixIterators/TileMatrix.o \
+bpcells-cpp/matrixIterators/MatrixStats.o \
+bpcells-cpp/matrixIterators/MatrixMarketImport.o \
+bpcells-cpp/matrixIterators/SVD.o \
+bpcells-cpp/matrixTransforms/Binarize.o \
+bpcells-cpp/matrixTransforms/LinearResidual.o \
+bpcells-cpp/matrixTransforms/Log1p.o \
+bpcells-cpp/matrixTransforms/Min.o \
+bpcells-cpp/matrixTransforms/MatrixTransform.o \
+bpcells-cpp/matrixTransforms/Pow.o \
+bpcells-cpp/matrixTransforms/Round.o \
+bpcells-cpp/matrixTransforms/SCTransform.o \
+bpcells-cpp/matrixTransforms/Scale.o \
+bpcells-cpp/matrixTransforms/Shift.o \
+bpcells-cpp/matrixUtils/WilcoxonRankSum.o \
+bpcells-cpp/matrixUtils/Pseudobulk.o \
+bpcells-cpp/matrixUtils/Quantile.o \
+bpcells-cpp/simd/bp128/current_target.o \
+bpcells-cpp/simd/bp128/bp128-Nx128.o \
+bpcells-cpp/simd/bp128/d1_maxbits.o \
+bpcells-cpp/simd/bp128/d1_pack.o \
+bpcells-cpp/simd/bp128/d1_unpack.o \
+bpcells-cpp/simd/bp128/d1z_maxbits.o \
+bpcells-cpp/simd/bp128/d1z_pack.o \
+bpcells-cpp/simd/bp128/d1z_unpack.o \
+bpcells-cpp/simd/bp128/diff_maxbits.o \
+bpcells-cpp/simd/bp128/diff_pack.o \
+bpcells-cpp/simd/bp128/diff_unpack.o \
+bpcells-cpp/simd/bp128/for_maxbits.o \
+bpcells-cpp/simd/bp128/for_pack.o \
+bpcells-cpp/simd/bp128/for_unpack.o \
+bpcells-cpp/simd/bp128/vanilla_maxbits.o \
+bpcells-cpp/simd/bp128/vanilla_pack.o \
+bpcells-cpp/simd/bp128/vanilla_unpack.o \
+bpcells-cpp/simd/current_target.o \
+bpcells-cpp/simd/dense-multiply.o \
+bpcells-cpp/simd/math.o \
+bpcells-cpp/simd/overlaps.o \
+bpcells-cpp/simd/sctransform.o \
+vendor/md5/md5.o \
+
+# r_wrapper.o \
+# profiler.o \
+# matrix_transform.o \
+# fragmentIterators/InsertionsIterator.o \
+# fragmentIterators/ShiftCoords.o \
+# fragmentIterators/UnpackedFragments3.o \
+# fragmentIterators/PackedFragments3.o \
+# matrixIterators/MatrixOps.o \
+# matrixIterators/PackedMatrix.o \
+# matrixIterators/UnpackedMatrix.o \

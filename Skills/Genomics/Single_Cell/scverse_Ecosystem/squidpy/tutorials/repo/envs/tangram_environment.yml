@@ -1,0 +1,9 @@
+name: tangram
+channels:
+  - conda-forge
+dependencies:
+  - python=3.8
+  - pip
+  - pip:
+      - squidpy>=1.1.0
+      - tangram-sc==0.4.0

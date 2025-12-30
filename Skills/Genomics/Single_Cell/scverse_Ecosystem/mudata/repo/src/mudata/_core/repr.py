@@ -1,0 +1,277 @@
+#
+# Utility functions for MuData._repr_html_()
+#
+
+from collections.abc import Iterable
+from numbers import Complex, Integral, Number, Real
+from warnings import warn
+
+import numpy as np
+import pandas as pd
+
+
+def maybe_module_class(obj, sep=".", builtins=False) -> tuple[str, str]:
+    m, cl = "", obj.__class__.__name__
+    try:
+        m += obj.__class__.__module__
+        if m == "builtins" and not builtins:
+            m = ""
+        else:
+            m += sep
+    except Exception:
+        m += ""
+    return (m, cl)
+
+
+def format_values(x):
+    s = ""
+    if not isinstance(x, Iterable):
+        s += f"{x}"
+    elif isinstance(x, pd.DataFrame):
+        s += "DataFrame ({} x {})".format(*x.shape)
+    elif hasattr(x, "keys") and hasattr(x, "values") and not hasattr(x, "shape"):
+        ks = ",".join(x.keys())
+        if "," not in ks:  # only 1 element
+            vs = ",".join(map(format_values, x.values()))
+            s += ks + ": " + vs
+        else:
+            s += ks
+    elif isinstance(x, str):
+        s += x
+    else:
+        if not len(x):
+            return s
+        x = x[: min(100, len(x))]
+        testval = None
+        if hasattr(x, "shape"):
+            if isinstance(x, np.ndarray):
+                x = x.reshape(-1)
+            elif isinstance(x, pd.Series):
+                x = x.to_numpy()
+            else:
+                warn(f"got unknown array type {type(x)}, don't know how handle it.")
+                return type(x)
+            if x.dtype == object:
+                try:
+                    testval = next(
+                        filter(
+                            lambda y: ~np.isnan(y) if isinstance(y, Number) else x is not None,
+                            x,
+                        )
+                    )
+                except StopIteration:
+                    pass
+        if testval is None:
+            testval = x[0]
+        if (
+            isinstance(testval, Integral)
+            or isinstance(testval, np.bool_)
+            or isinstance(testval, bool)
+        ):
+            s += ",".join([f"{i}" for i in x])
+        elif isinstance(testval, Real):
+            s += ",".join([f"{i:.2f}" for i in x])
+        elif isinstance(testval, Complex):
+            warn("got complex number, don't know how to handle it")
+        elif isinstance(testval, Iterable):
+            s += ",".join(map(format_values, x))
+        lastidx = max(50, s.find(","))
+        s = s[:lastidx]
+        s += "..."
+    return s
+
+
+def block_matrix(data, attr, name):
+    obj = getattr(data, attr)
+    s = ""
+    s += f"<div class='title title-attr'>{name}</div><span class='hl-dim'>.{attr}</span>"
+    s += "<div>"
+    s += """
+            <span class='hl-types'>{}</span> <span>&nbsp;&nbsp;&nbsp;<span class='hl-import'>{}</span>{}</span>
+         """.format(
+        obj.dtype, *maybe_module_class(obj)
+    )
+    s += "</table></div>"
+    return s
+
+
+def details_block_table(data, attr, name, expand=0, dims=True, square=False):
+    obj = getattr(data, attr)
+    s = ""
+    # DataFrame
+    if isinstance(obj, pd.DataFrame):
+        s += "<details{}>".format(" open" if expand else "")
+        s += "<summary><div class='title title-attr'>{}</div><span class='hl-dim'>.{}</span><span class='hl-size'>{} element{}</span></summary>".format(
+            name, attr, obj.shape[1], "s" if obj.shape[1] != 1 else ""
+        )
+        if obj.shape[1] > 0:
+            s += "<div><table>"
+            s += "\n".join(
+                [
+                    f"""<tr>
+                                <td class='col-index'>{attr_key}</td>  <td class='hl-types'>{obj[attr_key].dtype}</td>  <td class='hl-values'>{format_values(obj[attr_key])}</td>
+                            </tr>"""
+                    for attr_key in obj.columns
+                ]
+            )
+            s += "</table></div>"
+        else:
+            s += f"<span class='hl-empty'>No {name.lower()}</span>"
+        s += "</details>"
+    # Dict-like object
+    elif hasattr(obj, "keys") and hasattr(obj, "values") and name != "Miscellaneous":
+        s += "<details{}>".format(" open" if expand else "")
+        s += "<summary><div class='title title-attr'>{}</div><span class='hl-dim'>.{}</span><span class='hl-size'>{} element{}</span></summary>".format(
+            name, attr, len(obj), "s" if len(obj) != 1 else ""
+        )
+        if len(obj) > 0:
+            s += "<div><table>"
+            if square:  # e.g. distance matrices in .obsp
+                s += "\n".join(
+                    [
+                        """<tr>
+                                       <td class='col-index'>{}</td>  <td class='hl-types'>{}</td>  <td><span class='hl-import'>{}</span>{}</td>
+                                   </tr>""".format(
+                            attr_key, obj[attr_key].dtype, *maybe_module_class(obj[attr_key])
+                        )
+                        for attr_key in obj.keys()
+                    ]
+                )
+            else:  # e.g. embeddings in .obsm
+                s += "\n".join(
+                    [
+                        """<tr>
+                                       <td class='col-index'>{}</td>  <td class='hl-types'>{}</td>  <td><span class='hl-import'>{}</span>{}</td>  <td class='hl-dims'>{}</td>
+                                   </tr>""".format(
+                            attr_key,
+                            obj[attr_key].dtype if hasattr(obj[attr_key], "dtype") else "",
+                            *maybe_module_class(obj[attr_key]),
+                            (
+                                f"{obj[attr_key].shape[1]} columns"
+                                if len(obj[attr_key].shape) > 1 and dims
+                                else ""
+                            ),
+                        )
+                        for attr_key in obj.keys()
+                    ]
+                )
+
+            s += "</table></div>"
+        else:
+            s += f"<span class='hl-empty'>No {name.lower()}</span>"
+        s += "</details>"
+    elif hasattr(obj, "file"):  # HDF5 dataset
+        s += "<details{}>".format(" open" if expand else "")
+        s += f"<summary><div class='title title-attr'>{name}</div><span class='hl-dim'>.{attr}</span><span class='hl-size'>{len(obj)} elements</span></summary>"
+        s += "<div><table>"
+        s += """<tr>
+                <td class='hl-types'>{}</td>  <td><span class='hl-import'>{}</span>{}</td>
+                </tr>""".format(
+            obj.dtype, *maybe_module_class(obj)
+        )
+        s += "</table></div>"
+        s += "</details>"
+    else:  # Unstructured
+        s += "<details{}>".format(" open" if expand else "")
+        s += f"<summary><div class='title title-attr'>{name}</div><span class='hl-dim'>.{attr}</span><span class='hl-size'>{len(obj)} elements</span></summary>"
+        if len(obj) > 0:
+            s += "<div><table>"
+            s += "\n".join(
+                [
+                    """<tr>
+                                <td class='col-index'>{}</td>  <td><span class='hl-import'>{}</span>{}</td>  <td class='hl-dims'>{} element{}</td>  <td class='hl-values'>{}</td>
+                            </tr>""".format(
+                        attr_key,
+                        *maybe_module_class(obj[attr_key]),
+                        len(obj[attr_key]),
+                        "s" if len(obj[attr_key]) != 1 else "",
+                        format_values(obj[attr_key]),
+                    )
+                    for attr_key in obj.keys()
+                ]
+            )
+            s += "</table></div>"
+        else:
+            s += f"<span class='hl-empty'>No {name.lower()}</span>"
+        s += "</details>"
+    return s
+
+
+MUDATA_CSS = """<style>
+.scv-mudata-repr-html {
+    .hl-dim, .hl-size, .hl-values, .hl-types, .hl-dims {
+    color: #777777;
+    }
+    .hl-dim::before, .hl-size::before {
+    content: "\\00a0\\00a0\\00a0";
+    }
+    .hl-values {
+    font-family: monospace;
+    }
+    .hl-file {
+    background-color: #EEEEEE;
+    border-radius: .5rem;
+    padding: .2rem .4rem;
+    color: #555555;
+    }
+    .hl-empty {
+    color: #999999;
+    }
+    .hl-import {
+    color: #777777;
+    }
+    .block-mod {
+    display: block;
+    margin: 0 2rem;
+    }
+    .title {
+    display: inline-block;
+    font-weight: 600;
+    color: #555555;
+    }
+    .title-mod {
+    font-size: 1.2rem;
+    color: #04b374;
+    padding: 0 .5rem;
+    }
+    .title-attr {
+    font-size: 1.0rem;
+    padding-top: .2rem;
+    }
+    summary {
+    cursor: pointer;
+    list-style: none;
+    }
+    summary::-webkit-details-marker {
+    display: none;
+    }
+    details > summary::before {
+    content: '\u2295';
+    }
+    details[open] > summary::before {
+    content: '\u2296';
+    }
+    table tr {
+    background-color: transparent !important;
+    }
+    table tr:hover {
+    background-color: #04b37433 !important;
+    }
+    .col-index {
+    text-align: left !important;
+    }
+    .summary-mod {
+    margin-left: -2rem;
+    }
+    .summary-mod:hover {
+    background-color: #04b37411;
+    }
+    .summary-mod::before {
+    color: #04b374;
+    content: '\u25cf';
+    }
+    details[open] > .summary-mod::before {
+    content: '\u25cb';
+    }
+}
+</style>"""

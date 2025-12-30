@@ -1,0 +1,25 @@
+/_build/
+/dist/
+*.h5ad
+*.zip
+
+/cache/
+/archive/
+/data/
+/write/
+/figures/
+/scripts/
+
+# example files
+CD79A.png
+
+# caches
+*~
+__pycache__/
+.ipynb_checkpoints/
+.*cache/
+
+# OS or Editor files and folders
+.DS_Store
+Thumbs.db
+.directory
