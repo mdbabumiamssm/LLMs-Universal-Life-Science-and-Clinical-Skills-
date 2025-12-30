@@ -24,7 +24,10 @@ skills/
 │   ├── Skills/                  # Production-ready skills
 │   │   ├── Clinical/            # Healthcare AI capabilities
 │   │   ├── Drug_Discovery/      # Cheminformatics & pharma
-│   │   └── Genomics/            # Bioinformatics & sequencing
+│   │   ├── Genomics/            # Bioinformatics & sequencing
+│   │   ├── MCP_Servers/         # Model Context Protocol servers
+│   │   └── Research_Tools/      # General research capabilities
+│   │       └── Data_Analysis/   # Python, R, SQL, Tableau, Power BI
 │   ├── test_demonstration/      # Skill validation suite
 │   └── presentation_materials/  # Presentations & tutorials
 │
@@ -58,6 +61,7 @@ skills/
 
 We have extensively enriched the collection with the latest (2024-2025) AI agents and frameworks:
 
+- **Data Analysis Skill (NEW)**: Comprehensive toolkit with Python (Pandas, NumPy), R, SQL, and visualization tools (Tableau, Power BI).
 - **Biomni (Stanford)**: General-purpose agent with 150+ tools.
 - **STAgent**: Multimodal spatial transcriptomics analysis.
 - **BioMaster**: Automated end-to-end bioinformatics workflows.

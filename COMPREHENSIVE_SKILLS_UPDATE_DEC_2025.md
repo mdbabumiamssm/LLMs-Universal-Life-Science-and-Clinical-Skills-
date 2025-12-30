@@ -411,7 +411,53 @@ This document contains an extensive compilation of newly discovered LLM agents, 
 
 ---
 
-## 18. Frameworks & Platforms
+## 18. Data Analysis & Statistical Computing
+
+### Data Analysis Skill (NEW)
+- **ID**: `biomedical.research_tools.data_analysis`
+- **Description**: Comprehensive data analysis toolkit for biomedical research
+- **Languages**: Python (Pandas, NumPy, SciPy), R (tidyverse, survival), SQL
+- **Visualization**: Tableau, Power BI, Matplotlib, Seaborn, Plotly
+- **Status**: Production - `Skills/Research_Tools/Data_Analysis`
+
+#### Python Proficiency (Pandas, NumPy)
+
+| Capability | Description | Use Case |
+|------------|-------------|----------|
+| **Data Wrangling** | Loading, cleaning, transforming tabular data | CSV/Excel processing, missing value handling |
+| **Statistical Computing** | Descriptive stats, hypothesis testing, correlations | Clinical trial analysis, biomarker comparisons |
+| **Array Operations** | High-performance numerical computations | Genomic matrices, image arrays |
+| **DataFrame Manipulation** | Merging, grouping, pivoting, reshaping | Multi-omics integration |
+
+#### R Statistical Computing
+
+| Capability | Description | Use Case |
+|------------|-------------|----------|
+| **Statistical Modeling** | Linear/logistic regression, mixed models | Clinical outcome prediction, GWAS |
+| **Biostatistics** | Survival analysis, meta-analysis | Kaplan-Meier, forest plots |
+| **Package Ecosystem** | Bioconductor, tidyverse | Genomic analysis |
+| **Publication Graphics** | ggplot2 visualizations | Journal-ready figures |
+
+#### SQL Database Querying
+
+| Capability | Description | Use Case |
+|------------|-------------|----------|
+| **Data Retrieval** | SELECT, JOIN, subqueries | EHR extraction, cohort ID |
+| **Aggregations** | GROUP BY, window functions | Patient statistics |
+| **Performance** | Query optimization | Large-scale clinical DBs |
+
+#### Visualization Tools (Tableau, Power BI)
+
+| Platform | Features | Integration |
+|----------|----------|-------------|
+| **Tableau** | Interactive dashboards, drill-down analytics | TabPy, R integration |
+| **Power BI** | Automated reporting, data connectors | Python/R visuals |
+| **Matplotlib/Seaborn** | Publication figures | PNG, SVG, PDF output |
+| **Plotly** | Interactive HTML visualizations | Web dashboards |
+
+---
+
+## 19. Frameworks & Platforms
 
 ### LangChain for Life Sciences
 - **Source**: [O'Reilly Book](https://www.oreilly.com/library/view/langchain-for-life/9781098162627/)
@@ -428,11 +474,12 @@ This document contains an extensive compilation of newly discovered LLM agents, 
 
 ## Summary Statistics
 
-- **Total New Agents Discovered**: 45+
+- **Total New Agents Discovered**: 46+
 - **New MCP Servers**: 8+
 - **GitHub Awesome Lists**: 9
-- **High Priority Items**: 12
-- **Categories Covered**: 18
+- **High Priority Items**: 13
+- **Categories Covered**: 19
+- **Data Analysis Tools**: Python (Pandas, NumPy), R, SQL, Tableau, Power BI
 
 ---
 
