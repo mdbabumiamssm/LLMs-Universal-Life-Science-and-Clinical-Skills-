@@ -1,0 +1,10 @@
+name: stardist
+channels:
+  - conda-forge
+dependencies:
+  - pip
+  - python>=3.8
+  - pip:
+      - squidpy>=1.1.0
+      - stardist==0.6.2
+      - tensorflow==2.4.1

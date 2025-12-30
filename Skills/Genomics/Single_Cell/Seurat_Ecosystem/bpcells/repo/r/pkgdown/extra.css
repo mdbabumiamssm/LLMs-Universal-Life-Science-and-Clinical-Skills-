@@ -1,0 +1,22 @@
+/* Make outlines when clicking on details in vignettes */
+details[open] {
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 0.5em;
+}
+
+details[open] summary {
+    padding: 0.5em;
+    border-bottom: 1px solid grey;
+    margin: -0.5em -0.5em 0.5em;
+  }
+
+/* Make the external link icon match styling in Python docs */
+.nav-link .fa-arrow-up-right-from-square {
+    font-size: 0.75em;
+}
+
+/* Make lines not go through the logo */
+.logo {
+    background: #fcfcfc;
+}

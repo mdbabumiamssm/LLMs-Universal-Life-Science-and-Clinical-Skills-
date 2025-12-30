@@ -1,0 +1,25 @@
+name: Publish Python Package
+
+on:
+  release:
+    types: [published]
+
+env:
+  FORCE_COLOR: "1"
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment: pypi
+    permissions:
+      id-token: write # to authenticate as Trusted Publisher to pypi.org
+    steps:
+      - uses: actions/checkout@v6
+        with: { filter: 'blob:none', fetch-depth: 0 }
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.x"
+      - uses: astral-sh/setup-uv@v7
+      - run: uvx --from build pyproject-build --sdist --wheel .
+      - run: uvx twine check dist/*
+      - uses: pypa/gh-action-pypi-publish@release/v1

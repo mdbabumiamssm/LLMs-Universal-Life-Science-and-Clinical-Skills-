@@ -1,0 +1,13 @@
+build/
+*.egg-info
+__pycache__
+.envrc
+.direnv
+.tox
+
+highway/
+tests/data
+
+src/bpcells/version.py
+
+test.py
