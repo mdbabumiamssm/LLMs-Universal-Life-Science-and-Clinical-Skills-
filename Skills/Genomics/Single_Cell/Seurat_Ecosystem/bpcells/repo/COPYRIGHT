@@ -1,0 +1,92 @@
+Copyrights in the BPCells project are retained by their contributors. No
+copyright assignment is required to contribute to BPCells. By contributing 
+to BPCells, you dual-license your code under both the Apache-2.0 and MIT
+licenses such that it is available for downstream users under either 
+license.
+
+Some files include explicit copyright notices and/or license notices.
+
+Except as otherwise noted (below and/or in individual files), BPCells is
+licensed under the Apache License, Version 2.0 <LICENSE-APACHE> or
+<http://www.apache.org/licenses/LICENSE-2.0> or the MIT license
+<LICENSE-MIT> or <http://opensource.org/licenses/MIT>, at your option.
+
+BPCells includes packages written by third parties.
+The following third party packages are included, and carry
+their own copyright notices and license terms:
+
+------------------------------------------------------------------------------
+HighFive
+
+cpp/vendor/highfive/*: BSL-1.0 license
+Copyright 2015-2022 Blue Brain Project/EPFL
+License: listed in cpp/vendor/highfive/LICENSE
+Authors: listed in cpp/vendor/highfive/AUTHORS.txt
+URL: https://github.com/BlueBrain/HighFive
+
+------------------------------------------------------------------------------
+Highway
+
+This contains a subset of the original source files, eliminating functionality
+not required in BPCells
+
+cpp/vendor/highway/*: Apache-2.0, and BSD-3-Clause
+Copyright 2019-2023 Google LLC
+License: listed in cpp/vendor/highway/LICENSE
+URL: https://github.com/google/highway
+
+------------------------------------------------------------------------------
+dary_heap
+
+This source file has been modified to eliminate functionality not required by
+BPCells
+
+cpp/vendor/dary_heap/*: BSL-1.0
+Copyright Malte Skarupke 2020
+License: http://www.boost.org/LICENSE_1_0.txt
+URL: https://github.com/skarupke/heap
+
+------------------------------------------------------------------------------
+MD5 (Independent implementation)
+
+The linked implementation combines provides a combined header/implementation
+file, which has been split into a .c and .h file. Some additional includes
+and macro definitions have been supplied to allow compilation without errors.
+
+cpp/vendor/md5/*: Zlib
+Authors: L. Peter Deutsch, <ghost@aladdin.com>
+Copyright (C) 1999, 2000, 2002 Aladdin Enterprises
+License: <cpp/vendor/md5/md5.h>
+URL: https://root.cern.ch/doc/v610/md5_8inl_source.html
+
+------------------------------------------------------------------------------
+libdivide
+
+Algorithms from this source file have been adapted for portable SIMD 
+implementations elsewhere in the BPCells code, with inline comments citing 
+libdivide 
+
+cpp/vendor/libdivide/*: BSL-1.0, and Zlib
+Copyright (C) 2010 - 2022 ridiculous_fish, <libdivide@ridiculousfish.com>
+Copyright (C) 2016 - 2022 Kim Walisch, <kim.walisch@gmail.com>
+License: https://github.com/ridiculousfish/libdivide/blob/master/LICENSE.txt
+URL: https://github.com/ridiculousfish/libdivide
+
+------------------------------------------------------------------------------
+Spectra
+
+cpp/vendor/Spectra/*: MPL-2.0
+Authors: <cpp/vendor/Spectra/Authors.md>
+License: http://mozilla.org/MPL/2.0/
+URL: https://github.com/yixuan/spectra
+
+------------------------------------------------------------------------------
+RSpectra
+
+Documentation from the RSpectra package was adapted for BPCells. As the 
+RSpectra package is originally distributed under MPL-2.0, this one source
+file containing only documentation is also licensed under MPL-2.0
+
+r/R/matrix-svds-docs.R: MPL-2.0
+License: http://mozilla.org/MPL/2.0/
+URL: https://github.com/yixuan/RSpectra

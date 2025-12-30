@@ -1,0 +1,7 @@
+^data-raw$
+^.*\.Rproj$
+^\.Rproj\.user$
+^README\.Rmd$
+^\.dockerignore$
+^.git.*$
+^Dockerfile$

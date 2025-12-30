@@ -29,6 +29,7 @@ venv/
 ENV/
 env/
 .venv/
+test_demonstration/venv/
 
 # Environment Variables
 .env

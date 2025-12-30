@@ -1,0 +1,66 @@
+name: Benchmark
+
+on:
+  push:
+    branches: [main, "[0-9]+.[0-9]+.x"]
+  pull_request:
+    branches: [main]
+
+env:
+  FORCE_COLOR: "1"
+
+defaults:
+  run:
+    # Add `-l` to GitHub’s default bash options to activate mamba environments
+    # https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax#exit-codes-and-error-action-preference
+    # https://github.com/mamba-org/setup-micromamba/#readme
+    shell: bash -elo pipefail {0}
+
+jobs:
+  benchmark:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ["3.12"]
+        os: [ubuntu-latest]
+
+    env:
+      OS: ${{ matrix.os }}
+      PYTHON: ${{ matrix.python }}
+      ASV_DIR: "./benchmarks"
+
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+          # no blob filter so asv can checkout other commits
+
+      - run: git fetch origin main:main
+        if: ${{ github.ref_name != 'main' }}
+        # Errors on main branch
+
+      - uses: mamba-org/setup-micromamba@v2
+        with:
+          environment-name: asv
+          cache-environment: true
+          # Deps documented in https://asv.readthedocs.io/en/latest/installing.html
+          create-args: >-
+            python=${{ matrix.python }}
+            asv
+            py_rattler
+            conda-build
+
+      - name: Cache datasets
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache
+          key: benchmark-state-${{ hashFiles('benchmarks/**') }}
+
+      - name: Quick benchmark run
+        working-directory: ${{ env.ASV_DIR }}
+        run: |
+          asv machine --yes
+          asv run --quick --show-stderr --verbose

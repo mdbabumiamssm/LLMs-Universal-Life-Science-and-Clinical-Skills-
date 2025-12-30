@@ -1,0 +1,57 @@
+Package: BPCells
+Title: Single Cell Counts Matrices to PCA
+Version: 0.3.1
+Authors@R: c(
+    person(given = "Benjamin",
+           family = "Parks",
+           role = c("aut", "cre", "cph"),
+           email = "bparks@alumni.stanford.edu",
+           comment = c(ORCID = "0000-0002-0261-7472")),
+    person("Immanuel", "Abdi", role = "aut"),
+    person("Stanford University", role=c("cph", "fnd")),
+    person("Genentech, Inc.", role=c("cph", "fnd")))
+Description: > Efficient operations for single cell ATAC-seq fragments and
+    RNA counts matrices. Interoperable with standard file formats, and introduces
+    efficient bit-packed formats that allow large storage savings and increased
+    read speeds.
+License: Apache-2.0 or MIT
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.3.2
+Roxygen: list(markdown = TRUE)
+URL: https://bnprks.github.io/BPCells, https://github.com/bnprks/BPCells
+LinkingTo: 
+    Rcpp,
+    RcppEigen
+Imports: 
+    methods,
+    grDevices,
+    magrittr,
+    Matrix,
+    Rcpp,
+    rlang,
+    tools,
+    vctrs,
+    lifecycle,
+    stringr,
+    tibble,
+    dplyr (>= 1.0.0),
+    tidyr,
+    readr,
+    ggplot2 (>= 3.4.0),
+    scales,
+    patchwork,
+    scattermore,
+    ggrepel,
+    RColorBrewer,
+    hexbin
+Suggests:
+    IRanges,
+    GenomicRanges,
+    matrixStats,
+    igraph,
+    RcppHNSW,
+    RcppAnnoy
+Depends: 
+    R (>= 4.0.0)
+Config/Needs/website: pkgdown, devtools, uwot, irlba, RcppHNSW, igraph, BiocManager, bioc::BSgenome.Hsapiens.UCSC.hg38, github::GreenleafLab/motifmatchr, github::GreenleafLab/chromVARmotifs, png, magrittr

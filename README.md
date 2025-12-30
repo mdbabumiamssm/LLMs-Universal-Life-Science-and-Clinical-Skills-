@@ -1,147 +1,80 @@
-# Universal Biomedical Skills Platform
+# LLMs Universal Life Science & Clinical Skills
 
-**Production-Ready AI Skills for Life Science & Clinical Applications**
+**The Open-Source Operating System for Biomedical AI Agents**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Status: Production](https://img.shields.io/badge/Status-Production-brightgreen.svg)]()
 [![Platform: Multi-LLM](https://img.shields.io/badge/Platform-Claude%20%7C%20ChatGPT%20%7C%20Gemini-purple.svg)]()
+
+---
+
+## Mission
+
+We build **production-ready, platform-agnostic biomedical AI skills** that empower researchers, clinicians, and developers to deploy advanced AI capabilities across any LLM interface. Whether you use **Claude**, **ChatGPT**, **Gemini**, or custom open-source models, our standardized skills deliver reproducible, validated results for real-world biomedical workflows.
 
 ---
 
 ## Repository Structure
 
+This workspace is organized into several key components:
+
 ```
 skills/
-├── src/                         # Main source code (GitHub repo)
-│   ├── Skills/                  # Production skills
+├── src/                         # Main source code (GitHub submodule)
+│   ├── Skills/                  # Production-ready skills
 │   │   ├── Clinical/            # Healthcare AI capabilities
 │   │   ├── Drug_Discovery/      # Cheminformatics & pharma
 │   │   └── Genomics/            # Bioinformatics & sequencing
 │   ├── test_demonstration/      # Skill validation suite
 │   └── presentation_materials/  # Presentations & tutorials
 │
-├── platform/                    # Platform prototype
+├── skill collections/           # Extensive library of curated AI resources
+│   ├── Awesome-Biomedical-LLM-Agents/ # Latest agents (STAgent, Biomni, etc.)
+│   └── (Other curated repositories)
+│
+├── platform/                    # USDL Platform Prototype
 │   ├── adapters/                # USDL to platform converters
 │   ├── schema/                  # USDL JSON schemas
-│   ├── evaluator/               # Cross-platform evaluation
-│   └── optimizer/               # Prompt optimization engine
+│   └── evaluator/               # Cross-platform evaluation
 │
-├── tests/                       # Local test suite
-│   ├── qc_analysis.py           # QC pipeline tests
-│   └── scRNAsedata/             # Sample datasets
-│
-├── docs/                        # Documentation
-│   ├── presentations/           # Slide decks & assets
-│   ├── research/                # Academic papers
-│   └── strategy/                # Platform strategy docs
-│
-└── archive/                     # Archived materials (git-ignored)
-    ├── external_references/     # Curated external repos
-    ├── old_versions/            # Previous implementations
-    └── presentation_drafts/     # Draft presentations
+├── tests/                       # Local testing & sample datasets
+└── docs/                        # Project documentation & strategy
 ```
 
 ---
 
-## Quick Start
+## Why This Repository?
 
-### 1. Clone and Setup
-
-```bash
-cd /home/drdx/ARTIFICIALINTELLIGENCEGROUP/skills
-
-# The main source is in src/ (tracks GitHub repo)
-cd src
-
-# Install dependencies for testing
-pip install -r test_demonstration/requirements.txt
-```
-
-### 2. Run a Skill
-
-```bash
-# Single-Cell RNA-seq QC
-python test_demonstration/qc_analysis.py sample.h5ad --output-dir results/
-
-# Or use as Python library
-python -c "from Skills.Genomics.Single_Cell_RNA_QC.qc_core import calculate_qc_metrics; print('Ready!')"
-```
+| Challenge | Our Solution |
+|-----------|--------------|
+| Biomedical AI tools are fragmented | **Universal Skill Definition Language (USDL)** compiles once, deploys everywhere |
+| AI prompts lack scientific validation | Every skill follows **peer-reviewed methodologies** with citations |
+| Integration is complex | **Drop-in Python modules** work with LangChain, AutoGen, Semantic Kernel |
+| Results are non-reproducible | **Statistical rigor** (MAD-based filtering, etc.) ensures consistency |
 
 ---
 
-## Key Components
+## Recent Updates (December 2025)
 
-### Source (`src/`)
+We have extensively enriched the collection with the latest (2024-2025) AI agents and frameworks:
 
-The main codebase tracking the GitHub repository:
-- **Skills/**: Production-ready AI skills with prompts and tools
-- **test_demonstration/**: Validation suite with sample data
-- **presentation_materials/**: Documentation and tutorials
-
-### Platform (`platform/`)
-
-Universal Skill Definition Language (USDL) infrastructure:
-- **adapters/**: Convert USDL to Claude MCP, OpenAI Actions, Gemini Extensions
-- **schema/**: JSON schemas for skill definitions
-- **evaluator/**: Cross-platform accuracy testing
-
-### Tests (`tests/`)
-
-Local testing environment with:
-- Sample scRNA-seq datasets (bone marrow samples)
-- QC validation scripts
-- Integration tests
-
-### Docs (`docs/`)
-
-Project documentation:
-- **presentations/**: Current slide decks and visual assets
-- **research/**: Academic paper drafts
-- **strategy/**: Platform roadmap and architecture
-
-### Archive (`archive/`)
-
-Git-ignored folder containing:
-- **external_references/**: 27+ curated repos (3GB)
-- **old_versions/**: Previous skill implementations
-- **presentation_drafts/**: Earlier presentation versions
+- **Biomni (Stanford)**: General-purpose agent with 150+ tools.
+- **STAgent**: Multimodal spatial transcriptomics analysis.
+- **BioMaster**: Automated end-to-end bioinformatics workflows.
+- **CellAgent**: Multi-agent single-cell RNA-seq annotation.
+- **BioMCP**: Model Context Protocol servers for PubMed & ClinicalTrials.
+- **TrialGPT (NIH)**: Precision clinical trial matching.
+- **scverse & Seurat Ecosystems**: Local clones and tutorials for the complete single-cell stack.
 
 ---
 
-## Development Workflow
-
-### Making Changes
-
-1. Edit files in `src/` for production changes
-2. Test locally using `tests/` scripts
-3. Commit and push from `src/` directory
-
-```bash
-cd src
-git add .
-git commit -m "Your changes"
-git push origin main
-```
-
-### Adding New Skills
-
-1. Create skill directory: `src/Skills/<Category>/<SkillName>/`
-2. Add required files: `README.md`, `prompt.md`, implementation files
-3. Add tests in `tests/` directory
-4. Update platform adapters if needed
-
----
-
-## GitHub Repository
-
-**Remote:** https://github.com/mdbabumiamssm/LLMs-Universal-Life-Science-and-Clinical-Skills-
-
-The `src/` directory is synchronized with the GitHub repository.
-
----
-
-## Author
+## Author & Maintainer
 
 **MD BABU MIA**
 *Artificial Intelligence Group*
 *Icahn School of Medicine at Mount Sinai*
 md.babu.mia@mssm.edu
+
+## License
+
+[MIT License](LICENSE) - Free for academic and commercial use.

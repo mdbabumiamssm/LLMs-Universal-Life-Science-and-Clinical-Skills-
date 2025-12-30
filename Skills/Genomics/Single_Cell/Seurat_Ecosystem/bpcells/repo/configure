@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# This curl request helps count daily installs prior to CRAN release:
+# No identifiable information or IP addresses are saved, and server logs are
+# deleted every 14 days. More information on data privacy policy: https://plausible.io/data-policy
+
+# To skip counting your installation, either delete the following line, 
+# or set the CI or ENABLE_INSTALL_COUNTING environment variables ahead of installation.
+if [ -z "$CI" ]; then ENABLE_INSTALL_COUNTING=${ENABLE_INSTALL_COUNTING:-yes}; fi
+
+if [ "$ENABLE_INSTALL_COUNTING" == "yes" ]; then
+    curl --silent "https://plausible.benparks.net/flask-plausible/bpcells-moved-location" > /dev/null 2> /dev/null \
+        || true
+    echo "Recording install count metrics"
+else
+    echo "Skipping install count metrics"
+fi
+
+echo ""
+echo ""
+echo "################################################"
+echo "Error: BPCells installation location has moved."
+echo ""
+echo 'To install from the new location, please run:'
+echo ""
+echo '    remotes::install_github("bnprks/BPCells/r")'
+echo ""
+echo "################################################"
+echo ""
+echo ""
+exit 1

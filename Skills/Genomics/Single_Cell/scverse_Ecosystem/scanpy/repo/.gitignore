@@ -1,0 +1,48 @@
+# Scanpy outfiles
+/data/
+/write/
+/figures/
+
+# Docs
+/docs/_build/
+/docs/generated/
+/docs/data/
+/docs/api/generated
+/docs/external/generated
+/docs/jupyter_execute
+
+# tests
+/*cache/
+/test-data/
+/tests/test*.h5ad
+/tests/**/*actual.png
+/tests/**/*failed-diff.png
+
+# Environment management
+/Pipfile
+/Pipfile.lock
+/requirements*.lock
+
+# always-ignore extensions
+*~
+
+# Python build files
+__pycache__/
+/ci/scanpy-low-vers.txt
+/dist/
+/*-env/
+/env-*/
+/environment.yml
+
+# OS stuff
+.DS_Store
+Thumbs.db
+.ipynb_checkpoints/
+.directory
+
+# IDEs and editors
+/.idea/
+
+# asv benchmark files
+/benchmarks/.asv
+/benchmarks/data/
