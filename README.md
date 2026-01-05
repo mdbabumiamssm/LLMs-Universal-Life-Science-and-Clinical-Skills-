@@ -71,6 +71,7 @@ skills/
 │   │   ├── Clinical/                 # 8 healthcare AI skills
 │   │   │   ├── Clinical_Note_Summarization/
 │   │   │   ├── Trial_Eligibility_Agent/
+│   │   │   ├── Trial_Matching_Agent/ # TrialGPT Implementation
 │   │   │   ├── Oncology/Precision_Oncology_Agent/
 │   │   │   ├── Medical_Imaging/      # MONAI integration
 │   │   │   ├── Clinical_NLP/         # medspaCy, OpenMed
@@ -80,6 +81,7 @@ skills/
 │   │   │
 │   │   ├── Drug_Discovery/           # 5 pharma/cheminformatics skills
 │   │   │   ├── Chemical_Property_Lookup/
+│   │   │   ├── ChemCrow_Tools/       # ChemCrow Lite
 │   │   │   ├── AgentD_Drug_Discovery/
 │   │   │   ├── Protein_Structure/    # AlphaFold
 │   │   │   ├── Knowledge_Graph/      # Drug repurposing
@@ -95,6 +97,7 @@ skills/
 │   │   │   └── Multi_Agent_Workflows/
 │   │   │
 │   │   ├── MCP_Servers/              # Model Context Protocol
+│   │   │   └── BioMCP_Reference/     # Reference Implementation
 │   │   └── Research_Tools/           # General tools
 │   │
 │   ├── test_demonstration/           # Validation suite
@@ -122,9 +125,26 @@ skills/
 
 ---
 
-## Latest Updates (December 2025)
+## Latest Updates (January 2026)
 
 ### New Skills (This Update)
+
+**Clinical Domain:**
+- **Trial Matching Agent (TrialGPT)**: `Skills/Clinical/Trial_Matching_Agent`
+  - Hybrid keyword/semantic search (using `sentence-transformers`) to match patient profiles with clinical trials.
+  - Features configurable matching logic and "Mock Mode" for testing without heavy dependencies.
+
+**Drug Discovery Domain:**
+- **ChemCrow Lite**: `Skills/Drug_Discovery/ChemCrow_Tools`
+  - Lightweight implementation of the ChemCrow agent for chemical property analysis.
+  - Tools include: Molecular Weight calculator, Safety Checker (heuristic), and SMILES validity.
+
+**Infrastructure (MCP):**
+- **BioMCP Reference Server**: `Skills/MCP_Servers/BioMCP_Reference`
+  - Reference implementation of the Model Context Protocol (MCP) for biomedical tasks.
+  - Connects AI agents (like Claude Desktop) to local Python tools for PubMed searching and Gene Info retrieval.
+
+### Previous Updates (December 2025)
 
 **Clinical Domain:**
 - **Medical Imaging AI (MONAI)**: CT, MRI, X-ray analysis with pre-trained models from MONAI Model Zoo
