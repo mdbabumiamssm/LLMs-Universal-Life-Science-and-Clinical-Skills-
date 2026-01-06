@@ -1,81 +1,49 @@
-from typing import List, Dict, Optional, Literal
-from dataclasses import dataclass
+from typing import List, Dict, Any
 import json
 
-@dataclass
-class AgentOutput:
-    sender: str
-    content: str
-    next_action: Optional[str] = None
-
-class BaseWorker:
-    """
-    A specialized worker agent (e.g., Coder, Researcher).
-    """
-    def __init__(self, name: str, description: str):
+class Agent:
+    """Base class for a specialized agent."""
+    def __init__(self, name: str, role: str):
         self.name = name
-        self.description = description
+        self.role = role
 
-    def work(self, task: str) -> str:
-        # Mock logic - replace with actual LLM call
-        return f"[{self.name}]: I have processed the task '{task}' using my skills in {self.description}."
+    def run(self, input_data: Any) -> Dict[str, Any]:
+        raise NotImplementedError
 
-class SupervisorAgent:
+class SupervisorAgent(Agent):
     """
-    The Orchestrator. It does not do the work; it delegates it.
-    It outputs structured JSON to decide 'who acts next'.
+    Orchestrates a team of agents using a structured delegator pattern.
     """
-    def __init__(self, workers: List[BaseWorker]):
-        self.workers = {w.name: w for w in workers}
-        self.worker_descriptions = "\n".join([f"- {w.name}: {w.description}" for w in workers])
-
-    def decide_next_step(self, objective: str, history: List[str]) -> Dict:
+    def __init__(self, agents: List[Agent]):
+        super().__init__("Supervisor", "Manager")
+        self.agents = {agent.name: agent for agent in agents}
+    
+    def delegate(self, task_description: str) -> Dict[str, Any]:
         """
-        Determines the next worker or FINISH.
-        Simulates an LLM call that returns JSON.
+        Analyzes the task and routes it to the correct agent.
+        In a real scenario, this uses an LLM to decide the route.
         """
-        # Logic simulation based on keyword matching (Mocking the LLM router)
-        last_msg = history[-1] if history else ""
+        print(f"[Supervisor] Received task: {task_description}")
         
-        if "code" in objective.lower() and "Coder" in self.workers and "Coder" not in last_msg:
-            return {"next": "Coder", "instruction": "Write the Python script for this."}
-        elif "review" in objective.lower() and "Reviewer" in self.workers and "Reviewer" not in last_msg:
-            return {"next": "Reviewer", "instruction": "Check the code for bugs."}
+        # Simple keyword-based routing for demonstration
+        target_agent = None
+        if "drug" in task_description or "molecule" in task_description:
+            target_agent = "Chemist"
+        elif "search" in task_description or "find" in task_description:
+            target_agent = "Researcher"
+        
+        if target_agent and target_agent in self.agents:
+            print(f"[Supervisor] Delegating to {target_agent}...")
+            return self.agents[target_agent].run(task_description)
         else:
-            return {"next": "FINISH", "instruction": "Task appears complete."}
+            return {"error": "No suitable agent found."}
 
-    def run_mission(self, objective: str):
-        print(f"--- Supervisor Mission: {objective} ---")
-        history = []
-        max_steps = 5
-        
-        for i in range(max_steps):
-            decision = self.decide_next_step(objective, history)
-            next_agent_name = decision["next"]
-            instruction = decision["instruction"]
-            
-            print(f"\n[Supervisor]: Router decided -> {next_agent_name} ('{instruction}')")
-            
-            if next_agent_name == "FINISH":
-                print("--- Mission Accomplished ---")
-                break
-                
-            if next_agent_name in self.workers:
-                worker = self.workers[next_agent_name]
-                result = worker.work(instruction)
-                print(result)
-                history.append(f"{next_agent_name}: {result}")
-            else:
-                print(f"Error: Unknown worker {next_agent_name}")
-                break
-
+# Example Usage
 if __name__ == "__main__":
-    # Define the "Digital Coworkers"
-    coder = BaseWorker("Coder", "Writes Python software and scripts.")
-    reviewer = BaseWorker("Reviewer", "Reviews code for security and performance.")
+    # Mocks for demonstration
+    class MockChemist(Agent):
+        def run(self, data): return {"result": "Calculated LogP for aspirin: 1.2"}
     
-    # Initialize Manager
-    supervisor = SupervisorAgent([coder, reviewer])
-    
-    # Run a mission
-    supervisor.run_mission("I need a python script to parse a CSV, then review it.")
+    supervisor = SupervisorAgent([MockChemist("Chemist", "Drug Design")])
+    result = supervisor.delegate("Calculate properties for this drug molecule")
+    print(result)

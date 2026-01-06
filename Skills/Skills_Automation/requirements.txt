@@ -1,0 +1,8 @@
+gitpython
+rich
+requests
+beautifulsoup4
+googlesearch-python
+pandas
+openai
+anthropic
