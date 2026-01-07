@@ -201,13 +201,14 @@ Based on thorough analysis of all 24 skill domains and internet research on 2026
 
 ### Phase 1: Critical Fixes (Immediate)
 - [x] Document current state
-- [ ] Fix MedPrompt implementation
-- [ ] Upgrade orchestrator.py
-- [ ] Complete ChemCrow real RDKit
+- [x] Fix MedPrompt implementation
+- [x] Upgrade orchestrator.py
+- [x] Complete ChemCrow real RDKit
 
 ### Phase 2: New Core Skills (This Session)
-- [ ] Add Hallucination Detection
-- [ ] Add scGPT Agent
+- [x] Add Hallucination Detection
+- [x] Add scGPT Agent
+- [x] Upgrade Tree of Thought (Reasoning)
 - [ ] Add Advanced MCP Server
 
 ### Phase 3: Enhancements (Future)
