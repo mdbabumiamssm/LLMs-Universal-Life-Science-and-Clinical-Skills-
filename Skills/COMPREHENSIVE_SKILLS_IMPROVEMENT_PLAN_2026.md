@@ -211,6 +211,25 @@ Based on thorough analysis of all 24 skill domains and internet research on 2026
 - [x] Upgrade Tree of Thought (Reasoning)
 - [ ] Add Advanced MCP Server
 
+### Phase 2.5: Comprehensive Core Skills Expansion (Session Focus)
+*Addressing user request for deep-dive into CS, Agentic AI, LLM, and Math.*
+
+1.  **Computer Science**
+    *   **Action:** Implement `Graph_Algorithms/knowledge_graph.py`.
+    *   **Goal:** Provide graph traversal foundations for biological knowledge graphs (Drug-Gene interactions).
+
+2.  **LLM Research**
+    *   **Action:** Implement `RAG_Systems/advanced_rag_patterns.py`.
+    *   **Goal:** Move beyond simple RAG to HyDE (Hypothetical Document Embeddings) and Contextual Reranking.
+
+3.  **Mathematics**
+    *   **Action:** Implement `Probability_Statistics/bayesian_optimization.py`.
+    *   **Goal:** foundational math for Self-Driving Labs and experimental design.
+
+4.  **Agentic AI**
+    *   **Action:** Add `Plan_and_Solve` architecture.
+    *   **Goal:** Implement "Plan-and-Solve" prompting for complex multi-step reasoning, complementing ReAct.
+
 ### Phase 3: Enhancements (Future)
 - [ ] BayBE integration for SDL
 - [ ] Quantum-classical hybrid
