@@ -1,212 +1,118 @@
-<!--
-# COPYRIGHT NOTICE
-# This file is part of the "Universal Biomedical Skills" project.
-# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
-# All Rights Reserved.
-#
-# This code is proprietary and confidential.
-# Unauthorized copying of this file, via any medium is strictly prohibited.
-#
-# Provenance: Authenticated by MD BABU MIA
-
--->
-
-# Skills Repository (2026 Edition)
-
-> **The "Microservices Moment" for Biomedical AI Agents.**
+# Universal Biomedical Skills & Agents (Biomedical OS - 2026)
 
 ![Status](https://img.shields.io/badge/Status-Active-green)
-![Agents](https://img.shields.io/badge/Agents-Orchestrated-blue)
+![Architecture](https://img.shields.io/badge/Architecture-Biomedical%20OS-blueviolet)
 ![Domain](https://img.shields.io/badge/Domain-Biotech%20%7C%20Clinical%20%7C%20Genomics-purple)
 ![Tech](https://img.shields.io/badge/Tech-MCP%20%7C%20DeepSeek%20%7C%20Gemini-orange)
 
+> **⚠️ IMPORTANT DISCLAIMER & COPYRIGHT NOTICE**
+> 
+> This repository, its architecture, agent designs, and specific implementations are the intellectual property of **MD BABU MIA, PhD**.
+> 
+> While open-source components are licensed under MIT, the unique curation, "Biomedical OS" architecture, and agentic workflows are proprietary to the author. 
+> 
+> **If you fork, clone, or copy this repository for public use, you MUST:**
+> 1.  Retain this copyright notice.
+> 2.  Explicitly credit **MD BABU MIA, PhD** as the original author.
+> 3.  Link back to the original repository.
+> 
+> *Plagiarism or uncredited redistribution is strictly prohibited.*
+
+---
+
 ## 🚀 Overview
 
-This repository is a comprehensive library of **skills, agents, and mathematical foundations** for modern (2026) Artificial Intelligence. Unlike standard chatbot repos, this project focuses on **Agentic Workflows**—where autonomous systems plan, execute, use tools, and correct themselves to solve complex scientific problems.
+This repository acts as a **Biomedical Operating System (BioOS)**, orchestrating a comprehensive library of **skills, agents, and mathematical foundations** for modern (2026) Artificial Intelligence. 
 
-We have aligned this codebase with the **State of the Art (SOTA) for 2026**, integrating Agentic patterns, Model Context Protocol (MCP), and rigorous scientific simulations.
+Unlike standard codebases, this project transforms static scripts into **Agentic Workflows**—where autonomous systems plan, execute, use tools, and correct themselves to solve complex scientific problems. It is designed to support high-impact research, clinical decision support, and automated lab operations.
 
-## 🌟 Key Capabilities (New for 2026)
+## 👤 Author & Maintainer
 
-### 🧬 Genomics & Single Cell (New!)
-*   **Universal Annotator:** `Genomics/Single_Cell/Cell_Type_Annotation/RNA/universal_annotator.py` wraps Marker-based, Deep Learning (CellTypist), and LLM-based annotation strategies.
-*   **Pathway Scoring:** `Genomics/Single_Cell/Pathway_Analysis/sc_pathway_scorer.py` implements AUCell-like scoring for functional enrichment.
-*   **Cell-Cell Comms:** `Genomics/Single_Cell/Cell_Cell_Communication/interaction_inference.py` infers Ligand-Receptor networks.
-*   **Database:** A curated [Tool Database](Genomics/Single_Cell/Tool_Database.md) of 2026 single-cell tools (MultiKano, scPS, etc.).
+**MD BABU MIA, PhD**  
+*Assistant Professor of Hematology & Medical Oncology, Machine Learning -AI | Mount Sinai*  
+Mount Sinai Tisch Cancer Institute
+Icahn School of Medicine at Mount Sinai
+Mount Sinai Hospital
+One Gustave L. Levy Place
+New York, NY 10029
+Desk phone:(212) 241-2764 (x42764)
+Mobile phone:(332) 256-3038
+Email: md.babu.mia@mssm.edu
+Specializing in Hemato-Oncology,and Machine Learning-LLM-AI.
+ 
 
-### 🧠 Agentic AI (The Brain)
-*   **Self-Correction:** `Agentic_AI/Agent_Architectures/Self_Correction/self_correction_agent.py` implements a Reflexion pattern for iterative improvement.
-*   **Orchestrated Swarms:** `Agentic_AI/Multi_Agent_Systems/orchestrator.py` implements a Supervisor pattern that delegates tasks to specialized sub-agents.
-*   **Plan-and-Solve:** `Agentic_AI/Agent_Architectures/Plan_and_Solve/` breaks down complex user queries into Directed Acyclic Graphs (DAGs).
-*   **Async Runtime:** `Computer_Science/Distributed_Systems/agent_concurrency.py` provides a Ray-like async runtime for parallel agents.
+---
 
-### 🔌 Model Context Protocol (MCP) & Platform
-*   **BioMCP Server:** `MCP_Servers/BioMCP/bio_mcp_server.py` implements a compliant MCP server exposing bio-tools.
-*   **BioKernel Engine:** `../platform/biokernel/workflow_engine.py` orchestrates enterprise-grade agent workflows (Mining -> Design -> Safety) via FastAPI.
-*   **Runtime Adapter:** `../platform/adapters/runtime_adapter.py` provides a unified execution layer, supporting intelligent mock simulations and real API calls.
+## 🌟 Major Updates (February 2026)
 
-### 🏥 Clinical & Operations (New!)
-*   **Trial Matching:** `Clinical/Trial_Matching/trial_matching_agent.py` matches patient profiles to clinical trials using intelligent criteria mapping (LLM-driven).
-*   **Prior Auth Appeals:** `Clinical/Prior_Authorization/appeals_agent.py` uses self-correction to iteratively refine arguments for overturning insurance denials.
-*   **EHR/FHIR Integration:** `Clinical/EHR_FHIR_Integration/fhir_client.py` provides tools to search and retrieve patient data from FHIR R4 servers.
-*   **Clinical NLP:** `Clinical/Clinical_NLP/entity_extractor.py` extracts medical entities (Diseases, Meds) from unstructured text.
-*   **Opentrons Agent:** `Lab_Automation/Opentrons_Agent/opentrons_generator.py` generates liquid handling protocols from high-level intent.
+We have significantly expanded the **Skills** directory to align with the 2026 roadmap, introducing the `SKILL.md` metadata standard and deploying high-performance agents across key domains.
 
-### 💊 Drug Discovery & Genomics (Updated)
-*   **Literature Mining:** `Research_Tools/Literature_Mining/mining_agent.py` uses the Runtime Adapter to extract novel targets from (simulated) texts.
-*   **Molecule Evolution:** `Drug_Discovery/Molecule_Design/evolution_agent.py` designs de novo drugs with 'medicinal chemist' feedback loop.
-*   **Safety Officer:** `Clinical/Safety/safety_agent.py` audits outputs for compliance and toxicity using semantic analysis.
-*   **Variant Interpretation:** `Genomics/Variant_Interpretation/acmg_classifier.py` classifies genetic variants and generates AI-powered clinical reports.
-*   **ChemCrow Tools:** `Drug_Discovery/ChemCrow_Tools/chem_tools.py` enables agents to calculate molecular properties (LogP, TPSA) and screen for toxicity.
-*   **CRISPR Design:** `Genomics/CRISPR_Design_Agent/crispr_designer.py` automates gRNA selection and efficiency scoring for gene editing.
-*   **Protein Structure:** `Drug_Discovery/Protein_Structure/esmfold_client.py` mocks ESMFold/AF3 inference for 3D structure prediction.
+### 🧬 Genomics & Bioinformatics
+*   **BioMaster:** `Skills/Genomics/Multi_Agent_Workflows/BioMaster` - A master orchestrator for RNA-seq, ChIP-seq, and Hi-C pipelines.
+*   **CellAgent:** `Skills/Genomics/Single_Cell/CellAgent` - Autonomous single-cell annotation and quality control.
+*   **CompBioAgent:** `Skills/Genomics/Single_Cell/CompBioAgent` - Interactive scRNA-seq explorer and visualization tool.
+*   **STAgent:** `Skills/Genomics/Spatial_Transcriptomics/STAgent` - Spatial transcriptomics analysis for Visium/Xenium data.
 
-### 🧪 Clinical Simulators & Research
-*   **Adaptive Clinical Trials:** `Clinical/Clinical_Trials/Adaptive_Trial_Design_Agent/adaptive_trial_sim.py` runs Bayesian MAMS simulations.
-*   **MedPrompt:** `LLM_Research/Prompt_Engineering/medprompt.py` implements Microsoft's SOTA clinical reasoning strategy.
-*   **Self-Driving Labs:** `Mathematics/Probability_Statistics/bayesian_optimization.py` enables autonomous experiment selection using Gaussian Processes.
+### 🏥 Clinical & Operations
+*   **ChatEHR:** `Skills/Clinical/EHR/ChatEHR` - Clinical assistant for summarizing patient records and answering queries.
+*   **TrialGPT:** `Skills/Clinical/Trial_Matching/TrialGPT` - Intelligent patient-to-trial matching and ranking.
+*   **RadGPT:** `Skills/Clinical/Radiology/RadGPT` - Radiology report summarizer and patient-friendly explainer.
+*   **Autonomous Oncology Agent:** Precision oncology treatment planning using multimodal data (H&E + Genomics).
 
-### 📐 Math & CS (The Foundation)
-*   **Tensor Operations:** `Mathematics/Linear_Algebra/tensor_operations.py` breaks down the math behind Attention mechanisms.
-*   **Graph RAG:** `Computer_Science/Graph_Algorithms/knowledge_graph.py` provides traversal for Drug-Target-Disease interactions.
+### 🧪 Drug Discovery & Chemistry
+*   **MAGE:** `Skills/Drug_Discovery/Antibody_Design/MAGE` - Generative antibody design using protein language models.
+*   **CheMatAgent:** `Skills/Drug_Discovery/CheMatAgent` - Computational chemistry agent for molecule design and property prediction.
+*   **Biomni:** `Skills/Research_Tools/Biomni` - General-purpose biomedical research agent with access to 150+ tools.
 
-### 💻 Software Engineering (New!)
-*   **React & Next.js Best Practices:** `Software_Engineering/Web_Development/` contains standardized rules (`SKILL.md`) for building modern, performant web UIs.
-*   **Data Science Standards:** `Software_Engineering/Data_Science/Python_Pandas_Best_Practices/` provides guidelines for vectorized, memory-efficient data manipulation.
-*   **Core Python:** `Software_Engineering/Core_Python_Best_Practices/` enforces modern typing and idiomatic Python 3.10+ patterns.
-
-## 🤝 Dual Health Stacks (New)
-
-### OpenAI Health Stack
-*   **Care Copilot:** `Consumer_Health/wearable_copilot_openai.py` + `Consumer_Health/Wearable_Analysis/health_copilot.py` translate wearable JSON into schema-validated action plans.
-*   **Clinical Ops Automator:** `Clinical/openai_clinical_ops_automator.py` emits ICD-10/CPT suggestions, SOAP notes, and prior auth packets with local JSON validation.
-*   **Lab Automation Bridge:** `Lab_Automation/openai_lab_automation_bridge.py` wraps Experiment Designer outputs in payloads.
-*   **Documentation:** See [OpenAI_Health_STACK.md](OpenAI_Health_STACK.md) for workflows, CLI usage, and BioKernel integration.
-
-### Co-Worker Stack
-*   **Inbox Router:** `Clinical/anthropic_inbox_router.py` fans work items into coworkers via the Event Bus.
-*   **Prior Auth Coworker:** `Clinical/Prior_Authorization/appeals_agent.py` mirrors reasoning traces.
-*   **Regulatory Coworker:** `Pharma/Regulatory_Affairs/anthropic_regulatory_coworker.py` drafts CTD responses with citations.
-*   **Pharmacovigilance Monitor:** `Clinical/Safety/pharmacovigilance_monitor.py` triages safety signals and emits audit-ready traces.
-*   **Regulatory Drafter:** `Anthropic_Health_Stack/regulatory_drafter.py` drafts regulatory submissions with audit trails.
+### 🔍 Knowledge & Research
+*   **KRAGEN:** `Skills/Research_Tools/Knowledge_Graphs/KRAGEN` - Knowledge Graph-Enhanced RAG for complex reasoning.
+*   **LEADS:** `Skills/Research_Tools/Literature_Mining/LEADS` - Automated systematic review and meta-analysis agent.
+*   **BioMCP:** `Skills/MCP_Servers/BioMCP` - Model Context Protocol server for connecting LLMs to PubMed, ClinicalTrials.gov, and more.
 
 ## 📂 Directory Structure
 
+The repository is organized into domain-specific modules:
+
 ```text
 Skills/
-├── 3D_Genomics/          # Hi-C analysis, chromatin conformation
-├── Agentic_AI/           # Architectures (ReAct, Plan&Solve, Orchestrators)
-├── Anthropic_Health_Stack/ # Regulatory drafting, care coordination
-├── Clinical/             # MedPrompt, Note Summarization, Adaptive Trials, Clinical Databases
-├── Computer_Science/     # Graph Algo, Distributed Systems (Async)
-├── Consumer_Health/      # Wearable analysis, symptom checking
-├── Data_Visualization/   # Heatmaps, volcano plots, circos, genome tracks
-├── Drug_Discovery/       # ChemCrow, Self-Driving Labs, Chemoinformatics
-├── Epigenomics/          # ChIP-seq, ATAC-seq, methylation, epitranscriptomics
-├── Experimental_Design/  # Power analysis, sample size, batch design
-├── External_Collections/ # Consolidated external skill libraries (see below)
-├── Foundation_Models/    # AlphaFold3 Wrapper, BiomedGPT
-├── Gene_Therapy/         # AAV vector design
-├── Genomics/             # Single Cell, Spatial, CRISPR, Variant Calling, Assembly
-├── Hematology/           # AML, MPN, Flow Cytometry, Coagulation
-├── Imaging_Analysis/     # Imaging mass cytometry, spatial analysis
-├── Immunology_Vaccines/  # CAR-T, TCR/BCR analysis, epitope prediction
-├── Lab_Automation/       # Opentrons, PyLabRobot, self-driving labs
-├── LLM_Research/         # RAG, Fine-Tuning, Prompt Engineering
-├── Longevity_Aging/      # Biological age clocks, senescence
-├── Machine_Learning/     # Biomarker discovery, survival analysis, model interpretation
-├── Mathematics/          # Bayesian Opt, Linear Algebra, Probability
-├── MCP_Servers/          # BioMCP Implementation
-├── Metabolomics/         # Peak detection, annotation, pathway mapping
-├── Microbiome/           # 16S/ITS amplicon, diversity, differential abundance
-├── Multi_Omics/          # Cross-modality integration, factor analysis
-├── NGS_QC/               # Read QC, alignment, trimming
-├── Oncology/             # ctDNA, Liquid Biopsy, Radiomics, Pathomics
-├── Pathology_AI/         # Digital pathology, computational pathology
-├── Pharma/               # Drug interactions, regulatory affairs
-├── Population_Genetics/  # GWAS, phylogenetics, epidemiological genomics
-├── Precision_Medicine/   # Pharmacogenomics, polygenic risk scores
-├── Protein_Science/      # AlphaFold3, ESM3, protein design
-├── Proteomics/           # Mass spec, deep visual proteomics
-├── Quantum_Biotech/      # Quantum docking, molecular simulation
-├── Radiology_AI/         # Chest X-ray, CT analysis, report generation
-├── Research_Tools/       # Literature mining, database access, reporting, pathway analysis
-├── RNA_Therapeutics/     # ASO, siRNA, mRNA vaccine, LNP design
-├── Self_Driving_Labs/    # Autonomous lab control, Bayesian experiment design
-├── Sequence_Analysis/    # Alignment, SAM/BAM, FASTA/FASTQ, primer design
-├── Software_Engineering/ # Web Dev (React/Next.js), Data Science (Pandas), Core Python
-├── Structural_Biology/   # CryoEM, protein structure prediction
-├── Synthetic_Biology/    # Genetic circuits, metabolic pathways
-├── Systems_Biology/      # Flux balance analysis, metabolic reconstruction
-├── Transcriptomics/      # Differential expression, RNA quantification, splicing
-├── Variant_Interpretation/ # ACMG classification, clinical interpretation
-└── Workflow_Management/  # Snakemake, Nextflow, CWL pipelines
-
+├── Agentic_AI/           # Orchestrators, Swarms, Planning Agents
+├── Clinical/             # EHR, Radiology, Oncology, Trials
+├── Drug_Discovery/       # Antibody Design, Small Molecules, Chemistry
+├── Genomics/             # Single Cell, Spatial, CRISPR, Variant Interpretation
+├── MCP_Servers/          # BioMCP and other protocol servers
+├── Research_Tools/       # Biomni, Literature Mining, Knowledge Graphs
+├── Pharma/               # Regulatory Affairs, Pharmacovigilance
+└── Software_Engineering/ # Best Practices (React, Python, Pandas)
 ```
 
-### External_Collections
-Consolidated third-party skill libraries and frameworks:
-- **Auto-GPT** / **Auto-GPT-Plugins**: Autonomous GPT frameworks
-- **awesome-llm-skills**: Community-curated LLM skills
-- **semantic-kernel**: Microsoft's AI orchestration SDK
-- **langchain**: LangChain framework components
-- **google-gemini-cookbook**: Google Gemini examples
-- **mcp-servers-reference**: MCP server implementations
-- **Antigravity_Skills**: Universal SKILL.md agents
-- **Awesome-Biomedical-LLM-Agents**: Biomedical agent resources
-- **life-sciences_Claudeai-main**: Life sciences Claude integrations
+## 📜 Standardized Skill Format
 
-### bioSkills Integration (New Feb 2026!)
-Comprehensive bioinformatics skills from the bioSkills collection (388 skills):
-- **Sequence_Analysis/**: FASTA/FASTQ handling, alignment, primer design
-- **NGS_QC/**: FastQC, read trimming, short-read alignment
-- **Transcriptomics/**: DESeq2, edgeR, alternative splicing, Ribo-seq
-- **Epigenomics/**: ChIP-seq, ATAC-seq, methylation, CLIP-seq
-- **3D_Genomics/**: Hi-C contact matrices, TADs, compartments
-- **Population_Genetics/**: GWAS, phylogenetics, pathogen genomics
-- **Data_Visualization/**: Publication-quality plots
-- **Machine_Learning/**: Biomarker discovery, survival analysis
-- **Multi_Omics/**: MOFA, SNF, cross-modality integration
-- **Workflow_Management/**: Snakemake, Nextflow, 35+ ready pipelines
-- **Systems_Biology/**: Flux balance analysis, metabolic modeling
+All skills now adhere to the **SKILL.md** standard, making them discoverable and executable by the BioKernel. Each skill definition includes:
+*   **Description:** Concise summary of capabilities.
+*   **Keywords:** Core terms for indexing.
+*   **Measurable Outcome:** SMART goals (e.g., "Rank 5 trials in <3 mins").
+*   **Allowed Tools:** Security sandboxing for agent execution.
 
 ## 🛠️ Usage Examples
 
-**1. Run the Multi-Agent Orchestrator:**
+**1. Match a Patient to a Clinical Trial (TrialGPT):**
 ```bash
-python3 Agentic_AI/Multi_Agent_Systems/orchestrator.py
-# Tutorial: Agentic_AI/Multi_Agent_Systems/TUTORIAL_BUILDING_A_SWARM.md
+python3 Skills/Clinical/Trial_Matching/TrialGPT/run_matching.py --patient_profile ./patient.json
 ```
 
-**2. Transpile a Universal Skill:**
+**2. Design an Antibody (MAGE):**
 ```bash
-python3 ../platform/optimizer/usdl_transpiler.py --file ../platform/optimizer/my_skill.json
-# Tutorial: ../platform/optimizer/TUTORIAL_USDL_TRANSPILER.md
+python3 Skills/Drug_Discovery/Antibody_Design/MAGE/generate.py --antigen "spike_protein" --count 5
 ```
 
-**3. Run a Self-Driving Lab Simulation:**
+**3. Analyze Spatial Transcriptomics (STAgent):**
 ```bash
-python3 Mathematics/Probability_Statistics/bayesian_optimization.py
-# Tutorial: Mathematics/Probability_Statistics/TUTORIAL_SELF_DRIVING_LAB_OPTIMIZER.md
+python3 Skills/Genomics/Spatial_Transcriptomics/STAgent/main.py --data ./visium_data.h5ad --task "cluster_domains"
 ```
 
-**4. Annotate Single-Cell Data:**
-```bash
-python3 Skills/Genomics/Single_Cell/Cell_Type_Annotation/RNA/universal_annotator.py
-# Tutorial: Skills/Genomics/Single_Cell/TUTORIAL_CELL_ANNOTATION.md
-```
+## 📄 License
 
+**Copyright (c) 2026 MD BABU MIA, PhD.**  
+All rights reserved.
 
-## 📈 Roadmap (2026)
-*   [x] **Phase 1:** Core Architectures (Orchestrator, Async Runtime) - *Completed Jan 2026*
-*   [x] **Phase 2:** Math Foundations (Bayesian Opt, Graph Theory) - *Completed Jan 2026*
-*   [x] **Phase 3:** Single Cell & Clinical Simulators - *Completed Jan 2026*
-*   [x] **Phase 4:** Initial MCP Server Integration - *Completed Jan 2026*
-*   [x] **Phase 5:** Dual Health Stacks (OpenAI/Anthropic) & USDL - *Completed Jan 2026*
-*   [ ] **Phase 6:** Deployment to FHIR Servers & Real Lab Integration
-
----
-*Maintained by the Artificial Intelligence Group.*
-
-
-<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->
+This project is licensed under the MIT License for open-source components, but the unique architectural design and agentic workflows are the intellectual property of the author. **Attribution is mandatory.**
