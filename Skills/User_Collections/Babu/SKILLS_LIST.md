@@ -180,6 +180,36 @@ Based on your profile as a Hematology/Medical Oncology Professor at Mount Sinai 
 
 ---
 
+## 8️⃣ Medea Therapeutic Discovery Agent
+
+**Trigger phrases:**
+- "Run multi-omics therapeutic discovery pipeline"
+- "Analyze omics data for novel drug targets using Medea"
+- "Perform literature reasoning and consensus reconciliation"
+
+**Core capabilities:**
+- Multi-step omics research planning
+- Transparent code execution for Python/R scripts
+- Advanced literature reasoning and synthesis
+- Consensus stage evidence reconciliation
+
+---
+
+## 9️⃣ MCPmed Bioinformatics Server
+
+**Trigger phrases:**
+- "Query STRING database via MCP"
+- "Fetch dataset metadata from GEO using MCPmed"
+- "Access UCSC Cell Browser data through MCP"
+
+**Core capabilities:**
+- Model Context Protocol (MCP) implementation for biological resources
+- GEO dataset metadata retrieval
+- STRING protein-protein interaction networks access
+- UCSC Cell Browser programmatic integration
+
+---
+
 ## 🔗 Skill Combinations
 
 These skills are designed to work together:

@@ -63,6 +63,9 @@ def volcano_plot(results, fc_thresh=1, pval_thresh=0.05):
     plt.axvline(fc_thresh, linestyle='--', color='k')
 ```
 
+## Related Skills
+- **[R Programming](../Software_Engineering/R_Programming/SKILL.md)**: Master the foundational language for `ggplot2`, `ComplexHeatmap`, and Bioconductor visualizations.
+
 ---
 *Source: bioSkills collection - integrated into BioMedical Skills Library*
 

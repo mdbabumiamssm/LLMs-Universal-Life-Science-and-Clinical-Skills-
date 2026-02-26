@@ -62,12 +62,14 @@ We have significantly expanded the **Skills** directory to align with the 2026 r
 ### 🧪 Drug Discovery & Chemistry
 *   **MAGE:** `Skills/Drug_Discovery/Antibody_Design/MAGE` - Generative antibody design using protein language models.
 *   **CheMatAgent:** `Skills/Drug_Discovery/CheMatAgent` - Computational chemistry agent for molecule design and property prediction.
+*   **Medea Agent:** `Skills/Drug_Discovery/Medea/SKILL.md` - Executes transparent, multi-step omics analyses and therapeutic discovery.
 *   **Biomni:** `Skills/Research_Tools/Biomni` - General-purpose biomedical research agent with access to 150+ tools.
 
 ### 🔍 Knowledge & Research
 *   **KRAGEN:** `Skills/Research_Tools/Knowledge_Graphs/KRAGEN` - Knowledge Graph-Enhanced RAG for complex reasoning.
 *   **LEADS:** `Skills/Research_Tools/Literature_Mining/LEADS` - Automated systematic review and meta-analysis agent.
 *   **BioMCP:** `Skills/MCP_Servers/BioMCP` - Model Context Protocol server for connecting LLMs to PubMed, ClinicalTrials.gov, and more.
+*   **MCPmed Server:** `Skills/MCP_Servers/MCPmed/SKILL.md` - Adapts the Model Context Protocol to bioinformatics backends (GEO, STRING).
 
 ## 📂 Directory Structure
 
