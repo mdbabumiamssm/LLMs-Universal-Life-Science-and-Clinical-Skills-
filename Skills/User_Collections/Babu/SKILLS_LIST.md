@@ -265,3 +265,36 @@ nano ~/.claude/skills/user/mpn-research-assistant/SKILL.md
 
 
 <!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->
+---
+
+## 1️⃣0️⃣ skill-library-maintainer
+
+**Trigger phrases:**
+- "Audit this skills repo"
+- "Normalize SKILL metadata"
+- "Clean up skill frontmatter"
+- "Add new skills and validate them"
+- "Curate imported skill collections"
+
+**Core capabilities:**
+- Audits large skill repositories before editing
+- Normalizes trigger-oriented `SKILL.md` frontmatter
+- Splits oversized skill content into `references/`
+- Adds UI metadata with `agents/openai.yaml` where useful
+- Validates touched skills and scopes commits cleanly
+
+## 1️⃣1️⃣ biomedical-rag-citation-pipelines
+
+**Trigger phrases:**
+- "Build biomedical RAG"
+- "Ground answers in PubMed citations"
+- "Validate claim-to-citation links"
+- "Evaluate retrieval quality"
+- "Design literature retrieval pipeline"
+
+**Core capabilities:**
+- Hybrid retrieval design for biomedical corpora
+- Evidence-unit-aware chunking and indexing
+- Structured answer generation with source identifiers
+- Citation existence and relevance validation
+- Retrieval and faithfulness evaluation workflows

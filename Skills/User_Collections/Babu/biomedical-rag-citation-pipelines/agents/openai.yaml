@@ -1,0 +1,4 @@
+interface:
+  display_name: "Biomedical RAG Citation Pipelines"
+  short_description: "Build grounded biomedical retrieval systems"
+  default_prompt: "Use $biomedical-rag-citation-pipelines to design a citation-grounded biomedical RAG workflow for this project."

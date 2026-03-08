@@ -1,183 +1,28 @@
-<!--
-# COPYRIGHT NOTICE
-# This file is part of the "Universal Biomedical Skills" project.
-# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
-# All Rights Reserved.
-#
-# This code is proprietary and confidential.
-# Unauthorized copying of this file, via any medium is strictly prohibited.
-#
-# Provenance: Authenticated by MD BABU MIA
-
--->
-
 ---
 name: ngs-analysis
-description: "Next-generation sequencing data analysis pipelines including bulk RNA-seq, scRNA-seq preprocessing, variant calling, and quality control. Use when working with FASTQ files, alignment (STAR, BWA), quantification (featureCounts, Salmon), DESeq2/edgeR analysis, or building NGS pipelines. Supports GEO/SRA data retrieval."
-license: Proprietary
+description: Practical next-generation sequencing analysis support for bulk RNA-seq, variant calling, alignment, preprocessing, and workflow assembly. Use when working from FASTQ or BAM/VCF inputs, setting up QC, choosing aligners or quantifiers, organizing reproducible NGS pipelines, or preparing downstream differential or variant analyses.
 ---
 
-# NGS Data Analysis Pipelines
+# NGS Analysis
 
-## Data Retrieval from GEO/SRA
+Run NGS tasks with explicit sample tracking, reproducible commands, and pipeline choices that match the assay.
 
-```bash
-# Install SRA toolkit
-conda install -c bioconda sra-tools
+## Workflow
 
-# Download SRA files
-prefetch SRR12345678
-fastq-dump --split-files --gzip SRR12345678
+1. Identify assay, read structure, reference assets, and expected endpoint before running tools.
+2. Check file integrity, sample sheet consistency, lane structure, and naming conventions first.
+3. Run QC before major processing and keep pre-filter and post-filter metrics.
+4. Choose assay-specific tooling rather than forcing one generic pipeline across RNA-seq, DNA-seq, and single-cell data.
+5. Preserve provenance for every intermediate: command, version, reference, and parameter changes.
+6. Summarize outputs in terms a collaborator can act on: pass-fail QC, counts, variant sets, DE tables, or missing inputs.
 
-# Parallel download with fasterq-dump
-fasterq-dump --split-files -e 8 SRR12345678
-gzip SRR12345678_*.fastq
-```
+## Guardrails
 
-## Quality Control
+- Never mix genome builds or annotation releases silently.
+- Keep tumor-normal pairing, replicate structure, and strandedness explicit.
+- Treat aligner defaults as starting points, not biological truth.
+- Separate workflow failures from biologic negatives.
 
-```bash
-# FastQC
-fastqc -t 8 -o fastqc_output/ *.fastq.gz
+## References
 
-# MultiQC aggregation
-multiqc fastqc_output/ -o multiqc_report/
-
-# Trimming with fastp
-fastp -i R1.fastq.gz -I R2.fastq.gz \
-    -o R1_trimmed.fastq.gz -O R2_trimmed.fastq.gz \
-    --detect_adapter_for_pe --thread 8 \
-    --html fastp_report.html
-```
-
-## Bulk RNA-seq Pipeline
-
-### Alignment with STAR
-
-```bash
-# Build index (once)
-STAR --runMode genomeGenerate \
-    --genomeDir star_index/ \
-    --genomeFastaFiles genome.fa \
-    --sjdbGTFfile genes.gtf \
-    --runThreadN 16
-
-# Alignment
-STAR --runThreadN 16 \
-    --genomeDir star_index/ \
-    --readFilesIn R1.fastq.gz R2.fastq.gz \
-    --readFilesCommand zcat \
-    --outFileNamePrefix sample_ \
-    --outSAMtype BAM SortedByCoordinate \
-    --quantMode GeneCounts
-```
-
-### Quantification with featureCounts
-
-```bash
-featureCounts -T 8 -p -B -C \
-    -a genes.gtf \
-    -o counts.txt \
-    *.bam
-```
-
-### Salmon Pseudo-alignment
-
-```bash
-# Index
-salmon index -t transcripts.fa -i salmon_index -k 31
-
-# Quantification
-salmon quant -i salmon_index -l A \
-    -1 R1.fastq.gz -2 R2.fastq.gz \
-    -p 8 -o salmon_quant/
-```
-
-## Differential Expression with DESeq2
-
-```r
-library(DESeq2)
-library(tidyverse)
-
-# Load counts
-counts <- read.table("counts.txt", header=TRUE, row.names=1)
-coldata <- read.csv("sample_info.csv", row.names=1)
-
-# Create DESeq object
-dds <- DESeqDataSetFromMatrix(
-    countData = counts,
-    colData = coldata,
-    design = ~ condition
-)
-
-# Filter low counts
-keep <- rowSums(counts(dds) >= 10) >= 3
-dds <- dds[keep,]
-
-# Run DESeq2
-dds <- DESeq(dds)
-res <- results(dds, contrast=c("condition", "treatment", "control"))
-res_df <- as.data.frame(res) %>%
-    rownames_to_column("gene") %>%
-    filter(!is.na(padj)) %>%
-    arrange(padj)
-
-# Significant genes
-sig_genes <- res_df %>%
-    filter(padj < 0.05, abs(log2FoldChange) > 1)
-
-write.csv(res_df, "DEG_results.csv", row.names=FALSE)
-```
-
-## Variant Calling (Somatic)
-
-```bash
-# BWA-MEM2 alignment
-bwa-mem2 index reference.fa
-bwa-mem2 mem -t 16 reference.fa R1.fq.gz R2.fq.gz | \
-    samtools sort -@ 8 -o aligned.bam
-
-# Mark duplicates
-gatk MarkDuplicates -I aligned.bam -O marked.bam -M metrics.txt
-
-# BQSR
-gatk BaseRecalibrator -R ref.fa -I marked.bam \
-    --known-sites known_sites.vcf -O recal.table
-gatk ApplyBQSR -R ref.fa -I marked.bam \
-    --bqsr-recal-file recal.table -O recal.bam
-
-# Mutect2 for somatic variants
-gatk Mutect2 -R ref.fa -I tumor.bam -I normal.bam \
-    -normal normal_sample -O somatic.vcf.gz
-```
-
-## Python Integration
-
-```python
-import pandas as pd
-import subprocess
-from pathlib import Path
-
-def run_pipeline(fastq_dir, output_dir, genome_index):
-    """Run complete RNA-seq pipeline"""
-    fastq_files = list(Path(fastq_dir).glob("*_R1.fastq.gz"))
-    
-    for r1 in fastq_files:
-        sample = r1.stem.replace("_R1.fastq", "")
-        r2 = r1.parent / f"{sample}_R2.fastq.gz"
-        
-        # STAR alignment
-        cmd = f"""
-        STAR --runThreadN 16 --genomeDir {genome_index} \
-            --readFilesIn {r1} {r2} --readFilesCommand zcat \
-            --outFileNamePrefix {output_dir}/{sample}_ \
-            --outSAMtype BAM SortedByCoordinate
-        """
-        subprocess.run(cmd, shell=True, check=True)
-```
-
-See `references/conda_envs.md` for environment setup.
-See `scripts/batch_pipeline.py` for parallel processing.
-
-
-<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->
+- Read `references/pipeline-selection.md` to choose the right NGS path.

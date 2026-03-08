@@ -211,3 +211,9 @@ Skills are loaded fresh on each Claude Code session.
 
 
 <!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->
+## Recent Additions
+
+| Skill | Description | Use Cases |
+|-------|-------------|-----------|
+| **skill-library-maintainer** | Audit and curate large skill repositories | Metadata cleanup, frontmatter normalization, reference splitting, validation |
+| **biomedical-rag-citation-pipelines** | Citation-grounded biomedical retrieval and generation | PubMed or PMC RAG, claim-to-citation validation, grounded answer evaluation |

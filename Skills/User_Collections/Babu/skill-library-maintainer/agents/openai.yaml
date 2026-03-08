@@ -1,0 +1,4 @@
+interface:
+  display_name: "Skill Library Maintainer"
+  short_description: "Audit and curate a skills repository"
+  default_prompt: "Use $skill-library-maintainer to audit, improve, and validate this skills collection."
