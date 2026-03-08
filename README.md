@@ -69,6 +69,17 @@ We have significantly expanded the **Skills** directory to align with the 2026 r
 *   **LEADS:** `Skills/Research_Tools/Literature_Mining/LEADS` - Automated systematic review and meta-analysis agent.
 *   **BioMCP:** `Skills/MCP_Servers/BioMCP` - Model Context Protocol server for connecting LLMs to PubMed, ClinicalTrials.gov, and more.
 
+## 🧹 Recent Curation (March 2026)
+
+We also started curating the user-focused Babu collection to make the highest-value skills easier to trigger and maintain.
+
+- `Skills/User_Collections/Babu/computational-software-development` now uses a compact workflow-oriented skill definition with supporting references.
+- `Skills/User_Collections/Babu/bioinformatics-singlecell`, `ngs-analysis`, and `mpn-research-assistant` were rewritten to reduce prompt bloat and improve reuse.
+- Two new skills were added for repository stewardship and grounded literature systems:
+  - `Skills/User_Collections/Babu/skill-library-maintainer`
+  - `Skills/User_Collections/Babu/biomedical-rag-citation-pipelines`
+- The Babu collection README now reflects the curated layout and reference-first organization.
+
 ## 📂 Directory Structure
 
 The repository is organized into domain-specific modules:
@@ -87,11 +98,12 @@ Skills/
 
 ## 📜 Standardized Skill Format
 
-All skills now adhere to the **SKILL.md** standard, making them discoverable and executable by the BioKernel. Each skill definition includes:
-*   **Description:** Concise summary of capabilities.
-*   **Keywords:** Core terms for indexing.
-*   **Measurable Outcome:** SMART goals (e.g., "Rank 5 trials in <3 mins").
-*   **Allowed Tools:** Security sandboxing for agent execution.
+The repository is migrating toward a lean **SKILL.md** standard so skills are easier to discover and cheaper to load into context. Curated skills should prefer:
+*   **Name:** Hyphen-case skill identifier.
+*   **Description:** Concise trigger guidance that states what the skill does and when to use it.
+*   **Workflow body:** Short operational instructions rather than large code dumps.
+*   **References:** Detailed domain notes moved into `references/` when they are not needed on every invocation.
+*   **Agents metadata:** Optional `agents/openai.yaml` for curated skills that should surface cleanly in UI-driven environments.
 
 ## 🛠️ Usage Examples
 

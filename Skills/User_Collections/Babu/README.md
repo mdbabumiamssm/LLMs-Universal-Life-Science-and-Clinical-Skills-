@@ -17,6 +17,8 @@
 
 A comprehensive set of specialized skills for Claude, tailored to computational software development, bioinformatics research, single-cell multi-omics, MPN research, and scientific publication workflows.
 
+This collection was curated in March 2026 to keep high-value skills lean, trigger-friendly, and easier to maintain. Core workflows now live in compact `SKILL.md` files, with reusable detail moved into `references/`.
+
 ---
 
 ## 📦 Skills Included
@@ -30,6 +32,8 @@ A comprehensive set of specialized skills for Claude, tailored to computational 
 | **scientific-manuscript** | High-impact journal writing | Blood, Nature, Cell manuscript preparation, ICMJE compliance |
 | **data-visualization-biomedical** | Publication-quality figures | Volcano plots, heatmaps, multi-panel figures |
 | **mpn-research-assistant** | MPN domain expertise | JAK2/CALR mutations, PPM1D pathway, fibrosis markers |
+| **skill-library-maintainer** | Skills repository curation and metadata cleanup | Auditing skill collections, splitting oversized skills, validation |
+| **biomedical-rag-citation-pipelines** | Citation-grounded biomedical retrieval systems | PubMed/PMC RAG, claim-to-citation validation, grounded answer evaluation |
 
 ---
 
@@ -76,39 +80,40 @@ skills-for-babu/
 ├── computational-software-development/
 │   ├── SKILL.md
 │   ├── references/
-│   ├── scripts/
-│   └── assets/
+│   └── architecture and LLM workflow guides
 ├── bioinformatics-singlecell/
 │   ├── SKILL.md
 │   ├── references/
-│   │   └── cell_markers.md
-│   ├── scripts/
-│   └── assets/
+│   │   ├── cell_markers.md
+│   │   └── workflow-checklist.md
 ├── ngs-analysis/
 │   ├── SKILL.md
 │   ├── references/
-│   ├── scripts/
-│   └── assets/
+│   │   └── pipeline-selection.md
 ├── python-package-builder/
 │   ├── SKILL.md
 │   ├── references/
-│   ├── scripts/
-│   └── assets/
+│   └── supporting packaging notes
 ├── scientific-manuscript/
 │   ├── SKILL.md
 │   ├── references/
-│   ├── scripts/
-│   └── assets/
+│   └── journal and reporting notes
 ├── data-visualization-biomedical/
 │   ├── SKILL.md
 │   ├── references/
-│   ├── scripts/
-│   └── assets/
+│   └── visualization guidance
 ├── mpn-research-assistant/
 │   ├── SKILL.md
 │   ├── references/
-│   ├── scripts/
-│   └── assets/
+│   │   └── mpn-analysis-framework.md
+├── skill-library-maintainer/
+│   ├── SKILL.md
+│   ├── agents/
+│   └── references/
+├── biomedical-rag-citation-pipelines/
+│   ├── SKILL.md
+│   ├── agents/
+│   └── references/
 └── README.md
 ```
 
@@ -186,6 +191,12 @@ Claude: [Triggers data-visualization-biomedical skill]
 - pytest testing
 - GitHub Actions CI/CD
 
+### Repository Curation
+- Compact `SKILL.md` triggers with workflow-oriented bodies
+- Reference-first organization for bulky domain detail
+- Validation with `quick_validate.py`
+- Optional `agents/openai.yaml` metadata for curated skills
+
 ---
 
 ## 📝 Author
@@ -209,11 +220,6 @@ Proprietary - For personal use by MD BABU MIA
 To update skills, simply replace the SKILL.md files with new versions.
 Skills are loaded fresh on each Claude Code session.
 
+Recent additions include `skill-library-maintainer` for curating this repository itself and `biomedical-rag-citation-pipelines` for grounded literature workflows.
 
 <!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->
-## Recent Additions
-
-| Skill | Description | Use Cases |
-|-------|-------------|-----------|
-| **skill-library-maintainer** | Audit and curate large skill repositories | Metadata cleanup, frontmatter normalization, reference splitting, validation |
-| **biomedical-rag-citation-pipelines** | Citation-grounded biomedical retrieval and generation | PubMed or PMC RAG, claim-to-citation validation, grounded answer evaluation |
