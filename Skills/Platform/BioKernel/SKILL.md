@@ -47,6 +47,7 @@ The BioKernel is the central orchestration layer of the Biomedical OS, managing 
 1.  **Task Routing**: Dispatches user queries to the correct specialist agent.
 2.  **Context Management**: Maintains long-term memory and session state.
 3.  **MCP Server**: Exposes tools and resources via standard protocol.
+4.  **Performance Monitoring**: Tracks latency and resource utilization for sub-agents.
 
 ## Example Usage
 
