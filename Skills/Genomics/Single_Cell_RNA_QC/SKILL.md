@@ -18,6 +18,15 @@ measurable_outcome: Produce filtered .h5ad files, before/after plots, and qc_sum
 allowed-tools:
   - read_file
   - run_shell_command
+reliability:
+  - source: https://github.com/scverse/scanpy
+    score: 0.90
+    rationale: >-
+      Scanpy repository maintained by the scverse core team with actively tested QC utilities (mito/ribo scoring, MAD filtering).
+  - source: https://github.com/theislab/single-cell-best-practices
+    score: 0.88
+    rationale: >-
+      Theis Lab best-practices playbook detailing MAD-based QC thresholds, mitochondrial cutoffs, and reproducibility checklists for scRNA-seq.
 ---
 
 ## At-a-Glance
@@ -38,6 +47,7 @@ allowed-tools:
 
 ## References
 - See `README.md`, `qc_core.py`, `qc_analysis.py`, and `qc_plotting.py` for API usage and schema details.
+- GitHub provenance: Scanpy QC modules and scverse best-practices notebooks.
 
 
 <!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

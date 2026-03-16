@@ -1,0 +1,33 @@
+{
+  "generated_at": "2026-03-16T09:14:42.197313",
+  "sources": [
+    {
+      "skill": "scrna-qc",
+      "file_path": "Skills/Genomics/Single_Cell_RNA_QC/SKILL.md",
+      "source": "https://github.com/scverse/scanpy",
+      "score": 0.9,
+      "rationale": "Scanpy repository maintained by the scverse core team with actively tested QC utilities (mito/ribo scoring, MAD filtering)."
+    },
+    {
+      "skill": "scrna-qc",
+      "file_path": "Skills/Genomics/Single_Cell_RNA_QC/SKILL.md",
+      "source": "https://github.com/theislab/single-cell-best-practices",
+      "score": 0.88,
+      "rationale": "Theis Lab best-practices playbook detailing MAD-based QC thresholds, mitochondrial cutoffs, and reproducibility checklists for scRNA-seq."
+    },
+    {
+      "skill": "rna-velocity",
+      "file_path": "Skills/Genomics/Single_Cell/rna-velocity/SKILL.md",
+      "source": "https://github.com/theislab/scvelo",
+      "score": 0.93,
+      "rationale": "Canonical scVelo implementation maintained by Theis Lab with validated dynamical/stochastic models and active release cadence."
+    },
+    {
+      "skill": "rna-velocity",
+      "file_path": "Skills/Genomics/Single_Cell/rna-velocity/SKILL.md",
+      "source": "https://github.com/scverse/single-cell-best-practices",
+      "score": 0.9,
+      "rationale": "Community maintained best-practices playbook from the scverse consortium covering velocity QC, parameter defaults, and benchmarking datasets."
+    }
+  ]
+}
