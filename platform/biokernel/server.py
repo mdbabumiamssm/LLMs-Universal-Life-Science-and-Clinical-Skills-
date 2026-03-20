@@ -1,234 +1,546 @@
-# COPYRIGHT NOTICE
-# This file is part of the "Universal Biomedical Skills" project.
-# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
-# All Rights Reserved.
-#
-# This code is proprietary and confidential.
-# Unauthorized copying of this file, via any medium is strictly prohibited.
-#
-# Provenance: Authenticated by MD BABU MIA
+# Copyright (c) 2026 MD Babu Mia, PhD <md.babu.mia@mssm.edu>
+# Icahn School of Medicine at Mount Sinai. All Rights Reserved.
+
+"""
+BioKernel Server — The core orchestration engine.
+
+A FastAPI application that:
+1. Discovers and indexes biomedical skills from the filesystem
+2. Routes user queries to the best-matching skill via semantic similarity
+3. Executes skills through a unified LLM provider abstraction
+4. Supports autonomous, interactive, and manual execution modes
+5. Orchestrates multi-step DAG workflows
+6. Exposes a RESTful API and health endpoints
+
+This is the central runtime of the Universal Biomedical Skills Platform.
+"""
+
+from __future__ import annotations
 
 import os
-import json
-import asyncio
+import re
 import time
-import importlib.util
-from typing import Dict, Any, List, Optional
-from fastapi import FastAPI
-from pydantic import BaseModel
+import yaml
+from contextlib import asynccontextmanager
+from pathlib import Path
+from typing import Any, Dict, List, Optional
 
-# Import Core Systems
-try:
-    from Skills.Computer_Science.Distributed_Systems.event_bus import bus
-    from Skills.LLM_Research.Prompt_Engineering.medprompt import MedPromptEngine
-except ImportError:
-    # Fallback for when running in isolation/dev mode
-    bus = None
-    MedPromptEngine = None
+from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 
-# Workflow Abstraction Layer (WAL) Imports
 from platform.adapters.factory import LLMFactory
-from platform.schema.io_types import LLMRequest, LLMResponse
+from platform.biokernel.router import SkillRouter
+from platform.biokernel.workflow_engine import WorkflowEngine
+from platform.interface.llm_provider import LLMProvider
+from platform.observability import configure_logging, get_logger
+from platform.schema.io_types import (
+    AgentRequest,
+    AgentResponse,
+    AgentStep,
+    ExecutionMode,
+    LLMRequest,
+    ProviderName,
+    SkillMetadata,
+    SkillType,
+    WorkflowDefinition,
+    WorkflowStep,
+    WorkflowStatus,
+)
 
-app = FastAPI(title="BioKernel Enterprise", version="2026.3.0-PRO")
 
-class AgentRequest(BaseModel):
-    query: str
-    context: Optional[Dict[str, Any]] = {}
-    model_preference: str = "auto" # 'auto', 'gemini', 'local', 'gpt4'
+# ---------------------------------------------------------------------------
+# Configuration loader
+# ---------------------------------------------------------------------------
 
-class AgentResponse(BaseModel):
-    response: str
-    tools_used: List[str]
-    execution_time: float
-    model_used: str
+def load_config(config_path: str | None = None) -> Dict[str, Any]:
+    """Load YAML configuration, falling back to defaults."""
+    paths_to_try = [
+        config_path,
+        os.getenv("BIOKERNEL_CONFIG"),
+        "platform/config.yaml",
+        "config.yaml",
+    ]
+    for p in paths_to_try:
+        if p and Path(p).exists():
+            with open(p) as f:
+                return yaml.safe_load(f)
+    return {}
+
+
+# ---------------------------------------------------------------------------
+# BioKernel Core
+# ---------------------------------------------------------------------------
 
 class BioKernel:
-    def __init__(self):
-        self.skills_registry = {}
-        self.medprompt = MedPromptEngine() if MedPromptEngine else None
-        
-        # Initialize WAL Provider (Default to Gemini, fallback to Local)
-        # In production, this config would come from a YAML file or ENV
-        self.provider_config = {
-            "api_key": os.getenv("GOOGLE_API_KEY"),
-            "model": "gemini-2.0-flash"
-        }
-        
-        # Try to load primary provider, fallback to local if key missing
-        if self.provider_config["api_key"]:
-            print("🔌 [BioKernel] Loading Primary Provider: Gemini")
-            self.llm = LLMFactory.create_provider("gemini", self.provider_config)
-        else:
-            print("🔌 [BioKernel] Loading Fallback Provider: Local (No API Key found)")
-            self.llm = LLMFactory.create_provider("local", {})
+    """
+    The BioKernel orchestrates skill discovery, routing, and execution.
 
-        self._discover_skills()
-        self._discover_antigravity_skills()
+    This class is independent of FastAPI and can be used programmatically
+    in scripts, notebooks, or embedded in other applications.
+    """
 
-    def _discover_skills(self):
-        """
-        Enterprise Mode: Dynamically scans the Skills/ directory for any file ending in '_agent.py'.
-        """
-        base_dir = "Skills"
-        if not os.path.exists(base_dir):
-            return
+    def __init__(self, config: Dict[str, Any] | None = None) -> None:
+        self.config = config or load_config()
+        self.logger = get_logger("biokernel")
 
-        print(f"🚀 [BioKernel] Scanning {base_dir} for active agents...")
-        for root, _, files in os.walk(base_dir):
-            for file in files:
-                if file.endswith("_agent.py") or file == "agent.py":
-                    # Construct a unique ID like 'clinical_prior_auth'
-                    rel_path = os.path.relpath(os.path.join(root, file), base_dir)
-                    skill_id = rel_path.replace("/", "_").replace(".py", "").lower()
-                    
-                    self.skills_registry[skill_id] = {
-                        "path": os.path.join(root, file),
-                        "type": "python",
-                        "name": skill_id
-                    }
-                    print(f"  + Registered (Python): {skill_id}")
-
-    def _discover_antigravity_skills(self):
-        """
-        Antigravity Mode: Scans for SKILL.md files.
-        """
-        search_dirs = ["skill collections/Antigravity_Skills", "Skills"]
-        print(f"🚀 [BioKernel] Scanning for Antigravity SKILL.md files...")
-        
-        for base_dir in search_dirs:
-            if not os.path.exists(base_dir):
-                continue
-                
-            for root, _, files in os.walk(base_dir):
-                if "SKILL.md" in files:
-                    file_path = os.path.join(root, "SKILL.md")
-                    try:
-                        with open(file_path, 'r') as f:
-                            content = f.read()
-                            # Simple frontmatter parser
-                            if content.startswith("---"):
-                                parts = content.split("---", 2)
-                                if len(parts) >= 3:
-                                    frontmatter_raw = parts[1]
-                                    name = None
-                                    description = "No description"
-                                    
-                                    for line in frontmatter_raw.splitlines():
-                                        if line.strip().startswith("name:"):
-                                            name = line.split(":", 1)[1].strip()
-                                        elif line.strip().startswith("description:"):
-                                            description = line.split(":", 1)[1].strip()
-                                    
-                                    if name:
-                                        self.skills_registry[name] = {
-                                            "path": file_path,
-                                            "type": "antigravity",
-                                            "description": description,
-                                            "content": parts[2] # Markdown body
-                                        }
-                                        print(f"  + Registered (Antigravity): {name}")
-                    except Exception as e:
-                        print(f"  ! Failed to load {file_path}: {e}")
-
-    async def route_request(self, request: AgentRequest) -> str:
-        """
-        Intelligent Router with Event Bus logging.
-        """
-        query_lower = request.query.lower()
-        
-        if bus:
-            await bus.publish("kernel_routing", {"query": request.query}, "BioKernel")
-
-        # 1. Check Antigravity Skills first (Direct Match)
-        for skill_id, meta in self.skills_registry.items():
-            if meta["type"] == "antigravity":
-                # Simple keyword matching based on description or name
-                keywords = skill_id.split("-") + meta["description"].lower().split()
-                if any(k in query_lower for k in keywords if len(k) > 3):
-                    return skill_id
-
-        # 2. Fallback to Python Agents
-        if "insurance" in query_lower:
-            return "clinical_prior_authorization_agent" # Matches file path structure
-        elif "heart" in query_lower:
-            return "consumer_health_wearable_analysis_agent"
-        elif "molecule" in query_lower:
-            return "drug_discovery_molecule_design_evolution_agent" # New agent
-        elif "trial" in query_lower:
-            return "clinical_clinical_trials_recruitment_agent" # New agent
-        
-        return "general_assistant"
-
-    async def execute(self, skill_id: str, query: str, context: Dict) -> AgentResponse:
-        start_time = time.time()
-        
-        # 1. MedPrompt Injection for Clinical Queries
-        if self.medprompt and ("patient" in query.lower() or "diagnosis" in query.lower()):
-            print("  ⚕️ [BioKernel] Injecting MedPrompt Strategy...")
-            query = self.medprompt.generate_prompt(query)
-
-        response_text = ""
-        tools = []
-        model_used = "unknown"
-
-        # 2. Execution Logic
-        skill_meta = self.skills_registry.get(skill_id)
-        
-        # Define available tools (in a real system, these would be dynamic)
-        available_tools = [
-            {"name": "literature_search", "description": "Search biomedical literature"},
-            {"name": "clinical_trial_match", "description": "Find matching clinical trials"},
-            {"name": "molecule_generator", "description": "Generate small molecules for a target"}
-        ]
-
-        print(f"  🧠 [BioKernel] Reasoning via WAL...")
-        
-        # If it's an Antigravity skill, we pass its instructions to the Provider
-        if skill_meta and skill_meta.get("type") == "antigravity":
-            system_instr = f"Act as the following agent:\nName: {skill_meta['name']}\nDescription: {skill_meta['description']}\nInstructions: {skill_meta['content']}"
-            
-            req = LLMRequest(
-                query=query, 
-                system_instruction=system_instr,
-                tools=available_tools # WAL supports tools
-            )
-            llm_resp = await self.llm.generate(req)
-            response_text = llm_resp.text
-            model_used = llm_resp.model
-            tools = ["antigravity_engine"]
-        else:
-            # Use general reasoning loop via WAL
-            # The provider (Gemini/Local) handles the specific prompt engineering
-            response_text = await self.llm.run_reasoning_loop(query, available_tools)
-            model_used = "reasoning_engine"
-            tools = ["reasoning_engine"]
-
-        # 3. Event Bus Notification
-        if bus:
-            await bus.publish("agent_completion", {
-                "skill": skill_id, 
-                "status": "success",
-                "duration": time.time() - start_time
-            }, "BioKernel")
-
-        return AgentResponse(
-            response=response_text,
-            tools_used=tools,
-            execution_time=time.time() - start_time,
-            model_used=model_used
+        # Configure logging
+        sys_cfg = self.config.get("system", {})
+        configure_logging(
+            level=sys_cfg.get("log_level", "INFO"),
+            json_output=sys_cfg.get("log_json", False),
         )
 
-kernel = BioKernel()
+        # Initialize components
+        routing_cfg = self.config.get("routing", {})
+        self.router = SkillRouter(
+            similarity_threshold=routing_cfg.get("similarity_threshold", 0.35)
+        )
+        self.workflow_engine = WorkflowEngine(
+            max_retries=self.config.get("workflow", {}).get("retry_count", 2),
+            retry_delay=self.config.get("workflow", {}).get("retry_delay_seconds", 5),
+            step_timeout=self.config.get("workflow", {}).get("step_timeout_seconds", 120),
+        )
+
+        # Initialize LLM providers
+        self.providers: Dict[str, LLMProvider] = {}
+        self._init_providers()
+
+        # Discover skills
+        self._discover_skills()
+
+        self.logger.info(
+            "BioKernel initialized",
+            skills_count=len(self.router.skills),
+            providers=list(self.providers.keys()),
+        )
+
+    # -- Provider initialization ----------------------------------------------
+
+    def _init_providers(self) -> None:
+        """Initialize configured LLM providers."""
+        LLMFactory.register_defaults()
+        providers_cfg = self.config.get("providers", {})
+
+        for name, cfg in providers_cfg.items():
+            try:
+                provider = LLMFactory.create_provider(name, cfg)
+                if provider.is_available:
+                    self.providers[name] = provider
+            except Exception as exc:
+                self.logger.warning(
+                    "Failed to initialize provider",
+                    provider=name,
+                    error=str(exc),
+                )
+
+    def get_provider(self, preference: ProviderName | str = "anthropic") -> LLMProvider:
+        """Get a provider by name, with fallback chain."""
+        name = preference.value if isinstance(preference, ProviderName) else preference
+
+        if name in self.providers:
+            return self.providers[name]
+
+        # Fallback chain
+        for fallback in ["anthropic", "openai", "gemini", "local"]:
+            if fallback in self.providers:
+                self.logger.info(
+                    "Provider fallback",
+                    requested=name,
+                    using=fallback,
+                )
+                return self.providers[fallback]
+
+        raise RuntimeError("No LLM providers available. Configure at least one API key.")
+
+    # -- Skill discovery ------------------------------------------------------
+
+    def _discover_skills(self) -> None:
+        """Scan configured directories for SKILL.md and Python agent files."""
+        skill_paths = self.config.get("skill_paths", ["Skills"])
+
+        for base_path in skill_paths:
+            if not Path(base_path).exists():
+                continue
+            self._scan_skill_md(base_path)
+            self._scan_python_agents(base_path)
+
+    def _scan_skill_md(self, base_dir: str) -> None:
+        """Discover SKILL.md files and register them."""
+        for skill_path in Path(base_dir).rglob("SKILL.md"):
+            try:
+                content = skill_path.read_text(encoding="utf-8")
+                metadata = self._parse_skill_md(content, str(skill_path))
+                if metadata:
+                    self.router.register_skill(metadata)
+            except Exception as exc:
+                self.logger.warning(
+                    "Failed to parse SKILL.md",
+                    path=str(skill_path),
+                    error=str(exc),
+                )
+
+    def _scan_python_agents(self, base_dir: str) -> None:
+        """Discover Python agent files and register them."""
+        for agent_path in Path(base_dir).rglob("*_agent.py"):
+            rel = agent_path.relative_to(base_dir)
+            skill_id = str(rel).replace("/", "_").replace(".py", "").lower()
+            skill_id = re.sub(r"[^a-z0-9_-]", "-", skill_id)
+
+            metadata = SkillMetadata(
+                skill_id=skill_id,
+                name=skill_id.replace("_", " ").replace("-", " ").title(),
+                description=f"Python agent: {agent_path.stem}",
+                skill_type=SkillType.PYTHON_AGENT,
+                file_path=str(agent_path),
+                tags=["python", "agent"],
+            )
+            self.router.register_skill(metadata)
+
+    @staticmethod
+    def _parse_skill_md(content: str, file_path: str) -> Optional[SkillMetadata]:
+        """Parse a SKILL.md file into SkillMetadata."""
+        if not content.startswith("---"):
+            return None
+
+        parts = content.split("---", 2)
+        if len(parts) < 3:
+            return None
+
+        frontmatter_raw = parts[1]
+        body = parts[2].strip()
+
+        # Parse YAML frontmatter
+        try:
+            frontmatter = yaml.safe_load(frontmatter_raw)
+        except yaml.YAMLError:
+            frontmatter = {}
+
+        if not isinstance(frontmatter, dict):
+            return None
+
+        name = frontmatter.get("name", "")
+        if not name:
+            return None
+
+        description = frontmatter.get("description", "No description")
+        if isinstance(description, str):
+            desc_text = description
+        else:
+            desc_text = str(description)
+
+        # Extract tags from frontmatter or body
+        tags = frontmatter.get("tags", [])
+        if isinstance(tags, str):
+            tags = [t.strip() for t in tags.split(",")]
+
+        # Extract capabilities from body headings
+        capabilities = re.findall(r"^#+\s+(.+)$", body, re.MULTILINE)
+
+        return SkillMetadata(
+            skill_id=name,
+            name=name.replace("-", " ").title(),
+            description=desc_text,
+            skill_type=SkillType.SKILL_MD,
+            file_path=file_path,
+            tags=tags,
+            capabilities=capabilities,
+            instructions_body=body,
+            version=frontmatter.get("version", "1.0.0"),
+            author=frontmatter.get("author", None),
+        )
+
+    # -- Execution ------------------------------------------------------------
+
+    async def execute(self, request: AgentRequest) -> AgentResponse:
+        """
+        Execute a user request through the BioKernel pipeline.
+
+        1. Route to best skill
+        2. Build context-aware prompt
+        3. Execute via selected LLM provider
+        4. Return structured response
+        """
+        start = time.perf_counter()
+        steps: List[AgentStep] = []
+
+        # Step 1: Route
+        skill_id = self.router.get_best_match(request.query, request.skill_id)
+        skill_meta = self.router.skills.get(skill_id or "")
+
+        steps.append(AgentStep(
+            step_number=1,
+            action="routing",
+            content=f"Routed to skill: {skill_id or 'general-assistant'}",
+        ))
+
+        # Step 2: Build prompt
+        system_prompt = self._build_system_prompt(skill_meta)
+        user_query = request.query
+
+        # Step 3: Execute
+        provider = self.get_provider(request.provider_preference)
+        llm_request = LLMRequest(
+            query=user_query,
+            system_instruction=system_prompt,
+            temperature=0.3,
+            max_tokens=4096,
+        )
+
+        llm_response = await provider.generate(llm_request)
+
+        steps.append(AgentStep(
+            step_number=2,
+            action="generation",
+            content=f"Generated response via {provider.provider_name}",
+            latency_ms=llm_response.latency_ms,
+        ))
+
+        # Safety check
+        safety_flags = self._check_safety(llm_response.text)
+
+        total_ms = (time.perf_counter() - start) * 1000
+
+        return AgentResponse(
+            response=llm_response.text,
+            skill_used=skill_id or "general-assistant",
+            provider_used=provider.provider_name,
+            model_used=llm_response.model,
+            steps=steps,
+            tools_used=[],
+            execution_time_ms=total_ms,
+            token_usage=llm_response.usage,
+            session_id=request.session_id,
+            safety_flags=safety_flags,
+        )
+
+    async def execute_workflow(
+        self,
+        workflow: WorkflowDefinition,
+    ) -> WorkflowDefinition:
+        """
+        Execute a multi-step workflow through the DAG engine.
+
+        Each step is executed as a separate skill invocation, with results
+        from upstream steps available as context.
+        """
+        async def step_executor(
+            step: WorkflowStep, upstream: Dict[str, str]
+        ) -> str:
+            context_text = "\n".join(
+                f"[{k}]: {v}" for k, v in upstream.items() if v
+            )
+            query = step.parameters.get("query", f"Execute skill: {step.skill_id}")
+            if context_text:
+                query = f"Context from previous steps:\n{context_text}\n\nTask: {query}"
+
+            request = AgentRequest(
+                query=query,
+                skill_id=step.skill_id,
+                context=step.parameters,
+            )
+            response = await self.execute(request)
+            return response.response
+
+        return await self.workflow_engine.execute(workflow, step_executor)
+
+    def _build_system_prompt(self, skill_meta: Optional[SkillMetadata]) -> str:
+        """Build a context-aware system prompt from skill metadata."""
+        base = (
+            "You are BioKernel, an expert biomedical AI assistant developed at "
+            "the Icahn School of Medicine at Mount Sinai. You provide scientifically "
+            "accurate, clinically safe, and evidence-based responses.\n\n"
+            "SAFETY: Always include appropriate disclaimers for clinical content. "
+            "Never provide definitive diagnoses. Recommend professional consultation "
+            "for clinical decisions.\n"
+        )
+
+        if not skill_meta:
+            return base
+
+        prompt = base + f"\n## Active Skill: {skill_meta.name}\n"
+        prompt += f"{skill_meta.description}\n"
+
+        if skill_meta.instructions_body:
+            prompt += f"\n## Detailed Instructions\n{skill_meta.instructions_body}\n"
+
+        if skill_meta.safety_checks:
+            prompt += "\n## Safety Requirements\n"
+            for check in skill_meta.safety_checks:
+                prompt += f"- {check}\n"
+
+        return prompt
+
+    @staticmethod
+    def _check_safety(text: str) -> List[str]:
+        """Run basic safety checks on generated output."""
+        flags = []
+        text_lower = text.lower()
+
+        # Check for potentially dangerous content
+        danger_terms = [
+            "synthesize", "manufacture", "produce at home",
+            "without prescription", "self-medicate",
+        ]
+        for term in danger_terms:
+            if term in text_lower:
+                flags.append(f"safety:potential_risk:{term}")
+
+        # Check for missing disclaimers on clinical content
+        clinical_terms = ["diagnosis", "treatment", "prescribe", "medication", "dosage"]
+        has_clinical = any(t in text_lower for t in clinical_terms)
+        disclaimer_terms = ["consult", "healthcare", "physician", "professional", "medical advice"]
+        has_disclaimer = any(t in text_lower for t in disclaimer_terms)
+
+        if has_clinical and not has_disclaimer:
+            flags.append("safety:missing_clinical_disclaimer")
+
+        return flags
+
+    # -- Introspection --------------------------------------------------------
+
+    def list_skills(self) -> List[Dict[str, Any]]:
+        """Return all registered skills as serializable dicts."""
+        return [
+            {
+                "skill_id": s.skill_id,
+                "name": s.name,
+                "description": s.description,
+                "type": s.skill_type.value,
+                "category": s.category,
+                "tags": s.tags,
+            }
+            for s in self.router.skills.values()
+        ]
+
+    def list_providers(self) -> Dict[str, bool]:
+        """Return available providers."""
+        return {name: p.is_available for name, p in self.providers.items()}
+
+
+# ---------------------------------------------------------------------------
+# FastAPI Application
+# ---------------------------------------------------------------------------
+
+kernel: Optional[BioKernel] = None
+
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    """Initialize BioKernel on startup."""
+    global kernel
+    kernel = BioKernel()
+    yield
+    kernel = None
+
+
+app = FastAPI(
+    title="BioKernel",
+    description=(
+        "Autonomous Biomedical AI Skills Platform — "
+        "Universal Skill Description Language (USDL) runtime"
+    ),
+    version="2026.4.0",
+    lifespan=lifespan,
+)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+
+def _get_kernel() -> BioKernel:
+    if kernel is None:
+        raise HTTPException(status_code=503, detail="BioKernel not initialized")
+    return kernel
+
+
+# -- API Endpoints -----------------------------------------------------------
+
+@app.get("/")
+async def health_check():
+    """Health check endpoint."""
+    k = _get_kernel()
+    return {
+        "status": "active",
+        "system": "BioKernel",
+        "version": "2026.4.0",
+        "skills_registered": len(k.router.skills),
+        "providers": k.list_providers(),
+    }
+
 
 @app.post("/v1/agent/run", response_model=AgentResponse)
 async def run_agent(request: AgentRequest):
-    skill_id = await kernel.route_request(request)
-    result = await kernel.execute(skill_id, request.query, request.context)
-    return result
+    """Execute a query through the BioKernel."""
+    k = _get_kernel()
+    return await k.execute(request)
+
+
+@app.post("/v1/workflow/run")
+async def run_workflow(workflow: WorkflowDefinition):
+    """Execute a multi-step workflow."""
+    k = _get_kernel()
+    result = await k.execute_workflow(workflow)
+    return {
+        "workflow_id": result.workflow_id,
+        "name": result.name,
+        "status": result.status.value,
+        "total_latency_ms": result.total_latency_ms,
+        "steps": [
+            {
+                "step_id": s.step_id,
+                "skill_id": s.skill_id,
+                "status": s.status.value,
+                "result": s.result[:500] if s.result else None,
+                "error": s.error,
+                "latency_ms": s.latency_ms,
+            }
+            for s in result.steps
+        ],
+    }
+
+
+@app.get("/v1/skills")
+async def list_skills():
+    """List all registered skills."""
+    k = _get_kernel()
+    return {"skills": k.list_skills(), "total": len(k.router.skills)}
+
+
+@app.get("/v1/providers")
+async def list_providers():
+    """List available LLM providers."""
+    k = _get_kernel()
+    return {"providers": k.list_providers()}
+
+
+@app.post("/v1/route")
+async def route_query(request: AgentRequest):
+    """Route a query to skills without executing (preview mode)."""
+    k = _get_kernel()
+    matches = k.router.route(request.query, top_k=5)
+    return {
+        "query": request.query,
+        "matches": [
+            {
+                "skill_id": sid,
+                "score": round(score, 4),
+                "name": k.router.skills[sid].name,
+                "description": k.router.skills[sid].description,
+            }
+            for sid, score in matches
+        ],
+    }
+
+
+# ---------------------------------------------------------------------------
+# Entrypoint
+# ---------------------------------------------------------------------------
 
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)
-
-__AUTHOR_SIGNATURE__ = "9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE"

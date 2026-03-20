@@ -1,235 +1,390 @@
-# COPYRIGHT NOTICE
-# This file is part of the "Universal Biomedical Skills" project.
-# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
-# All Rights Reserved.
-#
-# This code is proprietary and confidential.
-# Unauthorized copying of this file, via any medium is strictly prohibited.
-#
-# Provenance: Authenticated by MD BABU MIA
+# Copyright (c) 2026 MD Babu Mia, PhD <md.babu.mia@mssm.edu>
+# Icahn School of Medicine at Mount Sinai. All Rights Reserved.
 
-import sys
-import json
+"""
+BioKernel MCP (Model Context Protocol) Server.
+
+Exposes BioKernel skills as MCP tools, allowing any MCP-compatible client
+(Claude Desktop, Claude Code, Cursor, etc.) to discover and invoke
+biomedical AI skills seamlessly.
+
+Protocol: JSON-RPC 2.0 over stdio (MCP spec 2024-11-05).
+
+Tools exposed:
+- ``run_bio_agent``: Execute any registered biomedical skill
+- ``list_skills``: Discover available skills with descriptions
+- ``run_workflow``: Execute a multi-step DAG workflow
+- ``route_query``: Preview skill routing without execution
+"""
+
+from __future__ import annotations
+
 import asyncio
+import json
 import logging
-from typing import Any, Dict, List
-import os
+import sys
+from typing import Any, Dict, Optional
 
-# Add project root to path to import server
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../")))
+from platform.biokernel.server import BioKernel, load_config
+from platform.schema.io_types import AgentRequest, WorkflowDefinition
 
-from platform.biokernel.server import kernel, AgentRequest
-from platform.optimizer.usdl_transpiler import USDLTranspiler, USDLSpec, Provider
-
-# Setup logging (stderr so it doesn't break JSON-RPC on stdout)
-logging.basicConfig(level=logging.INFO, stream=sys.stderr, format='[MCP] %(message)s')
+# Logging to stderr to avoid corrupting JSON-RPC stdout
+logging.basicConfig(
+    level=logging.INFO,
+    stream=sys.stderr,
+    format="[MCP:BioKernel] %(levelname)s %(message)s",
+)
 logger = logging.getLogger("mcp_server")
 
-class MCPServer:
-    def __init__(self):
-        self.kernel = kernel
-        self.transpiler = USDLTranspiler()
-        self.name = "biokernel-enterprise"
-        self.version = "2026.3.0"
 
-    async def handle_message(self, message: Dict[str, Any]):
-        msg_type = message.get("method")
-        msg_id = message.get("id")
+# ---------------------------------------------------------------------------
+# MCP Tool Definitions
+# ---------------------------------------------------------------------------
 
-        if msg_type == "initialize":
-            return {
-                "jsonrpc": "2.0",
-                "id": msg_id,
-                "result": {
-                    "protocolVersion": "2024-11-05",
-                    "capabilities": {
-                        "tools": {},
-                        "prompts": {}
+MCP_TOOLS = [
+    {
+        "name": "run_bio_agent",
+        "description": (
+            "Execute a biomedical AI skill. Supports 59+ domains including "
+            "genomics, clinical decision support, drug discovery, single-cell "
+            "analysis, and more. If skill_id is omitted, the system routes "
+            "automatically based on query content."
+        ),
+        "inputSchema": {
+            "type": "object",
+            "properties": {
+                "query": {
+                    "type": "string",
+                    "description": "Natural language request for the biomedical agent.",
+                },
+                "skill_id": {
+                    "type": "string",
+                    "description": "Optional: specific skill ID to invoke (e.g., 'bioinformatics-singlecell').",
+                },
+                "provider": {
+                    "type": "string",
+                    "enum": ["anthropic", "openai", "gemini", "local"],
+                    "description": "Optional: preferred LLM provider.",
+                },
+            },
+            "required": ["query"],
+        },
+    },
+    {
+        "name": "list_skills",
+        "description": "List all available biomedical skills with their descriptions and categories.",
+        "inputSchema": {
+            "type": "object",
+            "properties": {
+                "category": {
+                    "type": "string",
+                    "description": "Optional: filter by category (e.g., 'genomics', 'clinical').",
+                },
+            },
+        },
+    },
+    {
+        "name": "route_query",
+        "description": (
+            "Preview which skills would match a query without executing. "
+            "Returns ranked matches with similarity scores."
+        ),
+        "inputSchema": {
+            "type": "object",
+            "properties": {
+                "query": {
+                    "type": "string",
+                    "description": "The query to route.",
+                },
+            },
+            "required": ["query"],
+        },
+    },
+    {
+        "name": "run_workflow",
+        "description": (
+            "Execute a multi-step biomedical workflow (e.g., "
+            "literature mining → molecule design → safety review). "
+            "Steps run as a DAG with automatic parallelization."
+        ),
+        "inputSchema": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "Workflow name.",
+                },
+                "steps": {
+                    "type": "array",
+                    "description": "Array of workflow steps.",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "step_id": {"type": "string"},
+                            "skill_id": {"type": "string"},
+                            "depends_on": {
+                                "type": "array",
+                                "items": {"type": "string"},
+                            },
+                            "query": {"type": "string"},
+                        },
+                        "required": ["step_id", "skill_id"],
                     },
-                    "serverInfo": {
-                        "name": self.name,
-                        "version": self.version
-                    }
-                }
-            }
+                },
+            },
+            "required": ["name", "steps"],
+        },
+    },
+]
 
-        elif msg_type == "notifications/initialized":
-            logger.info("Client initialized.")
+
+# ---------------------------------------------------------------------------
+# MCP Server
+# ---------------------------------------------------------------------------
+
+class MCPServer:
+    """
+    JSON-RPC 2.0 server implementing the Model Context Protocol.
+
+    Communicates over stdio (stdin/stdout) and delegates biomedical
+    queries to the BioKernel.
+    """
+
+    def __init__(self) -> None:
+        self.kernel = BioKernel(config=load_config())
+        self.name = "biokernel-mcp"
+        self.version = "2026.4.0"
+
+    async def handle_message(self, message: Dict[str, Any]) -> Optional[Dict[str, Any]]:
+        """Dispatch a JSON-RPC message to the appropriate handler."""
+        method = message.get("method", "")
+        msg_id = message.get("id")
+        params = message.get("params", {})
+
+        handlers = {
+            "initialize": self._handle_initialize,
+            "notifications/initialized": self._handle_notification,
+            "tools/list": self._handle_tools_list,
+            "tools/call": self._handle_tools_call,
+            "prompts/list": self._handle_prompts_list,
+            "prompts/get": self._handle_prompts_get,
+        }
+
+        handler = handlers.get(method)
+        if handler is None:
+            if msg_id is not None:
+                return self._error(msg_id, -32601, f"Method not found: {method}")
             return None
 
-        elif msg_type == "tools/list":
-            tools = []
-            # Tool 1: Execute Agent
-            tools.append({
-                "name": "run_bio_agent",
-                "description": "Executes a biomedical agent skill (e.g., Clinical Trial Matcher, CRISPR Designer).",
-                "inputSchema": {
-                    "type": "object",
-                    "properties": {
-                        "query": {
-                            "type": "string",
-                            "description": "The natural language request for the agent."
-                        },
-                        "skill_id": {
-                            "type": "string",
-                            "description": "Optional: Specific skill ID if known (e.g., 'clinical-trial-matcher')."
-                        }
-                    },
-                    "required": ["query"]
+        try:
+            result = await handler(params)
+            if msg_id is None:
+                return None  # Notification, no response needed
+            return {"jsonrpc": "2.0", "id": msg_id, "result": result}
+        except Exception as exc:
+            logger.error("Handler error: %s", exc)
+            if msg_id is not None:
+                return self._error(msg_id, -32000, str(exc))
+            return None
+
+    # -- Protocol handlers ---------------------------------------------------
+
+    async def _handle_initialize(self, params: Dict) -> Dict:
+        return {
+            "protocolVersion": "2024-11-05",
+            "capabilities": {"tools": {}, "prompts": {}},
+            "serverInfo": {"name": self.name, "version": self.version},
+        }
+
+    async def _handle_notification(self, params: Dict) -> None:
+        logger.info("Client initialized successfully")
+
+    async def _handle_tools_list(self, params: Dict) -> Dict:
+        return {"tools": MCP_TOOLS}
+
+    async def _handle_tools_call(self, params: Dict) -> Dict:
+        name = params.get("name", "")
+        args = params.get("arguments", {})
+
+        if name == "run_bio_agent":
+            return await self._tool_run_agent(args)
+        elif name == "list_skills":
+            return await self._tool_list_skills(args)
+        elif name == "route_query":
+            return await self._tool_route_query(args)
+        elif name == "run_workflow":
+            return await self._tool_run_workflow(args)
+        else:
+            raise ValueError(f"Unknown tool: {name}")
+
+    async def _handle_prompts_list(self, params: Dict) -> Dict:
+        prompts = []
+        for skill in self.kernel.router.skills.values():
+            if skill.skill_type.value == "skill_md":
+                prompts.append({
+                    "name": skill.skill_id,
+                    "description": skill.description,
+                    "arguments": [],
+                })
+        return {"prompts": prompts}
+
+    async def _handle_prompts_get(self, params: Dict) -> Dict:
+        name = params.get("name", "")
+        skill = self.kernel.router.skills.get(name)
+        if not skill:
+            raise ValueError(f"Prompt/skill not found: {name}")
+        return {
+            "messages": [
+                {
+                    "role": "user",
+                    "content": {"type": "text", "text": skill.instructions_body},
                 }
-            })
-            # Tool 2: Transpile Skill (Universal Adapter)
-            tools.append({
-                "name": "transpile_skill",
-                "description": "Converts a SKILL.md definition into an optimized prompt for OpenAI, Anthropic, or Gemini.",
-                "inputSchema": {
-                    "type": "object",
-                    "properties": {
-                        "skill_name": {
-                            "type": "string",
-                            "description": "Name of the skill to transpile (e.g. 'clinical-trial-matcher')."
-                        },
-                        "target_provider": {
-                            "type": "string",
-                            "enum": ["openai", "anthropic", "gemini"],
-                            "description": "The target LLM provider format."
-                        }
-                    },
-                    "required": ["skill_name", "target_provider"]
-                }
-            })
-            return {"jsonrpc": "2.0", "id": msg_id, "result": {"tools": tools}}
+            ]
+        }
 
-        elif msg_type == "tools/call":
-            params = message.get("params", {})
-            name = params.get("name")
-            args = params.get("arguments", {})
+    # -- Tool implementations ------------------------------------------------
 
-            if name == "run_bio_agent":
-                query = args.get("query")
-                skill_id = args.get("skill_id")
-                
-                # If skill_id not provided, let kernel route it
-                if not skill_id:
-                    req = AgentRequest(query=query)
-                    skill_id = await self.kernel.route_request(req)
+    async def _tool_run_agent(self, args: Dict) -> Dict:
+        request = AgentRequest(
+            query=args["query"],
+            skill_id=args.get("skill_id"),
+        )
+        if args.get("provider"):
+            request.provider_preference = ProviderName(args["provider"])
 
-                result = await self.kernel.execute(skill_id, query, {})
-                
-                return {
-                    "jsonrpc": "2.0", 
-                    "id": msg_id, 
-                    "result": {
-                        "content": [{
-                            "type": "text",
-                            "text": result.response
-                        }]
-                    }
-                }
+        result = await self.kernel.execute(request)
+        return {
+            "content": [
+                {"type": "text", "text": result.response},
+            ],
+            "metadata": {
+                "skill_used": result.skill_used,
+                "provider": result.provider_used,
+                "model": result.model_used,
+                "execution_time_ms": result.execution_time_ms,
+                "safety_flags": result.safety_flags,
+            },
+        }
 
-            elif name == "transpile_skill":
-                skill_name = args.get("skill_name")
-                provider_str = args.get("target_provider")
-                
-                # Find skill
-                skill_meta = self.kernel.skills_registry.get(skill_name)
-                if not skill_meta:
-                     return {"jsonrpc": "2.0", "id": msg_id, "error": {"code": -32001, "message": f"Skill '{skill_name}' not found."}}
-                
-                try:
-                    # Load and Transpile
-                    if skill_meta["type"] == "antigravity":
-                        spec = USDLSpec.from_skill_md(skill_meta["content"])
-                    else:
-                        # Fallback for python agents - just use description
-                        spec = USDLSpec(
-                            name=skill_name, 
-                            description="Legacy Python Agent", 
-                            inputs=[], outputs=[], safety_checks=[], audit_policy=""
-                        )
+    async def _tool_list_skills(self, args: Dict) -> Dict:
+        skills = self.kernel.list_skills()
+        category = args.get("category", "").lower()
+        if category:
+            skills = [
+                s for s in skills
+                if category in (s.get("category") or "").lower()
+                or category in " ".join(s.get("tags", [])).lower()
+            ]
+        formatted = "\n".join(
+            f"- **{s['skill_id']}**: {s['description']}" for s in skills
+        )
+        return {
+            "content": [
+                {"type": "text", "text": f"## Available Skills ({len(skills)})\n\n{formatted}"},
+            ]
+        }
 
-                    artifact = self.transpiler.compile(spec, Provider(provider_str))
-                    
-                    return {
-                        "jsonrpc": "2.0",
-                        "id": msg_id,
-                        "result": {
-                            "content": [{
-                                "type": "text",
-                                "text": json.dumps(artifact, indent=2)
-                            }]
-                        }
-                    }
-                except Exception as e:
-                    return {"jsonrpc": "2.0", "id": msg_id, "error": {"code": -32002, "message": f"Transpilation failed: {str(e)}"}}
+    async def _tool_route_query(self, args: Dict) -> Dict:
+        matches = self.kernel.router.route(args["query"], top_k=5)
+        if not matches:
+            return {
+                "content": [{"type": "text", "text": "No matching skills found."}]
+            }
+        lines = []
+        for sid, score in matches:
+            skill = self.kernel.router.skills[sid]
+            lines.append(f"- **{sid}** (score: {score:.3f}): {skill.description}")
+        return {
+            "content": [{"type": "text", "text": "\n".join(lines)}]
+        }
 
-            else:
-                return {"jsonrpc": "2.0", "id": msg_id, "error": {"code": -32601, "message": "Method not found"}}
+    async def _tool_run_workflow(self, args: Dict) -> Dict:
+        from platform.schema.io_types import WorkflowStep as WS
 
-        elif msg_type == "prompts/list":
-            prompts = []
-            # List all Antigravity skills as prompts
-            for skill_id, meta in self.kernel.skills_registry.items():
-                if meta.get("type") == "antigravity":
-                    prompts.append({
-                        "name": skill_id,
-                        "description": meta.get("description"),
-                        "arguments": []
-                    })
-            return {"jsonrpc": "2.0", "id": msg_id, "result": {"prompts": prompts}}
+        steps = []
+        for s in args["steps"]:
+            steps.append(WS(
+                step_id=s["step_id"],
+                skill_id=s["skill_id"],
+                depends_on=s.get("depends_on", []),
+                parameters={"query": s.get("query", f"Execute {s['skill_id']}")},
+            ))
 
-        elif msg_type == "prompts/get":
-            params = message.get("params", {})
-            name = params.get("name")
-            skill_meta = self.kernel.skills_registry.get(name)
+        workflow = WorkflowDefinition(
+            name=args["name"],
+            steps=steps,
+        )
 
-            if skill_meta and skill_meta.get("type") == "antigravity":
-                return {
-                    "jsonrpc": "2.0",
-                    "id": msg_id,
-                    "result": {
-                        "messages": [{
-                            "role": "user",
-                            "content": {
-                                "type": "text",
-                                "text": skill_meta["content"]
-                            }
-                        }]
-                    }
-                }
-            else:
-                 return {"jsonrpc": "2.0", "id": msg_id, "error": {"code": -32602, "message": "Prompt not found"}}
+        result = await self.kernel.execute_workflow(workflow)
 
-        return None
+        summary_lines = [f"## Workflow: {result.name}", f"Status: {result.status.value}\n"]
+        for step in result.steps:
+            status_icon = "✓" if step.status.value == "completed" else "✗"
+            summary_lines.append(
+                f"{status_icon} **{step.step_id}** ({step.skill_id}): "
+                f"{step.result[:200] if step.result else step.error or 'No output'}"
+            )
+        summary_lines.append(f"\nTotal time: {result.total_latency_ms:.0f}ms")
 
-    async def run(self):
+        return {
+            "content": [{"type": "text", "text": "\n".join(summary_lines)}]
+        }
+
+    # -- Helpers -------------------------------------------------------------
+
+    @staticmethod
+    def _error(msg_id: Any, code: int, message: str) -> Dict:
+        return {
+            "jsonrpc": "2.0",
+            "id": msg_id,
+            "error": {"code": code, "message": message},
+        }
+
+    # -- Main loop -----------------------------------------------------------
+
+    async def run(self) -> None:
+        """Run the MCP server on stdio."""
         reader = asyncio.StreamReader()
         protocol = asyncio.StreamReaderProtocol(reader)
         await asyncio.get_running_loop().connect_read_pipe(lambda: protocol, sys.stdin)
-        w_transport, w_protocol = await asyncio.get_running_loop().connect_write_pipe(asyncio.BaseProtocol, sys.stdout)
+        w_transport, _ = await asyncio.get_running_loop().connect_write_pipe(
+            asyncio.BaseProtocol, sys.stdout
+        )
 
         logger.info("BioKernel MCP Server running on stdio...")
-        
+        logger.info("Skills loaded: %d", len(self.kernel.router.skills))
+
         while True:
             try:
                 line = await reader.readline()
                 if not line:
                     break
-                
+
                 msg = json.loads(line)
                 response = await self.handle_message(msg)
-                
+
                 if response:
-                    sys.stdout.write(json.dumps(response) + "\n")
+                    output = json.dumps(response) + "\n"
+                    sys.stdout.write(output)
                     sys.stdout.flush()
-            except Exception as e:
-                logger.error(f"Error: {e}")
+
+            except json.JSONDecodeError as exc:
+                logger.error("Invalid JSON: %s", exc)
+            except Exception as exc:
+                logger.error("Server error: %s", exc)
+
+
+# Need this import for the tool handler
+from platform.schema.io_types import ProviderName
+
+
+# ---------------------------------------------------------------------------
+# Entrypoint
+# ---------------------------------------------------------------------------
 
 if __name__ == "__main__":
     server = MCPServer()
     try:
         asyncio.run(server.run())
     except KeyboardInterrupt:
-        pass
-
-__AUTHOR_SIGNATURE__ = "9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE"
+        logger.info("MCP server shutting down")
