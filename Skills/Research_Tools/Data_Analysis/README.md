@@ -26,6 +26,11 @@ The **Data Analysis Skill** provides a comprehensive toolkit for statistical ana
 
 This skill addresses the critical need for reproducible, scalable data analysis in life sciences research—from exploratory data analysis (EDA) to publication-ready visualizations and database querying.
 
+### Companion Skills (new)
+
+- **paper-reproduce** — opinionated, end-to-end methodology for reproducing published papers, including templates for Markdown/LaTeX reports.
+- **charls-reproduce** — dataset-specific playbook for the CHARLS cohort covering variable mapping, scoring schemes, and cohort selection.
+
 ---
 
 ## Key Capabilities

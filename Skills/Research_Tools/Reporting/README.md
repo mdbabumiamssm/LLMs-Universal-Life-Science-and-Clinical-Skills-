@@ -28,6 +28,9 @@ Reproducible report generation for bioinformatics analyses using literate progra
 | jupyter-reports | Parameterized Jupyter notebooks with papermill |
 | automated-qc-reports | Aggregate QC metrics with MultiQC |
 | figure-export | Publication-ready figure formatting and export |
+| dashboard | Bootstrap local research dashboards with live progress panels |
+| feishu-rich-card | Send Feishu interactive cards with text + image summaries |
+| svg-ui-templates | Generate SVG/PNG UI layouts for cards and executive briefs |
 
 ## Example Prompts
 

@@ -30,6 +30,7 @@ Publication-quality data visualization for bioinformatics using ggplot2 and matp
 | genome-tracks | Genome browser tracks with pyGenomeTracks and Gviz |
 | specialized-omics-plots | Volcano, MA, PCA, and enrichment dotplots |
 | color-palettes | Colorblind-friendly palettes and journal color schemes |
+| cjk-viz | Configure CJK-safe fonts and sanity checks for Chinese figures |
 | circos-plots | Circular genome visualizations with Circos, pyCircos, circlize |
 | upset-plots | UpSet plots for set intersection visualization |
 | volcano-customization | Customized volcano plots with labels and thresholds |
