@@ -96,6 +96,20 @@ Skills/
 └── Software_Engineering/ # Best Practices (React, Python, Pandas)
 ```
 
+### 🗂️ Documentation Layout (2026 refresh)
+
+All long-form docs now live under `docs/` with a clear index:
+
+| Folder | What's inside |
+|--------|---------------|
+| `docs/README.md` | Quick index for every doc family. |
+| `docs/architecture/` | Repository maps + onboarding (“Where does X live?”). |
+| `docs/operations/` | Runbooks (e.g., `medgeclaw_stack.md`). |
+| `docs/standards/` | Governance + schemas (`USDL_OVERVIEW.md`, etc.). |
+
+Update these files whenever you add a major capability so downstream teams never
+have to guess where specs or runbooks are stored.
+
 ## 📜 Standardized Skill Format
 
 The repository is migrating toward a lean **SKILL.md** standard so skills are easier to discover and cheaper to load into context. Curated skills should prefer:

@@ -85,7 +85,7 @@ Each module prints the structured payload using Claude's XML-style tags (`<think
 * Register MCP tools (`anthropic.prior_auth`, `anthropic.fhir`, `anthropic.claims_appeal`, `anthropic.care_triage`, `anthropic.lab_interpret`) so Claude Desktop clients can subscribe directly.
 * Extend the Optimizer with an `anthropic` target that wraps tasks inside the `<thinking>/<analysis>/<decision>` contract.
 * Mirror Anthropic's compliance stance by persisting every coworker exchange to the Audit Log and signing responses with the Event Bus digest helper.
-* Drive every coworker definition from USDL specs so the Anthropic prompt/tag layout always matches the OpenAI/Gemini variants (see `docs/USDL_OVERVIEW.md`).
+* Drive every coworker definition from USDL specs so the Anthropic prompt/tag layout always matches the OpenAI/Gemini variants (see `docs/standards/USDL_OVERVIEW.md`).
 
 ## Safety & Compliance
 
