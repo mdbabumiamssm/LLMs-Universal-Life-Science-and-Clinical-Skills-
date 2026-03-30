@@ -1,3 +1,11 @@
+---
+name: protac-design-agent
+description: "AI-powered PROTAC (Proteolysis Targeting Chimera) design agent for targeted protein degradation, integrating ternary complex prediction, linker optimization, E3 ligase selection, and ADMET modeling to accelerate degrader drug discovery."
+allowed-tools: "read_file, run_shell_command"
+metadata:
+  measurable_outcome: "Execute skill workflow successfully with valid output within 15 minutes."
+---
+
 <!--
 # COPYRIGHT NOTICE
 # This file is part of the "Universal Biomedical Skills" project.
@@ -8,22 +16,13 @@
 # Unauthorized copying of this file, via any medium is strictly prohibited.
 #
 # Provenance: Authenticated by MD BABU MIA
-
 -->
-
----
-name: 'protac-design-agent'
-description: 'AI-powered PROTAC (Proteolysis Targeting Chimera) design for targeted protein degradation, integrating ternary complex prediction, linker optimization, and ADMET modeling.'
-measurable_outcome: Execute skill workflow successfully with valid output within 15 minutes.
-allowed-tools:
-  - read_file
-  - run_shell_command
----
-
 
 # PROTAC Design Agent
 
-The **PROTAC Design Agent** provides AI-assisted design of Proteolysis Targeting Chimeras (PROTACs) for targeted protein degradation. It integrates machine learning for ternary complex prediction, linker design, E3 ligase selection, and ADMET optimization to accelerate degrader drug discovery for oncology and other therapeutic areas.
+AI-assisted design of Proteolysis Targeting Chimeras (PROTACs) for targeted protein degradation. Integrates machine learning for ternary complex prediction, linker design, E3 ligase selection, and ADMET optimization to accelerate degrader drug discovery.
+
+Use when designing PROTAC degraders for a target protein, optimizing linker chemistry, predicting ternary complex formation, or balancing degradation potency with drug-like ADMET properties.
 
 ## When to Use This Skill
 
