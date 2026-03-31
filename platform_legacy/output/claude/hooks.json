@@ -1,0 +1,10 @@
+{
+  "PreToolUse": [
+    {
+      "matcher": "biomedical.genomics.single_cell_qc",
+      "hooks": [
+        "validate_inputs"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,317 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://biomedical-skills.io/schema/usdl/v1",
+  "title": "Universal Skill Definition Language (USDL) v1.0",
+  "description": "Platform-agnostic schema for defining biomedical AI skills deployable across Claude, ChatGPT, Gemini, and other LLMs",
+  "type": "object",
+  "required": ["skill"],
+  "properties": {
+    "skill": {
+      "type": "object",
+      "required": ["id", "version", "name", "category", "description", "capabilities"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z]+\\.[a-z_]+\\.[a-z_]+$",
+          "description": "Unique identifier in format: domain.category.name",
+          "examples": ["biomedical.genomics.single_cell_qc"]
+        },
+        "version": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$",
+          "description": "Semantic version"
+        },
+        "name": {
+          "type": "string",
+          "maxLength": 100,
+          "description": "Human-readable skill name"
+        },
+        "category": {
+          "type": "string",
+          "enum": [
+            "genomics/single_cell",
+            "genomics/spatial_transcriptomics",
+            "genomics/variant_interpretation",
+            "genomics/crispr",
+            "genomics/multi_omics",
+            "clinical/ehr",
+            "clinical/trial_matching",
+            "clinical/diagnosis",
+            "clinical/radiology",
+            "clinical/oncology",
+            "drug_discovery/molecule_generation",
+            "drug_discovery/property_prediction",
+            "drug_discovery/antibody_design",
+            "drug_discovery/target_id",
+            "research/literature_mining",
+            "research/knowledge_graphs",
+            "research/hypothesis_generation",
+            "research/experimental_design"
+          ]
+        },
+        "metadata": {
+          "type": "object",
+          "properties": {
+            "author": {"type": "string"},
+            "organization": {"type": "string"},
+            "license": {"type": "string", "default": "MIT"},
+            "tags": {"type": "array", "items": {"type": "string"}},
+            "citations": {"type": "array", "items": {"type": "string"}},
+            "created": {"type": "string", "format": "date"},
+            "updated": {"type": "string", "format": "date"}
+          }
+        },
+        "description": {
+          "type": "object",
+          "required": ["short"],
+          "properties": {
+            "short": {"type": "string", "maxLength": 200},
+            "long": {"type": "string"},
+            "use_cases": {"type": "array", "items": {"type": "string"}}
+          }
+        },
+        "capabilities": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["name", "description"],
+            "properties": {
+              "name": {"type": "string"},
+              "description": {"type": "string"},
+              "inputs": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": ["name", "type"],
+                  "properties": {
+                    "name": {"type": "string"},
+                    "type": {"type": "string"},
+                    "description": {"type": "string"},
+                    "required": {"type": "boolean", "default": true},
+                    "default": {}
+                  }
+                }
+              },
+              "outputs": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": ["name", "type"],
+                  "properties": {
+                    "name": {"type": "string"},
+                    "type": {"type": "string"},
+                    "description": {"type": "string"}
+                  }
+                }
+              }
+            }
+          }
+        },
+        "prompts": {
+          "type": "object",
+          "properties": {
+            "system": {"type": "string"},
+            "user_template": {"type": "string"},
+            "examples": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "user": {"type": "string"},
+                  "assistant": {"type": "string"}
+                }
+              }
+            }
+          }
+        },
+        "tools": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name", "type"],
+            "properties": {
+              "name": {"type": "string"},
+              "type": {
+                "type": "string",
+                "enum": ["python_function", "api_endpoint", "mcp_tool", "shell_command"]
+              },
+              "source": {"type": "string"},
+              "function": {"type": "string"},
+              "endpoint": {"type": "string"},
+              "method": {"type": "string"}
+            }
+          }
+        },
+        "dependencies": {
+          "type": "object",
+          "properties": {
+            "python": {"type": "array", "items": {"type": "string"}},
+            "system": {"type": "array", "items": {"type": "string"}},
+            "data": {"type": "array", "items": {"type": "string"}},
+            "models": {"type": "array", "items": {"type": "string"}}
+          }
+        },
+        "platform_configs": {
+          "type": "object",
+          "properties": {
+            "claude": {
+              "type": "object",
+              "properties": {
+                "mcp_server": {"type": "boolean"},
+                "skill_file": {"type": "string"},
+                "hooks": {"type": "array", "items": {"type": "string"}}
+              }
+            },
+            "openai": {
+              "type": "object",
+              "properties": {
+                "gpt_actions": {"type": "boolean"},
+                "assistant_tools": {"type": "boolean"},
+                "function_calling": {"type": "boolean"}
+              }
+            },
+            "gemini": {
+              "type": "object",
+              "properties": {
+                "extension": {"type": "boolean"},
+                "vertex_tool": {"type": "boolean"},
+                "function_declaration": {"type": "boolean"}
+              }
+            }
+          }
+        },
+        "validation": {
+          "type": "object",
+          "properties": {
+            "test_cases": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "name": {"type": "string"},
+                  "input": {"type": "object"},
+                  "expected_output": {"type": "object"}
+                }
+              }
+            },
+            "benchmarks": {"type": "array", "items": {"type": "string"}}
+          }
+        },
+        "evals": {
+          "type": "array",
+          "description": "Automated evaluation test cases for the skill",
+          "items": {
+            "type": "object",
+            "required": ["input", "assertions"],
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "Human-readable test name"
+              },
+              "input": {
+                "type": "string",
+                "description": "User input/query to test"
+              },
+              "assertions": {
+                "type": "array",
+                "description": "List of assertions to check against output",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "contains": {
+                      "type": "string",
+                      "description": "Output must contain this string"
+                    },
+                    "not_contains": {
+                      "type": "string",
+                      "description": "Output must NOT contain this string"
+                    },
+                    "regex": {
+                      "type": "string",
+                      "description": "Output must match this regex pattern"
+                    },
+                    "type": {
+                      "type": "string",
+                      "enum": ["json", "molecule_list", "gene_list", "markdown"],
+                      "description": "Expected output type"
+                    },
+                    "length_min": {
+                      "type": "integer",
+                      "description": "Minimum output length in characters"
+                    },
+                    "length_max": {
+                      "type": "integer",
+                      "description": "Maximum output length in characters"
+                    },
+                    "safety_check": {
+                      "type": "boolean",
+                      "description": "Check for medical safety disclaimers"
+                    },
+                    "biomedical_entity": {
+                      "type": "object",
+                      "properties": {
+                        "entity_type": {
+                          "type": "string",
+                          "enum": ["gene", "drug", "protein", "disease", "pathway"]
+                        },
+                        "min_count": {"type": "integer", "default": 1}
+                      }
+                    }
+                  }
+                }
+              },
+              "expected_output": {
+                "type": "string",
+                "description": "Optional expected output for comparison"
+              },
+              "tags": {
+                "type": "array",
+                "items": {"type": "string"},
+                "description": "Tags for categorizing tests (e.g., 'smoke', 'regression')"
+              },
+              "timeout": {
+                "type": "integer",
+                "default": 60,
+                "description": "Test timeout in seconds"
+              },
+              "platforms": {
+                "type": "array",
+                "items": {"type": "string"},
+                "description": "Platforms this test applies to (default: all)"
+              }
+            }
+          }
+        },
+        "optimization": {
+          "type": "object",
+          "description": "Configuration for AI-driven prompt optimization",
+          "properties": {
+            "target_metrics": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": ["accuracy", "safety", "latency", "cost", "clarity"]
+              },
+              "description": "Metrics to prioritize during optimization"
+            },
+            "platform_hints": {
+              "type": "object",
+              "properties": {
+                "claude": {"type": "string"},
+                "openai": {"type": "string"},
+                "gemini": {"type": "string"}
+              },
+              "description": "Platform-specific optimization hints"
+            },
+            "few_shot_count": {
+              "type": "integer",
+              "default": 3,
+              "description": "Number of examples to include in optimized prompts"
+            }
+          }
+        }
+      }
+    }
+  }
+}

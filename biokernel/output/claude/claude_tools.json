@@ -1,0 +1,81 @@
+{
+  "tools": [
+    {
+      "name": "calculate_qc_metrics",
+      "description": "Calculate standard QC metrics for each cell",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "adata": {
+            "type": "string",
+            "description": "Annotated data matrix with raw counts"
+          },
+          "mito_prefix": {
+            "type": "string",
+            "description": "Prefix for mitochondrial genes"
+          }
+        },
+        "required": [
+          "adata"
+        ]
+      }
+    },
+    {
+      "name": "filter_cells",
+      "description": "Filter cells based on QC metrics using MAD-based thresholds",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "adata": {
+            "type": "string",
+            "description": "AnnData with QC metrics calculated"
+          },
+          "min_genes": {
+            "type": "integer",
+            "description": "Minimum genes per cell"
+          },
+          "max_genes": {
+            "type": "integer",
+            "description": "Maximum genes per cell (None for MAD-based)"
+          },
+          "max_mito_pct": {
+            "type": "number",
+            "description": "Maximum mitochondrial percentage"
+          },
+          "n_mads": {
+            "type": "number",
+            "description": "Number of MADs for outlier detection"
+          }
+        },
+        "required": [
+          "adata",
+          "min_genes",
+          "max_genes",
+          "max_mito_pct",
+          "n_mads"
+        ]
+      }
+    },
+    {
+      "name": "generate_qc_plots",
+      "description": "Generate comprehensive QC visualization plots",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "adata": {
+            "type": "string",
+            "description": "AnnData with QC metrics"
+          },
+          "output_dir": {
+            "type": "string",
+            "description": "Directory to save plots"
+          }
+        },
+        "required": [
+          "adata",
+          "output_dir"
+        ]
+      }
+    }
+  ]
+}

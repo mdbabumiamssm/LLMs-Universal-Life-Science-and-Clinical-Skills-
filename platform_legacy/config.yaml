@@ -1,0 +1,75 @@
+# ============================================================================
+# BioKernel Configuration — v2026.4.0
+# Copyright (c) 2026 MD Babu Mia, PhD. All Rights Reserved.
+# ============================================================================
+
+# Default LLM provider for agentic execution
+default_provider: "anthropic"  # anthropic | openai | gemini | local
+
+# Provider-specific configurations
+providers:
+  anthropic:
+    model: "claude-sonnet-4-20250514"
+    api_key_env: "ANTHROPIC_API_KEY"
+    max_tokens: 4096
+    temperature: 0.3
+
+  openai:
+    model: "gpt-4o"
+    api_key_env: "OPENAI_API_KEY"
+    max_tokens: 4096
+    temperature: 0.3
+
+  gemini:
+    model: "gemini-2.0-flash"
+    api_key_env: "GOOGLE_API_KEY"
+    max_tokens: 4096
+    temperature: 0.3
+
+  local:
+    model: "llama3.1:8b"
+    api_base: "http://localhost:11434"
+    max_tokens: 4096
+    temperature: 0.3
+
+# Skill discovery paths (relative to project root)
+skill_paths:
+  - "Skills"
+  - "Skills/User_Collections/Babu"
+  - "skill collections/Antigravity_Skills"
+
+# Server settings
+server:
+  host: "0.0.0.0"
+  port: 8000
+  workers: 1
+  cors_origins: ["*"]
+
+# System settings
+system:
+  log_level: "INFO"
+  log_json: false
+  max_concurrent_agents: 10
+  default_timeout_seconds: 300
+  enable_telemetry: true
+  enable_safety_checks: true
+
+# Routing configuration
+routing:
+  strategy: "semantic"        # semantic | keyword | hybrid
+  similarity_threshold: 0.35  # Minimum cosine similarity for skill match
+  fallback_skill: "general-biomedical-assistant"
+
+# Evaluation settings
+evaluation:
+  pass_threshold: 0.80
+  safety_pass_threshold: 0.95
+  max_eval_time_seconds: 120
+  reports_dir: "./reports"
+
+# Workflow engine
+workflow:
+  max_dag_depth: 20
+  step_timeout_seconds: 120
+  retry_count: 2
+  retry_delay_seconds: 5

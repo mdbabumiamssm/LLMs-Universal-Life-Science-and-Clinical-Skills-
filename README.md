@@ -79,21 +79,45 @@ We also started curating the user-focused Babu collection to make the highest-va
   - `Skills/User_Collections/Babu/skill-library-maintainer`
   - `Skills/User_Collections/Babu/biomedical-rag-citation-pipelines`
 - The Babu collection README now reflects the curated layout and reference-first organization.
+- **New 2026 tech refresh:**
+  - `Skills/Software_Engineering/GitHub_Agentic_Workflow` now documents GitHub's Agentic Workflows technical preview so Copilot, Claude Code, and Codex can act as CI/CD participants.
+  - `Skills/Lab_Automation/End_to_End_Agentic_AI_Lab` packages the MDalamin5 multi-agent automation lab (LangChain, LangGraph, MCP, n8n) for self-driving wet-lab pilots.
+  - `Skills/Genomics/Single_Cell/BioStudio_Alpha_SC` captures GPU-native BioStudio Alpha SC workflows for million-cell atlases on NVIDIA Blackwell systems.
+  - `Skills/Multi_Omics/Connected_Multiomics` covers Illumina's Connected Multiomics SaaS for DRAGEN-native single-cell, spatial, proteomic, and methylation studies.
+  - `Skills/Drug_Discovery/BioNeMo_Framework` activates NVIDIA's BioNeMo generative AI stack (framework + NIMs) for protein, RNA, and small-molecule design.
+  - `Skills/Agentic_AI/LangGraph_Self_Hosted` documents the Aegra self-hosting path so regulated teams can run LangGraph deployments on-prem with hardened dependencies.
 
 ## 📂 Directory Structure
 
 The repository is organized into domain-specific modules:
 
 ```text
-Skills/
-├── Agentic_AI/           # Orchestrators, Swarms, Planning Agents
-├── Clinical/             # EHR, Radiology, Oncology, Trials
-├── Drug_Discovery/       # Antibody Design, Small Molecules, Chemistry
-├── Genomics/             # Single Cell, Spatial, CRISPR, Variant Interpretation
-├── MCP_Servers/          # BioMCP and other protocol servers
-├── Research_Tools/       # Biomni, Literature Mining, Knowledge Graphs
-├── Pharma/               # Regulatory Affairs, Pharmacovigilance
-└── Software_Engineering/ # Best Practices (React, Python, Pandas)
+Skills/                     # 59+ biomedical AI skill domains
+├── Agentic_AI/             # Orchestrators, Swarms, Planning Agents
+├── Clinical/               # EHR, Radiology, Oncology, Trials
+├── Drug_Discovery/         # Antibody Design, Small Molecules, Chemistry
+├── Genomics/               # Single Cell, Spatial, CRISPR, Variant Interpretation
+├── MCP_Servers/            # BioMCP and other protocol servers
+├── Research_Tools/         # Biomni, Literature Mining, Knowledge Graphs
+├── Pharma/                 # Regulatory Affairs, Pharmacovigilance
+├── Software_Engineering/   # Best Practices (React, Python, Pandas)
+└── User_Collections/Babu/  # Curated high-value skill collection
+
+biokernel/                  # BioKernel Runtime Platform (v2026.4.0)
+├── biokernel/              # Core orchestration engine
+│   ├── server.py           #   FastAPI + semantic routing + execution
+│   ├── router.py           #   TF-IDF semantic skill router
+│   ├── workflow_engine.py  #   DAG-based multi-agent workflows
+│   └── mcp_server.py       #   Model Context Protocol server
+├── adapters/               # LLM provider adapters
+│   ├── anthropic_adapter.py#   Claude API (real integration)
+│   ├── openai_runtime_adapter.py  # GPT API (real integration)
+│   ├── gemini_adapter.py   #   Gemini API (real integration)
+│   └── local_adapter.py    #   Ollama / local models
+├── evaluator/              # Automated evaluation with biomedical rubrics
+├── optimizer/              # USDL transpiler + meta-prompter
+├── tests/                  # 74 tests (router, workflow, eval, schema, transpiler)
+└── cli.py                  # Rich interactive CLI
 ```
 
 ### 🗂️ Documentation Layout (2026 refresh)
@@ -121,17 +145,47 @@ The repository is migrating toward a lean **SKILL.md** standard so skills are ea
 
 ## 🛠️ Usage Examples
 
-**1. Match a Patient to a Clinical Trial (TrialGPT):**
+### BioKernel Platform (Recommended)
+
+**1. Start the BioKernel server:**
+```bash
+cd biokernel && pip install -e ".[all-providers]"
+biokernel serve --port 8000
+```
+
+**2. Execute a biomedical query (auto-routes to best skill):**
+```bash
+biokernel run "Analyze JAK2 V617F mutation in MPN patients" --provider anthropic
+```
+
+**3. Interactive research session:**
+```bash
+biokernel interactive
+```
+
+**4. MCP server for Claude Desktop / Claude Code:**
+```bash
+biokernel mcp
+```
+
+**5. Run evaluation benchmarks:**
+```bash
+biokernel eval tests/eval_cases.yaml --html
+```
+
+### Direct Skill Invocation
+
+**6. Match a Patient to a Clinical Trial (TrialGPT):**
 ```bash
 python3 Skills/Clinical/Trial_Matching/TrialGPT/run_matching.py --patient_profile ./patient.json
 ```
 
-**2. Design an Antibody (MAGE):**
+**7. Design an Antibody (MAGE):**
 ```bash
 python3 Skills/Drug_Discovery/Antibody_Design/MAGE/generate.py --antigen "spike_protein" --count 5
 ```
 
-**3. Analyze Spatial Transcriptomics (STAgent):**
+**8. Analyze Spatial Transcriptomics (STAgent):**
 ```bash
 python3 Skills/Genomics/Spatial_Transcriptomics/STAgent/main.py --data ./visium_data.h5ad --task "cluster_domains"
 ```

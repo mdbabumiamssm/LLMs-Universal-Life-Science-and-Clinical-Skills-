@@ -2,6 +2,90 @@
   "generated_at": "2026-03-16T09:14:42.194373",
   "skills": [
     {
+      "name": "github-agentic-workflows",
+      "description": "Configure GitHub's Agentic Workflows technical preview so Copilot, Claude Code, or Codex act as CI/CD participants with human review guardrails.",
+      "tool_type": "automation",
+      "primary_tool": "GitHub Agentic Workflows",
+      "measurable_outcome": "Deploy an issue-triage and CI-investigation Agentic Workflow that runs successfully on a target repository within one work session.",
+      "allowed-tools": [
+        "read_file",
+        "run_shell_command",
+        "web_fetch"
+      ],
+      "file_path": "Skills/Software_Engineering/GitHub_Agentic_Workflow/SKILL.md",
+      "last_modified": "2026-03-30T10:05:00"
+    },
+    {
+      "name": "end-to-end-agentic-ai-lab",
+      "description": "Use MDalamin5's End-to-End Agentic AI Automation Lab to spin up LangChain/LangGraph multi-agent workflows with MCP servers, n8n automations, and Docker/AWS deployment recipes.",
+      "tool_type": "python",
+      "primary_tool": "LangChain + LangGraph",
+      "measurable_outcome": "Stand up one multi-agent workflow plus an MCP-backed automation pipeline from the lab within a single working day.",
+      "allowed-tools": [
+        "run_shell_command",
+        "python",
+        "docker",
+        "web_fetch"
+      ],
+      "file_path": "Skills/Lab_Automation/End_to_End_Agentic_AI_Lab/SKILL.md",
+      "last_modified": "2026-03-30T10:06:00"
+    },
+    {
+      "name": "biostudio-alpha-sc",
+      "description": "Run BioStudio Alpha SC on NVIDIA Blackwell GPUs for GPU-accelerated single-cell, spatial, and perturb-seq workflows with AI-assisted annotation.",
+      "tool_type": "proprietary",
+      "primary_tool": "BioStudio Alpha SC",
+      "measurable_outcome": "Process a 1+ million cell dataset end-to-end (QC, harmonization, annotation, reporting) from the BioStudio Alpha SC workbench within a day.",
+      "allowed-tools": [
+        "web_fetch",
+        "read_file",
+        "run_shell_command"
+      ],
+      "file_path": "Skills/Genomics/Single_Cell/BioStudio_Alpha_SC/SKILL.md",
+      "last_modified": "2026-03-30T10:07:00"
+    },
+    {
+      "name": "illumina-connected-multiomics",
+      "description": "Operate Illumina's Connected Multiomics SaaS to ingest DRAGEN outputs and coordinate single-cell, spatial, proteomic, methylation, and genome analyses with governed sharing.",
+      "tool_type": "saas",
+      "primary_tool": "Illumina Connected Multiomics",
+      "measurable_outcome": "Create a study, link DRAGEN data, run multi-modal pipelines, and publish a connected dashboard for collaborators within one day.",
+      "allowed-tools": [
+        "web_fetch",
+        "read_file"
+      ],
+      "file_path": "Skills/Multi_Omics/Connected_Multiomics/SKILL.md",
+      "last_modified": "2026-03-30T10:08:00"
+    },
+    {
+      "name": "nvidia-bionemo-framework",
+      "description": "Use NVIDIA's BioNeMo Framework and NIM services to fine-tune generative biomolecular models on DGX Cloud or on-prem GPUs.",
+      "tool_type": "python",
+      "primary_tool": "BioNeMo Framework",
+      "measurable_outcome": "Run one training recipe and one inference microservice with BioNeMo within a single day.",
+      "allowed-tools": [
+        "docker",
+        "run_shell_command",
+        "web_fetch"
+      ],
+      "file_path": "Skills/Drug_Discovery/BioNeMo_Framework/SKILL.md",
+      "last_modified": "2026-03-30T11:05:00"
+    },
+    {
+      "name": "langgraph-self-hosted",
+      "description": "Deploy the Apache-licensed Aegra platform to self-host LangGraph-compatible agent deployments with hardened security controls.",
+      "tool_type": "automation",
+      "primary_tool": "Aegra LangGraph Platform",
+      "measurable_outcome": "Bring up the API + PostgreSQL stack, register a graph, and route traffic inside four hours.",
+      "allowed-tools": [
+        "docker",
+        "run_shell_command",
+        "web_fetch"
+      ],
+      "file_path": "Skills/Agentic_AI/LangGraph_Self_Hosted/SKILL.md",
+      "last_modified": "2026-03-30T11:06:00"
+    },
+    {
       "name": "bio-metabolomics-pathway-mapping",
       "description": "Map metabolites to biological pathways using KEGG, Reactome, and MetaboAnalyst. Perform pathway enrichment and topology analysis. Use when interpreting metabolomics results in the context of biochemical pathways.",
       "tool_type": "r",

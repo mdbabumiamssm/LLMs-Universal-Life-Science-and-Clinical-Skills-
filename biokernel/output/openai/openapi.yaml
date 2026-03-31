@@ -1,0 +1,139 @@
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      in: header
+      name: X-API-Key
+      type: apiKey
+info:
+  contact:
+    name: Universal Biomedical Skills
+  description: 'This skill performs comprehensive quality control on single-cell RNA-seq
+    data using
+
+    MAD-based filtering. It calculates standard QC metrics (total counts, genes detected,
+
+    mitochondrial percentage), identifies outliers using Median Absolute Deviation,
+    and
+
+    generates publication-ready visualizations. Follows scverse consortium best practices.
+
+    '
+  title: Single-Cell RNA-seq Quality Control
+  version: 1.0.0
+openapi: 3.0.0
+paths:
+  /calculate_qc_metrics:
+    post:
+      operationId: calculate_qc_metrics
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                adata:
+                  description: Annotated data matrix with raw counts
+                  type: string
+                mito_prefix:
+                  description: Prefix for mitochondrial genes
+                  type: string
+              required:
+              - adata
+              type: object
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                properties:
+                  adata:
+                    description: AnnData with QC metrics in .obs
+                    type: string
+                  qc_summary:
+                    description: Summary statistics of QC metrics
+                    type: string
+                type: object
+          description: Successful operation
+      summary: Calculate standard QC metrics for each cell
+  /filter_cells:
+    post:
+      operationId: filter_cells
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                adata:
+                  description: AnnData with QC metrics calculated
+                  type: string
+                max_genes:
+                  description: Maximum genes per cell (None for MAD-based)
+                  type: integer
+                max_mito_pct:
+                  description: Maximum mitochondrial percentage
+                  type: number
+                min_genes:
+                  description: Minimum genes per cell
+                  type: integer
+                n_mads:
+                  description: Number of MADs for outlier detection
+                  type: number
+              required:
+              - adata
+              - min_genes
+              - max_genes
+              - max_mito_pct
+              - n_mads
+              type: object
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                properties:
+                  filtered_adata:
+                    description: Filtered AnnData object
+                    type: string
+                  filtering_report:
+                    description: Report with cells removed per criterion
+                    type: object
+                type: object
+          description: Successful operation
+      summary: Filter cells based on QC metrics using MAD-based thresholds
+  /generate_qc_plots:
+    post:
+      operationId: generate_qc_plots
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                adata:
+                  description: AnnData with QC metrics
+                  type: string
+                output_dir:
+                  description: Directory to save plots
+                  type: string
+              required:
+              - adata
+              - output_dir
+              type: object
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                properties:
+                  plot_paths:
+                    description: Paths to generated plot files
+                    type: array
+                type: object
+          description: Successful operation
+      summary: Generate comprehensive QC visualization plots
+security:
+- ApiKeyAuth: []
+servers:
+- description: Production server
+  url: https://api.biomedical-skills.io/v1/biomedical-genomics-single_cell_qc

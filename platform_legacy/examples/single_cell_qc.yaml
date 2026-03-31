@@ -1,0 +1,49 @@
+skill:
+  id: "biomedical.genomics.single_cell_qc"
+  version: "1.0.0"
+  name: "Single-Cell RNA-seq Quality Control"
+  domain: "genomics"
+  description: "Automated QC for single-cell RNA-seq data following scverse best practices."
+
+metadata:
+  author: "Universal Skills Platform"
+  license: "MIT"
+  tags: ["scRNA-seq", "QC", "scanpy", "bioinformatics"]
+
+capabilities:
+  - name: "calculate_qc_metrics"
+    description: "Calculates QC metrics (counts, genes, mito %) for an AnnData object."
+    inputs:
+      - name: "file_path"
+        type: "string"
+        description: "Path to the .h5ad or 10X directory."
+      - name: "mad_threshold"
+        type: "float"
+        default: 5.0
+        description: "Median Absolute Deviation threshold for outliers."
+    outputs:
+      - name: "summary"
+        type: "object"
+        description: "Dictionary containing QC stats (pass/fail counts)."
+
+prompts:
+  system: |
+    You are an expert bioinformatics assistant. Your goal is to ensure high-quality
+    single-cell data analysis. Always use MAD-based outlier detection rather than
+    arbitrary hard thresholds, unless specifically requested otherwise.
+    
+    When presenting results, always show the "Before" vs "After" comparison.
+
+  user_template: |
+    Please perform QC on the dataset at: {file_path}.
+    Use a strictness level of {mad_threshold} MADs.
+
+platforms:
+  claude:
+    mode: "mcp"
+    tool_choice: "auto"
+  openai:
+    mode: "assistant"
+    response_format: "json_object"
+  gemini:
+    mode: "vertex_tool"

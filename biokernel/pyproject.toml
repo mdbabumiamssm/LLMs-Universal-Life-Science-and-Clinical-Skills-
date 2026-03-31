@@ -1,0 +1,108 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "biokernel"
+version = "2026.4.0"
+description = "BioKernel: Autonomous Biomedical AI Skills Platform with Universal Skill Description Language (USDL)"
+readme = "README.md"
+license = { text = "Proprietary" }
+requires-python = ">=3.11"
+authors = [
+    { name = "MD Babu Mia, PhD", email = "md.babu.mia@mssm.edu" },
+]
+keywords = [
+    "biomedical-ai",
+    "agentic-workflows",
+    "multi-omics",
+    "clinical-decision-support",
+    "drug-discovery",
+    "single-cell",
+    "llm-orchestration",
+    "mcp",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+dependencies = [
+    "fastapi>=0.115.0",
+    "uvicorn[standard]>=0.32.0",
+    "pydantic>=2.10.0",
+    "pydantic-settings>=2.6.0",
+    "pyyaml>=6.0.2",
+    "httpx>=0.28.0",
+    "structlog>=24.4.0",
+    "rich>=13.9.0",
+    "click>=8.1.0",
+    "numpy>=1.26.0",
+]
+
+[project.optional-dependencies]
+anthropic = ["anthropic>=0.42.0"]
+openai = ["openai>=1.58.0"]
+google = ["google-generativeai>=0.8.0"]
+local = ["ollama>=0.4.0"]
+all-providers = [
+    "anthropic>=0.42.0",
+    "openai>=1.58.0",
+    "google-generativeai>=0.8.0",
+    "ollama>=0.4.0",
+]
+eval = [
+    "scikit-learn>=1.5.0",
+    "scipy>=1.14.0",
+]
+bio = [
+    "scanpy>=1.10.0",
+    "anndata>=0.10.0",
+    "biopython>=1.84",
+]
+dev = [
+    "pytest>=8.3.0",
+    "pytest-asyncio>=0.24.0",
+    "pytest-cov>=6.0.0",
+    "ruff>=0.8.0",
+    "mypy>=1.13.0",
+]
+full = [
+    "biokernel[all-providers,eval,bio,dev]",
+]
+
+[project.scripts]
+biokernel = "biokernel.cli:main"
+bioskills = "biokernel.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/babumia/biokernel"
+Documentation = "https://biokernel.readthedocs.io"
+Repository = "https://github.com/babumia/biokernel"
+
+[tool.hatch.build.targets.wheel]
+packages = ["biokernel"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W", "UP", "B", "SIM", "TCH"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+markers = [
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+    "integration: marks integration tests requiring API keys",
+]
+
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = true
+warn_unused_configs = true

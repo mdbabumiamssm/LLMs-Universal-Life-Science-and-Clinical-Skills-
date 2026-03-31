@@ -1,0 +1,103 @@
+{
+  "name": "biomedical-genomics-single_cell_qc",
+  "version": "1.0.0",
+  "description": "Automated QC for single-cell RNA-seq data following scverse best practices",
+  "tools": [
+    {
+      "name": "calculate_qc_metrics",
+      "description": "Calculate standard QC metrics for each cell",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "adata": {
+            "type": "string",
+            "description": "Annotated data matrix with raw counts"
+          },
+          "mito_prefix": {
+            "type": "string",
+            "description": "Prefix for mitochondrial genes",
+            "default": "MT-"
+          }
+        },
+        "required": [
+          "adata"
+        ]
+      }
+    },
+    {
+      "name": "filter_cells",
+      "description": "Filter cells based on QC metrics using MAD-based thresholds",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "adata": {
+            "type": "string",
+            "description": "AnnData with QC metrics calculated"
+          },
+          "min_genes": {
+            "type": "integer",
+            "description": "Minimum genes per cell",
+            "default": 200
+          },
+          "max_genes": {
+            "type": "integer",
+            "description": "Maximum genes per cell (None for MAD-based)",
+            "default": null
+          },
+          "max_mito_pct": {
+            "type": "number",
+            "description": "Maximum mitochondrial percentage",
+            "default": 20.0
+          },
+          "n_mads": {
+            "type": "number",
+            "description": "Number of MADs for outlier detection",
+            "default": 5.0
+          }
+        },
+        "required": [
+          "adata",
+          "min_genes",
+          "max_genes",
+          "max_mito_pct",
+          "n_mads"
+        ]
+      }
+    },
+    {
+      "name": "generate_qc_plots",
+      "description": "Generate comprehensive QC visualization plots",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "adata": {
+            "type": "string",
+            "description": "AnnData with QC metrics"
+          },
+          "output_dir": {
+            "type": "string",
+            "description": "Directory to save plots",
+            "default": "./qc_plots"
+          }
+        },
+        "required": [
+          "adata",
+          "output_dir"
+        ]
+      }
+    }
+  ],
+  "resources": [],
+  "prompts": [
+    {
+      "name": "biomedical.genomics.single_cell_qc_system",
+      "description": "System prompt for Single-Cell RNA-seq Quality Control",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are an expert bioinformatician specializing in single-cell RNA sequencing analysis.\nYou follow scverse best practices and understand the biology behind QC metrics.\n\nKey principles:\n1. Always examine data distributions before setting hard thresholds\n2. Use MAD-based filtering when possible for adaptive thresholds\n3. Consider tissue/cell type when interpreting mitochondrial content\n4. Document all filtering decisions for reproducibility\n5. Generate visualizations to support QC decisions\n"
+        }
+      ]
+    }
+  ]
+}
