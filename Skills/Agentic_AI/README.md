@@ -34,5 +34,11 @@ Moved beyond simple ReAct loops to hierarchical orchestration.
 *   Integration with **LangGraph** for more robust state management.
 *   Implementation of **Language Agent Tree Search (LATS)**.
 
+## 2026 Additions
+*   **LangGraph_Platform/** – wires LangChain’s LangGraph/LangSmith stack (GA May 2025) into our swarm so we get stateful supervisors, checkpoints, and Studio observability out of the box.
+*   **CrewAI_Pipelines/** – brings CrewAI’s Crews + Flows dual abstraction plus the new Agent Operations Platform / Factory runtimes for governed enterprise launches.
+*   **NVIDIA_Blueprints/** – operationalizes NVIDIA’s Secure Data-Driven Agents + Data Flywheel blueprints on top of NIM microservices and the BlueField STX hardware refresh announced at GTC 2026.
+*   **OpenHands_Coding_Agent/** – standardizes hand-offs to the OpenHands (ex‑OpenDevin) headless CLI/SDK when we need a persistent IDE-grade coding agent with JSONL traces.
+*   **AgentScope_Runtime/** – documents how to deploy AgentScope + AgentScope Runtime sandboxes so BioKernel swarms can call FastAPI-hosted agents with hardened tool execution.
 
 <!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->
