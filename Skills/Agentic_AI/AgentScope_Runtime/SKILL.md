@@ -31,6 +31,7 @@ AgentScope is a production-ready multi-agent framework with ReAct agents, memory
 1. Install both framework + runtime (Python 3.10+):
    ```bash
    uv pip install "agentscope>=0.10" "agentscope-runtime>=1.1"
+   # or pip install agentscope agentscope-runtime
    ```
 2. Export provider keys (DashScope, OpenAI, Gemini, etc.) plus sandbox registry settings if you want non-default Docker images:
    ```bash
@@ -74,7 +75,15 @@ AgentScope is a production-ready multi-agent framework with ReAct agents, memory
    if __name__ == "__main__":
        agent_app.run(port=8090)
    ```
-2. Launch the service with `python agent_app.py`. Runtime exposes `POST /process` with SSE streaming just like the README example.
+2. Launch the service:
+   ```bash
+   python agent_app.py
+   # or use the helper runner (handles env injection + cwd)
+   python Skills/Agentic_AI/AgentScope_Runtime/agentscope_runner.py \
+     agent_app.py --workdir Skills/Agentic_AI/AgentScope_Runtime/examples \
+     --env DASHSCOPE_API_KEY=sk-...
+   ```
+   Runtime exposes `POST /process` with SSE streaming just like the README example.
 3. From BioKernel, call the endpoint via `platform/adapters/runtime_adapter.py` and treat it like any other remote agent. Attach mission metadata so Reviewer/SafetyOfficer agents can audit the AgentScope trace.
 
 ## Sandbox-First Tooling
@@ -85,7 +94,7 @@ AgentScope is a production-ready multi-agent framework with ReAct agents, memory
 
 ## Integration Notes
 
-* Keep mission templates under `Skills/Agentic_AI/AgentScope_Runtime/examples/` so other contributors can spin up the same AgentApp quickly.
+* Keep mission templates under `Skills/Agentic_AI/AgentScope_Runtime/examples/` so other contributors can spin up the same AgentApp quickly. Ship ready-made `agent_app.py` samples plus `.env.example` for provider keys.
 * Use AgentScope’s `MsgHub` if you want to route sub-agents locally inside the runtime and only send summarized responses back to the swarm.
 * Stream the SSE trace plus sandbox logs into `platform/compliance/agent_logs/` for after-action audits.
 
