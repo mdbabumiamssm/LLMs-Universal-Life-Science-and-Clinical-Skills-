@@ -8,37 +8,40 @@
 # Unauthorized copying of this file, via any medium is strictly prohibited.
 #
 # Provenance: Authenticated by MD BABU MIA
-
 -->
 
 # Agentic AI (2026)
 
-This directory contains the core cognitive architectures for autonomous systems.
+This directory is the curated home for first-party agent workflows, not a dumping ground for random demos.
+Keep skills here when they are repeatedly useful for building, operating, or evaluating production-grade LLM systems.
 
-## Key Modules
+## Current Focus Areas
 
-### 1. Multi-Agent Systems (`Multi_Agent_Systems/`)
-Moved beyond simple ReAct loops to hierarchical orchestration.
+- **Core agent patterns:** `Agent_Architectures/Plan_and_Solve`, `Agent_Architectures/ReAct_Agent`, `Agent_Architectures/Self_Correction`
+- **Research agents:** `Automated_Web_Research`, `DeepResearch_Swarm`
+- **Execution runtimes:** `AgentScope_Runtime`, `OpenHands_Coding_Agent`, `LangGraph_Self_Hosted`
+- **Modern framework coverage:** `OpenAI_Codex_Agents`, `Google_ADK_Agents`, `PydanticAI_Agents`
+- **Operational quality:** `Agentic_Evals_Observability`, `Memory_Systems`, `Productivity/`
+- **Reasoning and multimodality:** `Reasoning_Models/`, `Multimodal_Agents/`
 
-*   **`orchestrator.py` (NEW):** Implements the **Supervisor Pattern**. A meta-agent ("Supervisor") breaks down a complex objective into sub-tasks and routes them to specialized workers (e.g., Coder, Reviewer).
-    *   *Usage:* `python orchestrator.py`
-*   **`debate_supervisor.py`:** Simulates a multi-turn debate between agents with opposing viewpoints to reduce hallucination and improve reasoning quality.
+## Curation Rules
 
-### 2. Reasoning Models (`Reasoning_Models/`)
-*   **`tree_of_thought.py`:** Explores multiple reasoning paths before committing to a decision.
+- Prefer official docs, official SDK docs, protocol specs, and maintainer-owned repositories.
+- Keep `SKILL.md` short and trigger-oriented; move details to `references/`.
+- Add `agents/openai.yaml` for curated skills that should surface cleanly in agent UIs.
+- Rewrite thin or stale skills before adding more near-duplicates.
+- Treat imported external collections as reference material until curated locally.
 
-### 3. Memory Systems (`Memory_Systems/`)
-*   **`memory_architecture.py`:** Interfaces for short-term (context window) and long-term (vector store) memory.
+## High-Value Additions In This Refresh
 
-## Future Work
-*   Integration with **LangGraph** for more robust state management.
-*   Implementation of **Language Agent Tree Search (LATS)**.
+- `OpenAI_Codex_Agents/` for Responses-first coding agents, Codex models, Agents SDK, MCP/connectors, and approval-aware tool execution.
+- `Google_ADK_Agents/` for Google's multi-language Agent Development Kit and workflow-agent patterns.
+- `PydanticAI_Agents/` for typed agent engineering, dependency injection, MCP integration, and Logfire/OTel observability.
+- `Agentic_Evals_Observability/` for offline evals, online monitoring, tracing, rollback criteria, and regression discipline.
+- Upgraded `Automated_Web_Research/` and `DeepResearch_Swarm/` to be evidence-first and source-aware.
 
-## 2026 Additions
-*   **LangGraph_Platform/** – wires LangChain’s LangGraph/LangSmith stack (GA May 2025) into our swarm so we get stateful supervisors, checkpoints, and Studio observability out of the box.
-*   **CrewAI_Pipelines/** – brings CrewAI’s Crews + Flows dual abstraction plus the new Agent Operations Platform / Factory runtimes for governed enterprise launches.
-*   **NVIDIA_Blueprints/** – operationalizes NVIDIA’s Secure Data-Driven Agents + Data Flywheel blueprints on top of NIM microservices and the BlueField STX hardware refresh announced at GTC 2026.
-*   **OpenHands_Coding_Agent/** – standardizes hand-offs to the OpenHands (ex‑OpenDevin) headless CLI/SDK when we need a persistent IDE-grade coding agent with JSONL traces.
-*   **AgentScope_Runtime/** – documents how to deploy AgentScope + AgentScope Runtime sandboxes so BioKernel swarms can call FastAPI-hosted agents with hardened tool execution.
+## Related Strategy Doc
+
+See `docs/strategy/LLM_AGENTIC_AI_CURATION_2026.md` for the official-source map, literature watchlist, and monthly refresh checklist.
 
 <!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

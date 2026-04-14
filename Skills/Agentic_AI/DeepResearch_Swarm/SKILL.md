@@ -13,50 +13,60 @@
 
 ---
 name: deep-research-swarm
-description: Multi-agent research literature analysis
+description: Coordinate a multi-agent research workflow for difficult literature or market-intelligence questions that need parallel search, verification, synthesis, and explicit evidence tracking.
 keywords:
   - research
   - literature
   - swarm
   - multi-agent
-  - hypothesis
-measurable_outcome: Generates comprehensive literature review with >50 citations in <5 minutes.
-license: MIT
+  - verification
+measurable_outcome: Produce a structured research package with search log, verified evidence summary, and open questions within 30 minutes for a focused topic.
 metadata:
   author: Biomedical OS Team
-  version: "1.0.0"
-compatibility:
-  - system: Python 3.10+
+  version: "2026.04"
+source_reliability:
+  - source: official_docs
+    score: 1.0
+    rationale: Workflow relies on official model, tool, and protocol documentation checked on 2026-04-13.
+  - source: primary_literature_and_registries
+    score: 0.95
+    rationale: Recommended evidence sources include primary databases, standards, and protocol registries rather than blog-only summaries.
 allowed-tools:
-  - run_shell_command
-  - read_file
   - google_web_search
+  - web_fetch
+  - read_file
+  - run_shell_command
 ---
 
 # DeepResearch Swarm
 
-A coordinated swarm of agents designed to perform deep, parallelized research into biomedical literature, aggregating findings into comprehensive reports.
+Use this skill when one agent is not enough: the task needs parallel search, claim checking, evidence consolidation, and a final synthesis that preserves provenance.
 
-## When to Use This Skill
+## Recommended Agent Roles
 
-*   When you need an exhaustive review of a specific medical topic.
-*   When connecting disparate pieces of evidence across thousands of papers.
-*   When generating hypotheses based on recent literature.
+- **Searcher** - expands the query set and collects candidate sources.
+- **Verifier** - checks dates, source authority, conflicts, and duplicate claims.
+- **Synthesizer** - groups findings, writes conclusions, and records open questions.
 
-## Core Capabilities
+## Workflow
 
-1.  **Parallel Search**: Querying multiple databases simultaneously.
-2.  **Evidence Synthesis**: Combining facts into a coherent narrative.
-3.  **Citation Verification**: Ensuring all claims are backed by sources.
+1. Define a narrow research question, success criteria, and stop condition before searching.
+2. Run parallel searches across official docs, primary repositories, and trusted databases.
+3. Verify the strongest claims independently before they enter the final synthesis.
+4. Group evidence into: supported findings, weak signals, and unresolved gaps.
+5. Produce a final brief with citations, assumptions, and next-step recommendations.
 
-## Example Usage
+## Guardrails
 
-**User**: "Research the latest advancements in mRNA cancer vaccines."
+- Do not reward volume over evidence quality.
+- Keep a search log so the next agent can reproduce the path taken.
+- Distinguish clearly between verified findings and speculative hypotheses.
+- Escalate conflicting or low-confidence evidence instead of smoothing it over.
 
-**Agent Action**:
-```bash
-python3 src/research/agents/agent_coordinator.py --topic "mRNA cancer vaccines" --depth "deep"
-```
+## Output Requirements
 
+- Include a source-backed findings section.
+- Include a short conflicts or uncertainty section.
+- Include a short next-actions section if the research task is incomplete.
 
 <!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->
