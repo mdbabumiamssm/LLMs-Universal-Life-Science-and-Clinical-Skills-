@@ -69,24 +69,7 @@ We have significantly expanded the **Skills** directory to align with the 2026 r
 *   **LEADS:** `Skills/Research_Tools/Literature_Mining/LEADS` - Automated systematic review and meta-analysis agent.
 *   **BioMCP:** `Skills/MCP_Servers/BioMCP` - Model Context Protocol server for connecting LLMs to PubMed, ClinicalTrials.gov, and more.
 
-## 🧹 Recent Curation (March 2026)
-
-We also started curating the user-focused Babu collection to make the highest-value skills easier to trigger and maintain.
-
-- `Skills/User_Collections/Babu/computational-software-development` now uses a compact workflow-oriented skill definition with supporting references.
-- `Skills/User_Collections/Babu/bioinformatics-singlecell`, `ngs-analysis`, and `mpn-research-assistant` were rewritten to reduce prompt bloat and improve reuse.
-- Two new skills were added for repository stewardship and grounded literature systems:
-  - `Skills/User_Collections/Babu/skill-library-maintainer`
-  - `Skills/User_Collections/Babu/biomedical-rag-citation-pipelines`
-- The Babu collection README now reflects the curated layout and reference-first organization.
-- **New 2026 tech refresh:**
-  - `Skills/Software_Engineering/GitHub_Agentic_Workflow` now documents GitHub's Agentic Workflows technical preview so Copilot, Claude Code, and Codex can act as CI/CD participants.
-  - `Skills/Lab_Automation/End_to_End_Agentic_AI_Lab` packages the MDalamin5 multi-agent automation lab (LangChain, LangGraph, MCP, n8n) for self-driving wet-lab pilots.
-  - `Skills/Genomics/Single_Cell/BioStudio_Alpha_SC` captures GPU-native BioStudio Alpha SC workflows for million-cell atlases on NVIDIA Blackwell systems.
-  - `Skills/Multi_Omics/Connected_Multiomics` covers Illumina's Connected Multiomics SaaS for DRAGEN-native single-cell, spatial, proteomic, and methylation studies.
-  - `Skills/Drug_Discovery/BioNeMo_Framework` activates NVIDIA's BioNeMo generative AI stack (framework + NIMs) for protein, RNA, and small-molecule design.
-  - `Skills/Agentic_AI/LangGraph_Self_Hosted` documents the Aegra self-hosting path so regulated teams can run LangGraph deployments on-prem with hardened dependencies.
-
+## 🧹 Recent Curation
 ## April 2026 LLM + Agentic AI Refresh
 
 We completed a focused curation pass on the repo's LLM and agentic AI surface, with the goal of turning scattered references into first-class, operational skills.
