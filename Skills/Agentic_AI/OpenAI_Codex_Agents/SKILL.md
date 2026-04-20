@@ -1,6 +1,6 @@
 ---
 name: openai-codex-agents
-description: Build and operate OpenAI-first coding and agent workflows using the Responses API, Codex models, Agents SDK, MCP/connectors, and approval-aware tool execution. Use when you need long-horizon software agents or OpenAI-native multi-agent orchestration.
+description: Build and operate OpenAI-first coding and agent workflows using the Responses API, current GPT and Codex models, Agents SDK, MCP/connectors, deep research, and approval-aware tool execution. Use when you need long-horizon software agents or OpenAI-native multi-agent orchestration.
 keywords:
   - openai
   - codex
@@ -15,7 +15,7 @@ metadata:
 source_reliability:
   - source: official_docs
     score: 1.0
-    rationale: Workflow is grounded in OpenAI developer docs and API guides checked on 2026-04-13.
+    rationale: Workflow is grounded in OpenAI developer docs and API guides checked on 2026-04-20.
   - source: official_repositories
     score: 0.98
     rationale: SDK and skills implementation details are cross-checked against maintainer-owned OpenAI repositories.
@@ -32,7 +32,7 @@ Use this skill when the job is best served by OpenAI-native agent building rathe
 ## Workflow
 
 1. Start with the Responses API unless you have a hard compatibility reason not to.
-2. Pick the model for the job: frontier GPT models for broad reasoning, Codex models for long-horizon coding, and deep-research models for multi-step research tasks.
+2. Pick the model deliberately: `gpt-5.4` for highest-quality reasoning, `gpt-5.4-mini` for fast subagents and high-volume loops, current Codex-class models for long-horizon coding, deep-research models for multi-source synthesis, and `computer-use-preview` only when GUI control is essential.
 3. Use the Agents SDK when you need handoffs, guardrails, sessions, tracing, or multi-agent composition.
 4. Use MCP/connectors only with explicit approval policy, domain trust, and auditability in mind.
 5. Validate the workflow on a real repo or real task with a small eval set before wider rollout.
@@ -47,5 +47,5 @@ Use this skill when the job is best served by OpenAI-native agent building rathe
 ## Output Requirements
 
 - State the chosen model and why.
-- State whether the workflow uses Responses only, Agents SDK, or both.
+- State whether the workflow uses Responses only, Agents SDK, or a specialized research/computer-use surface.
 - State the tool/approval policy and one rollback trigger.

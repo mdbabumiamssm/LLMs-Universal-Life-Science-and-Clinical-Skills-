@@ -96,6 +96,15 @@ We completed a focused curation pass on the repo's LLM and agentic AI surface, w
 - Added missing category indexes for `Skills/AI_Providers/` and `Skills/MCP_Servers/`, and replaced the stale `Skills/Agentic_AI/README.md` with an accurate curation guide.
 - Added `docs/strategy/LLM_AGENTIC_AI_CURATION_2026.md` as the source-of-truth playbook for official references, literature watchlists, and refresh discipline.
 
+## Late April 2026 LLM Infrastructure Enrichment
+
+We followed the initial refresh with a second, more operational pass focused on the current coding-agent and cloud-agent landscape.
+
+- Added `Skills/Agentic_AI/Claude_Code_Operations_2026` and `Skills/Agentic_AI/Computer_Use_Agents_2026` to cover terminal-first coding agents, GitHub automation, and browser/desktop control patterns.
+- Added dedicated provider skills for `Skills/AI_Providers/Cohere_Platform_Operations_2026`, `Skills/AI_Providers/AWS_Bedrock_Operations_2026`, and `Skills/AI_Providers/Azure_AI_Foundry_Operations_2026` so teams no longer rely on a single combined cloud note.
+- Refreshed the official source maps for OpenAI and Anthropic to reflect current model catalogs, Codex, deep research, computer-use, and Claude Code surfaces.
+- Expanded `docs/strategy/LLM_AGENTIC_AI_CURATION_2026.md` with a stronger canonical-source map, ecosystem watchlist, and benchmark/literature coverage.
+
 ## 📂 Directory Structure
 
 The repository is organized into domain-specific modules:

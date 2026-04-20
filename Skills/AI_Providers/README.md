@@ -20,11 +20,14 @@ Use these skills when model selection, SDK behavior, deprecations, tool use, or 
 - `OpenAI_Platform_Operations_2026/` - Responses API, models, tools, migration, and platform operations.
 - `Anthropic_Claude_Operations_2026/` - Claude API operations, deprecations, tool use, and rollout decisions.
 - `Google_Gemini_Operations_2026/` - Gemini model and GenAI SDK operations.
-- `Cloud_AI_Operations_AWS_Azure_2026/` - enterprise cloud deployment on Bedrock and Azure AI/Azure OpenAI.
+- `Cohere_Platform_Operations_2026/` - Cohere models, SDKs, rerank/embedding/transcribe surfaces, and release-aware operations.
+- `Cloud_AI_Operations_AWS_Azure_2026/` - cross-cloud deployment tradeoffs across Bedrock and Azure AI/Azure OpenAI.
+- `AWS_Bedrock_Operations_2026/` - Bedrock model routing, Converse API, Guardrails, Agents, and AgentCore.
+- `Azure_AI_Foundry_Operations_2026/` - Azure AI Foundry / Microsoft Foundry deployments, identity, safety, and agent service operations.
 - `Frontier_OSS_Models_2026/` - open/openly-available model ecosystems and deployment tradeoffs.
 - `AI_Provider_GitHub_Maintainers_2026/` - maintenance health for provider-owned repos.
 
-## New Dedicated Provider Coverage
+## Additional Dedicated Coverage
 
 - `Mistral_Platform_Operations_2026/`
 - `DeepSeek_API_Operations_2026/`

@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-04-14T01:26:45.469901+00:00",
+  "generated_at": "2026-04-20T14:09:52.954159+00:00",
   "generator": "BioKernel Skills Catalog v2026.4.0",
-  "total_skills": 881,
+  "total_skills": 886,
   "total_errors": 0,
   "skills": [
     {
@@ -479,6 +479,45 @@
       ]
     },
     {
+      "name": "aws-bedrock-operations-2026",
+      "description": "Build and run production workloads on Amazon Bedrock with current model availability, Converse API, agents, guardrails, AgentCore, and IAM controls. Use when implementing Bedrock inference pipelines, managed agents, or provider-agnostic model routing on AWS.",
+      "keywords": [
+        "aws",
+        "bedrock",
+        "converse",
+        "guardrails",
+        "agents",
+        "agentcore"
+      ],
+      "measurable_outcome": "Produce a working Bedrock operating plan with model choice, IAM posture, invoke path, and rollback criteria documented within 2 hours.",
+      "metadata": {
+        "author": "Biomedical OS Team",
+        "version": "2026.04"
+      },
+      "source_reliability": [
+        {
+          "source": "official_aws_docs",
+          "score": 1.0,
+          "rationale": "Guidance is grounded in Amazon Bedrock user guide and API reference pages checked on 2026-04-20."
+        }
+      ],
+      "allowed-tools": [
+        "read_file",
+        "run_shell_command",
+        "web_fetch"
+      ],
+      "file_path": "Skills/AI_Providers/AWS_Bedrock_Operations_2026/SKILL.md",
+      "relative_path": "AI_Providers/AWS_Bedrock_Operations_2026/SKILL.md",
+      "last_modified": "2026-04-20T14:08:30.015858+00:00",
+      "body_length": 1284,
+      "capabilities": [
+        "AWS Bedrock Operations (2026)",
+        "Workflow",
+        "Guardrails",
+        "Output Requirements"
+      ]
+    },
+    {
       "name": "anthropic-claude-operations-2026",
       "description": "Integrate and operate Anthropic Claude APIs with current model lifecycle guidance. Use when implementing Claude-based assistants, tool use, long-context reasoning, or when planning model upgrades based on release notes and deprecations.",
       "measurable_outcome": "Execute skill workflow successfully with valid output within 15 minutes.",
@@ -497,6 +536,44 @@
       ]
     },
     {
+      "name": "azure-ai-foundry-operations-2026",
+      "description": "Implement and operate Azure AI Foundry and Microsoft Foundry workloads with explicit identity, deployment, model versioning, safety, and agent-service controls. Use when deploying model endpoints, migrating model versions, or setting up production guardrails on Azure.",
+      "keywords": [
+        "azure",
+        "ai-foundry",
+        "microsoft-foundry",
+        "agent-service",
+        "content-safety"
+      ],
+      "measurable_outcome": "Produce a working Azure AI Foundry operating plan with service scope, identity model, deployment strategy, and failover criteria documented within 2 hours.",
+      "metadata": {
+        "author": "Biomedical OS Team",
+        "version": "2026.04"
+      },
+      "source_reliability": [
+        {
+          "source": "official_microsoft_docs",
+          "score": 1.0,
+          "rationale": "Guidance is grounded in Azure AI Foundry and Microsoft Foundry documentation checked on 2026-04-20."
+        }
+      ],
+      "allowed-tools": [
+        "read_file",
+        "run_shell_command",
+        "web_fetch"
+      ],
+      "file_path": "Skills/AI_Providers/Azure_AI_Foundry_Operations_2026/SKILL.md",
+      "relative_path": "AI_Providers/Azure_AI_Foundry_Operations_2026/SKILL.md",
+      "last_modified": "2026-04-20T14:08:30.016858+00:00",
+      "body_length": 1289,
+      "capabilities": [
+        "Azure AI Foundry Operations (2026)",
+        "Workflow",
+        "Guardrails",
+        "Output Requirements"
+      ]
+    },
+    {
       "name": "cloud-ai-operations-aws-azure-2026",
       "description": "Operate AI workloads on AWS Bedrock and Azure AI/Azure OpenAI with production-focused cloud controls. Use when selecting managed model providers, implementing enterprise auth, and designing resilient cloud-native inference pipelines.",
       "measurable_outcome": "Execute skill workflow successfully with valid output within 15 minutes.",
@@ -511,6 +588,50 @@
       "capabilities": [
         "Cloud AI Operations: AWS + Azure (2026)",
         "Workflow",
+        "Output Requirements"
+      ]
+    },
+    {
+      "name": "cohere-platform-operations-2026",
+      "description": "Integrate and operate Cohere APIs with current model, rerank, embedding, transcribe, and SDK guidance. Use when selecting Cohere models, building search or agent workflows, or planning migration across Cohere platform updates.",
+      "keywords": [
+        "cohere",
+        "rerank",
+        "embeddings",
+        "transcribe",
+        "sdk"
+      ],
+      "measurable_outcome": "Produce a working Cohere operating plan with model family, endpoint choice, compatibility notes, and safeguards documented within 2 hours.",
+      "metadata": {
+        "author": "Biomedical OS Team",
+        "version": "2026.04",
+        "upstream_repo": "https://github.com/cohere-ai/cohere-python"
+      },
+      "source_reliability": [
+        {
+          "source": "official_docs",
+          "score": 1.0,
+          "rationale": "Guidance is grounded in Cohere docs, model pages, and changelog entries checked on 2026-04-20."
+        },
+        {
+          "source": "official_repositories",
+          "score": 0.97,
+          "rationale": "SDK and connector guidance is cross-checked against Cohere-maintained repositories."
+        }
+      ],
+      "allowed-tools": [
+        "read_file",
+        "run_shell_command",
+        "web_fetch"
+      ],
+      "file_path": "Skills/AI_Providers/Cohere_Platform_Operations_2026/SKILL.md",
+      "relative_path": "AI_Providers/Cohere_Platform_Operations_2026/SKILL.md",
+      "last_modified": "2026-04-20T14:08:30.014858+00:00",
+      "body_length": 1160,
+      "capabilities": [
+        "Cohere Platform Operations (2026)",
+        "Workflow",
+        "Guardrails",
         "Output Requirements"
       ]
     },
@@ -832,6 +953,100 @@
       ]
     },
     {
+      "name": "claude-code-operations-2026",
+      "description": "Build and operate Claude Code workflows in the terminal, IDE, and GitHub Actions with hooks, MCP, and approval-aware repo automation. Use when evaluating or deploying Anthropic's coding-agent surface rather than generic Claude API usage.",
+      "keywords": [
+        "anthropic",
+        "claude-code",
+        "coding-agent",
+        "github-actions",
+        "hooks",
+        "mcp"
+      ],
+      "measurable_outcome": "Produce a tested Claude Code operating plan with install path, repo permissions, automation hooks, and rollback criteria documented within 2 hours.",
+      "metadata": {
+        "author": "Biomedical OS Team",
+        "version": "2026.04",
+        "upstream_repo": "https://github.com/anthropics/claude-code"
+      },
+      "source_reliability": [
+        {
+          "source": "official_docs",
+          "score": 1.0,
+          "rationale": "Guidance is grounded in Anthropic Claude Code documentation checked on 2026-04-20."
+        },
+        {
+          "source": "official_repositories",
+          "score": 0.99,
+          "rationale": "Operational behavior and automation surfaces are cross-checked against maintainer-owned Anthropic repositories."
+        }
+      ],
+      "allowed-tools": [
+        "read_file",
+        "run_shell_command",
+        "web_fetch"
+      ],
+      "file_path": "Skills/Agentic_AI/Claude_Code_Operations_2026/SKILL.md",
+      "relative_path": "Agentic_AI/Claude_Code_Operations_2026/SKILL.md",
+      "last_modified": "2026-04-20T14:08:30.013858+00:00",
+      "body_length": 1464,
+      "capabilities": [
+        "Claude Code Operations (2026)",
+        "Workflow",
+        "Guardrails",
+        "Output Requirements"
+      ]
+    },
+    {
+      "name": "computer-use-agents-2026",
+      "description": "Design and operate browser and desktop agents that rely on screenshots, mouse and keyboard control, or hybrid bash/editor/computer loops. Use when deciding between DOM automation, browser agents, and full computer-use workflows.",
+      "keywords": [
+        "computer-use",
+        "browser-agents",
+        "desktop-agents",
+        "openai",
+        "anthropic",
+        "benchmark"
+      ],
+      "measurable_outcome": "Produce a computer-use agent operating plan with runtime choice, isolation model, approval policy, and evaluation path documented within 2 hours.",
+      "metadata": {
+        "author": "Biomedical OS Team",
+        "version": "2026.04"
+      },
+      "source_reliability": [
+        {
+          "source": "official_vendor_docs",
+          "score": 1.0,
+          "rationale": "Runtime guidance is grounded in official OpenAI and Anthropic computer-use documentation checked on 2026-04-20."
+        },
+        {
+          "source": "benchmark_literature",
+          "score": 0.95,
+          "rationale": "Evaluation guidance is anchored to benchmark papers rather than anecdotal demos."
+        },
+        {
+          "source": "ecosystem_repositories",
+          "score": 0.9,
+          "rationale": "Browser Use and OpenHands are treated as ecosystem references, not canonical first-party sources."
+        }
+      ],
+      "allowed-tools": [
+        "read_file",
+        "run_shell_command",
+        "web_fetch"
+      ],
+      "file_path": "Skills/Agentic_AI/Computer_Use_Agents_2026/SKILL.md",
+      "relative_path": "Agentic_AI/Computer_Use_Agents_2026/SKILL.md",
+      "last_modified": "2026-04-20T14:08:30.014858+00:00",
+      "body_length": 1386,
+      "capabilities": [
+        "Computer Use Agents (2026)",
+        "Workflow",
+        "Guardrails",
+        "Output Requirements"
+      ]
+    },
+    {
       "name": "deep-research-swarm",
       "description": "Coordinate a multi-agent research workflow for difficult literature or market-intelligence questions that need parallel search, verification, synthesis, and explicit evidence tracking.",
       "keywords": [
@@ -998,7 +1213,7 @@
     },
     {
       "name": "openai-codex-agents",
-      "description": "Build and operate OpenAI-first coding and agent workflows using the Responses API, Codex models, Agents SDK, MCP/connectors, and approval-aware tool execution. Use when you need long-horizon software agents or OpenAI-native multi-agent orchestration.",
+      "description": "Build and operate OpenAI-first coding and agent workflows using the Responses API, current GPT and Codex models, Agents SDK, MCP/connectors, deep research, and approval-aware tool execution. Use when you need long-horizon software agents or OpenAI-native multi-agent orchestration.",
       "keywords": [
         "openai",
         "codex",
@@ -1016,7 +1231,7 @@
         {
           "source": "official_docs",
           "score": 1.0,
-          "rationale": "Workflow is grounded in OpenAI developer docs and API guides checked on 2026-04-13."
+          "rationale": "Workflow is grounded in OpenAI developer docs and API guides checked on 2026-04-20."
         },
         {
           "source": "official_repositories",
@@ -1031,8 +1246,8 @@
       ],
       "file_path": "Skills/Agentic_AI/OpenAI_Codex_Agents/SKILL.md",
       "relative_path": "Agentic_AI/OpenAI_Codex_Agents/SKILL.md",
-      "last_modified": "2026-04-14T01:21:46.539122+00:00",
-      "body_length": 1218,
+      "last_modified": "2026-04-20T14:08:30.006858+00:00",
+      "body_length": 1385,
       "capabilities": [
         "OpenAI Codex Agents",
         "Workflow",

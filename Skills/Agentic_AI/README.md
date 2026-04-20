@@ -19,8 +19,9 @@ Keep skills here when they are repeatedly useful for building, operating, or eva
 
 - **Core agent patterns:** `Agent_Architectures/Plan_and_Solve`, `Agent_Architectures/ReAct_Agent`, `Agent_Architectures/Self_Correction`
 - **Research agents:** `Automated_Web_Research`, `DeepResearch_Swarm`
-- **Execution runtimes:** `AgentScope_Runtime`, `OpenHands_Coding_Agent`, `LangGraph_Self_Hosted`
+- **Execution runtimes and coding agents:** `AgentScope_Runtime`, `OpenHands_Coding_Agent`, `OpenAI_Codex_Agents`, `Claude_Code_Operations_2026`, `LangGraph_Self_Hosted`
 - **Modern framework coverage:** `OpenAI_Codex_Agents`, `Google_ADK_Agents`, `PydanticAI_Agents`
+- **Computer and browser control:** `Computer_Use_Agents_2026`
 - **Operational quality:** `Agentic_Evals_Observability`, `Memory_Systems`, `Productivity/`
 - **Reasoning and multimodality:** `Reasoning_Models/`, `Multimodal_Agents/`
 
@@ -34,6 +35,8 @@ Keep skills here when they are repeatedly useful for building, operating, or eva
 
 ## High-Value Additions In This Refresh
 
+- `Claude_Code_Operations_2026/` for terminal, IDE, GitHub Action, hooks, and MCP-aware Claude Code rollouts.
+- `Computer_Use_Agents_2026/` for browser-vs-desktop agent selection, isolated execution, and benchmark-grounded computer-use operations.
 - `OpenAI_Codex_Agents/` for Responses-first coding agents, Codex models, Agents SDK, MCP/connectors, and approval-aware tool execution.
 - `Google_ADK_Agents/` for Google's multi-language Agent Development Kit and workflow-agent patterns.
 - `PydanticAI_Agents/` for typed agent engineering, dependency injection, MCP integration, and Logfire/OTel observability.

@@ -1,6 +1,34 @@
 {
-  "generated_at": "2026-04-14T01:26:45.493983+00:00",
+  "generated_at": "2026-04-20T14:09:52.969576+00:00",
   "sources": [
+    {
+      "skill": "aws-bedrock-operations-2026",
+      "file_path": "Skills/AI_Providers/AWS_Bedrock_Operations_2026/SKILL.md",
+      "source": "official_aws_docs",
+      "score": 1.0,
+      "rationale": "Guidance is grounded in Amazon Bedrock user guide and API reference pages checked on 2026-04-20."
+    },
+    {
+      "skill": "azure-ai-foundry-operations-2026",
+      "file_path": "Skills/AI_Providers/Azure_AI_Foundry_Operations_2026/SKILL.md",
+      "source": "official_microsoft_docs",
+      "score": 1.0,
+      "rationale": "Guidance is grounded in Azure AI Foundry and Microsoft Foundry documentation checked on 2026-04-20."
+    },
+    {
+      "skill": "cohere-platform-operations-2026",
+      "file_path": "Skills/AI_Providers/Cohere_Platform_Operations_2026/SKILL.md",
+      "source": "official_docs",
+      "score": 1.0,
+      "rationale": "Guidance is grounded in Cohere docs, model pages, and changelog entries checked on 2026-04-20."
+    },
+    {
+      "skill": "cohere-platform-operations-2026",
+      "file_path": "Skills/AI_Providers/Cohere_Platform_Operations_2026/SKILL.md",
+      "source": "official_repositories",
+      "score": 0.97,
+      "rationale": "SDK and connector guidance is cross-checked against Cohere-maintained repositories."
+    },
     {
       "skill": "deepseek-api-operations-2026",
       "file_path": "Skills/AI_Providers/DeepSeek_API_Operations_2026/SKILL.md",
@@ -72,6 +100,41 @@
       "rationale": "Supporting implementation references come from maintainer-owned repositories or official registries."
     },
     {
+      "skill": "claude-code-operations-2026",
+      "file_path": "Skills/Agentic_AI/Claude_Code_Operations_2026/SKILL.md",
+      "source": "official_docs",
+      "score": 1.0,
+      "rationale": "Guidance is grounded in Anthropic Claude Code documentation checked on 2026-04-20."
+    },
+    {
+      "skill": "claude-code-operations-2026",
+      "file_path": "Skills/Agentic_AI/Claude_Code_Operations_2026/SKILL.md",
+      "source": "official_repositories",
+      "score": 0.99,
+      "rationale": "Operational behavior and automation surfaces are cross-checked against maintainer-owned Anthropic repositories."
+    },
+    {
+      "skill": "computer-use-agents-2026",
+      "file_path": "Skills/Agentic_AI/Computer_Use_Agents_2026/SKILL.md",
+      "source": "official_vendor_docs",
+      "score": 1.0,
+      "rationale": "Runtime guidance is grounded in official OpenAI and Anthropic computer-use documentation checked on 2026-04-20."
+    },
+    {
+      "skill": "computer-use-agents-2026",
+      "file_path": "Skills/Agentic_AI/Computer_Use_Agents_2026/SKILL.md",
+      "source": "benchmark_literature",
+      "score": 0.95,
+      "rationale": "Evaluation guidance is anchored to benchmark papers rather than anecdotal demos."
+    },
+    {
+      "skill": "computer-use-agents-2026",
+      "file_path": "Skills/Agentic_AI/Computer_Use_Agents_2026/SKILL.md",
+      "source": "ecosystem_repositories",
+      "score": 0.9,
+      "rationale": "Browser Use and OpenHands are treated as ecosystem references, not canonical first-party sources."
+    },
+    {
       "skill": "deep-research-swarm",
       "file_path": "Skills/Agentic_AI/DeepResearch_Swarm/SKILL.md",
       "source": "official_docs",
@@ -104,7 +167,7 @@
       "file_path": "Skills/Agentic_AI/OpenAI_Codex_Agents/SKILL.md",
       "source": "official_docs",
       "score": 1.0,
-      "rationale": "Workflow is grounded in OpenAI developer docs and API guides checked on 2026-04-13."
+      "rationale": "Workflow is grounded in OpenAI developer docs and API guides checked on 2026-04-20."
     },
     {
       "skill": "openai-codex-agents",
