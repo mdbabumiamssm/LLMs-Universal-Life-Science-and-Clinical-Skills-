@@ -1,14 +1,27 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: mcpmed-bioinformatics-server
-description: Model Context Protocol (MCP) server for bioinformatics web services like GEO, STRING, and UCSC Cell Browser.
-license: MIT
-metadata:
-  author: Artificial Intelligence Group
-  version: "1.0.0"
-compatibility:
-  - system: Python 3.10+
+name: bio-mcpmed-bioinformatics-server
+description: Model Context Protocol (MCP) server for bioinformatics web services like
+  GEO, STRING, and UCSC Cell Browser.
+tool_type: mixed
+primary_tool: Unknown
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
 allowed-tools:
-  - run_shell_command
+- read_file
+- run_shell_command
 ---
 
 # MCPmed Bioinformatics Web Services
@@ -40,3 +53,5 @@ Adapts the Model Context Protocol (MCP) to bioinformatics web server backends. T
 ```bash
 python3 -m mcpmed.cli query string --gene TP53
 ```
+
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

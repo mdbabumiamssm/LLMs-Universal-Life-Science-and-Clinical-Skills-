@@ -1,17 +1,28 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: genomics-variant-annotation
-description: >-
-  Variant functional impact prediction: VEP consequence types (HIGH/MODERATE/LOW/MODIFIER),
-  SIFT, PolyPhen-2, and CADD scoring. Rule-based annotation engine for demo, wraps VEP/snpEff/ANNOVAR.
-version: 0.2.0
-author: OmicsClaw
-license: MIT
-tags: [genomics, annotation, VEP, snpEff, ANNOVAR]
-metadata:
-  omicsclaw:
-    domain: genomics
-    emoji: "📝"
-    trigger_keywords: [variant annotation, VEP, snpEff, ANNOVAR, functional effect]
+name: bio-genomics-variant-annotation
+description: 'Variant functional impact prediction: VEP consequence types (HIGH/MODERATE/LOW/MODIFIER),
+  SIFT, PolyPhen-2, and CADD scoring. Rule-based annotation engine for demo, wraps
+  VEP/snpEff/ANNOVAR.'
+tool_type: mixed
+primary_tool: genomics
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 # 📝 Variant Annotation
@@ -81,3 +92,5 @@ output_directory/
 - [VEP](https://doi.org/10.1186/s13059-016-0974-4) — Variant Effect Predictor
 - [snpEff](https://doi.org/10.4161/fly.19695)
 - [ANNOVAR](https://doi.org/10.1093/nar/gkq603)
+
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

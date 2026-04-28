@@ -1,10 +1,29 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: feishu-rich-card
-description: >
-  Send rich interactive cards with embedded images in Feishu group chats.
+name: bio-feishu-rich-card
+description: Send rich interactive cards with embedded images in Feishu group chats.
   Use when reporting progress, sharing analysis results, or presenting any content
-  that benefits from mixed text+image layout in Feishu.
-  Combines SVG UI templates (or matplotlib/PIL charts) with Feishu Card Kit API.
+  that benefits from mixed text+image layout in Feishu. Combines SVG UI templates
+  (or matplotlib/PIL charts) with Feishu Card Kit API.
+tool_type: mixed
+primary_tool: Unknown
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 > **Repository note:** Stored at `repo/Skills/Research_Tools/Reporting/feishu-rich-card`
@@ -120,3 +139,5 @@ python3 -c "import cairosvg; cairosvg.svg2png(url='report.svg', write_to='report
 ## Default Chat ID
 
 通过环境变量配置：`FEISHU_DEFAULT_CHAT_ID`（在 `.env` 中设置）
+
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

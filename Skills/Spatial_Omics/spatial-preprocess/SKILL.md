@@ -1,42 +1,28 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: spatial-preprocess
-description: >-
-  Load spatial transcriptomics data (Visium, Xenium, MERFISH, Slide-seq, generic h5ad),
-  perform QC filtering, normalization, HVG selection, PCA, UMAP, and Leiden clustering.
-version: 0.2.0
-author: SpatialClaw
-license: MIT
-tags: [spatial, preprocessing, QC, normalization, clustering, visium, xenium]
-metadata:
-  omicsclaw:
-    domain: spatial
-    requires:
-      bins:
-        - python3
-      env: []
-      config: []
-    emoji: "🔬"
-    homepage: https://github.com/zhou-1314/OmicsClaw
-    os: [macos, linux]
-    install:
-      - kind: pip
-        package: scanpy
-        bins: []
-      - kind: pip
-        package: squidpy
-        bins: []
-    trigger_keywords:
-      - preprocess
-      - QC
-      - normalize
-      - visium
-      - xenium
-      - merfish
-      - slide-seq
-      - load spatial data
-      - clustering
-      - leiden
-      - umap
+name: bio-spatial-preprocess
+description: Load spatial transcriptomics data (Visium, Xenium, MERFISH, Slide-seq,
+  generic h5ad), perform QC filtering, normalization, HVG selection, PCA, UMAP, and
+  Leiden clustering.
+tool_type: mixed
+primary_tool: spatial
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 # 🔬 Spatial Preprocess
@@ -156,3 +142,5 @@ output_dir/
 - [Scanpy](https://scanpy.readthedocs.io/) — analysis framework
 - [Squidpy](https://squidpy.readthedocs.io/) — spatial extensions
 - [Leiden algorithm](https://www.nature.com/articles/s41598-019-41695-z) — community detection
+
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

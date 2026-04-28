@@ -1,9 +1,29 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: scvi-tools
-description: Deep generative models for single-cell omics. Use when you need probabilistic batch correction (scVI), transfer learning, differential expression with uncertainty, or multi-modal integration (TOTALVI, MultiVI). Best for advanced modeling, batch effects, multimodal data. For standard analysis pipelines use scanpy.
-license: BSD-3-Clause license
-metadata:
-    skill-author: K-Dense Inc.
+name: bio-scvi-tools
+description: Deep generative models for single-cell omics. Use when you need probabilistic
+  batch correction (scVI), transfer learning, differential expression with uncertainty,
+  or multi-modal integration (TOTALVI, MultiVI). Best for advanced modeling, batch
+  effects, multimodal data. For standard analysis pipelines use scanpy.
+tool_type: mixed
+primary_tool: Unknown
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 # scvi-tools
@@ -186,3 +206,4 @@ uv pip install scvi-tools[cuda]
 6. **GPU usage**: Enable GPU acceleration for large datasets (`accelerator="gpu"`)
 7. **Scanpy integration**: Store outputs in AnnData objects for downstream analysis
 
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

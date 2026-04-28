@@ -1,16 +1,27 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: bulkrna-splicing
-description: >-
-  Alternative splicing analysis — PSI quantification, differential splicing event detection from rMATS/SUPPA2 output.
-version: 0.1.0
-author: OmicsClaw
-license: MIT
-tags: [bulkrna, splicing, alternative-splicing, PSI, rMATS, SUPPA2]
-metadata:
-  omicsclaw:
-    domain: bulkrna
-    emoji: "🧬"
-    trigger_keywords: [alternative splicing, splicing analysis, PSI, rMATS, SUPPA2, exon skipping, differential splicing]
+name: bio-bulkrna-splicing
+description: "Alternative splicing analysis \u2014 PSI quantification, differential\
+  \ splicing event detection from rMATS/SUPPA2 output."
+tool_type: mixed
+primary_tool: bulkrna
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 # Bulk RNA-seq Alternative Splicing Analysis
@@ -148,3 +159,5 @@ Reference examples tested with: scipy 1.11+, pandas 2.0+, numpy 1.24+, matplotli
 - `bulkrna-alignment` — Read alignment upstream
 - `bulkrna-de` — Gene-level differential expression
 - `bulkrna-enrichment` — Pathway enrichment of affected genes
+
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

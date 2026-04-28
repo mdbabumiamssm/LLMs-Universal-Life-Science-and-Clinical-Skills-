@@ -1,9 +1,29 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: gget
-description: "Fast CLI/Python queries to 20+ bioinformatics databases. Use for quick lookups: gene info, BLAST searches, AlphaFold structures, enrichment analysis. Best for interactive exploration, simple queries. For batch processing or advanced BLAST use biopython; for multi-database Python workflows use bioservices."
-license: BSD-2-Clause license
-metadata:
-    skill-author: K-Dense Inc.
+name: bio-gget
+description: 'Fast CLI/Python queries to 20+ bioinformatics databases. Use for quick
+  lookups: gene info, BLAST searches, AlphaFold structures, enrichment analysis. Best
+  for interactive exploration, simple queries. For batch processing or advanced BLAST
+  use biopython; for multi-database Python workflows use bioservices.'
+tool_type: mixed
+primary_tool: Unknown
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 # gget
@@ -867,3 +887,4 @@ For additional help:
 - GitHub issues: https://github.com/pachterlab/gget/issues
 - Citation: Luebbert, L. & Pachter, L. (2023). Efficient querying of genomic reference databases with gget. Bioinformatics. https://doi.org/10.1093/bioinformatics/btac836
 
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

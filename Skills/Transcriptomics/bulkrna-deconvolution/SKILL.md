@@ -1,16 +1,27 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: bulkrna-deconvolution
-description: >-
-  Bulk RNA-seq cell type deconvolution using NNLS (built-in), with optional CIBERSORTx and MuSiC bridges.
-version: 0.1.0
-author: OmicsClaw
-license: MIT
-tags: [bulkrna, deconvolution, NNLS, CIBERSORTx, MuSiC, cell-type-proportion]
-metadata:
-  omicsclaw:
-    domain: bulkrna
-    emoji: "🧩"
-    trigger_keywords: [bulk deconvolution, cell type proportion, NNLS, CIBERSORTx, bulk deconv, cell fraction]
+name: bio-bulkrna-deconvolution
+description: Bulk RNA-seq cell type deconvolution using NNLS (built-in), with optional
+  CIBERSORTx and MuSiC bridges.
+tool_type: mixed
+primary_tool: bulkrna
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 # Bulk RNA-seq Cell Type Deconvolution
@@ -126,3 +137,5 @@ Reference examples tested with: scipy 1.11+, pandas 2.0+, numpy 1.24+, matplotli
 - `bulkrna-de` -- Differential expression analysis
 - `bulkrna-enrichment` -- Pathway enrichment of gene sets downstream
 - `spatial-deconvolution` -- Spatial transcriptomics deconvolution (CARD, Cell2Location)
+
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

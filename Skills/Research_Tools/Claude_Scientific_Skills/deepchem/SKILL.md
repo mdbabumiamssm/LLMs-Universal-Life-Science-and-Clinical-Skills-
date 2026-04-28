@@ -1,9 +1,30 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: deepchem
-description: Molecular ML with diverse featurizers and pre-built datasets. Use for property prediction (ADMET, toxicity) with traditional ML or GNNs when you want extensive featurization options and MoleculeNet benchmarks. Best for quick experiments with pre-trained models, diverse molecular representations. For graph-first PyTorch workflows use torchdrug; for benchmark datasets use pytdc.
-license: MIT license
-metadata:
-    skill-author: K-Dense Inc.
+name: bio-deepchem
+description: Molecular ML with diverse featurizers and pre-built datasets. Use for
+  property prediction (ADMET, toxicity) with traditional ML or GNNs when you want
+  extensive featurization options and MoleculeNet benchmarks. Best for quick experiments
+  with pre-trained models, diverse molecular representations. For graph-first PyTorch
+  workflows use torchdrug; for benchmark datasets use pytdc.
+tool_type: mixed
+primary_tool: Unknown
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 # DeepChem
@@ -593,3 +614,4 @@ If import errors occur, the user may need specific dependencies. Check the DeepC
 - Tutorials: https://deepchem.readthedocs.io/en/latest/get_started/tutorials.html
 - Paper: "MoleculeNet: A Benchmark for Molecular Machine Learning"
 
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

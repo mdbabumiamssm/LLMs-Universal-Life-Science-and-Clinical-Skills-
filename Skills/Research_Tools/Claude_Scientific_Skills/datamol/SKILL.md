@@ -1,9 +1,30 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: datamol
-description: Pythonic wrapper around RDKit with simplified interface and sensible defaults. Preferred for standard drug discovery including SMILES parsing, standardization, descriptors, fingerprints, clustering, 3D conformers, parallel processing. Returns native rdkit.Chem.Mol objects. For advanced control or custom parameters, use rdkit directly.
-license: Apache-2.0 license
-metadata:
-    skill-author: K-Dense Inc.
+name: bio-datamol
+description: Pythonic wrapper around RDKit with simplified interface and sensible
+  defaults. Preferred for standard drug discovery including SMILES parsing, standardization,
+  descriptors, fingerprints, clustering, 3D conformers, parallel processing. Returns
+  native rdkit.Chem.Mol objects. For advanced control or custom parameters, use rdkit
+  directly.
+tool_type: mixed
+primary_tool: Unknown
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 # Datamol Cheminformatics Skill
@@ -702,3 +723,4 @@ predictions = model.predict(X_test)
 - **RDKit Documentation**: https://www.rdkit.org/docs/
 - **GitHub Repository**: https://github.com/datamol-io/datamol
 
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

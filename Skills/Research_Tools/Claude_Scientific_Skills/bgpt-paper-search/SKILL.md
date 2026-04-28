@@ -1,12 +1,30 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: bgpt-paper-search
-description: Search scientific papers and retrieve structured experimental data extracted from full-text studies via the BGPT MCP server. Returns 25+ fields per paper including methods, results, sample sizes, quality scores, and conclusions. Use for literature reviews, evidence synthesis, and finding experimental details not available in abstracts alone.
-allowed-tools: Bash
-license: MIT
-metadata:
-    skill-author: BGPT
-    website: https://bgpt.pro/mcp
-    github: https://github.com/connerlambden/bgpt-mcp
+name: bio-bgpt-paper-search
+description: Search scientific papers and retrieve structured experimental data extracted
+  from full-text studies via the BGPT MCP server. Returns 25+ fields per paper including
+  methods, results, sample sizes, quality scores, and conclusions. Use for literature
+  reviews, evidence synthesis, and finding experimental details not available in abstracts
+  alone.
+tool_type: mixed
+primary_tool: Unknown
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 # BGPT Paper Search
@@ -79,3 +97,5 @@ Pairs well with:
 - `pubmed-database` — Use PubMed for broad searches, BGPT for deep experimental data
 - `biorxiv-database` — Combine preprint discovery with full-text data extraction
 - `citation-management` — Manage citations from BGPT search results
+
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

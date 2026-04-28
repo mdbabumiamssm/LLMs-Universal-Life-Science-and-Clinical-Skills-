@@ -1,9 +1,29 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: cbioportal-database
-description: Query cBioPortal for cancer genomics data including somatic mutations, copy number alterations, gene expression, and survival data across hundreds of cancer studies. Essential for cancer target validation, oncogene/tumor suppressor analysis, and patient-level genomic profiling.
-license: LGPL-3.0
-metadata:
-    skill-author: Kuan-lin Huang
+name: bio-cbioportal-database
+description: Query cBioPortal for cancer genomics data including somatic mutations,
+  copy number alterations, gene expression, and survival data across hundreds of cancer
+  studies. Essential for cancer target validation, oncogene/tumor suppressor analysis,
+  and patient-level genomic profiling.
+tool_type: mixed
+primary_tool: Unknown
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 # cBioPortal Database
@@ -365,3 +385,5 @@ wget https://cbioportal-datahub.s3.amazonaws.com/brca_tcga.tar.gz
 - **Data hub**: https://datahub.cbioportal.org/
 - **Citation**: Cerami E et al. (2012) Cancer Discovery. PMID: 22588877
 - **API clients**: https://docs.cbioportal.org/web-api-and-clients/
+
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

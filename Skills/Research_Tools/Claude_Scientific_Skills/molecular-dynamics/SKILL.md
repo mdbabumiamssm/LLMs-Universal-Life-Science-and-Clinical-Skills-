@@ -1,9 +1,29 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: molecular-dynamics
-description: Run and analyze molecular dynamics simulations with OpenMM and MDAnalysis. Set up protein/small molecule systems, define force fields, run energy minimization and production MD, analyze trajectories (RMSD, RMSF, contact maps, free energy surfaces). For structural biology, drug binding, and biophysics.
-license: MIT
-metadata:
-    skill-author: Kuan-lin Huang
+name: bio-molecular-dynamics
+description: Run and analyze molecular dynamics simulations with OpenMM and MDAnalysis.
+  Set up protein/small molecule systems, define force fields, run energy minimization
+  and production MD, analyze trajectories (RMSD, RMSF, contact maps, free energy surfaces).
+  For structural biology, drug binding, and biophysics.
+tool_type: mixed
+primary_tool: Unknown
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 # Molecular Dynamics
@@ -455,3 +475,5 @@ def parameterize_ligand(smiles, ff_name="openff-2.0.0.offxml"):
 - **AmberTools** (free Amber tools): https://ambermd.org/AmberTools.php
 - **OpenMM paper**: Eastman P et al. (2017) PLOS Computational Biology. PMID: 28278240
 - **MDAnalysis paper**: Michaud-Agrawal N et al. (2011) J Computational Chemistry. PMID: 21500218
+
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

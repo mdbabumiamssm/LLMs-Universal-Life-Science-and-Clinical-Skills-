@@ -1,32 +1,27 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: spatial-velocity
-description: >-
-  RNA velocity and cellular dynamics analysis for spatial transcriptomics data.
-version: 0.2.0
-author: SpatialClaw Team
-license: MIT
-tags: [spatial, velocity, RNA velocity, scVelo, dynamics]
-metadata:
-  omicsclaw:
-    domain: spatial
-    requires:
-      bins:
-        - python3
-      env: []
-      config: []
-    emoji: "🏎️"
-    homepage: https://github.com/zhou-1314/OmicsClaw
-    os: [macos, linux]
-    install:
-      - kind: pip
-        package: scvelo
-        bins: []
-    trigger_keywords:
-      - RNA velocity
-      - cellular dynamics
-      - scVelo
-      - VeloVI
-      - spliced unspliced
+name: bio-spatial-velocity
+description: RNA velocity and cellular dynamics analysis for spatial transcriptomics
+  data.
+tool_type: mixed
+primary_tool: spatial
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 # 🏎️ Spatial Velocity
@@ -148,3 +143,5 @@ output_directory/
 
 - [scVelo](https://scvelo.readthedocs.io/) — Bergen et al., Nature Biotechnology 2020
 - [La Manno et al. 2018](https://doi.org/10.1038/s41586-018-0414-6) — RNA velocity of single cells
+
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

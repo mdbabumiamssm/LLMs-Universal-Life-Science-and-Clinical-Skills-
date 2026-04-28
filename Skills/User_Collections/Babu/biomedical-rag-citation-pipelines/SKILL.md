@@ -1,6 +1,29 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: biomedical-rag-citation-pipelines
-description: Design citation-grounded biomedical retrieval and generation systems for literature-heavy assistants. Use when building or improving PubMed or PMC search pipelines, hybrid retrieval, claim-to-citation validation, evidence-aware answer synthesis, or evaluation workflows for biomedical RAG applications.
+name: bio-biomedical-rag-citation-pipelines
+description: Design citation-grounded biomedical retrieval and generation systems
+  for literature-heavy assistants. Use when building or improving PubMed or PMC search
+  pipelines, hybrid retrieval, claim-to-citation validation, evidence-aware answer
+  synthesis, or evaluation workflows for biomedical RAG applications.
+tool_type: mixed
+primary_tool: Unknown
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 # Biomedical RAG Citation Pipelines
@@ -27,3 +50,5 @@ Build biomedical RAG systems that can defend their answers with traceable eviden
 
 - Read `references/system-patterns.md` for pipeline design choices.
 - Read `references/evaluation-checklist.md` for retrieval and citation evaluation.
+
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

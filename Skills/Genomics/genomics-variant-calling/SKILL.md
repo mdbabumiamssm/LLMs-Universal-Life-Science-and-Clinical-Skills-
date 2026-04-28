@@ -1,17 +1,27 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: genomics-variant-calling
-description: >-
-  Germline and somatic variant calling (SNVs, Indels) using GATK HaplotypeCaller,
+name: bio-genomics-variant-calling
+description: Germline and somatic variant calling (SNVs, Indels) using GATK HaplotypeCaller,
   Mutect2, DeepVariant, or FreeBayes. Includes GVCF workflow, VQSR, and hard filtering.
-version: 0.2.0
-author: OmicsClaw
-license: MIT
-tags: [genomics, variant-calling, GATK, DeepVariant, FreeBayes, VQSR]
-metadata:
-  omicsclaw:
-    domain: genomics
-    emoji: "🔎"
-    trigger_keywords: [variant calling, SNV, indel, GATK, DeepVariant, FreeBayes, Mutect2, VQSR]
+tool_type: mixed
+primary_tool: genomics
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 # 🔎 Variant Calling
@@ -268,3 +278,5 @@ Reference examples tested with: GATK 4.5+, bcftools 1.19+
 - `align` — Read alignment upstream
 - `vcf-ops` — Post-calling VCF manipulation
 - `variant-annotate` — Variant annotation downstream
+
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

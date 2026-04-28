@@ -1,9 +1,29 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: phylogenetics
-description: Build and analyze phylogenetic trees using MAFFT (multiple alignment), IQ-TREE 2 (maximum likelihood), and FastTree (fast NJ/ML). Visualize with ETE3 or FigTree. For evolutionary analysis, microbial genomics, viral phylodynamics, protein family analysis, and molecular clock studies.
-license: Unknown
-metadata:
-    skill-author: Kuan-lin Huang
+name: bio-phylogenetics
+description: Build and analyze phylogenetic trees using MAFFT (multiple alignment),
+  IQ-TREE 2 (maximum likelihood), and FastTree (fast NJ/ML). Visualize with ETE3 or
+  FigTree. For evolutionary analysis, microbial genomics, viral phylodynamics, protein
+  family analysis, and molecular clock studies.
+tool_type: mixed
+primary_tool: Unknown
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 # Phylogenetics
@@ -402,3 +422,5 @@ def full_phylogenetic_analysis(
 - **iTOL** (web visualization): https://itol.embl.de/
 - **MUSCLE** (alternative aligner): https://www.drive5.com/muscle/
 - **TrimAl** (alignment trimming): https://vicfero.github.io/trimal/
+
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

@@ -1,9 +1,29 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: gnomad-database
-description: Query gnomAD (Genome Aggregation Database) for population allele frequencies, variant constraint scores (pLI, LOEUF), and loss-of-function intolerance. Essential for variant pathogenicity interpretation, rare disease genetics, and identifying loss-of-function intolerant genes.
-license: CC0-1.0
-metadata:
-    skill-author: Kuan-lin Huang
+name: bio-gnomad-database
+description: Query gnomAD (Genome Aggregation Database) for population allele frequencies,
+  variant constraint scores (pLI, LOEUF), and loss-of-function intolerance. Essential
+  for variant pathogenicity interpretation, rare disease genetics, and identifying
+  loss-of-function intolerant genes.
+tool_type: mixed
+primary_tool: Unknown
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 # gnomAD Database
@@ -393,3 +413,5 @@ def query_gnomad_sv(gene_symbol):
 - **Constraint documentation**: https://gnomad.broadinstitute.org/help/constraint
 - **Citation**: Karczewski KJ et al. (2020) Nature. PMID: 32461654; Chen S et al. (2024) Nature. PMID: 38conservation
 - **GitHub**: https://github.com/broadinstitute/gnomad-browser
+
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

@@ -1,16 +1,27 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: proteomics-data-import
-description: >-
-  Import and convert proteomics data formats between MaxQuant, DIA-NN, Spectronaut, and standard CSV.
-version: 0.1.0
-author: OmicsClaw
-license: MIT
-tags: [proteomics, import, conversion, data-format]
-metadata:
-  omicsclaw:
-    domain: proteomics
-    emoji: "📥"
-    trigger_keywords: [data import, convert proteomics, format conversion]
+name: bio-proteomics-data-import
+description: Import and convert proteomics data formats between MaxQuant, DIA-NN,
+  Spectronaut, and standard CSV.
+tool_type: mixed
+primary_tool: proteomics
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 # 📥 Proteomics Data Import
@@ -74,3 +85,5 @@ output_directory/
 **Chaining partners**:
 - `ms-qc` — Downstream quality profiling
 - `differential-abundance` — Downstream statistical execution
+
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

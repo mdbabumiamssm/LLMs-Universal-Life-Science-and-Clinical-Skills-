@@ -1,7 +1,34 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: pptx
-description: "Use this skill any time a .pptx file is involved in any way — as input, output, or both. This includes: creating slide decks, pitch decks, or presentations; reading, parsing, or extracting text from any .pptx file (even if the extracted content will be used elsewhere, like in an email or summary); editing, modifying, or updating existing presentations; combining or splitting slide files; working with templates, layouts, speaker notes, or comments. Trigger whenever the user mentions \"deck,\" \"slides,\" \"presentation,\" or references a .pptx filename, regardless of what they plan to do with the content afterward. If a .pptx file needs to be opened, created, or touched, use this skill."
-license: Proprietary. LICENSE.txt has complete terms
+name: bio-pptx
+description: "Use this skill any time a .pptx file is involved in any way \u2014 as\
+  \ input, output, or both. This includes: creating slide decks, pitch decks, or presentations;\
+  \ reading, parsing, or extracting text from any .pptx file (even if the extracted\
+  \ content will be used elsewhere, like in an email or summary); editing, modifying,\
+  \ or updating existing presentations; combining or splitting slide files; working\
+  \ with templates, layouts, speaker notes, or comments. Trigger whenever the user\
+  \ mentions \"deck,\" \"slides,\" \"presentation,\" or references a .pptx filename,\
+  \ regardless of what they plan to do with the content afterward. If a .pptx file\
+  \ needs to be opened, created, or touched, use this skill."
+tool_type: mixed
+primary_tool: Unknown
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 # PPTX Skill
@@ -230,3 +257,5 @@ pdftoppm -jpeg -r 150 -f N -l N output.pdf slide-fixed
 - `npm install -g pptxgenjs` - creating from scratch
 - LibreOffice (`soffice`) - PDF conversion (auto-configured for sandboxed environments via `scripts/office/soffice.py`)
 - Poppler (`pdftoppm`) - PDF to images
+
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

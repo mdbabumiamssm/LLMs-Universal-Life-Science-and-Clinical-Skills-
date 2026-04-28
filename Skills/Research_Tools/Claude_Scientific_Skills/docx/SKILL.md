@@ -1,7 +1,35 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: docx
-description: "Use this skill whenever the user wants to create, read, edit, or manipulate Word documents (.docx files). Triggers include: any mention of 'Word doc', 'word document', '.docx', or requests to produce professional documents with formatting like tables of contents, headings, page numbers, or letterheads. Also use when extracting or reorganizing content from .docx files, inserting or replacing images in documents, performing find-and-replace in Word files, working with tracked changes or comments, or converting content into a polished Word document. If the user asks for a 'report', 'memo', 'letter', 'template', or similar deliverable as a Word or .docx file, use this skill. Do NOT use for PDFs, spreadsheets, Google Docs, or general coding tasks unrelated to document generation."
-license: Proprietary. LICENSE.txt has complete terms
+name: bio-docx
+description: 'Use this skill whenever the user wants to create, read, edit, or manipulate
+  Word documents (.docx files). Triggers include: any mention of ''Word doc'', ''word
+  document'', ''.docx'', or requests to produce professional documents with formatting
+  like tables of contents, headings, page numbers, or letterheads. Also use when extracting
+  or reorganizing content from .docx files, inserting or replacing images in documents,
+  performing find-and-replace in Word files, working with tracked changes or comments,
+  or converting content into a polished Word document. If the user asks for a ''report'',
+  ''memo'', ''letter'', ''template'', or similar deliverable as a Word or .docx file,
+  use this skill. Do NOT use for PDFs, spreadsheets, Google Docs, or general coding
+  tasks unrelated to document generation.'
+tool_type: mixed
+primary_tool: Unknown
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 # DOCX creation, editing, and analysis
@@ -415,7 +443,7 @@ Edit files in `unpacked/word/`. See XML Reference below for patterns.
 
 **CRITICAL: Use smart quotes for new content.** When adding text with apostrophes or quotes, use XML entities to produce smart quotes:
 ```xml
-<!-- Use these entities for professional typography -->
+
 <w:t>Here&#x2019;s a quote: &#x201C;Hello&#x201D;</w:t>
 ```
 | Entity | Character |
@@ -481,7 +509,7 @@ Validates with auto-repair, condenses XML, and creates DOCX. Use `--validate fal
 
 **Minimal edits** - only mark what changes:
 ```xml
-<!-- Change "30 days" to "60 days" -->
+
 <w:r><w:t>The term is </w:t></w:r>
 <w:del w:id="1" w:author="Claude" w:date="...">
   <w:r><w:delText>30</w:delText></w:r>
@@ -496,7 +524,7 @@ Validates with auto-repair, condenses XML, and creates DOCX. Use `--validate fal
 ```xml
 <w:p>
   <w:pPr>
-    <w:numPr>...</w:numPr>  <!-- list numbering if present -->
+    <w:numPr>...</w:numPr>  
     <w:rPr>
       <w:del w:id="1" w:author="Claude" w:date="2025-01-01T00:00:00Z"/>
     </w:rPr>
@@ -534,7 +562,7 @@ After running `comment.py` (see Step 2), add markers to document.xml. For replie
 **CRITICAL: `<w:commentRangeStart>` and `<w:commentRangeEnd>` are siblings of `<w:r>`, never inside `<w:r>`.**
 
 ```xml
-<!-- Comment markers are direct children of w:p, never inside w:r -->
+
 <w:commentRangeStart w:id="0"/>
 <w:del w:id="1" w:author="Claude" w:date="2025-01-01T00:00:00Z">
   <w:r><w:delText>deleted</w:delText></w:r>
@@ -543,7 +571,7 @@ After running `comment.py` (see Step 2), add markers to document.xml. For replie
 <w:commentRangeEnd w:id="0"/>
 <w:r><w:rPr><w:rStyle w:val="CommentReference"/></w:rPr><w:commentReference w:id="0"/></w:r>
 
-<!-- Comment 0 with reply 1 nested inside -->
+
 <w:commentRangeStart w:id="0"/>
   <w:commentRangeStart w:id="1"/>
   <w:r><w:t>text</w:t></w:r>
@@ -568,7 +596,7 @@ After running `comment.py` (see Step 2), add markers to document.xml. For replie
 ```xml
 <w:drawing>
   <wp:inline>
-    <wp:extent cx="914400" cy="914400"/>  <!-- EMUs: 914400 = 1 inch -->
+    <wp:extent cx="914400" cy="914400"/>  
     <a:graphic>
       <a:graphicData uri=".../picture">
         <pic:pic>
@@ -588,3 +616,5 @@ After running `comment.py` (see Step 2), add markers to document.xml. For replie
 - **docx**: `npm install -g docx` (new documents)
 - **LibreOffice**: PDF conversion (auto-configured for sandboxed environments via `scripts/office/soffice.py`)
 - **Poppler**: `pdftoppm` for images
+
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

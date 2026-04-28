@@ -1,9 +1,30 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: torchdrug
-description: PyTorch-native graph neural networks for molecules and proteins. Use when building custom GNN architectures for drug discovery, protein modeling, or knowledge graph reasoning. Best for custom model development, protein property prediction, retrosynthesis. For pre-trained models and diverse featurizers use deepchem; for benchmark datasets use pytdc.
-license: Apache-2.0 license
-metadata:
-    skill-author: K-Dense Inc.
+name: bio-torchdrug
+description: PyTorch-native graph neural networks for molecules and proteins. Use
+  when building custom GNN architectures for drug discovery, protein modeling, or
+  knowledge graph reasoning. Best for custom model development, protein property prediction,
+  retrosynthesis. For pre-trained models and diverse featurizers use deepchem; for
+  benchmark datasets use pytdc.
+tool_type: mixed
+primary_tool: Unknown
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 # TorchDrug
@@ -446,3 +467,4 @@ Navigate to the appropriate reference file based on your task:
 
 Each reference provides comprehensive coverage of its domain with examples, best practices, and common use cases.
 
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

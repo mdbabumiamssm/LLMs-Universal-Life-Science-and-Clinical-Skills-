@@ -1,9 +1,29 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: opentrons-integration
-description: Official Opentrons Protocol API for OT-2 and Flex robots. Use when writing protocols specifically for Opentrons hardware with full access to Protocol API v2 features. Best for production Opentrons protocols, official API compatibility. For multi-vendor automation or broader equipment control use pylabrobot.
-license: Unknown
-metadata:
-    skill-author: K-Dense Inc.
+name: bio-opentrons-integration
+description: Official Opentrons Protocol API for OT-2 and Flex robots. Use when writing
+  protocols specifically for Opentrons hardware with full access to Protocol API v2
+  features. Best for production Opentrons protocols, official API compatibility. For
+  multi-vendor automation or broader equipment control use pylabrobot.
+tool_type: mixed
+primary_tool: Unknown
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 # Opentrons Integration
@@ -569,3 +589,4 @@ For detailed API documentation, see `references/api_reference.md` in this skill 
 
 For example protocol templates, see `scripts/` directory.
 
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

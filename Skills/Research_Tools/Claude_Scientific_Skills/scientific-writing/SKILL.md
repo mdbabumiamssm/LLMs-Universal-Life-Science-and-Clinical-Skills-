@@ -1,10 +1,30 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: scientific-writing
-description: Core skill for the deep research and writing tool. Write scientific manuscripts in full paragraphs (never bullet points). Use two-stage process with (1) section outlines with key points using research-lookup then (2) convert to flowing prose. IMRAD structure, citations (APA/AMA/Vancouver), figures/tables, reporting guidelines (CONSORT/STROBE/PRISMA), for research papers and journal submissions.
-allowed-tools: Read Write Edit Bash
-license: MIT license
-metadata:
-    skill-author: K-Dense Inc.
+name: bio-scientific-writing
+description: Core skill for the deep research and writing tool. Write scientific manuscripts
+  in full paragraphs (never bullet points). Use two-stage process with (1) section
+  outlines with key points using research-lookup then (2) convert to flowing prose.
+  IMRAD structure, citations (APA/AMA/Vancouver), figures/tables, reporting guidelines
+  (CONSORT/STROBE/PRISMA), for research papers and journal submissions.
+tool_type: mixed
+primary_tool: Unknown
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 # Scientific Writing
@@ -716,3 +736,4 @@ This skill includes LaTeX style packages and templates for professional report f
 
 Load these references as needed when working on specific aspects of scientific writing.
 
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

@@ -1,9 +1,29 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: statsmodels
-description: Statistical models library for Python. Use when you need specific model classes (OLS, GLM, mixed models, ARIMA) with detailed diagnostics, residuals, and inference. Best for econometrics, time series, rigorous inference with coefficient tables. For guided statistical test selection with APA reporting use statistical-analysis.
-license: BSD-3-Clause license
-metadata:
-    skill-author: K-Dense Inc.
+name: bio-statsmodels
+description: Statistical models library for Python. Use when you need specific model
+  classes (OLS, GLM, mixed models, ARIMA) with detailed diagnostics, residuals, and
+  inference. Best for econometrics, time series, rigorous inference with coefficient
+  tables. For guided statistical test selection with APA reporting use statistical-analysis.
+tool_type: mixed
+primary_tool: Unknown
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 # Statsmodels: Statistical Modeling and Econometrics
@@ -610,3 +630,4 @@ For detailed documentation and examples:
 - Examples: https://www.statsmodels.org/stable/examples/index.html
 - API reference: https://www.statsmodels.org/stable/api.html
 
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

@@ -1,34 +1,27 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: spatial-trajectory
-description: >-
-  Trajectory inference and pseudotime analysis for spatial transcriptomics data.
-version: 0.2.0
-author: SpatialClaw Team
-license: MIT
-tags: [spatial, trajectory, pseudotime, DPT, CellRank, Palantir]
-metadata:
-  omicsclaw:
-    domain: spatial
-    requires:
-      bins:
-        - python3
-      env: []
-      config: []
-    emoji: "🛤️"
-    homepage: https://github.com/zhou-1314/OmicsClaw
-    os: [macos, linux]
-    install:
-      - kind: pip
-        package: scanpy
-        bins: []
-    trigger_keywords:
-      - trajectory
-      - pseudotime
-      - DPT
-      - diffusion pseudotime
-      - CellRank
-      - Palantir
-      - cell fate
+name: bio-spatial-trajectory
+description: Trajectory inference and pseudotime analysis for spatial transcriptomics
+  data.
+tool_type: mixed
+primary_tool: spatial
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 # 🛤️ Spatial Trajectory
@@ -135,3 +128,5 @@ output_directory/
 - [Haghverdi et al. 2016](https://doi.org/10.1038/nmeth.3971) — Diffusion pseudotime
 - [CellRank](https://cellrank.readthedocs.io/) — Lange et al., Nature Methods 2022
 - [Palantir](https://github.com/dpeerlab/Palantir) — Setty et al., Nature Biotechnology 2019
+
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

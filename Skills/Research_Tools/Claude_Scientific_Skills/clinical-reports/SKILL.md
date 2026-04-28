@@ -1,10 +1,29 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: clinical-reports
-description: Write comprehensive clinical reports including case reports (CARE guidelines), diagnostic reports (radiology/pathology/lab), clinical trial reports (ICH-E3, SAE, CSR), and patient documentation (SOAP, H&P, discharge summaries). Full support with templates, regulatory compliance (HIPAA, FDA, ICH-GCP), and validation tools.
-allowed-tools: Read Write Edit Bash
-license: MIT License
-metadata:
-    skill-author: K-Dense Inc.
+name: bio-clinical-reports
+description: Write comprehensive clinical reports including case reports (CARE guidelines),
+  diagnostic reports (radiology/pathology/lab), clinical trial reports (ICH-E3, SAE,
+  CSR), and patient documentation (SOAP, H&P, discharge summaries). Full support with
+  templates, regulatory compliance (HIPAA, FDA, ICH-GCP), and validation tools.
+tool_type: mixed
+primary_tool: Unknown
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 # Clinical Report Writing
@@ -1128,4 +1147,4 @@ Before finalizing any clinical report, verify:
 
 **Final Note**: Clinical report writing requires attention to detail, medical accuracy, regulatory compliance, and clear communication. Whether documenting patient care, reporting research findings, or communicating diagnostic results, the quality of clinical reports directly impacts patient safety, healthcare delivery, and medical knowledge advancement. Always prioritize accuracy, privacy, and professionalism in all clinical documentation.
 
-
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

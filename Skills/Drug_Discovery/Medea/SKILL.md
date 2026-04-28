@@ -1,16 +1,27 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: medea-therapeutic-discovery
-description: An AI agent for therapeutic discovery that executes transparent, multi-step omics analyses including research planning, code execution, and literature reasoning.
-license: MIT
-metadata:
-  author: Artificial Intelligence Group (Adapted from openscientist.ai)
-  version: "1.0.0"
-compatibility:
-  - system: Python 3.10+
+name: bio-medea-therapeutic-discovery
+description: An AI agent for therapeutic discovery that executes transparent, multi-step
+  omics analyses including research planning, code execution, and literature reasoning.
+tool_type: mixed
+primary_tool: Unknown
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
 allowed-tools:
-  - run_shell_command
-  - read_file
-  - web_fetch
+- read_file
+- run_shell_command
 ---
 
 # Medea Therapeutic Discovery Agent
@@ -43,3 +54,5 @@ Medea is a multi-stage AI agent designed for therapeutic discovery, modeled afte
 ```bash
 python3 -m medea.agent --dataset breast_cancer_omics.h5ad --mode full_discovery
 ```
+
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

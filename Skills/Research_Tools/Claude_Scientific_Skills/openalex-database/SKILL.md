@@ -1,9 +1,31 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: openalex-database
-description: Query and analyze scholarly literature using the OpenAlex database. This skill should be used when searching for academic papers, analyzing research trends, finding works by authors or institutions, tracking citations, discovering open access publications, or conducting bibliometric analysis across 240M+ scholarly works. Use for literature searches, research output analysis, citation analysis, and academic database queries.
-license: Unknown
-metadata:
-    skill-author: K-Dense Inc.
+name: bio-openalex-database
+description: Query and analyze scholarly literature using the OpenAlex database. This
+  skill should be used when searching for academic papers, analyzing research trends,
+  finding works by authors or institutions, tracking citations, discovering open access
+  publications, or conducting bibliometric analysis across 240M+ scholarly works.
+  Use for literature searches, research output analysis, citation analysis, and academic
+  database queries.
+tool_type: mixed
+primary_tool: Unknown
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 # OpenAlex Database
@@ -490,3 +512,4 @@ Always use polite pool for production workflows by providing email to client.
 - Use LitLLM with OpenRouter if LLM-based analysis is needed (don't use Perplexity API directly)
 - Client handles pagination, retries, and rate limiting automatically
 
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

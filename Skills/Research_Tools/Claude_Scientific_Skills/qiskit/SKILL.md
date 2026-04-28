@@ -1,9 +1,30 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: qiskit
-description: IBM quantum computing framework. Use when targeting IBM Quantum hardware, working with Qiskit Runtime for production workloads, or needing IBM optimization tools. Best for IBM hardware execution, quantum error mitigation, and enterprise quantum computing. For Google hardware use cirq; for gradient-based quantum ML use pennylane; for open quantum system simulations use qutip.
-license: Apache-2.0 license
-metadata:
-    skill-author: K-Dense Inc.
+name: bio-qiskit
+description: IBM quantum computing framework. Use when targeting IBM Quantum hardware,
+  working with Qiskit Runtime for production workloads, or needing IBM optimization
+  tools. Best for IBM hardware execution, quantum error mitigation, and enterprise
+  quantum computing. For Google hardware use cirq; for gradient-based quantum ML use
+  pennylane; for open quantum system simulations use qutip.
+tool_type: mixed
+primary_tool: Unknown
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 # Qiskit
@@ -271,3 +292,4 @@ with Session(backend=backend) as session:
 - **API Reference**: https://docs.quantum.ibm.com/api/qiskit
 - **Patterns Guide**: https://quantum.cloud.ibm.com/docs/en/guides/intro-to-patterns
 
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

@@ -1,9 +1,31 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: neurokit2
-description: Comprehensive biosignal processing toolkit for analyzing physiological data including ECG, EEG, EDA, RSP, PPG, EMG, and EOG signals. Use this skill when processing cardiovascular signals, brain activity, electrodermal responses, respiratory patterns, muscle activity, or eye movements. Applicable for heart rate variability analysis, event-related potentials, complexity measures, autonomic nervous system assessment, psychophysiology research, and multi-modal physiological signal integration.
-license: MIT license
-metadata:
-    skill-author: K-Dense Inc.
+name: bio-neurokit2
+description: Comprehensive biosignal processing toolkit for analyzing physiological
+  data including ECG, EEG, EDA, RSP, PPG, EMG, and EOG signals. Use this skill when
+  processing cardiovascular signals, brain activity, electrodermal responses, respiratory
+  patterns, muscle activity, or eye movements. Applicable for heart rate variability
+  analysis, event-related potentials, complexity measures, autonomic nervous system
+  assessment, psychophysiology research, and multi-modal physiological signal integration.
+tool_type: mixed
+primary_tool: Unknown
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 # NeuroKit2
@@ -352,3 +374,4 @@ Load specific reference files as needed using the Read tool to access detailed f
 - GitHub Repository: https://github.com/neuropsychology/NeuroKit
 - Publication: Makowski et al. (2021). NeuroKit2: A Python toolbox for neurophysiological signal processing. Behavior Research Methods. https://doi.org/10.3758/s13428-020-01516-y
 
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

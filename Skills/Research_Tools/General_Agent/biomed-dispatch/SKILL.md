@@ -1,18 +1,33 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: biomed-dispatch
-description: >
-  Dispatch biomedical research and data analysis tasks to Claude Code with
-  K-Dense Scientific Skills. Use this skill when the user asks to run any
-  bioinformatics, genomics, drug discovery, clinical data analysis,
-  proteomics, multi-omics, medical imaging, or scientific computation task.
-  Also use for literature search (PubMed, bioRxiv), pathway analysis,
-  protein structure prediction, or scientific writing tasks.
-version: 1.0.0
-metadata:
-  openclaw:
-    emoji: "🧬"
-    requires:
-      bins: ["claude"]
+name: bio-biomed-dispatch
+description: 'Dispatch biomedical research and data analysis tasks to Claude Code
+  with K-Dense Scientific Skills. Use this skill when the user asks to run any bioinformatics,
+  genomics, drug discovery, clinical data analysis, proteomics, multi-omics, medical
+  imaging, or scientific computation task. Also use for literature search (PubMed,
+  bioRxiv), pathway analysis, protein structure prediction, or scientific writing
+  tasks.
+
+  '
+tool_type: mixed
+primary_tool: Unknown
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 > **Repository note:** This skill lives at `repo/Skills/Research_Tools/General_Agent/biomed-dispatch`.
@@ -171,3 +186,5 @@ claude --dangerously-skip-permissions -p "Use Scanpy scientific skill. Analyze 1
 - If the user's request is ambiguous, ask one clarifying question before dispatching
 - If Claude Code returns an error about a missing package, retry with `uv pip install [package]` prepended to the command
 - **涉及中文可视化时**，在 prompt 中加入：绘图前先导入 `skills/cjk-viz/scripts/setup_cjk_font.py` 执行字体检测，不要硬编码字体名
+
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

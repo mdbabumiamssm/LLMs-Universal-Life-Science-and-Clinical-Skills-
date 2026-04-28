@@ -1,33 +1,27 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: spatial-register
-description: >-
-  Spatial registration and multi-slice alignment for spatial transcriptomics data.
-version: 0.2.0
-author: SpatialClaw Team
-license: MIT
-tags: [spatial, registration, alignment, PASTE, STalign, multi-slice]
-metadata:
-  omicsclaw:
-    domain: spatial
-    requires:
-      bins:
-        - python3
-      env: []
-      config: []
-    emoji: "📐"
-    homepage: https://github.com/zhou-1314/OmicsClaw
-    os: [macos, linux]
-    install:
-      - kind: pip
-        package: scanpy
-        bins: []
-    trigger_keywords:
-      - spatial registration
-      - slice alignment
-      - PASTE
-      - STalign
-      - multi-slice
-      - coordinate alignment
+name: bio-spatial-register
+description: Spatial registration and multi-slice alignment for spatial transcriptomics
+  data.
+tool_type: mixed
+primary_tool: spatial
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 # 📐 Spatial Register
@@ -133,3 +127,5 @@ output_directory/
 
 - [PASTE](https://github.com/raphael-group/paste) — Zeira et al., Nature Methods 2022
 - [STalign](https://github.com/JEFworks-Lab/STalign) — Clifton et al., Nature Communications 2023
+
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

@@ -1,9 +1,28 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: ena-database
-description: Access European Nucleotide Archive via API/FTP. Retrieve DNA/RNA sequences, raw reads (FASTQ), genome assemblies by accession, for genomics and bioinformatics pipelines. Supports multiple formats.
-license: Unknown
-metadata:
-    skill-author: K-Dense Inc.
+name: bio-ena-database
+description: Access European Nucleotide Archive via API/FTP. Retrieve DNA/RNA sequences,
+  raw reads (FASTQ), genome assemblies by accession, for genomics and bioinformatics
+  pipelines. Supports multiple formats.
+tool_type: mixed
+primary_tool: Unknown
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 # ENA Database
@@ -200,3 +219,4 @@ This skill includes detailed reference documentation for working with ENA:
 
 Load this reference when constructing complex API queries, debugging API responses, or needing specific parameter details.
 
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

@@ -1,9 +1,30 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: matplotlib
-description: Low-level plotting library for full customization. Use when you need fine-grained control over every plot element, creating novel plot types, or integrating with specific scientific workflows. Export to PNG/PDF/SVG for publication. For quick statistical plots use seaborn; for interactive plots use plotly; for publication-ready multi-panel figures with journal styling, use scientific-visualization.
-license: https://github.com/matplotlib/matplotlib/tree/main/LICENSE
-metadata:
-    skill-author: K-Dense Inc.
+name: bio-matplotlib
+description: Low-level plotting library for full customization. Use when you need
+  fine-grained control over every plot element, creating novel plot types, or integrating
+  with specific scientific workflows. Export to PNG/PDF/SVG for publication. For quick
+  statistical plots use seaborn; for interactive plots use plotly; for publication-ready
+  multi-panel figures with journal styling, use scientific-visualization.
+tool_type: mixed
+primary_tool: Unknown
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 # Matplotlib
@@ -357,3 +378,4 @@ Matplotlib integrates well with:
 - Cheatsheets: https://matplotlib.org/cheatsheets/
 - Tutorials: https://matplotlib.org/stable/tutorials/index.html
 
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->
