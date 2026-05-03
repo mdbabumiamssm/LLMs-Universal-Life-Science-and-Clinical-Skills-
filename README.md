@@ -202,7 +202,7 @@ This project is licensed under the MIT License for open-source components, but t
 
 <!-- BEGIN: PIPELINE_INDEX -->
 
-_Auto-generated index. 1015 skills across 53 categories. Last refresh: 2026-05-02T22:52:35.987602+00:00._
+_Auto-generated index. 1019 skills across 54 categories. Last refresh: 2026-05-03T04:02:55.969672+00:00._
 
 ### 3D_Genomics (8)
 
@@ -257,7 +257,7 @@ _Auto-generated index. 1015 skills across 53 categories. Last refresh: 2026-05-0
 - **regulatory-drafting** — Regulatory Drafting agent for healthcare workflows.
 - **research-literature** — Research Literature agent for healthcare workflows.
 
-### Clinical (27)
+### Clinical (28)
 
 - **ai-safety-auditor** — Validates clinical AI outputs for safety, bias, and hallucination risks before delivery to end-users or clinicians.
 - **autonomous-oncology-agent** — Precision Oncology
@@ -281,6 +281,7 @@ _Auto-generated index. 1015 skills across 53 categories. Last refresh: 2026-05-0
 - **multimodal-radpath-fusion-agent** — AI-powered multimodal diagnostic fusion integrating radiology imaging (CT/MRI/PET), digital pathology (WSI), genomics, and clinical data ...
 - **precision-oncology-agent** — Fuse genomic variants, pathology findings, and clinical context to draft evidence-linked therapy options for tumor board review.
 - **prior-auth-coworker** — Prior Auth Review
+- **promise-ad-progression-survival-agent** — Progression-aware multi-horizon survival agent that estimates calibrated 1/2/3/5-year risks of CN→MCI and MCI→AD conversion from irregula...
 - **radgpt-radiology-reporter** — Radiology Reporter
 - **safety-monitor** — Safety Monitor
 - **trial-eligibility-agent** — Parse trial protocols and patient data to produce criterion-level MET/NOT/UNKNOWN determinations with evidence and gaps for clinical tria...
@@ -310,7 +311,7 @@ _Auto-generated index. 1015 skills across 53 categories. Last refresh: 2026-05-0
 - **bio-data-visualization-upset-plots** — Create UpSet plots to visualize set intersections as an alternative to Venn diagrams using UpSetR or upsetplot. Use when comparing overla...
 - **bio-data-visualization-volcano-customization** — Create publication-ready volcano plots with custom thresholds, gene labels, and highlighting using ggplot2, EnhancedVolcano, or matplotli...
 
-### Drug_Discovery (20)
+### Drug_Discovery (21)
 
 - **agentd-drug-discovery** — Use the AgentD workflow to mine evidence, design molecules, and rank candidates with SAR plus ADMET annotations for early drug discovery ...
 - **antibody-design-agent** — An advanced agent for de novo antibody design and optimization using state-of-the-art protein language models (MAGE, RFdiffusion).
@@ -325,6 +326,7 @@ _Auto-generated index. 1015 skills across 53 categories. Last refresh: 2026-05-0
 - **chematagent-drug-discovery** — Chemical Lab Agent
 - **chemcrow-drug-discovery** — An LLM chemistry agent with expert-designed tools for organic synthesis, drug discovery, and materials design.
 - **chemical-property-lookup** — Compute RDKit-driven molecular properties (MW, logP, TPSA, QED, Lipinski) for a SMILES string to support downstream drug discovery tools.
+- **deepsems-ocean-biosynthetic-llm-agent** — Agentic workflow that applies a DeepSeMS-style large language model to mine biosynthetic gene clusters and secondary metabolite potential...
 - **mage-antibody-generator** — Ab seq forge
 - **molecular-glue-discovery-agent** — AI-powered molecular glue discovery for targeted protein degradation, enabling neo-substrate recruitment and undruggable target degradati...
 - **molecule-evolution-agent** — Evolve Molecules
@@ -435,11 +437,15 @@ _Auto-generated index. 1015 skills across 53 categories. Last refresh: 2026-05-0
 - **spreadsheet** — Use when tasks involve creating, editing, analyzing, or formatting spreadsheets (`.xlsx`, `.csv`, `.tsv`) using Python (`openpyxl`, `pand...
 - _... and 11 more in `Skills/External_Collections/`_
 
+### Foundation_Models (1)
+
+- **stack-single-cell-icl-agent** — Apply Arc Institute Stack, a single-cell foundation model that performs in-context learning at inference time without per-task fine-tuning.
+
 ### Gene_Therapy (1)
 
 - **aav-vector-design-agent** — AI-powered adeno-associated virus (AAV) vector design for gene therapy including capsid engineering, promoter selection, and tropism opti...
 
-### Genomics (148)
+### Genomics (149)
 
 - **bio-basecalling** — Convert raw Nanopore signal data (FAST5/POD5) to nucleotide sequences using Dorado basecaller. Covers model selection, GPU acceleration, ...
 - **bio-bedgraph-handling** — Create, manipulate, and convert bedGraph files for genome browser visualization. Covers bedGraph format, conversion to/from bigWig, norma...
@@ -501,7 +507,7 @@ _Auto-generated index. 1015 skills across 53 categories. Last refresh: 2026-05-0
 - **bio-metagenomics-strain-tracking** — Track bacterial strains using MASH, sourmash, fastANI, and inStrain. Compare genomes, detect contamination, and monitor strain-level vari...
 - **bio-metagenomics-visualization** — Visualize metagenomic profiles using R (phyloseq, microbiome) and Python (matplotlib, seaborn). Create stacked bar plots, heatmaps, PCA p...
 - **bio-phasing-imputation-genotype-imputation** — Impute missing genotypes using reference panels with Beagle or Minimac4. Use when increasing variant density for GWAS, harmonizing data a...
-- _... and 88 more in `Skills/Genomics/`_
+- _... and 89 more in `Skills/Genomics/`_
 
 ### Hematology (15)
 

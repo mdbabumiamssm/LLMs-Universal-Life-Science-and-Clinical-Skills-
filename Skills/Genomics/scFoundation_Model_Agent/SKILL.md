@@ -129,6 +129,21 @@ python3 foundation_predict.py \
     --output integrated.h5ad
 ```
 
+### Phenotype-Associated Subpopulation Identification
+Transfer-learn a single-cell foundation model on labeled reference cells, project phenotype labels (disease status, treatment response, etc.) onto query embeddings, then run statistical ensemble learning over multiple resamples/models to flag robust phenotype-linked subpopulations. Pattern follows Zhao et al. (*BMC Biol*, 2026, PMID 42050525).
+```bash
+python3 foundation_predict.py \
+    --input query_cells.h5ad \
+    --model scfoundation \
+    --task phenotype_subpopulation \
+    --reference labeled_reference.h5ad \
+    --phenotype_key disease_status \
+    --transfer_mode finetune \
+    --ensemble_runs 25 \
+    --ensemble_method bootstrap_vote \
+    --output phenotype_subpopulations.h5ad
+```
+
 ## Output Formats
 
 | Task | Output | Format |

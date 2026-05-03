@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-05-02T22:52:35.987602+00:00",
+  "generated_at": "2026-05-03T04:02:55.969672+00:00",
   "generator": "ARTIFICIALINTELLIGENCEGROUP-pipeline v1.0",
-  "total_skills": 1015,
+  "total_skills": 1019,
   "total_errors": 16,
   "skills": [
     {
@@ -1488,6 +1488,29 @@
       ]
     },
     {
+      "name": "promise-ad-progression-survival-agent",
+      "description": "Progression-aware multi-horizon survival agent that estimates calibrated 1/2/3/5-year risks of CN\u2192MCI and MCI\u2192AD conversion from irregular ADNI/TADPOLE tabular visit histories.",
+      "tool_type": "",
+      "primary_tool": "",
+      "measurable_outcome": "Execute skill workflow successfully with valid output within 15 minutes.",
+      "allowed-tools": [
+        "read_file",
+        "run_shell_command",
+        "web_fetch"
+      ],
+      "file_path": "Skills/Clinical/PromiseAdProgressionSurvivalAgent_Agent/SKILL.md",
+      "relative_path": "Clinical/PromiseAdProgressionSurvivalAgent_Agent/SKILL.md",
+      "last_modified": "2026-05-03T03:59:14.175799+00:00",
+      "body_length": 5980,
+      "capabilities": [
+        "Overview",
+        "When to Use This Skill",
+        "Core Capabilities",
+        "Inputs / Outputs",
+        "References"
+      ]
+    },
+    {
       "name": "radgpt-radiology-reporter",
       "description": "Radiology Reporter",
       "tool_type": "",
@@ -2358,6 +2381,29 @@
       ]
     },
     {
+      "name": "deepsems-ocean-biosynthetic-llm-agent",
+      "description": "Agentic workflow that applies a DeepSeMS-style large language model to mine biosynthetic gene clusters and secondary metabolite potential from global ocean microbiome metagenomes.",
+      "tool_type": "",
+      "primary_tool": "",
+      "measurable_outcome": "Execute skill workflow successfully with valid output within 15 minutes.",
+      "allowed-tools": [
+        "read_file",
+        "run_shell_command",
+        "web_fetch"
+      ],
+      "file_path": "Skills/Drug_Discovery/DeepsemsOceanBiosyntheticLlmAgent_Agent/SKILL.md",
+      "relative_path": "Drug_Discovery/DeepsemsOceanBiosyntheticLlmAgent_Agent/SKILL.md",
+      "last_modified": "2026-05-03T03:58:01.240175+00:00",
+      "body_length": 4613,
+      "capabilities": [
+        "Overview",
+        "When to Use This Skill",
+        "Core Capabilities",
+        "Inputs / Outputs",
+        "References"
+      ]
+    },
+    {
       "name": "bio-medea-therapeutic-discovery",
       "description": "An AI agent for therapeutic discovery that executes transparent, multi-step",
       "tool_type": "mixed",
@@ -2540,7 +2586,7 @@
       ],
       "file_path": "Skills/Epigenomics/ChromfoundScatacFoundationModel_Agent/SKILL.md",
       "relative_path": "Epigenomics/ChromfoundScatacFoundationModel_Agent/SKILL.md",
-      "last_modified": "2026-05-02T22:48:41.560789+00:00",
+      "last_modified": "2026-05-02T22:52:38.506779+00:00",
       "body_length": 5449,
       "capabilities": [
         "Overview",
@@ -5612,6 +5658,31 @@
       ]
     },
     {
+      "name": "stack-single-cell-icl-agent",
+      "description": "Apply Arc Institute Stack, a single-cell foundation model that performs in-context learning at inference time without per-task fine-tuning.",
+      "tool_type": "",
+      "primary_tool": "",
+      "measurable_outcome": "Execute skill workflow successfully with valid output within 15 minutes.",
+      "allowed-tools": [
+        "read_file",
+        "run_shell_command",
+        "web_fetch"
+      ],
+      "file_path": "Skills/Foundation_Models/StackSingleCellIclAgent_Agent/SKILL.md",
+      "relative_path": "Foundation_Models/StackSingleCellIclAgent_Agent/SKILL.md",
+      "last_modified": "2026-05-03T03:56:55.350515+00:00",
+      "body_length": 4136,
+      "capabilities": [
+        "Overview",
+        "When to Use This Skill",
+        "Core Capabilities",
+        "Inputs / Outputs",
+        "Inputs",
+        "Outputs",
+        "References"
+      ]
+    },
+    {
       "name": "aav-vector-design-agent",
       "description": "AI-powered adeno-associated virus (AAV) vector design for gene therapy including capsid engineering, promoter selection, and tropism optimization.",
       "tool_type": "",
@@ -6227,6 +6298,29 @@
         "Special Considerations",
         "Applications",
         "Author"
+      ]
+    },
+    {
+      "name": "scprint2-foundation-model-agent",
+      "description": "Agentic skill for using scPRINT-2, the next-generation single-cell foundation model from the Cantini Lab, for cell-type annotation, embedding, and downstream single-cell analysis.",
+      "tool_type": "",
+      "primary_tool": "",
+      "measurable_outcome": "Execute skill workflow successfully with valid output within 15 minutes.",
+      "allowed-tools": [
+        "read_file",
+        "run_shell_command",
+        "web_fetch"
+      ],
+      "file_path": "Skills/Genomics/Scprint2FoundationModelAgent_Agent/SKILL.md",
+      "relative_path": "Genomics/Scprint2FoundationModelAgent_Agent/SKILL.md",
+      "last_modified": "2026-05-03T03:55:55.912823+00:00",
+      "body_length": 3571,
+      "capabilities": [
+        "Overview",
+        "When to Use This Skill",
+        "Core Capabilities",
+        "Inputs / Outputs",
+        "References"
       ]
     },
     {
@@ -7730,7 +7824,7 @@
       ],
       "file_path": "Skills/Genomics/Spatial_Transcriptomics/SKILL.md",
       "relative_path": "Genomics/Spatial_Transcriptomics/SKILL.md",
-      "last_modified": "2026-05-02T22:52:14.850880+00:00",
+      "last_modified": "2026-05-02T22:52:38.506779+00:00",
       "body_length": 2156,
       "capabilities": [
         "Overview",
@@ -10417,8 +10511,8 @@
       ],
       "file_path": "Skills/Genomics/scFoundation_Model_Agent/SKILL.md",
       "relative_path": "Genomics/scFoundation_Model_Agent/SKILL.md",
-      "last_modified": "2026-05-02T22:51:57.381955+00:00",
-      "body_length": 9099,
+      "last_modified": "2026-05-03T04:02:25.540818+00:00",
+      "body_length": 9855,
       "capabilities": [
         "When to Use This Skill",
         "Core Capabilities",
@@ -10429,6 +10523,7 @@
         "Cell Type Annotation",
         "Gene Network Inference",
         "Batch Integration",
+        "Phenotype-Associated Subpopulation Identification",
         "Output Formats",
         "Performance Benchmarks",
         "AI/ML Architecture",
