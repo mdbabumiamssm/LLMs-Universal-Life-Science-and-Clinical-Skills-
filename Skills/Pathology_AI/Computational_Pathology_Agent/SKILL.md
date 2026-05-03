@@ -13,7 +13,7 @@
 
 ---
 name: computational-pathology-agent
-description: Analyze Whole Slide Images (WSI) for digital pathology, including tissue segmentation and feature extraction.
+description: Analyze Whole Slide Images (WSI) for digital pathology, including tissue segmentation, feature extraction, and biomarker model planning.
 keywords:
   - wsi
   - digital-pathology
@@ -48,6 +48,7 @@ This agent specializes in the analysis of Whole Slide Images (WSIs) for digital 
 3.  **Patch Extraction:** Automated generation of patches for ML training/inference.
 4.  **Nuclei Segmentation:** Integration with StarDist/HoverNet for cellular analysis.
 5.  **Feature Extraction:** Generating feature vectors for slide-level clustering.
+6.  **dMMR Biomarker Modeling:** Plan colorectal cancer histopathology workflows that explicitly evaluate non-tumor and low-magnification regions, region-level ablations, slide sampling strategy, and external validation for dMMR prediction models.
 
 ## Usage
 ```python
@@ -68,5 +69,8 @@ path_agent.extract_patches(patch_size=256, level=1)
 *   opencv-python
 *   pytorch
 *   scikit-image
+
+## References
+*   PubMed PMID 41875848: dMMR prediction from colorectal cancer histopathology: Leveraging non-tumor and low-magnification regions. https://pubmed.ncbi.nlm.nih.gov/41875848/
 
 <!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

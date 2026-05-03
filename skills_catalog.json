@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-05-03T04:02:55.969672+00:00",
+  "generated_at": "2026-05-03T15:04:35.922125+00:00",
   "generator": "ARTIFICIALINTELLIGENCEGROUP-pipeline v1.0",
-  "total_skills": 1019,
+  "total_skills": 1020,
   "total_errors": 16,
   "skills": [
     {
@@ -1500,7 +1500,7 @@
       ],
       "file_path": "Skills/Clinical/PromiseAdProgressionSurvivalAgent_Agent/SKILL.md",
       "relative_path": "Clinical/PromiseAdProgressionSurvivalAgent_Agent/SKILL.md",
-      "last_modified": "2026-05-03T03:59:14.175799+00:00",
+      "last_modified": "2026-05-03T04:02:58.314651+00:00",
       "body_length": 5980,
       "capabilities": [
         "Overview",
@@ -2393,7 +2393,7 @@
       ],
       "file_path": "Skills/Drug_Discovery/DeepsemsOceanBiosyntheticLlmAgent_Agent/SKILL.md",
       "relative_path": "Drug_Discovery/DeepsemsOceanBiosyntheticLlmAgent_Agent/SKILL.md",
-      "last_modified": "2026-05-03T03:58:01.240175+00:00",
+      "last_modified": "2026-05-03T04:02:58.315651+00:00",
       "body_length": 4613,
       "capabilities": [
         "Overview",
@@ -5670,7 +5670,7 @@
       ],
       "file_path": "Skills/Foundation_Models/StackSingleCellIclAgent_Agent/SKILL.md",
       "relative_path": "Foundation_Models/StackSingleCellIclAgent_Agent/SKILL.md",
-      "last_modified": "2026-05-03T03:56:55.350515+00:00",
+      "last_modified": "2026-05-03T04:02:58.315651+00:00",
       "body_length": 4136,
       "capabilities": [
         "Overview",
@@ -6313,7 +6313,7 @@
       ],
       "file_path": "Skills/Genomics/Scprint2FoundationModelAgent_Agent/SKILL.md",
       "relative_path": "Genomics/Scprint2FoundationModelAgent_Agent/SKILL.md",
-      "last_modified": "2026-05-03T03:55:55.912823+00:00",
+      "last_modified": "2026-05-03T04:02:58.315651+00:00",
       "body_length": 3571,
       "capabilities": [
         "Overview",
@@ -7824,8 +7824,8 @@
       ],
       "file_path": "Skills/Genomics/Spatial_Transcriptomics/SKILL.md",
       "relative_path": "Genomics/Spatial_Transcriptomics/SKILL.md",
-      "last_modified": "2026-05-02T22:52:38.506779+00:00",
-      "body_length": 2156,
+      "last_modified": "2026-05-03T15:00:52.934072+00:00",
+      "body_length": 2186,
       "capabilities": [
         "Overview",
         "Capabilities",
@@ -10511,8 +10511,8 @@
       ],
       "file_path": "Skills/Genomics/scFoundation_Model_Agent/SKILL.md",
       "relative_path": "Genomics/scFoundation_Model_Agent/SKILL.md",
-      "last_modified": "2026-05-03T04:02:25.540818+00:00",
-      "body_length": 9855,
+      "last_modified": "2026-05-03T15:00:11.538234+00:00",
+      "body_length": 10186,
       "capabilities": [
         "When to Use This Skill",
         "Core Capabilities",
@@ -12597,6 +12597,29 @@
       ]
     },
     {
+      "name": "scientific-spectral-vqa-benchmark",
+      "description": "Evaluate MLLMs on scientific spectral images using SpecVQA-style figure extraction, curve-aware sampling, QA design, and scoring workflows.",
+      "tool_type": "",
+      "primary_tool": "",
+      "measurable_outcome": "Execute skill workflow successfully with valid output within 15 minutes.",
+      "allowed-tools": [
+        "read_file",
+        "run_shell_command",
+        "web_fetch"
+      ],
+      "file_path": "Skills/LLM_Research/ScientificSpectralVqaBenchmark_Agent/SKILL.md",
+      "relative_path": "LLM_Research/ScientificSpectralVqaBenchmark_Agent/SKILL.md",
+      "last_modified": "2026-05-03T14:55:32.577239+00:00",
+      "body_length": 4298,
+      "capabilities": [
+        "Overview",
+        "When to Use This Skill",
+        "Core Capabilities",
+        "Inputs / Outputs",
+        "References"
+      ]
+    },
+    {
       "name": "end-to-end-agentic-ai-lab",
       "description": "Deploy MDalamin5's End-to-End Agentic AI Automation Lab to prototype lab automation swarms that span LangChain/LangGraph agents, MCP servers, and n8n-run experiment control.",
       "tool_type": "",
@@ -12917,9 +12940,10 @@
       ],
       "file_path": "Skills/Machine_Learning/machine-learning/survival-analysis/SKILL.md",
       "relative_path": "Machine_Learning/machine-learning/survival-analysis/SKILL.md",
-      "last_modified": "2026-02-26T15:10:19.335819+00:00",
-      "body_length": 4296,
+      "last_modified": "2026-05-03T14:52:39.953860+00:00",
+      "body_length": 4915,
       "capabilities": [
+        "Core Capabilities",
         "Kaplan-Meier Curves",
         "Compare Groups with Log-Rank Test",
         "Cox Proportional Hazards Regression",
@@ -12928,7 +12952,8 @@
         "Check Proportional Hazards Assumption",
         "Survival at Specific Time",
         "Feature Selection for Survival",
-        "Related Skills"
+        "Related Skills",
+        "References"
       ]
     },
     {
@@ -14738,7 +14763,7 @@
     },
     {
       "name": "computational-pathology-agent",
-      "description": "Analyze Whole Slide Images (WSI) for digital pathology, including tissue segmentation and feature extraction.",
+      "description": "Analyze Whole Slide Images (WSI) for digital pathology, including tissue segmentation, feature extraction, and biomarker model planning.",
       "tool_type": "",
       "primary_tool": "",
       "measurable_outcome": "Preprocess and extract tissue patches from a 1GB+ .svs slide within 15 minutes for downstream ML tasks.",
@@ -14749,13 +14774,14 @@
       ],
       "file_path": "Skills/Pathology_AI/Computational_Pathology_Agent/SKILL.md",
       "relative_path": "Pathology_AI/Computational_Pathology_Agent/SKILL.md",
-      "last_modified": "2026-02-26T15:10:19.338819+00:00",
-      "body_length": 1642,
+      "last_modified": "2026-05-03T15:01:36.399899+00:00",
+      "body_length": 2081,
       "capabilities": [
         "Overview",
         "Capabilities",
         "Usage",
-        "Requirements"
+        "Requirements",
+        "References"
       ]
     },
     {

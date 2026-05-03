@@ -202,7 +202,7 @@ This project is licensed under the MIT License for open-source components, but t
 
 <!-- BEGIN: PIPELINE_INDEX -->
 
-_Auto-generated index. 1019 skills across 54 categories. Last refresh: 2026-05-03T04:02:55.969672+00:00._
+_Auto-generated index. 1020 skills across 54 categories. Last refresh: 2026-05-03T15:04:35.922125+00:00._
 
 ### 3D_Genomics (8)
 
@@ -589,9 +589,10 @@ _Auto-generated index. 1019 skills across 54 categories. Last refresh: 2026-05-0
 - **Upstream Regulator Analysis** — 
 - **Weighted Gene Co-expression Network Analysis (WGCNA)** — 
 
-### LLM_Research (1)
+### LLM_Research (2)
 
 - **bio-literature** — Parse scholarly articles (PDF, DOI, URL) to extract metadata, GEO accessions,
+- **scientific-spectral-vqa-benchmark** — Evaluate MLLMs on scientific spectral images using SpecVQA-style figure extraction, curve-aware sampling, QA design, and scoring workflows.
 
 ### Lab_Automation (2)
 
@@ -700,7 +701,7 @@ _Auto-generated index. 1019 skills across 54 categories. Last refresh: 2026-05-0
 
 ### Pathology_AI (1)
 
-- **computational-pathology-agent** — Analyze Whole Slide Images (WSI) for digital pathology, including tissue segmentation and feature extraction.
+- **computational-pathology-agent** — Analyze Whole Slide Images (WSI) for digital pathology, including tissue segmentation, feature extraction, and biomarker model planning.
 
 ### Pharma (2)
 

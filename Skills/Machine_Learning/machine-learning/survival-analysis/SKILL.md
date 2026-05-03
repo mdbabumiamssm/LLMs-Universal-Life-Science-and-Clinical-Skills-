@@ -24,6 +24,10 @@ allowed-tools:
 
 # Survival Prediction with lifelines
 
+## Core Capabilities
+
+- Use PROMISE-AD as a reference design for leakage-safe, multi-horizon survival modeling from irregular longitudinal clinical histories: tokenize pre-index visits with standardized measurements, missingness masks, longitudinal changes, time-normalized slopes, visit timing, and non-diagnostic categorical attributes; estimate latent discrete-time mixture hazards with censoring-aware likelihoods and horizon-specific risk losses; calibrate 1-, 2-, 3-, and 5-year risks on validation data; and report dynamic horizon risks as histories update.
+
 ## Kaplan-Meier Curves
 
 ```python
@@ -171,6 +175,10 @@ sig_genes = results_df[results_df['p'] < 0.05].sort_values('p')
 - clinical-databases/variant-prioritization - Clinical variant interpretation
 - differential-expression/de-results - Find DE genes for survival model
 - machine-learning/biomarker-discovery - Select predictive features
+
+## References
+
+- http://arxiv.org/abs/2604.28055v1
 
 
 <!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

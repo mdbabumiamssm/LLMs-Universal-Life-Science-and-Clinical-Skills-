@@ -48,7 +48,7 @@ This skill provides automated analysis capabilities for Spatial Transcriptomics 
 3.  **Spatial Variable Features:** Identification of spatially variable genes (SVGs) using Moran's I and Geary's C.
 4.  **Deconvolution:** Interface for cell type deconvolution (mapping scRNA-seq to spatial).
 5.  **Visualization:** Interactive spatial plots overlaying gene expression on tissue images.
-6.  **Histology→ST Imputation (generative):** Reference DiffBulk (Zhang et al., IEEE TMI, Apr 2026), a diffusion-based training approach that enhances spatial transcriptomic prediction from H&E histology — usable to complement Visium/Xenium analyses when paired ST is sparse or missing.
+6.  **DiffBulk prediction pattern:** Use diffusion-based training for bulk-to-spatial or spatial expression prediction, complementing Visium/Xenium analyses when paired ST is sparse or missing; validate predictions against held-out tissue regions and guard against histology-expression leakage in train/test splits.
 
 ## Usage
 ```python
