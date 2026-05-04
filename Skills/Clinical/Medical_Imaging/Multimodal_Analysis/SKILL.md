@@ -36,7 +36,7 @@ The **Multimodal Medical Imaging Analysis Skill** leverages state-of-the-art Vis
 1.  **Anomaly Detection**: Identify potential pathologies in X-rays, CTs, etc.
 2.  **Report Generation**: Draft radiology reports in standard formats.
 3.  **VQA (Visual Question Answering)**: Answer specific questions about an image (e.g., "Is there a fracture in the left femur?").
-4.  **Dermatology Differential Caution**: For clinical or dermoscopic images involving suspected basal cell carcinoma and common mimickers, frame outputs as differential considerations only; note that multimodal LLMs such as ChatGPT, Gemini, and Claude have been compared for this task, dermoscopy-specific limitations remain clinically relevant, and dermatologist review is mandatory before any clinical use.
+4.  **Dermatology/Dermoscopy BCC Caution**: For clinical or dermoscopic images involving suspected basal cell carcinoma and common mimickers, frame outputs as differential considerations only. Require image-quality checks before interpretation (focus, lighting, lesion framing, scale/context, and dermoscopic artifact visibility), explicitly list the mimic classes supplied in the clinical prompt or dataset, ask for a differential diagnosis rather than a single label, and require dermatologist confirmation before any clinical decision or patient-facing guidance. Note that multimodal LLMs such as ChatGPT, Gemini, and Claude have been compared for this task, but the finding does not establish standalone diagnostic use.
 
 ## Workflow
 

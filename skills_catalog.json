@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-04T16:53:28.239838+00:00",
+  "generated_at": "2026-05-04T17:07:36.225655+00:00",
   "generator": "ARTIFICIALINTELLIGENCEGROUP-pipeline v1.0",
   "total_skills": 1021,
   "total_errors": 16,
@@ -404,11 +404,13 @@
       ],
       "file_path": "Skills/AI_Providers/Frontier_OSS_Models_2026/SKILL.md",
       "relative_path": "AI_Providers/Frontier_OSS_Models_2026/SKILL.md",
-      "last_modified": "2026-02-26T15:10:19.025820+00:00",
-      "body_length": 973,
+      "last_modified": "2026-05-04T17:03:36.720090+00:00",
+      "body_length": 1385,
       "capabilities": [
+        "Core Capabilities",
         "Workflow",
-        "Output Requirements"
+        "Output Requirements",
+        "References"
       ]
     },
     {
@@ -1235,8 +1237,8 @@
       ],
       "file_path": "Skills/Clinical/Clinical_NLP/SKILL.md",
       "relative_path": "Clinical/Clinical_NLP/SKILL.md",
-      "last_modified": "2026-05-04T16:48:58.762097+00:00",
-      "body_length": 1974,
+      "last_modified": "2026-05-04T17:04:59.399751+00:00",
+      "body_length": 1911,
       "capabilities": [
         "When to Use This Skill",
         "Core Capabilities",
@@ -1257,8 +1259,8 @@
       ],
       "file_path": "Skills/Clinical/Clinical_Note_Summarization/SKILL.md",
       "relative_path": "Clinical/Clinical_Note_Summarization/SKILL.md",
-      "last_modified": "2026-05-04T16:43:10.210285+00:00",
-      "body_length": 2203,
+      "last_modified": "2026-05-04T17:06:52.299295+00:00",
+      "body_length": 2403,
       "capabilities": [
         "At-a-Glance",
         "Inputs",
@@ -1380,8 +1382,8 @@
       ],
       "file_path": "Skills/Clinical/Medical_Imaging/Multimodal_Analysis/SKILL.md",
       "relative_path": "Clinical/Medical_Imaging/Multimodal_Analysis/SKILL.md",
-      "last_modified": "2026-05-04T16:52:16.033221+00:00",
-      "body_length": 2214,
+      "last_modified": "2026-05-04T17:07:33.936129+00:00",
+      "body_length": 2528,
       "capabilities": [
         "When to Use This Skill",
         "Core Capabilities",
@@ -1547,8 +1549,8 @@
       ],
       "file_path": "Skills/Clinical/Safety/AI_Safety_Auditor/SKILL.md",
       "relative_path": "Clinical/Safety/AI_Safety_Auditor/SKILL.md",
-      "last_modified": "2026-05-04T16:43:10.210285+00:00",
-      "body_length": 2349,
+      "last_modified": "2026-05-04T17:07:12.543214+00:00",
+      "body_length": 3010,
       "capabilities": [
         "When to Use This Skill",
         "Core Capabilities",
@@ -8252,7 +8254,7 @@
       ],
       "file_path": "Skills/Genomics/Variant_Interpretation/bioSkills/clinical-interpretation/SKILL.md",
       "relative_path": "Genomics/Variant_Interpretation/bioSkills/clinical-interpretation/SKILL.md",
-      "last_modified": "2026-05-04T16:52:42.484082+00:00",
+      "last_modified": "2026-05-04T16:53:29.587838+00:00",
       "body_length": 9501,
       "capabilities": [
         "Core Capabilities",
@@ -12587,10 +12589,11 @@
       ],
       "file_path": "Skills/LLM_Research/SKILL.md",
       "relative_path": "LLM_Research/SKILL.md",
-      "last_modified": "2026-04-28T19:45:57.625226+00:00",
-      "body_length": 2746,
+      "last_modified": "2026-05-04T17:04:44.877810+00:00",
+      "body_length": 3099,
       "capabilities": [
         "Purpose",
+        "Core Capabilities",
         "Methodology",
         "1. Input Processing",
         "2. Metadata Extraction",
@@ -12599,7 +12602,8 @@
         "Output",
         "Usage",
         "Integration",
-        "Dependencies"
+        "Dependencies",
+        "References"
       ]
     },
     {
@@ -12969,8 +12973,8 @@
       ],
       "file_path": "Skills/Machine_Learning/machine-learning/survival-analysis/SKILL.md",
       "relative_path": "Machine_Learning/machine-learning/survival-analysis/SKILL.md",
-      "last_modified": "2026-05-04T16:49:20.861022+00:00",
-      "body_length": 5492,
+      "last_modified": "2026-05-04T17:05:24.679648+00:00",
+      "body_length": 5516,
       "capabilities": [
         "Core Capabilities",
         "Kaplan-Meier Curves",

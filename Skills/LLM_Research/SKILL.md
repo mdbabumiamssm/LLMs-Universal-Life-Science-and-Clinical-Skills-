@@ -30,6 +30,10 @@ allowed-tools:
 
 Parse scientific literature (PDFs, URLs, DOIs) to extract GEO accessions and metadata, then download datasets for downstream omics analysis.
 
+## Core Capabilities
+
+- **Medical Q&A dataset evaluation**: Build fine-grained review checklists for medical language model benchmarking that cover answer labeling granularity, trustworthiness dimensions, omission and harm scoring, domain-specific answer rubrics, and dataset documentation.
+
 ## Methodology
 
 ### 1. Input Processing
@@ -104,5 +108,9 @@ After extraction, the bot automatically suggests appropriate analysis skills bas
 - requests: HTTP requests
 - beautifulsoup4: HTML parsing
 - GEOparse: GEO data access (optional, fallback to direct API)
+
+## References
+
+- https://pubmed.ncbi.nlm.nih.gov/42039929/
 
 <!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

@@ -22,6 +22,10 @@ allowed-tools:
 
 # Frontier OSS Models (2026)
 
+## Core Capabilities
+
+- Clinical deployment caution for distilled DeepSeek-R1 and open-source medical diagnosis models: before on-premises clinical use, require local evaluation, task-specific benchmarking, calibration review, hallucination and safety checks, PHI handling controls, and comparison of distilled variants against larger hosted models.
+
 ## Workflow
 
 1. Identify target deployment mode: hosted API, self-hosted, or hybrid.
@@ -35,6 +39,10 @@ allowed-tools:
 - State selected model family and deployment mode.
 - List one licensing/compliance check.
 - List one rollback condition tied to quality or cost.
+
+## References
+
+- https://pubmed.ncbi.nlm.nih.gov/42062641/
 
 
 <!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->
