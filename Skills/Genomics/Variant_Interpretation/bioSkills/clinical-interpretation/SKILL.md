@@ -26,6 +26,10 @@ allowed-tools:
 
 Prioritize and interpret variants for clinical significance using databases and ACMG/AMP guidelines.
 
+## Core Capabilities
+
+- Apply precision grounding for genetic variant summarization: require database-backed evidence from ClinVar, gnomAD, ACMG/AMP criteria, disease-gene validity resources, and literature provenance; label uncertainty explicitly; keep pathogenicity classification separate from explanatory prose.
+
 ## Interpretation Framework
 
 ```
@@ -329,6 +333,10 @@ echo "Report: ${OUTPUT_PREFIX}_report.tsv"
 - variant-calling/filtering-best-practices - Quality filtering
 - database-access/entrez-fetch - Download ClinVar/OMIM data
 - pathway-analysis/go-enrichment - Gene set analysis
+
+## References
+
+- https://pubmed.ncbi.nlm.nih.gov/41950627/
 
 
 <!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

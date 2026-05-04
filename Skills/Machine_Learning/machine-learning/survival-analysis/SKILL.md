@@ -27,7 +27,7 @@ allowed-tools:
 ## Core Capabilities
 
 - Use PROMISE-AD as a reference design for leakage-safe, multi-horizon survival modeling from irregular longitudinal clinical histories: tokenize pre-index visits with standardized measurements, missingness masks, longitudinal changes, time-normalized slopes, visit timing, and non-diagnostic categorical attributes; estimate latent discrete-time mixture hazards with censoring-aware likelihoods and horizon-specific risk losses; calibrate 1-, 2-, 3-, and 5-year risks on validation data; and report dynamic horizon risks as histories update.
-- For oncology consultation notes, compare zero-shot LLM extraction, fine-tuned clinical language models, and structured survival models without assuming one is superior: define the survival time origin from the initial consultation, prevent leakage from future notes, follow-up duration, outcomes, or treatment facts unavailable at prediction time, encode censoring explicitly, and evaluate calibration, discrimination, and clinically validated utility before deployment.
+- For cancer survival prediction from initial oncology consultation documents, compare zero-shot LLM extraction, fine-tuned text models, and structured clinical survival models without assuming one is superior: define the survival time origin from the initial consultation, prevent leakage from future notes, follow-up duration, outcomes, or treatment facts unavailable at prediction time, encode censoring explicitly, report censoring-aware discrimination and calibration metrics, and require external validation before deployment.
 
 ## Kaplan-Meier Curves
 

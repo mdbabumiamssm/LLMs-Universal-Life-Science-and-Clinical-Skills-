@@ -36,6 +36,7 @@ The **Multimodal Medical Imaging Analysis Skill** leverages state-of-the-art Vis
 1.  **Anomaly Detection**: Identify potential pathologies in X-rays, CTs, etc.
 2.  **Report Generation**: Draft radiology reports in standard formats.
 3.  **VQA (Visual Question Answering)**: Answer specific questions about an image (e.g., "Is there a fracture in the left femur?").
+4.  **Dermatology Differential Caution**: For clinical or dermoscopic images involving suspected basal cell carcinoma and common mimickers, frame outputs as differential considerations only; note that multimodal LLMs such as ChatGPT, Gemini, and Claude have been compared for this task, dermoscopy-specific limitations remain clinically relevant, and dermatologist review is mandatory before any clinical use.
 
 ## Workflow
 
@@ -55,5 +56,8 @@ python3 Skills/Clinical/Medical_Imaging/Multimodal_Analysis/multimodal_agent.py 
 ```
 
 
+## References
+
+*   https://pubmed.ncbi.nlm.nih.gov/41952838/
 
 <!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

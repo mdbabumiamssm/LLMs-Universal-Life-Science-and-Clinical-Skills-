@@ -13,7 +13,7 @@
 
 ---
 name: 'clinical-nlp-extractor'
-description: 'Extracts medical entities (Diseases, Medications, Procedures) from unstructured clinical text using regex and simple rules (or LLM wrappers).'
+description: 'Extracts medical entities (Diseases, Medications, Procedures) and registry-oriented real-world data from unstructured clinical text using regex and simple rules (or LLM wrappers).'
 measurable_outcome: Execute skill workflow successfully with valid output within 15 minutes.
 allowed-tools:
   - read_file
@@ -36,6 +36,7 @@ The **Clinical NLP Skill** converts free-text clinical notes into structured dat
 1.  **NER (Named Entity Recognition)**: Extracts Problems, Drugs, Procedures.
 2.  **Negation Detection**: (Basic) Checks if a finding is denied ("No fever").
 3.  **Structuring**: Returns JSON format compatible with FHIR/USDL.
+4.  **Rare-neoplasm RWD abstraction with LLMs**: For registry-quality capture in rare neoplasms such as bone sarcoma, use LLM-assisted workflows to define cohorts from notes, normalize bone sarcoma entities, apply structured abstraction schemas, extract temporal clinical events, sample cases for manual adjudication, and include uncertainty fields for extracted values.
 
 ## Workflow
 
@@ -55,5 +56,9 @@ python3 Skills/Clinical/Clinical_NLP/entity_extractor.py \
 ```
 
 ```
+
+## References
+
+*   https://pubmed.ncbi.nlm.nih.gov/42021926/
 
 <!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->
