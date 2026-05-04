@@ -14,6 +14,7 @@
 ---
 name: clinical-note-summarization
 description: Structure raw clinical notes into SOAP-format summaries with explicit contradictions, missing data, and ICD-linked assessments using the provided prompt + usage script.
+measurable_outcome: Produce SOAP markdown and JSON outputs covering all four sections with at least 95% note coverage and explicit missing information within 2 minutes per note.
 allowed-tools:
   - read_file
   - run_shell_command
@@ -33,6 +34,9 @@ allowed-tools:
 2. Alerts plus missing-information checklist.
 3. Optional JSON payload using schema from README.
 
+## Core Capabilities
+- Evaluate AI-generated clinical notes for correctness, omissions, factuality, harmfulness, and structure quality using clinician review rubrics, inter-rater agreement checks, and benchmark-driven regression testing before deployment.
+
 ## Workflow
 1. **Load system prompt:** `prompt.md` enforces no hallucinations + data gap surfacing.
 2. **Normalize input:** Pre-clean vitals, labs, and timeline context when available.
@@ -47,6 +51,7 @@ allowed-tools:
 
 ## References
 - For detailed schema, guardrails, and integration snippets see `README.md`, `prompt.md`, and `usage.py`.
+- https://pubmed.ncbi.nlm.nih.gov/41955894/
 
 
 <!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

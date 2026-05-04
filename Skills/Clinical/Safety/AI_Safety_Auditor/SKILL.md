@@ -49,6 +49,7 @@ The **AI Safety Auditor** is a critical "human-in-the-loop" simulator and automa
 2.  **Hallucination Detection**: Cross-references generated claims against trusted knowledge bases.
 3.  **Bias Scanning**: Checks for demographic or socioeconomic bias in clinical reasoning.
 4.  **Contraindication Check**: Verifies treatment recommendations against patient allergies/conditions.
+5.  **On-Premises Reasoning Model Deployment Audit**: Evaluates distilled open-source reasoning models proposed for clinical diagnosis by checking model provenance, calibration drift risk, local privacy controls, benchmark representativeness, and required human oversight before clinical use.
 
 ## Workflow
 
@@ -65,6 +66,10 @@ The **AI Safety Auditor** is a critical "human-in-the-loop" simulator and automa
 ```bash
 python3 Skills/Clinical/Safety/AI_Safety_Auditor/audit_output.py --input discharge_summary.txt --checks "all"
 ```
+
+## References
+
+- https://pubmed.ncbi.nlm.nih.gov/42062641/
 
 
 <!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

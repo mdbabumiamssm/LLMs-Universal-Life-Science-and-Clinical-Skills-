@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-05-03T15:04:35.922125+00:00",
+  "generated_at": "2026-05-04T16:42:26.734111+00:00",
   "generator": "ARTIFICIALINTELLIGENCEGROUP-pipeline v1.0",
-  "total_skills": 1020,
+  "total_skills": 1021,
   "total_errors": 16,
   "skills": [
     {
@@ -1249,19 +1249,20 @@
       "description": "Structure raw clinical notes into SOAP-format summaries with explicit contradictions, missing data, and ICD-linked assessments using the provided prompt + usage script.",
       "tool_type": "",
       "primary_tool": "",
-      "measurable_outcome": "",
+      "measurable_outcome": "Produce SOAP markdown and JSON outputs covering all four sections with at least 95% note coverage and explicit missing information within 2 minutes per note.",
       "allowed-tools": [
         "read_file",
         "run_shell_command"
       ],
       "file_path": "Skills/Clinical/Clinical_Note_Summarization/SKILL.md",
       "relative_path": "Clinical/Clinical_Note_Summarization/SKILL.md",
-      "last_modified": "2026-02-26T15:10:19.027820+00:00",
-      "body_length": 1901,
+      "last_modified": "2026-05-04T16:42:09.152493+00:00",
+      "body_length": 2203,
       "capabilities": [
         "At-a-Glance",
         "Inputs",
         "Outputs",
+        "Core Capabilities",
         "Workflow",
         "Guardrails",
         "References"
@@ -1477,14 +1478,15 @@
       ],
       "file_path": "Skills/Clinical/Prior_Authorization/SKILL.md",
       "relative_path": "Clinical/Prior_Authorization/SKILL.md",
-      "last_modified": "2026-02-26T15:10:19.029820+00:00",
-      "body_length": 1837,
+      "last_modified": "2026-05-04T16:38:18.011281+00:00",
+      "body_length": 2251,
       "capabilities": [
         "When to Use This Skill",
         "Core Capabilities",
         "Workflow",
         "Example Usage",
-        "Supported Policies"
+        "Supported Policies",
+        "References"
       ]
     },
     {
@@ -1543,13 +1545,14 @@
       ],
       "file_path": "Skills/Clinical/Safety/AI_Safety_Auditor/SKILL.md",
       "relative_path": "Clinical/Safety/AI_Safety_Auditor/SKILL.md",
-      "last_modified": "2026-02-26T15:10:19.029820+00:00",
-      "body_length": 1995,
+      "last_modified": "2026-05-04T16:32:56.571376+00:00",
+      "body_length": 2349,
       "capabilities": [
         "When to Use This Skill",
         "Core Capabilities",
         "Workflow",
-        "Example Usage"
+        "Example Usage",
+        "References"
       ]
     },
     {
@@ -1608,8 +1611,8 @@
       ],
       "file_path": "Skills/Clinical/Trial_Matching/TrialGPT/SKILL.md",
       "relative_path": "Clinical/Trial_Matching/TrialGPT/SKILL.md",
-      "last_modified": "2026-02-26T15:10:19.029820+00:00",
-      "body_length": 1897,
+      "last_modified": "2026-05-04T16:33:59.650161+00:00",
+      "body_length": 2199,
       "capabilities": [
         "Inputs",
         "Outputs",
@@ -7824,7 +7827,7 @@
       ],
       "file_path": "Skills/Genomics/Spatial_Transcriptomics/SKILL.md",
       "relative_path": "Genomics/Spatial_Transcriptomics/SKILL.md",
-      "last_modified": "2026-05-03T15:00:52.934072+00:00",
+      "last_modified": "2026-05-03T15:04:37.340153+00:00",
       "body_length": 2186,
       "capabilities": [
         "Overview",
@@ -8225,13 +8228,14 @@
       ],
       "file_path": "Skills/Genomics/Variant_Interpretation/SKILL.md",
       "relative_path": "Genomics/Variant_Interpretation/SKILL.md",
-      "last_modified": "2026-02-26T15:10:19.316819+00:00",
-      "body_length": 1593,
+      "last_modified": "2026-05-04T16:35:24.051874+00:00",
+      "body_length": 1908,
       "capabilities": [
         "When to Use This Skill",
         "Core Capabilities",
         "Workflow",
-        "Example Usage"
+        "Example Usage",
+        "References"
       ]
     },
     {
@@ -10511,7 +10515,7 @@
       ],
       "file_path": "Skills/Genomics/scFoundation_Model_Agent/SKILL.md",
       "relative_path": "Genomics/scFoundation_Model_Agent/SKILL.md",
-      "last_modified": "2026-05-03T15:00:11.538234+00:00",
+      "last_modified": "2026-05-03T15:04:37.340153+00:00",
       "body_length": 10186,
       "capabilities": [
         "When to Use This Skill",
@@ -12609,7 +12613,7 @@
       ],
       "file_path": "Skills/LLM_Research/ScientificSpectralVqaBenchmark_Agent/SKILL.md",
       "relative_path": "LLM_Research/ScientificSpectralVqaBenchmark_Agent/SKILL.md",
-      "last_modified": "2026-05-03T14:55:32.577239+00:00",
+      "last_modified": "2026-05-03T15:04:37.340153+00:00",
       "body_length": 4298,
       "capabilities": [
         "Overview",
@@ -12782,6 +12786,29 @@
       ]
     },
     {
+      "name": "pubmed-ncbi-mcp-server",
+      "description": "Use the cyanheads PubMed MCP server to search PubMed, fetch metadata and full text, generate citations, inspect MeSH, and find related research.",
+      "tool_type": "",
+      "primary_tool": "",
+      "measurable_outcome": "Execute skill workflow successfully with valid output within 15 minutes.",
+      "allowed-tools": [
+        "read_file",
+        "run_shell_command",
+        "web_fetch"
+      ],
+      "file_path": "Skills/MCP_Servers/PubmedNcbiMcpServer_Agent/SKILL.md",
+      "relative_path": "MCP_Servers/PubmedNcbiMcpServer_Agent/SKILL.md",
+      "last_modified": "2026-05-04T16:39:22.525061+00:00",
+      "body_length": 4073,
+      "capabilities": [
+        "Overview",
+        "When to Use This Skill",
+        "Core Capabilities",
+        "Inputs / Outputs",
+        "References"
+      ]
+    },
+    {
       "name": "agentomics-ml",
       "description": "An autonomous agentic system for supervised machine learning model development, specifically tailored for biomedical data.",
       "tool_type": "",
@@ -12940,8 +12967,8 @@
       ],
       "file_path": "Skills/Machine_Learning/machine-learning/survival-analysis/SKILL.md",
       "relative_path": "Machine_Learning/machine-learning/survival-analysis/SKILL.md",
-      "last_modified": "2026-05-03T14:52:39.953860+00:00",
-      "body_length": 4915,
+      "last_modified": "2026-05-04T16:33:24.042282+00:00",
+      "body_length": 5432,
       "capabilities": [
         "Core Capabilities",
         "Kaplan-Meier Curves",
@@ -14774,8 +14801,8 @@
       ],
       "file_path": "Skills/Pathology_AI/Computational_Pathology_Agent/SKILL.md",
       "relative_path": "Pathology_AI/Computational_Pathology_Agent/SKILL.md",
-      "last_modified": "2026-05-03T15:01:36.399899+00:00",
-      "body_length": 2081,
+      "last_modified": "2026-05-04T16:35:39.125822+00:00",
+      "body_length": 2179,
       "capabilities": [
         "Overview",
         "Capabilities",

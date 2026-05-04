@@ -44,6 +44,7 @@ Run the locally checked-out TrialGPT pipeline to retrieve, rank, and explain can
 - Ranked trial table with NCT ID, title, score, and short justification.
 - Parsed inclusion/exclusion text ready for downstream eligibility agents.
 - Missing data checklist (e.g., "ECOG not provided").
+- Prospective oncology screening packet using neuro-symbolic criteria parsing, oncology-specific knowledge graph context, multi-agent eligibility review, criterion-level evidence, confidence scoring, and human review flags for high-volume patient matching.
 
 ## Workflow
 1. **Setup:** `cd repo && pip install -r requirements.txt` (or reuse env).
@@ -61,6 +62,7 @@ Run the locally checked-out TrialGPT pipeline to retrieve, rank, and explain can
 ## References
 - Detailed usage instructions and repo layout live in `README.md`.
 - Coordinate with `Skills/Clinical/Trial_Eligibility_Agent` for criterion-level review.
+- https://pubmed.ncbi.nlm.nih.gov/42004487/
 
 
 <!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

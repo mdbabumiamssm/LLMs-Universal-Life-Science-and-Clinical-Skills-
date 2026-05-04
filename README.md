@@ -202,7 +202,7 @@ This project is licensed under the MIT License for open-source components, but t
 
 <!-- BEGIN: PIPELINE_INDEX -->
 
-_Auto-generated index. 1020 skills across 54 categories. Last refresh: 2026-05-03T15:04:35.922125+00:00._
+_Auto-generated index. 1021 skills across 54 categories. Last refresh: 2026-05-04T16:42:26.734111+00:00._
 
 ### 3D_Genomics (8)
 
@@ -603,12 +603,13 @@ _Auto-generated index. 1020 skills across 54 categories. Last refresh: 2026-05-0
 
 - **cellular-senescence-agent** — AI-powered analysis of cellular senescence for aging research, cancer therapy response, and senolytic drug development.
 
-### MCP_Servers (4)
+### MCP_Servers (5)
 
 - **bio-mcpmed-bioinformatics-server** — Model Context Protocol (MCP) server for bioinformatics web services like
 - **biomcp-server** — MCP bio bridge
 - **biomed-agent-mcp** — A general-purpose biomedical knowledge assistant that connects to MCP biomedical data sources (OpenTargets, Monarch, MyGene, MyChem, MyDi...
 - **mcp-operations-2026** — Implement and operate Model Context Protocol systems safely. Use when designing MCP clients or servers, selecting transports, configuring...
+- **pubmed-ncbi-mcp-server** — Use the cyanheads PubMed MCP server to search PubMed, fetch metadata and full text, generate citations, inspect MeSH, and find related re...
 
 ### Machine_Learning (7)
 
