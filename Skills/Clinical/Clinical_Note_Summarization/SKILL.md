@@ -37,6 +37,10 @@ allowed-tools:
 ## Core Capabilities
 - Evaluate AI-generated clinical notes for correctness, omissions, factuality, harmfulness, and structure quality using clinician review rubrics, inter-rater agreement checks, and benchmark-driven regression testing before deployment.
 - Design dataset- and task-specific clinical-note quality rubrics that assess factual correctness, omissions, hallucinations, harmfulness, structure adherence, completeness, and clinician preference.
+- Select evaluation methods for AI-generated clinical notes by pairing rubric-based scoring with experimental benchmark selection and reviewer agreement reporting.
+
+## Quality Evaluation
+- Score generated notes for correctness, omissions, and harmful content using explicit review rubrics; select benchmarks that match the clinical note task being tested, and report reviewer agreement when multiple reviewers assess the same outputs.
 
 ## Workflow
 1. **Load system prompt:** `prompt.md` enforces no hallucinations + data gap surfacing.

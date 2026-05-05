@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-05-04T17:07:36.225655+00:00",
+  "generated_at": "2026-05-05T17:12:53.948459+00:00",
   "generator": "ARTIFICIALINTELLIGENCEGROUP-pipeline v1.0",
-  "total_skills": 1021,
+  "total_skills": 1023,
   "total_errors": 16,
   "skills": [
     {
@@ -404,7 +404,7 @@
       ],
       "file_path": "Skills/AI_Providers/Frontier_OSS_Models_2026/SKILL.md",
       "relative_path": "AI_Providers/Frontier_OSS_Models_2026/SKILL.md",
-      "last_modified": "2026-05-04T17:03:36.720090+00:00",
+      "last_modified": "2026-05-04T17:07:42.212096+00:00",
       "body_length": 1385,
       "capabilities": [
         "Core Capabilities",
@@ -1237,8 +1237,8 @@
       ],
       "file_path": "Skills/Clinical/Clinical_NLP/SKILL.md",
       "relative_path": "Clinical/Clinical_NLP/SKILL.md",
-      "last_modified": "2026-05-04T17:04:59.399751+00:00",
-      "body_length": 1911,
+      "last_modified": "2026-05-05T17:06:07.208294+00:00",
+      "body_length": 1971,
       "capabilities": [
         "When to Use This Skill",
         "Core Capabilities",
@@ -1259,13 +1259,14 @@
       ],
       "file_path": "Skills/Clinical/Clinical_Note_Summarization/SKILL.md",
       "relative_path": "Clinical/Clinical_Note_Summarization/SKILL.md",
-      "last_modified": "2026-05-04T17:06:52.299295+00:00",
-      "body_length": 2403,
+      "last_modified": "2026-05-05T17:07:23.104078+00:00",
+      "body_length": 2838,
       "capabilities": [
         "At-a-Glance",
         "Inputs",
         "Outputs",
         "Core Capabilities",
+        "Quality Evaluation",
         "Workflow",
         "Guardrails",
         "References"
@@ -1382,8 +1383,8 @@
       ],
       "file_path": "Skills/Clinical/Medical_Imaging/Multimodal_Analysis/SKILL.md",
       "relative_path": "Clinical/Medical_Imaging/Multimodal_Analysis/SKILL.md",
-      "last_modified": "2026-05-04T17:07:33.936129+00:00",
-      "body_length": 2528,
+      "last_modified": "2026-05-05T17:07:45.505014+00:00",
+      "body_length": 2637,
       "capabilities": [
         "When to Use This Skill",
         "Core Capabilities",
@@ -1549,8 +1550,8 @@
       ],
       "file_path": "Skills/Clinical/Safety/AI_Safety_Auditor/SKILL.md",
       "relative_path": "Clinical/Safety/AI_Safety_Auditor/SKILL.md",
-      "last_modified": "2026-05-04T17:07:12.543214+00:00",
-      "body_length": 3010,
+      "last_modified": "2026-05-05T17:05:48.836346+00:00",
+      "body_length": 3327,
       "capabilities": [
         "When to Use This Skill",
         "Core Capabilities",
@@ -1615,9 +1616,10 @@
       ],
       "file_path": "Skills/Clinical/Trial_Matching/TrialGPT/SKILL.md",
       "relative_path": "Clinical/Trial_Matching/TrialGPT/SKILL.md",
-      "last_modified": "2026-05-04T16:43:10.210285+00:00",
-      "body_length": 2199,
+      "last_modified": "2026-05-05T17:06:48.830175+00:00",
+      "body_length": 2548,
       "capabilities": [
+        "Core Capabilities",
         "Inputs",
         "Outputs",
         "Workflow",
@@ -2152,6 +2154,29 @@
         "Setup Checklist",
         "Standard Workflow",
         "Governance & Contribution Notes",
+        "References"
+      ]
+    },
+    {
+      "name": "biomed-multi-alignment-foundation-model",
+      "description": "Use IBM biomed.omics.bl.sm.ma-ted-458m workflows to connect proteins, small molecules, and single-cell gene data for biomedical discovery.",
+      "tool_type": "",
+      "primary_tool": "",
+      "measurable_outcome": "Execute skill workflow successfully with valid output within 15 minutes.",
+      "allowed-tools": [
+        "read_file",
+        "run_shell_command",
+        "web_fetch"
+      ],
+      "file_path": "Skills/Drug_Discovery/BiomedMultiAlignmentFoundationModel_Agent/SKILL.md",
+      "relative_path": "Drug_Discovery/BiomedMultiAlignmentFoundationModel_Agent/SKILL.md",
+      "last_modified": "2026-05-05T17:11:52.126318+00:00",
+      "body_length": 3800,
+      "capabilities": [
+        "Overview",
+        "When to Use This Skill",
+        "Core Capabilities",
+        "Inputs / Outputs",
         "References"
       ]
     },
@@ -8254,8 +8279,8 @@
       ],
       "file_path": "Skills/Genomics/Variant_Interpretation/bioSkills/clinical-interpretation/SKILL.md",
       "relative_path": "Genomics/Variant_Interpretation/bioSkills/clinical-interpretation/SKILL.md",
-      "last_modified": "2026-05-04T16:53:29.587838+00:00",
-      "body_length": 9501,
+      "last_modified": "2026-05-05T17:08:14.156933+00:00",
+      "body_length": 9612,
       "capabilities": [
         "Core Capabilities",
         "Interpretation Framework",
@@ -12589,7 +12614,7 @@
       ],
       "file_path": "Skills/LLM_Research/SKILL.md",
       "relative_path": "LLM_Research/SKILL.md",
-      "last_modified": "2026-05-04T17:04:44.877810+00:00",
+      "last_modified": "2026-05-04T17:07:42.212096+00:00",
       "body_length": 3099,
       "capabilities": [
         "Purpose",
@@ -12725,6 +12750,29 @@
         "Core Capabilities",
         "Deployment Workflow",
         "Guardrails",
+        "References"
+      ]
+    },
+    {
+      "name": "biocontext-ai-mcp-registry",
+      "description": "Use the BioContextAI Registry to discover, compare, and select biomedical MCP servers for bioinformatics, systems biology, and biomedical AI workflows.",
+      "tool_type": "",
+      "primary_tool": "",
+      "measurable_outcome": "Execute skill workflow successfully with valid output within 15 minutes.",
+      "allowed-tools": [
+        "read_file",
+        "run_shell_command",
+        "web_fetch"
+      ],
+      "file_path": "Skills/MCP_Servers/BiocontextAiMcpRegistry_Agent/SKILL.md",
+      "relative_path": "MCP_Servers/BiocontextAiMcpRegistry_Agent/SKILL.md",
+      "last_modified": "2026-05-05T17:12:28.620215+00:00",
+      "body_length": 3308,
+      "capabilities": [
+        "Overview",
+        "When to Use This Skill",
+        "Core Capabilities",
+        "Inputs / Outputs",
         "References"
       ]
     },
@@ -12973,8 +13021,8 @@
       ],
       "file_path": "Skills/Machine_Learning/machine-learning/survival-analysis/SKILL.md",
       "relative_path": "Machine_Learning/machine-learning/survival-analysis/SKILL.md",
-      "last_modified": "2026-05-04T17:05:24.679648+00:00",
-      "body_length": 5516,
+      "last_modified": "2026-05-05T17:06:25.486242+00:00",
+      "body_length": 5549,
       "capabilities": [
         "Core Capabilities",
         "Kaplan-Meier Curves",
@@ -14807,8 +14855,8 @@
       ],
       "file_path": "Skills/Pathology_AI/Computational_Pathology_Agent/SKILL.md",
       "relative_path": "Pathology_AI/Computational_Pathology_Agent/SKILL.md",
-      "last_modified": "2026-05-04T16:43:10.211285+00:00",
-      "body_length": 2179,
+      "last_modified": "2026-05-05T17:08:40.415858+00:00",
+      "body_length": 2191,
       "capabilities": [
         "Overview",
         "Capabilities",
@@ -14829,13 +14877,14 @@
       ],
       "file_path": "Skills/Pharma/Drug_Interaction/SKILL.md",
       "relative_path": "Pharma/Drug_Interaction/SKILL.md",
-      "last_modified": "2026-02-26T15:10:19.338819+00:00",
-      "body_length": 1360,
+      "last_modified": "2026-05-05T17:07:05.855127+00:00",
+      "body_length": 1808,
       "capabilities": [
         "When to Use This Skill",
         "Core Capabilities",
         "Workflow",
-        "Example Usage"
+        "Example Usage",
+        "References"
       ]
     },
     {

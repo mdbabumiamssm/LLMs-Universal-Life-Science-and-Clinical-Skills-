@@ -35,6 +35,9 @@ allowed-tools:
 
 Run the locally checked-out TrialGPT pipeline to retrieve, rank, and explain candidate trials for a patient before deeper eligibility review.
 
+## Core Capabilities
+- Support prospective oncology trial matching with a neuro-symbolic, multi-agent workflow that uses an oncology-specific knowledge graph for criterion-level reasoning, records patient-scale throughput metrics such as cohort size and adjudication status, and routes uncertain or high-impact matches to human-in-the-loop review.
+
 ## Inputs
 - Patient summary (structured JSON or free text) with condition keywords.
 - Optional filters: geography, phase, intervention, biomarker.

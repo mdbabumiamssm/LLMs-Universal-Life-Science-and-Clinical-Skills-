@@ -49,9 +49,10 @@ The **AI Safety Auditor** is a critical "human-in-the-loop" simulator and automa
 2.  **Hallucination Detection**: Cross-references generated claims against trusted knowledge bases.
 3.  **Bias Scanning**: Checks for demographic or socioeconomic bias in clinical reasoning.
 4.  **Contraindication Check**: Verifies treatment recommendations against patient allergies/conditions.
-5.  **On-Premises Reasoning Model Deployment Audit**: Evaluates distilled open-source reasoning models proposed for clinical diagnosis by checking model provenance, calibration drift risk, local privacy controls, benchmark representativeness, and required human oversight before clinical use.
-6.  **Clinical Practice Guideline LLM Assistance Audit**: Evaluates LLM-supported guideline development for evidence traceability, conflict-of-interest awareness, consensus workflow support, versioned citations, and red-team checks for omitted harms or overconfident recommendations.
-7.  **Test-Time Knowledge Acquisition Audit**: Checks medical decision support outputs for whether current evidence should be retrieved at response time, whether recommendations are constrained to retrieved sources, and whether unsupported or stale clinical claims are flagged for review.
+5.  **On-Premises Open-Source Clinical LLM Deployment Risk Review**: Evaluates distilled reasoning models proposed for local clinical diagnosis by requiring diagnostic performance validation, local infrastructure constraint review, privacy-control verification, and mandatory clinician oversight before clinical use.
+6.  **On-Premises Reasoning Model Deployment Audit**: Evaluates distilled open-source reasoning models proposed for clinical diagnosis by checking model provenance, calibration drift risk, local privacy controls, benchmark representativeness, and required human oversight before clinical use.
+7.  **Clinical Practice Guideline LLM Assistance Audit**: Evaluates LLM-supported guideline development for evidence traceability, conflict-of-interest awareness, consensus workflow support, versioned citations, and red-team checks for omitted harms or overconfident recommendations.
+8.  **Test-Time Knowledge Acquisition Audit**: Checks medical decision support outputs for whether current evidence should be retrieved at response time, whether recommendations are constrained to retrieved sources, and whether unsupported or stale clinical claims are flagged for review.
 
 ## Workflow
 

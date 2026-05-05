@@ -202,7 +202,7 @@ This project is licensed under the MIT License for open-source components, but t
 
 <!-- BEGIN: PIPELINE_INDEX -->
 
-_Auto-generated index. 1021 skills across 54 categories. Last refresh: 2026-05-04T17:07:36.225655+00:00._
+_Auto-generated index. 1023 skills across 54 categories. Last refresh: 2026-05-05T17:12:53.948459+00:00._
 
 ### 3D_Genomics (8)
 
@@ -311,7 +311,7 @@ _Auto-generated index. 1021 skills across 54 categories. Last refresh: 2026-05-0
 - **bio-data-visualization-upset-plots** — Create UpSet plots to visualize set intersections as an alternative to Venn diagrams using UpSetR or upsetplot. Use when comparing overla...
 - **bio-data-visualization-volcano-customization** — Create publication-ready volcano plots with custom thresholds, gene labels, and highlighting using ggplot2, EnhancedVolcano, or matplotli...
 
-### Drug_Discovery (21)
+### Drug_Discovery (22)
 
 - **agentd-drug-discovery** — Use the AgentD workflow to mine evidence, design molecules, and rank candidates with SAR plus ADMET annotations for early drug discovery ...
 - **antibody-design-agent** — An advanced agent for de novo antibody design and optimization using state-of-the-art protein language models (MAGE, RFdiffusion).
@@ -323,6 +323,7 @@ _Auto-generated index. 1021 skills across 54 categories. Last refresh: 2026-05-0
 - **bio-similarity-searching** — Performs molecular similarity searches using Tanimoto coefficient on fingerprints via RDKit. Finds structurally similar compounds using E...
 - **bio-substructure-search** — Searches molecular libraries for substructure matches using SMARTS patterns with RDKit. Filters compounds by pharmacophore features, func...
 - **bio-virtual-screening** — Performs structure-based virtual screening using AutoDock Vina 1.2 for molecular docking. Prepares receptor PDBQT files, generates ligand...
+- **biomed-multi-alignment-foundation-model** — Use IBM biomed.omics.bl.sm.ma-ted-458m workflows to connect proteins, small molecules, and single-cell gene data for biomedical discovery.
 - **chematagent-drug-discovery** — Chemical Lab Agent
 - **chemcrow-drug-discovery** — An LLM chemistry agent with expert-designed tools for organic synthesis, drug discovery, and materials design.
 - **chemical-property-lookup** — Compute RDKit-driven molecular properties (MW, logP, TPSA, QED, Lipinski) for a SMILES string to support downstream drug discovery tools.
@@ -603,9 +604,10 @@ _Auto-generated index. 1021 skills across 54 categories. Last refresh: 2026-05-0
 
 - **cellular-senescence-agent** — AI-powered analysis of cellular senescence for aging research, cancer therapy response, and senolytic drug development.
 
-### MCP_Servers (5)
+### MCP_Servers (6)
 
 - **bio-mcpmed-bioinformatics-server** — Model Context Protocol (MCP) server for bioinformatics web services like
+- **biocontext-ai-mcp-registry** — Use the BioContextAI Registry to discover, compare, and select biomedical MCP servers for bioinformatics, systems biology, and biomedical...
 - **biomcp-server** — MCP bio bridge
 - **biomed-agent-mcp** — A general-purpose biomedical knowledge assistant that connects to MCP biomedical data sources (OpenTargets, Monarch, MyGene, MyChem, MyDi...
 - **mcp-operations-2026** — Implement and operate Model Context Protocol systems safely. Use when designing MCP clients or servers, selecting transports, configuring...

@@ -36,7 +36,7 @@ The **Clinical NLP Skill** converts free-text clinical notes into structured dat
 1.  **NER (Named Entity Recognition)**: Extracts Problems, Drugs, Procedures.
 2.  **Negation Detection**: (Basic) Checks if a finding is denied ("No fever").
 3.  **Structuring**: Returns JSON format compatible with FHIR/USDL.
-4.  **Rare-neoplasm RWD abstraction with LLMs**: For registry-quality capture in rare neoplasms such as bone sarcoma, define registry variables, extract clinical events from notes, normalize timelines, capture uncertainty for extracted values, and require clinician adjudication for low-prevalence entities.
+4.  **Rare-neoplasm RWD abstraction with LLMs**: For registry-quality capture in rare neoplasms such as bone sarcoma, use schema-first abstraction from clinician notes, map outputs to registry fields, label uncertain values, preserve audit-ready provenance for each extracted item, and route sparse-cohort or low-confidence cases through human clinician review loops.
 
 ## Workflow
 

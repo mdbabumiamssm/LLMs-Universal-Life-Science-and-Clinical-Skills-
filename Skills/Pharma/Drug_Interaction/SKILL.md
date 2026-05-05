@@ -36,6 +36,7 @@ This skill analyzes a list of medications to identify known interactions, focusi
 1.  **Interaction Detection**: Identifies pairs of drugs with known interactions.
 2.  **Severity Grading**: Classifies interactions as Minor, Moderate, or Major.
 3.  **Clinical Recommendations**: Provides actionable advice (e.g., "Monitor K+ levels").
+4.  **Antiseizure Medication DDI Review**: For antiseizure medication DDIs, compare any LLM-generated interaction assessment against Lexicomp or an equivalent authoritative reference source; treat iterative prompting as a verification aid rather than a substitute for source-grounded checking, and explicitly screen for false negatives that could miss clinically harmful interactions.
 
 ## Workflow
 
@@ -51,6 +52,10 @@ This skill analyzes a list of medications to identify known interactions, focusi
 ```bash
 python3 Skills/Pharma/Drug_Interaction/impl.py --drugs "Warfarin, Aspirin"
 ```
+
+## References
+
+*   https://pubmed.ncbi.nlm.nih.gov/41994367/
 
 
 <!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

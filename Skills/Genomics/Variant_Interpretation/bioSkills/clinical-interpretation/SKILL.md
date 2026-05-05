@@ -28,7 +28,7 @@ Prioritize and interpret variants for clinical significance using databases and 
 
 ## Core Capabilities
 
-- Apply precision grounding for genetic variant summarization: require database-backed evidence from ClinVar, gnomAD, ACMG/AMP criteria, disease-gene validity resources, and literature provenance; label uncertainty explicitly; keep pathogenicity classification separate from explanatory prose.
+- Apply precision grounding for genetic variant summarization: retrieve database-backed evidence from ClinVar, gnomAD, ACMG/AMP criteria, disease-gene validity resources, and literature provenance; cite each claim; separate known evidence from model inference; label uncertainty explicitly; keep pathogenicity classification separate from explanatory prose; flag conflicting evidence or stale assertions.
 
 ## Interpretation Framework
 
