@@ -17,6 +17,7 @@ description: Fuse genomic variants, pathology findings, and clinical context to 
 allowed-tools:
   - read_file
   - run_shell_command
+measurable_outcome: 'Deliver a ranked therapy list with OncoKB/NCCN citations plus data-gap checklist for every case within 10 minutes of receiving inputs.'
 ---
 
 ## At-a-Glance
@@ -34,6 +35,9 @@ allowed-tools:
 2. Variant interpretation table (pathogenicity, tier, therapy linkage).
 3. Biomarker summary (TMB, MSI, PD-L1 if provided) and missing-test checklist.
 
+## Core Capabilities
+- Support GI cancer AI management by synthesizing endoscopy, pathology, radiology, genomic, and clinical inputs into multimodal decision support for guideline-aligned patient selection, while keeping all management suggestions bounded by human oncology review.
+
 ## Workflow
 1. **Ingest & normalize:** Harmonize gene symbols, genome build, and variant effects.
 2. **Annotate:** Query OncoKB/NCCN + internal knowledge for actionability tiers.
@@ -48,6 +52,7 @@ allowed-tools:
 
 ## References
 - See `README.md` for detailed workflow plus cited Nature Cancer study.
+- https://pubmed.ncbi.nlm.nih.gov/42044465/
 
 
 <!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

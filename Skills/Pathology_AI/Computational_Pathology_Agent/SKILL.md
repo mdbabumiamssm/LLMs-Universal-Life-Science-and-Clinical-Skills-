@@ -48,7 +48,7 @@ This agent specializes in the analysis of Whole Slide Images (WSIs) for digital 
 3.  **Patch Extraction:** Automated generation of patches for ML training/inference.
 4.  **Nuclei Segmentation:** Integration with StarDist/HoverNet for cellular analysis.
 5.  **Feature Extraction:** Generating feature vectors for slide-level clustering.
-6.  **dMMR Biomarker Modeling:** Plan colorectal cancer histopathology workflows that explicitly evaluate low-magnification and non-tumor region signals, use patch sampling strategies that preserve tumor and non-tumor region labels, validate MSI/dMMR endpoints externally, run region-level ablations, and check for scanner/cohort bias and biomarker leakage.
+6.  **dMMR Biomarker Modeling:** Plan colorectal cancer histopathology workflows that explicitly evaluate low-magnification and non-tumor region signals, use patch sampling strategies that preserve tumor and non-tumor region labels, run region-selection sensitivity checks and region-level ablations, validate against tumor-only baselines, validate MSI/dMMR endpoints externally, and check for scanner/cohort bias and biomarker leakage.
 
 ## Usage
 ```python

@@ -52,7 +52,8 @@ The **AI Safety Auditor** is a critical "human-in-the-loop" simulator and automa
 5.  **On-Premises Open-Source Clinical LLM Deployment Risk Review**: Evaluates distilled reasoning models proposed for local clinical diagnosis by requiring diagnostic performance validation, local infrastructure constraint review, privacy-control verification, and mandatory clinician oversight before clinical use.
 6.  **On-Premises Reasoning Model Deployment Audit**: Evaluates distilled open-source reasoning models proposed for clinical diagnosis by checking model provenance, calibration drift risk, local privacy controls, benchmark representativeness, and required human oversight before clinical use.
 7.  **Clinical Practice Guideline LLM Assistance Audit**: Evaluates LLM-supported guideline development for evidence traceability, conflict-of-interest awareness, consensus workflow support, versioned citations, and red-team checks for omitted harms or overconfident recommendations.
-8.  **Test-Time Knowledge Acquisition Audit**: Checks medical decision support outputs for whether current evidence should be retrieved at response time, whether recommendations are constrained to retrieved sources, and whether unsupported or stale clinical claims are flagged for review.
+8.  **Real-Time Guideline Development Evaluation Workflow**: Audits LLM assistance during clinical practice guideline development with real-time evidence checking, conflict-of-interest and citation verification, consensus-panel handoff, and documented human oversight gates before recommendations enter practice guidance.
+9.  **Test-Time Knowledge Acquisition Audit**: Checks medical decision support outputs for guarded response-time evidence retrieval, recorded evidence provenance, pre/post retrieval decision comparison, and flagging of unsupported or stale clinical recommendations.
 
 ## Workflow
 

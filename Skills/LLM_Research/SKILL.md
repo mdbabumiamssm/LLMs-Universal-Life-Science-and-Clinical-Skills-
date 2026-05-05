@@ -32,7 +32,7 @@ Parse scientific literature (PDFs, URLs, DOIs) to extract GEO accessions and met
 
 ## Core Capabilities
 
-- **Medical Q&A dataset evaluation**: Build fine-grained review checklists for medical language model benchmarking that cover answer labeling granularity, trustworthiness dimensions, omission and harm scoring, domain-specific answer rubrics, and dataset documentation.
+- **Medical Q&A dataset evaluation**: Build fine-grained review checklists for medical language model benchmarking that cover domain-specific dataset auditing, answer labeling granularity, trustworthiness dimensions, item-level error taxonomy, omission and harm scoring, domain-specific answer rubrics, dataset documentation, and benchmark reporting standards.
 
 ## Methodology
 

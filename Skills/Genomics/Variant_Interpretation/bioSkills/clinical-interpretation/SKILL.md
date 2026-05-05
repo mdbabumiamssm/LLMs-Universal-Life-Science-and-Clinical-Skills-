@@ -29,6 +29,8 @@ Prioritize and interpret variants for clinical significance using databases and 
 ## Core Capabilities
 
 - Apply precision grounding for genetic variant summarization: retrieve database-backed evidence from ClinVar, gnomAD, ACMG/AMP criteria, disease-gene validity resources, and literature provenance; cite each claim; separate known evidence from model inference; label uncertainty explicitly; keep pathogenicity classification separate from explanatory prose; flag conflicting evidence or stale assertions.
+- Generate Precision Grounding-style LLM variant summaries by separating database facts from model synthesis, citing ClinVar variation/accession records, gnomAD population evidence, and ACMG/AMP criteria used for each statement, then running hallucination checks against the retrieved evidence before including content in genetic variant reports.
+- Produce precision-grounded variant summaries with explicit provenance for ClinVar assertions, gnomAD population frequency, COSMIC somatic evidence, and literature findings; surface conflicts across sources for manual review, and do not make or upgrade pathogenicity claims unless directly supported by retrieved evidence and applicable ACMG/AMP criteria.
 
 ## Interpretation Framework
 

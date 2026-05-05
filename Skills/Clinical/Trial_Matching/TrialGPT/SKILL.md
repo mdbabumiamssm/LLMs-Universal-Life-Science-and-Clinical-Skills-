@@ -37,6 +37,7 @@ Run the locally checked-out TrialGPT pipeline to retrieve, rank, and explain can
 
 ## Core Capabilities
 - Support prospective oncology trial matching with a neuro-symbolic, multi-agent workflow that uses an oncology-specific knowledge graph for criterion-level reasoning, records patient-scale throughput metrics such as cohort size and adjudication status, and routes uncertain or high-impact matches to human-in-the-loop review.
+- Apply prospective oncology trial matching patterns from large patient cohorts: neuro-symbolic multi-agent review, oncology knowledge graph grounding, criterion-level evidence extraction, and prospective performance tracking for each screening run.
 
 ## Inputs
 - Patient summary (structured JSON or free text) with condition keywords.
