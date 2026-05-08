@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-05-08T13:57:19.839876+00:00",
+  "generated_at": "2026-05-08T14:12:20.681022+00:00",
   "generator": "ARTIFICIALINTELLIGENCEGROUP-pipeline v1.0",
-  "total_skills": 1024,
+  "total_skills": 1025,
   "total_errors": 16,
   "skills": [
     {
@@ -404,8 +404,8 @@
       ],
       "file_path": "Skills/AI_Providers/Frontier_OSS_Models_2026/SKILL.md",
       "relative_path": "AI_Providers/Frontier_OSS_Models_2026/SKILL.md",
-      "last_modified": "2026-05-04T17:07:42.212096+00:00",
-      "body_length": 1385,
+      "last_modified": "2026-05-08T14:05:58.331290+00:00",
+      "body_length": 1439,
       "capabilities": [
         "Core Capabilities",
         "Workflow",
@@ -1237,7 +1237,7 @@
       ],
       "file_path": "Skills/Clinical/Clinical_NLP/SKILL.md",
       "relative_path": "Clinical/Clinical_NLP/SKILL.md",
-      "last_modified": "2026-05-08T13:53:27.519865+00:00",
+      "last_modified": "2026-05-08T13:57:26.540744+00:00",
       "body_length": 2633,
       "capabilities": [
         "When to Use This Skill",
@@ -1259,8 +1259,8 @@
       ],
       "file_path": "Skills/Clinical/Clinical_Note_Summarization/SKILL.md",
       "relative_path": "Clinical/Clinical_Note_Summarization/SKILL.md",
-      "last_modified": "2026-05-08T13:52:50.821035+00:00",
-      "body_length": 3380,
+      "last_modified": "2026-05-08T14:09:34.828240+00:00",
+      "body_length": 3600,
       "capabilities": [
         "At-a-Glance",
         "Inputs",
@@ -1383,8 +1383,8 @@
       ],
       "file_path": "Skills/Clinical/Medical_Imaging/Multimodal_Analysis/SKILL.md",
       "relative_path": "Clinical/Medical_Imaging/Multimodal_Analysis/SKILL.md",
-      "last_modified": "2026-05-05T17:13:00.260126+00:00",
-      "body_length": 2637,
+      "last_modified": "2026-05-08T14:10:00.021117+00:00",
+      "body_length": 2824,
       "capabilities": [
         "When to Use This Skill",
         "Core Capabilities",
@@ -1460,8 +1460,8 @@
       ],
       "file_path": "Skills/Clinical/Oncology/Precision_Oncology_Agent/SKILL.md",
       "relative_path": "Clinical/Oncology/Precision_Oncology_Agent/SKILL.md",
-      "last_modified": "2026-05-05T18:24:02.722979+00:00",
-      "body_length": 2252,
+      "last_modified": "2026-05-08T14:06:15.057209+00:00",
+      "body_length": 2361,
       "capabilities": [
         "At-a-Glance",
         "Inputs",
@@ -1484,7 +1484,7 @@
       ],
       "file_path": "Skills/Clinical/Prior_Authorization/SKILL.md",
       "relative_path": "Clinical/Prior_Authorization/SKILL.md",
-      "last_modified": "2026-05-08T13:56:21.055053+00:00",
+      "last_modified": "2026-05-08T13:57:26.541744+00:00",
       "body_length": 2261,
       "capabilities": [
         "When to Use This Skill",
@@ -1519,6 +1519,29 @@
       ]
     },
     {
+      "name": "prosthetix-ai-prosthetic-recommendations",
+      "description": "Guide evidence-based prosthetic recommendation workflows inspired by ProsthetiX-AI clinical decision support for limb-loss care with clinician review.",
+      "tool_type": "",
+      "primary_tool": "",
+      "measurable_outcome": "Execute skill workflow successfully with valid output within 15 minutes.",
+      "allowed-tools": [
+        "read_file",
+        "run_shell_command",
+        "web_fetch"
+      ],
+      "file_path": "Skills/Clinical/ProsthetixAiProstheticRecommendations_Agent/SKILL.md",
+      "relative_path": "Clinical/ProsthetixAiProstheticRecommendations_Agent/SKILL.md",
+      "last_modified": "2026-05-08T14:09:17.050326+00:00",
+      "body_length": 4529,
+      "capabilities": [
+        "Overview",
+        "When to Use This Skill",
+        "Core Capabilities",
+        "Inputs / Outputs",
+        "References"
+      ]
+    },
+    {
       "name": "psychiatry-knowledge-fused-reasoning",
       "description": "Psychiatry CDS workflow for knowledge-fused augmented reasoning across diagnosis, risk assessment, medication reasoning, and care planning.",
       "tool_type": "",
@@ -1531,7 +1554,7 @@
       ],
       "file_path": "Skills/Clinical/PsychiatryKnowledgeFusedReasoning_Agent/SKILL.md",
       "relative_path": "Clinical/PsychiatryKnowledgeFusedReasoning_Agent/SKILL.md",
-      "last_modified": "2026-05-08T13:52:30.274130+00:00",
+      "last_modified": "2026-05-08T13:57:26.541744+00:00",
       "body_length": 4880,
       "capabilities": [
         "Overview",
@@ -1574,8 +1597,8 @@
       ],
       "file_path": "Skills/Clinical/Safety/AI_Safety_Auditor/SKILL.md",
       "relative_path": "Clinical/Safety/AI_Safety_Auditor/SKILL.md",
-      "last_modified": "2026-05-05T18:24:02.722979+00:00",
-      "body_length": 3626,
+      "last_modified": "2026-05-08T14:07:00.720988+00:00",
+      "body_length": 4177,
       "capabilities": [
         "When to Use This Skill",
         "Core Capabilities",
@@ -1640,8 +1663,8 @@
       ],
       "file_path": "Skills/Clinical/Trial_Matching/TrialGPT/SKILL.md",
       "relative_path": "Clinical/Trial_Matching/TrialGPT/SKILL.md",
-      "last_modified": "2026-05-08T13:51:38.693367+00:00",
-      "body_length": 2760,
+      "last_modified": "2026-05-08T14:08:12.822638+00:00",
+      "body_length": 3074,
       "capabilities": [
         "Core Capabilities",
         "Inputs",
@@ -8281,8 +8304,8 @@
       ],
       "file_path": "Skills/Genomics/Variant_Interpretation/SKILL.md",
       "relative_path": "Genomics/Variant_Interpretation/SKILL.md",
-      "last_modified": "2026-05-08T13:53:09.029951+00:00",
-      "body_length": 1945,
+      "last_modified": "2026-05-08T14:10:22.804007+00:00",
+      "body_length": 1989,
       "capabilities": [
         "When to Use This Skill",
         "Core Capabilities",
@@ -12876,7 +12899,7 @@
       ],
       "file_path": "Skills/MCP_Servers/PubmedNcbiMcpServer_Agent/SKILL.md",
       "relative_path": "MCP_Servers/PubmedNcbiMcpServer_Agent/SKILL.md",
-      "last_modified": "2026-05-08T13:56:40.693961+00:00",
+      "last_modified": "2026-05-08T13:57:26.541744+00:00",
       "body_length": 4372,
       "capabilities": [
         "Overview",
@@ -13045,8 +13068,8 @@
       ],
       "file_path": "Skills/Machine_Learning/machine-learning/survival-analysis/SKILL.md",
       "relative_path": "Machine_Learning/machine-learning/survival-analysis/SKILL.md",
-      "last_modified": "2026-05-05T18:24:02.722979+00:00",
-      "body_length": 5956,
+      "last_modified": "2026-05-08T14:07:34.986821+00:00",
+      "body_length": 6431,
       "capabilities": [
         "Core Capabilities",
         "Kaplan-Meier Curves",
@@ -14879,8 +14902,8 @@
       ],
       "file_path": "Skills/Pathology_AI/Computational_Pathology_Agent/SKILL.md",
       "relative_path": "Pathology_AI/Computational_Pathology_Agent/SKILL.md",
-      "last_modified": "2026-05-08T13:53:57.446726+00:00",
-      "body_length": 2692,
+      "last_modified": "2026-05-08T14:10:52.931860+00:00",
+      "body_length": 3010,
       "capabilities": [
         "Overview",
         "Capabilities",
@@ -14901,8 +14924,8 @@
       ],
       "file_path": "Skills/Pharma/Drug_Interaction/SKILL.md",
       "relative_path": "Pharma/Drug_Interaction/SKILL.md",
-      "last_modified": "2026-05-05T17:13:00.261126+00:00",
-      "body_length": 1808,
+      "last_modified": "2026-05-08T14:08:32.648542+00:00",
+      "body_length": 1860,
       "capabilities": [
         "When to Use This Skill",
         "Core Capabilities",

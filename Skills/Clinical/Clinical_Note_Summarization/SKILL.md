@@ -40,6 +40,7 @@ allowed-tools:
 - Build clinical-note quality evaluation modules for AI-generated documentation that check correctness, omissions, harmful hallucinations, note-specific rubric criteria, human reviewer sampling, and transparent benchmark reporting.
 - Design dataset- and task-specific clinical-note quality rubrics that assess factual correctness, omissions, hallucinations, harmfulness, structure adherence, completeness, and clinician preference.
 - Select evaluation methods for AI-generated clinical notes by pairing rubric-based scoring with experimental benchmark selection and reviewer agreement reporting.
+- Evaluate AI-generated clinical notes with methods covering factual correctness, omissions, hallucinations, note completeness, readability, downstream safety risk, inter-rater review, and benchmark reporting templates.
 
 ## Quality Evaluation
 - Score generated notes for correctness, omissions, and harmful content using explicit review rubrics; select benchmarks that match the clinical note task being tested, and report reviewer agreement when multiple reviewers assess the same outputs.

@@ -202,7 +202,7 @@ This project is licensed under the MIT License for open-source components, but t
 
 <!-- BEGIN: PIPELINE_INDEX -->
 
-_Auto-generated index. 1024 skills across 54 categories. Last refresh: 2026-05-08T13:57:19.839876+00:00._
+_Auto-generated index. 1025 skills across 54 categories. Last refresh: 2026-05-08T14:12:20.681022+00:00._
 
 ### 3D_Genomics (8)
 
@@ -257,7 +257,7 @@ _Auto-generated index. 1024 skills across 54 categories. Last refresh: 2026-05-0
 - **regulatory-drafting** — Regulatory Drafting agent for healthcare workflows.
 - **research-literature** — Research Literature agent for healthcare workflows.
 
-### Clinical (29)
+### Clinical (30)
 
 - **ai-safety-auditor** — Validates clinical AI outputs for safety, bias, and hallucination risks before delivery to end-users or clinicians.
 - **autonomous-oncology-agent** — Precision Oncology
@@ -282,6 +282,7 @@ _Auto-generated index. 1024 skills across 54 categories. Last refresh: 2026-05-0
 - **precision-oncology-agent** — Fuse genomic variants, pathology findings, and clinical context to draft evidence-linked therapy options for tumor board review.
 - **prior-auth-coworker** — Prior Auth Review
 - **promise-ad-progression-survival-agent** — Progression-aware multi-horizon survival agent that estimates calibrated 1/2/3/5-year risks of CN→MCI and MCI→AD conversion from irregula...
+- **prosthetix-ai-prosthetic-recommendations** — Guide evidence-based prosthetic recommendation workflows inspired by ProsthetiX-AI clinical decision support for limb-loss care with clin...
 - **psychiatry-knowledge-fused-reasoning** — Psychiatry CDS workflow for knowledge-fused augmented reasoning across diagnosis, risk assessment, medication reasoning, and care planning.
 - **radgpt-radiology-reporter** — Radiology Reporter
 - **safety-monitor** — Safety Monitor

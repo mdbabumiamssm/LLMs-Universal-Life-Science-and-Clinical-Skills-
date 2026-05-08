@@ -54,6 +54,8 @@ The **AI Safety Auditor** is a critical "human-in-the-loop" simulator and automa
 7.  **Clinical Practice Guideline LLM Assistance Audit**: Evaluates LLM-supported guideline development for evidence traceability, conflict-of-interest awareness, consensus workflow support, versioned citations, and red-team checks for omitted harms or overconfident recommendations.
 8.  **Real-Time Guideline Development Evaluation Workflow**: Audits LLM assistance during clinical practice guideline development with real-time evidence checking, conflict-of-interest and citation verification, consensus-panel handoff, and documented human oversight gates before recommendations enter practice guidance.
 9.  **Test-Time Knowledge Acquisition Audit**: Checks medical decision support outputs for guarded response-time evidence retrieval, recorded evidence provenance, pre/post retrieval decision comparison, and flagging of unsupported or stale clinical recommendations.
+10. **LLM-Assisted Guideline Drafting Evaluation**: Checks clinical practice guideline drafts for evidence traceability, conflict handling, recommendation grading, human panel review, and real-time discrepancy logging during guideline development.
+11. **Fine-Grained Medical Q&A Dataset Evaluation**: Audits domain-specific medical Q&A evaluation sets with domain stratification, omission and harm taxonomies, calibration checks, uncertainty labeling, and trustworthy-answer scoring beyond simple accuracy.
 
 ## Workflow
 
@@ -76,6 +78,7 @@ python3 Skills/Clinical/Safety/AI_Safety_Auditor/audit_output.py --input dischar
 - https://pubmed.ncbi.nlm.nih.gov/42062641/
 - https://pubmed.ncbi.nlm.nih.gov/42042855/
 - https://pubmed.ncbi.nlm.nih.gov/41953846/
+- https://pubmed.ncbi.nlm.nih.gov/42039929/
 
 
 <!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->
