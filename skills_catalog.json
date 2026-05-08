@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-05-05T18:23:56.932518+00:00",
+  "generated_at": "2026-05-08T13:57:19.839876+00:00",
   "generator": "ARTIFICIALINTELLIGENCEGROUP-pipeline v1.0",
-  "total_skills": 1023,
+  "total_skills": 1024,
   "total_errors": 16,
   "skills": [
     {
@@ -1237,8 +1237,8 @@
       ],
       "file_path": "Skills/Clinical/Clinical_NLP/SKILL.md",
       "relative_path": "Clinical/Clinical_NLP/SKILL.md",
-      "last_modified": "2026-05-05T18:20:50.047585+00:00",
-      "body_length": 2596,
+      "last_modified": "2026-05-08T13:53:27.519865+00:00",
+      "body_length": 2633,
       "capabilities": [
         "When to Use This Skill",
         "Core Capabilities",
@@ -1259,8 +1259,8 @@
       ],
       "file_path": "Skills/Clinical/Clinical_Note_Summarization/SKILL.md",
       "relative_path": "Clinical/Clinical_Note_Summarization/SKILL.md",
-      "last_modified": "2026-05-05T18:19:31.199840+00:00",
-      "body_length": 3091,
+      "last_modified": "2026-05-08T13:52:50.821035+00:00",
+      "body_length": 3380,
       "capabilities": [
         "At-a-Glance",
         "Inputs",
@@ -1460,7 +1460,7 @@
       ],
       "file_path": "Skills/Clinical/Oncology/Precision_Oncology_Agent/SKILL.md",
       "relative_path": "Clinical/Oncology/Precision_Oncology_Agent/SKILL.md",
-      "last_modified": "2026-05-05T18:09:24.119014+00:00",
+      "last_modified": "2026-05-05T18:24:02.722979+00:00",
       "body_length": 2252,
       "capabilities": [
         "At-a-Glance",
@@ -1484,8 +1484,8 @@
       ],
       "file_path": "Skills/Clinical/Prior_Authorization/SKILL.md",
       "relative_path": "Clinical/Prior_Authorization/SKILL.md",
-      "last_modified": "2026-05-04T16:43:10.210285+00:00",
-      "body_length": 2251,
+      "last_modified": "2026-05-08T13:56:21.055053+00:00",
+      "body_length": 2261,
       "capabilities": [
         "When to Use This Skill",
         "Core Capabilities",
@@ -1510,6 +1510,29 @@
       "relative_path": "Clinical/PromiseAdProgressionSurvivalAgent_Agent/SKILL.md",
       "last_modified": "2026-05-03T04:02:58.314651+00:00",
       "body_length": 5980,
+      "capabilities": [
+        "Overview",
+        "When to Use This Skill",
+        "Core Capabilities",
+        "Inputs / Outputs",
+        "References"
+      ]
+    },
+    {
+      "name": "psychiatry-knowledge-fused-reasoning",
+      "description": "Psychiatry CDS workflow for knowledge-fused augmented reasoning across diagnosis, risk assessment, medication reasoning, and care planning.",
+      "tool_type": "",
+      "primary_tool": "",
+      "measurable_outcome": "Execute skill workflow successfully with valid output within 15 minutes.",
+      "allowed-tools": [
+        "read_file",
+        "run_shell_command",
+        "web_fetch"
+      ],
+      "file_path": "Skills/Clinical/PsychiatryKnowledgeFusedReasoning_Agent/SKILL.md",
+      "relative_path": "Clinical/PsychiatryKnowledgeFusedReasoning_Agent/SKILL.md",
+      "last_modified": "2026-05-08T13:52:30.274130+00:00",
+      "body_length": 4880,
       "capabilities": [
         "Overview",
         "When to Use This Skill",
@@ -1551,7 +1574,7 @@
       ],
       "file_path": "Skills/Clinical/Safety/AI_Safety_Auditor/SKILL.md",
       "relative_path": "Clinical/Safety/AI_Safety_Auditor/SKILL.md",
-      "last_modified": "2026-05-05T17:20:44.026832+00:00",
+      "last_modified": "2026-05-05T18:24:02.722979+00:00",
       "body_length": 3626,
       "capabilities": [
         "When to Use This Skill",
@@ -1617,8 +1640,8 @@
       ],
       "file_path": "Skills/Clinical/Trial_Matching/TrialGPT/SKILL.md",
       "relative_path": "Clinical/Trial_Matching/TrialGPT/SKILL.md",
-      "last_modified": "2026-05-05T17:19:29.713038+00:00",
-      "body_length": 2798,
+      "last_modified": "2026-05-08T13:51:38.693367+00:00",
+      "body_length": 2760,
       "capabilities": [
         "Core Capabilities",
         "Inputs",
@@ -8258,8 +8281,8 @@
       ],
       "file_path": "Skills/Genomics/Variant_Interpretation/SKILL.md",
       "relative_path": "Genomics/Variant_Interpretation/SKILL.md",
-      "last_modified": "2026-05-04T16:43:10.211285+00:00",
-      "body_length": 1908,
+      "last_modified": "2026-05-08T13:53:09.029951+00:00",
+      "body_length": 1945,
       "capabilities": [
         "When to Use This Skill",
         "Core Capabilities",
@@ -8280,7 +8303,7 @@
       ],
       "file_path": "Skills/Genomics/Variant_Interpretation/bioSkills/clinical-interpretation/SKILL.md",
       "relative_path": "Genomics/Variant_Interpretation/bioSkills/clinical-interpretation/SKILL.md",
-      "last_modified": "2026-05-05T18:20:15.692696+00:00",
+      "last_modified": "2026-05-05T18:24:02.722979+00:00",
       "body_length": 10316,
       "capabilities": [
         "Core Capabilities",
@@ -12615,7 +12638,7 @@
       ],
       "file_path": "Skills/LLM_Research/SKILL.md",
       "relative_path": "LLM_Research/SKILL.md",
-      "last_modified": "2026-05-05T17:18:17.332240+00:00",
+      "last_modified": "2026-05-05T18:24:02.722979+00:00",
       "body_length": 3191,
       "capabilities": [
         "Purpose",
@@ -12853,8 +12876,8 @@
       ],
       "file_path": "Skills/MCP_Servers/PubmedNcbiMcpServer_Agent/SKILL.md",
       "relative_path": "MCP_Servers/PubmedNcbiMcpServer_Agent/SKILL.md",
-      "last_modified": "2026-05-04T16:43:10.211285+00:00",
-      "body_length": 4073,
+      "last_modified": "2026-05-08T13:56:40.693961+00:00",
+      "body_length": 4372,
       "capabilities": [
         "Overview",
         "When to Use This Skill",
@@ -13022,7 +13045,7 @@
       ],
       "file_path": "Skills/Machine_Learning/machine-learning/survival-analysis/SKILL.md",
       "relative_path": "Machine_Learning/machine-learning/survival-analysis/SKILL.md",
-      "last_modified": "2026-05-05T17:19:06.289104+00:00",
+      "last_modified": "2026-05-05T18:24:02.722979+00:00",
       "body_length": 5956,
       "capabilities": [
         "Core Capabilities",
@@ -14856,8 +14879,8 @@
       ],
       "file_path": "Skills/Pathology_AI/Computational_Pathology_Agent/SKILL.md",
       "relative_path": "Pathology_AI/Computational_Pathology_Agent/SKILL.md",
-      "last_modified": "2026-05-05T18:21:20.434489+00:00",
-      "body_length": 2270,
+      "last_modified": "2026-05-08T13:53:57.446726+00:00",
+      "body_length": 2692,
       "capabilities": [
         "Overview",
         "Capabilities",

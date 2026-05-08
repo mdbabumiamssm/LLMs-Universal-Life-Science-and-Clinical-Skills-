@@ -37,7 +37,7 @@ The **Clinical NLP Skill** converts free-text clinical notes into structured dat
 2.  **Negation Detection**: (Basic) Checks if a finding is denied ("No fever").
 3.  **Structuring**: Returns JSON format compatible with FHIR/USDL.
 4.  **Rare-neoplasm RWD abstraction with LLMs**: For registry-quality capture in rare neoplasms such as bone sarcoma, use schema-first abstraction from unstructured oncology notes, map outputs to registry fields, capture temporal events such as diagnosis, treatment, progression, recurrence, and follow-up, validate extracted values against source-note evidence, label uncertain values, preserve audit-ready extraction logs and provenance for each extracted item, and route sparse-cohort or low-confidence cases through human clinician review loops.
-5.  **Outcome extraction with temporal anchoring**: Extract patient outcomes from clinician notes, normalize outcome events, infer explicit or relative dates/times and time windows, distinguish baseline from follow-up events, label uncertainty, retain source-note evidence spans, and export registry/RWD-ready fields for outcome status, event timing, temporal anchor, uncertainty, and provenance.
+5.  **Outcome extraction with temporal anchoring**: Extract patient outcomes from clinician notes, normalize outcome events, infer explicit or relative dates/times and time windows, distinguish baseline from follow-up events, label uncertainty and negation, retain source-note evidence spans, and export registry/RWD-ready fields for outcome status, event timing, temporal anchor, uncertainty, negation, provenance, and audit trails.
 
 ## Workflow
 

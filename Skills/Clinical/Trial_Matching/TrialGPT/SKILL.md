@@ -22,7 +22,6 @@ keywords:
 measurable_outcome: Produce ≥5 ranked trials (when available) with rationale + missing-data notes within 3 minutes of receiving a patient query.
 license: MIT
 metadata:
-  author: TrialGPT Team
   version: "1.0.0"
 compatibility:
   - system: Python 3.9+
@@ -36,8 +35,8 @@ allowed-tools:
 Run the locally checked-out TrialGPT pipeline to retrieve, rank, and explain candidate trials for a patient before deeper eligibility review.
 
 ## Core Capabilities
-- Support prospective oncology trial matching with a neuro-symbolic, multi-agent workflow that uses an oncology-specific knowledge graph for criterion-level reasoning, records patient-scale throughput metrics such as cohort size and adjudication status, and routes uncertain or high-impact matches to human-in-the-loop review.
-- Apply prospective oncology trial matching patterns from large patient cohorts: neuro-symbolic multi-agent review, oncology knowledge graph grounding, criterion-level evidence extraction, and prospective performance tracking for each screening run.
+- Support prospective oncology trial matching for large real-world cohorts with neuro-symbolic, multi-agent workflows grounded in an oncology-specific knowledge graph, including criterion-level matching, evidence provenance, unresolved eligibility gaps, and human review flags.
+- Apply prospective oncology trial matching patterns from large patient cohorts: neuro-symbolic multi-agent review, oncology knowledge graph grounding, criterion-level evidence extraction, unresolved-data notes, and clinician validation for each screening run.
 
 ## Inputs
 - Patient summary (structured JSON or free text) with condition keywords.

@@ -202,7 +202,7 @@ This project is licensed under the MIT License for open-source components, but t
 
 <!-- BEGIN: PIPELINE_INDEX -->
 
-_Auto-generated index. 1023 skills across 54 categories. Last refresh: 2026-05-05T18:23:56.932518+00:00._
+_Auto-generated index. 1024 skills across 54 categories. Last refresh: 2026-05-08T13:57:19.839876+00:00._
 
 ### 3D_Genomics (8)
 
@@ -257,7 +257,7 @@ _Auto-generated index. 1023 skills across 54 categories. Last refresh: 2026-05-0
 - **regulatory-drafting** — Regulatory Drafting agent for healthcare workflows.
 - **research-literature** — Research Literature agent for healthcare workflows.
 
-### Clinical (28)
+### Clinical (29)
 
 - **ai-safety-auditor** — Validates clinical AI outputs for safety, bias, and hallucination risks before delivery to end-users or clinicians.
 - **autonomous-oncology-agent** — Precision Oncology
@@ -282,6 +282,7 @@ _Auto-generated index. 1023 skills across 54 categories. Last refresh: 2026-05-0
 - **precision-oncology-agent** — Fuse genomic variants, pathology findings, and clinical context to draft evidence-linked therapy options for tumor board review.
 - **prior-auth-coworker** — Prior Auth Review
 - **promise-ad-progression-survival-agent** — Progression-aware multi-horizon survival agent that estimates calibrated 1/2/3/5-year risks of CN→MCI and MCI→AD conversion from irregula...
+- **psychiatry-knowledge-fused-reasoning** — Psychiatry CDS workflow for knowledge-fused augmented reasoning across diagnosis, risk assessment, medication reasoning, and care planning.
 - **radgpt-radiology-reporter** — Radiology Reporter
 - **safety-monitor** — Safety Monitor
 - **trial-eligibility-agent** — Parse trial protocols and patient data to produce criterion-level MET/NOT/UNKNOWN determinations with evidence and gaps for clinical tria...

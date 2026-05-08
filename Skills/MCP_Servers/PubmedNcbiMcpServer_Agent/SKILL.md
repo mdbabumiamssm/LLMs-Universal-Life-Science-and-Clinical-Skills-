@@ -50,6 +50,7 @@ Use this skill to connect biomedical research prompts to a repeatable PubMed MCP
 5. **MeSH exploration** - Inspect Medical Subject Headings associated with biomedical concepts or articles to refine searches and improve topic coverage.
 6. **Related research discovery** - Use PubMed related-article functionality to expand from seed papers into adjacent biomedical literature.
 7. **Transport selection** - Run the MCP server over STDIO for local agent integration or Streamable HTTP when a network-accessible MCP endpoint is required.
+8. **Provenance-preserving literature workflow** - Keep PubMed metadata retrieval distinct from full-text discovery, respect NCBI E-utilities rate limits, and preserve PMIDs, DOIs, MeSH terms, citation outputs, related-article links, and full-text availability signals in downstream research notes.
 
 ## Inputs / Outputs
 

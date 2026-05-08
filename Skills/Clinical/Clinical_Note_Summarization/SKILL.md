@@ -35,6 +35,7 @@ allowed-tools:
 3. Optional JSON payload using schema from README.
 
 ## Core Capabilities
+- Require clinical-note quality evaluation before AI-generated summaries enter clinical workflows, including note-level rubric scoring for correctness, omissions, and risk of harm, benchmark designs matched to the target note task, and human adjudication of disputed or high-risk outputs.
 - Evaluate AI-generated clinical notes and SOAP summaries for correctness, omissions, factuality, harm-risk, and structure quality using rubric-based clinician review, benchmark design, inter-rater agreement checks, and regression tests before deployment.
 - Build clinical-note quality evaluation modules for AI-generated documentation that check correctness, omissions, harmful hallucinations, note-specific rubric criteria, human reviewer sampling, and transparent benchmark reporting.
 - Design dataset- and task-specific clinical-note quality rubrics that assess factual correctness, omissions, hallucinations, harmfulness, structure adherence, completeness, and clinician preference.
