@@ -37,6 +37,7 @@ This skill analyzes a list of medications to identify known interactions, focusi
 2.  **Severity Grading**: Classifies interactions as Minor, Moderate, or Major.
 3.  **Clinical Recommendations**: Provides actionable advice (e.g., "Monitor K+ levels").
 4.  **Antiseizure Medication DDI Review**: For antiseizure medication DDIs, validate any LLM-generated interaction assessment against trusted references such as Lexicomp and Drugs.com; treat iterative prompting as a source of potential variability rather than proof of correctness, normalize interaction severity labels across references before reporting, and require pharmacist review for clinically relevant findings or discrepancies.
+5.  **LLM DDI Evidence Hierarchy and Validation Checklist**: Treat curated DDI references such as Lexicomp or Drugs.com as higher-priority evidence than LLM output; use antiseizure medication DDIs as a stress case by checking each LLM-generated answer against reference entries, documenting prompt iterations and answer changes in an audit log, recording severity-label normalization, and flagging discrepancies before reporting.
 
 ## Workflow
 
