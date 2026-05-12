@@ -36,7 +36,7 @@ This skill acts as an automated utilization management reviewer. It takes unstru
 1.  **Policy Matching**: Checks against specific criteria (e.g., "Pain > 6 weeks").
 2.  **Trace Generation**: Produces an "Anthropic-style" `<thinking>` trace for auditability.
 3.  **Structured Output**: Returns a JSON object with decision, reasoning, and timestamps.
-4.  **Microsoft Payer-Side Multi-Agent Review**: Supports architecture patterns with compliance, clinical, coverage, and synthesis agents; gate-based decision rubrics; MCP healthcare data access; confidence scoring; audit trails; Azure Container Apps deployment via `azd`; and human-in-the-loop escalation for oversight.
+4.  **Microsoft Payer-Side Multi-Agent Review**: Supports Microsoft Agent Framework architecture patterns with compliance, clinical, coverage, and synthesis agents; gate-based decision rubrics; MCP healthcare data access; confidence scoring; audit trails; Azure Container Apps deployment via `azd`; and mandatory human-in-the-loop oversight.
 
 ## Workflow
 
