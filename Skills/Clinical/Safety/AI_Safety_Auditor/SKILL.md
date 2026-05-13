@@ -56,6 +56,7 @@ The **AI Safety Auditor** is a critical "human-in-the-loop" simulator and automa
 9.  **Test-Time Knowledge Acquisition Audit**: Checks medical decision support outputs for guarded response-time evidence retrieval or acquisition when clinical knowledge is uncertain, verifies source authority before use, records acquired evidence and provenance in audit logs, compares pre/post retrieval decisions, and blocks unsupported or stale medical recommendations.
 10. **LLM-Assisted Guideline Drafting Evaluation**: Checks clinical practice guideline drafts for evidence traceability, conflict handling, recommendation grading, human panel review, and real-time discrepancy logging during guideline development.
 11. **Fine-Grained Medical Q&A Dataset Evaluation**: Audits domain-specific medical Q&A evaluation sets with domain stratification, omission and harm taxonomies, calibration checks, uncertainty labeling, and trustworthy-answer scoring beyond simple accuracy.
+12. **Clinical Guideline Contribution Review**: Evaluates LLM contributions to clinical practice guideline development by requiring recommendation-level evidence traceability, real-time expert reviewer workflows, omission and harm checks, explicit source grading, consensus handling for disagreements, and mandatory human expert oversight before adoption.
 
 ## Workflow
 

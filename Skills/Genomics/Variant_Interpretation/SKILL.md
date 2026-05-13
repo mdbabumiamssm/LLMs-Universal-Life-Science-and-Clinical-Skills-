@@ -36,7 +36,7 @@ The **Variant Interpretation Skill** automates the classification of genetic var
 1.  **Rule Scoring**: Applies codes like PVS1 (Null variant), PM2 (Rare), PP3 (In silico).
 2.  **Classification**: Combines scores to reach a verdict (Pathogenic, Likely Pathogenic, VUS, etc.).
 3.  **Explanation**: Provides the logic/evidence used for the classification.
-4.  **Precision-Grounded Summarization**: Retrieves variant evidence from ClinVar, gnomAD, OMIM, or equivalent evidence-based databases; keeps assertions citation-linked to retrieved evidence; separates asserted facts from model-generated synthesis; reports source freshness and review status when available; uses ACMG-compatible uncertainty language; flags conflicting evidence; and prohibits unsupported pathogenicity claims.
+4.  **Precision-Grounded Summarization**: Retrieves variant evidence from ClinVar, gnomAD, ACMG-linked sources, or equivalent evidence-based databases; cites database evidence; separates evidence from interpretation; reports source freshness and review status when available; tracks uncertainty and conflicting evidence; and rejects unsupported pathogenicity claims.
 
 ## Workflow
 

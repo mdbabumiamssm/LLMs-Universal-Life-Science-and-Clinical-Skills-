@@ -43,9 +43,11 @@ allowed-tools:
 - Select evaluation methods for AI-generated clinical notes by pairing rubric-based scoring with experimental benchmark selection and reviewer agreement reporting.
 - Evaluate AI-generated clinical notes with methods covering factual correctness, omissions, hallucinations, note completeness, readability, downstream safety risk, inter-rater review, and benchmark reporting templates.
 - Require clinician-adjudicated evaluation of AI-generated clinical notes before downstream use, covering correctness, omissions, hallucinations, risk of harm, note completeness, and benchmark design fit for the target note task.
+- Evaluate AI-generated clinical notes before deployment for correctness, completeness, harmful omission, factual consistency, and template adherence using clinician rubric review and transparent benchmark reporting.
 
 ## Quality Evaluation
 - Score generated notes for correctness, omissions, hallucinations, risk of harm, and note completeness using explicit review rubrics; select benchmarks that match the clinical note task being tested, report reviewer agreement when multiple reviewers assess the same outputs, and require clinician adjudication before generated notes are used downstream.
+- Before deployment, evaluate AI-generated clinical notes for correctness, completeness, harmful omission, factual consistency, and template adherence; use clinician rubric review and report benchmark methods transparently.
 
 ## Workflow
 1. **Load system prompt:** `prompt.md` enforces no hallucinations + data gap surfacing.
