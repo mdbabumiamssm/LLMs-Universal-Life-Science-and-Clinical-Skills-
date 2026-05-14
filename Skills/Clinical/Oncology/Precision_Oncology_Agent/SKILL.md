@@ -36,7 +36,7 @@ measurable_outcome: 'Deliver a ranked therapy list with OncoKB/NCCN citations pl
 3. Biomarker summary (TMB, MSI, PD-L1 if provided) and missing-test checklist.
 
 ## Core Capabilities
-- Support GI cancer AI management for colorectal, hepatobiliary, pancreatic, gastric, and esophageal cancers by synthesizing molecular profiling with imaging, endoscopy, pathology, genomic, and clinical inputs into multimodal evidence review for guideline-aligned patient selection, while keeping therapy suggestions advisory and bounded by tumor-board oncology review.
+- Support GI cancer AI management for colorectal, hepatobiliary, pancreatic, gastric, and esophageal cancers by synthesizing molecular profiling with imaging, endoscopy, pathology, genomic, trial-eligibility, and clinical inputs into multimodal evidence review; draft advisory treatment-planning and clinical-trial matching considerations for tumor-board use, with final regimen selection, eligibility confirmation, ordering, consent, and care changes reserved for the treating oncologist.
 
 ## Workflow
 1. **Ingest & normalize:** Harmonize gene symbols, genome build, and variant effects.

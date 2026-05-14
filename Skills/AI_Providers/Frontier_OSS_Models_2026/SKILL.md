@@ -25,6 +25,7 @@ allowed-tools:
 ## Core Capabilities
 
 - Clinical on-prem deployment caution for distilled/open DeepSeek-R1-style medical diagnosis models: before clinical use, require local diagnosis-performance validation, privacy and PHI handling controls, model provenance review, offline inference constraint checks, calibration review, hallucination and safety checks, and downgrade-risk assessment against frontier hosted models.
+- Medical diagnosis deployment guardrails: for distilled DeepSeek-R1 and other open-source diagnosis models, validate local/on-prem workflows, run task-specific benchmarks before baseline changes, enforce privacy controls, check hallucination behavior, and require human oversight before clinical use.
 
 ## Workflow
 

@@ -202,7 +202,7 @@ This project is licensed under the MIT License for open-source components, but t
 
 <!-- BEGIN: PIPELINE_INDEX -->
 
-_Auto-generated index. 1025 skills across 54 categories. Last refresh: 2026-05-13T10:43:10.736228+00:00._
+_Auto-generated index. 1026 skills across 54 categories. Last refresh: 2026-05-14T10:47:08.391585+00:00._
 
 ### 3D_Genomics (8)
 
@@ -704,9 +704,10 @@ _Auto-generated index. 1025 skills across 54 categories. Last refresh: 2026-05-1
 - **tumor-heterogeneity-agent** — AI-powered intratumor heterogeneity analysis for clonal architecture reconstruction, subclonal evolution tracking, and therapy resistance...
 - **tumor-mutational-burden-agent** — Calculates and harmonizes Tumor Mutational Burden (TMB) across platforms to predict immunotherapy response.
 
-### Pathology_AI (1)
+### Pathology_AI (2)
 
 - **computational-pathology-agent** — Analyze Whole Slide Images (WSI) for digital pathology, including tissue segmentation, feature extraction, and biomarker model planning.
+- **dmmr-crc-histopathology-agent** — Predict and validate colorectal cancer dMMR signals from H&E histopathology, including non-tumor and low-magnification WSI regions.
 
 ### Pharma (2)
 
