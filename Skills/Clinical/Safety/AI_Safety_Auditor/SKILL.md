@@ -58,6 +58,7 @@ The **AI Safety Auditor** is a critical "human-in-the-loop" simulator and automa
 11. **Fine-Grained Medical Q&A Dataset Evaluation**: Audits domain-specific medical Q&A evaluation sets with domain stratification, omission and harm taxonomies, calibration checks, uncertainty labeling, and trustworthy-answer scoring beyond simple accuracy.
 12. **Clinical Guideline Contribution Review**: Evaluates LLM contributions to clinical practice guideline development by requiring recommendation-level evidence traceability, real-time expert reviewer workflows, omission and harm checks, explicit source grading, consensus handling for disagreements, and mandatory human expert oversight before adoption.
 13. **Real-Time Guideline Recommendation Evaluation**: Reviews LLM-supported guideline development for real-time evidence traceability, conflict-of-interest review, recommendation grading checks, citation audit, and panel-level human signoff before recommendations are finalized.
+14. **Domain-Specific Medical QA Stratified Error Analysis**: Classifies answer correctness, omissions, unsafe reasoning, evidence support, and dataset leakage in medical QA datasets, requiring stratified error analysis before trusting medical LLM answers.
 
 ## Workflow
 
