@@ -59,6 +59,9 @@ The **AI Safety Auditor** is a critical "human-in-the-loop" simulator and automa
 12. **Clinical Guideline Contribution Review**: Evaluates LLM contributions to clinical practice guideline development by requiring recommendation-level evidence traceability, real-time expert reviewer workflows, omission and harm checks, explicit source grading, consensus handling for disagreements, and mandatory human expert oversight before adoption.
 13. **Real-Time Guideline Recommendation Evaluation**: Reviews LLM-supported guideline development for real-time evidence traceability, conflict-of-interest review, recommendation grading checks, citation audit, and panel-level human signoff before recommendations are finalized.
 14. **Domain-Specific Medical QA Stratified Error Analysis**: Classifies answer correctness, omissions, unsafe reasoning, evidence support, and dataset leakage in medical QA datasets, requiring stratified error analysis before trusting medical LLM answers.
+15. **Clinical Practice Guideline Development Audit Pattern**: Limits LLM use to draft synthesis and checking, tracks source provenance, compares draft recommendations against guideline-panel decisions, and flags unverifiable evidence, omitted harms, conflicts, and strength-of-recommendation mismatches.
+16. **Fine-Grained Trustworthy Medical QA Dataset Audit**: Evaluates domain-specific Q&A datasets with item-level error labels, omission and risk-of-harm scoring, dataset provenance checks, specialty stratification, and regression benchmarks for trustworthy medical language model evaluation.
+17. **Medical Decision Support Test-Time Knowledge Acquisition Check**: Requires retrieval provenance for acquired clinical facts, separates retrieved facts from model priors, evaluates answer changes after retrieval, and flags unsupported or outdated clinical claims.
 
 ## Workflow
 
