@@ -43,7 +43,7 @@ Specializing in Hemato-Oncology,and Machine Learning-LLM-AI.
 
 ---
 
-## 🌟 Major Updates (February 2026)
+## 🌟 Major Updates
 
 We have significantly expanded the **Skills** directory to align with the 2026 roadmap, introducing the `SKILL.md` metadata standard and deploying high-performance agents across key domains.
 
