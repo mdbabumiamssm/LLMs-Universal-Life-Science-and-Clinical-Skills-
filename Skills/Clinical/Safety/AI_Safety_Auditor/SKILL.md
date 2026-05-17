@@ -62,6 +62,7 @@ The **AI Safety Auditor** is a critical "human-in-the-loop" simulator and automa
 15. **Clinical Practice Guideline Development Audit Pattern**: Limits LLM use to draft synthesis and checking, tracks source provenance, compares draft recommendations against guideline-panel decisions, and flags unverifiable evidence, omitted harms, conflicts, and strength-of-recommendation mismatches.
 16. **Fine-Grained Trustworthy Medical QA Dataset Audit**: Evaluates domain-specific Q&A datasets with item-level error labels, omission and risk-of-harm scoring, dataset provenance checks, specialty stratification, and regression benchmarks for trustworthy medical language model evaluation.
 17. **Medical Decision Support Test-Time Knowledge Acquisition Check**: Requires retrieval provenance for acquired clinical facts, separates retrieved facts from model priors, evaluates answer changes after retrieval, and flags unsupported or outdated clinical claims.
+18. **On-Premises Open-Source Clinical LLM Deployment Checklist**: Requires local diagnostic benchmark design, calibration and harm review, PHI containment, model provenance documentation, regression gates, and clinician override requirements before production use.
 
 ## Workflow
 

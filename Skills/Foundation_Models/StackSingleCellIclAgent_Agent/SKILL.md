@@ -44,6 +44,7 @@ This skill operationalizes Arc Institute's Stack, a single-cell foundation model
 5. **Few-shot annotation** — Map predicted labels back to AnnData `obs`, including confidence scores when produced by the model head.
 6. **Embedding export** — Optionally extract per-cell representations for downstream clustering, visualization, or transfer learning.
 7. **Reproducibility scaffolding** — Pin model revision, random seeds, and the exact support-set composition used for each run so results can be regenerated.
+8. **Stack-vs-embedding workflow selection** — Prefer Stack when the task can be expressed as labeled support cells plus unlabeled query cells and the user needs inference-time adaptation without task fine-tuning; keep scGPT/Geneformer-style embedding workflows when the goal is reusable latent representations, clustering, or a downstream model trained outside the ICL prompt. For benchmark checks, evaluate only against user-provided held-out labels or explicitly named project baselines, and record the query/support split, label column, and model revision with the reported outputs.
 
 ## Inputs / Outputs
 

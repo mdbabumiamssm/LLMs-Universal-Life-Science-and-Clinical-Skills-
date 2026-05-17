@@ -35,6 +35,7 @@ allowed-tools:
 3. Optional JSON payload using schema from README.
 
 ## Core Capabilities
+- Evaluate AI-generated SOAP and specialty clinical-note outputs for correctness, omissions, hallucinated content, temporal consistency, risk of harm, note-type-specific rubric fit, blinded clinician review, and transparent benchmark reporting.
 - Compare generated notes against source notes for correctness, omissions, hallucinations, harmful content, structure, and coding/assessment consistency; use human review rubrics and track experimental benchmark results for quality evaluation.
 - Use systematic-benchmark evaluation methods for generated clinical notes: test factual consistency and completeness, track note-type-specific omissions, assign risk-of-harm labels, compare clinician preferences, and maintain regression test sets for generated-note changes.
 - Add benchmark-driven quality evaluation for AI-generated clinical notes that covers correctness, omissions, factual consistency, note completeness, risk-of-harm scoring, and selection of a human review rubric suited to the note task.
@@ -51,6 +52,7 @@ allowed-tools:
 ## Quality Evaluation
 - Score generated notes for correctness, omissions, hallucinations, risk of harm, and note completeness using explicit review rubrics; select benchmarks that match the clinical note task being tested, report reviewer agreement when multiple reviewers assess the same outputs, and require clinician adjudication before generated notes are used downstream.
 - Before deployment, evaluate AI-generated clinical notes for correctness, completeness, harmful omission, factual consistency, and template adherence; use clinician rubric review and report benchmark methods transparently.
+- For SOAP and specialty-note outputs, include temporal consistency checks, blinded clinician review where feasible, note-type-specific scoring criteria, and benchmark reports that state task design, reviewer process, and measured error categories without implying unsupported clinical validation.
 
 ## Workflow
 1. **Load system prompt:** `prompt.md` enforces no hallucinations + data gap surfacing.

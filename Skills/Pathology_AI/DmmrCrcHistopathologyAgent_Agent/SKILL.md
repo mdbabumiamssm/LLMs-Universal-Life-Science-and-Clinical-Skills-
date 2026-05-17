@@ -49,6 +49,7 @@ Use this skill to structure data intake, region selection, model execution, vali
 5. **Leakage-aware training and inference** - Enforce patient-level splits, avoid slide or tile leakage, separate development from locked evaluation, and document any cohort enrichment or case-control sampling.
 6. **Validation and interpretation review** - Report metrics only when computed from the supplied data, inspect calibration and subgroup behavior, review heatmaps or attention maps cautiously, and summarize failure modes.
 7. **Clinical-pathology handoff** - Produce concise notes that describe image evidence, region contributions, uncertainty, limitations, recommended confirmatory testing, and cases needing pathologist review.
+8. **Non-tumor and low-magnification dMMR review** - Explicitly sample non-tumor and low-magnification colorectal cancer WSI regions, record region-level contribution to the prediction, validate predictions against available MSI or IHC status, and route uncertain predictions to pathology review.
 
 ## Inputs / Outputs
 
