@@ -51,6 +51,7 @@ Use this skill to connect biomedical research prompts to a repeatable PubMed MCP
 6. **Related research discovery** - Use PubMed related-article functionality to expand from seed papers into adjacent biomedical literature.
 7. **Transport selection** - Run the MCP server over STDIO for local agent integration or Streamable HTTP when a network-accessible MCP endpoint is required.
 8. **Provenance-preserving literature workflow** - Keep PubMed metadata retrieval distinct from full-text discovery, respect NCBI E-utilities rate limits, and preserve PMIDs, DOIs, MeSH terms, citation outputs, related-article links, and full-text availability signals in downstream research notes.
+9. **Richer literature MCP comparison** - For broader biomedical literature workflows, compare against richer PubMed/literature MCP servers such as `u9401066/pubmed-search-mcp`, which reports 40 tools, multi-source search across PubMed, Europe PMC, CORE, and OpenAlex, full-text access, citation networks, and PICO analysis; keep `cyanheads/pubmed-mcp-server` as the default when stability, NCBI E-utilities alignment, and PubMed fidelity matter most.
 
 ## Inputs / Outputs
 
@@ -76,3 +77,4 @@ Use this skill to connect biomedical research prompts to a repeatable PubMed MCP
 - PubMed help: https://pubmed.ncbi.nlm.nih.gov/help/
 - MeSH browser: https://meshb.nlm.nih.gov/
 - Unpaywall: https://unpaywall.org/
+- Richer literature MCP comparison source: https://github.com/u9401066/pubmed-search-mcp

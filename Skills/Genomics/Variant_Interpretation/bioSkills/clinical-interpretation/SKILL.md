@@ -32,6 +32,7 @@ Prioritize and interpret variants for clinical significance using databases and 
 - Generate Precision Grounding-style LLM variant summaries by separating database facts from model synthesis, citing ClinVar variation/accession records, gnomAD population evidence, and ACMG/AMP criteria used for each statement, then running hallucination checks against the retrieved evidence before including content in genetic variant reports.
 - Produce precision-grounded variant summaries with explicit provenance for ClinVar assertions, gnomAD population frequency, COSMIC somatic evidence, and literature findings; surface conflicts across sources for manual review, and do not make or upgrade pathogenicity claims unless directly supported by retrieved evidence and applicable ACMG/AMP criteria.
 - Before drafting genetic variant summaries, retrieve and reconcile evidence from ClinVar, gnomAD, dbSNP, COSMIC, ACMG/AMP criteria, and disease databases; include only citation-backed claims, detect conflicts across sources, and label uncertainty when evidence is incomplete or discordant.
+- For LLM-assisted variant summarization, link each interpretive statement to retrieved ClinVar, gnomAD, dbSNP, COSMIC, or ACMG/AMP evidence; run hallucination checks against those records and remove unsupported claims before reporting.
 
 ## Interpretation Framework
 

@@ -35,6 +35,7 @@ allowed-tools:
 3. Optional JSON payload using schema from README.
 
 ## Core Capabilities
+- Add a clinical-note quality evaluation module for AI-generated notes that checks correctness, omission, risk of harm, factual consistency, structure adherence, rubric-based human review, and transparent benchmark reporting.
 - Evaluate AI-generated SOAP and specialty clinical-note outputs for correctness, omissions, hallucinated content, temporal consistency, risk of harm, note-type-specific rubric fit, blinded clinician review, and transparent benchmark reporting.
 - Compare generated notes against source notes for correctness, omissions, hallucinations, harmful content, structure, and coding/assessment consistency; use human review rubrics and track experimental benchmark results for quality evaluation.
 - Use systematic-benchmark evaluation methods for generated clinical notes: test factual consistency and completeness, track note-type-specific omissions, assign risk-of-harm labels, compare clinician preferences, and maintain regression test sets for generated-note changes.
