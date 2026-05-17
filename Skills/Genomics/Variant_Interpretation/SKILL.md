@@ -40,6 +40,7 @@ The **Variant Interpretation Skill** automates the classification of genetic var
 5.  **Evidence Database Augmentation**: Uses Precision Grounding-style database augmentation for variant summaries by grounding claims in ClinVar, gnomAD, OMIM-style, or equivalent evidence sources; preserving provenance links; checking for stale evidence; and adding ACMG-aware uncertainty statements when evidence is limited, conflicting, or outdated.
 6.  **Evidence-Grounded Variant Summaries**: Retrieves supporting data from trusted databases and literature; separates asserted classifications from model-generated synthesis; cites evidence levels where available; flags conflicts across ClinVar, gnomAD, and literature; and requires ACMG-style traceability from each summary statement back to its evidence source.
 7.  **Identifier-Normalized Evidence Summaries**: Normalizes variant, gene, and transcript identifiers before evidence lookup; retrieves evidence from trusted databases; cites database provenance; reconciles conflicting assertions; keeps evidence separate from interpretation; and flags unresolved gaps before clinical use.
+8.  **Precision-Grounded Variant Summarization**: Before generating a variant summary, retrieves evidence from ClinVar, gnomAD, ACMG/AMP criteria, disease databases, and literature; includes explicit citations for each evidence source; and identifies, reports, and reconciles conflicting evidence without inventing unsupported claims.
 
 ## Workflow
 

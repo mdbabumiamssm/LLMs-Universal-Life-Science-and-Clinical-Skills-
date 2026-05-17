@@ -17,6 +17,7 @@ description: Parse trial protocols and patient data to produce criterion-level M
 allowed-tools:
   - read_file
   - run_shell_command
+measurable_outcome: 'Produce a MET/NOT/UNKNOWN matrix with supporting citations for ≥90% of inclusion/exclusion criteria within 5 minutes per trial request.'
 ---
 
 ## At-a-Glance
@@ -34,6 +35,9 @@ allowed-tools:
 2. Overall recommendation (`potentially_eligible`, `not_eligible`, `needs_more_information`).
 3. Data gap checklist covering missing labs/imaging/biomarkers.
 
+## Core Capabilities
+- Support neuro-symbolic multi-agent oncology trial matching by combining an oncology-specific knowledge graph with agentic criterion parsing, prospective patient-level evaluation, confidence scoring, and human review for inclusion/exclusion decisions.
+
 ## Workflow
 1. **Acquire protocol:** Pull eligibility text from ClinicalTrials.gov or sponsor PDF.
 2. **Normalize criteria:** Break into atomic checks with AND/OR logic and thresholds.
@@ -49,6 +53,9 @@ allowed-tools:
 ## Tooling & References
 - Use `README.md` for API snippets (FHIR parsing, JSON schema) and dependency versions.
 - Pair with `Clinical/Trial_Matching/TrialGPT` when retrieval/ranking is also needed.
+
+## References
+- https://pubmed.ncbi.nlm.nih.gov/42004487/
 
 
 <!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

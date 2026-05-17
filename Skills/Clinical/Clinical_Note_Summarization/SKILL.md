@@ -35,6 +35,7 @@ allowed-tools:
 3. Optional JSON payload using schema from README.
 
 ## Core Capabilities
+- Evaluate AI-generated clinical notes with source-note traceability for factual correctness, omissions, risk of harm, structure, concision, and clinician usability; design experimental benchmarks that match the note task and report the measured quality dimensions.
 - Add a clinical-note quality evaluation module for AI-generated notes that checks correctness, omission, risk of harm, factual consistency, structure adherence, rubric-based human review, and transparent benchmark reporting.
 - Evaluate AI-generated SOAP and specialty clinical-note outputs for correctness, omissions, hallucinated content, temporal consistency, risk of harm, note-type-specific rubric fit, blinded clinician review, and transparent benchmark reporting.
 - Compare generated notes against source notes for correctness, omissions, hallucinations, harmful content, structure, and coding/assessment consistency; use human review rubrics and track experimental benchmark results for quality evaluation.
@@ -51,6 +52,7 @@ allowed-tools:
 - Evaluate AI-generated clinical notes before deployment for correctness, completeness, harmful omission, factual consistency, and template adherence using clinician rubric review and transparent benchmark reporting.
 
 ## Quality Evaluation
+- Require every AI-generated clinical note evaluation to map claims back to the source note, measure factual correctness, omissions, risk of harm, structure, concision, and clinician usability, and document the experimental benchmark design used for the target note task.
 - Score generated notes for correctness, omissions, hallucinations, risk of harm, and note completeness using explicit review rubrics; select benchmarks that match the clinical note task being tested, report reviewer agreement when multiple reviewers assess the same outputs, and require clinician adjudication before generated notes are used downstream.
 - Before deployment, evaluate AI-generated clinical notes for correctness, completeness, harmful omission, factual consistency, and template adherence; use clinician rubric review and report benchmark methods transparently.
 - For SOAP and specialty-note outputs, include temporal consistency checks, blinded clinician review where feasible, note-type-specific scoring criteria, and benchmark reports that state task design, reviewer process, and measured error categories without implying unsupported clinical validation.
