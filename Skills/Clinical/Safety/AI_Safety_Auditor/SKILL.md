@@ -64,6 +64,8 @@ The **AI Safety Auditor** is a critical "human-in-the-loop" simulator and automa
 17. **Medical Decision Support Test-Time Knowledge Acquisition Check**: Requires retrieval provenance for acquired clinical facts, separates retrieved facts from model priors, evaluates answer changes after retrieval, and flags unsupported or outdated clinical claims.
 18. **On-Premises Open-Source Clinical LLM Deployment Checklist**: Requires local diagnostic benchmark design, calibration and harm review, PHI containment, model provenance documentation, regression gates, and clinician override requirements before production use.
 19. **LLM-Assisted Clinical Practice Guideline Acceptance Checklist**: Evaluates guideline-development use of LLMs by checking evidence synthesis traceability, recommendation drafting provenance, conflict detection, audit trails, and documented human panel sign-off before guideline text is accepted.
+20. **Diagnosis-Focused On-Premises Open-Source LLM Deployment Checklist**: Compares distilled reasoning models against closed baselines before diagnosis use, requires local specialty validation, documents governance and latency tradeoffs, and classifies autonomous diagnostic use as high-risk with mandatory clinician oversight.
+21. **Clinical Guideline-Development LLM Evaluation Mode**: Requires source traceability, conflict-of-interest awareness, recommendation grading checks, omission review, and human panel adjudication before any LLM-assisted guideline language is accepted.
 
 ## Workflow
 
