@@ -24,7 +24,7 @@ allowed-tools:
 
 ## Core Capabilities
 
-- Clinical on-premises deployment caution for distilled open-source reasoning models such as DeepSeek-R1 derivatives: benchmark against diagnosis tasks, document calibration and safety gaps, validate local hosting constraints, and require clinician oversight before clinical use.
+- Clinical deployment caution for distilled DeepSeek-R1 or other open-source medical diagnosis models: compare benchmark performance with deployment risk, weigh on-premises privacy benefits against calibration limits and hallucination checks, and require model governance plus clinician oversight before clinical use.
 
 ## Workflow
 

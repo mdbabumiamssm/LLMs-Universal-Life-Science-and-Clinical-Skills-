@@ -42,6 +42,7 @@ The **Variant Interpretation Skill** automates the classification of genetic var
 7.  **Identifier-Normalized Evidence Summaries**: Normalizes variant, gene, and transcript identifiers before evidence lookup; retrieves evidence from trusted databases; cites database provenance; reconciles conflicting assertions; keeps evidence separate from interpretation; and flags unresolved gaps before clinical use.
 8.  **Precision-Grounded Variant Summarization**: Before generating a variant summary, retrieves evidence from ClinVar, gnomAD, ACMG/AMP criteria, disease databases, and literature; includes explicit citations for each evidence source; and identifies, reports, and reconciles conflicting evidence without inventing unsupported claims.
 9.  **Precision-Grounded Cross-Checks**: Retrieves authoritative variant database evidence before generation; preserves citations and provenance; separates known pathogenicity assertions from model inference; and requires ClinVar, gnomAD, COSMIC-style, or equivalent cross-checks before presenting a variant summary.
+10. **Evidence-Grounded LLM Variant Summarization**: For LLM-generated variant summaries, first retrieve ClinVar, gnomAD, OMIM, and literature evidence; cite database or publication provenance; keep pathogenicity claims distinct from uncertainty, conflicts, and evidence gaps; and validate the summary against ACMG-style criteria before clinical use.
 
 ## Workflow
 

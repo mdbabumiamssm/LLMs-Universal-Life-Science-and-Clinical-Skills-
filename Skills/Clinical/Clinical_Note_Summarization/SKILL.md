@@ -35,6 +35,7 @@ allowed-tools:
 3. Optional JSON payload using schema from README.
 
 ## Core Capabilities
+- Evaluate AI-generated clinical notes for correctness, completeness, omission detection, factuality, harmfulness, structure adherence, inter-rater adjudication, and benchmark-driven regression testing.
 - Evaluate AI-generated clinical notes with explicit quality criteria for correctness, content omission, hallucination, risk of harm, rubric design, inter-rater review, and benchmark reporting.
 - Evaluate AI-generated clinical notes with source-note traceability for factual correctness, omissions, risk of harm, structure, concision, and clinician usability; design experimental benchmarks that match the note task and report the measured quality dimensions.
 - Add a clinical-note quality evaluation module for AI-generated notes that checks correctness, omission, risk of harm, factual consistency, structure adherence, rubric-based human review, and transparent benchmark reporting.
