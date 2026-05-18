@@ -51,6 +51,7 @@ allowed-tools:
 - Evaluate AI-generated clinical notes with methods covering factual correctness, omissions, hallucinations, note completeness, readability, downstream safety risk, inter-rater review, and benchmark reporting templates.
 - Require clinician-adjudicated evaluation of AI-generated clinical notes before downstream use, covering correctness, omissions, hallucinations, risk of harm, note completeness, and benchmark design fit for the target note task.
 - Evaluate AI-generated clinical notes before deployment for correctness, completeness, harmful omission, factual consistency, and template adherence using clinician rubric review and transparent benchmark reporting.
+- Apply benchmark-style quality evaluation for AI-generated clinical notes that covers correctness, completeness, omission risk, hallucinated facts, structure adherence, inter-rater review, and regression testing of generated-note changes.
 
 ## Quality Evaluation
 - For AI-generated notes, use a structured quality evaluation rubric that scores correctness, content omissions, hallucinations, and risk of harm; define the rubric for the target note type, use inter-rater review or adjudication for disputed items, and report benchmark design and measured categories transparently.
@@ -58,6 +59,7 @@ allowed-tools:
 - Score generated notes for correctness, omissions, hallucinations, risk of harm, and note completeness using explicit review rubrics; select benchmarks that match the clinical note task being tested, report reviewer agreement when multiple reviewers assess the same outputs, and require clinician adjudication before generated notes are used downstream.
 - Before deployment, evaluate AI-generated clinical notes for correctness, completeness, harmful omission, factual consistency, and template adherence; use clinician rubric review and report benchmark methods transparently.
 - For SOAP and specialty-note outputs, include temporal consistency checks, blinded clinician review where feasible, note-type-specific scoring criteria, and benchmark reports that state task design, reviewer process, and measured error categories without implying unsupported clinical validation.
+- Maintain regression checks for generated clinical notes by re-running the same evaluation rubric across model, prompt, or workflow changes and comparing correctness, completeness, omission risk, hallucinated facts, structure adherence, and inter-rater review outcomes.
 
 ## Workflow
 1. **Load system prompt:** `prompt.md` enforces no hallucinations + data gap surfacing.

@@ -45,6 +45,7 @@ The **Clinical NLP Skill** converts free-text clinical notes into structured dat
 10. **Outcome temporal anchoring from clinician notes**: Identify outcome mentions, normalize explicit dates and relative intervals, distinguish current versus historical events, attach evidence spans to each outcome-timing assertion, and flag uncertain timing for review.
 11. **Criterion-level rare-neoplasm registry abstraction**: Use LLMs to abstract registry variables from oncology notes for rare neoplasms, preserve criterion-level provenance for each extracted value, handle sparse disease-specific vocabularies such as bone sarcoma terminology, and validate extracted variables against manual abstraction before downstream real-world-data use.
 12. **Rare-neoplasm registry workflow fields**: For rare-neoplasm real-world-data extraction, define registry fields for tumor subtype, treatment lines, response, progression, and follow-up dates before running LLM extraction; require uncertainty labels for extracted values and manual QA before releasing sparse rare cancer cohort datasets.
+13. **Rare-neoplasm clinician-note RWD extraction mode**: Use LLM-assisted abstraction from clinician notes for sparse rare-neoplasm cohorts such as bone sarcoma, predefine registry-style fields and allowed values, validate temporal consistency across diagnosis, treatment, response, progression, recurrence, and follow-up dates, and route ambiguous or low-evidence abstractions to manual adjudication before registry use.
 
 ## Workflow
 

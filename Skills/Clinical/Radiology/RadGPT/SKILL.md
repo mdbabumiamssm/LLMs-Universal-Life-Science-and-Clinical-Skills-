@@ -47,6 +47,7 @@ An LLM-based agent designed to summarize and explain complex radiology reports f
 1.  **Simplification**: Translates "bilateral opacity" to "cloudiness in both lungs".
 2.  **Entity Extraction**: Identifies key anatomical structures and pathologies.
 3.  **Q&A**: Answers follow-up questions about the report.
+4.  **MRI Patient Education**: Translates MRI reports into patient-facing explanations, compares wording against expert interpretations when available, preserves diagnostic uncertainty, avoids overdiagnosis, and flags findings that require clinician clarification.
 
 ## Workflow
 
@@ -62,6 +63,10 @@ An LLM-based agent designed to summarize and explain complex radiology reports f
 ```bash
 python -m radgpt.explain --report ./report.txt --target_audience patient
 ```
+
+## References
+
+- https://pubmed.ncbi.nlm.nih.gov/41865475/
 
 
 <!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

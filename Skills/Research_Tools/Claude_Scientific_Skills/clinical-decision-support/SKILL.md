@@ -73,6 +73,7 @@ All documents are generated as publication-ready LaTeX/PDF files optimized for p
 - **Biomarker Integration**: Genomic alterations (mutations, CNV, fusions), gene expression signatures, IHC markers, PD-L1 scoring
 - **Statistical Analysis**: Hazard ratios, p-values, confidence intervals, survival curves, Cox regression, log-rank tests
 - **Evidence Grading**: GRADE system (1A/1B/2A/2B/2C), Oxford CEBM levels, quality of evidence assessment
+- **Real-Time LLM Guideline Assistance**: For clinical practice guideline development, use LLM-generated text only as traceable draft support with source-linked evidence, expert panel review, bias and omission checks, and explicit human sign-off before any guideline language is reused
 - **Clinical Terminology**: SNOMED-CT, LOINC, proper medical nomenclature, trial nomenclature
 - **Regulatory Compliance**: HIPAA de-identification, confidentiality headers, ICH-GCP alignment
 - **Professional Formatting**: Compact 0.5in margins, color-coded recommendations, publication-ready, suitable for regulatory submissions
@@ -498,6 +499,7 @@ See the `references/` directory for detailed guidance on:
 - Biomarker classification and interpretation
 - Outcome analysis and statistical methods
 - Evidence synthesis and grading systems
+- Erstad BL. "Real-Time Evaluation of a Large Language Model for Clinical Practice Guideline Development." Crit Care Explor. 2026 May 1. PubMed: https://pubmed.ncbi.nlm.nih.gov/42042855/
 
 ## Templates
 
