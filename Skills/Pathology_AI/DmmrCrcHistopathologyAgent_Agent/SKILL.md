@@ -50,6 +50,7 @@ Use this skill to structure data intake, region selection, model execution, vali
 6. **Validation and interpretation review** - Report metrics only when computed from the supplied data, inspect calibration and subgroup behavior, review heatmaps or attention maps cautiously, and summarize failure modes.
 7. **Clinical-pathology handoff** - Produce concise notes that describe image evidence, region contributions, uncertainty, limitations, recommended confirmatory testing, and cases needing pathologist review.
 8. **Non-tumor and low-magnification dMMR review** - Explicitly sample non-tumor and low-magnification colorectal cancer WSI regions, record region-level contribution to the prediction, validate predictions against available MSI or IHC status, and route uncertain predictions to pathology review.
+9. **Tumor-only assumption checks** - When designing WSI region sampling or validation handoff, include non-tumor and low-magnification regions as potential dMMR signal contributors and flag bias risks from workflows that assume only high-magnification tumor tiles are informative.
 
 ## Inputs / Outputs
 

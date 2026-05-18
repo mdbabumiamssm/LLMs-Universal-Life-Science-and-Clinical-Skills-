@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-05-18T13:07:18.633704+00:00",
+  "generated_at": "2026-05-18T13:24:14.805107+00:00",
   "generator": "ARTIFICIALINTELLIGENCEGROUP-pipeline v1.0",
-  "total_skills": 1026,
+  "total_skills": 1027,
   "total_errors": 16,
   "skills": [
     {
@@ -404,7 +404,7 @@
       ],
       "file_path": "Skills/AI_Providers/Frontier_OSS_Models_2026/SKILL.md",
       "relative_path": "AI_Providers/Frontier_OSS_Models_2026/SKILL.md",
-      "last_modified": "2026-05-18T12:57:45.867532+00:00",
+      "last_modified": "2026-05-18T13:07:26.152377+00:00",
       "body_length": 1375,
       "capabilities": [
         "Core Capabilities",
@@ -952,6 +952,29 @@
       ]
     },
     {
+      "name": "clinical-guideline-development-llm",
+      "description": "Guide LLM-assisted clinical practice guideline drafting with real-time review, evidence traceability, recommendation grading, and clinician governance.",
+      "tool_type": "",
+      "primary_tool": "",
+      "measurable_outcome": "Execute skill workflow successfully with valid output within 15 minutes.",
+      "allowed-tools": [
+        "read_file",
+        "run_shell_command",
+        "web_fetch"
+      ],
+      "file_path": "Skills/Clinical/ClinicalGuidelineDevelopmentLlm_Agent/SKILL.md",
+      "relative_path": "Clinical/ClinicalGuidelineDevelopmentLlm_Agent/SKILL.md",
+      "last_modified": "2026-05-18T13:14:48.048185+00:00",
+      "body_length": 4129,
+      "capabilities": [
+        "Overview",
+        "When to Use This Skill",
+        "Core Capabilities",
+        "Inputs / Outputs",
+        "References"
+      ]
+    },
+    {
       "name": "bio-clinical-databases-clinvar-lookup",
       "description": "Query ClinVar for variant pathogenicity classifications, review status, and disease associations via REST API or local VCF. Use when determining clinical significance of variants for diagnostic or research purposes.",
       "tool_type": "python",
@@ -1237,7 +1260,7 @@
       ],
       "file_path": "Skills/Clinical/Clinical_NLP/SKILL.md",
       "relative_path": "Clinical/Clinical_NLP/SKILL.md",
-      "last_modified": "2026-05-18T13:01:09.055758+00:00",
+      "last_modified": "2026-05-18T13:07:26.152377+00:00",
       "body_length": 6513,
       "capabilities": [
         "When to Use This Skill",
@@ -1259,8 +1282,8 @@
       ],
       "file_path": "Skills/Clinical/Clinical_Note_Summarization/SKILL.md",
       "relative_path": "Clinical/Clinical_Note_Summarization/SKILL.md",
-      "last_modified": "2026-05-18T13:04:20.990240+00:00",
-      "body_length": 7932,
+      "last_modified": "2026-05-18T13:16:11.000982+00:00",
+      "body_length": 8219,
       "capabilities": [
         "At-a-Glance",
         "Inputs",
@@ -1383,7 +1406,7 @@
       ],
       "file_path": "Skills/Clinical/Medical_Imaging/Multimodal_Analysis/SKILL.md",
       "relative_path": "Clinical/Medical_Imaging/Multimodal_Analysis/SKILL.md",
-      "last_modified": "2026-05-18T13:06:15.842640+00:00",
+      "last_modified": "2026-05-18T13:07:26.152377+00:00",
       "body_length": 3112,
       "capabilities": [
         "When to Use This Skill",
@@ -1666,8 +1689,8 @@
       ],
       "file_path": "Skills/Clinical/Trial_Matching/TrialGPT/SKILL.md",
       "relative_path": "Clinical/Trial_Matching/TrialGPT/SKILL.md",
-      "last_modified": "2026-05-18T10:43:26.630726+00:00",
-      "body_length": 5611,
+      "last_modified": "2026-05-18T13:15:25.688093+00:00",
+      "body_length": 5892,
       "capabilities": [
         "Core Capabilities",
         "Inputs",
@@ -2220,8 +2243,8 @@
       ],
       "file_path": "Skills/Drug_Discovery/BiomedMultiAlignmentFoundationModel_Agent/SKILL.md",
       "relative_path": "Drug_Discovery/BiomedMultiAlignmentFoundationModel_Agent/SKILL.md",
-      "last_modified": "2026-05-17T10:43:23.471986+00:00",
-      "body_length": 4817,
+      "last_modified": "2026-05-18T13:22:25.283075+00:00",
+      "body_length": 5338,
       "capabilities": [
         "Overview",
         "When to Use This Skill",
@@ -5752,8 +5775,8 @@
       ],
       "file_path": "Skills/Foundation_Models/StackSingleCellIclAgent_Agent/SKILL.md",
       "relative_path": "Foundation_Models/StackSingleCellIclAgent_Agent/SKILL.md",
-      "last_modified": "2026-05-17T10:43:23.471986+00:00",
-      "body_length": 4723,
+      "last_modified": "2026-05-18T13:23:13.987957+00:00",
+      "body_length": 5545,
       "capabilities": [
         "Overview",
         "When to Use This Skill",
@@ -8307,8 +8330,8 @@
       ],
       "file_path": "Skills/Genomics/Variant_Interpretation/SKILL.md",
       "relative_path": "Genomics/Variant_Interpretation/SKILL.md",
-      "last_modified": "2026-05-18T13:07:11.271429+00:00",
-      "body_length": 4070,
+      "last_modified": "2026-05-18T13:17:04.458852+00:00",
+      "body_length": 4489,
       "capabilities": [
         "When to Use This Skill",
         "Core Capabilities",
@@ -12664,7 +12687,7 @@
       ],
       "file_path": "Skills/LLM_Research/SKILL.md",
       "relative_path": "LLM_Research/SKILL.md",
-      "last_modified": "2026-05-18T13:00:20.588942+00:00",
+      "last_modified": "2026-05-18T13:07:26.152377+00:00",
       "body_length": 3315,
       "capabilities": [
         "Purpose",
@@ -13071,7 +13094,7 @@
       ],
       "file_path": "Skills/Machine_Learning/machine-learning/survival-analysis/SKILL.md",
       "relative_path": "Machine_Learning/machine-learning/survival-analysis/SKILL.md",
-      "last_modified": "2026-05-18T13:01:56.009630+00:00",
+      "last_modified": "2026-05-18T13:07:26.152377+00:00",
       "body_length": 10820,
       "capabilities": [
         "Core Capabilities",
@@ -14928,8 +14951,8 @@
       ],
       "file_path": "Skills/Pathology_AI/DmmrCrcHistopathologyAgent_Agent/SKILL.md",
       "relative_path": "Pathology_AI/DmmrCrcHistopathologyAgent_Agent/SKILL.md",
-      "last_modified": "2026-05-17T10:43:23.471986+00:00",
-      "body_length": 4888,
+      "last_modified": "2026-05-18T13:17:55.550728+00:00",
+      "body_length": 5170,
       "capabilities": [
         "Overview",
         "When to Use This Skill",
