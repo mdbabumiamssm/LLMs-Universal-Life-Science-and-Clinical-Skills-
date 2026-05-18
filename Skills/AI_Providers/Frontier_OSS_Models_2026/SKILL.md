@@ -25,6 +25,12 @@ allowed-tools:
 ## Core Capabilities
 
 - Clinical deployment caution for distilled DeepSeek-R1 or other open-source medical diagnosis models: compare benchmark performance with deployment risk, weigh on-premises privacy benefits against calibration limits and hallucination checks, and require model governance plus clinician oversight before clinical use.
+- Clinical self-hosting review for distilled DeepSeek-R1/open-weight medical diagnosis deployments: benchmark against licensed frontier and domain models, require local evaluation sets, calibration and abstention checks, privacy/on-prem controls, and clinical safety gates before diagnostic workflow use.
+
+## Clinical Self-Hosting Caution
+
+- For distilled DeepSeek-R1/open-weight models used in medical diagnosis, benchmark against licensed frontier and domain models before selection.
+- Require local diagnostic evaluation sets, calibration and abstention checks, privacy/on-prem controls, and clinical safety gates before use in diagnostic workflows.
 
 ## Workflow
 

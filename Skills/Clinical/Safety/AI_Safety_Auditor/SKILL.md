@@ -66,6 +66,8 @@ The **AI Safety Auditor** is a critical "human-in-the-loop" simulator and automa
 19. **LLM-Assisted Clinical Practice Guideline Acceptance Checklist**: Evaluates guideline-development use of LLMs by checking evidence synthesis traceability, recommendation drafting provenance, conflict detection, audit trails, and documented human panel sign-off before guideline text is accepted.
 20. **Diagnosis-Focused On-Premises Open-Source LLM Deployment Checklist**: Compares distilled reasoning models against closed baselines before diagnosis use, requires local specialty validation, documents governance and latency tradeoffs, and classifies autonomous diagnostic use as high-risk with mandatory clinician oversight.
 21. **Clinical Guideline-Development LLM Evaluation Mode**: Requires source traceability, conflict-of-interest awareness, recommendation grading checks, omission review, and human panel adjudication before any LLM-assisted guideline language is accepted.
+22. **Fine-Grained Domain-Specific Medical Q&A Benchmark Review**: Evaluates trustworthy medical language model benchmarks with item-level correctness checks, omission labeling, harm-potential assessment, domain stratification, rubric reliability review, and dataset documentation before using Q&A results as evidence of model safety.
+23. **Test-Time Knowledge Acquisition Clinical Safety Pattern**: Requires retrieval of current vetted references before medical reasoning, logs source provenance, compares pre/post-retrieval answer changes, and escalates uncertainty when retrieved evidence conflicts.
 
 ## Workflow
 

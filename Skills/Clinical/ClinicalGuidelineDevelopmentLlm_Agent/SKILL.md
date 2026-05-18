@@ -46,9 +46,10 @@ This skill guides LLM-assisted clinical practice guideline development from ques
 3. **Recommendation grading**: Record certainty of evidence, balance of benefits and harms, values and preferences, resource considerations, equity, feasibility, and recommendation strength.
 4. **LLM-assisted drafting controls**: Use the model for synthesis, wording, consistency checks, and gap detection while preserving source-grounded claims and clinician review.
 5. **Real-time review workflow**: Track reviewer comments, disagreement, edits, unresolved issues, and rationale changes during live or iterative guideline development.
-6. **Consensus and governance**: Document panel composition, voting or consensus method, conflict-of-interest handling, signoff authority, and escalation criteria.
-7. **Safety and implementation checks**: Identify ambiguous directives, unsafe absolutes, missing contraindications, patient subgroup concerns, monitoring needs, and update triggers.
-8. **Audit-ready output**: Produce dated outputs with version history, evidence links, reviewer decisions, unresolved assumptions, and required human approvals.
+6. **Real-time LLM evaluation during drafting**: Maintain live evidence traceability, recommendation grades, reviewer disagreement capture, hallucination checks against source evidence, and governance checkpoints while recommendations are being drafted.
+7. **Consensus and governance**: Document panel composition, voting or consensus method, conflict-of-interest handling, signoff authority, and escalation criteria.
+8. **Safety and implementation checks**: Identify ambiguous directives, unsafe absolutes, missing contraindications, patient subgroup concerns, monitoring needs, and update triggers.
+9. **Audit-ready output**: Produce dated outputs with version history, evidence links, reviewer decisions, unresolved assumptions, and required human approvals.
 
 ## Inputs / Outputs
 
