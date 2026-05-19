@@ -37,6 +37,7 @@ measurable_outcome: 'Produce a MET/NOT/UNKNOWN matrix with supporting citations 
 
 ## Core Capabilities
 - Support neuro-symbolic multi-agent oncology trial matching by combining an oncology-specific knowledge graph with agentic criterion parsing, prospective patient-level evaluation, confidence scoring, and human review for inclusion/exclusion decisions.
+- For oncology trial matching, encode each eligibility criterion as symbolic rules grounded in oncology-specific knowledge graph concepts, keep evidence-extraction agents separate from eligibility-reasoning agents, report prospective evaluation metrics without inventing benchmark thresholds, and route borderline eligibility calls to human review.
 
 ## Workflow
 1. **Acquire protocol:** Pull eligibility text from ClinicalTrials.gov or sponsor PDF.
