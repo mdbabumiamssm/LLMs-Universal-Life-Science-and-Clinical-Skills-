@@ -57,6 +57,7 @@ allowed-tools:
 - Evaluate AI-generated clinical notes before deployment for correctness, completeness, harmful omission, factual consistency, and template adherence using clinician rubric review and transparent benchmark reporting.
 - Apply benchmark-style quality evaluation for AI-generated clinical notes that covers correctness, completeness, omission risk, hallucinated facts, structure adherence, inter-rater review, and regression testing of generated-note changes.
 - Set explicit escalation thresholds before AI-generated notes are used clinically, including correctness failures, clinically meaningful omissions, hallucinated content, elevated risk-of-harm ratings, inter-rater disagreement, or benchmark results outside the accepted review criteria.
+- Evaluate AI-generated SOAP and specialty notes with methods that score correctness, omissions, redundancy, harmfulness, note-type stratification, clinician scoring rubrics, and transparent benchmark reporting.
 
 ## Quality Evaluation
 - For AI-generated notes, use a structured quality evaluation rubric that scores correctness, content omissions, hallucinations, and risk of harm; define the rubric for the target note type, use inter-rater review or adjudication for disputed items, and report benchmark design and measured categories transparently.

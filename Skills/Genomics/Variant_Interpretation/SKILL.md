@@ -47,6 +47,7 @@ The **Variant Interpretation Skill** automates the classification of genetic var
 12. **Clinically Separated Precision Grounding**: For genetic variant summarization, require evidence-backed retrieval from ClinVar, gnomAD, and ACMG/AMP sources; preserve provenance for each summary claim; flag conflicting evidence; and keep automated summaries separate from final clinical interpretation.
 13. **Precision-Grounded Pathogenicity Review**: Ground variant summaries in ClinVar, gnomAD, COSMIC, or equivalent evidence databases; cite provenance for pathogenicity statements; explicitly handle conflicting or missing evidence; check for unsupported disease, frequency, or classification claims before output; and require an ACMG-aligned final review.
 14. **Precision-Grounded Evidence Mapping**: For variant summarization, retrieve evidence from ClinVar, gnomAD, dbSNP, COSMIC, ACMG/AMP criteria, and literature; require every factual claim to link back to its source; keep pathogenicity classification separate from the explanatory summary; and flag conflicting findings or low-review-status evidence before reporting.
+15. **Precision Grounding for LLM Summaries**: For genetic variant summarization, retrieve ClinVar, gnomAD, ACMG/AMP, disease, and literature evidence before synthesis; present retrieved evidence facts separately from LLM-generated synthesis; and cite sources for uncertainty statements, evidence gaps, and conflict handling.
 
 ## Workflow
 
