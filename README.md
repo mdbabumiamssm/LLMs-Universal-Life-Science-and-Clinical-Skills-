@@ -202,7 +202,7 @@ This project is licensed under the MIT License for open-source components, but t
 
 <!-- BEGIN: PIPELINE_INDEX -->
 
-_Auto-generated index. 1027 skills across 54 categories. Last refresh: 2026-05-19T10:56:30.238668+00:00._
+_Auto-generated index. 1028 skills across 54 categories. Last refresh: 2026-05-19T12:47:35.251436+00:00._
 
 ### 3D_Genomics (8)
 
@@ -257,7 +257,7 @@ _Auto-generated index. 1027 skills across 54 categories. Last refresh: 2026-05-1
 - **regulatory-drafting** — Regulatory Drafting agent for healthcare workflows.
 - **research-literature** — Research Literature agent for healthcare workflows.
 
-### Clinical (31)
+### Clinical (32)
 
 - **ai-safety-auditor** — Validates clinical AI outputs for safety, bias, and hallucination risks before delivery to end-users or clinicians.
 - **autonomous-oncology-agent** — Precision Oncology
@@ -273,6 +273,7 @@ _Auto-generated index. 1027 skills across 54 categories. Last refresh: 2026-05-1
 - **bio-clinical-databases-variant-prioritization** — Filter and prioritize variants by pathogenicity, population frequency, and clinical evidence for rare disease analysis. Use when identify...
 - **chatehr-clinician-assistant** — EHR Chat Assistant
 - **clinical-guideline-development-llm** — Guide LLM-assisted clinical practice guideline drafting with real-time review, evidence traceability, recommendation grading, and clinici...
+- **clinical-llm-evaluation-benchmarking** — Design and run clinical LLM evaluation benchmarks grounded in systematic review evidence on AI-generated clinical note evaluation methods.
 - **clinical-nlp-extractor** — Extracts medical entities (Diseases, Medications, Procedures), patient outcomes with temporal anchors, and registry-oriented real-world d...
 - **clinical-note-summarization** — Structure raw clinical notes into SOAP-format summaries with explicit contradictions, missing data, and ICD-linked assessments using the ...
 - **clinical-workflow-automation** — An autonomous agentic system for automating and streamlining clinical workflows and healthcare administrative tasks.

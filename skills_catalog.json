@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-05-19T10:56:30.238668+00:00",
+  "generated_at": "2026-05-19T12:47:35.251436+00:00",
   "generator": "ARTIFICIALINTELLIGENCEGROUP-pipeline v1.0",
-  "total_skills": 1027,
+  "total_skills": 1028,
   "total_errors": 16,
   "skills": [
     {
@@ -404,8 +404,8 @@
       ],
       "file_path": "Skills/AI_Providers/Frontier_OSS_Models_2026/SKILL.md",
       "relative_path": "AI_Providers/Frontier_OSS_Models_2026/SKILL.md",
-      "last_modified": "2026-05-18T14:24:52.884663+00:00",
-      "body_length": 2028,
+      "last_modified": "2026-05-19T12:38:04.049611+00:00",
+      "body_length": 2430,
       "capabilities": [
         "Core Capabilities",
         "Clinical Self-Hosting Caution",
@@ -965,13 +965,38 @@
       ],
       "file_path": "Skills/Clinical/ClinicalGuidelineDevelopmentLlm_Agent/SKILL.md",
       "relative_path": "Clinical/ClinicalGuidelineDevelopmentLlm_Agent/SKILL.md",
-      "last_modified": "2026-05-19T10:50:09.456211+00:00",
-      "body_length": 5054,
+      "last_modified": "2026-05-19T12:39:23.768405+00:00",
+      "body_length": 5309,
       "capabilities": [
         "Overview",
         "When to Use This Skill",
         "Core Capabilities",
         "Inputs / Outputs",
+        "References"
+      ]
+    },
+    {
+      "name": "clinical-llm-evaluation-benchmarking",
+      "description": "Design and run clinical LLM evaluation benchmarks grounded in systematic review evidence on AI-generated clinical note evaluation methods.",
+      "tool_type": "",
+      "primary_tool": "",
+      "measurable_outcome": "Execute skill workflow successfully with valid output within 15 minutes.",
+      "allowed-tools": [
+        "read_file",
+        "run_shell_command",
+        "web_fetch"
+      ],
+      "file_path": "Skills/Clinical/ClinicalLlmEvaluationBenchmarking_Agent/SKILL.md",
+      "relative_path": "Clinical/ClinicalLlmEvaluationBenchmarking_Agent/SKILL.md",
+      "last_modified": "2026-05-19T12:44:48.853291+00:00",
+      "body_length": 5886,
+      "capabilities": [
+        "Overview",
+        "When to Use This Skill",
+        "Core Capabilities",
+        "Inputs / Outputs",
+        "Inputs",
+        "Outputs",
         "References"
       ]
     },
@@ -1261,8 +1286,8 @@
       ],
       "file_path": "Skills/Clinical/Clinical_NLP/SKILL.md",
       "relative_path": "Clinical/Clinical_NLP/SKILL.md",
-      "last_modified": "2026-05-19T10:55:14.002025+00:00",
-      "body_length": 9867,
+      "last_modified": "2026-05-19T12:46:42.817794+00:00",
+      "body_length": 10636,
       "capabilities": [
         "When to Use This Skill",
         "Core Capabilities",
@@ -1283,8 +1308,8 @@
       ],
       "file_path": "Skills/Clinical/Clinical_Note_Summarization/SKILL.md",
       "relative_path": "Clinical/Clinical_Note_Summarization/SKILL.md",
-      "last_modified": "2026-05-19T10:53:48.479352+00:00",
-      "body_length": 9211,
+      "last_modified": "2026-05-19T12:37:23.137833+00:00",
+      "body_length": 9615,
       "capabilities": [
         "At-a-Glance",
         "Inputs",
@@ -1484,8 +1509,8 @@
       ],
       "file_path": "Skills/Clinical/Oncology/Precision_Oncology_Agent/SKILL.md",
       "relative_path": "Clinical/Oncology/Precision_Oncology_Agent/SKILL.md",
-      "last_modified": "2026-05-17T18:12:05.535444+00:00",
-      "body_length": 3126,
+      "last_modified": "2026-05-19T12:38:39.006518+00:00",
+      "body_length": 3440,
       "capabilities": [
         "At-a-Glance",
         "Inputs",
@@ -1622,8 +1647,8 @@
       ],
       "file_path": "Skills/Clinical/Safety/AI_Safety_Auditor/SKILL.md",
       "relative_path": "Clinical/Safety/AI_Safety_Auditor/SKILL.md",
-      "last_modified": "2026-05-19T10:50:50.014050+00:00",
-      "body_length": 10544,
+      "last_modified": "2026-05-19T12:40:13.139231+00:00",
+      "body_length": 10807,
       "capabilities": [
         "When to Use This Skill",
         "Core Capabilities",
@@ -1690,8 +1715,8 @@
       ],
       "file_path": "Skills/Clinical/Trial_Matching/TrialGPT/SKILL.md",
       "relative_path": "Clinical/Trial_Matching/TrialGPT/SKILL.md",
-      "last_modified": "2026-05-19T02:23:18.861640+00:00",
-      "body_length": 6554,
+      "last_modified": "2026-05-19T12:42:21.004934+00:00",
+      "body_length": 6836,
       "capabilities": [
         "Core Capabilities",
         "Inputs",
@@ -8331,7 +8356,7 @@
       ],
       "file_path": "Skills/Genomics/Variant_Interpretation/SKILL.md",
       "relative_path": "Genomics/Variant_Interpretation/SKILL.md",
-      "last_modified": "2026-05-19T10:54:33.181181+00:00",
+      "last_modified": "2026-05-19T10:56:36.371713+00:00",
       "body_length": 5849,
       "capabilities": [
         "When to Use This Skill",
@@ -8353,8 +8378,8 @@
       ],
       "file_path": "Skills/Genomics/Variant_Interpretation/bioSkills/clinical-interpretation/SKILL.md",
       "relative_path": "Genomics/Variant_Interpretation/bioSkills/clinical-interpretation/SKILL.md",
-      "last_modified": "2026-05-18T10:43:26.630726+00:00",
-      "body_length": 11082,
+      "last_modified": "2026-05-19T12:45:55.908977+00:00",
+      "body_length": 11434,
       "capabilities": [
         "Core Capabilities",
         "Interpretation Framework",
@@ -13095,8 +13120,8 @@
       ],
       "file_path": "Skills/Machine_Learning/machine-learning/survival-analysis/SKILL.md",
       "relative_path": "Machine_Learning/machine-learning/survival-analysis/SKILL.md",
-      "last_modified": "2026-05-19T10:52:04.358757+00:00",
-      "body_length": 13201,
+      "last_modified": "2026-05-19T12:41:40.083018+00:00",
+      "body_length": 13692,
       "capabilities": [
         "Core Capabilities",
         "Kaplan-Meier Curves",
@@ -14974,8 +14999,8 @@
       ],
       "file_path": "Skills/Pharma/Drug_Interaction/SKILL.md",
       "relative_path": "Pharma/Drug_Interaction/SKILL.md",
-      "last_modified": "2026-05-19T10:42:22.732183+00:00",
-      "body_length": 6582,
+      "last_modified": "2026-05-19T12:43:10.093838+00:00",
+      "body_length": 6974,
       "capabilities": [
         "When to Use This Skill",
         "Core Capabilities",

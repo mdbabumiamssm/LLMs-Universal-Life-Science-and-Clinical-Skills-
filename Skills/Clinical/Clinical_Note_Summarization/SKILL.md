@@ -36,6 +36,7 @@ allowed-tools:
 
 ## Core Capabilities
 - Before deployment, compare each generated clinical note against the source documentation for factual correctness, omissions, hallucinations, structure, clinical risk, and usability; use reviewer rubrics and report experimental benchmark methods and results.
+- For urologic documentation workflows, require clinician oversight of AI-generated encounter and operative note drafts, align outputs to specialty-specific note structure, check for documentation risks such as omissions or unsupported details, and keep AI-authored content limited to reviewable documentation support rather than clinician-signed final notes.
 - Before clinician-facing deployment, run benchmark-driven clinical-note quality evaluation that scores correctness, omissions, and harm risk, uses task-specific rubrics, adjudicates inter-rater disagreements, and maintains regression tests for generated-note changes.
 - Evaluate AI-generated clinical notes using factual-consistency checks, omission detection, note completeness review, safety/harm review, rubric-based scoring, and benchmark-style comparisons of automated evaluation results against clinician review.
 - Evaluate AI-generated clinical notes for correctness, completeness, omission detection, factuality, harmfulness, structure adherence, inter-rater adjudication, and benchmark-driven regression testing.
@@ -82,6 +83,7 @@ allowed-tools:
 ## References
 - For detailed schema, guardrails, and integration snippets see `README.md`, `prompt.md`, and `usage.py`.
 - https://pubmed.ncbi.nlm.nih.gov/41955894/
+- https://pubmed.ncbi.nlm.nih.gov/42067659/
 
 
 <!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

@@ -75,6 +75,7 @@ The **AI Safety Auditor** is a critical "human-in-the-loop" simulator and automa
 28. **Controlled Test-Time Knowledge Acquisition for Medical Decision Support**: Requires acquired facts to come only from approved clinical retrieval sources, verifies citations and source dates before use, detects stale or superseded sources, documents contradictions with uncertainty or clinician escalation, and treats retrieved facts as support for clinician judgment rather than a substitute for it.
 29. **On-Premises Distilled Clinical LLM Diagnostic Deployment Check**: Compares open-source and distilled reasoning models against clinician-reviewed diagnostic cases, tracks model provenance and distillation limits, requires calibration, hallucination, and refusal testing, and documents when local deployment must be gated behind human review.
 30. **Trustworthy Domain-Specific Medical Q&A Predeployment Review**: Requires fine-grained Q&A evaluation before deployment with separate checks for answer correctness, omissions, harmfulness, dataset stratification, and prompt sensitivity in domain-specific medical language models.
+31. **Domain-Specific Medical Q&A Dataset Trustworthiness Check**: Reviews medical Q&A evaluation datasets for fine-grained scoring, omission tracking, harm-risk labeling, and trusted-answer provenance before using them to support trustworthy medical LLM claims.
 
 ## Workflow
 

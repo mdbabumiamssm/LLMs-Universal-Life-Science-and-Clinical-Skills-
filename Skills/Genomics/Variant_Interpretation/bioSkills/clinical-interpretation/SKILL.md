@@ -34,6 +34,7 @@ Prioritize and interpret variants for clinical significance using databases and 
 - Produce precision-grounded variant summaries with explicit provenance for ClinVar assertions, gnomAD population frequency, COSMIC somatic evidence, and literature findings; surface conflicts across sources for manual review, and do not make or upgrade pathogenicity claims unless directly supported by retrieved evidence and applicable ACMG/AMP criteria.
 - Before drafting genetic variant summaries, retrieve and reconcile evidence from ClinVar, gnomAD, dbSNP, COSMIC, ACMG/AMP criteria, and disease databases; include only citation-backed claims, detect conflicts across sources, and label uncertainty when evidence is incomplete or discordant.
 - For LLM-assisted variant summarization, link each interpretive statement to retrieved ClinVar, gnomAD, dbSNP, COSMIC, or ACMG/AMP evidence; run hallucination checks against those records and remove unsupported claims before reporting.
+- For evidence-grounded genetic variant summaries, cross-check ClinVar assertions, gnomAD population frequencies, and dbSNP identifiers before synthesis; attach citations or database accession links to each assertion, report source conflicts explicitly, and audit the final text against retrieved records to remove hallucinated or unsupported content.
 
 ## Interpretation Framework
 
