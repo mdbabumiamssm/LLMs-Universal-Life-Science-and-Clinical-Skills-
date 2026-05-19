@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-18T14:24:45.599405+00:00",
+  "generated_at": "2026-05-19T02:23:11.883277+00:00",
   "generator": "ARTIFICIALINTELLIGENCEGROUP-pipeline v1.0",
   "total_skills": 1027,
   "total_errors": 16,
@@ -404,7 +404,7 @@
       ],
       "file_path": "Skills/AI_Providers/Frontier_OSS_Models_2026/SKILL.md",
       "relative_path": "AI_Providers/Frontier_OSS_Models_2026/SKILL.md",
-      "last_modified": "2026-05-18T14:06:36.142706+00:00",
+      "last_modified": "2026-05-18T14:24:52.884663+00:00",
       "body_length": 2028,
       "capabilities": [
         "Core Capabilities",
@@ -965,8 +965,8 @@
       ],
       "file_path": "Skills/Clinical/ClinicalGuidelineDevelopmentLlm_Agent/SKILL.md",
       "relative_path": "Clinical/ClinicalGuidelineDevelopmentLlm_Agent/SKILL.md",
-      "last_modified": "2026-05-18T14:08:11.546690+00:00",
-      "body_length": 4383,
+      "last_modified": "2026-05-19T02:15:04.485088+00:00",
+      "body_length": 4399,
       "capabilities": [
         "Overview",
         "When to Use This Skill",
@@ -1261,8 +1261,8 @@
       ],
       "file_path": "Skills/Clinical/Clinical_NLP/SKILL.md",
       "relative_path": "Clinical/Clinical_NLP/SKILL.md",
-      "last_modified": "2026-05-18T14:23:13.430879+00:00",
-      "body_length": 7439,
+      "last_modified": "2026-05-19T02:22:26.855719+00:00",
+      "body_length": 8332,
       "capabilities": [
         "When to Use This Skill",
         "Core Capabilities",
@@ -1283,8 +1283,8 @@
       ],
       "file_path": "Skills/Clinical/Clinical_Note_Summarization/SKILL.md",
       "relative_path": "Clinical/Clinical_Note_Summarization/SKILL.md",
-      "last_modified": "2026-05-18T14:18:11.663527+00:00",
-      "body_length": 8470,
+      "last_modified": "2026-05-19T02:20:03.316210+00:00",
+      "body_length": 8739,
       "capabilities": [
         "At-a-Glance",
         "Inputs",
@@ -1622,8 +1622,8 @@
       ],
       "file_path": "Skills/Clinical/Safety/AI_Safety_Auditor/SKILL.md",
       "relative_path": "Clinical/Safety/AI_Safety_Auditor/SKILL.md",
-      "last_modified": "2026-05-18T14:19:48.968416+00:00",
-      "body_length": 7889,
+      "last_modified": "2026-05-19T02:20:58.854954+00:00",
+      "body_length": 9127,
       "capabilities": [
         "When to Use This Skill",
         "Core Capabilities",
@@ -1690,8 +1690,8 @@
       ],
       "file_path": "Skills/Clinical/Trial_Matching/TrialGPT/SKILL.md",
       "relative_path": "Clinical/Trial_Matching/TrialGPT/SKILL.md",
-      "last_modified": "2026-05-18T14:15:06.623828+00:00",
-      "body_length": 6219,
+      "last_modified": "2026-05-19T02:18:22.407537+00:00",
+      "body_length": 6554,
       "capabilities": [
         "Core Capabilities",
         "Inputs",
@@ -8331,8 +8331,8 @@
       ],
       "file_path": "Skills/Genomics/Variant_Interpretation/SKILL.md",
       "relative_path": "Genomics/Variant_Interpretation/SKILL.md",
-      "last_modified": "2026-05-18T14:21:35.164138+00:00",
-      "body_length": 4797,
+      "last_modified": "2026-05-19T02:21:46.018809+00:00",
+      "body_length": 5154,
       "capabilities": [
         "When to Use This Skill",
         "Core Capabilities",
@@ -13095,8 +13095,8 @@
       ],
       "file_path": "Skills/Machine_Learning/machine-learning/survival-analysis/SKILL.md",
       "relative_path": "Machine_Learning/machine-learning/survival-analysis/SKILL.md",
-      "last_modified": "2026-05-18T14:13:32.358101+00:00",
-      "body_length": 11369,
+      "last_modified": "2026-05-19T02:17:39.699526+00:00",
+      "body_length": 12040,
       "capabilities": [
         "Core Capabilities",
         "Kaplan-Meier Curves",
@@ -14974,8 +14974,8 @@
       ],
       "file_path": "Skills/Pharma/Drug_Interaction/SKILL.md",
       "relative_path": "Pharma/Drug_Interaction/SKILL.md",
-      "last_modified": "2026-05-18T14:16:46.916643+00:00",
-      "body_length": 5681,
+      "last_modified": "2026-05-19T02:19:30.087426+00:00",
+      "body_length": 6220,
       "capabilities": [
         "When to Use This Skill",
         "Core Capabilities",
