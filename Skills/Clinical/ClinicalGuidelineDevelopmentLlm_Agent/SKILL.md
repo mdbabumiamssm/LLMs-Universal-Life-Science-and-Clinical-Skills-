@@ -51,9 +51,10 @@ This skill guides LLM-assisted clinical practice guideline development from ques
 8. **Real-time guideline-panel safeguards**: During live LLM-assisted development, run evidence traceability and recommendation grading checks, keep human guideline-panel oversight over accepted wording, log hallucinations or errors with corrections, and escalate unsupported, unsafe, overconfident, or grading-inconsistent generated language for clinician rewrite.
 9. **Clinician-in-the-loop drafting evaluation**: During recommendation drafting, require clinician review of model-generated language, live evidence traceability, recommendation grading, conflict-of-interest checks, and explicit limits that LLM text remains draft support until human approval.
 10. **Real-time evaluation checkpoints**: At each panel review checkpoint, verify evidence traceability, recommendation grading, hallucination audit findings, and versioned rationale logs before moving LLM-assisted guideline text to the next draft state.
-11. **Consensus and governance**: Document panel composition, voting or consensus method, conflict-of-interest handling, signoff authority, and escalation criteria.
-12. **Safety and implementation checks**: Identify ambiguous directives, unsafe absolutes, missing contraindications, patient subgroup concerns, monitoring needs, and update triggers.
-13. **Audit-ready output**: Produce dated outputs with version history, evidence links, reviewer decisions, unresolved assumptions, and required human approvals.
+11. **Guideline text acceptance gates**: Before accepting LLM-assisted guideline text, confirm evidence traceability, recommendation grading, iterative clinician review disposition, conflict logging, and governance checkpoint signoff.
+12. **Consensus and governance**: Document panel composition, voting or consensus method, conflict-of-interest handling, signoff authority, and escalation criteria.
+13. **Safety and implementation checks**: Identify ambiguous directives, unsafe absolutes, missing contraindications, patient subgroup concerns, monitoring needs, and update triggers.
+14. **Audit-ready output**: Produce dated outputs with version history, evidence links, reviewer decisions, unresolved assumptions, and required human approvals.
 
 ## Inputs / Outputs
 
