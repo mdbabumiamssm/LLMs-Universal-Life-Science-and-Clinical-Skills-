@@ -39,6 +39,7 @@ measurable_outcome: 'Produce a MET/NOT/UNKNOWN matrix with supporting citations 
 - Support neuro-symbolic multi-agent oncology trial matching by combining an oncology-specific knowledge graph with agentic criterion parsing, prospective patient-level evaluation, confidence scoring, and human review for inclusion/exclusion decisions.
 - For oncology trial matching, encode each eligibility criterion as symbolic rules grounded in oncology-specific knowledge graph concepts, keep evidence-extraction agents separate from eligibility-reasoning agents, report prospective evaluation metrics without inventing benchmark thresholds, and route borderline eligibility calls to human review.
 - For neuro-symbolic multi-agent oncology workflows, perform criterion-level extraction, ground oncology terms and biomarkers in the knowledge graph, separate retrieval/extraction/reasoning agent roles, track patient-level audit trails for evidence and decisions, report prospective evaluation metrics from the run, and require human review for eligibility conflicts or uncertain criteria.
+- For treatment-trial matching in oncology, use neuro-symbolic multi-agent reasoning over an oncology knowledge graph to connect treatment context, biomarkers, and criterion-level evidence; include confidence scoring, audit trails, prospective evaluation metrics, and clinician review before any matching recommendation is acted on.
 
 ## Workflow
 1. **Acquire protocol:** Pull eligibility text from ClinicalTrials.gov or sponsor PDF.
