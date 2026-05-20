@@ -26,6 +26,10 @@ allowed-tools:
 
 Use this skill when Bedrock is the production surface, not just a compatibility checkbox.
 
+## Core Capabilities
+
+- For Strands Agents plus Amazon Bedrock AgentCore reference architectures, document why AgentCore Runtime is selected versus runtime-only Bedrock or managed Agents, isolate IAM boundaries for runtime, gateway, memory, browser, and code-execution components, map MCP/tool integrations and any browser or voice-assistant surfaces, describe the deployment topology such as Terraform-managed app, infra, and mobile or chat clients, and require production guardrails for multi-agent chatbot rollout.
+
 ## Workflow
 
 1. Verify model, region, quota, and service-tier availability in the live Bedrock model catalog before design freeze.
@@ -46,3 +50,7 @@ Use this skill when Bedrock is the production surface, not just a compatibility 
 - State the Bedrock model or provider choice and target region.
 - State whether the workflow uses Runtime, Converse, Agents, or AgentCore.
 - State the IAM/auth pattern and one concrete rollback or failover trigger.
+
+## References
+
+- https://github.com/aws-samples/sample-strands-agent-with-agentcore

@@ -49,10 +49,11 @@ This skill guides LLM-assisted clinical practice guideline development from ques
 6. **Real-time LLM evaluation during drafting**: Maintain live evidence traceability, recommendation grades, clinician adjudication of model-suggested changes, bias and omission checks against source evidence, and audit logs from draft through final guideline approval.
 7. **Draft-to-final evaluation workflow**: For real-time LLM guideline development, preserve change-level evidence traceability, recommendation-grade updates, conflict logs, clinician review checkpoints, and audit artifacts explaining accepted, rejected, or revised model contributions.
 8. **Real-time guideline-panel safeguards**: During live LLM-assisted development, run evidence traceability and recommendation grading checks, keep human guideline-panel oversight over accepted wording, log hallucinations or errors with corrections, and escalate unsupported, unsafe, overconfident, or grading-inconsistent generated language for clinician rewrite.
-9. **Real-time evaluation checkpoints**: At each panel review checkpoint, verify evidence traceability, recommendation grading, hallucination audit findings, and versioned rationale logs before moving LLM-assisted guideline text to the next draft state.
-10. **Consensus and governance**: Document panel composition, voting or consensus method, conflict-of-interest handling, signoff authority, and escalation criteria.
-11. **Safety and implementation checks**: Identify ambiguous directives, unsafe absolutes, missing contraindications, patient subgroup concerns, monitoring needs, and update triggers.
-12. **Audit-ready output**: Produce dated outputs with version history, evidence links, reviewer decisions, unresolved assumptions, and required human approvals.
+9. **Clinician-in-the-loop drafting evaluation**: During recommendation drafting, require clinician review of model-generated language, live evidence traceability, recommendation grading, conflict-of-interest checks, and explicit limits that LLM text remains draft support until human approval.
+10. **Real-time evaluation checkpoints**: At each panel review checkpoint, verify evidence traceability, recommendation grading, hallucination audit findings, and versioned rationale logs before moving LLM-assisted guideline text to the next draft state.
+11. **Consensus and governance**: Document panel composition, voting or consensus method, conflict-of-interest handling, signoff authority, and escalation criteria.
+12. **Safety and implementation checks**: Identify ambiguous directives, unsafe absolutes, missing contraindications, patient subgroup concerns, monitoring needs, and update triggers.
+13. **Audit-ready output**: Produce dated outputs with version history, evidence links, reviewer decisions, unresolved assumptions, and required human approvals.
 
 ## Inputs / Outputs
 

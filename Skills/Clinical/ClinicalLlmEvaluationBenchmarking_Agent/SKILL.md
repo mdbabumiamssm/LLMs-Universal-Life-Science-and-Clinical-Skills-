@@ -73,6 +73,26 @@ The workflow is grounded in the finding that evaluation methods for AI-generated
 10. **Reporting and interpretation**  
    Produce a benchmark report that distinguishes statistical performance, clinical acceptability, residual risk, subgroup behavior, and operational readiness. Avoid claiming safety or superiority from narrow or nonclinical metrics alone.
 
+11. **On-prem open-source diagnosis deployment evaluation**  
+   Evaluate distilled DeepSeek-R1 or other open-source models for diagnosis workflows by comparing privacy and local-control benefits against local hardware limits, benchmark drift, calibration needs, diagnosis-specific safety failure modes, and governance checks required before clinical use.
+
+12. **Fine-grained domain-specific medical Q&A dataset evaluation**  
+   For domain-specific clinical Q&A benchmarks, evaluate items individually with an explicit error taxonomy, separate omission and hallucination labels, specialty-level stratification, prompt sensitivity checks, and dataset documentation covering source, scope, construction, answer keys, annotation or review process, limitations, and intended benchmarking use.
+
+13. **Systematic clinical-note evaluation method benchmarking**  
+   For AI-generated clinical notes, design benchmarks that compare evaluation methods rather than relying on one score: factual consistency, omission detection, risk-of-harm labels, note completeness, inter-rater reliability, benchmark dataset construction, and automated scoring compared with clinician scoring.
+
+## On-Prem Clinical LLM Deployment Evaluation
+
+When an evaluation includes distilled DeepSeek-R1 or other open-source models for diagnosis tasks, document:
+
+- Local hardware constraints: available CPU/GPU memory, latency, quantization or runtime choices, concurrency limits, and whether the deployment can meet clinical workflow needs.
+- Privacy benefits: local inference may reduce external data sharing, but protected health information handling, access control, logging, retention, and de-identification still need validation.
+- Benchmark drift: repeat diagnosis benchmarks after model, prompt, retrieval, guideline, local population, or case-mix changes.
+- Calibration: test confidence expression, abstention behavior, uncertainty communication, and threshold stability against clinician-adjudicated cases.
+- Safety failure modes: track missed diagnoses, unsupported diagnoses, inappropriate certainty, delayed escalation, contraindicated advice, and privacy leakage.
+- Governance checks: require documented validation scope, human oversight, audit logs, incident escalation, rollback criteria, and institutional approval before clinical use.
+
 ## Inputs / Outputs
 
 ### Inputs
@@ -95,3 +115,5 @@ The workflow is grounded in the finding that evaluation methods for AI-generated
 ## References
 
 - PubMed: Dahlberg A, Käenniemi T, Winther-Jensen T, Tapiola O, Luisto R. "Measuring the quality of AI-generated clinical notes: A systematic review and experimental benchmark of evaluation methods." Artif Intell Med. 2026 Jul. https://pubmed.ncbi.nlm.nih.gov/41955894/
+- PubMed: Zhong W, Fu Y, Peng D, Liu Y, Liu Y. "Open-Source Large Language Models Distilled DeepSeek-R1 Pose Challenges for On-Premises Clinical Deployment in Medical Diagnosis: A Comparative Study of Performance." J Med Syst. 2026 May 1. https://pubmed.ncbi.nlm.nih.gov/42062641/
+- PubMed: Fonseca RDC, Rios RA, Castaldoni R, Carvalho AA, Lopes TJS. "Fine-grained evaluation of a domain-specific Q&A dataset to support trustworthy medical language models." Health Inf Sci Syst. 2026 Dec. https://pubmed.ncbi.nlm.nih.gov/42039929/
