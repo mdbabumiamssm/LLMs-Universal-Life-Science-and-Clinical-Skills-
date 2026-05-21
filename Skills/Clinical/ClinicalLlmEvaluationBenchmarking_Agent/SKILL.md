@@ -88,6 +88,9 @@ The workflow is grounded in the finding that evaluation methods for AI-generated
 15. **Test-time knowledge acquisition evaluation**  
    For medical decision support systems that acquire knowledge during inference, evaluate retrieval timing, source trust, benchmark contamination risk, ablations versus zero-shot or no-retrieval prompting, and safeguards that prevent over-trusting newly retrieved context without clinician-adjudicated support.
 
+16. **Clinical-note benchmark selection and reviewer calibration**  
+   When evaluating AI-generated clinical notes, choose benchmark methods that explicitly test factual correctness, clinically important omissions, and potential harm rather than fluency alone; calibrate automated or human review against clinician-adjudicated examples before using scores for deployment decisions.
+
 ## On-Prem Clinical LLM Deployment Evaluation
 
 When an evaluation includes distilled DeepSeek-R1 or other open-source reasoning models for diagnosis tasks, document:

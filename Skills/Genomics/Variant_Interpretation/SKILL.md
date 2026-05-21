@@ -50,6 +50,7 @@ The **Variant Interpretation Skill** automates the classification of genetic var
 15. **Precision Grounding for LLM Summaries**: For genetic variant summarization, retrieve ClinVar, gnomAD, ACMG/AMP, disease, and literature evidence before synthesis; present retrieved evidence facts separately from LLM-generated synthesis; and cite sources for uncertainty statements, evidence gaps, and conflict handling.
 16. **Source-Linked Variant Summarization**: For precision-grounded summaries, require retrieval from ClinVar, gnomAD, ACMG/AMP evidence codes, disease databases, and literature; link each summary claim to its source; report evidence strength, conflicts, database review status, and explicit uncertainty; and avoid free-form LLM interpretation unsupported by retrieved evidence.
 17. **Auditable Precision Grounding**: Constrain LLM-generated genetic variant summaries to evidence-based databases; cite ClinVar, gnomAD, COSMIC, or equivalent sources for variant claims; separate pathogenicity evidence from interpretation; and audit outputs for hallucinated disease, frequency, or classification claims.
+18. **Pre-Interpretation Precision Grounding**: Before ACMG-style interpretation, require evidence-backed database retrieval, citation-linked variant summaries, ClinVar or relevant domain database cross-checks, and hallucination controls that block unsupported variant, disease, frequency, or classification claims.
 
 ## Workflow
 

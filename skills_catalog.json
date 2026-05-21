@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-20T21:28:33.069182+00:00",
+  "generated_at": "2026-05-21T10:42:37.182598+00:00",
   "generator": "ARTIFICIALINTELLIGENCEGROUP-pipeline v1.0",
   "total_skills": 1028,
   "total_errors": 16,
@@ -967,7 +967,7 @@
       ],
       "file_path": "Skills/Clinical/ClinicalGuidelineDevelopmentLlm_Agent/SKILL.md",
       "relative_path": "Clinical/ClinicalGuidelineDevelopmentLlm_Agent/SKILL.md",
-      "last_modified": "2026-05-20T21:19:52.117823+00:00",
+      "last_modified": "2026-05-20T21:28:40.406128+00:00",
       "body_length": 6174,
       "capabilities": [
         "Overview",
@@ -990,8 +990,8 @@
       ],
       "file_path": "Skills/Clinical/ClinicalLlmEvaluationBenchmarking_Agent/SKILL.md",
       "relative_path": "Clinical/ClinicalLlmEvaluationBenchmarking_Agent/SKILL.md",
-      "last_modified": "2026-05-20T21:26:07.445868+00:00",
-      "body_length": 10929,
+      "last_modified": "2026-05-21T10:35:31.703988+00:00",
+      "body_length": 11313,
       "capabilities": [
         "Overview",
         "When to Use This Skill",
@@ -1289,8 +1289,8 @@
       ],
       "file_path": "Skills/Clinical/Clinical_NLP/SKILL.md",
       "relative_path": "Clinical/Clinical_NLP/SKILL.md",
-      "last_modified": "2026-05-20T21:27:34.136180+00:00",
-      "body_length": 13323,
+      "last_modified": "2026-05-21T10:36:57.795628+00:00",
+      "body_length": 13797,
       "capabilities": [
         "When to Use This Skill",
         "Core Capabilities",
@@ -1693,8 +1693,8 @@
       ],
       "file_path": "Skills/Clinical/Trial_Eligibility_Agent/SKILL.md",
       "relative_path": "Clinical/Trial_Eligibility_Agent/SKILL.md",
-      "last_modified": "2026-05-20T21:23:04.148039+00:00",
-      "body_length": 3592,
+      "last_modified": "2026-05-21T10:34:08.733336+00:00",
+      "body_length": 3895,
       "capabilities": [
         "At-a-Glance",
         "Inputs",
@@ -8359,8 +8359,8 @@
       ],
       "file_path": "Skills/Genomics/Variant_Interpretation/SKILL.md",
       "relative_path": "Genomics/Variant_Interpretation/SKILL.md",
-      "last_modified": "2026-05-20T13:04:48.829568+00:00",
-      "body_length": 6552,
+      "last_modified": "2026-05-21T10:36:13.952811+00:00",
+      "body_length": 6868,
       "capabilities": [
         "When to Use This Skill",
         "Core Capabilities",
@@ -8381,7 +8381,7 @@
       ],
       "file_path": "Skills/Genomics/Variant_Interpretation/bioSkills/clinical-interpretation/SKILL.md",
       "relative_path": "Genomics/Variant_Interpretation/bioSkills/clinical-interpretation/SKILL.md",
-      "last_modified": "2026-05-20T21:26:52.422322+00:00",
+      "last_modified": "2026-05-20T21:28:40.406128+00:00",
       "body_length": 11805,
       "capabilities": [
         "Core Capabilities",
@@ -13123,7 +13123,7 @@
       ],
       "file_path": "Skills/Machine_Learning/machine-learning/survival-analysis/SKILL.md",
       "relative_path": "Machine_Learning/machine-learning/survival-analysis/SKILL.md",
-      "last_modified": "2026-05-20T21:22:26.463930+00:00",
+      "last_modified": "2026-05-20T21:28:40.406128+00:00",
       "body_length": 15209,
       "capabilities": [
         "Core Capabilities",
@@ -15002,7 +15002,7 @@
       ],
       "file_path": "Skills/Pharma/Drug_Interaction/SKILL.md",
       "relative_path": "Pharma/Drug_Interaction/SKILL.md",
-      "last_modified": "2026-05-20T21:23:57.735561+00:00",
+      "last_modified": "2026-05-20T21:28:40.406128+00:00",
       "body_length": 8927,
       "capabilities": [
         "When to Use This Skill",
