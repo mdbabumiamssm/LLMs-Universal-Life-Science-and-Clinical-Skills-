@@ -43,7 +43,7 @@ Specializing in Hemato-Oncology,and Machine Learning-LLM-AI.
 
 ---
 
-## 🌟 Major Updates (February 2026)
+## 🌟 Major Updates
 
 We have significantly expanded the **Skills** directory to align with the 2026 roadmap, introducing the `SKILL.md` metadata standard and deploying high-performance agents across key domains.
 
@@ -69,24 +69,7 @@ We have significantly expanded the **Skills** directory to align with the 2026 r
 *   **LEADS:** `Skills/Research_Tools/Literature_Mining/LEADS` - Automated systematic review and meta-analysis agent.
 *   **BioMCP:** `Skills/MCP_Servers/BioMCP` - Model Context Protocol server for connecting LLMs to PubMed, ClinicalTrials.gov, and more.
 
-## 🧹 Recent Curation
-## April 2026 LLM + Agentic AI Refresh
 
-We completed a focused curation pass on the repo's LLM and agentic AI surface, with the goal of turning scattered references into first-class, operational skills.
-
-- Added new first-party skills for `OpenAI_Codex_Agents`, `Google_ADK_Agents`, `PydanticAI_Agents`, `Agentic_Evals_Observability`, `MCP_Operations_2026`, `Mistral_Platform_Operations_2026`, `DeepSeek_API_Operations_2026`, and `XAI_Grok_Operations_2026`.
-- Rewrote `Automated_Web_Research` and `DeepResearch_Swarm` to be evidence-first, source-aware, and operationally realistic.
-- Added missing category indexes for `Skills/AI_Providers/` and `Skills/MCP_Servers/`, and replaced the stale `Skills/Agentic_AI/README.md` with an accurate curation guide.
-- Added `docs/strategy/LLM_AGENTIC_AI_CURATION_2026.md` as the source-of-truth playbook for official references, literature watchlists, and refresh discipline.
-
-## Late April 2026 LLM Infrastructure Enrichment
-
-We followed the initial refresh with a second, more operational pass focused on the current coding-agent and cloud-agent landscape.
-
-- Added `Skills/Agentic_AI/Claude_Code_Operations_2026` and `Skills/Agentic_AI/Computer_Use_Agents_2026` to cover terminal-first coding agents, GitHub automation, and browser/desktop control patterns.
-- Added dedicated provider skills for `Skills/AI_Providers/Cohere_Platform_Operations_2026`, `Skills/AI_Providers/AWS_Bedrock_Operations_2026`, and `Skills/AI_Providers/Azure_AI_Foundry_Operations_2026` so teams no longer rely on a single combined cloud note.
-- Refreshed the official source maps for OpenAI and Anthropic to reflect current model catalogs, Codex, deep research, computer-use, and Claude Code surfaces.
-- Expanded `docs/strategy/LLM_AGENTIC_AI_CURATION_2026.md` with a stronger canonical-source map, ecosystem watchlist, and benchmark/literature coverage.
 
 ## May 2026 Agentic Science and Runtime Refresh
 
