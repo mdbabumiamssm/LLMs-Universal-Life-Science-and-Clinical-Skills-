@@ -1,195 +1,172 @@
-# Universal Biomedical Skills & Agents (Biomedical OS - 2026)
+# Universal Biomedical Skills & Agents
+
+_A research-grade Biomedical OS for reproducible, agentic life-science and clinical AI workflows._
 
 ![Status](https://img.shields.io/badge/Status-Active-green)
-![Architecture](https://img.shields.io/badge/Architecture-Biomedical%20OS-blueviolet)
-![Domain](https://img.shields.io/badge/Domain-Biotech%20%7C%20Clinical%20%7C%20Genomics-purple)
-![Tech](https://img.shields.io/badge/Tech-MCP%20%7C%20DeepSeek%20%7C%20Gemini-orange)
+![Skills](https://img.shields.io/badge/Skills-1029-blue)
+![Tests](https://img.shields.io/badge/BioKernel%20tests-74%20passing-brightgreen)
+![Domains](https://img.shields.io/badge/Domains-Clinical%20%7C%20Genomics%20%7C%20Drug%20Discovery%20%7C%20Agentic%20AI-purple)
+![Runtime](https://img.shields.io/badge/Runtime-BioKernel%20%7C%20MCP%20%7C%20Multi--LLM-orange)
 
-> **⚠️ IMPORTANT DISCLAIMER & COPYRIGHT NOTICE**
-> 
-> This repository, its architecture, agent designs, and specific implementations are the intellectual property of **MD BABU MIA, PhD**.
-> 
-> While open-source components are licensed under MIT, the unique curation, "Biomedical OS" architecture, and agentic workflows are proprietary to the author. 
-> 
-> **If you fork, clone, or copy this repository for public use, you MUST:**
-> 1.  Retain this copyright notice.
-> 2.  Explicitly credit **MD BABU MIA, PhD** as the original author.
-> 3.  Link back to the original repository.
-> 
-> *Plagiarism or uncredited redistribution is strictly prohibited.*
+> **Attribution and copyright:** This repository, its curation strategy, Biomedical OS architecture, agent designs, and first-party workflows are maintained by **MD BABU MIA, PhD**. Open-source components retain their own licenses, while the original curation, architecture, and agentic workflow design require attribution, a link to the original repository, and preservation of this notice.
 
 ---
 
-## 🚀 Overview
+## 🧬 Research purpose
 
-This repository acts as a **Biomedical Operating System (BioOS)**, orchestrating a comprehensive library of **skills, agents, and mathematical foundations** for modern (2026) Artificial Intelligence. 
+This repository is designed for researchers who want to turn biomedical AI from isolated prompts into reproducible, inspectable units of scientific work. It organizes **1029 skills across 54 categories** into a structured library of `SKILL.md` files, reference notes, runtime adapters, and evaluation assets. The central idea is simple: a biomedical agent should know its domain, cite its evidence, use tools deliberately, preserve provenance, and stop at the right human review boundary.
 
-Unlike standard codebases, this project transforms static scripts into **Agentic Workflows**—where autonomous systems plan, execute, use tools, and correct themselves to solve complex scientific problems. It is designed to support high-impact research, clinical decision support, and automated lab operations.
+The repository supports translational research, clinical informatics, genomics, spatial and single-cell analysis, digital pathology, drug discovery, research automation, and modern agentic AI infrastructure. Its runtime layer, **BioKernel**, routes natural-language research questions to appropriate skills, composes multi-step workflows, and evaluates outputs with biomedical rubrics.
 
-## 👤 Author & Maintainer
+## 🔬 Scientific value for researchers
 
-**MD BABU MIA, PhD**  
-*Assistant Professor of Hematology & Medical Oncology, Machine Learning -AI | Mount Sinai*  
-Mount Sinai Tisch Cancer Institute
-Icahn School of Medicine at Mount Sinai
-Mount Sinai Hospital
-One Gustave L. Levy Place
-New York, NY 10029
-Desk phone:(212) 241-2764 (x42764)
-Mobile phone:(332) 256-3038
-Email: md.babu.mia@mssm.edu
-Specializing in Hemato-Oncology,and Machine Learning-LLM-AI.
- 
+| Research need | What this repository provides |
+|---|---|
+| Reproducible biomedical analysis | Standardized `SKILL.md` units with metadata, references, expected outputs, and tool boundaries |
+| Cross-platform agent deployment | BioKernel adapters for OpenAI, Anthropic, Gemini, local models, and MCP-compatible tool surfaces |
+| Agentic scientific discovery | Curated workflows for hypothesis generation, lab-in-the-loop planning, notebook analysis, and human-gated validation |
+| Translational evidence synthesis | Literature mining, knowledge graphs, clinical trial matching, biomarker analysis, and regulatory review patterns |
+| Research governance | Source reliability metadata, evaluation guidance, safety guardrails, rollback criteria, and reproducibility packages |
 
----
+## 🧠 Research workflow
 
-## 🌟 Major Updates
+```mermaid
+flowchart LR
+    accTitle: Biomedical Agent Workflow
+    accDescr: Researcher questions are routed through curated skills, evidence tools, human review, and reproducible outputs.
 
-We have significantly expanded the **Skills** directory to align with the 2026 roadmap, introducing the `SKILL.md` metadata standard and deploying high-performance agents across key domains.
+    question([Research question]) --> route[BioKernel skill routing]
+    route --> skill[Curated SKILL.md]
+    skill --> tools[Data, literature, MCP, and analysis tools]
+    tools --> review{Human checkpoint}
+    review -->|Revise| skill
+    review -->|Approve| artifact[Reproducible research artifact]
+    artifact --> eval[Evaluation, provenance, and audit trail]
 
-### 🧬 Genomics & Bioinformatics
-*   **BioMaster:** `Skills/Genomics/Multi_Agent_Workflows/BioMaster` - A master orchestrator for RNA-seq, ChIP-seq, and Hi-C pipelines.
-*   **CellAgent:** `Skills/Genomics/Single_Cell/CellAgent` - Autonomous single-cell annotation and quality control.
-*   **CompBioAgent:** `Skills/Genomics/Single_Cell/CompBioAgent` - Interactive scRNA-seq explorer and visualization tool.
-*   **STAgent:** `Skills/Genomics/Spatial_Transcriptomics/STAgent` - Spatial transcriptomics analysis for Visium/Xenium data.
+    classDef input fill:#ede9fe,stroke:#7c3aed,stroke-width:2px,color:#3b0764
+    classDef process fill:#dbeafe,stroke:#2563eb,stroke-width:2px,color:#1e3a5f
+    classDef decision fill:#fef9c3,stroke:#ca8a04,stroke-width:2px,color:#713f12
+    classDef output fill:#dcfce7,stroke:#16a34a,stroke-width:2px,color:#14532d
 
-### 🏥 Clinical & Operations
-*   **ChatEHR:** `Skills/Clinical/EHR/ChatEHR` - Clinical assistant for summarizing patient records and answering queries.
-*   **TrialGPT:** `Skills/Clinical/Trial_Matching/TrialGPT` - Intelligent patient-to-trial matching and ranking.
-*   **RadGPT:** `Skills/Clinical/Radiology/RadGPT` - Radiology report summarizer and patient-friendly explainer.
-*   **Autonomous Oncology Agent:** Precision oncology treatment planning using multimodal data (H&E + Genomics).
-
-### 🧪 Drug Discovery & Chemistry
-*   **MAGE:** `Skills/Drug_Discovery/Antibody_Design/MAGE` - Generative antibody design using protein language models.
-*   **CheMatAgent:** `Skills/Drug_Discovery/CheMatAgent` - Computational chemistry agent for molecule design and property prediction.
-*   **Biomni:** `Skills/Research_Tools/Biomni` - General-purpose biomedical research agent with access to 150+ tools.
-
-### 🔍 Knowledge & Research
-*   **KRAGEN:** `Skills/Research_Tools/Knowledge_Graphs/KRAGEN` - Knowledge Graph-Enhanced RAG for complex reasoning.
-*   **LEADS:** `Skills/Research_Tools/Literature_Mining/LEADS` - Automated systematic review and meta-analysis agent.
-*   **BioMCP:** `Skills/MCP_Servers/BioMCP` - Model Context Protocol server for connecting LLMs to PubMed, ClinicalTrials.gov, and more.
-
-
-
-## May 2026 Agentic Science and Runtime Refresh
-
-This pass updates the repo around the newest peer-reviewed scientific-agent systems and the agent runtime primitives that now matter operationally.
-
-- Added `Skills/Agentic_AI/Scientific_Discovery_Agents_2026` to cover Co-Scientist, Robin, CellVoyager, SPARK, Biomni-style orchestration, and lab-in-the-loop biomedical discovery workflows.
-- Updated OpenAI/Codex guidance for Codex app/cloud workflows, reusable skills, hosted tools, tool search, shell/apply_patch, remote MCP, and approval-aware execution.
-- Updated MCP operations guidance for OAuth 2.1, protected-resource metadata discovery, tool-poisoning review, identity propagation, timeout budgeting, structured errors, and audit logging.
-- Expanded agent eval guidance with out-of-scope action tests, scientific claim-boundary checks, human checkpoints, and reproducibility packages.
-- Added `sources/research_20260522_agentic_biomedical_discovery.md` as an auditable source map for the refresh.
-
-## 📂 Directory Structure
-
-The repository is organized into domain-specific modules:
-
-```text
-Skills/                     # 59+ biomedical AI skill domains
-├── Agentic_AI/             # Orchestrators, Swarms, Planning Agents
-├── Clinical/               # EHR, Radiology, Oncology, Trials
-├── Drug_Discovery/         # Antibody Design, Small Molecules, Chemistry
-├── Genomics/               # Single Cell, Spatial, CRISPR, Variant Interpretation
-├── MCP_Servers/            # BioMCP and other protocol servers
-├── Research_Tools/         # Biomni, Literature Mining, Knowledge Graphs
-├── Pharma/                 # Regulatory Affairs, Pharmacovigilance
-├── Software_Engineering/   # Best Practices (React, Python, Pandas)
-└── User_Collections/Babu/  # Curated high-value skill collection
-
-biokernel/                  # BioKernel Runtime Platform (v2026.4.0)
-├── biokernel/              # Core orchestration engine
-│   ├── server.py           #   FastAPI + semantic routing + execution
-│   ├── router.py           #   TF-IDF semantic skill router
-│   ├── workflow_engine.py  #   DAG-based multi-agent workflows
-│   └── mcp_server.py       #   Model Context Protocol server
-├── adapters/               # LLM provider adapters
-│   ├── anthropic_adapter.py#   Claude API (real integration)
-│   ├── openai_runtime_adapter.py  # GPT API (real integration)
-│   ├── gemini_adapter.py   #   Gemini API (real integration)
-│   └── local_adapter.py    #   Ollama / local models
-├── evaluator/              # Automated evaluation with biomedical rubrics
-├── optimizer/              # USDL transpiler + meta-prompter
-├── tests/                  # 74 tests (router, workflow, eval, schema, transpiler)
-└── cli.py                  # Rich interactive CLI
+    class question input
+    class route,skill,tools,eval process
+    class review decision
+    class artifact output
 ```
 
-### 🗂️ Documentation Layout (2026 refresh)
+## 🧭 Major scientific domains
 
-All long-form docs now live under `docs/` with a clear index:
+| Domain | Representative capabilities |
+|---|---|
+| **Genomics and bioinformatics** | Variant interpretation, genome assembly, single-cell analysis, spatial transcriptomics, CRISPR screens, 3D genomics |
+| **Clinical and translational AI** | EHR/FHIR workflows, trial matching, prior authorization, clinical NLP, oncology decision support, safety review |
+| **Drug discovery and chemistry** | Target discovery, molecular property prediction, antibody design, protein structure, knowledge-graph repurposing |
+| **Pathology and imaging AI** | Whole-slide analysis, dMMR/MSI modeling guidance, radiology summaries, multimodal rad-path fusion |
+| **Agentic AI infrastructure** | Codex workflows, MCP operations, agent evaluations, computer-use agents, multi-agent scientific discovery |
+| **Research tools and databases** | Biomni-style orchestration, PubMed/ClinicalTrials access, cBioPortal, ChEMBL, AlphaFold, GTEx, gnomAD, GWAS, UniProt |
 
-| Folder | What's inside |
-|--------|---------------|
-| `docs/README.md` | Quick index for every doc family. |
-| `docs/architecture/` | Repository maps + onboarding (“Where does X live?”). |
-| `docs/operations/` | Runbooks (e.g., `medgeclaw_stack.md`). |
-| `docs/standards/` | Governance + schemas (`USDL_OVERVIEW.md`, etc.). |
+## 🧪 Current research highlights
 
-Update these files whenever you add a major capability so downstream teams never
-have to guess where specs or runbooks are stored.
+- **Scientific discovery agents:** [Scientific_Discovery_Agents_2026](Skills/Agentic_AI/Scientific_Discovery_Agents_2026/) captures the 2026 shift toward peer-reviewed biomedical discovery agents, including Co-Scientist, Robin, CellVoyager, SPARK, and Biomni-style orchestration.[^coscientist][^robin][^cellvoyager][^spark]
+- **Agent runtime modernization:** [OpenAI_Codex_Agents](Skills/Agentic_AI/OpenAI_Codex_Agents/) now reflects Codex app/cloud workflows, reusable skills, hosted tools, tool search, shell/apply_patch, MCP, and approval-aware execution.[^codex]
+- **MCP for research systems:** [MCP_Operations_2026](Skills/MCP_Servers/MCP_Operations_2026/) covers remote MCP authorization, protected-resource metadata, tool-poisoning review, identity propagation, timeout budgets, structured errors, and audit logging.[^mcp]
+- **Evaluation discipline:** [Agentic_Evals_Observability](Skills/Agentic_AI/Agentic_Evals_Observability/) now includes scope-control tests, out-of-scope action detection, scientific claim-boundary checks, and human-review checkpoints.
 
-## 📜 Standardized Skill Format
+## 🧱 Repository architecture
 
-The repository is migrating toward a lean **SKILL.md** standard so skills are easier to discover and cheaper to load into context. Curated skills should prefer:
-*   **Name:** Hyphen-case skill identifier.
-*   **Description:** Concise trigger guidance that states what the skill does and when to use it.
-*   **Workflow body:** Short operational instructions rather than large code dumps.
-*   **References:** Detailed domain notes moved into `references/` when they are not needed on every invocation.
-*   **Agents metadata:** Optional `agents/openai.yaml` for curated skills that should surface cleanly in UI-driven environments.
+```text
+Skills/                     # Curated biomedical AI skills and agents
+├── Agentic_AI/             # Agent runtimes, discovery agents, evals, memory, workflows
+├── Clinical/               # EHR, oncology, radiology, trials, safety, regulatory workflows
+├── Drug_Discovery/         # Antibody design, structure, chemistry, target discovery
+├── Genomics/               # Single-cell, spatial, CRISPR, variant interpretation, assembly
+├── MCP_Servers/            # BioMCP and protocol-aware biomedical tool servers
+├── Pathology_AI/           # Whole-slide and computational pathology agents
+├── Research_Tools/         # Biomni, literature mining, databases, reporting, knowledge graphs
+└── Software_Engineering/   # Scientific software and engineering best-practice skills
 
-## 🛠️ Usage Examples
+biokernel/                  # Runtime platform for routing, workflows, adapters, evals, and MCP
+├── biokernel/              # FastAPI server, semantic router, workflow engine, MCP server
+├── adapters/               # OpenAI, Anthropic, Gemini, and local model adapters
+├── evaluator/              # Biomedical assertions and LLM-judge rubrics
+├── optimizer/              # USDL transpiler and prompt optimization
+└── tests/                  # 74 passing BioKernel tests
 
-### BioKernel Platform (Recommended)
+docs/                       # Architecture, operations, standards, strategy, and research notes
+sources/                    # Auditable source maps for major curation passes
+```
 
-**1. Start the BioKernel server:**
+## 🧾 Skill standard
+
+Curated skills are intentionally compact. Each high-quality skill should make it clear when to use it, what it can safely do, what tools it may invoke, what evidence it relies on, and where deeper references live.
+
+| Field | Purpose |
+|---|---|
+| `name` | Stable, hyphen-case identifier |
+| `description` | Trigger guidance for humans and agents |
+| `measurable_outcome` | Practical success criterion |
+| `source_reliability` | Evidence quality and provenance notes |
+| `allowed-tools` | Tool boundary for safe invocation |
+| `references/` | Deeper domain notes, papers, APIs, and operational guidance |
+| `agents/openai.yaml` | Optional UI metadata for agent surfaces |
+
+## 🚀 Quick start
+
+### Run BioKernel
+
 ```bash
-cd biokernel && pip install -e ".[all-providers]"
+cd biokernel
+pip install -e ".[all-providers]"
 biokernel serve --port 8000
 ```
 
-**2. Execute a biomedical query (auto-routes to best skill):**
+### Route a research question
+
 ```bash
 biokernel run "Analyze JAK2 V617F mutation in MPN patients" --provider anthropic
 ```
 
-**3. Interactive research session:**
+### Start an interactive session
+
 ```bash
 biokernel interactive
 ```
 
-**4. MCP server for Claude Desktop / Claude Code:**
+### Expose skills through MCP
+
 ```bash
 biokernel mcp
 ```
 
-**5. Run evaluation benchmarks:**
+### Run the BioKernel test suite
+
 ```bash
-biokernel eval tests/eval_cases.yaml --html
+pytest -q biokernel/tests
 ```
 
-### Direct Skill Invocation
+## 👤 Principal investigator and maintainer
 
-**6. Match a Patient to a Clinical Trial (TrialGPT):**
-```bash
-python3 Skills/Clinical/Trial_Matching/TrialGPT/run_matching.py --patient_profile ./patient.json
-```
+**MD BABU MIA, PhD**<br>
+Assistant Professor of Hematology and Medical Oncology, Machine Learning and AI<br>
+Mount Sinai Tisch Cancer Institute<br>
+Icahn School of Medicine at Mount Sinai<br>
+Email: md.babu.mia@mssm.edu
 
-**7. Design an Antibody (MAGE):**
-```bash
-python3 Skills/Drug_Discovery/Antibody_Design/MAGE/generate.py --antigen "spike_protein" --count 5
-```
+## 📄 License and attribution
 
-**8. Analyze Spatial Transcriptomics (STAgent):**
-```bash
-python3 Skills/Genomics/Spatial_Transcriptomics/STAgent/main.py --data ./visium_data.h5ad --task "cluster_domains"
-```
+Copyright (c) 2026 MD BABU MIA, PhD. Open-source components are provided under their applicable licenses, including MIT where specified. The original Biomedical OS architecture, agentic workflow design, and curated skill organization require attribution to **MD BABU MIA, PhD** and a link to the original repository.
 
-## 📄 License
+[^coscientist]: Google DeepMind. (2026). "Co-Scientist: A multi-agent AI partner to accelerate research." https://deepmind.google/blog/co-scientist-a-multi-agent-ai-partner-to-accelerate-research/
 
-**Copyright (c) 2026 MD BABU MIA, PhD.**  
-All rights reserved.
+[^robin]: Ghareeb, A. E., Chang, B., Mitchener, L., et al. (2026). "A multi-agent system for automating scientific discovery." *Nature*. https://www.nature.com/articles/s41586-026-10652-y
 
-This project is licensed under the MIT License for open-source components, but the unique architectural design and agentic workflows are the intellectual property of the author. **Attribution is mandatory.**
+[^cellvoyager]: Nature Methods. (2026). "CellVoyager: AI CompBio agent generates new insights by autonomously analyzing biological data." https://www.nature.com/articles/s41592-026-03029-6
+
+[^spark]: Nature Medicine. (2026). "An agentic framework for autonomous scientific discovery in cancer pathology." https://www.nature.com/articles/s41591-026-04357-y
+
+[^codex]: OpenAI. (2026). "Introducing the Codex app." https://openai.com/index/introducing-the-codex-app/
+
+[^mcp]: Model Context Protocol. (2025). "Authorization." https://modelcontextprotocol.io/specification/2025-11-25/basic/authorization
 
 ## Skills index
 
@@ -559,34 +536,34 @@ _Auto-generated index. 1029 skills across 54 categories. Last refresh: 2026-05-2
 
 ### Knowledge_Base (28)
 
-- **Bulk Omics Clustering Analysis** — 
-- **Bulk RNAseq differential expression (DeSeq2)** — 
-- **Cell-Cell Communication Analysis (CellChat)** — 
-- **ChIP-Atlas Diff Analysis** — 
-- **ChIP-Atlas Peak Enrichment** — 
-- **ChIP-Atlas Target Genes** — 
-- **Clinical Survival & Outcome Analysis** — 
-- **ClinicalTrials.gov Disease Landscape Scanner** — 
-- **Disease Progression Trajectory Analysis** — 
-- **Experimental Design** — 
-- **Functional Enrichment Analysis (GSEA + ORA)** — 
-- **GWAS to Function via TWAS** — 
-- **Gene Regulatory Network Inference (pySCENIC)** — 
-- **Genetic Variant Annotation** — 
-- **LASSO Biomarker Panel Discovery & Validation** — 
-- **Multi-Omics Integration (MOFA+)** — 
-- **PCR Primer Design** — 
-- **Polygenic Risk Score (PGS Catalog)** — 
-- **Pooled CRISPR Screen Analysis** — 
-- **Preclinical Literature Extraction** — 
-- **Proteomics Differential Expression (limma + DEqMS)** — 
-- **Single-Cell RNA-seq Core Analysis (Scanpy)** — 
-- **Single-Cell RNA-seq Core Analysis (Seurat)** — 
-- **Single-Cell Trajectory Inference** — 
-- **Spatial Transcriptomics Visium Analysis** — 
-- **Two-Sample Mendelian Randomization** — 
-- **Upstream Regulator Analysis** — 
-- **Weighted Gene Co-expression Network Analysis (WGCNA)** — 
+- **Bulk Omics Clustering Analysis** —
+- **Bulk RNAseq differential expression (DeSeq2)** —
+- **Cell-Cell Communication Analysis (CellChat)** —
+- **ChIP-Atlas Diff Analysis** —
+- **ChIP-Atlas Peak Enrichment** —
+- **ChIP-Atlas Target Genes** —
+- **Clinical Survival & Outcome Analysis** —
+- **ClinicalTrials.gov Disease Landscape Scanner** —
+- **Disease Progression Trajectory Analysis** —
+- **Experimental Design** —
+- **Functional Enrichment Analysis (GSEA + ORA)** —
+- **GWAS to Function via TWAS** —
+- **Gene Regulatory Network Inference (pySCENIC)** —
+- **Genetic Variant Annotation** —
+- **LASSO Biomarker Panel Discovery & Validation** —
+- **Multi-Omics Integration (MOFA+)** —
+- **PCR Primer Design** —
+- **Polygenic Risk Score (PGS Catalog)** —
+- **Pooled CRISPR Screen Analysis** —
+- **Preclinical Literature Extraction** —
+- **Proteomics Differential Expression (limma + DEqMS)** —
+- **Single-Cell RNA-seq Core Analysis (Scanpy)** —
+- **Single-Cell RNA-seq Core Analysis (Seurat)** —
+- **Single-Cell Trajectory Inference** —
+- **Spatial Transcriptomics Visium Analysis** —
+- **Two-Sample Mendelian Randomization** —
+- **Upstream Regulator Analysis** —
+- **Weighted Gene Co-expression Network Analysis (WGCNA)** —
 
 ### LLM_Research (2)
 
