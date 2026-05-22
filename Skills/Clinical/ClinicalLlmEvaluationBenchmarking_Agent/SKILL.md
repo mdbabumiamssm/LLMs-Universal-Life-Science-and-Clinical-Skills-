@@ -77,7 +77,7 @@ The workflow is grounded in the finding that evaluation methods for AI-generated
    Evaluate distilled DeepSeek-R1 or other open-source reasoning models for diagnosis workflows by matching diagnostic task benchmarks to the intended clinical setting, then checking local hosting constraints, data governance, model provenance, diagnosis-specific failure-mode logging, human oversight requirements, and comparison against closed frontier models before clinical use.
 
 12. **Fine-grained domain-specific medical Q&A dataset evaluation**  
-   For domain-specific clinical Q&A benchmarks, define item-level error taxonomy, evaluate items individually with explicit omission and harm scoring, separate omission and hallucination labels, stratify by specialty and topic, report calibration and prompt sensitivity checks beyond aggregate accuracy, and document trustworthy benchmark curation practices covering source, scope, construction, answer keys, annotation or review process, limitations, and intended benchmarking use.
+   For domain-specific clinical Q&A benchmarks, define item-level error taxonomy, evaluate items individually by annotating omission, ambiguity, correctness, evidence grounding, hallucination or commission, and risk-of-harm dimensions rather than relying only on aggregate accuracy, stratify by specialty and topic, report calibration and prompt sensitivity checks, and document trustworthy benchmark curation practices covering source, scope, construction, answer keys, annotation or review process, limitations, and intended benchmarking use.
 
 13. **Systematic clinical-note evaluation method benchmarking**  
    For AI-generated clinical notes, design experimental benchmarks that compare evaluation methods rather than relying on one score: factual correctness, omissions, harm potential, note completeness, clinician preference, inter-rater reliability, benchmark dataset construction, and automated scoring compared with clinician scoring.
@@ -89,13 +89,16 @@ The workflow is grounded in the finding that evaluation methods for AI-generated
    For ophthalmology continuing medical education-style questions, evaluate LLM responses for correctness, content omission, and risk of harm with clinician adjudication, explicitly reporting unsafe omissions rather than aggregate accuracy alone.
 
 16. **Test-time knowledge acquisition evaluation**  
-   For medical decision support systems that acquire knowledge during inference, evaluate retrieval timing, source trust, benchmark contamination risk, ablations versus zero-shot or no-retrieval prompting, and safeguards that prevent over-trusting newly retrieved context without clinician-adjudicated support.
+   For medical decision support systems that retrieve or acquire knowledge during inference, use a controlled evaluation pattern that measures whether acquired evidence improves correctness, omissions, and harm risk; require source traceability for acquired facts, evaluate retrieval timing, source trust, benchmark contamination risk, ablations versus zero-shot or no-retrieval prompting, and safeguards that prevent over-trusting newly retrieved context without clinician-adjudicated support.
 
 17. **Clinical-note benchmark selection and reviewer calibration**  
    When evaluating AI-generated clinical notes, choose benchmark methods that explicitly test factual correctness, clinically important omissions, and potential harm rather than fluency alone; calibrate automated or human review against clinician-adjudicated examples before using scores for deployment decisions.
 
 18. **Distilled reasoning model deployment risk gates**  
    For on-premises DeepSeek-R1 derivatives or similar distilled open-source reasoning models, require diagnostic benchmark design, calibration against closed model baselines, privacy and governance review, latency and hardware tradeoff analysis, diagnosis-specific failure-mode review, and validation gates before clinical use.
+
+19. **On-prem clinical LLM deployment checklist**  
+   For open-source and distilled reasoning models such as DeepSeek-R1 derivatives, benchmark against diagnosis tasks, validate domain drift and calibration, document privacy and security tradeoffs, and require local governance approval before production use.
 
 ## On-Prem Clinical LLM Deployment Risk Evaluation
 
