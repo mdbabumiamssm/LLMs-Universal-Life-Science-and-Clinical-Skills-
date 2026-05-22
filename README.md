@@ -202,7 +202,7 @@ This project is licensed under the MIT License for open-source components, but t
 
 <!-- BEGIN: PIPELINE_INDEX -->
 
-_Auto-generated index. 1028 skills across 54 categories. Last refresh: 2026-05-21T10:42:37.182598+00:00._
+_Auto-generated index. 1028 skills across 54 categories. Last refresh: 2026-05-22T01:48:57.293063+00:00._
 
 ### 3D_Genomics (8)
 
