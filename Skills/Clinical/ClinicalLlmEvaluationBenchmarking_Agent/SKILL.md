@@ -100,6 +100,9 @@ The workflow is grounded in the finding that evaluation methods for AI-generated
 19. **On-prem clinical LLM deployment checklist**  
    For open-source and distilled reasoning models such as DeepSeek-R1 derivatives, benchmark against diagnosis tasks, validate domain drift and calibration, document privacy and security tradeoffs, and require local governance approval before production use.
 
+20. **Open-source distilled reasoning model safety gates**  
+   For on-prem clinical diagnosis workflows using DeepSeek-R1 derivatives or similar open-source distilled reasoning models, evaluate deployment constraints, calibration, privacy controls, hardware limits, refusal or abstention behavior, and clinical safety gates beyond raw benchmark accuracy before operational use.
+
 ## On-Prem Clinical LLM Deployment Risk Evaluation
 
 When an evaluation includes distilled DeepSeek-R1 or other open-source reasoning models for on-premises diagnosis tasks, document risk controls for:
@@ -110,6 +113,7 @@ When an evaluation includes distilled DeepSeek-R1 or other open-source reasoning
 - Model provenance: record model source, distillation lineage when known, version or checkpoint, license constraints, local modifications, and serving configuration used for each benchmark run.
 - Benchmark drift: repeat diagnosis benchmarks after model, prompt, retrieval, guideline, local population, or case-mix changes.
 - Calibration: test confidence expression, abstention behavior, uncertainty communication, and threshold stability against clinician-adjudicated cases.
+- Refusal behavior: test when the model refuses, abstains, over-answers, or gives unsupported diagnostic suggestions, and route unsafe or ambiguous outputs to clinician review.
 - Failure-mode logging: track missed diagnoses, unsupported diagnoses, inappropriate certainty, delayed escalation, contraindicated advice, privacy leakage, model version, prompt version, and reviewer disposition when comparing DeepSeek-R1 distills or other local open-source models.
 - Closed model calibration: benchmark and calibrate on-prem open-source distilled reasoning models against closed model baselines on the same diagnostic task set and rubrics before clinical use.
 - Validation gates: require documented validation scope, clinician review responsibility, audit logs, incident escalation, rollback criteria, and institutional approval before clinical use.

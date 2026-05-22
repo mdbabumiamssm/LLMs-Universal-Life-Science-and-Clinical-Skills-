@@ -52,6 +52,13 @@ Use this skill to connect biomedical research prompts to a repeatable PubMed MCP
 7. **Transport selection** - Run the MCP server over STDIO for local agent integration or Streamable HTTP when a network-accessible MCP endpoint is required.
 8. **Provenance-preserving literature workflow** - Keep PubMed metadata retrieval distinct from full-text discovery, respect NCBI E-utilities rate limits, and preserve PMIDs, DOIs, MeSH terms, citation outputs, related-article links, and full-text availability signals in downstream research notes.
 9. **Broader literature MCP comparison** - For broader biomedical literature workflows, compare against multi-source research MCP servers such as `u9401066/pubmed-search-mcp`, which reports 40 tools, search across PubMed, Europe PMC, CORE, and OpenAlex, full-text access, citation networks, and PICO analysis; prefer `cyanheads/pubmed-mcp-server` when the task needs a simpler NCBI E-utilities-aligned PubMed workflow, PubMed fidelity, or focused PMID/MeSH/citation handling, and prefer a multi-source research MCP when the task explicitly needs cross-index search, full-text lookup beyond PubMed, citation-network exploration, or PICO extraction.
+10. **Lower-adoption MCP vetting** - Before relying on a newer or lower-star biomedical literature MCP, inspect the repository, tool surface, data-source coverage, credential and rate-limit handling, install path, and sample outputs against known PubMed records.
+
+## Alternatives and Extension
+
+- Use a richer biomedical literature MCP such as `u9401066/pubmed-search-mcp` when the user needs combined PubMed, Europe PMC, CORE, and OpenAlex search, full-text access, citation networks, or PICO analysis in one MCP workflow.
+- Prefer the PubMed-only `cyanheads/pubmed-mcp-server` when the task is centered on NCBI E-utilities, PMID-based retrieval, MeSH exploration, related PubMed records, or citation generation from PubMed metadata.
+- Treat lower-adoption MCPs as candidates to vet before production use: confirm the advertised tools exist, run a small PMID/query smoke test, review dependency and credential requirements, and preserve source names in outputs so cross-source results remain traceable.
 
 ## Inputs / Outputs
 
