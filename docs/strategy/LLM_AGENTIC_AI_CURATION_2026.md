@@ -1,6 +1,13 @@
-# LLM and Agentic AI Curation Strategy (April 2026)
+# LLM and Agentic AI Curation Strategy (May 2026)
 
 This document is the repository's operating guide for keeping the LLM and agentic AI surface current without turning the repo into a pile of stale links, cloned hype, and thin wrappers.
+
+## May 22, 2026 Refresh
+
+- Added `Skills/Agentic_AI/Scientific_Discovery_Agents_2026` as the first-party router for Co-Scientist, Robin, CellVoyager, SPARK, Biomni-style orchestration, and lab-in-the-loop scientific agents.
+- Updated OpenAI/Codex curation to reflect Codex app/cloud workflows, reusable skills, hosted tools, tool search, shell/apply_patch, and approval-aware runtime boundaries.
+- Updated MCP guidance around OAuth 2.1, protected-resource metadata discovery, authorization-server discovery, tool-poisoning review, identity propagation, timeout budgets, and structured errors.
+- Expanded eval guidance to include out-of-scope action testing and scientific claim-boundary discipline.
 
 ## What Changed In This Refresh
 
@@ -16,8 +23,12 @@ Use these first. If a new skill cannot be grounded in these kinds of sources, it
 ### Provider docs and SDKs
 
 - OpenAI Developers + API docs: <https://developers.openai.com/>
+- OpenAI Codex app: <https://openai.com/index/introducing-the-codex-app/>
+- OpenAI Codex web docs: <https://developers.openai.com/codex/cloud>
+- OpenAI Responses tools guide: <https://developers.openai.com/api/docs/guides/tools>
 - OpenAI model guides and catalog: <https://developers.openai.com/api/docs/models>
 - OpenAI Agents SDK docs: <https://openai.github.io/openai-agents-python/>
+- OpenAI Agents SDK evolution note: <https://openai.com/index/the-next-evolution-of-the-agents-sdk/>
 - Anthropic Claude docs: <https://docs.anthropic.com/>
 - Anthropic Claude Code docs: <https://docs.anthropic.com/en/docs/claude-code/overview>
 - Cohere docs and models: <https://docs.cohere.com/docs/models>
@@ -46,6 +57,7 @@ Use these first. If a new skill cannot be grounded in these kinds of sources, it
 ### Protocol and computer-use sources
 
 - MCP intro, spec, SDKs, and registry: <https://modelcontextprotocol.io/>
+- MCP authorization spec: <https://modelcontextprotocol.io/specification/2025-11-25/basic/authorization>
 - OpenAI MCP and connectors guide: <https://developers.openai.com/api/docs/guides/tools-connectors-mcp>
 - OpenAI `computer-use-preview`: <https://developers.openai.com/api/docs/models/computer-use-preview>
 - Anthropic computer use tool: <https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/computer-use-tool>
@@ -74,6 +86,16 @@ Use these first. If a new skill cannot be grounded in these kinds of sources, it
 - Azure agent evaluators: <https://learn.microsoft.com/en-us/azure/ai-foundry/concepts/evaluation-evaluators/agent-evaluators>
 - Amazon Bedrock Guardrails: <https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails.html>
 
+### Scientific-discovery agent sources
+
+- Co-Scientist, Google DeepMind: <https://deepmind.google/blog/co-scientist-a-multi-agent-ai-partner-to-accelerate-research/>
+- Co-Scientist, Nature 2026: <https://www.nature.com/articles/s41586-026-10644-y>
+- Robin, Nature 2026: <https://www.nature.com/articles/s41586-026-10652-y>
+- FutureHouse Robin repo: <https://github.com/Future-House/robin>
+- CellVoyager, Nature Methods 2026: <https://www.nature.com/articles/s41592-026-03029-6>
+- SPARK pathology agents, Nature Medicine 2026: <https://www.nature.com/articles/s41591-026-04357-y>
+- Biomni repo: <https://github.com/snap-stanford/biomni>
+
 ### Ecosystem references worth watching
 
 These are useful ecosystems, but they should only become first-party skills after rewrite and verification.
@@ -95,6 +117,11 @@ Keep a small set of operationally relevant papers and benchmarks visible so the 
 - SWE-bench: Can Language Models Resolve Real-World GitHub Issues? - <https://arxiv.org/abs/2310.06770>
 - VisualWebArena: Evaluating Multimodal Agents on Realistic Visual Web Tasks - <https://arxiv.org/abs/2401.13649>
 - OSWORLD: Benchmarking Multimodal Agents for Open-Ended Tasks in Real Computer Environments - <https://arxiv.org/abs/2404.07972>
+- Overeager Coding Agents: Measuring Out-of-Scope Actions on Benign Tasks - <https://arxiv.org/abs/2605.18583>
+- Bridging Protocol and Production: Design Patterns for Deploying AI Agents with MCP - <https://arxiv.org/abs/2603.13417>
+- MCP Threat Modeling and Tool Poisoning - <https://arxiv.org/abs/2603.22489>
+- Agentic AI and the rise of in silico team science in biomedical research - <https://www.nature.com/articles/s41587-026-03035-1>
+- AI scientists produce results without reasoning scientifically - <https://arxiv.org/abs/2604.18805>
 
 ## What We Should Curate First
 
@@ -106,7 +133,20 @@ Prioritize skills that are both high-value and repeatedly needed:
 4. Agent frameworks with clear adoption and official docs (OpenAI Agents SDK, ADK, PydanticAI).
 5. Protocol infrastructure (MCP, remote tools, auth, approval, registry, security).
 6. Evals, tracing, rollback, and quality discipline.
-7. Managed cloud agent platforms (Bedrock, AgentCore, Azure AI Foundry / Microsoft Foundry).
+7. Scientific-discovery agents where peer-reviewed evidence and reproducibility artifacts exist.
+8. Managed cloud agent platforms (Bedrock, AgentCore, Azure AI Foundry / Microsoft Foundry).
+
+## Scientific-Agent Acceptance Criteria
+
+Promote a scientific-discovery agent to first-party status only when it has at least one of the following: peer-reviewed publication, maintainer-owned repository, official project documentation, reproducible benchmark, or a clear operational role missing from existing skills.
+
+Every such skill must state:
+
+- Autonomy class: literature, notebook, hypothesis, experiment planning, lab-in-the-loop, or clinical/pathology review.
+- Scientific claim boundary: hypothesis, in silico result, in vitro result, external validation, or clinical-grade evidence.
+- Human checkpoint: who reviews before experiments, clinical interpretation, or deployment.
+- Validation endpoint: benchmark, published analysis reproduction, ablation, wet-lab assay, or external cohort.
+- Reproducibility package: model, prompt, tool versions, data snapshot, code/notebook, citations, and failed attempts.
 
 ## What We Should Not Do
 
@@ -121,8 +161,10 @@ Prioritize skills that are both high-value and repeatedly needed:
 - Re-check model catalogs, changelogs, and deprecations for OpenAI, Anthropic, Cohere, Google, Mistral, DeepSeek, xAI, AWS Bedrock, and Azure AI Foundry.
 - Re-check Claude Code install guidance, hooks, MCP integration, and GitHub Action behavior.
 - Re-check OpenAI and Anthropic computer-use surfaces, tool versions, and approval/security guidance.
+- Re-check Codex app/cloud, Agents SDK tools, OpenAI skills, tool search, shell/apply_patch, and hosted MCP behavior.
 - Re-check Bedrock model cards, Converse API, Guardrails, Agents, and AgentCore updates.
 - Re-check Azure AI Foundry / Microsoft Foundry deployment types, Agent Service, safety defaults, and agent evaluators.
+- Re-check scientific-discovery systems: Co-Scientist, Robin, FutureHouse agents, CellVoyager, SPARK, Biomni, and benchmark/evaluation papers.
 - Audit `Skills/Agentic_AI`, `Skills/AI_Providers`, and `Skills/MCP_Servers` for thin skills without references.
 - Promote only the best external material into first-party skills after rewriting it into local standards.
 - Rebuild `skills_catalog.json` and `skills_reliability_report.json` after meaningful curation changes.

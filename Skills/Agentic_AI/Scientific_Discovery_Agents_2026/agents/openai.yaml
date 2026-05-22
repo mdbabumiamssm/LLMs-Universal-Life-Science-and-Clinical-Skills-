@@ -1,0 +1,3 @@
+interface:
+  display_name: "Scientific Discovery Agents"
+  short_description: "Plan and evaluate biomedical discovery agents with human-gated validation"

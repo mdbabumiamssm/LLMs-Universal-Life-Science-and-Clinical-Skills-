@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-20T14:09:52.969576+00:00",
+  "generated_at": "2026-05-22T13:59:25.210997+00:00",
   "sources": [
     {
       "skill": "aws-bedrock-operations-2026",
@@ -167,7 +167,7 @@
       "file_path": "Skills/Agentic_AI/OpenAI_Codex_Agents/SKILL.md",
       "source": "official_docs",
       "score": 1.0,
-      "rationale": "Workflow is grounded in OpenAI developer docs and API guides checked on 2026-04-20."
+      "rationale": "Workflow is grounded in OpenAI developer docs, Codex docs, and API guides checked on 2026-05-22."
     },
     {
       "skill": "openai-codex-agents",
@@ -189,6 +189,20 @@
       "source": "official_repositories",
       "score": 0.98,
       "rationale": "Implementation patterns are cross-checked against the maintainer-owned PydanticAI repository."
+    },
+    {
+      "skill": "scientific-discovery-agents-2026",
+      "file_path": "Skills/Agentic_AI/Scientific_Discovery_Agents_2026/SKILL.md",
+      "source": "primary_literature",
+      "score": 1.0,
+      "rationale": "Workflow is grounded in Nature, Nature Methods, Nature Medicine, and Nature Biotechnology papers checked on 2026-05-22."
+    },
+    {
+      "skill": "scientific-discovery-agents-2026",
+      "file_path": "Skills/Agentic_AI/Scientific_Discovery_Agents_2026/SKILL.md",
+      "source": "official_project_sources",
+      "score": 0.97,
+      "rationale": "Operational framing is cross-checked against official Google DeepMind, FutureHouse, and Stanford Biomni project sources."
     },
     {
       "skill": "rna-velocity",
@@ -219,25 +233,11 @@
       "rationale": "Theis Lab best-practices playbook detailing MAD-based QC thresholds, mitochondrial cutoffs, and reproducibility checklists for scRNA-seq."
     },
     {
-      "skill": "literature",
-      "file_path": "Skills/LLM_Research/SKILL.md",
-      "source": "https://github.com/ourresearch/OpenAlex",
-      "score": 0.88,
-      "rationale": "Maintained by OurResearch with multiple active repositories (CLI, API, docs) and open governance for the scholarly graph.\n"
-    },
-    {
-      "skill": "literature",
-      "file_path": "Skills/LLM_Research/SKILL.md",
-      "source": "https://github.com/kermitt2/grobid",
-      "score": 0.86,
-      "rationale": "Long-lived, peer-reviewed project with automated PDF extraction benchmarks; aligns with OmicsClaw’s PDF parsing approach."
-    },
-    {
       "skill": "mcp-operations-2026",
       "file_path": "Skills/MCP_Servers/MCP_Operations_2026/SKILL.md",
       "source": "official_protocol_docs",
       "score": 1.0,
-      "rationale": "Workflow is grounded in the official MCP docs, specification, SDK docs, and registry pages checked on 2026-04-13."
+      "rationale": "Workflow is grounded in the official MCP docs, authorization specification, SDK docs, and registry pages checked on 2026-05-22."
     },
     {
       "skill": "mcp-operations-2026",
@@ -245,34 +245,6 @@
       "source": "official_vendor_integrations",
       "score": 0.98,
       "rationale": "OpenAI and Anthropic integration guidance is pulled from official vendor documentation."
-    },
-    {
-      "skill": "bulkrna-de",
-      "file_path": "Skills/Transcriptomics/bulkrna-de/SKILL.md",
-      "source": "https://github.com/owkin/PyDESeq2",
-      "score": 0.91,
-      "rationale": "Official MIT-licensed implementation with 600+ stars, active releases (0.5.x, Feb 2026), and maintained test matrix for Python 3.11–3.13.\n"
-    },
-    {
-      "skill": "bulkrna-de",
-      "file_path": "Skills/Transcriptomics/bulkrna-de/SKILL.md",
-      "source": "https://github.com/K-Dense-AI/claude-scientific-skills",
-      "score": 0.9,
-      "rationale": "Enterprise-maintained skill pack from K-Dense AI; we mirror its metadata layout to stay interoperable with Claude Scientific Skills."
-    },
-    {
-      "skill": "sc-velocity",
-      "file_path": "Skills/Transcriptomics/sc-velocity/SKILL.md",
-      "source": "https://github.com/theislab/scvelo",
-      "score": 0.93,
-      "rationale": "First-party repo with 3k+ stars, peer-reviewed methods, and recent commits (Dec 2025) tracked via the GitHub project page.\n"
-    },
-    {
-      "skill": "sc-velocity",
-      "file_path": "Skills/Transcriptomics/sc-velocity/SKILL.md",
-      "source": "https://github.com/K-Dense-AI/claude-scientific-skills",
-      "score": 0.9,
-      "rationale": "Centralized skill repository from K-Dense AI used across Claude Scientific Skills deployments; provides consistent SKILL.md format adopted by OmicsClaw."
     }
   ]
 }

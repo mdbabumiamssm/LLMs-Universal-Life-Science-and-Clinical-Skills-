@@ -88,6 +88,16 @@ We followed the initial refresh with a second, more operational pass focused on 
 - Refreshed the official source maps for OpenAI and Anthropic to reflect current model catalogs, Codex, deep research, computer-use, and Claude Code surfaces.
 - Expanded `docs/strategy/LLM_AGENTIC_AI_CURATION_2026.md` with a stronger canonical-source map, ecosystem watchlist, and benchmark/literature coverage.
 
+## May 2026 Agentic Science and Runtime Refresh
+
+This pass updates the repo around the newest peer-reviewed scientific-agent systems and the agent runtime primitives that now matter operationally.
+
+- Added `Skills/Agentic_AI/Scientific_Discovery_Agents_2026` to cover Co-Scientist, Robin, CellVoyager, SPARK, Biomni-style orchestration, and lab-in-the-loop biomedical discovery workflows.
+- Updated OpenAI/Codex guidance for Codex app/cloud workflows, reusable skills, hosted tools, tool search, shell/apply_patch, remote MCP, and approval-aware execution.
+- Updated MCP operations guidance for OAuth 2.1, protected-resource metadata discovery, tool-poisoning review, identity propagation, timeout budgeting, structured errors, and audit logging.
+- Expanded agent eval guidance with out-of-scope action tests, scientific claim-boundary checks, human checkpoints, and reproducibility packages.
+- Added `sources/research_20260522_agentic_biomedical_discovery.md` as an auditable source map for the refresh.
+
 ## 📂 Directory Structure
 
 The repository is organized into domain-specific modules:
@@ -202,7 +212,7 @@ This project is licensed under the MIT License for open-source components, but t
 
 <!-- BEGIN: PIPELINE_INDEX -->
 
-_Auto-generated index. 1028 skills across 54 categories. Last refresh: 2026-05-22T10:54:56.706220+00:00._
+_Auto-generated index. 1029 skills across 54 categories. Last refresh: 2026-05-22T13:59:25.182046+00:00._
 
 ### 3D_Genomics (8)
 
@@ -230,9 +240,9 @@ _Auto-generated index. 1028 skills across 54 categories. Last refresh: 2026-05-2
 - **openai-platform-operations-2026** — Operate and integrate OpenAI APIs with current model, modality, and migration workflows. Use when building or updating OpenAI-based chat,...
 - **xai-grok-operations-2026** — Integrate and operate xAI Grok APIs with current documentation and SDK guidance. Use when implementing Grok tool use, Responses-style wor...
 
-### Agentic_AI (15)
+### Agentic_AI (16)
 
-- **agentic-evals-observability** — Design evaluation, tracing, monitoring, and rollback discipline for agent systems. Use when an agent workflow is becoming important enoug...
+- **agentic-evals-observability** — Design evaluation, tracing, monitoring, scope-control, and rollback discipline for agent systems. Use when an agent workflow is becoming...
 - **automated-web-research** — Run evidence-first web research with multi-query search, page fetch, source vetting, and cited synthesis. Use when the answer depends on ...
 - **bio-agentscope-runtime** — Deploy AgentScope + AgentScope Runtime for secure sandboxed multi-agent
 - **bio-openhands-coding-agent** — Run OpenHands headless CLI/SDK missions from BioKernel swarms for autonomous
@@ -242,9 +252,10 @@ _Auto-generated index. 1028 skills across 54 categories. Last refresh: 2026-05-2
 - **google-adk-agents** — Build, evaluate, and deploy agents with Google's Agent Development Kit (ADK). Use when you want code-first multi-agent systems, workflow ...
 - **langgraph-self-hosted** — Deploy LangGraph Platform-compatible backends (Aegra) to run regulated biomedical agent workflows on private infrastructure with security...
 - **memory-management** — Two-tier memory system that makes Claude a true workplace collaborator. Decodes shorthand, acronyms, nicknames, and internal language so ...
-- **openai-codex-agents** — Build and operate OpenAI-first coding and agent workflows using the Responses API, current GPT and Codex models, Agents SDK, MCP/connecto...
+- **openai-codex-agents** — Build and operate OpenAI-first coding and agent workflows using Codex app/cloud, the Responses API, current GPT and Codex models,...
 - **plan-and-solve-agent** — Breaks down complex queries into a step-by-step plan before execution, improving performance on multi-hop reasoning tasks.
 - **pydanticai-agents** — Build typed, provider-agnostic agents with PydanticAI. Use when structured I/O, dependency injection, MCP support, and OpenTelemetry-frie...
+- **scientific-discovery-agents-2026** — Design, evaluate, and operate agentic systems for biomedical and scientific discovery. Use when building or selecting agents for hypothesis generation, experiment planning,...
 - **swarm-orchestrator** — Run Agent Swarms
 - **task-management** — Simple task management using a shared TASKS.md file. Reference this when the user asks about their tasks, wants to add/complete tasks, or...
 

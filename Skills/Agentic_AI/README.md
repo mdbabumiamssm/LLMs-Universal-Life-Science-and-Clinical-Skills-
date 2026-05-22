@@ -21,6 +21,7 @@ Keep skills here when they are repeatedly useful for building, operating, or eva
 - **Research agents:** `Automated_Web_Research`, `DeepResearch_Swarm`
 - **Execution runtimes and coding agents:** `AgentScope_Runtime`, `OpenHands_Coding_Agent`, `OpenAI_Codex_Agents`, `Claude_Code_Operations_2026`, `LangGraph_Self_Hosted`
 - **Modern framework coverage:** `OpenAI_Codex_Agents`, `Google_ADK_Agents`, `PydanticAI_Agents`
+- **Scientific discovery agents:** `Scientific_Discovery_Agents_2026`
 - **Computer and browser control:** `Computer_Use_Agents_2026`
 - **Operational quality:** `Agentic_Evals_Observability`, `Memory_Systems`, `Productivity/`
 - **Reasoning and multimodality:** `Reasoning_Models/`, `Multimodal_Agents/`
@@ -42,6 +43,12 @@ Keep skills here when they are repeatedly useful for building, operating, or eva
 - `PydanticAI_Agents/` for typed agent engineering, dependency injection, MCP integration, and Logfire/OTel observability.
 - `Agentic_Evals_Observability/` for offline evals, online monitoring, tracing, rollback criteria, and regression discipline.
 - Upgraded `Automated_Web_Research/` and `DeepResearch_Swarm/` to be evidence-first and source-aware.
+
+## May 2026 Agentic Science Refresh
+
+- `Scientific_Discovery_Agents_2026/` captures the new peer-reviewed biomedical discovery-agent layer: Co-Scientist, Robin, CellVoyager, SPARK, and Biomni-style orchestration.
+- Updated curation expectations now require scientific claim boundaries, human checkpoints, validation endpoints, reproducibility packages, and explicit rollback triggers for discovery agents.
+- MCP and coding-agent skills should treat tool metadata, OAuth/resource discovery, approval policy, and out-of-scope action testing as first-class operational concerns.
 
 ## Related Strategy Doc
 
