@@ -79,6 +79,7 @@ The **AI Safety Auditor** is a critical "human-in-the-loop" simulator and automa
 32. **Inference-Time Knowledge Acquisition Safety Pattern**: Retrieves clinical evidence during inference, requires source-grounded assertions, flags unsupported diagnostic claims, logs acquired knowledge and provenance, and routes uncertain cases to clinician review.
 33. **Current-Evidence Test-Time Knowledge Acquisition Gate**: Requires retrieval of current evidence before clinical recommendations are answered, attaches source provenance to supported claims, detects conflicting sources, enforces freshness checks, and routes unresolved or high-risk recommendations to clinician review.
 34. **Test-Time Knowledge Acquisition Medical Decision Support Review**: Requires source retrieval provenance, freshness and authority scoring, contradiction handling, and safety review before newly acquired knowledge is used in clinical recommendations.
+35. **Test-Time Knowledge Acquisition Safeguards for Medical Decision Support**: Audits source selection, retrieval quality, stale evidence detection, citation verification, abstention triggers, and clinician-facing uncertainty disclosure before acquired knowledge is used in medical decision support.
 
 ## Workflow
 

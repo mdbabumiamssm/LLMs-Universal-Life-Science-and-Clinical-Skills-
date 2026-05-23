@@ -172,7 +172,7 @@ Copyright (c) 2026 MD BABU MIA, PhD. Open-source components are provided under t
 
 <!-- BEGIN: PIPELINE_INDEX -->
 
-_Auto-generated index. 1029 skills across 54 categories. Last refresh: 2026-05-22T13:59:25.182046+00:00._
+_Auto-generated index. 1029 skills across 54 categories. Last refresh: 2026-05-23T10:41:55.770919+00:00._
 
 ### 3D_Genomics (8)
 
@@ -202,7 +202,7 @@ _Auto-generated index. 1029 skills across 54 categories. Last refresh: 2026-05-2
 
 ### Agentic_AI (16)
 
-- **agentic-evals-observability** — Design evaluation, tracing, monitoring, scope-control, and rollback discipline for agent systems. Use when an agent workflow is becoming...
+- **agentic-evals-observability** — Design evaluation, tracing, monitoring, scope-control, and rollback discipline for agent systems. Use when an agent workflow is becoming ...
 - **automated-web-research** — Run evidence-first web research with multi-query search, page fetch, source vetting, and cited synthesis. Use when the answer depends on ...
 - **bio-agentscope-runtime** — Deploy AgentScope + AgentScope Runtime for secure sandboxed multi-agent
 - **bio-openhands-coding-agent** — Run OpenHands headless CLI/SDK missions from BioKernel swarms for autonomous
@@ -212,10 +212,10 @@ _Auto-generated index. 1029 skills across 54 categories. Last refresh: 2026-05-2
 - **google-adk-agents** — Build, evaluate, and deploy agents with Google's Agent Development Kit (ADK). Use when you want code-first multi-agent systems, workflow ...
 - **langgraph-self-hosted** — Deploy LangGraph Platform-compatible backends (Aegra) to run regulated biomedical agent workflows on private infrastructure with security...
 - **memory-management** — Two-tier memory system that makes Claude a true workplace collaborator. Decodes shorthand, acronyms, nicknames, and internal language so ...
-- **openai-codex-agents** — Build and operate OpenAI-first coding and agent workflows using Codex app/cloud, the Responses API, current GPT and Codex models,...
+- **openai-codex-agents** — Build and operate OpenAI-first coding and agent workflows using Codex app/cloud, the Responses API, current GPT and Codex models, Agents ...
 - **plan-and-solve-agent** — Breaks down complex queries into a step-by-step plan before execution, improving performance on multi-hop reasoning tasks.
 - **pydanticai-agents** — Build typed, provider-agnostic agents with PydanticAI. Use when structured I/O, dependency injection, MCP support, and OpenTelemetry-frie...
-- **scientific-discovery-agents-2026** — Design, evaluate, and operate agentic systems for biomedical and scientific discovery. Use when building or selecting agents for hypothesis generation, experiment planning,...
+- **scientific-discovery-agents-2026** — Design, evaluate, and operate agentic systems for biomedical and scientific discovery. Use when building or selecting agents for hypothes...
 - **swarm-orchestrator** — Run Agent Swarms
 - **task-management** — Simple task management using a shared TASKS.md file. Reference this when the user asks about their tasks, wants to add/complete tasks, or...
 
@@ -536,34 +536,34 @@ _Auto-generated index. 1029 skills across 54 categories. Last refresh: 2026-05-2
 
 ### Knowledge_Base (28)
 
-- **Bulk Omics Clustering Analysis** —
-- **Bulk RNAseq differential expression (DeSeq2)** —
-- **Cell-Cell Communication Analysis (CellChat)** —
-- **ChIP-Atlas Diff Analysis** —
-- **ChIP-Atlas Peak Enrichment** —
-- **ChIP-Atlas Target Genes** —
-- **Clinical Survival & Outcome Analysis** —
-- **ClinicalTrials.gov Disease Landscape Scanner** —
-- **Disease Progression Trajectory Analysis** —
-- **Experimental Design** —
-- **Functional Enrichment Analysis (GSEA + ORA)** —
-- **GWAS to Function via TWAS** —
-- **Gene Regulatory Network Inference (pySCENIC)** —
-- **Genetic Variant Annotation** —
-- **LASSO Biomarker Panel Discovery & Validation** —
-- **Multi-Omics Integration (MOFA+)** —
-- **PCR Primer Design** —
-- **Polygenic Risk Score (PGS Catalog)** —
-- **Pooled CRISPR Screen Analysis** —
-- **Preclinical Literature Extraction** —
-- **Proteomics Differential Expression (limma + DEqMS)** —
-- **Single-Cell RNA-seq Core Analysis (Scanpy)** —
-- **Single-Cell RNA-seq Core Analysis (Seurat)** —
-- **Single-Cell Trajectory Inference** —
-- **Spatial Transcriptomics Visium Analysis** —
-- **Two-Sample Mendelian Randomization** —
-- **Upstream Regulator Analysis** —
-- **Weighted Gene Co-expression Network Analysis (WGCNA)** —
+- **Bulk Omics Clustering Analysis** — 
+- **Bulk RNAseq differential expression (DeSeq2)** — 
+- **Cell-Cell Communication Analysis (CellChat)** — 
+- **ChIP-Atlas Diff Analysis** — 
+- **ChIP-Atlas Peak Enrichment** — 
+- **ChIP-Atlas Target Genes** — 
+- **Clinical Survival & Outcome Analysis** — 
+- **ClinicalTrials.gov Disease Landscape Scanner** — 
+- **Disease Progression Trajectory Analysis** — 
+- **Experimental Design** — 
+- **Functional Enrichment Analysis (GSEA + ORA)** — 
+- **GWAS to Function via TWAS** — 
+- **Gene Regulatory Network Inference (pySCENIC)** — 
+- **Genetic Variant Annotation** — 
+- **LASSO Biomarker Panel Discovery & Validation** — 
+- **Multi-Omics Integration (MOFA+)** — 
+- **PCR Primer Design** — 
+- **Polygenic Risk Score (PGS Catalog)** — 
+- **Pooled CRISPR Screen Analysis** — 
+- **Preclinical Literature Extraction** — 
+- **Proteomics Differential Expression (limma + DEqMS)** — 
+- **Single-Cell RNA-seq Core Analysis (Scanpy)** — 
+- **Single-Cell RNA-seq Core Analysis (Seurat)** — 
+- **Single-Cell Trajectory Inference** — 
+- **Spatial Transcriptomics Visium Analysis** — 
+- **Two-Sample Mendelian Randomization** — 
+- **Upstream Regulator Analysis** — 
+- **Weighted Gene Co-expression Network Analysis (WGCNA)** — 
 
 ### LLM_Research (2)
 
