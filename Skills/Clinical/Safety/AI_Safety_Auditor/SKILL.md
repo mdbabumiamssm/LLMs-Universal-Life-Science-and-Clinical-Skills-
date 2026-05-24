@@ -80,6 +80,7 @@ The **AI Safety Auditor** is a critical "human-in-the-loop" simulator and automa
 33. **Current-Evidence Test-Time Knowledge Acquisition Gate**: Requires retrieval of current evidence before clinical recommendations are answered, attaches source provenance to supported claims, detects conflicting sources, enforces freshness checks, and routes unresolved or high-risk recommendations to clinician review.
 34. **Test-Time Knowledge Acquisition Medical Decision Support Review**: Requires source retrieval provenance, freshness and authority scoring, contradiction handling, and safety review before newly acquired knowledge is used in clinical recommendations.
 35. **Test-Time Knowledge Acquisition Safeguards for Medical Decision Support**: Audits source selection, retrieval quality, stale evidence detection, citation verification, abstention triggers, and clinician-facing uncertainty disclosure before acquired knowledge is used in medical decision support.
+36. **Test-Time Knowledge Acquisition Recommendation Change Audit**: Requires explicit source retrieval for LLM medical decision support, source quality grading, conflict handling across retrieved sources, uncertainty reporting, and clinician override or sign-off whenever acquired knowledge changes recommendations.
 
 ## Workflow
 

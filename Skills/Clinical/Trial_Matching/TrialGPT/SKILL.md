@@ -35,6 +35,7 @@ allowed-tools:
 Run the locally checked-out TrialGPT pipeline to retrieve, rank, and explain candidate trials for a patient before deeper eligibility review.
 
 ## Core Capabilities
+- Coordinate multi-agent criteria extraction for oncology patient-trial recommendations by grounding extracted patient facts and trial criteria in an oncology-specific knowledge graph, producing criterion-level explanations, capturing prospective evaluation metrics, and requiring human review before recommendations are acted on.
 - Ground neuro-symbolic multi-agent oncology trial matching in an oncology-specific knowledge graph for large patient cohorts, with criterion-level eligibility reasoning, prospective evaluation metric capture, confidence scoring, and audit trails for each patient-trial decision.
 - Decompose oncology trial eligibility criteria across neuro-symbolic agents grounded in an oncology-specific knowledge graph, preserve prospective cohort evaluation context from the 3804-patient study, score match confidence, and route eligibility conflicts or low-confidence decisions to human review.
 - Apply neuro-symbolic, multi-agent oncology trial matching for large patient cohorts by grounding criteria in oncology-specific knowledge graphs, reasoning at the eligibility-criterion level, preserving prospective evaluation context, assigning confidence scores, and routing results through human review.
