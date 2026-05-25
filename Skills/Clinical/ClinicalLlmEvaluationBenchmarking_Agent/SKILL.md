@@ -77,7 +77,7 @@ The workflow is grounded in the finding that evaluation methods for AI-generated
    Evaluate distilled DeepSeek-R1 or other open-source reasoning models for diagnosis workflows by matching diagnostic task benchmarks to the intended clinical setting, then checking local hosting constraints, data governance, model provenance, diagnosis-specific failure-mode logging, human oversight requirements, and comparison against closed frontier models before clinical use.
 
 12. **Fine-grained domain-specific medical Q&A dataset evaluation**  
-   For domain-specific clinical Q&A benchmarks, define a domain-specific item taxonomy and item-level error taxonomy, evaluate items individually by annotating omission categories, ambiguity, correctness, answer grounding, hallucination or commission, and risk-of-harm categories rather than relying only on aggregate accuracy, stratify by specialty and topic, run dataset quality checks on source, scope, construction, answer keys, annotation or review process, limitations, and intended use, report inter-rater reliability plus calibration and prompt sensitivity checks, monitor benchmark drift over time, and use trustworthy medical model benchmarking rubrics that make item-level errors, omissions, and harm labels auditable.
+   For domain-specific clinical Q&A benchmarks, define domain, topic, and subtopic tags plus an item-level error taxonomy, evaluate items individually by annotating omission categories, ambiguity, correctness, answer grounding, hallucination or commission, risk-of-harm labels, and confidence calibration rather than relying only on aggregate accuracy, use stratified reporting by specialty, topic, subtopic, and harm label, run dataset quality checks on source, scope, construction, answer keys, annotation or review process, limitations, and intended use, report inter-rater reliability plus calibration and prompt sensitivity checks, monitor benchmark drift over time, and use trustworthy medical model benchmarking rubrics that make item-level errors, omissions, and harm labels auditable.
 
 13. **Systematic clinical-note evaluation method benchmarking**  
    For AI-generated clinical notes, design experimental benchmarks that compare evaluation methods rather than relying on one score: factual correctness, omissions, harm potential, note completeness, clinician preference, inter-rater reliability, benchmark dataset construction, and automated scoring compared with clinician scoring.
@@ -114,6 +114,12 @@ The workflow is grounded in the finding that evaluation methods for AI-generated
 
 24. **Systematic-review-derived clinical-note evaluation templates**  
    For AI-generated clinical-note benchmarks, include method-specific templates for correctness, completeness, hallucination, harm-risk, and note-quality assessment, and report experimental benchmark setup, evaluation method comparisons, reviewer roles, score definitions, and limitations when comparing automated, clinician, or hybrid evaluation methods.
+
+25. **Distilled DeepSeek-R1 on-prem diagnosis comparison**  
+   For on-premises clinical diagnosis evaluation of distilled DeepSeek-R1 or other open-source models, compare diagnostic task performance under the intended local deployment constraints, document privacy and hardware limits, test calibration and abstention behavior, and complete clinician-reviewed failure-mode analysis before clinical use.
+
+26. **Paired clinical-note quality evaluation benchmarks**  
+   For AI-generated clinical notes, use paired experimental benchmark designs to compare evaluation methods across factuality, clinically important omissions, hallucination or unsupported additions, completeness, harmfulness, and rubric-based human review; document limitations of automated metrics and avoid treating them as standalone quality evidence without task-specific validation.
 
 ## On-Prem Clinical LLM Deployment Risk Evaluation
 

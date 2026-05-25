@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-24T10:42:21.944468+00:00",
+  "generated_at": "2026-05-25T10:45:07.798387+00:00",
   "generator": "ARTIFICIALINTELLIGENCEGROUP-pipeline v1.0",
   "total_skills": 1029,
   "total_errors": 16,
@@ -989,8 +989,8 @@
       ],
       "file_path": "Skills/Clinical/ClinicalGuidelineDevelopmentLlm_Agent/SKILL.md",
       "relative_path": "Clinical/ClinicalGuidelineDevelopmentLlm_Agent/SKILL.md",
-      "last_modified": "2026-05-24T10:34:35.148162+00:00",
-      "body_length": 7512,
+      "last_modified": "2026-05-25T10:34:24.986576+00:00",
+      "body_length": 7869,
       "capabilities": [
         "Overview",
         "When to Use This Skill",
@@ -1012,8 +1012,8 @@
       ],
       "file_path": "Skills/Clinical/ClinicalLlmEvaluationBenchmarking_Agent/SKILL.md",
       "relative_path": "Clinical/ClinicalLlmEvaluationBenchmarking_Agent/SKILL.md",
-      "last_modified": "2026-05-24T10:39:02.659712+00:00",
-      "body_length": 14949,
+      "last_modified": "2026-05-25T10:41:43.986560+00:00",
+      "body_length": 15868,
       "capabilities": [
         "Overview",
         "When to Use This Skill",
@@ -1311,8 +1311,8 @@
       ],
       "file_path": "Skills/Clinical/Clinical_NLP/SKILL.md",
       "relative_path": "Clinical/Clinical_NLP/SKILL.md",
-      "last_modified": "2026-05-24T10:41:16.032001+00:00",
-      "body_length": 16935,
+      "last_modified": "2026-05-25T10:43:25.265099+00:00",
+      "body_length": 17868,
       "capabilities": [
         "When to Use This Skill",
         "Core Capabilities",
@@ -1650,7 +1650,7 @@
       ],
       "file_path": "Skills/Clinical/Radiology/RadGPT/SKILL.md",
       "relative_path": "Clinical/Radiology/RadGPT/SKILL.md",
-      "last_modified": "2026-05-24T10:41:57.679781+00:00",
+      "last_modified": "2026-05-24T10:42:27.641623+00:00",
       "body_length": 1861,
       "capabilities": [
         "When to Use",
@@ -1672,7 +1672,7 @@
       ],
       "file_path": "Skills/Clinical/Safety/AI_Safety_Auditor/SKILL.md",
       "relative_path": "Clinical/Safety/AI_Safety_Auditor/SKILL.md",
-      "last_modified": "2026-05-24T10:39:50.052459+00:00",
+      "last_modified": "2026-05-24T10:42:27.641623+00:00",
       "body_length": 12274,
       "capabilities": [
         "When to Use This Skill",
@@ -1740,7 +1740,7 @@
       ],
       "file_path": "Skills/Clinical/Trial_Matching/TrialGPT/SKILL.md",
       "relative_path": "Clinical/Trial_Matching/TrialGPT/SKILL.md",
-      "last_modified": "2026-05-24T10:37:41.823146+00:00",
+      "last_modified": "2026-05-24T10:42:27.641623+00:00",
       "body_length": 8407,
       "capabilities": [
         "Core Capabilities",
@@ -8381,8 +8381,8 @@
       ],
       "file_path": "Skills/Genomics/Variant_Interpretation/SKILL.md",
       "relative_path": "Genomics/Variant_Interpretation/SKILL.md",
-      "last_modified": "2026-05-24T10:40:33.261228+00:00",
-      "body_length": 7810,
+      "last_modified": "2026-05-25T10:42:38.575311+00:00",
+      "body_length": 8326,
       "capabilities": [
         "When to Use This Skill",
         "Core Capabilities",
@@ -12976,13 +12976,13 @@
       ],
       "file_path": "Skills/MCP_Servers/PubmedNcbiMcpServer_Agent/SKILL.md",
       "relative_path": "MCP_Servers/PubmedNcbiMcpServer_Agent/SKILL.md",
-      "last_modified": "2026-05-22T10:55:02.869925+00:00",
-      "body_length": 6113,
+      "last_modified": "2026-05-25T10:44:54.476693+00:00",
+      "body_length": 6144,
       "capabilities": [
         "Overview",
         "When to Use This Skill",
         "Core Capabilities",
-        "Alternatives and Extension",
+        "Alternatives and Comparison",
         "Inputs / Outputs",
         "References"
       ]
@@ -13146,8 +13146,8 @@
       ],
       "file_path": "Skills/Machine_Learning/machine-learning/survival-analysis/SKILL.md",
       "relative_path": "Machine_Learning/machine-learning/survival-analysis/SKILL.md",
-      "last_modified": "2026-05-24T10:37:00.412369+00:00",
-      "body_length": 17705,
+      "last_modified": "2026-05-25T10:38:38.569408+00:00",
+      "body_length": 18346,
       "capabilities": [
         "Core Capabilities",
         "Kaplan-Meier Curves",
@@ -15025,8 +15025,8 @@
       ],
       "file_path": "Skills/Pharma/Drug_Interaction/SKILL.md",
       "relative_path": "Pharma/Drug_Interaction/SKILL.md",
-      "last_modified": "2026-05-24T10:38:24.518916+00:00",
-      "body_length": 11203,
+      "last_modified": "2026-05-25T10:40:21.348938+00:00",
+      "body_length": 11721,
       "capabilities": [
         "When to Use This Skill",
         "Core Capabilities",
