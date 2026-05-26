@@ -73,6 +73,8 @@ The **Clinical NLP Skill** converts free-text clinical notes into structured dat
 38. **Outcome extraction with patient-level temporal aggregation**: Use LLM-assisted extraction to identify patient outcomes in clinician notes, normalize each outcome to event time, assign uncertainty labels for outcome status and timing, aggregate mention-level events into patient-level outcome timelines, and validate extracted outcomes against manually abstracted outcomes before downstream use.
 39. **Bone sarcoma rare-neoplasm RWD extraction guidance**: Use bone sarcoma as the rare-neoplasm example for LLM-assisted real-world data collection by mapping extracted findings to predefined registry variables, abstracting longitudinally across clinician notes, anchoring diagnosis, treatment, response, progression, recurrence, and follow-up events in time, emitting missingness flags for undocumented, negative, or indeterminate values, sampling extracted records for manual validation, and preserving audit-ready provenance linking each value to source notes, evidence spans, temporal anchors, missingness status, and validation decisions.
 40. **Patient outcome extraction with timing labels**: Identify outcome mentions in clinician notes, normalize event times, distinguish historical, current, and future outcomes, preserve evidence spans for each assertion, and emit uncertainty labels for registry or real-world-data use.
+41. **Registry-oriented LLM abstraction for rare neoplasms**: For low-prevalence cancer cohorts such as bone sarcoma, define registry-oriented extraction schemas before LLM abstraction, capture provenance from each extracted value back to source notes, support temporal outcome fields, and require clinician validation before cohort release or downstream real-world-data use.
+42. **Oncology consultation-document prognostic modeling**: When predicting cancer survival from initial oncology consultation documents, compare zero-shot prompting with task-specific fine-tuning under the same cohort definition; define censoring-aware survival labels and prediction horizons before modeling; check for leakage from follow-up text, outcome dates, post-consultation data, or fields unavailable at the initial consultation; evaluate calibration of predicted risks or survival probabilities; and limit outputs to research, audit, or decision-support exploration unless prospective validation, governance, and clinician oversight are in place.
 
 ## Workflow
 
@@ -97,5 +99,6 @@ python3 Skills/Clinical/Clinical_NLP/entity_extractor.py \
 
 *   https://pubmed.ncbi.nlm.nih.gov/42021926/
 *   https://pubmed.ncbi.nlm.nih.gov/41886942/
+*   https://pubmed.ncbi.nlm.nih.gov/42004490/
 
 <!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

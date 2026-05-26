@@ -28,7 +28,15 @@ Use this skill when Bedrock is the production surface, not just a compatibility 
 
 ## Core Capabilities
 
-- For Strands Agents plus Amazon Bedrock AgentCore reference architectures, document why AgentCore Runtime is selected versus runtime-only Bedrock or managed Agents, isolate IAM boundaries for runtime, gateway, memory, browser, and code-execution components, map MCP/tool integrations and any browser or voice-assistant surfaces, describe the deployment topology such as Terraform-managed app, infra, and mobile or chat clients, and require production guardrails for multi-agent chatbot rollout.
+- For Strands Agents plus Amazon Bedrock AgentCore reference architectures, use the `aws-samples/sample-strands-agent-with-agentcore` pattern as a checklist for TypeScript chatbot boundaries, MCP integrations, browser or voice-assistant tools, A2A interaction paths, IAM separation, deployment topology, and production guardrails.
+
+## Strands AgentCore Reference Architecture
+
+- Structure the TypeScript chatbot around explicit boundaries for chat client, Strands agent orchestration, Bedrock AgentCore Runtime, and tool adapters; record where request state, memory, and tool results flow.
+- Treat MCP, browser automation, voice-assistant, and A2A integrations as separate tool surfaces with schemas, auth, approval gates, and failure behavior before production enablement.
+- Define IAM boundaries for AgentCore runtime, gateway/tool access, memory, browser automation, voice-assistant integrations, and external service access; split roles or policies when a component can read data, invoke tools, or perform actions.
+- Document deployment topology for client/app, agent runtime, tool gateway, Bedrock model access, observability, and infrastructure automation; include rollout and rollback paths.
+- Require production guardrails for model/tool allowlists, logs/traces, human approval on write-capable tools, prompt/input validation, secrets isolation, and staged rollout.
 
 ## Workflow
 

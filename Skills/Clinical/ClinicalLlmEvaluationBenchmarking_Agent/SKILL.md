@@ -121,12 +121,16 @@ The workflow is grounded in the finding that evaluation methods for AI-generated
 26. **Paired clinical-note quality evaluation benchmarks**  
    For AI-generated clinical notes, use paired experimental benchmark designs to compare evaluation methods across factuality, clinically important omissions, hallucination or unsupported additions, completeness, harmfulness, and rubric-based human review; document limitations of automated metrics and avoid treating them as standalone quality evidence without task-specific validation.
 
+27. **On-prem DeepSeek-R1 distill deployment comparison**  
+   For open-source DeepSeek-R1 distilled models considered for on-premises clinical diagnosis, compare diagnostic performance, latency, privacy posture, local hardware constraints, calibration, and failure modes against hosted frontier models on the same cases and rubrics before clinical use.
+
 ## On-Prem Clinical LLM Deployment Risk Evaluation
 
 When an evaluation includes distilled DeepSeek-R1 or other open-source reasoning models for on-premises diagnosis tasks, document risk controls for:
 
 - Benchmark selection: choose diagnostic cases, rubrics, and comparison baselines that reflect the intended specialty, care setting, case mix, and clinical decision impact rather than relying on a generic medical score alone.
 - Hardware and latency tradeoffs: available CPU/GPU memory, latency, quantization or runtime choices, concurrency limits, local network boundaries, capacity constraints, and whether the deployment can meet clinical workflow needs.
+- Hosted frontier comparison: compare diagnostic performance, latency, privacy posture, local hardware constraints, calibration, and failure modes for local DeepSeek-R1 distilled models against hosted frontier models on the same diagnosis cases and rubrics before clinical use.
 - Privacy and data-governance checks: local inference may reduce external data sharing, but protected health information handling, access control, logging, retention, de-identification, and approval scope still need validation.
 - Model provenance: record model source, distillation lineage when known, version or checkpoint, license constraints, local modifications, and serving configuration used for each benchmark run.
 - Benchmark drift: repeat diagnosis benchmarks after model, prompt, retrieval, guideline, local population, or case-mix changes.
