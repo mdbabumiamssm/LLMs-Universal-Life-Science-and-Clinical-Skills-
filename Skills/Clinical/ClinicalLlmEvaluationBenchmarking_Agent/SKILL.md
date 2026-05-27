@@ -77,7 +77,7 @@ The workflow is grounded in the finding that evaluation methods for AI-generated
    Evaluate distilled DeepSeek-R1 or other open-source reasoning models for diagnosis workflows by matching diagnostic task benchmarks to the intended clinical setting, then checking local hosting constraints, data governance, model provenance, diagnosis-specific failure-mode logging, human oversight requirements, and comparison against closed frontier models before clinical use.
 
 12. **Fine-grained domain-specific medical Q&A dataset evaluation**  
-   For domain-specific clinical Q&A benchmarks, define domain, topic, and subtopic tags plus an item-level error taxonomy, evaluate items individually by annotating omission categories, ambiguity, correctness, answer grounding, hallucination or commission, risk-of-harm labels, and confidence calibration rather than relying only on aggregate accuracy, use stratified reporting by specialty, topic, subtopic, and harm label, run dataset quality checks on source, scope, construction, answer keys, annotation or review process, limitations, and intended use, report inter-rater reliability plus calibration and prompt sensitivity checks, monitor benchmark drift over time, and use trustworthy medical model benchmarking rubrics that make item-level errors, omissions, and harm labels auditable.
+   For domain-specific clinical Q&A benchmarks, define domain, specialty, topic, and subtopic tags plus an item-level error taxonomy, evaluate items individually by annotating omission categories, ambiguity, correctness, answer grounding, hallucination or commission, risk-of-harm labels, and confidence calibration rather than relying only on aggregate accuracy, use stratified reporting by specialty, topic, subtopic, and harm label, run dataset quality and benchmark provenance checks on source, scope, construction, answer keys, annotation or review process, limitations, and intended use, report inter-rater reliability plus calibration and prompt sensitivity checks, maintain reporting templates that expose item ID, source provenance, domain stratum, error labels, omission labels, harm labels, reviewer disposition, and model or prompt version, monitor benchmark drift over time, and use trustworthy medical model benchmarking rubrics that make item-level errors, omissions, and harm labels auditable.
 
 13. **Systematic clinical-note evaluation method benchmarking**  
    For AI-generated clinical notes, design experimental benchmarks that compare evaluation methods rather than relying on one score: factual correctness, omissions, harm potential, note completeness, clinician preference, inter-rater reliability, benchmark dataset construction, and automated scoring compared with clinician scoring.
@@ -89,7 +89,7 @@ The workflow is grounded in the finding that evaluation methods for AI-generated
    For ophthalmology continuing medical education-style questions, evaluate LLM responses for correctness, content omission, and risk of harm with clinician adjudication, explicitly reporting unsafe omissions rather than aggregate accuracy alone.
 
 16. **Test-time knowledge acquisition evaluation**  
-   For medical decision support systems that retrieve or acquire knowledge during inference, use a controlled evaluation pattern that measures whether acquired evidence improves correctness, omissions, and harm risk; require source traceability for acquired facts, evaluate retrieval timing, source trust, benchmark contamination risk, ablations versus zero-shot or no-retrieval prompting, and safeguards that prevent over-trusting newly retrieved context without clinician-adjudicated support.
+   For medical decision support systems that retrieve or acquire external clinical knowledge at inference time, use a controlled evaluation and mitigation pattern that measures whether acquired evidence improves correctness, omissions, and harm risk; log sources for acquired facts, evaluate retrieval timing, source trust, benchmark contamination risk, closed-book or no-retrieval baselines, and require evidence-grounded answer grading with safeguards that prevent over-trusting newly retrieved context without clinician-adjudicated support.
 
 17. **Clinical-note benchmark selection and reviewer calibration**  
    When evaluating AI-generated clinical notes, choose benchmark methods that explicitly test factual correctness, clinically important omissions, and potential harm rather than fluency alone; calibrate automated or human review against clinician-adjudicated examples before using scores for deployment decisions.
@@ -124,9 +124,12 @@ The workflow is grounded in the finding that evaluation methods for AI-generated
 27. **On-prem DeepSeek-R1 distill deployment comparison**  
    For open-source DeepSeek-R1 distilled models considered for on-premises clinical diagnosis, compare diagnostic performance, latency, privacy posture, local hardware constraints, calibration, and failure modes against hosted frontier models on the same cases and rubrics before clinical use.
 
+28. **Open-source reasoning distillation production review**  
+   For open-source reasoning model distillations such as DeepSeek-R1 derivatives, evaluate diagnostic performance alongside local deployment constraints, privacy controls, latency, calibration, and clinician safety review before production use.
+
 ## On-Prem Clinical LLM Deployment Risk Evaluation
 
-When an evaluation includes distilled DeepSeek-R1 or other open-source reasoning models for on-premises diagnosis tasks, document risk controls for:
+When an evaluation includes open-source reasoning model distillations, including distilled DeepSeek-R1 derivatives, for on-premises diagnosis tasks, document risk controls for:
 
 - Benchmark selection: choose diagnostic cases, rubrics, and comparison baselines that reflect the intended specialty, care setting, case mix, and clinical decision impact rather than relying on a generic medical score alone.
 - Hardware and latency tradeoffs: available CPU/GPU memory, latency, quantization or runtime choices, concurrency limits, local network boundaries, capacity constraints, and whether the deployment can meet clinical workflow needs.
@@ -138,6 +141,7 @@ When an evaluation includes distilled DeepSeek-R1 or other open-source reasoning
 - Refusal behavior: test when the model refuses, abstains, over-answers, or gives unsupported diagnostic suggestions, and route unsafe or ambiguous outputs to clinician review.
 - Failure-mode logging: track missed diagnoses, unsupported diagnoses, inappropriate certainty, delayed escalation, contraindicated advice, privacy leakage, model version, prompt version, and reviewer disposition when comparing DeepSeek-R1 distills or other local open-source models.
 - Closed model calibration: benchmark and calibrate on-prem open-source distilled reasoning models against closed model baselines on the same diagnostic task set and rubrics before clinical use.
+- Clinician safety review: require clinician review of diagnostic outputs, unsafe failure modes, privacy handling, latency impact, calibration behavior, and residual risk before pilot or production use.
 - Validation gates: require documented validation scope, clinician review responsibility, audit logs, incident escalation, rollback criteria, and institutional approval before clinical use.
 
 ## Inputs / Outputs
