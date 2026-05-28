@@ -58,9 +58,10 @@ This skill guides LLM-assisted clinical practice guideline development from ques
 15. **Real-time LLM-assisted guideline development pattern**: Maintain evidence traceability and recommendation grading through iterative expert review, require conflict-of-interest disposition, retain audit logs of model suggestions and panel decisions, and reject unsupported recommendations lacking source or consensus justification.
 16. **Real-time recommendation drafting audits**: Audit recommendation drafts for source-linked evidence traceability, recommendation-grade consistency, panel review checkpoint disposition, and unsupported or overconfident language; do not allow unsupervised LLM-generated guideline language to advance without documented panel review and approval.
 17. **Real-time LLM-assisted guideline governance**: In live drafting, require evidence traceability, recommendation grading, clinician editorial control, audit logs, conflict handling, and explicit reject-or-revise gates for generated guideline text that is unsupported, grading-inconsistent, unsafe, unresolved after review, or lacking required approval.
-18. **Consensus and governance**: Document panel composition, voting or consensus method, conflict-of-interest handling, signoff authority, and escalation criteria.
-19. **Safety and implementation checks**: Identify ambiguous directives, unsafe absolutes, missing contraindications, patient subgroup concerns, monitoring needs, and update triggers.
-20. **Audit-ready output**: Produce dated outputs with version history, evidence links, reviewer decisions, unresolved assumptions, and required human approvals.
+18. **Draft adoption evaluation checkpoints**: Before any draft guideline is adopted, confirm evidence traceability, recommendation grading, live expert review disposition, disagreement logging, and governance gate approval.
+19. **Consensus and governance**: Document panel composition, voting or consensus method, conflict-of-interest handling, signoff authority, and escalation criteria.
+20. **Safety and implementation checks**: Identify ambiguous directives, unsafe absolutes, missing contraindications, patient subgroup concerns, monitoring needs, and update triggers.
+21. **Audit-ready output**: Produce dated outputs with version history, evidence links, reviewer decisions, unresolved assumptions, and required human approvals.
 
 ## Inputs / Outputs
 
