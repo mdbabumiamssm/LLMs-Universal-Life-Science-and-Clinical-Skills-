@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-28T10:42:16.131204+00:00",
+  "generated_at": "2026-05-29T10:42:43.824104+00:00",
   "generator": "ARTIFICIALINTELLIGENCEGROUP-pipeline v1.0",
   "total_skills": 1029,
   "total_errors": 16,
@@ -990,8 +990,8 @@
       ],
       "file_path": "Skills/Clinical/ClinicalGuidelineDevelopmentLlm_Agent/SKILL.md",
       "relative_path": "Clinical/ClinicalGuidelineDevelopmentLlm_Agent/SKILL.md",
-      "last_modified": "2026-05-28T10:34:12.687790+00:00",
-      "body_length": 8094,
+      "last_modified": "2026-05-29T10:34:58.541845+00:00",
+      "body_length": 8457,
       "capabilities": [
         "Overview",
         "When to Use This Skill",
@@ -1013,8 +1013,8 @@
       ],
       "file_path": "Skills/Clinical/ClinicalLlmEvaluationBenchmarking_Agent/SKILL.md",
       "relative_path": "Clinical/ClinicalLlmEvaluationBenchmarking_Agent/SKILL.md",
-      "last_modified": "2026-05-28T10:40:09.500134+00:00",
-      "body_length": 18830,
+      "last_modified": "2026-05-29T10:37:57.063087+00:00",
+      "body_length": 19175,
       "capabilities": [
         "Overview",
         "When to Use This Skill",
@@ -1312,8 +1312,8 @@
       ],
       "file_path": "Skills/Clinical/Clinical_NLP/SKILL.md",
       "relative_path": "Clinical/Clinical_NLP/SKILL.md",
-      "last_modified": "2026-05-28T10:41:38.762724+00:00",
-      "body_length": 20277,
+      "last_modified": "2026-05-29T10:39:17.733744+00:00",
+      "body_length": 20627,
       "capabilities": [
         "When to Use This Skill",
         "Core Capabilities",
@@ -1741,8 +1741,8 @@
       ],
       "file_path": "Skills/Clinical/Trial_Matching/TrialGPT/SKILL.md",
       "relative_path": "Clinical/Trial_Matching/TrialGPT/SKILL.md",
-      "last_modified": "2026-05-28T10:37:52.609764+00:00",
-      "body_length": 9313,
+      "last_modified": "2026-05-29T10:36:28.759463+00:00",
+      "body_length": 9713,
       "capabilities": [
         "Core Capabilities",
         "Inputs",
@@ -2295,8 +2295,8 @@
       ],
       "file_path": "Skills/Drug_Discovery/BiomedMultiAlignmentFoundationModel_Agent/SKILL.md",
       "relative_path": "Drug_Discovery/BiomedMultiAlignmentFoundationModel_Agent/SKILL.md",
-      "last_modified": "2026-05-18T13:24:20.810795+00:00",
-      "body_length": 5338,
+      "last_modified": "2026-05-29T10:42:34.312905+00:00",
+      "body_length": 5752,
       "capabilities": [
         "Overview",
         "When to Use This Skill",
@@ -8382,8 +8382,8 @@
       ],
       "file_path": "Skills/Genomics/Variant_Interpretation/SKILL.md",
       "relative_path": "Genomics/Variant_Interpretation/SKILL.md",
-      "last_modified": "2026-05-28T10:40:57.075915+00:00",
-      "body_length": 9351,
+      "last_modified": "2026-05-29T10:38:36.802918+00:00",
+      "body_length": 9777,
       "capabilities": [
         "When to Use This Skill",
         "Core Capabilities",
@@ -13147,8 +13147,8 @@
       ],
       "file_path": "Skills/Machine_Learning/machine-learning/survival-analysis/SKILL.md",
       "relative_path": "Machine_Learning/machine-learning/survival-analysis/SKILL.md",
-      "last_modified": "2026-05-28T10:37:03.002994+00:00",
-      "body_length": 19375,
+      "last_modified": "2026-05-29T10:35:46.790641+00:00",
+      "body_length": 19926,
       "capabilities": [
         "Core Capabilities",
         "Kaplan-Meier Curves",
@@ -15004,8 +15004,8 @@
       ],
       "file_path": "Skills/Pathology_AI/DmmrCrcHistopathologyAgent_Agent/SKILL.md",
       "relative_path": "Pathology_AI/DmmrCrcHistopathologyAgent_Agent/SKILL.md",
-      "last_modified": "2026-05-18T13:24:20.810795+00:00",
-      "body_length": 5170,
+      "last_modified": "2026-05-29T10:39:57.920573+00:00",
+      "body_length": 5605,
       "capabilities": [
         "Overview",
         "When to Use This Skill",
@@ -15026,7 +15026,7 @@
       ],
       "file_path": "Skills/Pharma/Drug_Interaction/SKILL.md",
       "relative_path": "Pharma/Drug_Interaction/SKILL.md",
-      "last_modified": "2026-05-28T10:38:38.294553+00:00",
+      "last_modified": "2026-05-28T10:42:23.145521+00:00",
       "body_length": 13213,
       "capabilities": [
         "When to Use This Skill",

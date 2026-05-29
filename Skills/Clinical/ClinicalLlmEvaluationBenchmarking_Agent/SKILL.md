@@ -136,6 +136,9 @@ The workflow is grounded in the finding that evaluation methods for AI-generated
 31. **Test-time acquired-knowledge provenance and freshness checks**  
    When evaluating medical decision-making LLMs that acquire knowledge at test time, record retrieval provenance for acquired facts, check acquired-knowledge freshness using source publication or access dates when available, run ablations against no-retrieval baselines, and flag unsupported updates to diagnoses, treatments, medication details, guidelines, or local policies for safety review before they affect recommendations.
 
+32. **Systematic-review-informed AI clinical-note quality dimensions**  
+   For AI-generated clinical-note benchmarks, explicitly evaluate correctness, omissions, hallucinations or unsupported additions, formatting quality, risk of harm, inter-rater agreement, and benchmark dataset construction when selecting or comparing evaluation methods.
+
 ## On-Prem Clinical LLM Deployment Risk Evaluation
 
 When an evaluation includes open-source reasoning model distillations, including distilled DeepSeek-R1 derivatives, for on-premises diagnosis tasks, treat comparative findings such as the 2026 J Med Syst study as a prompt for pre-deployment evaluation rather than as evidence of local clinical readiness, and document risk controls for:

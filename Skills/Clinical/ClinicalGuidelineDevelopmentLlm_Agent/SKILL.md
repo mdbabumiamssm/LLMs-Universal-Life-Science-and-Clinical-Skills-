@@ -62,6 +62,7 @@ This skill guides LLM-assisted clinical practice guideline development from ques
 19. **Consensus and governance**: Document panel composition, voting or consensus method, conflict-of-interest handling, signoff authority, and escalation criteria.
 20. **Safety and implementation checks**: Identify ambiguous directives, unsafe absolutes, missing contraindications, patient subgroup concerns, monitoring needs, and update triggers.
 21. **Audit-ready output**: Produce dated outputs with version history, evidence links, reviewer decisions, unresolved assumptions, and required human approvals.
+22. **Real-time LLM evaluation record**: Across draft iterations, verify evidence traceability and recommendation grading, require expert adjudication of model-suggested recommendations or disputed edits, perform risk-of-harm review for unsafe or overconfident wording, and retain audit logs of prompts, outputs, edits, reviewer decisions, and rationale changes.
 
 ## Inputs / Outputs
 

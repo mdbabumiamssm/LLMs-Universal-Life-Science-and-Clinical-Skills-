@@ -58,6 +58,7 @@ The **Variant Interpretation Skill** automates the classification of genetic var
 23. **Precision-Grounded Genetic Variant Summarization**: Retrieve evidence from ClinVar, gnomAD, dbSNP, and disease resources before synthesis; present retrieved evidence separately from generated summary text; and expose citations, confidence, conflicts, and ACMG-relevant fields for review.
 24. **Evidence-Grounded Genetic Variant Summarization**: Retrieve ClinVar, gnomAD, ACMG/AMP, literature, and disease database evidence before summarization; separate asserted source facts from model synthesis; cite every claim; flag conflicts and database review status; and block unsupported pathogenicity conclusions.
 25. **Audit-Ready Precision-Grounded Summaries**: For trustworthy genetic variant summaries, retrieve evidence-based database records before synthesis; preserve ClinVar, gnomAD, COSMIC-style, or equivalent provenance; map retrieved facts to ACMG evidence categories where applicable; use explicit uncertainty wording for limited, conflicting, or missing evidence; and maintain citation trails for audit review.
+26. **Evidence-Grounded Genetic Variant Summarization**: Ground variant summaries in trusted sources such as ClinVar, gnomAD, OMIM, dbSNP, and cited literature; cite each source used; handle conflicting classifications, frequencies, disease links, and evidence gaps explicitly; use ACMG-compatible language; and label conclusions with clear uncertainty terms such as supported, limited, conflicting, or insufficient evidence.
 
 ## Workflow
 
