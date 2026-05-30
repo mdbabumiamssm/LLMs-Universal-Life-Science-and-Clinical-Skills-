@@ -36,6 +36,7 @@ measurable_outcome: 'Produce a MET/NOT/UNKNOWN matrix with supporting citations 
 3. Data gap checklist covering missing labs/imaging/biomarkers.
 
 ## Core Capabilities
+- For neuro-symbolic oncology trial matching, parse each inclusion/exclusion item into criterion-level checks, ground oncology concepts in a knowledge graph, use distinct agent roles for extraction/reasoning/review, report prospective validation metrics from the evaluated cohort, maintain patient-level audit trails, and require human confirmation before eligibility calls.
 - For prospective oncology trial matching, parse eligibility at the criterion level, ground tumor type/biomarker/treatment concepts in an oncology knowledge graph, preserve auditable evidence and decision trails, assign confidence scores, and evaluate workflow performance across large patient cohorts.
 - Apply neuro-symbolic multi-agent oncology trial matching patterns with an oncology-specific knowledge graph, criterion-level reasoning, prospective cohort evaluation, confidence scoring, and human review for ambiguous eligibility decisions.
 - Support neuro-symbolic multi-agent oncology trial matching by combining an oncology-specific knowledge graph with agentic criterion parsing, prospective patient-level evaluation, confidence scoring, and human review for inclusion/exclusion decisions.

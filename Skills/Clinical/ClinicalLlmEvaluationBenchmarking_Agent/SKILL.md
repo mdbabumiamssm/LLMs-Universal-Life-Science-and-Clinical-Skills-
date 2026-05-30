@@ -139,6 +139,12 @@ The workflow is grounded in the finding that evaluation methods for AI-generated
 32. **Systematic-review-informed AI clinical-note quality dimensions**  
    For AI-generated clinical-note benchmarks, explicitly evaluate correctness, omissions, hallucinations or unsupported additions, formatting quality, risk of harm, inter-rater agreement, and benchmark dataset construction when selecting or comparing evaluation methods.
 
+33. **Distilled DeepSeek-R1 on-prem diagnostic deployment evaluation**  
+   For distilled DeepSeek-R1 style open-source models proposed for on-premises clinical diagnosis, compare diagnostic performance under the exact local inference configuration, document hardware, latency, and serving constraints, validate protected health information handling, test calibration and hallucination behavior, and require human-review gates before clinical use.
+
+34. **Fine-grained medical Q&A error-mode reporting**  
+   For domain-specific medical Q&A dataset evaluations, classify item-level omissions, unsafe reasoning, unsupported claims, ambiguity handling, source grounding, and per-domain error modes rather than reporting only aggregate accuracy.
+
 ## On-Prem Clinical LLM Deployment Risk Evaluation
 
 When an evaluation includes open-source reasoning model distillations, including distilled DeepSeek-R1 derivatives, for on-premises diagnosis tasks, treat comparative findings such as the 2026 J Med Syst study as a prompt for pre-deployment evaluation rather than as evidence of local clinical readiness, and document risk controls for:
@@ -146,14 +152,14 @@ When an evaluation includes open-source reasoning model distillations, including
 - Benchmark selection: choose diagnostic cases, rubrics, and comparison baselines that reflect the intended specialty, care setting, case mix, and clinical decision impact rather than relying on a generic medical score alone.
 - Hardware and latency tradeoffs: available CPU/GPU memory, latency, quantization or runtime choices, concurrency limits, local network boundaries, capacity constraints, and whether the deployment can meet clinical workflow needs.
 - Hosted frontier comparison: compare diagnostic performance, latency, privacy posture, local hardware constraints, calibration, and failure modes for local DeepSeek-R1 distilled models against hosted frontier models on the same diagnosis cases and rubrics before clinical use.
-- Privacy and data-governance checks: local inference may reduce external data sharing, but protected health information handling, access control, logging, retention, de-identification, and approval scope still need validation.
+- Privacy and data-governance checks: local inference may reduce external data sharing, but protected health information (PHI) handling, access control, logging, retention, de-identification, and approval scope still need validation.
 - Model provenance: record model source, distillation lineage when known, version or checkpoint, license constraints, local modifications, and serving configuration used for each benchmark run.
 - Benchmark drift: repeat diagnosis benchmarks after model, prompt, retrieval, guideline, local population, or case-mix changes.
 - Calibration: test confidence expression, abstention behavior, uncertainty communication, and threshold stability against clinician-adjudicated cases.
 - Refusal behavior: test when the model refuses, abstains, over-answers, or gives unsupported diagnostic suggestions, and route unsafe or ambiguous outputs to clinician review.
-- Failure-mode logging: track missed diagnoses, unsupported diagnoses, inappropriate certainty, delayed escalation, contraindicated advice, privacy leakage, model version, prompt version, and reviewer disposition when comparing DeepSeek-R1 distills or other local open-source models.
+- Failure-mode logging: track missed diagnoses, hallucinated or unsupported diagnoses, inappropriate certainty, delayed escalation, contraindicated advice, privacy leakage, model version, prompt version, and reviewer disposition when comparing DeepSeek-R1 distills or other local open-source models.
 - Closed model calibration: benchmark and calibrate on-prem open-source distilled reasoning models against closed model baselines on the same diagnostic task set and rubrics before clinical use.
-- Clinician safety review: require clinician review of diagnostic outputs, unsafe failure modes, privacy handling, latency impact, calibration behavior, and residual risk before pilot or production use.
+- Clinician safety review: require human-review gates and clinician review of diagnostic outputs, unsafe failure modes, privacy handling, latency impact, calibration behavior, and residual risk before pilot or production use.
 - Validation gates: require documented validation scope, clinician review responsibility, audit logs, incident escalation, rollback criteria, and institutional approval before clinical use.
 
 ## Inputs / Outputs
