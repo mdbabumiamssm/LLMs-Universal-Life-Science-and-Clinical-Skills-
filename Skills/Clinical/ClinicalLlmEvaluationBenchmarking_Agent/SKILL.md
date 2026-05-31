@@ -145,6 +145,18 @@ The workflow is grounded in the finding that evaluation methods for AI-generated
 34. **Fine-grained medical Q&A error-mode reporting**  
    For domain-specific medical Q&A dataset evaluations, classify item-level omissions, unsafe reasoning, unsupported claims, ambiguity handling, source grounding, and per-domain error modes rather than reporting only aggregate accuracy.
 
+35. **DeepSeek-R1-derived clinical workflow selection**  
+   For on-premises diagnosis workflows using open-source or distilled reasoning models such as DeepSeek-R1 derivatives, select models only after comparative evaluation against closed models on the same diagnostic cases and rubrics, review local deployment constraints, calibration, data-governance controls, and clinician safety requirements, and document why the selected local model is appropriate for the intended clinical workflow.
+
+36. **Trustworthy domain-specific Q&A adjudication templates**  
+   For fine-grained domain-specific medical Q&A dataset evaluation, require item-level taxonomy fields for domain, specialty, topic, subtopic, ambiguity flags, omission labels, hallucination or unsupported-claim labels, answer grounding, and trustworthiness risk; use expert adjudication to resolve ambiguous, omitted, or hallucinated content; and report benchmarks with templates that expose item IDs, taxonomy strata, error labels, adjudicator disposition, and model or prompt version.
+
+37. **AI-generated clinical-note quality benchmark design**  
+   For AI-generated clinical-note quality evaluation, include rubric fields for correctness, clinically important omissions, hallucinations or unsupported additions, harm-risk severity, and note style or structure; use inter-rater adjudication with documented disagreement resolution, and design experimental benchmark comparisons that evaluate alternative methods on the same cases, reviewer roles, score definitions, and limitations.
+
+38. **Test-time knowledge acquisition decision-change audit**  
+   For medical decision-making evaluations where the model acquires knowledge at inference time, assess retrieval and source selection, verify citations against cited evidence, track answer changes before and after knowledge acquisition, and flag unsupported late-context shifts in diagnoses, treatments, medications, guidelines, or escalation advice for safety review.
+
 ## On-Prem Clinical LLM Deployment Risk Evaluation
 
 When an evaluation includes open-source reasoning model distillations, including distilled DeepSeek-R1 derivatives, for on-premises diagnosis tasks, treat comparative findings such as the 2026 J Med Syst study as a prompt for pre-deployment evaluation rather than as evidence of local clinical readiness, and document risk controls for:
@@ -152,6 +164,7 @@ When an evaluation includes open-source reasoning model distillations, including
 - Benchmark selection: choose diagnostic cases, rubrics, and comparison baselines that reflect the intended specialty, care setting, case mix, and clinical decision impact rather than relying on a generic medical score alone.
 - Hardware and latency tradeoffs: available CPU/GPU memory, latency, quantization or runtime choices, concurrency limits, local network boundaries, capacity constraints, and whether the deployment can meet clinical workflow needs.
 - Hosted frontier comparison: compare diagnostic performance, latency, privacy posture, local hardware constraints, calibration, and failure modes for local DeepSeek-R1 distilled models against hosted frontier models on the same diagnosis cases and rubrics before clinical use.
+- Model-selection guidance: choose a DeepSeek-R1-derived local workflow only when the exact model, checkpoint, prompt, and serving configuration satisfy the intended diagnostic rubric, calibration expectations, safety-review requirements, data-governance checks, and local deployment constraints; otherwise document the rationale for choosing a closed model, another open-source model, or no model deployment.
 - Privacy and data-governance checks: local inference may reduce external data sharing, but protected health information (PHI) handling, access control, logging, retention, de-identification, and approval scope still need validation.
 - Model provenance: record model source, distillation lineage when known, version or checkpoint, license constraints, local modifications, and serving configuration used for each benchmark run.
 - Benchmark drift: repeat diagnosis benchmarks after model, prompt, retrieval, guideline, local population, or case-mix changes.

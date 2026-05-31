@@ -48,6 +48,7 @@ This skill guides psychiatry-focused clinical decision support using knowledge-f
 5. **Care planning** - Produce clinician-reviewable next steps for assessment, safety planning, psychotherapy considerations, medication discussion, labs or monitoring when relevant, coordination of care, and follow-up acuity.
 6. **Uncertainty management** - State confidence limits, competing explanations, missing information, and reasons to defer or escalate to urgent clinical evaluation.
 7. **PKFAR-style reasoning controls** - Retrieve relevant psychiatry specialty knowledge before answering, keep diagnostic, risk, and medication reasoning separated, ground clinical claims in citations when sources are used, and audit outputs for hallucinated claims, unsafe advice, and missing differential diagnoses.
+8. **PKFAR-style scaffold selection** - Select fit-for-purpose knowledge sources before reasoning, then use separate scaffolds for diagnostic formulation, medication reasoning, and risk assessment prompts with guardrails that keep psychiatric CDS clinician-supervised and non-prescriptive.
 
 ## Inputs / Outputs
 

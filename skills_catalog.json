@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-05-30T10:42:55.757727+00:00",
+  "generated_at": "2026-05-31T10:43:23.735367+00:00",
   "generator": "ARTIFICIALINTELLIGENCEGROUP-pipeline v1.0",
-  "total_skills": 1029,
+  "total_skills": 1030,
   "total_errors": 16,
   "skills": [
     {
@@ -990,8 +990,8 @@
       ],
       "file_path": "Skills/Clinical/ClinicalGuidelineDevelopmentLlm_Agent/SKILL.md",
       "relative_path": "Clinical/ClinicalGuidelineDevelopmentLlm_Agent/SKILL.md",
-      "last_modified": "2026-05-29T10:42:50.520835+00:00",
-      "body_length": 8457,
+      "last_modified": "2026-05-31T10:33:19.458610+00:00",
+      "body_length": 8824,
       "capabilities": [
         "Overview",
         "When to Use This Skill",
@@ -1013,8 +1013,8 @@
       ],
       "file_path": "Skills/Clinical/ClinicalLlmEvaluationBenchmarking_Agent/SKILL.md",
       "relative_path": "Clinical/ClinicalLlmEvaluationBenchmarking_Agent/SKILL.md",
-      "last_modified": "2026-05-30T10:35:52.312568+00:00",
-      "body_length": 19963,
+      "last_modified": "2026-05-31T10:41:37.312131+00:00",
+      "body_length": 22356,
       "capabilities": [
         "Overview",
         "When to Use This Skill",
@@ -1312,8 +1312,8 @@
       ],
       "file_path": "Skills/Clinical/Clinical_NLP/SKILL.md",
       "relative_path": "Clinical/Clinical_NLP/SKILL.md",
-      "last_modified": "2026-05-30T10:36:54.405400+00:00",
-      "body_length": 21090,
+      "last_modified": "2026-05-31T10:35:05.577079+00:00",
+      "body_length": 21498,
       "capabilities": [
         "When to Use This Skill",
         "Core Capabilities",
@@ -1458,8 +1458,8 @@
       ],
       "file_path": "Skills/Clinical/Medical_Imaging/Multimodal_Analysis/SKILL.md",
       "relative_path": "Clinical/Medical_Imaging/Multimodal_Analysis/SKILL.md",
-      "last_modified": "2026-05-22T01:49:04.745051+00:00",
-      "body_length": 3145,
+      "last_modified": "2026-05-31T10:42:29.744870+00:00",
+      "body_length": 2490,
       "capabilities": [
         "When to Use This Skill",
         "Core Capabilities",
@@ -1535,8 +1535,8 @@
       ],
       "file_path": "Skills/Clinical/Oncology/Precision_Oncology_Agent/SKILL.md",
       "relative_path": "Clinical/Oncology/Precision_Oncology_Agent/SKILL.md",
-      "last_modified": "2026-05-30T10:35:00.182708+00:00",
-      "body_length": 4276,
+      "last_modified": "2026-05-31T10:32:41.709799+00:00",
+      "body_length": 4638,
       "capabilities": [
         "At-a-Glance",
         "Inputs",
@@ -1629,8 +1629,8 @@
       ],
       "file_path": "Skills/Clinical/PsychiatryKnowledgeFusedReasoning_Agent/SKILL.md",
       "relative_path": "Clinical/PsychiatryKnowledgeFusedReasoning_Agent/SKILL.md",
-      "last_modified": "2026-05-16T10:39:25.976267+00:00",
-      "body_length": 5199,
+      "last_modified": "2026-05-31T10:39:39.735714+00:00",
+      "body_length": 5489,
       "capabilities": [
         "Overview",
         "When to Use This Skill",
@@ -1651,7 +1651,7 @@
       ],
       "file_path": "Skills/Clinical/Radiology/RadGPT/SKILL.md",
       "relative_path": "Clinical/Radiology/RadGPT/SKILL.md",
-      "last_modified": "2026-05-30T10:41:48.723577+00:00",
+      "last_modified": "2026-05-30T10:43:01.970368+00:00",
       "body_length": 1807,
       "capabilities": [
         "When to Use",
@@ -1673,7 +1673,7 @@
       ],
       "file_path": "Skills/Clinical/Safety/AI_Safety_Auditor/SKILL.md",
       "relative_path": "Clinical/Safety/AI_Safety_Auditor/SKILL.md",
-      "last_modified": "2026-05-30T10:39:47.437921+00:00",
+      "last_modified": "2026-05-30T10:43:01.970368+00:00",
       "body_length": 12866,
       "capabilities": [
         "When to Use This Skill",
@@ -1716,7 +1716,7 @@
       ],
       "file_path": "Skills/Clinical/Trial_Eligibility_Agent/SKILL.md",
       "relative_path": "Clinical/Trial_Eligibility_Agent/SKILL.md",
-      "last_modified": "2026-05-30T10:38:20.690162+00:00",
+      "last_modified": "2026-05-30T10:43:01.970368+00:00",
       "body_length": 4513,
       "capabilities": [
         "At-a-Glance",
@@ -1741,8 +1741,8 @@
       ],
       "file_path": "Skills/Clinical/Trial_Matching/TrialGPT/SKILL.md",
       "relative_path": "Clinical/Trial_Matching/TrialGPT/SKILL.md",
-      "last_modified": "2026-05-29T10:42:50.520835+00:00",
-      "body_length": 9713,
+      "last_modified": "2026-05-31T10:37:31.184354+00:00",
+      "body_length": 10058,
       "capabilities": [
         "Core Capabilities",
         "Inputs",
@@ -8382,8 +8382,8 @@
       ],
       "file_path": "Skills/Genomics/Variant_Interpretation/SKILL.md",
       "relative_path": "Genomics/Variant_Interpretation/SKILL.md",
-      "last_modified": "2026-05-30T10:41:00.618714+00:00",
-      "body_length": 10138,
+      "last_modified": "2026-05-31T10:43:09.936671+00:00",
+      "body_length": 10573,
       "capabilities": [
         "When to Use This Skill",
         "Core Capabilities",
@@ -13147,7 +13147,7 @@
       ],
       "file_path": "Skills/Machine_Learning/machine-learning/survival-analysis/SKILL.md",
       "relative_path": "Machine_Learning/machine-learning/survival-analysis/SKILL.md",
-      "last_modified": "2026-05-30T10:37:38.097280+00:00",
+      "last_modified": "2026-05-30T10:43:01.970368+00:00",
       "body_length": 20629,
       "capabilities": [
         "Core Capabilities",
@@ -14716,6 +14716,29 @@
       ]
     },
     {
+      "name": "oncology-consult-survival-llm",
+      "description": "Predict cancer survival from initial oncology consultation documents using zero-shot or fine-tuned LLM workflows with leakage control and calibrated reporting.",
+      "tool_type": "",
+      "primary_tool": "",
+      "measurable_outcome": "Execute skill workflow successfully with valid output within 15 minutes.",
+      "allowed-tools": [
+        "read_file",
+        "run_shell_command",
+        "web_fetch"
+      ],
+      "file_path": "Skills/Oncology/OncologyConsultSurvivalLlm_Agent/SKILL.md",
+      "relative_path": "Oncology/OncologyConsultSurvivalLlm_Agent/SKILL.md",
+      "last_modified": "2026-05-31T10:36:17.524721+00:00",
+      "body_length": 4363,
+      "capabilities": [
+        "Overview",
+        "When to Use This Skill",
+        "Core Capabilities",
+        "Inputs / Outputs",
+        "References"
+      ]
+    },
+    {
       "name": "organoid-drug-response-agent",
       "description": "AI-powered analysis of patient-derived organoid (PDO) drug screening for personalized oncology treatment selection and biomarker discovery.",
       "tool_type": "",
@@ -15026,8 +15049,8 @@
       ],
       "file_path": "Skills/Pharma/Drug_Interaction/SKILL.md",
       "relative_path": "Pharma/Drug_Interaction/SKILL.md",
-      "last_modified": "2026-05-30T10:39:00.892051+00:00",
-      "body_length": 13679,
+      "last_modified": "2026-05-31T10:38:56.988927+00:00",
+      "body_length": 14116,
       "capabilities": [
         "When to Use This Skill",
         "Core Capabilities",
