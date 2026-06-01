@@ -157,11 +157,21 @@ The workflow is grounded in the finding that evaluation methods for AI-generated
 38. **Test-time knowledge acquisition decision-change audit**  
    For medical decision-making evaluations where the model acquires knowledge at inference time, assess retrieval and source selection, verify citations against cited evidence, track answer changes before and after knowledge acquisition, and flag unsupported late-context shifts in diagnoses, treatments, medications, guidelines, or escalation advice for safety review.
 
+39. **On-prem distilled diagnosis comparative reporting**  
+   For comparative evaluations of distilled DeepSeek-R1 or other open-source diagnosis models, report performance using the same diagnostic cases, rubrics, model versions, prompts, and serving constraints intended for local use; treat local inference as requiring stronger governance, calibration, protected health information handling, and clinician-review checks when deployment constraints or model provenance uncertainty affect clinical use.
+
+40. **Domain-specific medical Q&A dataset quality audits**  
+   For fine-grained evaluation of domain-specific medical Q&A datasets, audit item source provenance, clinical scope, answer-key support, annotation process, ambiguity, and intended use; assign trustworthiness labels plus omission and harm scores at item level; and report model performance by clinical topic, subtopic, evidence type, and safety label rather than aggregate accuracy alone.
+
+41. **Clinician-validated test-time knowledge acquisition pattern**  
+   For medical decision-support evaluations where an LLM acquires knowledge at test time, treat acquisition as an evaluated intervention: record retrieval provenance for every acquired fact or cited source, compare pre-acquisition and post-acquisition answers on the same case, check whether acquired context introduces hallucinated, unsupported, or contradicted claims, and limit use of acquired knowledge as clinical guidance unless the source and answer change have clinician validation.
+
 ## On-Prem Clinical LLM Deployment Risk Evaluation
 
 When an evaluation includes open-source reasoning model distillations, including distilled DeepSeek-R1 derivatives, for on-premises diagnosis tasks, treat comparative findings such as the 2026 J Med Syst study as a prompt for pre-deployment evaluation rather than as evidence of local clinical readiness, and document risk controls for:
 
 - Benchmark selection: choose diagnostic cases, rubrics, and comparison baselines that reflect the intended specialty, care setting, case mix, and clinical decision impact rather than relying on a generic medical score alone.
+- Comparative performance reporting: report the exact open-source or distilled model, checkpoint, prompt, local serving configuration, comparator models, diagnostic task set, rubric, and deployment constraints used for each comparison.
 - Hardware and latency tradeoffs: available CPU/GPU memory, latency, quantization or runtime choices, concurrency limits, local network boundaries, capacity constraints, and whether the deployment can meet clinical workflow needs.
 - Hosted frontier comparison: compare diagnostic performance, latency, privacy posture, local hardware constraints, calibration, and failure modes for local DeepSeek-R1 distilled models against hosted frontier models on the same diagnosis cases and rubrics before clinical use.
 - Model-selection guidance: choose a DeepSeek-R1-derived local workflow only when the exact model, checkpoint, prompt, and serving configuration satisfy the intended diagnostic rubric, calibration expectations, safety-review requirements, data-governance checks, and local deployment constraints; otherwise document the rationale for choosing a closed model, another open-source model, or no model deployment.

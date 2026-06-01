@@ -172,7 +172,7 @@ Copyright (c) 2026 MD BABU MIA, PhD. Open-source components are provided under t
 
 <!-- BEGIN: PIPELINE_INDEX -->
 
-_Auto-generated index. 1030 skills across 54 categories. Last refresh: 2026-05-31T10:43:23.735367+00:00._
+_Auto-generated index. 1031 skills across 54 categories. Last refresh: 2026-06-01T10:42:19.732818+00:00._
 
 ### 3D_Genomics (8)
 
@@ -421,7 +421,7 @@ _Auto-generated index. 1030 skills across 54 categories. Last refresh: 2026-05-3
 
 - **aav-vector-design-agent** — AI-powered adeno-associated virus (AAV) vector design for gene therapy including capsid engineering, promoter selection, and tropism opti...
 
-### Genomics (149)
+### Genomics (150)
 
 - **bio-basecalling** — Convert raw Nanopore signal data (FAST5/POD5) to nucleotide sequences using Dorado basecaller. Covers model selection, GPU acceleration, ...
 - **bio-bedgraph-handling** — Create, manipulate, and convert bedGraph files for genome browser visualization. Covers bedGraph format, conversion to/from bigWig, norma...
@@ -483,7 +483,7 @@ _Auto-generated index. 1030 skills across 54 categories. Last refresh: 2026-05-3
 - **bio-metagenomics-strain-tracking** — Track bacterial strains using MASH, sourmash, fastANI, and inStrain. Compare genomes, detect contamination, and monitor strain-level vari...
 - **bio-metagenomics-visualization** — Visualize metagenomic profiles using R (phyloseq, microbiome) and Python (matplotlib, seaborn). Create stacked bar plots, heatmaps, PCA p...
 - **bio-phasing-imputation-genotype-imputation** — Impute missing genotypes using reference panels with Beagle or Minimac4. Use when increasing variant density for GWAS, harmonizing data a...
-- _... and 89 more in `Skills/Genomics/`_
+- _... and 90 more in `Skills/Genomics/`_
 
 ### Hematology (15)
 

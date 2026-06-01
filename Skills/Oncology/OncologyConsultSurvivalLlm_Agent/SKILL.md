@@ -46,9 +46,10 @@ This skill guides agents through building or evaluating LLM workflows that predi
 3. Leakage control: Restrict inputs to information available at the initial consultation and inspect text, timestamps, labels, features, and splits for future outcome leakage.
 4. Zero-shot baseline design: Create explicit prompts that request structured survival-risk outputs, uncertainty, and evidence snippets without exposing labels or validation examples.
 5. Fine-tuning workflow: Build training, validation, and test partitions at the patient level; tune only on training data; and compare against zero-shot baselines using identical endpoints.
-6. Survival-aware evaluation: Report discrimination, calibration, and clinically meaningful error analysis for the chosen horizon while avoiding unsupported claims about real-world performance.
-7. Clinician-facing reporting: Convert model output into concise risk categories, confidence notes, rationale excerpts, and limitations for review by qualified oncology clinicians.
-8. Governance and documentation: Record model version, prompt or training recipe, cohort definition, label code, missingness handling, evaluation date, and intended-use boundaries.
+6. Fine-tuning versus zero-shot comparison: Treat prompt-only zero-shot prediction as the baseline and justify fine-tuning only through a same-endpoint comparison that preserves leakage control, calibration review, and stratified evaluation across clinically relevant groups.
+7. Survival-aware evaluation: Report discrimination, calibration, and clinically meaningful error analysis for the chosen horizon while avoiding unsupported claims about real-world performance.
+8. Clinician-facing reporting: Convert model output into concise risk categories, confidence notes, rationale excerpts, and limitations for review by qualified oncology clinicians.
+9. Governance and documentation: Record model version, prompt or training recipe, cohort definition, label code, missingness handling, evaluation date, and intended-use boundaries.
 
 ## Inputs / Outputs
 

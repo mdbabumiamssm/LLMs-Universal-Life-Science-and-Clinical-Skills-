@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-05-31T10:43:23.735367+00:00",
+  "generated_at": "2026-06-01T10:42:19.732818+00:00",
   "generator": "ARTIFICIALINTELLIGENCEGROUP-pipeline v1.0",
-  "total_skills": 1030,
+  "total_skills": 1031,
   "total_errors": 16,
   "skills": [
     {
@@ -990,7 +990,7 @@
       ],
       "file_path": "Skills/Clinical/ClinicalGuidelineDevelopmentLlm_Agent/SKILL.md",
       "relative_path": "Clinical/ClinicalGuidelineDevelopmentLlm_Agent/SKILL.md",
-      "last_modified": "2026-05-31T10:33:19.458610+00:00",
+      "last_modified": "2026-05-31T10:43:30.256570+00:00",
       "body_length": 8824,
       "capabilities": [
         "Overview",
@@ -1013,8 +1013,8 @@
       ],
       "file_path": "Skills/Clinical/ClinicalLlmEvaluationBenchmarking_Agent/SKILL.md",
       "relative_path": "Clinical/ClinicalLlmEvaluationBenchmarking_Agent/SKILL.md",
-      "last_modified": "2026-05-31T10:41:37.312131+00:00",
-      "body_length": 22356,
+      "last_modified": "2026-06-01T10:38:48.912816+00:00",
+      "body_length": 24113,
       "capabilities": [
         "Overview",
         "When to Use This Skill",
@@ -1312,8 +1312,8 @@
       ],
       "file_path": "Skills/Clinical/Clinical_NLP/SKILL.md",
       "relative_path": "Clinical/Clinical_NLP/SKILL.md",
-      "last_modified": "2026-05-31T10:35:05.577079+00:00",
-      "body_length": 21498,
+      "last_modified": "2026-06-01T10:41:37.252136+00:00",
+      "body_length": 22381,
       "capabilities": [
         "When to Use This Skill",
         "Core Capabilities",
@@ -1458,7 +1458,7 @@
       ],
       "file_path": "Skills/Clinical/Medical_Imaging/Multimodal_Analysis/SKILL.md",
       "relative_path": "Clinical/Medical_Imaging/Multimodal_Analysis/SKILL.md",
-      "last_modified": "2026-05-31T10:42:29.744870+00:00",
+      "last_modified": "2026-05-31T10:43:30.256570+00:00",
       "body_length": 2490,
       "capabilities": [
         "When to Use This Skill",
@@ -1535,7 +1535,7 @@
       ],
       "file_path": "Skills/Clinical/Oncology/Precision_Oncology_Agent/SKILL.md",
       "relative_path": "Clinical/Oncology/Precision_Oncology_Agent/SKILL.md",
-      "last_modified": "2026-05-31T10:32:41.709799+00:00",
+      "last_modified": "2026-05-31T10:43:30.256570+00:00",
       "body_length": 4638,
       "capabilities": [
         "At-a-Glance",
@@ -1629,7 +1629,7 @@
       ],
       "file_path": "Skills/Clinical/PsychiatryKnowledgeFusedReasoning_Agent/SKILL.md",
       "relative_path": "Clinical/PsychiatryKnowledgeFusedReasoning_Agent/SKILL.md",
-      "last_modified": "2026-05-31T10:39:39.735714+00:00",
+      "last_modified": "2026-05-31T10:43:30.256570+00:00",
       "body_length": 5489,
       "capabilities": [
         "Overview",
@@ -1741,8 +1741,8 @@
       ],
       "file_path": "Skills/Clinical/Trial_Matching/TrialGPT/SKILL.md",
       "relative_path": "Clinical/Trial_Matching/TrialGPT/SKILL.md",
-      "last_modified": "2026-05-31T10:37:31.184354+00:00",
-      "body_length": 10058,
+      "last_modified": "2026-06-01T10:37:07.745237+00:00",
+      "body_length": 10354,
       "capabilities": [
         "Core Capabilities",
         "Inputs",
@@ -6397,6 +6397,34 @@
       ]
     },
     {
+      "name": "precision-grounded-variant-summarization",
+      "description": "Produce evidence-grounded genetic variant summaries with provenance, conflict handling, and hallucination controls.",
+      "tool_type": "",
+      "primary_tool": "",
+      "measurable_outcome": "Execute skill workflow successfully with valid output within 15 minutes.",
+      "allowed-tools": [
+        "read_file",
+        "run_shell_command",
+        "web_fetch"
+      ],
+      "file_path": "Skills/Genomics/PrecisionGroundedVariantSummarization_Agent/SKILL.md",
+      "relative_path": "Genomics/PrecisionGroundedVariantSummarization_Agent/SKILL.md",
+      "last_modified": "2026-06-01T10:40:55.771304+00:00",
+      "body_length": 7615,
+      "capabilities": [
+        "Overview",
+        "When to Use This Skill",
+        "Core Capabilities",
+        "Inputs / Outputs",
+        "Inputs",
+        "Outputs",
+        "Workflow",
+        "Output Template",
+        "Variant Summary",
+        "References"
+      ]
+    },
+    {
       "name": "rna-velocity-agent",
       "description": "AI-powered RNA velocity analysis for predicting cellular state transitions, differentiation trajectories, and dynamic gene regulation from single-cell RNA sequencing data.",
       "tool_type": "",
@@ -8382,7 +8410,7 @@
       ],
       "file_path": "Skills/Genomics/Variant_Interpretation/SKILL.md",
       "relative_path": "Genomics/Variant_Interpretation/SKILL.md",
-      "last_modified": "2026-05-31T10:43:09.936671+00:00",
+      "last_modified": "2026-05-31T10:43:30.256570+00:00",
       "body_length": 10573,
       "capabilities": [
         "When to Use This Skill",
@@ -14728,8 +14756,8 @@
       ],
       "file_path": "Skills/Oncology/OncologyConsultSurvivalLlm_Agent/SKILL.md",
       "relative_path": "Oncology/OncologyConsultSurvivalLlm_Agent/SKILL.md",
-      "last_modified": "2026-05-31T10:36:17.524721+00:00",
-      "body_length": 4363,
+      "last_modified": "2026-06-01T10:36:36.872369+00:00",
+      "body_length": 4639,
       "capabilities": [
         "Overview",
         "When to Use This Skill",
@@ -15049,8 +15077,8 @@
       ],
       "file_path": "Skills/Pharma/Drug_Interaction/SKILL.md",
       "relative_path": "Pharma/Drug_Interaction/SKILL.md",
-      "last_modified": "2026-05-31T10:38:56.988927+00:00",
-      "body_length": 14116,
+      "last_modified": "2026-06-01T10:37:59.767015+00:00",
+      "body_length": 14607,
       "capabilities": [
         "When to Use This Skill",
         "Core Capabilities",
