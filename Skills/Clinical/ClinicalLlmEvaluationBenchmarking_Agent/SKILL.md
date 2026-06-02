@@ -166,6 +166,18 @@ The workflow is grounded in the finding that evaluation methods for AI-generated
 41. **Clinician-validated test-time knowledge acquisition pattern**  
    For medical decision-support evaluations where an LLM acquires knowledge at test time, treat acquisition as an evaluated intervention: record retrieval provenance for every acquired fact or cited source, compare pre-acquisition and post-acquisition answers on the same case, check whether acquired context introduces hallucinated, unsupported, or contradicted claims, and limit use of acquired knowledge as clinical guidance unless the source and answer change have clinician validation.
 
+42. **On-prem distilled DeepSeek-R1 diagnostic deployment checklist**  
+   For distilled DeepSeek-R1 style open models proposed for on-premises clinical diagnosis, evaluate diagnostic benchmark fit, local inference constraints, hallucination and clinical-safety failure modes, privacy controls for protected health information, and comparative performance against proprietary model baselines on the same cases and rubrics before clinical use.
+
+43. **Fine-grained Q&A difficulty and prompt-stability checks**  
+   For domain-specific medical Q&A dataset benchmarks, label item-level difficulty alongside specialty, topic, subtopic, omission category, and risk-of-harm score; stratify results by specialty and difficulty; rerun representative items across prompt variants to check answer stability; and document dataset scope, construction, answer-key support, annotation process, limitations, and intended use so trustworthy medical model benchmark results remain auditable.
+
+44. **AI-generated clinical-note evaluation method benchmark design**  
+   For AI-generated clinical-note quality evaluations, compare methods across factuality, omissions, harmfulness, style, completeness, clinician preference, and inter-rater reliability within a documented experimental benchmark design rather than relying on a single evaluation score.
+
+45. **Test-time knowledge acquisition deployment comparison**  
+   For medical decision support evaluations that acquire knowledge at inference time, separate retrieval-enabled benchmark runs from static zero-shot prompting runs, record retrieval timing and source-vetting criteria, keep benchmark items and retrieved knowledge sources separated where possible, document contamination controls for any acquired evidence, and compare decision changes against the same cases without test-time acquisition before deployment use.
+
 ## On-Prem Clinical LLM Deployment Risk Evaluation
 
 When an evaluation includes open-source reasoning model distillations, including distilled DeepSeek-R1 derivatives, for on-premises diagnosis tasks, treat comparative findings such as the 2026 J Med Syst study as a prompt for pre-deployment evaluation rather than as evidence of local clinical readiness, and document risk controls for:

@@ -64,6 +64,7 @@ This skill guides LLM-assisted clinical practice guideline development from ques
 21. **Audit-ready output**: Produce dated outputs with version history, evidence links, reviewer decisions, unresolved assumptions, and required human approvals.
 22. **Real-time LLM evaluation record**: Across draft iterations, verify evidence traceability and recommendation grading, require expert adjudication of model-suggested recommendations or disputed edits, perform risk-of-harm review for unsafe or overconfident wording, and retain audit logs of prompts, outputs, edits, reviewer decisions, and rationale changes.
 23. **Prospective guideline review checkpoints**: During real-time LLM-assisted guideline development, use prospective panel review checkpoints to confirm evidence traceability, adjudicate generated text, verify recommendation grading, and log failure modes such as unsupported claims, omissions, unsafe wording, or grading conflicts before accepting draft language.
+24. **Live expert review acceptance criteria**: Use live expert review loops to compare LLM-suggested guideline language against source evidence, recommendation grades, and panel judgment; log discrepancies and treat LLM assistance as acceptable only when evidence traceability, grading consistency, reviewer disposition, and governance signoff are complete, escalating unsafe or unsupported output.
 
 ## Inputs / Outputs
 
