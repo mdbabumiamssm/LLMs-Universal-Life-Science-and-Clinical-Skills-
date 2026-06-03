@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-02T10:41:27.778361+00:00",
+  "generated_at": "2026-06-03T10:39:34.071003+00:00",
   "generator": "ARTIFICIALINTELLIGENCEGROUP-pipeline v1.0",
   "total_skills": 1031,
   "total_errors": 16,
@@ -990,7 +990,7 @@
       ],
       "file_path": "Skills/Clinical/ClinicalGuidelineDevelopmentLlm_Agent/SKILL.md",
       "relative_path": "Clinical/ClinicalGuidelineDevelopmentLlm_Agent/SKILL.md",
-      "last_modified": "2026-06-02T10:33:27.895017+00:00",
+      "last_modified": "2026-06-02T10:41:34.196919+00:00",
       "body_length": 9224,
       "capabilities": [
         "Overview",
@@ -1013,8 +1013,8 @@
       ],
       "file_path": "Skills/Clinical/ClinicalLlmEvaluationBenchmarking_Agent/SKILL.md",
       "relative_path": "Clinical/ClinicalLlmEvaluationBenchmarking_Agent/SKILL.md",
-      "last_modified": "2026-06-02T10:40:13.738271+00:00",
-      "body_length": 25973,
+      "last_modified": "2026-06-03T10:37:36.728599+00:00",
+      "body_length": 27361,
       "capabilities": [
         "Overview",
         "When to Use This Skill",
@@ -1312,8 +1312,8 @@
       ],
       "file_path": "Skills/Clinical/Clinical_NLP/SKILL.md",
       "relative_path": "Clinical/Clinical_NLP/SKILL.md",
-      "last_modified": "2026-06-02T10:41:14.168007+00:00",
-      "body_length": 23452,
+      "last_modified": "2026-06-03T10:38:15.427394+00:00",
+      "body_length": 24558,
       "capabilities": [
         "When to Use This Skill",
         "Core Capabilities",
@@ -1535,8 +1535,8 @@
       ],
       "file_path": "Skills/Clinical/Oncology/Precision_Oncology_Agent/SKILL.md",
       "relative_path": "Clinical/Oncology/Precision_Oncology_Agent/SKILL.md",
-      "last_modified": "2026-06-02T10:32:46.063193+00:00",
-      "body_length": 5001,
+      "last_modified": "2026-06-03T10:34:23.379664+00:00",
+      "body_length": 5444,
       "capabilities": [
         "At-a-Glance",
         "Inputs",
@@ -1559,8 +1559,8 @@
       ],
       "file_path": "Skills/Clinical/Prior_Authorization/SKILL.md",
       "relative_path": "Clinical/Prior_Authorization/SKILL.md",
-      "last_modified": "2026-05-12T10:52:24.841760+00:00",
-      "body_length": 2282,
+      "last_modified": "2026-06-03T10:39:25.698028+00:00",
+      "body_length": 2285,
       "capabilities": [
         "When to Use This Skill",
         "Core Capabilities",
@@ -1629,7 +1629,7 @@
       ],
       "file_path": "Skills/Clinical/PsychiatryKnowledgeFusedReasoning_Agent/SKILL.md",
       "relative_path": "Clinical/PsychiatryKnowledgeFusedReasoning_Agent/SKILL.md",
-      "last_modified": "2026-06-02T10:38:49.090639+00:00",
+      "last_modified": "2026-06-02T10:41:34.197919+00:00",
       "body_length": 6094,
       "capabilities": [
         "Overview",
@@ -1741,8 +1741,8 @@
       ],
       "file_path": "Skills/Clinical/Trial_Matching/TrialGPT/SKILL.md",
       "relative_path": "Clinical/Trial_Matching/TrialGPT/SKILL.md",
-      "last_modified": "2026-06-02T10:37:23.317010+00:00",
-      "body_length": 10778,
+      "last_modified": "2026-06-03T10:36:21.511004+00:00",
+      "body_length": 11217,
       "capabilities": [
         "Core Capabilities",
         "Inputs",
@@ -14756,7 +14756,7 @@
       ],
       "file_path": "Skills/Oncology/OncologyConsultSurvivalLlm_Agent/SKILL.md",
       "relative_path": "Oncology/OncologyConsultSurvivalLlm_Agent/SKILL.md",
-      "last_modified": "2026-06-02T10:36:31.950232+00:00",
+      "last_modified": "2026-06-02T10:41:34.197919+00:00",
       "body_length": 4980,
       "capabilities": [
         "Overview",
@@ -15077,8 +15077,8 @@
       ],
       "file_path": "Skills/Pharma/Drug_Interaction/SKILL.md",
       "relative_path": "Pharma/Drug_Interaction/SKILL.md",
-      "last_modified": "2026-06-02T10:38:07.009821+00:00",
-      "body_length": 15177,
+      "last_modified": "2026-06-03T10:36:58.868802+00:00",
+      "body_length": 15575,
       "capabilities": [
         "When to Use This Skill",
         "Core Capabilities",

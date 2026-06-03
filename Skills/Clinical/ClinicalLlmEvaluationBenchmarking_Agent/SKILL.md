@@ -178,6 +178,15 @@ The workflow is grounded in the finding that evaluation methods for AI-generated
 45. **Test-time knowledge acquisition deployment comparison**  
    For medical decision support evaluations that acquire knowledge at inference time, separate retrieval-enabled benchmark runs from static zero-shot prompting runs, record retrieval timing and source-vetting criteria, keep benchmark items and retrieved knowledge sources separated where possible, document contamination controls for any acquired evidence, and compare decision changes against the same cases without test-time acquisition before deployment use.
 
+46. **Hosted-frontier comparison for local diagnosis models**  
+   For open-source distilled reasoning models considered for on-premises clinical diagnosis, including DeepSeek-R1 distillations, require local validation before clinical use that compares the exact local model, prompt, and serving configuration against hosted frontier models on the same diagnostic cases and rubrics, while documenting deployment constraints, calibration, refusal and harm patterns, security posture, and clinician-review gates.
+
+47. **Fine-grained medical QA dataset audit before reliability claims**  
+   Before using domain-specific medical QA benchmarks to claim model reliability, produce a dataset audit report that reviews item difficulty, ambiguity checks, answer-key quality, subdomain stratification, item-level error taxonomy, trustworthiness scoring, and benchmark limitations.
+
+48. **Source-whitelisted test-time acquisition audit**  
+   For clinical LLM decision evaluations that use test-time knowledge acquisition or retrieval, define an allowed source whitelist, verify citation provenance against retrieved evidence, check publication or access-date freshness, document conflict resolution when retrieved sources disagree, and compare pre-acquisition versus post-acquisition answer deltas before accepting changes to diagnoses, treatments, medications, guidelines, or escalation advice.
+
 ## On-Prem Clinical LLM Deployment Risk Evaluation
 
 When an evaluation includes open-source reasoning model distillations, including distilled DeepSeek-R1 derivatives, for on-premises diagnosis tasks, treat comparative findings such as the 2026 J Med Syst study as a prompt for pre-deployment evaluation rather than as evidence of local clinical readiness, and document risk controls for:
