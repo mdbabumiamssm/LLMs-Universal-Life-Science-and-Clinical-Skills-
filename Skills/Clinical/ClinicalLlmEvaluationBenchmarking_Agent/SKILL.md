@@ -187,6 +187,12 @@ The workflow is grounded in the finding that evaluation methods for AI-generated
 48. **Source-whitelisted test-time acquisition audit**  
    For clinical LLM decision evaluations that use test-time knowledge acquisition or retrieval, define an allowed source whitelist, verify citation provenance against retrieved evidence, check publication or access-date freshness, document conflict resolution when retrieved sources disagree, and compare pre-acquisition versus post-acquisition answer deltas before accepting changes to diagnoses, treatments, medications, guidelines, or escalation advice.
 
+49. **Open-source diagnostic model performance-risk reporting**  
+   For on-premises clinical diagnosis evaluations of open-source or distilled DeepSeek-R1 style models, report performance-risk tradeoffs under the intended local serving configuration, including local governance approval, privacy and protected health information constraints, model provenance, calibration and failure modes, and benchmark results against closed frontier models on the same cases and rubrics before deployment decisions.
+
+50. **Fine-grained trustworthy medical Q&A assessment**  
+   For domain-specific medical Q&A dataset evaluation, score each item with an explicit error taxonomy, omission tags, potential-harm tags, uncertainty or confidence calibration checks, answer-grounding review, and dataset provenance checks covering source, construction, answer-key support, annotation process, limitations, and intended use before using the benchmark to assess trustworthy medical language model behavior.
+
 ## On-Prem Clinical LLM Deployment Risk Evaluation
 
 When an evaluation includes open-source reasoning model distillations, including distilled DeepSeek-R1 derivatives, for on-premises diagnosis tasks, treat comparative findings such as the 2026 J Med Syst study as a prompt for pre-deployment evaluation rather than as evidence of local clinical readiness, and document risk controls for:

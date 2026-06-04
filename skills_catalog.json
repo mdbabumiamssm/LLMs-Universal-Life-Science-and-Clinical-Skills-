@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-06-03T10:39:34.071003+00:00",
+  "generated_at": "2026-06-04T10:41:50.062991+00:00",
   "generator": "ARTIFICIALINTELLIGENCEGROUP-pipeline v1.0",
-  "total_skills": 1031,
+  "total_skills": 1032,
   "total_errors": 16,
   "skills": [
     {
@@ -990,8 +990,8 @@
       ],
       "file_path": "Skills/Clinical/ClinicalGuidelineDevelopmentLlm_Agent/SKILL.md",
       "relative_path": "Clinical/ClinicalGuidelineDevelopmentLlm_Agent/SKILL.md",
-      "last_modified": "2026-06-02T10:41:34.196919+00:00",
-      "body_length": 9224,
+      "last_modified": "2026-06-04T10:35:16.419914+00:00",
+      "body_length": 9434,
       "capabilities": [
         "Overview",
         "When to Use This Skill",
@@ -1013,8 +1013,8 @@
       ],
       "file_path": "Skills/Clinical/ClinicalLlmEvaluationBenchmarking_Agent/SKILL.md",
       "relative_path": "Clinical/ClinicalLlmEvaluationBenchmarking_Agent/SKILL.md",
-      "last_modified": "2026-06-03T10:37:36.728599+00:00",
-      "body_length": 27361,
+      "last_modified": "2026-06-04T10:35:57.312727+00:00",
+      "body_length": 28349,
       "capabilities": [
         "Overview",
         "When to Use This Skill",
@@ -1312,8 +1312,8 @@
       ],
       "file_path": "Skills/Clinical/Clinical_NLP/SKILL.md",
       "relative_path": "Clinical/Clinical_NLP/SKILL.md",
-      "last_modified": "2026-06-03T10:38:15.427394+00:00",
-      "body_length": 24558,
+      "last_modified": "2026-06-04T10:36:52.516474+00:00",
+      "body_length": 24992,
       "capabilities": [
         "When to Use This Skill",
         "Core Capabilities",
@@ -1535,8 +1535,8 @@
       ],
       "file_path": "Skills/Clinical/Oncology/Precision_Oncology_Agent/SKILL.md",
       "relative_path": "Clinical/Oncology/Precision_Oncology_Agent/SKILL.md",
-      "last_modified": "2026-06-03T10:34:23.379664+00:00",
-      "body_length": 5444,
+      "last_modified": "2026-06-04T10:34:34.067108+00:00",
+      "body_length": 6033,
       "capabilities": [
         "At-a-Glance",
         "Inputs",
@@ -1559,7 +1559,7 @@
       ],
       "file_path": "Skills/Clinical/Prior_Authorization/SKILL.md",
       "relative_path": "Clinical/Prior_Authorization/SKILL.md",
-      "last_modified": "2026-06-03T10:39:25.698028+00:00",
+      "last_modified": "2026-06-03T10:39:40.887949+00:00",
       "body_length": 2285,
       "capabilities": [
         "When to Use This Skill",
@@ -1651,8 +1651,8 @@
       ],
       "file_path": "Skills/Clinical/Radiology/RadGPT/SKILL.md",
       "relative_path": "Clinical/Radiology/RadGPT/SKILL.md",
-      "last_modified": "2026-05-30T10:43:01.970368+00:00",
-      "body_length": 1807,
+      "last_modified": "2026-06-04T10:40:41.187431+00:00",
+      "body_length": 1784,
       "capabilities": [
         "When to Use",
         "Core Capabilities",
@@ -1705,6 +1705,29 @@
       ]
     },
     {
+      "name": "test-time-knowledge-clinical-llm",
+      "description": "Guide clinical LLM workflows that acquire and inject relevant medical knowledge at inference time to support safer decision-making without full fine-tuning.",
+      "tool_type": "",
+      "primary_tool": "",
+      "measurable_outcome": "Execute skill workflow successfully with valid output within 15 minutes.",
+      "allowed-tools": [
+        "read_file",
+        "run_shell_command",
+        "web_fetch"
+      ],
+      "file_path": "Skills/Clinical/TestTimeKnowledgeClinicalLlm_Agent/SKILL.md",
+      "relative_path": "Clinical/TestTimeKnowledgeClinicalLlm_Agent/SKILL.md",
+      "last_modified": "2026-06-04T10:39:56.640634+00:00",
+      "body_length": 5033,
+      "capabilities": [
+        "Overview",
+        "When to Use This Skill",
+        "Core Capabilities",
+        "Inputs / Outputs",
+        "References"
+      ]
+    },
+    {
       "name": "trial-eligibility-agent",
       "description": "Parse trial protocols and patient data to produce criterion-level MET/NOT/UNKNOWN determinations with evidence and gaps for clinical trial screening tasks.",
       "tool_type": "",
@@ -1741,8 +1764,8 @@
       ],
       "file_path": "Skills/Clinical/Trial_Matching/TrialGPT/SKILL.md",
       "relative_path": "Clinical/Trial_Matching/TrialGPT/SKILL.md",
-      "last_modified": "2026-06-03T10:36:21.511004+00:00",
-      "body_length": 11217,
+      "last_modified": "2026-06-04T10:38:09.930120+00:00",
+      "body_length": 11645,
       "capabilities": [
         "Core Capabilities",
         "Inputs",
@@ -14756,8 +14779,8 @@
       ],
       "file_path": "Skills/Oncology/OncologyConsultSurvivalLlm_Agent/SKILL.md",
       "relative_path": "Oncology/OncologyConsultSurvivalLlm_Agent/SKILL.md",
-      "last_modified": "2026-06-02T10:41:34.197919+00:00",
-      "body_length": 4980,
+      "last_modified": "2026-06-04T10:37:37.649268+00:00",
+      "body_length": 5307,
       "capabilities": [
         "Overview",
         "When to Use This Skill",
@@ -15077,8 +15100,8 @@
       ],
       "file_path": "Skills/Pharma/Drug_Interaction/SKILL.md",
       "relative_path": "Pharma/Drug_Interaction/SKILL.md",
-      "last_modified": "2026-06-03T10:36:58.868802+00:00",
-      "body_length": 15575,
+      "last_modified": "2026-06-04T10:38:49.836938+00:00",
+      "body_length": 16113,
       "capabilities": [
         "When to Use This Skill",
         "Core Capabilities",

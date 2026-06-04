@@ -172,7 +172,7 @@ Copyright (c) 2026 MD BABU MIA, PhD. Open-source components are provided under t
 
 <!-- BEGIN: PIPELINE_INDEX -->
 
-_Auto-generated index. 1031 skills across 54 categories. Last refresh: 2026-06-03T10:39:34.071003+00:00._
+_Auto-generated index. 1032 skills across 54 categories. Last refresh: 2026-06-04T10:41:50.062991+00:00._
 
 ### 3D_Genomics (8)
 
@@ -228,7 +228,7 @@ _Auto-generated index. 1031 skills across 54 categories. Last refresh: 2026-06-0
 - **regulatory-drafting** — Regulatory Drafting agent for healthcare workflows.
 - **research-literature** — Research Literature agent for healthcare workflows.
 
-### Clinical (32)
+### Clinical (33)
 
 - **ai-safety-auditor** — Validates clinical AI outputs for safety, bias, and hallucination risks before delivery to end-users or clinicians.
 - **autonomous-oncology-agent** — Precision Oncology
@@ -259,6 +259,7 @@ _Auto-generated index. 1031 skills across 54 categories. Last refresh: 2026-06-0
 - **psychiatry-knowledge-fused-reasoning** — Psychiatry CDS workflow for knowledge-fused augmented reasoning across diagnosis, risk assessment, medication reasoning, and care planning.
 - **radgpt-radiology-reporter** — Radiology Reporter
 - **safety-monitor** — Safety Monitor
+- **test-time-knowledge-clinical-llm** — Guide clinical LLM workflows that acquire and inject relevant medical knowledge at inference time to support safer decision-making withou...
 - **trial-eligibility-agent** — Parse trial protocols and patient data to produce criterion-level MET/NOT/UNKNOWN determinations with evidence and gaps for clinical tria...
 - **trialgpt-matching** — Trial shortlist
 - **virtual-lab-agent** — AI-powered virtual laboratory orchestrating multi-agent scientific research teams for autonomous hypothesis generation, experimental desi...

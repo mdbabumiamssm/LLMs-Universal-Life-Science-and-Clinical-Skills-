@@ -48,9 +48,10 @@ This skill guides agents through building or evaluating LLM workflows that predi
 5. Fine-tuning workflow: Build training, validation, and test partitions at the patient level; tune only on training data; and compare against zero-shot baselines using identical endpoints.
 6. Fine-tuning versus zero-shot comparison: Treat prompt-only zero-shot prediction as the baseline and justify fine-tuning only through a same-endpoint comparison that preserves leakage control, calibration review, and stratified evaluation across clinically relevant groups.
 7. Initial-consult comparison guardrails: For zero-shot versus fine-tuned survival prediction from initial consultation documents, require identical input windows, patient-level splits, leakage checks, calibration assessment, site-specific validation, and reporting of clinically actionable uncertainty before recommending either approach.
-8. Survival-aware evaluation: Report discrimination, calibration, and clinically meaningful error analysis for the chosen horizon while avoiding unsupported claims about real-world performance.
-9. Clinician-facing reporting: Convert model output into concise risk categories, confidence notes, rationale excerpts, and limitations for review by qualified oncology clinicians.
-10. Governance and documentation: Record model version, prompt or training recipe, cohort definition, label code, missingness handling, evaluation date, and intended-use boundaries.
+8. Zero-shot versus fine-tuned comparison workflow: Predefine the survival endpoint and input window, evaluate both general LLM approaches on the same held-out patient set, repeat leakage checks before scoring, assess calibration, and report cautiously as clinician-reviewed decision support rather than autonomous prognosis.
+9. Survival-aware evaluation: Report discrimination, calibration, and clinically meaningful error analysis for the chosen horizon while avoiding unsupported claims about real-world performance.
+10. Clinician-facing reporting: Convert model output into concise risk categories, confidence notes, rationale excerpts, and limitations for review by qualified oncology clinicians.
+11. Governance and documentation: Record model version, prompt or training recipe, cohort definition, label code, missingness handling, evaluation date, and intended-use boundaries.
 
 ## Inputs / Outputs
 
