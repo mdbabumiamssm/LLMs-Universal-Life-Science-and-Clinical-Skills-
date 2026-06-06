@@ -199,6 +199,15 @@ The workflow is grounded in the finding that evaluation methods for AI-generated
 52. **On-prem open-source diagnosis readiness gates**  
    For open-source or distilled reasoning LLMs evaluated for on-premises clinical diagnosis, require benchmark design tied to the intended diagnostic cases and local serving constraints, document privacy and operational tradeoffs, run clinician safety review of diagnosis-specific failure modes, and enforce performance or regression gates before clinical use.
 
+53. **ICU nursing Q&A blinded comparative evaluation**  
+   For intensive care nursing Q&A evaluations, construct specialty-specific questions that reflect the intended ICU nursing scope, compare proprietary and open reasoning models on the same items with model identities blinded during review, score factual accuracy and clinical relevance, analyze clinically important omissions separately from incorrect additions, and escalate ambiguous, unsafe, or potentially consequential answers to qualified ICU nursing or clinical reviewers before drawing comparative conclusions.
+
+54. **Fine-grained domain Q&A reliability evaluation**
+   For domain-specific medical Q&A datasets, apply an item-level error taxonomy; check question ambiguity, answerability, and alignment of reference answers and model responses with supporting evidence; report clinically relevant subgroup slices; define and document reliability thresholds before drawing trustworthiness conclusions; and publish dataset documentation covering scope, construction, provenance, annotation, limitations, and intended use.
+
+55. **Ophthalmology response safety dimension reporting**  
+   For ophthalmology continuing medical education-style responses, score correctness, clinically important omission, and risk of harm as separate clinician-adjudicated dimensions; use severity-weighted scoring, report confidence intervals, and include explicit examples of unsafe answers rather than relying on aggregate accuracy.
+
 ## On-Prem Clinical LLM Deployment Risk Evaluation
 
 When an evaluation includes open-source reasoning model distillations, including distilled DeepSeek-R1 derivatives, for on-premises diagnosis tasks, treat comparative findings such as the 2026 J Med Syst study as a prompt for pre-deployment evaluation rather than as evidence of local clinical readiness, and document risk controls for:
@@ -244,3 +253,4 @@ When an evaluation includes open-source reasoning model distillations, including
 - PubMed: Fonseca RDC, Rios RA, Castaldoni R, Carvalho AA, Lopes TJS. "Fine-grained evaluation of a domain-specific Q&A dataset to support trustworthy medical language models." Health Inf Sci Syst. 2026 Dec. https://pubmed.ncbi.nlm.nih.gov/42039929/
 - PubMed: Chen JL, Lu AJ, Verma R, Wang L, Koch DD. "Assessment of Correctness, Content Omission, and Risk of Harm in Large Language Model Responses to Ophthalmology Continuing Medical Education Questions." Ophthalmol Sci. 2026 May. https://pubmed.ncbi.nlm.nih.gov/41908501/
 - PubMed: Li S, Bao L, Li S, Wan B. "Enhancing LLM-based medical decision-making by test-time knowledge acquisition." Health Inf Sci Syst. 2026 Dec. https://pubmed.ncbi.nlm.nih.gov/41953846/
+- PubMed: Gülhan Güner S, Tan Z, Gülpınar S. "Comparative performance of artificial intelligence models in intensive care nursing questions: an evaluation of ChatGPT, DeepSeek, and Google Gemini." BMC Nurs. 2026 May 2. https://pubmed.ncbi.nlm.nih.gov/42069581/

@@ -10,7 +10,7 @@ keywords:
   - agentcore
 measurable_outcome: Produce a working Bedrock operating plan with model choice, IAM posture, invoke path, and rollback criteria documented within 2 hours.
 metadata:
-  author: Biomedical OS Team
+  author: MD BABU MIA
   version: "2026.04"
 source_reliability:
   - source: official_aws_docs
@@ -29,10 +29,12 @@ Use this skill when Bedrock is the production surface, not just a compatibility 
 ## Core Capabilities
 
 - For Strands Agents plus Amazon Bedrock AgentCore reference architectures, use the `aws-samples/sample-strands-agent-with-agentcore` pattern as a checklist for TypeScript chatbot boundaries, MCP integrations, browser automation and voice/chatbot tool patterns, A2A interaction paths, IAM isolation, observability, deployment topology, and production guardrails.
+- Apply the reference architecture to multi-agent chat applications by defining identity boundaries, session-state ownership and lifecycle, MCP and A2A contracts, browser and voice tool controls, end-to-end observability, and production hardening before TypeScript deployment.
 
 ## Strands Agents + AgentCore Reference Architecture
 
 - Structure TypeScript chatbot and voice-assistant flows around explicit boundaries for chat or voice client, Strands agent orchestration, Bedrock AgentCore Runtime, and tool adapters; record where request state, memory, and tool results flow.
+- Define session-state ownership, persistence, expiration, isolation, and recovery across clients, Strands agents, AgentCore Runtime, memory, and tool adapters.
 - Treat MCP, browser automation, voice/chatbot, and A2A integrations as separate tool surfaces with schemas, auth, approval gates, and failure behavior before production enablement.
 - Define IAM isolation boundaries for AgentCore runtime, gateway/tool access, memory, browser automation, voice/chatbot integrations, and external service access; split roles or policies when a component can read data, invoke tools, or perform actions.
 - Document deployment topology for client/app, agent runtime, tool gateway, Bedrock model access, observability, and infrastructure automation; include rollout and rollback paths.
