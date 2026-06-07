@@ -208,6 +208,9 @@ The workflow is grounded in the finding that evaluation methods for AI-generated
 55. **Ophthalmology response safety dimension reporting**  
    For ophthalmology continuing medical education-style responses, score correctness, clinically important omission, and risk of harm as separate clinician-adjudicated dimensions; use severity-weighted scoring, report confidence intervals, and include explicit examples of unsafe answers rather than relying on aggregate accuracy.
 
+56. **Fine-grained clinically meaningful Q&A evaluation**  
+   Evaluate domain-specific medical Q&A at item level using clinically meaningful error taxonomies, omission and potential-harm labels, subgroup analysis, evidence-grounding checks, confidence calibration, and expert adjudication rather than aggregate accuracy alone.
+
 ## On-Prem Clinical LLM Deployment Risk Evaluation
 
 When an evaluation includes open-source reasoning model distillations, including distilled DeepSeek-R1 derivatives, for on-premises diagnosis tasks, treat comparative findings such as the 2026 J Med Syst study as a prompt for pre-deployment evaluation rather than as evidence of local clinical readiness, and document risk controls for:

@@ -28,12 +28,15 @@ allowed-tools:
 - Clinical deployment caution for distilled DeepSeek-R1 or other open-source medical diagnosis models: compare benchmark performance with deployment risk, weigh on-premises privacy benefits against calibration limits and hallucination checks, and require model governance plus clinician oversight before clinical use.
 - Clinical self-hosting review for distilled DeepSeek-R1/open-weight medical diagnosis deployments: benchmark against licensed frontier and domain models, require local evaluation sets, calibration and abstention checks, privacy/on-prem controls, and clinical safety gates before diagnostic workflow use.
 - Clinical validation requirements from the 2026 comparative study: for distilled DeepSeek-R1 and other open-source reasoning models, require on-prem validation against local diagnostic workflows, treat diagnosis benchmarks as deployment caveats rather than approval evidence, enforce PHI governance, measure calibration and refusal behavior, and require human clinical review before any clinical use.
+- Clinical on-premises deployment of distilled models: treat possible quality loss from distillation and quantization as an evaluation risk; benchmark diagnostic performance locally, test calibration and latency on target hardware, document quantization, privacy, and hardware tradeoffs, and require human review before any clinical use.
 
 ## Clinical On-Premises Deployment
 
 - For distilled DeepSeek-R1/open-weight models used in medical diagnosis, benchmark against licensed frontier and domain models before selection.
 - Require local diagnostic evaluation sets, calibration and abstention checks, privacy/on-prem controls, and clinical safety gates before use in diagnostic workflows.
 - Profile target hardware and compare independently measured diagnostic performance with hosted frontier models before adoption.
+- Compare unquantized and candidate quantized configurations for diagnostic quality, calibration, latency, memory use, and hardware feasibility; do not assume that a smaller distilled model preserves the source model's clinical performance.
+- Keep protected clinical data within approved privacy controls and require documented clinician review of every model-assisted diagnostic output before clinical use.
 
 ## Workflow
 
