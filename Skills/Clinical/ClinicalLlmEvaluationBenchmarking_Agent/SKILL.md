@@ -211,6 +211,9 @@ The workflow is grounded in the finding that evaluation methods for AI-generated
 56. **Fine-grained clinically meaningful Q&A evaluation**  
    Evaluate domain-specific medical Q&A at item level using clinically meaningful error taxonomies, omission and potential-harm labels, subgroup analysis, evidence-grounding checks, confidence calibration, and expert adjudication rather than aggregate accuracy alone.
 
+57. **Clinical-note quality rubric and preference separation**  
+   For AI-generated clinical notes, design explicit rubric items and scoring anchors for correctness, clinically important omissions, and harmfulness; report inter-rater reliability for human judgments, and evaluate note quality separately from model-preference scoring so preference is not treated as evidence of clinical-note quality.
+
 ## On-Prem Clinical LLM Deployment Risk Evaluation
 
 When an evaluation includes open-source reasoning model distillations, including distilled DeepSeek-R1 derivatives, for on-premises diagnosis tasks, treat comparative findings such as the 2026 J Med Syst study as a prompt for pre-deployment evaluation rather than as evidence of local clinical readiness, and document risk controls for:

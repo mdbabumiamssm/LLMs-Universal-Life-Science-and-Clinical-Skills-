@@ -50,6 +50,7 @@ This skill produces auditable oncology clinical trial candidate matches by combi
 7. **Conflict resolution:** Detect disagreements among records, rules, knowledge-graph inferences, and agent outputs; prefer authoritative and current evidence, retain unresolved conflicts, and prohibit unsupported tie-breaking.
 8. **Clinician review:** Escalate ambiguous, safety-critical, temporally unstable, or potentially disqualifying findings for human adjudication before presenting a match as actionable.
 9. **Audit and monitoring:** Preserve criterion-level decisions, evidence provenance, rule versions, agent outputs, overrides, timestamps, and reasons for match changes.
+10. **Prospective-evaluation workflow:** Apply the integrated pattern evaluated prospectively in 3,804 oncology patients: ontology-backed knowledge-graph grounding, multi-agent division of labor, neuro-symbolic eligibility checks, criterion-level audit trails, and clinician review loops.
 
 ## Inputs / Outputs
 

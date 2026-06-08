@@ -50,6 +50,7 @@ It is intended for auditable variant, gene, disease, and evidence-strength summa
 5. **Evidence-strength framing**: Distinguish established evidence, limited evidence, conflicting evidence, computational predictions, population observations, functional studies, segregation data, and expert-panel assertions.
 6. **Hallucination controls**: Avoid unsupported claims, mark unavailable evidence as not found, do not infer pathogenicity from gene relevance alone, and separate source facts from model-generated synthesis.
 7. **Clinical-readiness formatting**: Produce concise summaries with sections for identity, clinical significance, phenotype or disease context, evidence basis, conflicts or caveats, and recommended verification steps.
+8. **Precision Grounding pattern**: Retrieve evidence from trusted databases before synthesis, retain provenance through every claim, reconcile conflicts across ClinVar, gnomAD, and literature, run hallucination checks for unsupported assertions, and route outputs to qualified human review before clinical use.
 
 ## Inputs / Outputs
 

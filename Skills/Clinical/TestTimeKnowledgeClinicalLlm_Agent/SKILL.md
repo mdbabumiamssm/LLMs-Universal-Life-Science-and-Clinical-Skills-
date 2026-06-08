@@ -51,6 +51,7 @@ This skill guides clinical LLM workflows that improve medical decision support b
 7. Safety review: Check for high-risk omissions, contraindications, dosing concerns, emergency symptoms, vulnerable populations, and cases requiring clinician or specialist involvement.
 8. Output traceability: Link each clinically important claim to evidence or label it as inference, background knowledge, or an unresolved uncertainty.
 9. Evaluation design: Assess retrieval relevance, evidence faithfulness, citation accuracy, harmful recommendation risk, abstention behavior, and robustness to missing or conflicting sources.
+10. Test-time knowledge acquisition: At inference time, retrieve current evidence, vet source authority, inject only concise relevant context, cite provenance, and compare results with a no-retrieval baseline without implying that retrieval confers fine-tuned clinical competence.
 
 ## Inputs / Outputs
 
