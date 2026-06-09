@@ -30,6 +30,7 @@ Use this skill when Bedrock is the production surface, not just a compatibility 
 
 - For Strands Agents plus Amazon Bedrock AgentCore reference architectures, use the `aws-samples/sample-strands-agent-with-agentcore` pattern as a checklist for TypeScript chatbot boundaries, MCP integrations, browser automation and voice/chatbot tool patterns, A2A interaction paths, identity boundaries, observability, deployment topology, and production security checks.
 - Apply the reference architecture to multi-agent chat applications by defining identity boundaries, session-state ownership and lifecycle, MCP and A2A contracts, browser and voice tool controls, end-to-end observability, and production hardening before TypeScript deployment.
+- Produce a concrete Strands Agents and Bedrock AgentCore topology that maps user and workload identity, IAM trust boundaries, session-state ownership, MCP and A2A integration points, browser and voice tools, deployment components, observability paths, and production-hardening controls.
 
 ## Strands Agents + AgentCore Reference Architecture
 

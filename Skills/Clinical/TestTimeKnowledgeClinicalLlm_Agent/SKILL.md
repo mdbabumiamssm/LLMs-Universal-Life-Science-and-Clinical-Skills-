@@ -52,6 +52,7 @@ This skill guides clinical LLM workflows that improve medical decision support b
 8. Output traceability: Link each clinically important claim to evidence or label it as inference, background knowledge, or an unresolved uncertainty.
 9. Evaluation design: Assess retrieval relevance, evidence faithfulness, citation accuracy, harmful recommendation risk, abstention behavior, and robustness to missing or conflicting sources.
 10. Test-time knowledge acquisition: At inference time, retrieve current evidence, vet source authority, inject only concise relevant context, cite provenance, and compare results with a no-retrieval baseline without implying that retrieval confers fine-tuned clinical competence.
+11. Test-time acquisition procedure: Generate patient- and decision-specific queries, select only relevant evidence after source quality checks, identify and disclose contradictions rather than silently resolving them, bind each material clinical claim to its supporting citation, and abstain when evidence is insufficient or unreliable; evaluate the procedure against both zero-shot and static-RAG baselines.
 
 ## Inputs / Outputs
 

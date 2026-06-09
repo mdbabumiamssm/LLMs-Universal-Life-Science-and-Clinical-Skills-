@@ -51,6 +51,7 @@ It is intended for auditable variant, gene, disease, and evidence-strength summa
 6. **Hallucination controls**: Avoid unsupported claims, mark unavailable evidence as not found, do not infer pathogenicity from gene relevance alone, and separate source facts from model-generated synthesis.
 7. **Clinical-readiness formatting**: Produce concise summaries with sections for identity, clinical significance, phenotype or disease context, evidence basis, conflicts or caveats, and recommended verification steps.
 8. **Precision Grounding pattern**: Retrieve evidence from trusted databases before synthesis, retain provenance through every claim, reconcile conflicts across ClinVar, gnomAD, and literature, run hallucination checks for unsupported assertions, and route outputs to qualified human review before clinical use.
+9. **Precision Grounding architecture and evaluation**: Route variant questions to relevant evidence databases, attach claim-level provenance and source-freshness metadata, preserve conflicting classifications rather than silently resolving them, detect unsupported claims by checking generated statements against retrieved evidence, and include qualified expert review in evaluation before clinical use.
 
 ## Inputs / Outputs
 

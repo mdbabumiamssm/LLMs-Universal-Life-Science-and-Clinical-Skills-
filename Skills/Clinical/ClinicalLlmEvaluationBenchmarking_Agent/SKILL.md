@@ -214,11 +214,21 @@ The workflow is grounded in the finding that evaluation methods for AI-generated
 57. **Clinical-note quality rubric and preference separation**  
    For AI-generated clinical notes, design explicit rubric items and scoring anchors for correctness, clinically important omissions, and harmfulness; report inter-rater reliability for human judgments, and evaluate note quality separately from model-preference scoring so preference is not treated as evidence of clinical-note quality.
 
+58. **On-premises distilled reasoning model go/no-go evaluation**  
+   For distilled reasoning models proposed for on-premises clinical diagnosis, evaluate the exact model, quantization, hardware, and serving configuration for diagnostic accuracy, calibration, latency, privacy controls, and clinician-reviewed failure modes, then apply predeclared deployment go/no-go thresholds rather than inferring readiness from model family or aggregate performance alone.
+
+59. **Fine-grained domain-specific Q&A dataset auditing**  
+   Audit each domain-specific medical Q&A item for ambiguity, evidence sufficiency, clinically important omissions, potential harmfulness, subgroup-specific difficulty, and benchmark contamination, then report these dimensions transparently in trustworthy benchmark documentation rather than relying on aggregate performance alone.
+
+60. **Clinical-note quality measure taxonomy and benchmark validity**  
+   For AI-generated clinical-note benchmarks, separate factuality, completeness, structure, readability, harmfulness, and clinician preference into distinct quality dimensions; report automated metrics separately from blinded human review, compare methods on the same notes and reference conditions, and document whether each measure is valid for the intended quality dimension rather than treating agreement with another metric as general benchmark validity.
+
 ## On-Prem Clinical LLM Deployment Risk Evaluation
 
 When an evaluation includes open-source reasoning model distillations, including distilled DeepSeek-R1 derivatives, for on-premises diagnosis tasks, treat comparative findings such as the 2026 J Med Syst study as a prompt for pre-deployment evaluation rather than as evidence of local clinical readiness, and document risk controls for:
 
 - Benchmark selection: choose diagnostic cases, rubrics, and comparison baselines that reflect the intended specialty, care setting, case mix, and clinical decision impact rather than relying on a generic medical score alone.
+- Diagnostic accuracy: measure correctness on the intended diagnostic cases, report clinically consequential errors separately from aggregate performance, and avoid generalizing results beyond the evaluated case mix and configuration.
 - Comparative performance reporting: report the exact open-source or distilled model, checkpoint, prompt, local serving configuration, comparator models, diagnostic task set, rubric, and deployment constraints used for each comparison.
 - Hardware and latency tradeoffs: available CPU/GPU memory, latency, quantization or runtime choices, concurrency limits, local network boundaries, capacity constraints, and whether the deployment can meet clinical workflow needs.
 - Hosted frontier comparison: compare diagnostic performance, latency, privacy posture, local hardware constraints, calibration, and failure modes for local DeepSeek-R1 distilled models against hosted frontier models on the same diagnosis cases and rubrics before clinical use.
@@ -232,6 +242,7 @@ When an evaluation includes open-source reasoning model distillations, including
 - Closed model calibration: benchmark and calibrate on-prem open-source distilled reasoning models against closed model baselines on the same diagnostic task set and rubrics before clinical use.
 - Clinician safety review: require human-review gates and clinician review of diagnostic outputs, unsafe failure modes, privacy handling, latency impact, calibration behavior, and residual risk before pilot or production use.
 - Validation gates: require documented validation scope, clinician review responsibility, audit logs, incident escalation, rollback criteria, and institutional approval before clinical use.
+- Deployment go/no-go thresholds: predeclare acceptable diagnostic performance, calibration, latency, privacy, and critical-failure criteria for the intended workflow; do not proceed when any required threshold is unmet, and document the decision and required remediation.
 
 ## Inputs / Outputs
 

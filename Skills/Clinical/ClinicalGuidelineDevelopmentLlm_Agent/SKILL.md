@@ -67,6 +67,7 @@ This skill guides LLM-assisted clinical practice guideline development from ques
 24. **Live expert review acceptance criteria**: Use live expert review loops to compare LLM-suggested guideline language against source evidence, recommendation grades, and panel judgment; log discrepancies and treat LLM assistance as acceptable only when evidence traceability, grading consistency, reviewer disposition, and governance signoff are complete, escalating unsafe or unsupported output.
 25. **Documented acceptance checkpoints**: Before guideline text is accepted, verify evidence traceability, recommendation grading, expert adjudication, bias and omission review, and documented human sign-off.
 26. **Limits on autonomous guideline drafting**: At defined expert adjudication checkpoints, verify evidence traceability and recommendation grading, review generated content for bias, hallucinations, and unsupported claims, and prohibit the LLM from autonomously drafting, approving, or issuing guideline recommendations without documented expert review and sign-off.
+27. **Concurrent expert evaluation protocol**: Review LLM-generated text concurrently with guideline drafting, trace claims to evidence, classify identified errors, verify recommendation grading, and adjudicate disagreements; prevent any unreviewed LLM text from entering the guideline or advancing toward approval.
 
 ## Inputs / Outputs
 

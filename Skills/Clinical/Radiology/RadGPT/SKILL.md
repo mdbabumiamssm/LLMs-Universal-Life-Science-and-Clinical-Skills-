@@ -47,7 +47,7 @@ An LLM-based agent designed to summarize and explain complex radiology reports f
 1.  **Simplification**: Translates "bilateral opacity" to "cloudiness in both lungs".
 2.  **Entity Extraction**: Identifies key anatomical structures and pathologies.
 3.  **Q&A**: Answers follow-up questions about the report.
-4.  **MRI Patient Education**: Translates MRI reports into personalized plain language while preserving uncertainty, clearly distinguishing reported findings from diagnoses, and retaining laterality, severity, follow-up recommendations, and red flags; checks the explanation against the source report for omissions and requires clinician-approved safety language before delivery.
+4.  **MRI Patient Education**: Translates MRI reports into personalized plain language at an audience-appropriate readability target while preserving diagnostic meaning and uncertainty, clearly distinguishing reported findings from diagnoses, and retaining laterality, severity, follow-up recommendations, and red flags; checks the explanation against the source report for omissions, compares it with an expert-reviewed interpretation when available, and escalates consequential findings for clinician review before delivery.
 
 ## Workflow
 
