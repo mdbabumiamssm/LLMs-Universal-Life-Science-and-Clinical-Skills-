@@ -200,7 +200,7 @@ The workflow is grounded in the finding that evaluation methods for AI-generated
    For open-source or distilled reasoning LLMs evaluated for on-premises clinical diagnosis, require benchmark design tied to the intended diagnostic cases and local serving constraints, document privacy and operational tradeoffs, run clinician safety review of diagnosis-specific failure modes, and enforce performance or regression gates before clinical use.
 
 53. **ICU nursing Q&A blinded comparative evaluation**  
-   For intensive care nursing Q&A evaluations, construct specialty-specific questions that reflect the intended ICU nursing scope, compare proprietary and open reasoning models on the same items with model identities blinded during review, score factual accuracy and clinical relevance, analyze clinically important omissions separately from incorrect additions, and escalate ambiguous, unsafe, or potentially consequential answers to qualified ICU nursing or clinical reviewers before drawing comparative conclusions.
+   For intensive care nursing Q&A evaluations, construct specialty-specific questions that reflect the intended ICU nursing scope; compare providers such as ChatGPT, DeepSeek, and Google Gemini on the same items with model identities blinded during review; score factual accuracy and clinical relevance; weight omissions, incorrect additions, and other errors by potential clinical consequence; require models to report uncertainty or abstain when appropriate; and use qualified ICU nurse experts to adjudicate ambiguous, unsafe, or potentially consequential answers before drawing comparative conclusions.
 
 54. **Fine-grained domain Q&A reliability evaluation**
    For domain-specific medical Q&A datasets, apply an item-level error taxonomy; check question ambiguity, answerability, and alignment of reference answers and model responses with supporting evidence; report clinically relevant subgroup slices; define and document reliability thresholds before drawing trustworthiness conclusions; and publish dataset documentation covering scope, construction, provenance, annotation, limitations, and intended use.
@@ -222,6 +222,12 @@ The workflow is grounded in the finding that evaluation methods for AI-generated
 
 60. **Clinical-note quality measure taxonomy and benchmark validity**  
    For AI-generated clinical-note benchmarks, separate factuality, completeness, structure, readability, harmfulness, and clinician preference into distinct quality dimensions; report automated metrics separately from blinded human review, compare methods on the same notes and reference conditions, and document whether each measure is valid for the intended quality dimension rather than treating agreement with another metric as general benchmark validity.
+
+61. **Fine-grained medical Q&A dataset audit and stratification**  
+   Audit medical Q&A items for ambiguity, answerability, evidence sufficiency, label quality, specialty coverage, and harmful errors, then stratify model performance by relevant question characteristics rather than relying only on aggregate results.
+
+62. **Blinded specialist response safety adjudication**  
+   For ophthalmology continuing medical education-style responses, score correctness, clinically important omission, and risk of harm as separate dimensions; use specialist adjudicators blinded to model identity, and report severity-weighted results rather than accuracy alone.
 
 ## On-Prem Clinical LLM Deployment Risk Evaluation
 
