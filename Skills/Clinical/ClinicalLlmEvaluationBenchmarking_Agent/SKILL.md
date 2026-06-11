@@ -229,6 +229,21 @@ The workflow is grounded in the finding that evaluation methods for AI-generated
 62. **Blinded specialist response safety adjudication**  
    For ophthalmology continuing medical education-style responses, score correctness, clinically important omission, and risk of harm as separate dimensions; use specialist adjudicators blinded to model identity, and report severity-weighted results rather than accuracy alone.
 
+63. **Specialty-specific intensive-care nursing model benchmarking**  
+   For comparative benchmarking on intensive-care nursing questions, capture the exact model and version for each ChatGPT, DeepSeek, or Google Gemini run; use qualified experts blinded to model identity for scoring; report error patterns across clinically relevant question subgroups; and score factual accuracy separately from clinically harmful omissions so aggregate correctness does not conceal missing safety-critical content.
+
+64. **Fine-grained domain Q&A trustworthiness reporting**  
+   For domain-specific medical Q&A evaluation, apply an item-level taxonomy with ambiguity and omission labels, resolve disputed labels through expert adjudication, evaluate confidence calibration, check for dataset leakage, and report item-level and stratified trustworthiness findings beyond aggregate accuracy.
+
+65. **Model-family and version comparison for board-style medical questions**  
+   Compare exact model families and versions on the same board-style medical question set, prompt, answer format, scoring rubric, and inference settings; document item provenance and release dates, use private or newly authored held-out items where feasible, flag suspected training exposure, and avoid claiming contamination is absent without evidence. Record evaluation dates, model identifiers, prompts, and settings for temporal reproducibility; report confidence intervals and question-level paired significance tests appropriate to the endpoint, and state explicitly that exam performance does not establish clinical competence, patient safety, or deployment readiness.
+
+66. **Clinical-note quality framework reliability and validity**  
+   For AI-generated clinical-note evaluation, score factuality, completeness, clinical usefulness, readability, hallucination, safety, and human-edit burden as distinct quality dimensions; document evaluator reliability and the validity of each benchmark method for its intended dimension when comparing human, automated, or hybrid evaluators.
+
+67. **Severity-weighted ophthalmology response endpoints**  
+   For ophthalmology continuing medical education-style responses, define correctness, clinically important omission, and risk of harm as explicit endpoints; apply severity-weighted adjudication, and report confidently wrong, incomplete, and unsafe answers as separate outcome categories rather than combining them into aggregate accuracy.
+
 ## On-Prem Clinical LLM Deployment Risk Evaluation
 
 When an evaluation includes open-source reasoning model distillations, including distilled DeepSeek-R1 derivatives, for on-premises diagnosis tasks, treat comparative findings such as the 2026 J Med Syst study as a prompt for pre-deployment evaluation rather than as evidence of local clinical readiness, and document risk controls for:
@@ -277,3 +292,4 @@ When an evaluation includes open-source reasoning model distillations, including
 - PubMed: Chen JL, Lu AJ, Verma R, Wang L, Koch DD. "Assessment of Correctness, Content Omission, and Risk of Harm in Large Language Model Responses to Ophthalmology Continuing Medical Education Questions." Ophthalmol Sci. 2026 May. https://pubmed.ncbi.nlm.nih.gov/41908501/
 - PubMed: Li S, Bao L, Li S, Wan B. "Enhancing LLM-based medical decision-making by test-time knowledge acquisition." Health Inf Sci Syst. 2026 Dec. https://pubmed.ncbi.nlm.nih.gov/41953846/
 - PubMed: Gülhan Güner S, Tan Z, Gülpınar S. "Comparative performance of artificial intelligence models in intensive care nursing questions: an evaluation of ChatGPT, DeepSeek, and Google Gemini." BMC Nurs. 2026 May 2. https://pubmed.ncbi.nlm.nih.gov/42069581/
+- PubMed: Shean RS, Mallapu JK, Shah T, Rasheed HA, Younessi DN. "Comparative Performance of Gemini 3 Pro and GPT-5 Family Models on Ophthalmology Board-Style Questions." Ophthalmol Sci. 2026 May. https://pubmed.ncbi.nlm.nih.gov/41970036/
