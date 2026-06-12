@@ -53,6 +53,7 @@ Use this skill to structure data intake, region selection, model execution, vali
 9. **Tumor-only assumption checks** - When designing WSI region sampling or validation handoff, include non-tumor and low-magnification regions as potential dMMR signal contributors and flag bias risks from workflows that assume only high-magnification tumor tiles are informative.
 10. **Region attribution and confirmation controls** - Evaluate tumor, non-tumor, and low-magnification WSI regions separately and jointly; document region-level attribution; control for blur, folds, stain or scanner artifacts, necrosis, background, and annotation errors; require external validation before clinical use; and hand off positive, discordant, or uncertain image-based signals for confirmatory MMR IHC and/or MSI testing.
 11. **Evidence-aware multiregion validation** - Treat non-tumor and low-magnification WSI regions as potential contributors to dMMR predictive signal, while testing sensitivity to region sampling, assessing confounding, validating on external cohorts, and defining a clear pathology handoff for review and diagnostic confirmation.
+12. **Comparative multiscale region workflow** - Explicitly sample and compare tumor, non-tumor, and low-magnification tissue regions; run region-selection ablations; fuse multiscale features before slide-level aggregation; validate on external cohorts; apply artifact controls; generate interpretability maps; and require pathology review of predictive signals arising outside tumor regions.
 
 ## Inputs / Outputs
 

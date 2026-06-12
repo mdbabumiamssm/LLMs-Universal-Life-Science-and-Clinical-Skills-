@@ -51,6 +51,7 @@ This skill produces auditable oncology clinical trial candidate matches by combi
 8. **Clinician review:** Escalate ambiguous, safety-critical, temporally unstable, or potentially disqualifying findings for human adjudication before presenting a match as actionable.
 9. **Audit and monitoring:** Preserve criterion-level decisions, evidence provenance, rule versions, agent outputs, overrides, timestamps, and reasons for match changes.
 10. **Prospective-evaluation workflow:** Apply the integrated pattern evaluated prospectively in 3,804 oncology patients: ontology-backed knowledge-graph grounding, multi-agent division of labor, neuro-symbolic eligibility checks, criterion-level audit trails, and clinician review loops.
+11. **Deployment-scale evaluation:** Define prospective workflow metrics before use; measure criterion resolution, unresolved conflicts, review burden, turnaround, and clinician overrides without presuming benchmark values; analyze override reasons against knowledge-graph construction, agent responsibilities, symbolic rule results, and criterion-level evidence; and retain reproducible patient, protocol, rule, agent, conflict, override, and reviewer audit records for deployment-scale trial matching.
 
 ## Inputs / Outputs
 

@@ -53,6 +53,7 @@ This skill guides clinical LLM workflows that improve medical decision support b
 9. Evaluation design: Assess retrieval relevance, evidence faithfulness, citation accuracy, harmful recommendation risk, abstention behavior, and robustness to missing or conflicting sources.
 10. Test-time knowledge acquisition: At inference time, retrieve current evidence, vet source authority, inject only concise relevant context, cite provenance, and compare results with a no-retrieval baseline without implying that retrieval confers fine-tuned clinical competence.
 11. Test-time acquisition procedure: Generate patient- and decision-specific queries, select only relevant evidence after source quality checks, identify and disclose contradictions rather than silently resolving them, bind each material clinical claim to its supporting citation, and abstain when evidence is insufficient or unreliable; evaluate the procedure against both zero-shot and static-RAG baselines.
+12. Knowledge-gap acquisition loop: Detect knowledge gaps before answering, formulate targeted retrieval queries, rank and validate returned evidence, inject concise decision-relevant context, and require answers grounded in that evidence; compare performance with a no-retrieval baseline and measure accuracy gains alongside citation failures and unsafe uptake of retrieved knowledge.
 
 ## Inputs / Outputs
 

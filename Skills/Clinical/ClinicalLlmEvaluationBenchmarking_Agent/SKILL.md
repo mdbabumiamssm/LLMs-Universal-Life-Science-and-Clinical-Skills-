@@ -244,6 +244,12 @@ The workflow is grounded in the finding that evaluation methods for AI-generated
 67. **Severity-weighted ophthalmology response endpoints**  
    For ophthalmology continuing medical education-style responses, define correctness, clinically important omission, and risk of harm as explicit endpoints; apply severity-weighted adjudication, and report confidently wrong, incomplete, and unsafe answers as separate outcome categories rather than combining them into aggregate accuracy.
 
+68. **On-premises distilled reasoning model adequacy benchmark**  
+   For distilled reasoning models considered for on-premises clinical diagnosis, compare model sizes and quantization configurations on diagnostic tasks stratified by specialty, difficulty, and clinical consequence; measure diagnostic performance, calibration, latency, and hardware requirements under the exact local serving configuration; conduct clinician-reviewed failure analysis and verify privacy constraints; and predeclare explicit task-specific thresholds for performance, calibration, critical failures, latency, and privacy that identify when local deployment is not clinically adequate.
+
+69. **Clinical-note quality taxonomy and benchmark protocol**  
+   For AI-generated clinical notes, score factual correctness, clinically important omission, hallucination or unsupported content, clinical usefulness, structure, readability, temporal consistency, and potential harm as separate dimensions. Use a documented human-review protocol specifying reviewer qualifications, blinding, independent scoring, rubric anchors, disagreement adjudication, and inter-rater reliability; state each automated metric's intended dimension and limitations; do not let a composite score hide dimension-level failures or unreported weighting; and use experimental benchmark templates that keep the note set, reference context, reviewer instructions, and comparison conditions constant while reporting per-dimension results, human-versus-automated comparisons, reliability, and limitations.
+
 ## On-Prem Clinical LLM Deployment Risk Evaluation
 
 When an evaluation includes open-source reasoning model distillations, including distilled DeepSeek-R1 derivatives, for on-premises diagnosis tasks, treat comparative findings such as the 2026 J Med Syst study as a prompt for pre-deployment evaluation rather than as evidence of local clinical readiness, and document risk controls for:
