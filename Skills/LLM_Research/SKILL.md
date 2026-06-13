@@ -33,6 +33,7 @@ Parse scientific literature (PDFs, URLs, DOIs) to extract GEO accessions and met
 ## Core Capabilities
 
 - **Medical Q&A dataset evaluation**: Build fine-grained review checklists and schemas for medical language model benchmarking that cover answer correctness, clinically relevant omissions, harm potential, item-level ambiguity, domain coverage, answer provenance, trustworthiness metrics, item-level error taxonomies, dataset quality checks before using benchmark results for medical LLM claims, domain-specific answer rubrics, dataset documentation, and benchmark reporting standards.
+- **Optional multi-source MCP literature workflow**: Search PubMed, Europe PMC, CORE, and OpenAlex; retrieve available full text; traverse citation networks; extract PICO elements; deduplicate records while retaining source provenance; and continue with available providers when an individual source fails.
 
 ## Methodology
 
@@ -112,5 +113,6 @@ After extraction, the bot automatically suggests appropriate analysis skills bas
 ## References
 
 - https://pubmed.ncbi.nlm.nih.gov/42039929/
+- https://github.com/u9401066/pubmed-search-mcp
 
 <!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

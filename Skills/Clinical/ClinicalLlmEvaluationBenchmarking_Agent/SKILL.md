@@ -250,6 +250,18 @@ The workflow is grounded in the finding that evaluation methods for AI-generated
 69. **Clinical-note quality taxonomy and benchmark protocol**  
    For AI-generated clinical notes, score factual correctness, clinically important omission, hallucination or unsupported content, clinical usefulness, structure, readability, temporal consistency, and potential harm as separate dimensions. Use a documented human-review protocol specifying reviewer qualifications, blinding, independent scoring, rubric anchors, disagreement adjudication, and inter-rater reliability; state each automated metric's intended dimension and limitations; do not let a composite score hide dimension-level failures or unreported weighting; and use experimental benchmark templates that keep the note set, reference context, reviewer instructions, and comparison conditions constant while reporting per-dimension results, human-versus-automated comparisons, reliability, and limitations.
 
+70. **Specialty-stratified cross-provider intensive-care nursing benchmarking**  
+   Compare ChatGPT, DeepSeek, and Google Gemini on the same intensive-care nursing questions, stratified by clinically relevant specialty or topic groups; score responses against expert references with qualified nursing-expert review; use appropriate statistical model comparisons and report uncertainty around performance estimates; and state that performance on exam-style questions does not establish bedside safety, clinical competence, or deployment readiness.
+
+71. **On-premises distilled reasoning deployment evaluation track**  
+   For distilled reasoning models considered for on-premises clinical diagnosis, measure diagnostic accuracy under each distillation and quantization configuration and quantify degradation against an appropriate available reference configuration; document hardware constraints; assess whether claimed privacy benefits are realized by the actual protected health information data flows and controls; evaluate calibration and abstention behavior; and require deployment-specific safety gates with clinician review before clinical use.
+
+72. **Fine-grained domain Q&A dataset auditing**  
+   Audit domain-specific medical Q&A datasets with an item taxonomy, explicit ambiguity and answerability checks, clinician adjudication of disputed items, omission and harmfulness labels, clinically relevant subgroup analysis, and controls against benchmark contamination.
+
+73. **Ophthalmology CME endpoint and unsafe-confidence analysis**  
+   For ophthalmology continuing medical education-style responses, evaluate correctness, clinically important omission, and risk of harm as separate endpoints; require specialist adjudicators blinded to model identity, document resolution of reviewer disagreements, weight errors by severity, and separately analyze unsafe answers stated with confidence.
+
 ## On-Prem Clinical LLM Deployment Risk Evaluation
 
 When an evaluation includes open-source reasoning model distillations, including distilled DeepSeek-R1 derivatives, for on-premises diagnosis tasks, treat comparative findings such as the 2026 J Med Syst study as a prompt for pre-deployment evaluation rather than as evidence of local clinical readiness, and document risk controls for:
