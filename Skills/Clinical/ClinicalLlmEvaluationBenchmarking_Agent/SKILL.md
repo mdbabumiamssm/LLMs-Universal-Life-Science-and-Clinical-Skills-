@@ -262,6 +262,12 @@ The workflow is grounded in the finding that evaluation methods for AI-generated
 73. **Ophthalmology CME endpoint and unsafe-confidence analysis**  
    For ophthalmology continuing medical education-style responses, evaluate correctness, clinically important omission, and risk of harm as separate endpoints; require specialist adjudicators blinded to model identity, document resolution of reviewer disagreements, weight errors by severity, and separately analyze unsafe answers stated with confidence.
 
+74. **Fine-grained medical QA benchmark design and reporting**  
+   For medical Q&A benchmarks, define question and answer taxonomies, use clinician adjudication for factuality and completeness, analyze errors across clinically relevant subgroups, review item-level reviewer disagreements, version the dataset and answer keys, and report aggregate accuracy separately from clinically important failure modes.
+
+75. **Clinician-blinded correctness, omission, and harm scoring**  
+   Score correctness, clinically material omissions, and risk of harm as separate endpoints using clinician raters blinded to model identity; analyze omissions separately from incorrect additions, weight errors by clinical severity, report inter-rater agreement and disagreement resolution, and predeclare escalation thresholds for unsafe or materially incomplete responses instead of relying solely on exact-match or aggregate accuracy.
+
 ## On-Prem Clinical LLM Deployment Risk Evaluation
 
 When an evaluation includes open-source reasoning model distillations, including distilled DeepSeek-R1 derivatives, for on-premises diagnosis tasks, treat comparative findings such as the 2026 J Med Syst study as a prompt for pre-deployment evaluation rather than as evidence of local clinical readiness, and document risk controls for:
