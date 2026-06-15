@@ -268,6 +268,12 @@ The workflow is grounded in the finding that evaluation methods for AI-generated
 75. **Clinician-blinded correctness, omission, and harm scoring**  
    Score correctness, clinically material omissions, and risk of harm as separate endpoints using clinician raters blinded to model identity; analyze omissions separately from incorrect additions, weight errors by clinical severity, report inter-rater agreement and disagreement resolution, and predeclare escalation thresholds for unsafe or materially incomplete responses instead of relying solely on exact-match or aggregate accuracy.
 
+76. **Fine-grained domain Q&A atomic scoring**
+   For domain-specific medical Q&A evaluation, score each item or answer unit separately for correctness, completeness, evidence support, uncertainty handling, and harmful omissions; report subgroup performance and audit dataset quality rather than relying on aggregate accuracy alone.
+
+77. **Systematic clinical-note quality measure taxonomy**  
+   For AI-generated clinical-note benchmarks, separate measures of factuality, omission, structure, usability, safety, and downstream task utility; document evaluator reliability and human-versus-automated metric agreement where both are used; and use benchmark reporting templates that identify the quality dimension, evaluation method, evaluator type, reliability result, agreement result, and limitations.
+
 ## On-Prem Clinical LLM Deployment Risk Evaluation
 
 When an evaluation includes open-source reasoning model distillations, including distilled DeepSeek-R1 derivatives, for on-premises diagnosis tasks, treat comparative findings such as the 2026 J Med Syst study as a prompt for pre-deployment evaluation rather than as evidence of local clinical readiness, and document risk controls for:

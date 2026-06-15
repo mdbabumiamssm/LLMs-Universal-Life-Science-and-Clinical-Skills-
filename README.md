@@ -172,7 +172,7 @@ Copyright (c) 2026 MD BABU MIA, PhD. Open-source components are provided under t
 
 <!-- BEGIN: PIPELINE_INDEX -->
 
-_Auto-generated index. 1033 skills across 54 categories. Last refresh: 2026-06-14T10:35:29.531896+00:00._
+_Auto-generated index. 1034 skills across 54 categories. Last refresh: 2026-06-15T10:47:59.896032+00:00._
 
 ### 3D_Genomics (8)
 
@@ -228,7 +228,7 @@ _Auto-generated index. 1033 skills across 54 categories. Last refresh: 2026-06-1
 - **regulatory-drafting** — Regulatory Drafting agent for healthcare workflows.
 - **research-literature** — Research Literature agent for healthcare workflows.
 
-### Clinical (33)
+### Clinical (34)
 
 - **ai-safety-auditor** — Validates clinical AI outputs for safety, bias, and hallucination risks before delivery to end-users or clinicians.
 - **autonomous-oncology-agent** — Precision Oncology
@@ -245,6 +245,7 @@ _Auto-generated index. 1033 skills across 54 categories. Last refresh: 2026-06-1
 - **chatehr-clinician-assistant** — EHR Chat Assistant
 - **clinical-guideline-development-llm** — Guide LLM-assisted clinical practice guideline drafting with real-time review, evidence traceability, recommendation grading, and clinici...
 - **clinical-llm-evaluation-benchmarking** — Design and run clinical LLM evaluation benchmarks grounded in systematic review evidence on AI-generated clinical note evaluation methods.
+- **clinical-llm-patient-education** — Translate clinical documents into personalized patient education while preserving diagnostic meaning, uncertainty, next steps, and clinic...
 - **clinical-nlp-extractor** — Extracts medical entities (Diseases, Medications, Procedures), patient outcomes with temporal anchors, and registry-oriented real-world d...
 - **clinical-note-summarization** — Structure raw clinical notes into SOAP-format summaries with explicit contradictions, missing data, and ICD-linked assessments using the ...
 - **clinical-workflow-automation** — An autonomous agentic system for automating and streamlining clinical workflows and healthcare administrative tasks.
