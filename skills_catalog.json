@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-16T10:42:45.873338+00:00",
+  "generated_at": "2026-06-17T10:40:49.463670+00:00",
   "generator": "ARTIFICIALINTELLIGENCEGROUP-pipeline v1.0",
   "total_skills": 1196,
   "total_errors": 16,
@@ -16919,8 +16919,8 @@
       ],
       "file_path": "Skills/MCP_Servers/PubmedNcbiMcpServer_Agent/SKILL.md",
       "relative_path": "MCP_Servers/PubmedNcbiMcpServer_Agent/SKILL.md",
-      "last_modified": "2026-05-25T10:45:13.927604+00:00",
-      "body_length": 6144,
+      "last_modified": "2026-06-17T10:40:40.968204+00:00",
+      "body_length": 6577,
       "capabilities": [
         "Overview",
         "When to Use This Skill",
