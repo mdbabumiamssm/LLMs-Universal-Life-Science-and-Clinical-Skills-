@@ -78,6 +78,12 @@ We have significantly expanded the **Skills** directory to align with the 2026 r
 *   **MedGemma 1.5:** `Skills/Clinical/medgemma-health-ai` - Medical text, imaging, EHR, and document workflows with clinical validation controls.
 *   **BioEmu:** `Skills/Structural_Biology/bioemu-protein-ensembles` - Protein monomer conformational ensemble generation and QC.
 *   **Boltz-2:** `Skills/Drug_Discovery/boltz2-biomolecular-interactions` - Biomolecular complex and binding-affinity prediction.
+*   **TxGemma:** `Skills/Drug_Discovery/txgemma-therapeutics` - Therapeutic prediction and conversational drug-discovery workflows.
+*   **Protenix-v2:** `Skills/Structural_Biology/protenix-structure-prediction` - Open biomolecular co-folding with MSA, templates, constraints, and sampling.
+*   **MedSAM2:** `Skills/Clinical/Medical_Imaging/medsam2-3d-segmentation` - Promptable volumetric and medical-video segmentation.
+*   **OpenCRISPR:** `Skills/Genomics/opencrispr-gene-editors` - Controlled evaluation of released AI-designed gene editors.
+*   **MONAI:** `Skills/Clinical/Medical_Imaging/monai-medical-imaging` - Reproducible healthcare imaging pipelines and bundles.
+*   **TranscriptFormer:** `Skills/Genomics/Single_Cell/transcriptformer-cell-embeddings` - Cross-species cell and contextual gene embeddings.
 
 ## 📂 Directory Structure
 

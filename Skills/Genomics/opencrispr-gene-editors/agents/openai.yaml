@@ -1,0 +1,4 @@
+interface:
+  display_name: "OpenCRISPR Gene Editors"
+  short_description: "Evaluate and operate OpenCRISPR systems"
+  default_prompt: "Use $opencrispr-gene-editors to assess an OpenCRISPR-1 research workflow with appropriate biosafety and validation controls."

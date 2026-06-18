@@ -89,15 +89,26 @@ We also started curating the user-focused Babu collection to make the highest-va
 
 ## 🧠 Biomedical Model Operations Refresh (June 2026)
 
-A gap-driven audit added five first-party operational skills backed by actively maintained official sources:
+Two gap-driven research batches added eleven first-party operational skills backed by authoritative sources.
+
+**Foundation-model and interaction workflows:**
 
 - `Skills/Genomics/evo2-genome-model` for Evo 2 sequence scoring, embeddings, generation, and deployment selection.
-- `Skills/Genomics/alphagenome-variant-effects` for tissue-aware regulatory variant predictions with the AlphaGenome API.
+- `Skills/Genomics/alphagenome-variant-effects` for tissue-aware regulatory predictions with the AlphaGenome API.
 - `Skills/Clinical/medgemma-health-ai` for validated MedGemma 1.5 medical text and imaging workflows.
 - `Skills/Structural_Biology/bioemu-protein-ensembles` for protein monomer conformational ensemble sampling.
 - `Skills/Drug_Discovery/boltz2-biomolecular-interactions` for joint complex-structure and binding-affinity prediction.
 
-The supporting source audit is recorded in `sources/research_20260618_new_biomedical_skills.md`.
+**Second research batch:**
+
+- `Skills/Drug_Discovery/txgemma-therapeutics` for therapeutic property prediction and conversational TxGemma workflows.
+- `Skills/Structural_Biology/protenix-structure-prediction` for open Protenix-v2 biomolecular co-folding.
+- `Skills/Clinical/Medical_Imaging/medsam2-3d-segmentation` for promptable 3D image and medical-video segmentation.
+- `Skills/Genomics/opencrispr-gene-editors` for controlled evaluation of released OpenCRISPR systems.
+- `Skills/Clinical/Medical_Imaging/monai-medical-imaging` for reproducible MONAI pipelines, bundles, labeling, and deployment.
+- `Skills/Genomics/Single_Cell/transcriptformer-cell-embeddings` for cross-species cell and contextual gene embeddings.
+
+The source audits are recorded in `sources/research_20260618_new_biomedical_skills.md` and `sources/research_20260618_new_biomedical_skills_batch2.md`.
 
 ## 📂 Directory Structure
 

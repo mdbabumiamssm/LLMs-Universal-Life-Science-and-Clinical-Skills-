@@ -1,0 +1,4 @@
+interface:
+  display_name: "MedSAM2 3D Segmentation"
+  short_description: "Segment 3D medical images and videos"
+  default_prompt: "Use $medsam2-3d-segmentation to run and validate promptable 3D medical image segmentation."
