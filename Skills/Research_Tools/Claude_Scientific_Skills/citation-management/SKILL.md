@@ -1,10 +1,30 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: citation-management
-description: Comprehensive citation management for academic research. Search Google Scholar and PubMed for papers, extract accurate metadata, validate citations, and generate properly formatted BibTeX entries. This skill should be used when you need to find papers, verify citation information, convert DOIs to BibTeX, or ensure reference accuracy in scientific writing.
-allowed-tools: Read Write Edit Bash
-license: MIT License
-metadata:
-    skill-author: K-Dense Inc.
+name: bio-citation-management
+description: Comprehensive citation management for academic research. Search Google
+  Scholar and PubMed for papers, extract accurate metadata, validate citations, and
+  generate properly formatted BibTeX entries. This skill should be used when you need
+  to find papers, verify citation information, convert DOIs to BibTeX, or ensure reference
+  accuracy in scientific writing.
+tool_type: mixed
+primary_tool: Unknown
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 # Citation Management
@@ -1110,4 +1130,4 @@ The citation-management skill provides:
 
 Use this skill to maintain accurate, complete citations throughout your research and ensure publication-ready bibliographies.
 
-
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

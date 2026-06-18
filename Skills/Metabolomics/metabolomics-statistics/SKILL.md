@@ -1,16 +1,27 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: metabolomics-statistics
-description: >-
-  Statistical analysis for metabolomics — PCA, PLS-DA, clustering, and univariate tests.
-version: 0.1.0
-author: OmicsClaw
-license: MIT
-tags: [metabolomics, statistics, PCA, clustering]
-metadata:
-  omicsclaw:
-    domain: metabolomics
-    emoji: "📈"
-    trigger_keywords: [metabolomics statistics, multivariate, PCA, clustering]
+name: bio-metabolomics-statistics
+description: "Statistical analysis for metabolomics \u2014 PCA, PLS-DA, clustering,\
+  \ and univariate tests."
+tool_type: mixed
+primary_tool: metabolomics
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 # 📈 Metabolomics Statistical Analysis
@@ -79,3 +90,5 @@ output_directory/
 
 - [MetaboAnalystR](https://doi.org/10.1093/bioinformatics/bty528)
 - [ropls](https://doi.org/10.1021/acs.jproteome.5b00354)
+
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

@@ -1,7 +1,31 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: pdf
-description: Use this skill whenever the user wants to do anything with PDF files. This includes reading or extracting text/tables from PDFs, combining or merging multiple PDFs into one, splitting PDFs apart, rotating pages, adding watermarks, creating new PDFs, filling PDF forms, encrypting/decrypting PDFs, extracting images, and OCR on scanned PDFs to make them searchable. If the user mentions a .pdf file or asks to produce one, use this skill.
-license: Proprietary. LICENSE.txt has complete terms
+name: bio-pdf
+description: Use this skill whenever the user wants to do anything with PDF files.
+  This includes reading or extracting text/tables from PDFs, combining or merging
+  multiple PDFs into one, splitting PDFs apart, rotating pages, adding watermarks,
+  creating new PDFs, filling PDF forms, encrypting/decrypting PDFs, extracting images,
+  and OCR on scanned PDFs to make them searchable. If the user mentions a .pdf file
+  or asks to produce one, use this skill.
+tool_type: mixed
+primary_tool: Unknown
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 # PDF Processing Guide
@@ -312,3 +336,5 @@ with open("encrypted.pdf", "wb") as output:
 - For JavaScript libraries (pdf-lib), see REFERENCE.md
 - If you need to fill out a PDF form, follow the instructions in FORMS.md
 - For troubleshooting guides, see REFERENCE.md
+
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

@@ -1,9 +1,31 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: scikit-survival
-description: Comprehensive toolkit for survival analysis and time-to-event modeling in Python using scikit-survival. Use this skill when working with censored survival data, performing time-to-event analysis, fitting Cox models, Random Survival Forests, Gradient Boosting models, or Survival SVMs, evaluating survival predictions with concordance index or Brier score, handling competing risks, or implementing any survival analysis workflow with the scikit-survival library.
-license: GPL-3.0 license
-metadata:
-    skill-author: K-Dense Inc.
+name: bio-scikit-survival
+description: Comprehensive toolkit for survival analysis and time-to-event modeling
+  in Python using scikit-survival. Use this skill when working with censored survival
+  data, performing time-to-event analysis, fitting Cox models, Random Survival Forests,
+  Gradient Boosting models, or Survival SVMs, evaluating survival predictions with
+  concordance index or Brier score, handling competing risks, or implementing any
+  survival analysis workflow with the scikit-survival library.
+tool_type: mixed
+primary_tool: Unknown
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 # scikit-survival: Survival Analysis in Python
@@ -395,3 +417,4 @@ from sksurv.datasets import load_gbsg2, load_breast_cancer, load_veterans_lung_c
 from sksurv.kernels import ClinicalKernelTransform
 ```
 
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

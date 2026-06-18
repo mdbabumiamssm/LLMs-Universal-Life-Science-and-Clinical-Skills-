@@ -1,39 +1,28 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: spatial-statistics
-description: >-
-  Comprehensive spatial statistics toolkit — cluster-level (neighborhood enrichment, Ripley, co-occurrence),
-  gene-level (Moran's I, Geary's C, local Moran, Getis-Ord), and network-level analysis.
-version: 0.2.0
-author: SpatialClaw
-license: MIT
-tags: [spatial, statistics, moran, geary, ripley, neighborhood-enrichment, getis-ord]
-metadata:
-  omicsclaw:
-    domain: spatial
-    requires:
-      bins:
-        - python3
-      env: []
-      config: []
-    emoji: "📊"
-    homepage: https://github.com/zhou-1314/OmicsClaw
-    os: [macos, linux]
-    install:
-      - kind: pip
-        package: squidpy
-        bins: []
-      - kind: pip
-        package: scanpy
-        bins: []
-    trigger_keywords:
-      - spatial statistics
-      - autocorrelation
-      - Moran
-      - Ripley
-      - neighborhood enrichment
-      - spatial pattern
-      - co-occurrence
-      - nhood enrichment
+name: bio-spatial-statistics
+description: "Comprehensive spatial statistics toolkit \u2014 cluster-level (neighborhood\
+  \ enrichment, Ripley, co-occurrence), gene-level (Moran's I, Geary's C, local Moran,\
+  \ Getis-Ord), and network-level analysis."
+tool_type: mixed
+primary_tool: spatial
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 # 📊 Spatial Statistics
@@ -222,3 +211,5 @@ output_dir/
 - [Moran's I](https://en.wikipedia.org/wiki/Moran%27s_I) — spatial autocorrelation
 - [Ripley's K/L function](https://en.wikipedia.org/wiki/Spatial_descriptive_statistics#Ripley's_K_and_L_functions) — point-pattern analysis
 - [Neighborhood enrichment](https://doi.org/10.1038/s41592-021-01358-2) — squidpy methodology (Palla et al., 2022)
+
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

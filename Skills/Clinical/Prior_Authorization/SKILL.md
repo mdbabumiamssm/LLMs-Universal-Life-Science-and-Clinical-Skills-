@@ -36,6 +36,7 @@ This skill acts as an automated utilization management reviewer. It takes unstru
 1.  **Policy Matching**: Checks against specific criteria (e.g., "Pain > 6 weeks").
 2.  **Trace Generation**: Produces an "Anthropic-style" `<thinking>` trace for auditability.
 3.  **Structured Output**: Returns a JSON object with decision, reasoning, and timestamps.
+4.  **Microsoft Payer-Side Multi-Agent Review**: Supports Microsoft Agent Framework architecture patterns with four Foundry Hosted Agents for compliance, clinical, coverage, and synthesis review; gate-based decision rubrics; MCP healthcare data access; confidence scoring; audit trails; Azure Container Apps deployment via `azd`; and human-in-the-loop escalation.
 
 ## Workflow
 
@@ -55,6 +56,10 @@ python3 Skills/Clinical/Prior_Authorization/anthropic_coworker.py --code "MRI-L-
 ## Supported Policies
 
 *   `MRI-L-SPINE` (Lumbar Spine MRI)
+
+## References
+
+*   https://github.com/microsoft/Prior-Authorization-Multi-Agent-Solution-Accelerator
 
 
 <!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

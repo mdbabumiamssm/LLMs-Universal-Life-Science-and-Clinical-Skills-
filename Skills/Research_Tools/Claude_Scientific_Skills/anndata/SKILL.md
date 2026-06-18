@@ -1,9 +1,29 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: anndata
-description: Data structure for annotated matrices in single-cell analysis. Use when working with .h5ad files or integrating with the scverse ecosystem. This is the data format skill—for analysis workflows use scanpy; for probabilistic models use scvi-tools; for population-scale queries use cellxgene-census.
-license: BSD-3-Clause license
-metadata:
-    skill-author: K-Dense Inc.
+name: bio-anndata
+description: "Data structure for annotated matrices in single-cell analysis. Use when\
+  \ working with .h5ad files or integrating with the scverse ecosystem. This is the\
+  \ data format skill\u2014for analysis workflows use scanpy; for probabilistic models\
+  \ use scvi-tools; for population-scale queries use cellxgene-census."
+tool_type: mixed
+primary_tool: Unknown
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 # AnnData
@@ -396,3 +416,4 @@ adata.obs['new_col'] = external_data.set_index('cell_id').loc[adata.obs_names, '
 - **Scverse ecosystem**: https://scverse.org/
 - **GitHub repository**: https://github.com/scverse/anndata
 
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

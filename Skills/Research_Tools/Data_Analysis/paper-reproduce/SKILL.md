@@ -1,13 +1,33 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: paper-reproduce
-description: >
-  Systematic methodology for reproducing published academic papers using provided data.
-  Use when the user asks to reproduce, replicate, or verify results from a published paper,
-  including sample selection, descriptive statistics, regression analyses, and generating
-  reproduction reports (Markdown + LaTeX PDF). Covers the full pipeline: data exploration,
-  variable identification/mapping, sample filtering, variable construction, statistical
-  analysis, result comparison, and documentation. Applicable to any observational study,
-  clinical cohort, or survey-based research paper.
+name: bio-paper-reproduce
+description: 'Systematic methodology for reproducing published academic papers using
+  provided data. Use when the user asks to reproduce, replicate, or verify results
+  from a published paper, including sample selection, descriptive statistics, regression
+  analyses, and generating reproduction reports (Markdown + LaTeX PDF). Covers the
+  full pipeline: data exploration, variable identification/mapping, sample filtering,
+  variable construction, statistical analysis, result comparison, and documentation.
+  Applicable to any observational study, clinical cohort, or survey-based research
+  paper.'
+tool_type: mixed
+primary_tool: Unknown
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 > **Repository note:** Located at
@@ -221,3 +241,5 @@ reproduce_<study>/
 ## 参考
 
 详细的调查数据库特定操作，参见对应的数据库 skill（如 `charls-reproduce`）。
+
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

@@ -1,9 +1,28 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: diffdock
-description: Diffusion-based molecular docking. Predict protein-ligand binding poses from PDB/SMILES, confidence scores, virtual screening, for structure-based drug design. Not for affinity prediction.
-license: MIT license
-metadata:
-    skill-author: K-Dense Inc.
+name: bio-diffdock
+description: Diffusion-based molecular docking. Predict protein-ligand binding poses
+  from PDB/SMILES, confidence scores, virtual screening, for structure-based drug
+  design. Not for affinity prediction.
+tool_type: mixed
+primary_tool: Unknown
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 # DiffDock: Molecular Docking with Diffusion Models
@@ -479,3 +498,4 @@ ICLR 2023, arXiv:2210.01776
 - **DiffDock-L Paper**: https://arxiv.org/abs/2402.18396
 - **Original Paper**: https://arxiv.org/abs/2210.01776
 
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

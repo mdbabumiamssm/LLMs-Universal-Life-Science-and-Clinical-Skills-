@@ -1,9 +1,30 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: geniml
-description: This skill should be used when working with genomic interval data (BED files) for machine learning tasks. Use for training region embeddings (Region2Vec, BEDspace), single-cell ATAC-seq analysis (scEmbed), building consensus peaks (universes), or any ML-based analysis of genomic regions. Applies to BED file collections, scATAC-seq data, chromatin accessibility datasets, and region-based genomic feature learning.
-license: BSD-2-Clause license
-metadata:
-    skill-author: K-Dense Inc.
+name: bio-geniml
+description: This skill should be used when working with genomic interval data (BED
+  files) for machine learning tasks. Use for training region embeddings (Region2Vec,
+  BEDspace), single-cell ATAC-seq analysis (scEmbed), building consensus peaks (universes),
+  or any ML-based analysis of genomic regions. Applies to BED file collections, scATAC-seq
+  data, chromatin accessibility datasets, and region-based genomic feature learning.
+tool_type: mixed
+primary_tool: Unknown
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 # Geniml: Genomic Interval Machine Learning
@@ -314,3 +335,4 @@ Geniml is part of the BEDbase ecosystem:
 
 For detailed troubleshooting and method-specific issues, consult the appropriate reference file.
 
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

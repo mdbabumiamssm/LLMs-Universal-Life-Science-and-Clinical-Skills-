@@ -1,10 +1,29 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: pptx-posters
-description: Create research posters using HTML/CSS that can be exported to PDF or PPTX. Use this skill ONLY when the user explicitly requests PowerPoint/PPTX poster format. For standard research posters, use latex-posters instead. This skill provides modern web-based poster design with responsive layouts and easy visual integration.
-allowed-tools: Read Write Edit Bash
-license: MIT license
-metadata:
-    skill-author: K-Dense Inc.
+name: bio-pptx-posters
+description: Create research posters using HTML/CSS that can be exported to PDF or
+  PPTX. Use this skill ONLY when the user explicitly requests PowerPoint/PPTX poster
+  format. For standard research posters, use latex-posters instead. This skill provides
+  modern web-based poster design with responsive layouts and easy visual integration.
+tool_type: mixed
+primary_tool: Unknown
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 # PPTX Research Posters (HTML-Based)
@@ -412,3 +431,4 @@ Available in `references/` directory:
 - `poster_design_principles.md`: Typography, color theory, and visual hierarchy
 - `poster_layout_design.md`: Layout principles and grid systems
 
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

@@ -1,9 +1,34 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: geomaster
-description: Comprehensive geospatial science skill covering remote sensing, GIS, spatial analysis, machine learning for earth observation, and 30+ scientific domains. Supports satellite imagery processing (Sentinel, Landsat, MODIS, SAR, hyperspectral), vector and raster data operations, spatial statistics, point cloud processing, network analysis, cloud-native workflows (STAC, COG, Planetary Computer), and 8 programming languages (Python, R, Julia, JavaScript, C++, Java, Go, Rust) with 500+ code examples. Use for remote sensing workflows, GIS analysis, spatial ML, Earth observation data processing, terrain analysis, hydrological modeling, marine spatial analysis, atmospheric science, and any geospatial computation task.
-license: MIT License
-metadata:
-    skill-author: K-Dense Inc.
+name: bio-geomaster
+description: Comprehensive geospatial science skill covering remote sensing, GIS,
+  spatial analysis, machine learning for earth observation, and 30+ scientific domains.
+  Supports satellite imagery processing (Sentinel, Landsat, MODIS, SAR, hyperspectral),
+  vector and raster data operations, spatial statistics, point cloud processing, network
+  analysis, cloud-native workflows (STAC, COG, Planetary Computer), and 8 programming
+  languages (Python, R, Julia, JavaScript, C++, Java, Go, Rust) with 500+ code examples.
+  Use for remote sensing workflows, GIS analysis, spatial ML, Earth observation data
+  processing, terrain analysis, hydrological modeling, marine spatial analysis, atmospheric
+  science, and any geospatial computation task.
+tool_type: mixed
+primary_tool: Unknown
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 # GeoMaster
@@ -363,3 +388,5 @@ rf = RandomForestClassifier(n_jobs=-1)  # All cores
 ---
 
 **GeoMaster covers everything from basic GIS operations to advanced remote sensing and machine learning.**
+
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

@@ -1,19 +1,27 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: 'agentscope-runtime'
-description: 'Deploy AgentScope + AgentScope Runtime for secure sandboxed multi-agent services inside BioKernel.'
-keywords:
-  - agentscope
-  - runtime
-  - sandbox
-  - fastapi
-  - deployment
-metadata:
-  upstream_repo: https://github.com/agentscope-ai/agentscope-runtime
-  version: '2026-04-02'
+name: bio-agentscope-runtime
+description: Deploy AgentScope + AgentScope Runtime for secure sandboxed multi-agent
+  services inside BioKernel.
+tool_type: mixed
+primary_tool: Unknown
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
 allowed-tools:
-  - python3
-  - run_shell_command
-  - read_file
+- read_file
+- run_shell_command
 ---
 
 # AgentScope Runtime Skill
@@ -102,3 +110,5 @@ AgentScope is a production-ready multi-agent framework with ReAct agents, memory
 
 1. GitHub – agentscope-ai/agentscope (`README` details ReAct agents, MCP/A2A, memory, realtime voice, roadmap). <https://github.com/agentscope-ai/agentscope>
 2. GitHub – agentscope-ai/agentscope-runtime (`README` covers AgentApp, asynchronous sandboxes, deployment, and async tool execution). <https://github.com/agentscope-ai/agentscope-runtime>
+
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

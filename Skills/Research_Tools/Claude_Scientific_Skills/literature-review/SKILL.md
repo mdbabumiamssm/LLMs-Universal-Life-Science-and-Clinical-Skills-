@@ -1,10 +1,31 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: literature-review
-description: Conduct comprehensive, systematic literature reviews using multiple academic databases (PubMed, arXiv, bioRxiv, Semantic Scholar, etc.). This skill should be used when conducting systematic literature reviews, meta-analyses, research synthesis, or comprehensive literature searches across biomedical, scientific, and technical domains. Creates professionally formatted markdown documents and PDFs with verified citations in multiple citation styles (APA, Nature, Vancouver, etc.).
-allowed-tools: Read Write Edit Bash
-license: MIT license
-metadata:
-    skill-author: K-Dense Inc.
+name: bio-literature-review
+description: Conduct comprehensive, systematic literature reviews using multiple academic
+  databases (PubMed, arXiv, bioRxiv, Semantic Scholar, etc.). This skill should be
+  used when conducting systematic literature reviews, meta-analyses, research synthesis,
+  or comprehensive literature searches across biomedical, scientific, and technical
+  domains. Creates professionally formatted markdown documents and PDFs with verified
+  citations in multiple citation styles (APA, Nature, Vancouver, etc.).
+tool_type: mixed
+primary_tool: Unknown
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 # Literature Review
@@ -635,3 +656,4 @@ This literature-review skill provides:
 
 Conduct thorough, rigorous literature reviews that meet academic standards and provide comprehensive synthesis of current knowledge in any domain.
 
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

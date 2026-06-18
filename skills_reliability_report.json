@@ -1,6 +1,223 @@
 {
-  "generated_at": "2026-03-16T09:14:42.197313",
+  "generated_at": "2026-06-18T19:35:19.041726+00:00",
   "sources": [
+    {
+      "skill": "aws-bedrock-operations-2026",
+      "file_path": "Skills/AI_Providers/AWS_Bedrock_Operations_2026/SKILL.md",
+      "source": "official_aws_docs",
+      "score": 1.0,
+      "rationale": "Guidance is grounded in Amazon Bedrock user guide and API reference pages checked on 2026-04-20."
+    },
+    {
+      "skill": "azure-ai-foundry-operations-2026",
+      "file_path": "Skills/AI_Providers/Azure_AI_Foundry_Operations_2026/SKILL.md",
+      "source": "official_microsoft_docs",
+      "score": 1.0,
+      "rationale": "Guidance is grounded in Azure AI Foundry and Microsoft Foundry documentation checked on 2026-04-20."
+    },
+    {
+      "skill": "cohere-platform-operations-2026",
+      "file_path": "Skills/AI_Providers/Cohere_Platform_Operations_2026/SKILL.md",
+      "source": "official_docs",
+      "score": 1.0,
+      "rationale": "Guidance is grounded in Cohere docs, model pages, and changelog entries checked on 2026-04-20."
+    },
+    {
+      "skill": "cohere-platform-operations-2026",
+      "file_path": "Skills/AI_Providers/Cohere_Platform_Operations_2026/SKILL.md",
+      "source": "official_repositories",
+      "score": 0.97,
+      "rationale": "SDK and connector guidance is cross-checked against Cohere-maintained repositories."
+    },
+    {
+      "skill": "deepseek-api-operations-2026",
+      "file_path": "Skills/AI_Providers/DeepSeek_API_Operations_2026/SKILL.md",
+      "source": "official_docs",
+      "score": 1.0,
+      "rationale": "Workflow is grounded in DeepSeek API docs checked on 2026-04-13."
+    },
+    {
+      "skill": "deepseek-api-operations-2026",
+      "file_path": "Skills/AI_Providers/DeepSeek_API_Operations_2026/SKILL.md",
+      "source": "official_integrations",
+      "score": 0.95,
+      "rationale": "Compatibility guidance is grounded in DeepSeek's documented OpenAI-compatible interface and integrations pages."
+    },
+    {
+      "skill": "mistral-platform-operations-2026",
+      "file_path": "Skills/AI_Providers/Mistral_Platform_Operations_2026/SKILL.md",
+      "source": "official_docs",
+      "score": 1.0,
+      "rationale": "Workflow is grounded in Mistral documentation checked on 2026-04-13."
+    },
+    {
+      "skill": "mistral-platform-operations-2026",
+      "file_path": "Skills/AI_Providers/Mistral_Platform_Operations_2026/SKILL.md",
+      "source": "official_repositories",
+      "score": 0.97,
+      "rationale": "SDK and implementation details are cross-checked against the official Mistral repositories."
+    },
+    {
+      "skill": "xai-grok-operations-2026",
+      "file_path": "Skills/AI_Providers/XAI_Grok_Operations_2026/SKILL.md",
+      "source": "official_docs",
+      "score": 1.0,
+      "rationale": "Workflow is grounded in xAI docs checked on 2026-04-13."
+    },
+    {
+      "skill": "xai-grok-operations-2026",
+      "file_path": "Skills/AI_Providers/XAI_Grok_Operations_2026/SKILL.md",
+      "source": "official_repositories",
+      "score": 0.97,
+      "rationale": "SDK behavior is cross-checked against the official xAI Python SDK repository."
+    },
+    {
+      "skill": "agentic-evals-observability",
+      "file_path": "Skills/Agentic_AI/Agentic_Evals_Observability/SKILL.md",
+      "source": "official_docs",
+      "score": 1.0,
+      "rationale": "Workflow is grounded in official evaluation and observability documentation checked on 2026-04-13."
+    },
+    {
+      "skill": "agentic-evals-observability",
+      "file_path": "Skills/Agentic_AI/Agentic_Evals_Observability/SKILL.md",
+      "source": "protocol_and_sdk_docs",
+      "score": 0.97,
+      "rationale": "Tracing and telemetry expectations are cross-checked against official SDK docs and OpenTelemetry conventions."
+    },
+    {
+      "skill": "automated-web-research",
+      "file_path": "Skills/Agentic_AI/Automated_Web_Research/SKILL.md",
+      "source": "official_docs",
+      "score": 1.0,
+      "rationale": "Workflow is grounded in official provider docs and protocol docs checked on 2026-04-13."
+    },
+    {
+      "skill": "automated-web-research",
+      "file_path": "Skills/Agentic_AI/Automated_Web_Research/SKILL.md",
+      "source": "official_repositories",
+      "score": 0.95,
+      "rationale": "Supporting implementation references come from maintainer-owned repositories or official registries."
+    },
+    {
+      "skill": "claude-code-operations-2026",
+      "file_path": "Skills/Agentic_AI/Claude_Code_Operations_2026/SKILL.md",
+      "source": "official_docs",
+      "score": 1.0,
+      "rationale": "Guidance is grounded in Anthropic Claude Code documentation checked on 2026-04-20."
+    },
+    {
+      "skill": "claude-code-operations-2026",
+      "file_path": "Skills/Agentic_AI/Claude_Code_Operations_2026/SKILL.md",
+      "source": "official_repositories",
+      "score": 0.99,
+      "rationale": "Operational behavior and automation surfaces are cross-checked against maintainer-owned Anthropic repositories."
+    },
+    {
+      "skill": "computer-use-agents-2026",
+      "file_path": "Skills/Agentic_AI/Computer_Use_Agents_2026/SKILL.md",
+      "source": "official_vendor_docs",
+      "score": 1.0,
+      "rationale": "Runtime guidance is grounded in official OpenAI and Anthropic computer-use documentation checked on 2026-04-20."
+    },
+    {
+      "skill": "computer-use-agents-2026",
+      "file_path": "Skills/Agentic_AI/Computer_Use_Agents_2026/SKILL.md",
+      "source": "benchmark_literature",
+      "score": 0.95,
+      "rationale": "Evaluation guidance is anchored to benchmark papers rather than anecdotal demos."
+    },
+    {
+      "skill": "computer-use-agents-2026",
+      "file_path": "Skills/Agentic_AI/Computer_Use_Agents_2026/SKILL.md",
+      "source": "ecosystem_repositories",
+      "score": 0.9,
+      "rationale": "Browser Use and OpenHands are treated as ecosystem references, not canonical first-party sources."
+    },
+    {
+      "skill": "deep-research-swarm",
+      "file_path": "Skills/Agentic_AI/DeepResearch_Swarm/SKILL.md",
+      "source": "official_docs",
+      "score": 1.0,
+      "rationale": "Workflow relies on official model, tool, and protocol documentation checked on 2026-04-13."
+    },
+    {
+      "skill": "deep-research-swarm",
+      "file_path": "Skills/Agentic_AI/DeepResearch_Swarm/SKILL.md",
+      "source": "primary_literature_and_registries",
+      "score": 0.95,
+      "rationale": "Recommended evidence sources include primary databases, standards, and protocol registries rather than blog-only summaries."
+    },
+    {
+      "skill": "google-adk-agents",
+      "file_path": "Skills/Agentic_AI/Google_ADK_Agents/SKILL.md",
+      "source": "official_docs",
+      "score": 1.0,
+      "rationale": "Workflow is grounded in ADK docs and Google developer announcements checked on 2026-04-13."
+    },
+    {
+      "skill": "google-adk-agents",
+      "file_path": "Skills/Agentic_AI/Google_ADK_Agents/SKILL.md",
+      "source": "official_repositories",
+      "score": 0.98,
+      "rationale": "Implementation details are cross-checked against the official Google ADK repository."
+    },
+    {
+      "skill": "openai-codex-agents",
+      "file_path": "Skills/Agentic_AI/OpenAI_Codex_Agents/SKILL.md",
+      "source": "official_docs",
+      "score": 1.0,
+      "rationale": "Workflow is grounded in OpenAI developer docs, Codex docs, and API guides checked on 2026-05-22."
+    },
+    {
+      "skill": "openai-codex-agents",
+      "file_path": "Skills/Agentic_AI/OpenAI_Codex_Agents/SKILL.md",
+      "source": "official_repositories",
+      "score": 0.98,
+      "rationale": "SDK and skills implementation details are cross-checked against maintainer-owned OpenAI repositories."
+    },
+    {
+      "skill": "pydanticai-agents",
+      "file_path": "Skills/Agentic_AI/PydanticAI_Agents/SKILL.md",
+      "source": "official_docs",
+      "score": 1.0,
+      "rationale": "Workflow is grounded in PydanticAI and Logfire documentation checked on 2026-04-13."
+    },
+    {
+      "skill": "pydanticai-agents",
+      "file_path": "Skills/Agentic_AI/PydanticAI_Agents/SKILL.md",
+      "source": "official_repositories",
+      "score": 0.98,
+      "rationale": "Implementation patterns are cross-checked against the maintainer-owned PydanticAI repository."
+    },
+    {
+      "skill": "scientific-discovery-agents-2026",
+      "file_path": "Skills/Agentic_AI/Scientific_Discovery_Agents_2026/SKILL.md",
+      "source": "primary_literature",
+      "score": 1.0,
+      "rationale": "Workflow is grounded in Nature, Nature Methods, Nature Medicine, and Nature Biotechnology papers checked on 2026-05-22."
+    },
+    {
+      "skill": "scientific-discovery-agents-2026",
+      "file_path": "Skills/Agentic_AI/Scientific_Discovery_Agents_2026/SKILL.md",
+      "source": "official_project_sources",
+      "score": 0.97,
+      "rationale": "Operational framing is cross-checked against official Google DeepMind, FutureHouse, and Stanford Biomni project sources."
+    },
+    {
+      "skill": "rna-velocity",
+      "file_path": "Skills/Genomics/Single_Cell/rna-velocity/SKILL.md",
+      "source": "https://github.com/theislab/scvelo",
+      "score": 0.93,
+      "rationale": "Canonical scVelo implementation maintained by Theis Lab with validated dynamical/stochastic models and active release cadence."
+    },
+    {
+      "skill": "rna-velocity",
+      "file_path": "Skills/Genomics/Single_Cell/rna-velocity/SKILL.md",
+      "source": "https://github.com/scverse/single-cell-best-practices",
+      "score": 0.9,
+      "rationale": "Community maintained best-practices playbook from the scverse consortium covering velocity QC, parameter defaults, and benchmarking datasets."
+    },
     {
       "skill": "scrna-qc",
       "file_path": "Skills/Genomics/Single_Cell_RNA_QC/SKILL.md",
@@ -16,18 +233,18 @@
       "rationale": "Theis Lab best-practices playbook detailing MAD-based QC thresholds, mitochondrial cutoffs, and reproducibility checklists for scRNA-seq."
     },
     {
-      "skill": "rna-velocity",
-      "file_path": "Skills/Genomics/Single_Cell/rna-velocity/SKILL.md",
-      "source": "https://github.com/theislab/scvelo",
-      "score": 0.93,
-      "rationale": "Canonical scVelo implementation maintained by Theis Lab with validated dynamical/stochastic models and active release cadence."
+      "skill": "mcp-operations-2026",
+      "file_path": "Skills/MCP_Servers/MCP_Operations_2026/SKILL.md",
+      "source": "official_protocol_docs",
+      "score": 1.0,
+      "rationale": "Workflow is grounded in the official MCP docs, authorization specification, SDK docs, and registry pages checked on 2026-05-22."
     },
     {
-      "skill": "rna-velocity",
-      "file_path": "Skills/Genomics/Single_Cell/rna-velocity/SKILL.md",
-      "source": "https://github.com/scverse/single-cell-best-practices",
-      "score": 0.9,
-      "rationale": "Community maintained best-practices playbook from the scverse consortium covering velocity QC, parameter defaults, and benchmarking datasets."
+      "skill": "mcp-operations-2026",
+      "file_path": "Skills/MCP_Servers/MCP_Operations_2026/SKILL.md",
+      "source": "official_vendor_integrations",
+      "score": 0.98,
+      "rationale": "OpenAI and Anthropic integration guidance is pulled from official vendor documentation."
     }
   ]
 }

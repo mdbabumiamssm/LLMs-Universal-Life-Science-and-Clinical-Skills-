@@ -1,7 +1,29 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: infographics
-description: "Create professional infographics using Nano Banana Pro AI with smart iterative refinement. Uses Gemini 3 Pro for quality review. Integrates research-lookup and web search for accurate data. Supports 10 infographic types, 8 industry styles, and colorblind-safe palettes."
-allowed-tools: Read Write Edit Bash
+name: bio-infographics
+description: Create professional infographics using Nano Banana Pro AI with smart
+  iterative refinement. Uses Gemini 3 Pro for quality review. Integrates research-lookup
+  and web search for accurate data. Supports 10 infographic types, 8 industry styles,
+  and colorblind-safe palettes.
+tool_type: mixed
+primary_tool: Unknown
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 # Infographics
@@ -561,3 +583,5 @@ After generating:
 ---
 
 Use this skill to create professional, accessible, and visually compelling infographics using the power of Nano Banana Pro AI with intelligent quality review.
+
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

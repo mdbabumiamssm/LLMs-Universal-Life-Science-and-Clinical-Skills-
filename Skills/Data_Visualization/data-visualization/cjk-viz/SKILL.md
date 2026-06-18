@@ -1,13 +1,31 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: cjk-viz
-description: >
-  CJK (中日韩) 字体检测与 matplotlib 配置。任何涉及中文标签、标题、图例的
-  可视化任务启动前必须先执行本 skill 的字体检测流程，确保不会出现方块乱码。
-  适用于 matplotlib / seaborn / plotly 静态导出等场景。
-version: 1.0.0
-metadata:
-  openclaw:
-    emoji: "🔤"
+name: bio-cjk-viz
+description: "CJK (\u4E2D\u65E5\u97E9) \u5B57\u4F53\u68C0\u6D4B\u4E0E matplotlib \u914D\
+  \u7F6E\u3002\u4EFB\u4F55\u6D89\u53CA\u4E2D\u6587\u6807\u7B7E\u3001\u6807\u9898\u3001\
+  \u56FE\u4F8B\u7684 \u53EF\u89C6\u5316\u4EFB\u52A1\u542F\u52A8\u524D\u5FC5\u987B\u5148\
+  \u6267\u884C\u672C skill \u7684\u5B57\u4F53\u68C0\u6D4B\u6D41\u7A0B\uFF0C\u786E\u4FDD\
+  \u4E0D\u4F1A\u51FA\u73B0\u65B9\u5757\u4E71\u7801\u3002 \u9002\u7528\u4E8E matplotlib\
+  \ / seaborn / plotly \u9759\u6001\u5BFC\u51FA\u7B49\u573A\u666F\u3002\n"
+tool_type: mixed
+primary_tool: Unknown
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 > **Repository note:** Stored at `repo/Skills/Data_Visualization/data-visualization/cjk-viz`.
@@ -186,3 +204,5 @@ ax.set_title('字体验证')
 fig.savefig('/workspace/outputs/cjk_font_test.png', dpi=100, bbox_inches='tight')
 print("✅ 验证图已保存，请检查中文是否正常显示")
 ```
+
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

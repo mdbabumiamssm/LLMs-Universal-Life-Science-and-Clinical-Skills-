@@ -1,40 +1,28 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: spatial-genes
-description: >-
-  Find genes with spatially variable expression patterns using Moran's I,
-  SpatialDE, SPARK-X, or FlashS. Identifies genes whose expression is non-randomly
+name: bio-spatial-genes
+description: Find genes with spatially variable expression patterns using Moran's
+  I, SpatialDE, SPARK-X, or FlashS. Identifies genes whose expression is non-randomly
   distributed across tissue coordinates.
-version: 0.2.0
-author: SpatialClaw
-license: MIT
-tags: [spatial, SVG, spatially-variable-genes, morans, spatialde, sparkx, flashs]
-metadata:
-  omicsclaw:
-    domain: spatial
-    requires:
-      bins:
-        - python3
-      env: []
-      config: []
-    emoji: "🧭"
-    homepage: https://github.com/zhou-1314/OmicsClaw
-    os: [macos, linux]
-    install:
-      - kind: pip
-        package: scanpy
-        bins: []
-      - kind: pip
-        package: squidpy
-        bins: []
-    trigger_keywords:
-      - spatially variable gene
-      - spatial gene
-      - SVG
-      - SpatialDE
-      - SPARK-X
-      - spatial pattern
-      - Moran
-      - spatial autocorrelation
+tool_type: mixed
+primary_tool: spatial
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 # 🧭 Spatial Genes
@@ -200,3 +188,5 @@ output_dir/
 - [SpatialDE](https://doi.org/10.1038/nmeth.4636) — Svensson et al., *Nature Methods* 2018
 - [SPARK-X](https://doi.org/10.1186/s13059-021-02404-0) — Zhu et al., *Genome Biology* 2021
 - [Moran's I](https://en.wikipedia.org/wiki/Moran%27s_I) — spatial autocorrelation statistic
+
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

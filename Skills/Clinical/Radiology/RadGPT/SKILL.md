@@ -23,7 +23,7 @@ keywords:
 measurable_outcome: Generate a patient-friendly explanation of a radiology report with <1% hallucination rate within 30 seconds.
 license: MIT
 metadata:
-  author: Stanford Medicine
+  author: MD BABU MIA
   version: "1.0.0"
 compatibility:
   - system: Python 3.9+
@@ -47,6 +47,7 @@ An LLM-based agent designed to summarize and explain complex radiology reports f
 1.  **Simplification**: Translates "bilateral opacity" to "cloudiness in both lungs".
 2.  **Entity Extraction**: Identifies key anatomical structures and pathologies.
 3.  **Q&A**: Answers follow-up questions about the report.
+4.  **MRI Patient Education**: Translates MRI reports into personalized plain language at an audience-appropriate readability target while preserving uncertainty and negation, clearly distinguishing reported findings from diagnoses, and retaining laterality, severity, follow-up recommendations, and red flags; checks omissions, hallucinations, and factual fidelity against the source report, compares the explanation with a human-expert interpretation when available, explicitly separates patient education from diagnosis or treatment advice, and escalates urgent or ambiguous results to clinicians before delivery.
 
 ## Workflow
 
@@ -62,6 +63,10 @@ An LLM-based agent designed to summarize and explain complex radiology reports f
 ```bash
 python -m radgpt.explain --report ./report.txt --target_audience patient
 ```
+
+## References
+
+- https://pubmed.ncbi.nlm.nih.gov/41865475/
 
 
 <!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

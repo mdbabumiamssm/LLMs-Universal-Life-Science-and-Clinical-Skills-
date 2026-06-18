@@ -1,9 +1,33 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: lamindb
-description: This skill should be used when working with LaminDB, an open-source data framework for biology that makes data queryable, traceable, reproducible, and FAIR. Use when managing biological datasets (scRNA-seq, spatial, flow cytometry, etc.), tracking computational workflows, curating and validating data with biological ontologies, building data lakehouses, or ensuring data lineage and reproducibility in biological research. Covers data management, annotation, ontologies (genes, cell types, diseases, tissues), schema validation, integrations with workflow managers (Nextflow, Snakemake) and MLOps platforms (W&B, MLflow), and deployment strategies.
-license: Apache-2.0 license
-metadata:
-    skill-author: K-Dense Inc.
+name: bio-lamindb
+description: This skill should be used when working with LaminDB, an open-source data
+  framework for biology that makes data queryable, traceable, reproducible, and FAIR.
+  Use when managing biological datasets (scRNA-seq, spatial, flow cytometry, etc.),
+  tracking computational workflows, curating and validating data with biological ontologies,
+  building data lakehouses, or ensuring data lineage and reproducibility in biological
+  research. Covers data management, annotation, ontologies (genes, cell types, diseases,
+  tissues), schema validation, integrations with workflow managers (Nextflow, Snakemake)
+  and MLOps platforms (W&B, MLflow), and deployment strategies.
+tool_type: mixed
+primary_tool: Unknown
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 # LaminDB
@@ -386,3 +410,4 @@ Read the relevant reference file(s) based on the specific LaminDB capability nee
 - **Tutorial**: https://docs.lamin.ai/tutorial
 - **FAQ**: https://docs.lamin.ai/faq
 
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

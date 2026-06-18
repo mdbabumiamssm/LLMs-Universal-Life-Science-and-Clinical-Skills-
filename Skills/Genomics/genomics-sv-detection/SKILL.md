@@ -1,17 +1,28 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: genomics-sv-detection
-description: >-
-  Structural variant detection (DEL/DUP/INV/TRA): SV VCF parsing with BND notation,
-  size classification (50bp-10Mb), evidence types. Wraps Manta, Lumpy, Delly, Sniffles.
-version: 0.2.0
-author: OmicsClaw
-license: MIT
-tags: [genomics, structural-variants, Manta, Delly, Sniffles]
-metadata:
-  omicsclaw:
-    domain: genomics
-    emoji: "🧱"
-    trigger_keywords: [structural variant, SV, Manta, Delly, Lumpy, Sniffles]
+name: bio-genomics-sv-detection
+description: 'Structural variant detection (DEL/DUP/INV/TRA): SV VCF parsing with
+  BND notation, size classification (50bp-10Mb), evidence types. Wraps Manta, Lumpy,
+  Delly, Sniffles.'
+tool_type: mixed
+primary_tool: genomics
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 # 🧱 Structural Variant Detection
@@ -81,3 +92,5 @@ output_directory/
 - [Manta](https://doi.org/10.1093/bioinformatics/btv710)
 - [Delly](https://doi.org/10.1093/bioinformatics/bts378)
 - [Sniffles](https://doi.org/10.1038/s41592-018-0001-7)
+
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

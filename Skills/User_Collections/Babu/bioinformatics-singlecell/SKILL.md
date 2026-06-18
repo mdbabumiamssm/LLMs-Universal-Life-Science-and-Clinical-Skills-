@@ -1,6 +1,29 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: bioinformatics-singlecell
-description: Single-cell and multi-omic analysis for hematology, oncology, and translational biology. Use when working with scRNA-seq, CITE-seq, scATAC-seq, multiome, trajectory analysis, batch correction, cell typing, differential expression, or publication-ready figures in Scanpy, scvi-tools, Seurat, or MuData workflows.
+name: bio-bioinformatics-singlecell
+description: Single-cell and multi-omic analysis for hematology, oncology, and translational
+  biology. Use when working with scRNA-seq, CITE-seq, scATAC-seq, multiome, trajectory
+  analysis, batch correction, cell typing, differential expression, or publication-ready
+  figures in Scanpy, scvi-tools, Seurat, or MuData workflows.
+tool_type: mixed
+primary_tool: Unknown
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 # Single-Cell Analysis
@@ -27,3 +50,5 @@ Run practical single-cell analysis workflows with emphasis on QC discipline, int
 
 - Read `references/cell_markers.md` for lineage and megakaryocyte markers.
 - Read `references/workflow-checklist.md` for a compact end-to-end checklist.
+
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

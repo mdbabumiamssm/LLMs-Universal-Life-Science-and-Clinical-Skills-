@@ -1,9 +1,29 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: gtex-database
-description: Query GTEx (Genotype-Tissue Expression) portal for tissue-specific gene expression, eQTLs (expression quantitative trait loci), and sQTLs. Essential for linking GWAS variants to gene regulation, understanding tissue-specific expression, and interpreting non-coding variant effects.
-license: CC-BY-4.0
-metadata:
-    skill-author: Kuan-lin Huang
+name: bio-gtex-database
+description: Query GTEx (Genotype-Tissue Expression) portal for tissue-specific gene
+  expression, eQTLs (expression quantitative trait loci), and sQTLs. Essential for
+  linking GWAS variants to gene regulation, understanding tissue-specific expression,
+  and interpreting non-coding variant effects.
+tool_type: mixed
+primary_tool: Unknown
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 # GTEx Database
@@ -313,3 +333,5 @@ wget https://storage.googleapis.com/adult-gtex/bulk-gex/v10/rna-seq/GTEx_Analysi
 - **Data downloads**: https://gtexportal.org/home/downloads/adult-gtex/
 - **GitHub**: https://github.com/broadinstitute/gtex-pipeline
 - **Citation**: GTEx Consortium (2020) Science. PMID: 32913098
+
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

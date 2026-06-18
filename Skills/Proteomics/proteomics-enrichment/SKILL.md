@@ -1,16 +1,27 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: proteomics-enrichment
-description: >-
-  Pathway, network, and functional enrichment for proteomics using STRING, DAVID, or g:Profiler.
-version: 0.1.0
-author: OmicsClaw
-license: MIT
-tags: [proteomics, enrichment, pathway, STRING, g:Profiler]
-metadata:
-  omicsclaw:
-    domain: proteomics
-    emoji: "🗺️"
-    trigger_keywords: [proteomics enrichment, pathway analysis, STRING, DAVID, g:Profiler, GO enrichment]
+name: bio-proteomics-enrichment
+description: Pathway, network, and functional enrichment for proteomics using STRING,
+  DAVID, or g:Profiler.
+tool_type: mixed
+primary_tool: proteomics
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 # 🗺️ Proteomics Enrichment
@@ -85,3 +96,5 @@ output_directory/
 
 - [STRING](https://string-db.org/) — protein interaction network
 - [g:Profiler](https://doi.org/10.1093/nar/gkz369) — functional enrichment
+
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

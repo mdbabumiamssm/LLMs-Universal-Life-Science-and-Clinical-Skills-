@@ -13,7 +13,7 @@
 
 ---
 name: computational-pathology-agent
-description: Analyze Whole Slide Images (WSI) for digital pathology, including tissue segmentation and feature extraction.
+description: Analyze Whole Slide Images (WSI) for digital pathology, including tissue segmentation, feature extraction, and biomarker model planning.
 keywords:
   - wsi
   - digital-pathology
@@ -48,6 +48,12 @@ This agent specializes in the analysis of Whole Slide Images (WSIs) for digital 
 3.  **Patch Extraction:** Automated generation of patches for ML training/inference.
 4.  **Nuclei Segmentation:** Integration with StarDist/HoverNet for cellular analysis.
 5.  **Feature Extraction:** Generating feature vectors for slide-level clustering.
+6.  **dMMR Biomarker Modeling:** Plan colorectal cancer histopathology workflows that explicitly evaluate low-magnification and non-tumor region signals, use patch sampling strategies that preserve tumor and non-tumor region labels, run region-selection sensitivity checks and region-level ablations, validate against tumor-only baselines, validate MSI/dMMR endpoints externally, and check for scanner/cohort bias and biomarker leakage.
+7.  **Colorectal dMMR Prediction Guidance:** For dMMR inference from colorectal cancer histopathology, include slide tiling at low magnification and across non-tumor as well as tumor tissue, retain region labels through aggregation, generate region-level attribution for review, require external validation before deployment claims, and route biomarker predictions through pathology review before clinical interpretation.
+8.  **CRC MSI/MMR Reporting Caveats:** Report colorectal dMMR predictions as WSI-derived biomarker model outputs with sampled region mix, magnification level, tumor/non-tumor contribution, and external validation status; do not present histopathology-only predictions as replacements for confirmatory MSI/MMR testing.
+9.  **Non-Tumor/Low-Magnification dMMR Protocols:** When planning colorectal cancer dMMR prediction, explicitly define tile selection for low-magnification fields and annotated tumor, stroma, and other non-tumor regions; produce region-level attribution maps or summaries; run tumor-versus-stroma and tumor-versus-non-tumor ablations; and validate predictions against molecular MMR status.
+10. **CRC dMMR Slide-Level Sampling and Controls:** For colorectal cancer dMMR prediction, predefine slide-level sampling across tumor, non-tumor, and low-magnification regions; apply tissue-quality controls for background, folds, blur, necrosis, artifacts, and insufficient tissue; guard against patient, site, scanner, duplicate-slide, annotation, and molecular/IHC metadata leakage; and validate model outputs against molecular or IHC mismatch-repair status.
+11. **Whole-Slide dMMR Context and Interpretability:** For colorectal histopathology biomarker prediction, treat whole-slide context as part of the modeling question: include low-magnification and non-tumor regions when justified by the protocol, preserve region and magnification provenance through slide-level aggregation, enforce leakage controls before training, require external validation for deployment-oriented claims, and provide interpretable region-level evidence for pathology review.
 
 ## Usage
 ```python
@@ -68,5 +74,8 @@ path_agent.extract_patches(patch_size=256, level=1)
 *   opencv-python
 *   pytorch
 *   scikit-image
+
+## References
+*   PubMed PMID 41875848: dMMR prediction from colorectal cancer histopathology: Leveraging non-tumor and low-magnification regions. https://pubmed.ncbi.nlm.nih.gov/41875848/
 
 <!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

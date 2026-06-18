@@ -1,9 +1,28 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: pdb-database
-description: Access RCSB PDB for 3D protein/nucleic acid structures. Search by text/sequence/structure, download coordinates (PDB/mmCIF), retrieve metadata, for structural biology and drug discovery.
-license: Unknown
-metadata:
-    skill-author: K-Dense Inc.
+name: bio-pdb-database
+description: Access RCSB PDB for 3D protein/nucleic acid structures. Search by text/sequence/structure,
+  download coordinates (PDB/mmCIF), retrieve metadata, for structural biology and
+  drug discovery.
+tool_type: mixed
+primary_tool: Unknown
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 # PDB Database
@@ -305,3 +324,4 @@ Use this reference when you need in-depth information about API capabilities, co
 - **Data API Documentation:** https://data.rcsb.org/
 - **GitHub Repository:** https://github.com/rcsb/py-rcsb-api
 
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

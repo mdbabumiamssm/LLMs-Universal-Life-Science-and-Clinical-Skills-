@@ -26,6 +26,19 @@ allowed-tools:
 
 Prioritize and interpret variants for clinical significance using databases and ACMG/AMP guidelines.
 
+## Core Capabilities
+
+- Ground variant narratives in ClinVar, gnomAD, ACMG/AMP criteria, and disease databases; cite evidence for each clinical claim; detect conflicts between database records; and keep pathogenicity evidence separate from clearly labeled model speculation.
+- Apply precision grounding for genetic variant summarization: retrieve database-backed evidence from ClinVar, gnomAD, ACMG/AMP criteria, disease-gene validity resources, and literature provenance; cite each claim; separate known evidence from model inference; label uncertainty explicitly; keep pathogenicity classification separate from explanatory prose; flag conflicting evidence or stale assertions.
+- Require precision-grounded genetic variant summaries to retrieve evidence from ClinVar, gnomAD, ACMG/AMP criteria, and disease databases before synthesis, with provenance-linked statements, explicit uncertainty, and conflict reporting.
+- Generate Precision Grounding-style LLM variant summaries by separating database facts from model synthesis, citing ClinVar variation/accession records, gnomAD population evidence, and ACMG/AMP criteria used for each statement, then running hallucination checks against the retrieved evidence before including content in genetic variant reports.
+- Produce precision-grounded variant summaries with explicit provenance for ClinVar assertions, gnomAD population frequency, COSMIC somatic evidence, and literature findings; surface conflicts across sources for manual review, and do not make or upgrade pathogenicity claims unless directly supported by retrieved evidence and applicable ACMG/AMP criteria.
+- Before drafting genetic variant summaries, retrieve and reconcile evidence from ClinVar, gnomAD, dbSNP, COSMIC, ACMG/AMP criteria, and disease databases; include only citation-backed claims, detect conflicts across sources, and label uncertainty when evidence is incomplete or discordant.
+- For LLM-assisted variant summarization, link each interpretive statement to retrieved ClinVar, gnomAD, dbSNP, COSMIC, or ACMG/AMP evidence; run hallucination checks against those records and remove unsupported claims before reporting.
+- For evidence-grounded genetic variant summaries, cross-check ClinVar assertions, gnomAD population frequencies, and dbSNP identifiers before synthesis; attach citations or database accession links to each assertion, report source conflicts explicitly, and audit the final text against retrieved records to remove hallucinated or unsupported content.
+- Use precision-grounded review checkpoints before clinical reporting: reconcile ClinVar clinical assertions, gnomAD frequency evidence, and OMIM-style disease-gene context; tag every summary claim with source provenance; label unsupported, discordant, or incomplete evidence as uncertain; and require manual review of conflicts before final report language is released.
+- Create auditable precision-grounded variant-summary outputs by retrieving database-backed ClinVar, gnomAD, and literature evidence; mapping each ACMG/AMP evidence code to supporting provenance; documenting contradictions between sources; running hallucination checks against retrieved records; and preserving source-linked evidence tables with the final summary.
+
 ## Interpretation Framework
 
 ```
@@ -329,6 +342,10 @@ echo "Report: ${OUTPUT_PREFIX}_report.tsv"
 - variant-calling/filtering-best-practices - Quality filtering
 - database-access/entrez-fetch - Download ClinVar/OMIM data
 - pathway-analysis/go-enrichment - Gene set analysis
+
+## References
+
+- https://pubmed.ncbi.nlm.nih.gov/41950627/
 
 
 <!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

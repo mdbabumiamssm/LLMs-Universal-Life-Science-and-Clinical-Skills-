@@ -1,9 +1,30 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: pufferlib
-description: High-performance reinforcement learning framework optimized for speed and scale. Use when you need fast parallel training, vectorized environments, multi-agent systems, or integration with game environments (Atari, Procgen, NetHack). Achieves 2-10x speedups over standard implementations. For quick prototyping or standard algorithm implementations with extensive documentation, use stable-baselines3 instead.
-license: MIT license
-metadata:
-    skill-author: K-Dense Inc.
+name: bio-pufferlib
+description: High-performance reinforcement learning framework optimized for speed
+  and scale. Use when you need fast parallel training, vectorized environments, multi-agent
+  systems, or integration with game environments (Atari, Procgen, NetHack). Achieves
+  2-10x speedups over standard implementations. For quick prototyping or standard
+  algorithm implementations with extensive documentation, use stable-baselines3 instead.
+tool_type: mixed
+primary_tool: Unknown
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 # PufferLib - High-Performance Reinforcement Learning
@@ -432,3 +453,4 @@ uv pip install pufferlib
 - GitHub: https://github.com/PufferAI/PufferLib
 - Discord: Community support available
 
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

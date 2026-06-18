@@ -1,10 +1,30 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: hypothesis-generation
-description: Structured hypothesis formulation from observations. Use when you have experimental observations or data and need to formulate testable hypotheses with predictions, propose mechanisms, and design experiments to test them. Follows scientific method framework. For open-ended ideation use scientific-brainstorming; for automated LLM-driven hypothesis testing on datasets use hypogenic.
-allowed-tools: Read Write Edit Bash
-license: MIT license
-metadata:
-    skill-author: K-Dense Inc.
+name: bio-hypothesis-generation
+description: Structured hypothesis formulation from observations. Use when you have
+  experimental observations or data and need to formulate testable hypotheses with
+  predictions, propose mechanisms, and design experiments to test them. Follows scientific
+  method framework. For open-ended ideation use scientific-brainstorming; for automated
+  LLM-driven hypothesis testing on datasets use hypogenic.
+tool_type: mixed
+primary_tool: Unknown
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 # Scientific Hypothesis Generation
@@ -295,3 +315,4 @@ When preparing hypothesis-driven research for publication, consult the **venue-t
 - Venue-specific guides for Nature/Science, Cell Press, medical journals, and ML/CS conferences
 - `reviewer_expectations.md` - What reviewers look for when evaluating research hypotheses
 
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

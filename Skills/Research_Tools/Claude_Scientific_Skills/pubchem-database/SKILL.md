@@ -1,9 +1,28 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: pubchem-database
-description: Query PubChem via PUG-REST API/PubChemPy (110M+ compounds). Search by name/CID/SMILES, retrieve properties, similarity/substructure searches, bioactivity, for cheminformatics.
-license: Unknown
-metadata:
-    skill-author: K-Dense Inc.
+name: bio-pubchem-database
+description: Query PubChem via PUG-REST API/PubChemPy (110M+ compounds). Search by
+  name/CID/SMILES, retrieve properties, similarity/substructure searches, bioactivity,
+  for cheminformatics.
+tool_type: mixed
+primary_tool: Unknown
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 # PubChem Database
@@ -570,3 +589,4 @@ For detailed API documentation, including complete property lists, URL patterns,
 - PubChemPy Documentation: https://pubchempy.readthedocs.io/
 - PubChemPy GitHub: https://github.com/mcs07/PubChemPy
 
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

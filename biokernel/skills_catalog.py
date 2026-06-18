@@ -116,8 +116,7 @@ def scan_skills(root_dir: str) -> Tuple[List[Dict[str, Any]], List[str], List[st
             metadata["body_length"] = len(body)
 
             # Extract capabilities from body headings
-            metadata["capabilities"] = re.findall(r"^#+\s+(.+)$
-", body, re.MULTILINE)
+            metadata["capabilities"] = re.findall(r"^#+\s+(.+)$", body, re.MULTILINE)
 
             catalog.append(metadata)
 

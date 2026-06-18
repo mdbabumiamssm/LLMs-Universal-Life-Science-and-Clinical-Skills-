@@ -48,6 +48,7 @@ This skill provides automated analysis capabilities for Spatial Transcriptomics 
 3.  **Spatial Variable Features:** Identification of spatially variable genes (SVGs) using Moran's I and Geary's C.
 4.  **Deconvolution:** Interface for cell type deconvolution (mapping scRNA-seq to spatial).
 5.  **Visualization:** Interactive spatial plots overlaying gene expression on tissue images.
+6.  **DiffBulk prediction pattern:** Use diffusion-based training for bulk-to-spatial or spatial expression prediction, complementing Visium/Xenium analyses when paired ST is sparse or missing; validate predictions against held-out tissue regions and guard against histology-expression leakage in train/test splits.
 
 ## Usage
 ```python
@@ -68,5 +69,8 @@ sa.plot_spatial("INS", save_path="./output/insulin_spatial.png")
 *   squidpy
 *   anndata
 *   matplotlib
+
+## References
+- DiffBulk: Enhancing Spatial Transcriptomic Prediction with Diffusion-Based Training. Zhang B, Zhang T, Xue Q, Liu Z, Liao D. IEEE Trans Med Imaging, 2026 Apr 28. PMID 42048193. https://pubmed.ncbi.nlm.nih.gov/42048193/
 
 <!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

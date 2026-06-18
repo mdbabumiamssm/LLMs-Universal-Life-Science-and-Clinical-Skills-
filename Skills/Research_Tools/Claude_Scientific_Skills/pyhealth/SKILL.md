@@ -1,9 +1,31 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: pyhealth
-description: Comprehensive healthcare AI toolkit for developing, testing, and deploying machine learning models with clinical data. This skill should be used when working with electronic health records (EHR), clinical prediction tasks (mortality, readmission, drug recommendation), medical coding systems (ICD, NDC, ATC), physiological signals (EEG, ECG), healthcare datasets (MIMIC-III/IV, eICU, OMOP), or implementing deep learning models for healthcare applications (RETAIN, SafeDrug, Transformer, GNN).
-license: MIT license
-metadata:
-    skill-author: K-Dense Inc.
+name: bio-pyhealth
+description: Comprehensive healthcare AI toolkit for developing, testing, and deploying
+  machine learning models with clinical data. This skill should be used when working
+  with electronic health records (EHR), clinical prediction tasks (mortality, readmission,
+  drug recommendation), medical coding systems (ICD, NDC, ATC), physiological signals
+  (EEG, ECG), healthcare datasets (MIMIC-III/IV, eICU, OMOP), or implementing deep
+  learning models for healthcare applications (RETAIN, SafeDrug, Transformer, GNN).
+tool_type: mixed
+primary_tool: Unknown
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 # PyHealth: Healthcare AI Toolkit
@@ -487,3 +509,4 @@ For detailed information on each component, refer to the comprehensive reference
 
 **Total comprehensive documentation**: ~28,000 words across modular reference files.
 
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

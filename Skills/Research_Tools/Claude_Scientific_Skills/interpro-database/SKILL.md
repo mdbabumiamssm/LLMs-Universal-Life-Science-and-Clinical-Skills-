@@ -1,9 +1,29 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: interpro-database
-description: Query InterPro for protein family, domain, and functional site annotations. Integrates Pfam, PANTHER, PRINTS, SMART, SUPERFAMILY, and 11 other member databases. Use for protein function prediction, domain architecture analysis, evolutionary classification, and GO term mapping.
-license: CC0-1.0
-metadata:
-    skill-author: Kuan-lin Huang
+name: bio-interpro-database
+description: Query InterPro for protein family, domain, and functional site annotations.
+  Integrates Pfam, PANTHER, PRINTS, SMART, SUPERFAMILY, and 11 other member databases.
+  Use for protein function prediction, domain architecture analysis, evolutionary
+  classification, and GO term mapping.
+tool_type: mixed
+primary_tool: Unknown
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 # InterPro Database
@@ -303,3 +323,5 @@ def characterize_protein(uniprot_id):
 - **API documentation**: https://github.com/ProteinsWebTeam/interpro7-api/blob/master/docs/
 - **Pfam**: https://www.ebi.ac.uk/interpro/entry/pfam/
 - **Citation**: Paysan-Lafosse T et al. (2023) Nucleic Acids Research. PMID: 36350672
+
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

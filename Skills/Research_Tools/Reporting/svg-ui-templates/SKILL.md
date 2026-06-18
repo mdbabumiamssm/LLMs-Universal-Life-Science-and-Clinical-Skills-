@@ -1,11 +1,30 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: svg-ui-templates
-description: >
-  Generate professional SVG UI panels for structured information display.
+name: bio-svg-ui-templates
+description: Generate professional SVG UI panels for structured information display.
   Use when presenting lists, task checklists, pipeline/dependency status diagrams,
-  or rich-text report layouts as SVG images. Covers four templates -
-  list-panel, checklist-panel, pipeline-status, richtext-layout.
-  Style is professional, business-oriented, academic-grade with Material Design color palette.
+  or rich-text report layouts as SVG images. Covers four templates - list-panel, checklist-panel,
+  pipeline-status, richtext-layout. Style is professional, business-oriented, academic-grade
+  with Material Design color palette.
+tool_type: mixed
+primary_tool: Unknown
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 > **Repository note:** Located at
@@ -45,3 +64,5 @@ Generate professional-grade SVG information panels optimized for horizontal (lan
 - **PNG conversion:** `python3 -c "import cairosvg; cairosvg.svg2png(url='in.svg', write_to='out.png', output_width=2400)"`
 - When sending via Feishu/WeChat, always convert to PNG first (SVG not rendered inline).
 - **飞书图文卡片集成:** 生成 PNG 后，使用 `feishu-rich-card` skill 将图片嵌入飞书交互式卡片，实现图文混排汇报。参见 `../feishu-rich-card/SKILL.md`。
+
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

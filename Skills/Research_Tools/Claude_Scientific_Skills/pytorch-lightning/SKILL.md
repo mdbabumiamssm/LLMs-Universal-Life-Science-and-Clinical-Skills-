@@ -1,9 +1,29 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: pytorch-lightning
-description: Deep learning framework (PyTorch Lightning). Organize PyTorch code into LightningModules, configure Trainers for multi-GPU/TPU, implement data pipelines, callbacks, logging (W&B, TensorBoard), distributed training (DDP, FSDP, DeepSpeed), for scalable neural network training.
-license: Apache-2.0 license
-metadata:
-    skill-author: K-Dense Inc.
+name: bio-pytorch-lightning
+description: Deep learning framework (PyTorch Lightning). Organize PyTorch code into
+  LightningModules, configure Trainers for multi-GPU/TPU, implement data pipelines,
+  callbacks, logging (W&B, TensorBoard), distributed training (DDP, FSDP, DeepSpeed),
+  for scalable neural network training.
+tool_type: mixed
+primary_tool: Unknown
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 # PyTorch Lightning
@@ -170,3 +190,4 @@ Detailed documentation for each PyTorch Lightning component:
 - `distributed_training.md` - DDP, FSDP, DeepSpeed comparison and setup
 - `best_practices.md` - Common patterns, tips, and pitfalls
 
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

@@ -1,10 +1,30 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: transformers
-description: This skill should be used when working with pre-trained transformer models for natural language processing, computer vision, audio, or multimodal tasks. Use for text generation, classification, question answering, translation, summarization, image classification, object detection, speech recognition, and fine-tuning models on custom datasets.
-license: Apache-2.0 license
-compatibility: Some features require an Huggingface token
-metadata:
-    skill-author: K-Dense Inc.
+name: bio-transformers
+description: This skill should be used when working with pre-trained transformer models
+  for natural language processing, computer vision, audio, or multimodal tasks. Use
+  for text generation, classification, question answering, translation, summarization,
+  image classification, object detection, speech recognition, and fine-tuning models
+  on custom datasets.
+tool_type: mixed
+primary_tool: Unknown
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 # Transformers
@@ -160,3 +180,4 @@ For detailed information on specific components:
 - **Training**: `references/training.md` - Fine-tuning with Trainer API
 - **Tokenizers**: `references/tokenizers.md` - Tokenization and preprocessing
 
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

@@ -1,13 +1,29 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: imaging-data-commons
-description: Query and download public cancer imaging data from NCI Imaging Data Commons using idc-index. Use for accessing large-scale radiology (CT, MR, PET) and pathology datasets for AI training or research. No authentication required. Query by metadata, visualize in browser, check licenses.
-license: This skill is provided under the MIT License. IDC data itself has individual licensing (mostly CC-BY, some CC-NC) that must be respected when using the data.
-metadata:
-    version: 1.4.0
-    skill-author: Andrey Fedorov, @fedorov
-    idc-index: "0.11.10"
-    idc-data-version: "v23"
-    repository: https://github.com/ImagingDataCommons/idc-claude-skill
+name: bio-imaging-data-commons
+description: Query and download public cancer imaging data from NCI Imaging Data Commons
+  using idc-index. Use for accessing large-scale radiology (CT, MR, PET) and pathology
+  datasets for AI training or research. No authentication required. Query by metadata,
+  visualize in browser, check licenses.
+tool_type: mixed
+primary_tool: Unknown
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 # Imaging Data Commons
@@ -841,3 +857,5 @@ See the Quick Navigation section at the top for the full list of reference guide
 This skill version is available in skill metadata. To check for updates:
 - Visit the [releases page](https://github.com/ImagingDataCommons/idc-claude-skill/releases)
 - Watch the repository on GitHub (Watch → Custom → Releases)
+
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

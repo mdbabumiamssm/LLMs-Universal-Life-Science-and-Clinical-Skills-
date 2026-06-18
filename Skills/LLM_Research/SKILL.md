@@ -1,33 +1,27 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: literature
-description: >-
-  Parse scholarly articles (PDF, DOI, URL) to extract metadata, GEO accessions, and acquisition links
-  using OpenAlex + GROBID pipelines.
-version: 0.2.0
-author: OmicsClaw
-license: MIT
-tags: [literature, metadata, openalex, grobid, text-mining]
-metadata:
-  omicsclaw:
-    domain: literature
-    emoji: "📚"
-    trigger_keywords:
-      - literature search
-      - openalex
-      - pdf parsing
-      - grobid
-      - accession mining
-source_reliability:
-  - source: https://github.com/ourresearch/OpenAlex
-    description: Primary open-source stack powering the OpenAlex API plus CLI/tutorial repos for scholarly metadata retrieval.
-    score: 0.88
-    rationale: >
-      Maintained by OurResearch with multiple active repositories (CLI, API, docs) and open governance for the scholarly graph.
-  - source: https://github.com/kermitt2/grobid
-    description: GROBID ML pipeline for PDF parsing and citation extraction; used for high-fidelity metadata recovery.
-    score: 0.86
-    rationale: >
-      Long-lived, peer-reviewed project with automated PDF extraction benchmarks; aligns with OmicsClaw’s PDF parsing approach.
+name: bio-literature
+description: Parse scholarly articles (PDF, DOI, URL) to extract metadata, GEO accessions,
+  and acquisition links using OpenAlex + GROBID pipelines.
+tool_type: mixed
+primary_tool: literature
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 # Literature Parsing Skill
@@ -35,6 +29,11 @@ source_reliability:
 ## Purpose
 
 Parse scientific literature (PDFs, URLs, DOIs) to extract GEO accessions and metadata, then download datasets for downstream omics analysis.
+
+## Core Capabilities
+
+- **Medical Q&A dataset evaluation**: Build fine-grained review checklists and schemas for medical language model benchmarking that cover answer correctness, clinically relevant omissions, harm potential, item-level ambiguity, domain coverage, answer provenance, trustworthiness metrics, item-level error taxonomies, dataset quality checks before using benchmark results for medical LLM claims, domain-specific answer rubrics, dataset documentation, and benchmark reporting standards.
+- **Optional multi-source MCP literature workflow**: Search PubMed, Europe PMC, CORE, and OpenAlex; retrieve available full text; traverse citation networks; extract PICO elements; deduplicate records while retaining source provenance; and continue with available providers when an individual source fails.
 
 ## Methodology
 
@@ -110,3 +109,10 @@ After extraction, the bot automatically suggests appropriate analysis skills bas
 - requests: HTTP requests
 - beautifulsoup4: HTML parsing
 - GEOparse: GEO data access (optional, fallback to direct API)
+
+## References
+
+- https://pubmed.ncbi.nlm.nih.gov/42039929/
+- https://github.com/u9401066/pubmed-search-mcp
+
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

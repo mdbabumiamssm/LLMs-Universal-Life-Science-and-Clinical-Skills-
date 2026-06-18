@@ -1,0 +1,3 @@
+interface:
+  display_name: "AWS Bedrock Operations"
+  short_description: "Help with Amazon Bedrock operations"

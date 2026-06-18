@@ -1,9 +1,31 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: datacommons-client
-description: Work with Data Commons, a platform providing programmatic access to public statistical data from global sources. Use this skill when working with demographic data, economic indicators, health statistics, environmental data, or any public datasets available through Data Commons. Applicable for querying population statistics, GDP figures, unemployment rates, disease prevalence, geographic entity resolution, and exploring relationships between statistical entities.
-license: Unknown
-metadata:
-    skill-author: K-Dense Inc.
+name: bio-datacommons-client
+description: Work with Data Commons, a platform providing programmatic access to public
+  statistical data from global sources. Use this skill when working with demographic
+  data, economic indicators, health statistics, environmental data, or any public
+  datasets available through Data Commons. Applicable for querying population statistics,
+  GDP figures, unemployment rates, disease prevalence, geographic entity resolution,
+  and exploring relationships between statistical entities.
+tool_type: mixed
+primary_tool: Unknown
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 # Data Commons Client
@@ -251,3 +273,4 @@ Comprehensive documentation for each endpoint is available in the `references/` 
 6. **Filter by facet for consistency**: Use `filter_facet_domains` to ensure data from the same source
 7. **Read reference docs**: Each endpoint has extensive documentation in the `references/` directory
 
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

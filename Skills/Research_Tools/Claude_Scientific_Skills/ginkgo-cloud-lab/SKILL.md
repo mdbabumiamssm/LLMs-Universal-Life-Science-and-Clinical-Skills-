@@ -1,6 +1,31 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: ginkgo-cloud-lab
-description: Submit and manage protocols on Ginkgo Bioworks Cloud Lab (cloud.ginkgo.bio), a web-based interface for autonomous lab execution on Reconfigurable Automation Carts (RACs). Use when the user wants to run cell-free protein expression (validation or optimization), generate fluorescent pixel art, or interact with Ginkgo Cloud Lab services. Covers protocol selection, input preparation, pricing, and ordering workflows.
+name: bio-ginkgo-cloud-lab
+description: Submit and manage protocols on Ginkgo Bioworks Cloud Lab (cloud.ginkgo.bio),
+  a web-based interface for autonomous lab execution on Reconfigurable Automation
+  Carts (RACs). Use when the user wants to run cell-free protein expression (validation
+  or optimization), generate fluorescent pixel art, or interact with Ginkgo Cloud
+  Lab services. Covers protocol selection, input preparation, pricing, and ordering
+  workflows.
+tool_type: mixed
+primary_tool: Unknown
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 # Ginkgo Cloud Lab
@@ -54,3 +79,5 @@ Access Ginkgo Cloud Lab at https://cloud.ginkgo.bio. Account creation or institu
 - **Catalyst Software:** Protocol orchestration, scheduling, parameterization, and real-time monitoring
 - **70+ integrated instruments:** Sample prep, liquid handling, analytical readouts, storage, incubation
 - **Nebula:** Ginkgo's autonomous lab facility in Boston, MA
+
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

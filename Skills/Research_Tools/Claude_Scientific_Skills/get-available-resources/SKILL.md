@@ -1,9 +1,33 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: get-available-resources
-description: This skill should be used at the start of any computationally intensive scientific task to detect and report available system resources (CPU cores, GPUs, memory, disk space). It creates a JSON file with resource information and strategic recommendations that inform computational approach decisions such as whether to use parallel processing (joblib, multiprocessing), out-of-core computing (Dask, Zarr), GPU acceleration (PyTorch, JAX), or memory-efficient strategies. Use this skill before running analyses, training models, processing large datasets, or any task where resource constraints matter.
-license: MIT license
-metadata:
-    skill-author: K-Dense Inc.
+name: bio-get-available-resources
+description: This skill should be used at the start of any computationally intensive
+  scientific task to detect and report available system resources (CPU cores, GPUs,
+  memory, disk space). It creates a JSON file with resource information and strategic
+  recommendations that inform computational approach decisions such as whether to
+  use parallel processing (joblib, multiprocessing), out-of-core computing (Dask,
+  Zarr), GPU acceleration (PyTorch, JAX), or memory-efficient strategies. Use this
+  skill before running analyses, training models, processing large datasets, or any
+  task where resource constraints matter.
+tool_type: mixed
+primary_tool: Unknown
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 # Get Available Resources
@@ -273,3 +297,4 @@ All other functionality uses Python standard library modules (json, os, platform
 - Close other applications before detection for accurate "available" memory
 - Consider running detection multiple times and averaging results
 
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

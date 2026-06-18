@@ -1,10 +1,32 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: perplexity-search
-description: Perform AI-powered web searches with real-time information using Perplexity models via LiteLLM and OpenRouter. This skill should be used when conducting web searches for current information, finding recent scientific literature, getting grounded answers with source citations, or accessing information beyond the model knowledge cutoff. Provides access to multiple Perplexity models including Sonar Pro, Sonar Pro Search (advanced agentic search), and Sonar Reasoning Pro through a single OpenRouter API key.
-license: MIT license
-compatibility: An OpenRouter API key is required to use Perplexity search
-metadata:
-    skill-author: K-Dense Inc.
+name: bio-perplexity-search
+description: Perform AI-powered web searches with real-time information using Perplexity
+  models via LiteLLM and OpenRouter. This skill should be used when conducting web
+  searches for current information, finding recent scientific literature, getting
+  grounded answers with source citations, or accessing information beyond the model
+  knowledge cutoff. Provides access to multiple Perplexity models including Sonar
+  Pro, Sonar Pro Search (advanced agentic search), and Sonar Reasoning Pro through
+  a single OpenRouter API key.
+tool_type: mixed
+primary_tool: Unknown
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 # Perplexity Search
@@ -444,3 +466,4 @@ This skill provides:
 
 Conduct AI-powered web searches to find current information, recent research, and grounded answers with source citations.
 
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

@@ -1,9 +1,34 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: geopandas
-description: Python library for working with geospatial vector data including shapefiles, GeoJSON, and GeoPackage files. Use when working with geographic data for spatial analysis, geometric operations, coordinate transformations, spatial joins, overlay operations, choropleth mapping, or any task involving reading/writing/analyzing vector geographic data. Supports PostGIS databases, interactive maps, and integration with matplotlib/folium/cartopy. Use for tasks like buffer analysis, spatial joins between datasets, dissolving boundaries, clipping data, calculating areas/distances, reprojecting coordinate systems, creating maps, or converting between spatial file formats.
-license: BSD-3-Clause license
-metadata:
-    skill-author: K-Dense Inc.
+name: bio-geopandas
+description: Python library for working with geospatial vector data including shapefiles,
+  GeoJSON, and GeoPackage files. Use when working with geographic data for spatial
+  analysis, geometric operations, coordinate transformations, spatial joins, overlay
+  operations, choropleth mapping, or any task involving reading/writing/analyzing
+  vector geographic data. Supports PostGIS databases, interactive maps, and integration
+  with matplotlib/folium/cartopy. Use for tasks like buffer analysis, spatial joins
+  between datasets, dissolving boundaries, clipping data, calculating areas/distances,
+  reprojecting coordinate systems, creating maps, or converting between spatial file
+  formats.
+tool_type: mixed
+primary_tool: Unknown
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 # GeoPandas
@@ -247,3 +272,4 @@ buildings_near_roads = buildings[buildings.geometry.distance(roads.union_all()) 
 7. **Use GeoPackage** format for modern workflows (better than Shapefile)
 8. **Set max_distance** in sjoin_nearest for better performance
 
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

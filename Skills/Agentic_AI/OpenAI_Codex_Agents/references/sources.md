@@ -1,0 +1,22 @@
+# Sources (checked May 22, 2026)
+
+- OpenAI developers home: https://developers.openai.com/
+- OpenAI Codex app announcement: https://openai.com/index/introducing-the-codex-app/
+- OpenAI Codex web docs: https://developers.openai.com/codex/cloud
+- OpenAI Codex product page: https://openai.com/codex/
+- OpenAI models guide: https://developers.openai.com/api/docs/models
+- OpenAI all models catalog: https://developers.openai.com/api/docs/models/all
+- GPT-5.4 model page: https://developers.openai.com/api/docs/models/gpt-5.4
+- GPT-5.4 mini model page: https://developers.openai.com/api/docs/models/gpt-5.4-mini
+- GPT-5.3-Codex model page: https://developers.openai.com/api/docs/models/gpt-5.3-codex
+- `computer-use-preview` model page: https://developers.openai.com/api/docs/models/computer-use-preview
+- `o3-deep-research` model page: https://developers.openai.com/api/docs/models/o3-deep-research
+- `o4-mini-deep-research` model page: https://developers.openai.com/api/docs/models/o4-mini-deep-research
+- Responses migration guide: https://developers.openai.com/api/docs/guides/migrate-to-responses
+- Responses tools guide: https://developers.openai.com/api/docs/guides/tools
+- MCP and connectors guide: https://developers.openai.com/api/docs/guides/tools-connectors-mcp
+- OpenAI Agents SDK April 2026 update: https://openai.com/index/the-next-evolution-of-the-agents-sdk/
+- OpenAI Agents SDK docs: https://openai.github.io/openai-agents-python/
+- OpenAI Agents SDK tools guide: https://openai.github.io/openai-agents-python/tools/
+- OpenAI Agents SDK repo: https://github.com/openai/openai-agents-python
+- OpenAI skills catalog: https://github.com/openai/skills

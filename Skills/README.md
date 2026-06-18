@@ -71,11 +71,20 @@ We have significantly expanded the **Skills** directory to align with the 2026 r
 *   **BioMCP:** `Skills/MCP_Servers/BioMCP` - Model Context Protocol server for connecting LLMs to PubMed, ClinicalTrials.gov, and more.
 *   **MCPmed Server:** `Skills/MCP_Servers/MCPmed/SKILL.md` - Adapts the Model Context Protocol to bioinformatics backends (GEO, STRING).
 
+## April 2026 LLM + Agentic AI Refresh
+
+We completed a focused curation pass on the repo's LLM and agentic AI surface, with the goal of turning scattered references into first-class, operational skills.
+
+- Added new first-party skills for `OpenAI_Codex_Agents`, `Google_ADK_Agents`, `PydanticAI_Agents`, `Agentic_Evals_Observability`, `MCP_Operations_2026`, `Mistral_Platform_Operations_2026`, `DeepSeek_API_Operations_2026`, and `XAI_Grok_Operations_2026`.
+- Rewrote `Automated_Web_Research` and `DeepResearch_Swarm` to be evidence-first, source-aware, and operationally realistic.
+- Added missing category indexes for `Skills/AI_Providers/` and `Skills/MCP_Servers/`, and replaced the stale `Skills/Agentic_AI/README.md` with an accurate curation guide.
+- Added `docs/strategy/LLM_AGENTIC_AI_CURATION_2026.md` as the source-of-truth playbook for official references, literature watchlists, and refresh discipline.
+
 ## 🧠 Biomedical Model Operations Refresh (June 2026)
 
 *   **Evo 2:** `Skills/Genomics/evo2-genome-model` - Long-context genomic scoring, embeddings, and DNA generation.
 *   **AlphaGenome:** `Skills/Genomics/alphagenome-variant-effects` - Tissue-aware regulatory variant effect prediction.
-*   **MedGemma 1.5:** `Skills/Clinical/medgemma-health-ai` - Medical text, imaging, EHR, and document workflows with clinical validation controls.
+*   **MedGemma 1.5:** `Skills/Clinical/medgemma-health-ai` - Medical text and imaging workflows with clinical validation controls.
 *   **BioEmu:** `Skills/Structural_Biology/bioemu-protein-ensembles` - Protein monomer conformational ensemble generation and QC.
 *   **Boltz-2:** `Skills/Drug_Discovery/boltz2-biomolecular-interactions` - Biomolecular complex and binding-affinity prediction.
 *   **TxGemma:** `Skills/Drug_Discovery/txgemma-therapeutics` - Therapeutic prediction and conversational drug-discovery workflows.

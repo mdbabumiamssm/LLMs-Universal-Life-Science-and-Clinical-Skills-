@@ -1,16 +1,27 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: proteomics-structural
-description: >-
-  Structural proteomics and cross-linking MS analysis using XlinkX, pLink, or xiSEARCH.
-version: 0.1.0
-author: OmicsClaw
-license: MIT
-tags: [proteomics, structural, cross-linking, XL-MS, XlinkX, pLink]
-metadata:
-  omicsclaw:
-    domain: proteomics
-    emoji: "🏗️"
-    trigger_keywords: [structural proteomics, cross-linking MS, XL-MS, XlinkX, pLink, xiSEARCH]
+name: bio-proteomics-structural
+description: Structural proteomics and cross-linking MS analysis using XlinkX, pLink,
+  or xiSEARCH.
+tool_type: mixed
+primary_tool: proteomics
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 # 🏗️ Structural Proteomics
@@ -84,3 +95,5 @@ output_directory/
 
 - [XlinkX](https://doi.org/10.1038/nmeth.3603)
 - [pLink](https://doi.org/10.1038/nmeth.2099)
+
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

@@ -1,0 +1,3 @@
+interface:
+  display_name: "PydanticAI Agents"
+  short_description: "Help with typed, validated, provider-agnostic agent engineering"

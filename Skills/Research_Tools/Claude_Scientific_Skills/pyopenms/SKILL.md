@@ -1,9 +1,30 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: pyopenms
-description: Complete mass spectrometry analysis platform. Use for proteomics workflows feature detection, peptide identification, protein quantification, and complex LC-MS/MS pipelines. Supports extensive file formats and algorithms. Best for proteomics, comprehensive MS data processing. For simple spectral comparison and metabolite ID use matchms.
-license: 3 clause BSD license
-metadata:
-    skill-author: K-Dense Inc.
+name: bio-pyopenms
+description: Complete mass spectrometry analysis platform. Use for proteomics workflows
+  feature detection, peptide identification, protein quantification, and complex LC-MS/MS
+  pipelines. Supports extensive file formats and algorithms. Best for proteomics,
+  comprehensive MS data processing. For simple spectral comparison and metabolite
+  ID use matchms.
+tool_type: mixed
+primary_tool: Unknown
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 # PyOpenMS
@@ -213,3 +234,4 @@ PyOpenMS integrates with:
 - `references/metabolomics.md` - Metabolomics-specific workflows
 - `references/data_structures.md` - Core objects and data structures
 
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

@@ -1,0 +1,3 @@
+interface:
+  display_name: "Agentic Evals and Observability"
+  short_description: "Help define evals, traces, monitoring, and rollback rules for agents"

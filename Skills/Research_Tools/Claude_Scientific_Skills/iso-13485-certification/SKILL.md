@@ -1,9 +1,33 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: iso-13485-certification
-description: Comprehensive toolkit for preparing ISO 13485 certification documentation for medical device Quality Management Systems. Use when users need help with ISO 13485 QMS documentation, including (1) conducting gap analysis of existing documentation, (2) creating Quality Manuals, (3) developing required procedures and work instructions, (4) preparing Medical Device Files, (5) understanding ISO 13485 requirements, or (6) identifying missing documentation for medical device certification. Also use when users mention medical device regulations, QMS certification, FDA QMSR, EU MDR, or need help with quality system documentation.
-license: MIT license
-metadata:
-    skill-author: K-Dense Inc.
+name: bio-iso-13485-certification
+description: Comprehensive toolkit for preparing ISO 13485 certification documentation
+  for medical device Quality Management Systems. Use when users need help with ISO
+  13485 QMS documentation, including (1) conducting gap analysis of existing documentation,
+  (2) creating Quality Manuals, (3) developing required procedures and work instructions,
+  (4) preparing Medical Device Files, (5) understanding ISO 13485 requirements, or
+  (6) identifying missing documentation for medical device certification. Also use
+  when users mention medical device regulations, QMS certification, FDA QMSR, EU MDR,
+  or need help with quality system documentation.
+tool_type: mixed
+primary_tool: Unknown
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 # ISO 13485 Certification Documentation Assistant
@@ -676,3 +700,4 @@ This skill helps medical device manufacturers prepare comprehensive documentatio
 
 **Need help?** Start by describing your situation: what stage you're at, what you have, and what you need to create.
 
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

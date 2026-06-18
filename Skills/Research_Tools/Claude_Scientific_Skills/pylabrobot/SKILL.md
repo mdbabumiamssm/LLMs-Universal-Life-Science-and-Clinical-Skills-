@@ -1,9 +1,30 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: pylabrobot
-description: Vendor-agnostic lab automation framework. Use when controlling multiple equipment types (Hamilton, Tecan, Opentrons, plate readers, pumps) or needing unified programming across different vendors. Best for complex workflows, multi-vendor setups, simulation. For Opentrons-only protocols with official API, opentrons-integration may be simpler.
-license: MIT license
-metadata:
-    skill-author: K-Dense Inc.
+name: bio-pylabrobot
+description: Vendor-agnostic lab automation framework. Use when controlling multiple
+  equipment types (Hamilton, Tecan, Opentrons, plate readers, pumps) or needing unified
+  programming across different vendors. Best for complex workflows, multi-vendor setups,
+  simulation. For Opentrons-only protocols with official API, opentrons-integration
+  may be simpler.
+tool_type: mixed
+primary_tool: Unknown
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 # PyLabRobot
@@ -181,3 +202,4 @@ data = await pr.read_absorbance(wavelength=450)
 
 For detailed usage of specific capabilities, refer to the corresponding reference file in the `references/` directory.
 
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

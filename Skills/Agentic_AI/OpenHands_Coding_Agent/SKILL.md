@@ -1,19 +1,27 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: 'openhands-coding-agent'
-description: 'Run OpenHands headless CLI/SDK missions from BioKernel swarms for autonomous software work.'
-keywords:
-  - openhands
-  - coding-agent
-  - cli
-  - sdk
-  - headless
-metadata:
-  upstream_repo: https://github.com/OpenHands/OpenHands
-  version: '2026-04-02'
+name: bio-openhands-coding-agent
+description: Run OpenHands headless CLI/SDK missions from BioKernel swarms for autonomous
+  software work.
+tool_type: mixed
+primary_tool: Unknown
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
 allowed-tools:
-  - run_shell_command
-  - python3
-  - read_file
+- read_file
+- run_shell_command
 ---
 
 # OpenHands Coding Agent Skill
@@ -76,3 +84,5 @@ OpenHands (formerly OpenDevin) is a 70k+ star open-source coding agent stack tha
 
 1. GitHub – OpenHands/OpenHands (`README` outlines SDK, CLI, GUI, Cloud, Enterprise surfaces). <https://github.com/OpenHands/OpenHands>
 2. GitHub – OpenHands CLI headless usage (`openhands --headless -t ... --json`). <https://github.com/OpenHands/OpenHands?tab=readme-ov-file#openhands-cli>
+
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

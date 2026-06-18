@@ -1,0 +1,3 @@
+interface:
+  display_name: "Deep Research Swarm"
+  short_description: "Coordinate parallel search, verification, and synthesis for hard research tasks"

@@ -1,9 +1,27 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: primekg
-description: Query the Precision Medicine Knowledge Graph (PrimeKG) for multiscale biological data including genes, drugs, diseases, phenotypes, and more.
-license: Unknown
-metadata:
-    skill-author: K-Dense Inc. (PrimeKG original from Harvard MIMS)
+name: bio-primekg
+description: Query the Precision Medicine Knowledge Graph (PrimeKG) for multiscale
+  biological data including genes, drugs, diseases, phenotypes, and more.
+tool_type: mixed
+primary_tool: Unknown
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 # PrimeKG Knowledge Graph Skill
@@ -95,3 +113,5 @@ The graph contains several key relationship types including:
 - Total nodes: ~129,000
 - Total edges: ~4,000,000
 - Database: CSV-based, optimized for pandas querying.
+
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

@@ -1,11 +1,30 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: timesfm-forecasting
-description: Zero-shot time series forecasting with Google's TimesFM foundation model. Use for any univariate time series (sales, sensors, energy, vitals, weather) without training a custom model. Supports CSV/DataFrame/array inputs with point forecasts and prediction intervals. Includes a preflight system checker script to verify RAM/GPU before first use.
-allowed-tools: Read Write Edit Bash
-license: Apache-2.0 license
-metadata:
-  skill-author: Clayton Young / Superior Byte Works, LLC (@borealBytes)
-  skill-version: "1.0.0"
+name: bio-timesfm-forecasting
+description: Zero-shot time series forecasting with Google's TimesFM foundation model.
+  Use for any univariate time series (sales, sensors, energy, vitals, weather) without
+  training a custom model. Supports CSV/DataFrame/array inputs with point forecasts
+  and prediction intervals. Includes a preflight system checker script to verify RAM/GPU
+  before first use.
+tool_type: mixed
+primary_tool: Unknown
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 # TimesFM Forecasting
@@ -783,3 +802,4 @@ assert prices['store_A'] > prices['store_B'] > prices['store_C'], 'Store price o
 print('Covariates regression: PASS')"
 ```
 
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

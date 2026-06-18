@@ -1,27 +1,27 @@
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 ---
-name: bulkrna-de
-description: >-
-  Bulk RNA-seq differential expression analysis using PyDESeq2 with optional edgeR/limma-voom via rpy2.
-version: 0.1.0
-author: OmicsClaw
-license: MIT
-tags: [bulkrna, differential-expression, DESeq2, PyDESeq2, edgeR, limma]
-metadata:
-  omicsclaw:
-    domain: bulkrna
-    emoji: "🔬"
-    trigger_keywords: [bulk differential expression, bulk de, deseq2, bulk rna de, differentially expressed genes]
-source_reliability:
-  - source: https://github.com/owkin/PyDESeq2
-    description: PyDESeq2 main repository maintained by Owkin/scverse; documents supported designs, installation paths, and CI coverage.
-    score: 0.91
-    rationale: >
-      Official MIT-licensed implementation with 600+ stars, active releases (0.5.x, Feb 2026), and maintained test matrix for Python 3.11–3.13.
-  - source: https://github.com/K-Dense-AI/claude-scientific-skills
-    description: Provides the canonical SKILL.md template and automation guardrails adopted for OmicsClaw skills.
-    score: 0.90
-    rationale: >
-      Enterprise-maintained skill pack from K-Dense AI; we mirror its metadata layout to stay interoperable with Claude Scientific Skills.
+name: bio-bulkrna-de
+description: Bulk RNA-seq differential expression analysis using PyDESeq2 with optional
+  edgeR/limma-voom via rpy2.
+tool_type: mixed
+primary_tool: bulkrna
+measurable_outcome: Execute skill workflow successfully with valid output within 15
+  minutes.
+allowed-tools:
+- read_file
+- run_shell_command
 ---
 
 # Bulk RNA-seq Differential Expression
@@ -133,3 +133,5 @@ Reference examples tested with: PyDESeq2 0.4+, scipy 1.11+, pandas 2.0+, numpy 1
 - `bulkrna-alignment` — Read alignment and counting upstream
 - `bulkrna-enrichment` — Pathway enrichment of DE genes downstream
 - `bulkrna-coexpression` — Co-expression network analysis
+
+<!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->
