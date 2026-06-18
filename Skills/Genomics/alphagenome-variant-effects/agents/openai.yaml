@@ -1,0 +1,4 @@
+interface:
+  display_name: "AlphaGenome Variant Effects"
+  short_description: "Predict regulatory effects of DNA variants"
+  default_prompt: "Use $alphagenome-variant-effects to design a tissue-aware regulatory variant analysis with AlphaGenome."

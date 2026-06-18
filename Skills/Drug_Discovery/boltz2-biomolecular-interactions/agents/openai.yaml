@@ -1,0 +1,4 @@
+interface:
+  display_name: "Boltz-2 Biomolecular Interactions"
+  short_description: "Predict complex structures and binding affinity"
+  default_prompt: "Use $boltz2-biomolecular-interactions to run a structure-and-affinity prediction workflow for a biomolecular complex."

@@ -3,7 +3,7 @@
 _A research-grade Biomedical OS for reproducible, agentic life-science and clinical AI workflows._
 
 ![Status](https://img.shields.io/badge/Status-Active-green)
-![Skills](https://img.shields.io/badge/Skills-1029-blue)
+![Skills](https://img.shields.io/badge/Skills-1207-blue)
 ![Tests](https://img.shields.io/badge/BioKernel%20tests-74%20passing-brightgreen)
 ![Domains](https://img.shields.io/badge/Domains-Clinical%20%7C%20Genomics%20%7C%20Drug%20Discovery%20%7C%20Agentic%20AI-purple)
 ![Runtime](https://img.shields.io/badge/Runtime-BioKernel%20%7C%20MCP%20%7C%20Multi--LLM-orange)
@@ -14,7 +14,7 @@ _A research-grade Biomedical OS for reproducible, agentic life-science and clini
 
 ## 🧬 Research purpose
 
-This repository is designed for researchers who want to turn biomedical AI from isolated prompts into reproducible, inspectable units of scientific work. It organizes **1029 skills across 54 categories** into a structured library of `SKILL.md` files, reference notes, runtime adapters, and evaluation assets. The central idea is simple: a biomedical agent should know its domain, cite its evidence, use tools deliberately, preserve provenance, and stop at the right human review boundary.
+This repository is designed for researchers who want to turn biomedical AI from isolated prompts into reproducible, inspectable units of scientific work. It organizes **1207 skills across 54 categories** into a structured library of `SKILL.md` files, reference notes, runtime adapters, and evaluation assets. The central idea is simple: a biomedical agent should know its domain, cite its evidence, use tools deliberately, preserve provenance, and stop at the right human review boundary.
 
 The repository supports translational research, clinical informatics, genomics, spatial and single-cell analysis, digital pathology, drug discovery, research automation, and modern agentic AI infrastructure. Its runtime layer, **BioKernel**, routes natural-language research questions to appropriate skills, composes multi-step workflows, and evaluates outputs with biomedical rubrics.
 
@@ -71,6 +71,17 @@ flowchart LR
 - **Agent runtime modernization:** [OpenAI_Codex_Agents](Skills/Agentic_AI/OpenAI_Codex_Agents/) now reflects Codex app/cloud workflows, reusable skills, hosted tools, tool search, shell/apply_patch, MCP, and approval-aware execution.[^codex]
 - **MCP for research systems:** [MCP_Operations_2026](Skills/MCP_Servers/MCP_Operations_2026/) covers remote MCP authorization, protected-resource metadata, tool-poisoning review, identity propagation, timeout budgets, structured errors, and audit logging.[^mcp]
 - **Evaluation discipline:** [Agentic_Evals_Observability](Skills/Agentic_AI/Agentic_Evals_Observability/) now includes scope-control tests, out-of-scope action detection, scientific claim-boundary checks, and human-review checkpoints.
+
+## 🧠 Biomedical model operations refresh
+
+Two gap-driven research batches add eleven first-party operational skills backed by authoritative model cards, repositories, releases, and primary literature:
+
+- **Genomics:** [Evo 2](Skills/Genomics/evo2-genome-model/), [AlphaGenome](Skills/Genomics/alphagenome-variant-effects/), and [OpenCRISPR](Skills/Genomics/opencrispr-gene-editors/).
+- **Single-cell foundation models:** [TranscriptFormer](Skills/Genomics/Single_Cell/transcriptformer-cell-embeddings/).
+- **Clinical and medical imaging:** [MedGemma 1.5](Skills/Clinical/medgemma-health-ai/), [MedSAM2](Skills/Clinical/Medical_Imaging/medsam2-3d-segmentation/), and [MONAI](Skills/Clinical/Medical_Imaging/monai-medical-imaging/).
+- **Structural biology and drug discovery:** [BioEmu](Skills/Structural_Biology/bioemu-protein-ensembles/), [Protenix-v2](Skills/Structural_Biology/protenix-structure-prediction/), [Boltz-2](Skills/Drug_Discovery/boltz2-biomolecular-interactions/), and [TxGemma](Skills/Drug_Discovery/txgemma-therapeutics/).
+
+The auditable source maps are in [batch 1](sources/research_20260618_new_biomedical_skills.md) and [batch 2](sources/research_20260618_new_biomedical_skills_batch2.md).
 
 ## 🧱 Repository architecture
 
@@ -172,7 +183,7 @@ Copyright (c) 2026 MD BABU MIA, PhD. Open-source components are provided under t
 
 <!-- BEGIN: PIPELINE_INDEX -->
 
-_Auto-generated index. 1196 skills across 54 categories. Last refresh: 2026-06-18T10:35:13.304350+00:00._
+_Auto-generated index. 1207 skills across 54 categories. Last refresh: 2026-06-18T10:35:13.304350+00:00._
 
 ### 3D_Genomics (8)
 
@@ -228,7 +239,7 @@ _Auto-generated index. 1196 skills across 54 categories. Last refresh: 2026-06-1
 - **regulatory-drafting** — Regulatory Drafting agent for healthcare workflows.
 - **research-literature** — Research Literature agent for healthcare workflows.
 
-### Clinical (34)
+### Clinical (37)
 
 - **ai-safety-auditor** — Validates clinical AI outputs for safety, bias, and hallucination risks before delivery to end-users or clinicians.
 - **autonomous-oncology-agent** — Precision Oncology
@@ -251,6 +262,9 @@ _Auto-generated index. 1196 skills across 54 categories. Last refresh: 2026-06-1
 - **clinical-workflow-automation** — An autonomous agentic system for automating and streamlining clinical workflows and healthcare administrative tasks.
 - **digital-twin-clinical-agent** — AI-powered patient digital twin creation for clinical trial simulation, treatment outcome prediction, and personalized medicine using rea...
 - **ehr-fhir-integration** — Provides comprehensive tools for working with Electronic Health Records (EHR) using the HL7 FHIR standard.
+- **medgemma-health-ai** — Build and evaluate medical text and vision applications with Google MedGemma, including MedGemma 1.5 workflows.
+- **medsam2-3d-segmentation** — Operate MedSAM2 for promptable segmentation of 3D medical images and medical videos.
+- **monai-medical-imaging** — Build reproducible healthcare imaging pipelines with Project MONAI.
 - **multimodal-medical-imaging** — Analyzes medical images (X-ray, MRI, CT) using multimodal LLMs to identify anomalies and generate reports.
 - **multimodal-radpath-fusion-agent** — AI-powered multimodal diagnostic fusion integrating radiology imaging (CT/MRI/PET), digital pathology (WSI), genomics, and clinical data ...
 - **precision-oncology-agent** — Fuse genomic variants, pathology findings, and clinical context to draft evidence-linked therapy options for tumor board review.
@@ -288,7 +302,7 @@ _Auto-generated index. 1196 skills across 54 categories. Last refresh: 2026-06-1
 - **bio-data-visualization-upset-plots** — Create UpSet plots to visualize set intersections as an alternative to Venn diagrams using UpSetR or upsetplot. Use when comparing overla...
 - **bio-data-visualization-volcano-customization** — Create publication-ready volcano plots with custom thresholds, gene labels, and highlighting using ggplot2, EnhancedVolcano, or matplotli...
 
-### Drug_Discovery (22)
+### Drug_Discovery (24)
 
 - **agentd-drug-discovery** — Use the AgentD workflow to mine evidence, design molecules, and rank candidates with SAR plus ADMET annotations for early drug discovery ...
 - **antibody-design-agent** — An advanced agent for de novo antibody design and optimization using state-of-the-art protein language models (MAGE, RFdiffusion).
@@ -301,6 +315,7 @@ _Auto-generated index. 1196 skills across 54 categories. Last refresh: 2026-06-1
 - **bio-substructure-search** — Searches molecular libraries for substructure matches using SMARTS patterns with RDKit. Filters compounds by pharmacophore features, func...
 - **bio-virtual-screening** — Performs structure-based virtual screening using AutoDock Vina 1.2 for molecular docking. Prepares receptor PDBQT files, generates ligand...
 - **biomed-multi-alignment-foundation-model** — Use IBM biomed.omics.bl.sm.ma-ted-458m workflows to connect proteins, small molecules, and single-cell gene data for biomedical discovery.
+- **boltz2-biomolecular-interactions** — Run Boltz-2 biomolecular interaction predictions for complex structures and binding affinity.
 - **chematagent-drug-discovery** — Chemical Lab Agent
 - **chemcrow-drug-discovery** — An LLM chemistry agent with expert-designed tools for organic synthesis, drug discovery, and materials design.
 - **chemical-property-lookup** — Compute RDKit-driven molecular properties (MW, logP, TPSA, QED, Lipinski) for a SMILES string to support downstream drug discovery tools.
@@ -312,6 +327,7 @@ _Auto-generated index. 1196 skills across 54 categories. Last refresh: 2026-06-1
 - **protac-design-agent** — AI-powered PROTAC (Proteolysis Targeting Chimera) design for targeted protein degradation, integrating ternary complex prediction, linker...
 - **protein-structure-prediction** — Predicts 3D protein structures from amino acid sequences using ESMFold or AlphaFold3 (mock).
 - **tpd-ternary-complex-agent** — AI-powered ternary complex prediction for targeted protein degradation, modeling POI-degrader-E3 ligase assemblies to optimize PROTAC and...
+- **txgemma-therapeutics** — Operate Google TxGemma prediction and chat models for therapeutic property prediction.
 
 ### Epigenomics (28)
 
@@ -423,8 +439,9 @@ _Auto-generated index. 1196 skills across 54 categories. Last refresh: 2026-06-1
 
 - **aav-vector-design-agent** — AI-powered adeno-associated virus (AAV) vector design for gene therapy including capsid engineering, promoter selection, and tropism opti...
 
-### Genomics (150)
+### Genomics (154)
 
+- **alphagenome-variant-effects** — Use Google DeepMind AlphaGenome to predict tissue-aware regulatory effects of DNA variants.
 - **bio-basecalling** — Convert raw Nanopore signal data (FAST5/POD5) to nucleotide sequences using Dorado basecaller. Covers model selection, GPU acceleration, ...
 - **bio-bedgraph-handling** — Create, manipulate, and convert bedGraph files for genome browser visualization. Covers bedGraph format, conversion to/from bigWig, norma...
 - **bio-consensus-sequences** — Generate consensus FASTA sequences by applying VCF variants to a reference using bcftools consensus. Use when creating sample-specific re...
@@ -485,6 +502,9 @@ _Auto-generated index. 1196 skills across 54 categories. Last refresh: 2026-06-1
 - **bio-metagenomics-strain-tracking** — Track bacterial strains using MASH, sourmash, fastANI, and inStrain. Compare genomes, detect contamination, and monitor strain-level vari...
 - **bio-metagenomics-visualization** — Visualize metagenomic profiles using R (phyloseq, microbiome) and Python (matplotlib, seaborn). Create stacked bar plots, heatmaps, PCA p...
 - **bio-phasing-imputation-genotype-imputation** — Impute missing genotypes using reference panels with Beagle or Minimac4. Use when increasing variant density for GWAS, harmonizing data a...
+- **evo2-genome-model** — Operate Arc Institute Evo 2 for long-context DNA scoring, embeddings, and generation.
+- **opencrispr-gene-editors** — Evaluate and operate released Profluent OpenCRISPR gene-editing systems.
+- **transcriptformer-cell-embeddings** — Operate CZI TranscriptFormer cross-species single-cell models for cell and gene embeddings.
 - _... and 90 more in `Skills/Genomics/`_
 
 ### Hematology (15)
@@ -879,8 +899,9 @@ _Auto-generated index. 1196 skills across 54 categories. Last refresh: 2026-06-1
 - **bio-spatial-trajectory** — Trajectory inference and pseudotime analysis for spatial transcriptomics
 - **bio-spatial-velocity** — RNA velocity and cellular dynamics analysis for spatial transcriptomics
 
-### Structural_Biology (8)
+### Structural_Biology (10)
 
+- **bioemu-protein-ensembles** — Operate Microsoft BioEmu to sample approximate equilibrium conformational ensembles for protein monomers.
 - **bio-pdb-geometric-analysis** — Perform geometric calculations on protein structures using Biopython Bio.PDB. Use when measuring distances, angles, and dihedrals, superi...
 - **bio-pdb-structure-io** — Parse and write protein structure files using Biopython Bio.PDB. Use when reading PDB, mmCIF, and MMTF files, downloading structures from...
 - **bio-pdb-structure-modification** — Modify protein structures using Biopython Bio.PDB. Use when transforming coordinates, removing atoms or residues, adding new entities, mo...
@@ -888,6 +909,7 @@ _Auto-generated index. 1196 skills across 54 categories. Last refresh: 2026-06-1
 - **bio-structural-biology-alphafold-predictions** — Access and analyze AlphaFold protein structure predictions. Use when predicted structures are needed for proteins without experimental st...
 - **bio-structural-biology-modern-structure-prediction** — Predict protein structures using modern ML models including AlphaFold3, ESMFold, Chai-1, and Boltz-1. Use when predicting structures for ...
 - **cryoem-ai-drug-design-agent** — AI-powered integration of cryo-EM structural data with generative AI and molecular dynamics for structure-based drug design targeting fle...
+- **protenix-structure-prediction** — Operate ByteDance Protenix-v2 for open biomolecular structure prediction.
 - **time-resolved-cryoem-agent** — AI-powered time-resolved cryo-EM analysis for capturing protein dynamics, drug-binding kinetics, and conformational transitions for dynam...
 
 ### Systems_Biology (5)

@@ -1,0 +1,4 @@
+interface:
+  display_name: "BioEmu Protein Ensembles"
+  short_description: "Sample protein conformational ensembles"
+  default_prompt: "Use $bioemu-protein-ensembles to plan and quality-control protein ensemble sampling with BioEmu."
