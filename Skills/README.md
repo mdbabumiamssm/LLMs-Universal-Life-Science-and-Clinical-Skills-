@@ -71,6 +71,14 @@ We have significantly expanded the **Skills** directory to align with the 2026 r
 *   **BioMCP:** `Skills/MCP_Servers/BioMCP` - Model Context Protocol server for connecting LLMs to PubMed, ClinicalTrials.gov, and more.
 *   **MCPmed Server:** `Skills/MCP_Servers/MCPmed/SKILL.md` - Adapts the Model Context Protocol to bioinformatics backends (GEO, STRING).
 
+## 🧠 Biomedical Model Operations Refresh (June 2026)
+
+*   **Evo 2:** `Skills/Genomics/evo2-genome-model` - Long-context genomic scoring, embeddings, and DNA generation.
+*   **AlphaGenome:** `Skills/Genomics/alphagenome-variant-effects` - Tissue-aware regulatory variant effect prediction.
+*   **MedGemma 1.5:** `Skills/Clinical/medgemma-health-ai` - Medical text, imaging, EHR, and document workflows with clinical validation controls.
+*   **BioEmu:** `Skills/Structural_Biology/bioemu-protein-ensembles` - Protein monomer conformational ensemble generation and QC.
+*   **Boltz-2:** `Skills/Drug_Discovery/boltz2-biomolecular-interactions` - Biomolecular complex and binding-affinity prediction.
+
 ## 📂 Directory Structure
 
 The repository is organized into domain-specific modules:

@@ -87,6 +87,18 @@ We also started curating the user-focused Babu collection to make the highest-va
   - `Skills/Drug_Discovery/BioNeMo_Framework` activates NVIDIA's BioNeMo generative AI stack (framework + NIMs) for protein, RNA, and small-molecule design.
   - `Skills/Agentic_AI/LangGraph_Self_Hosted` documents the Aegra self-hosting path so regulated teams can run LangGraph deployments on-prem with hardened dependencies.
 
+## 🧠 Biomedical Model Operations Refresh (June 2026)
+
+A gap-driven audit added five first-party operational skills backed by actively maintained official sources:
+
+- `Skills/Genomics/evo2-genome-model` for Evo 2 sequence scoring, embeddings, generation, and deployment selection.
+- `Skills/Genomics/alphagenome-variant-effects` for tissue-aware regulatory variant predictions with the AlphaGenome API.
+- `Skills/Clinical/medgemma-health-ai` for validated MedGemma 1.5 medical text and imaging workflows.
+- `Skills/Structural_Biology/bioemu-protein-ensembles` for protein monomer conformational ensemble sampling.
+- `Skills/Drug_Discovery/boltz2-biomolecular-interactions` for joint complex-structure and binding-affinity prediction.
+
+The supporting source audit is recorded in `sources/research_20260618_new_biomedical_skills.md`.
+
 ## 📂 Directory Structure
 
 The repository is organized into domain-specific modules:
