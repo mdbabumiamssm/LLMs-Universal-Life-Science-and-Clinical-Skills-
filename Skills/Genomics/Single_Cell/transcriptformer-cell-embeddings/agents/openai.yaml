@@ -1,0 +1,4 @@
+interface:
+  display_name: "TranscriptFormer Cell Embeddings"
+  short_description: "Generate cross-species cell and gene embeddings"
+  default_prompt: "Use $transcriptformer-cell-embeddings to select a TranscriptFormer model and generate validated single-cell embeddings."

@@ -80,6 +80,20 @@ We completed a focused curation pass on the repo's LLM and agentic AI surface, w
 - Added missing category indexes for `Skills/AI_Providers/` and `Skills/MCP_Servers/`, and replaced the stale `Skills/Agentic_AI/README.md` with an accurate curation guide.
 - Added `docs/strategy/LLM_AGENTIC_AI_CURATION_2026.md` as the source-of-truth playbook for official references, literature watchlists, and refresh discipline.
 
+## 🧠 Biomedical Model Operations Refresh (June 2026)
+
+*   **Evo 2:** `Skills/Genomics/evo2-genome-model` - Long-context genomic scoring, embeddings, and DNA generation.
+*   **AlphaGenome:** `Skills/Genomics/alphagenome-variant-effects` - Tissue-aware regulatory variant effect prediction.
+*   **MedGemma 1.5:** `Skills/Clinical/medgemma-health-ai` - Medical text and imaging workflows with clinical validation controls.
+*   **BioEmu:** `Skills/Structural_Biology/bioemu-protein-ensembles` - Protein monomer conformational ensemble generation and QC.
+*   **Boltz-2:** `Skills/Drug_Discovery/boltz2-biomolecular-interactions` - Biomolecular complex and binding-affinity prediction.
+*   **TxGemma:** `Skills/Drug_Discovery/txgemma-therapeutics` - Therapeutic prediction and conversational drug-discovery workflows.
+*   **Protenix-v2:** `Skills/Structural_Biology/protenix-structure-prediction` - Open biomolecular co-folding with MSA, templates, constraints, and sampling.
+*   **MedSAM2:** `Skills/Clinical/Medical_Imaging/medsam2-3d-segmentation` - Promptable volumetric and medical-video segmentation.
+*   **OpenCRISPR:** `Skills/Genomics/opencrispr-gene-editors` - Controlled evaluation of released AI-designed gene editors.
+*   **MONAI:** `Skills/Clinical/Medical_Imaging/monai-medical-imaging` - Reproducible healthcare imaging pipelines and bundles.
+*   **TranscriptFormer:** `Skills/Genomics/Single_Cell/transcriptformer-cell-embeddings` - Cross-species cell and contextual gene embeddings.
+
 ## 📂 Directory Structure
 
 The repository is organized into domain-specific modules:

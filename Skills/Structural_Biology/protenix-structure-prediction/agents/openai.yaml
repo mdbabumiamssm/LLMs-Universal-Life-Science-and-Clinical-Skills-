@@ -1,0 +1,4 @@
+interface:
+  display_name: "Protenix Structure Prediction"
+  short_description: "Run open biomolecular co-folding workflows"
+  default_prompt: "Use $protenix-structure-prediction to configure and quality-control a Protenix-v2 biomolecular structure prediction."

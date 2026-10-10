@@ -1,0 +1,4 @@
+interface:
+  display_name: "MONAI Medical Imaging"
+  short_description: "Build reproducible healthcare imaging pipelines"
+  default_prompt: "Use $monai-medical-imaging to design a reproducible MONAI training, evaluation, or bundle workflow."

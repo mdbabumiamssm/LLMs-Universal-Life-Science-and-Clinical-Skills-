@@ -1,0 +1,4 @@
+interface:
+  display_name: "TxGemma Therapeutics"
+  short_description: "Predict therapeutic properties with TxGemma"
+  default_prompt: "Use $txgemma-therapeutics to design and validate a TxGemma therapeutic-property prediction workflow."

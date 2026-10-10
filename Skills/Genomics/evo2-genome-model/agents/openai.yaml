@@ -1,0 +1,4 @@
+interface:
+  display_name: "Evo 2 Genome Model"
+  short_description: "Model and design long genomic sequences"
+  default_prompt: "Use $evo2-genome-model to score, embed, or generate genomic DNA with an appropriate Evo 2 deployment."

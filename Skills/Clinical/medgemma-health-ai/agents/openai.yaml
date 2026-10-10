@@ -1,0 +1,4 @@
+interface:
+  display_name: "MedGemma Health AI"
+  short_description: "Build validated medical text and vision workflows"
+  default_prompt: "Use $medgemma-health-ai to prototype and validate a medical text or imaging workflow with MedGemma."
