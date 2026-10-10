@@ -11,7 +11,6 @@
 '''Find marker genes with Scanpy'''
 
 import scanpy as sc
-import pandas as pd
 
 adata = sc.read_h5ad('clustered.h5ad')
 

@@ -9,7 +9,6 @@ Dependencies: pyyaml (optional, for YAML input)
 """
 
 import argparse
-from pathlib import Path
 import json
 
 

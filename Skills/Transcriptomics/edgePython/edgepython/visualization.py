@@ -6,7 +6,6 @@ Port of edgeR's plotMD, plotBCV, plotMDS, plotSmear, plotQLDisp, maPlot, gof.
 """
 
 import numpy as np
-import warnings
 
 
 def plot_md(obj, column=None, coef=None, xlab='Average log CPM',
@@ -147,7 +146,6 @@ def plot_mds(y, top=500, labels=None, pch=None, cex=1, dim_plot=(1, 2),
         'pairwise' or 'common'.
     """
     import matplotlib.pyplot as plt
-    from .expression import cpm
 
     if isinstance(y, dict) and 'counts' in y:
         counts = y['counts']

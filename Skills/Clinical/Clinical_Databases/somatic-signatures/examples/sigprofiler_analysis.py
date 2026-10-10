@@ -10,7 +10,6 @@
 
 '''Extract and analyze mutational signatures with SigProfiler'''
 
-import os
 
 # --- Install reference genome (first-time only) ---
 # from SigProfilerMatrixGenerator import install as genInstall

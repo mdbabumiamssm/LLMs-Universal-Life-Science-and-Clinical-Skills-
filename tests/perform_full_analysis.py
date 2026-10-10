@@ -10,13 +10,11 @@
 
 import scanpy as sc
 import pandas as pd
-import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 import scanorama
 import os
 import gseapy as gp
-from scipy import stats
 
 # 1. Setup
 OUTPUT_DIR = "tests/results_analysis"

@@ -15,7 +15,6 @@ import os
 import sys
 import socket
 import argparse
-import threading
 
 
 def find_free_port(start=7788):
