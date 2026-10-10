@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-06-18T10:35:13.304350+00:00",
+  "generated_at": "2026-09-05T14:11:08.111899+00:00",
   "generator": "ARTIFICIALINTELLIGENCEGROUP-pipeline v1.0",
-  "total_skills": 1196,
+  "total_skills": 1200,
   "total_errors": 16,
   "skills": [
     {
@@ -285,8 +285,8 @@
       ],
       "file_path": "Skills/AI_Providers/AWS_Bedrock_Operations_2026/SKILL.md",
       "relative_path": "AI_Providers/AWS_Bedrock_Operations_2026/SKILL.md",
-      "last_modified": "2026-06-13T10:44:37.304668+00:00",
-      "body_length": 3558,
+      "last_modified": "2026-07-19T03:07:37.530611+00:00",
+      "body_length": 4289,
       "capabilities": [
         "Core Capabilities",
         "Strands Agents + AgentCore Reference Architecture",
@@ -990,8 +990,8 @@
       ],
       "file_path": "Skills/Clinical/ClinicalGuidelineDevelopmentLlm_Agent/SKILL.md",
       "relative_path": "Clinical/ClinicalGuidelineDevelopmentLlm_Agent/SKILL.md",
-      "last_modified": "2026-06-15T10:48:06.326939+00:00",
-      "body_length": 11138,
+      "last_modified": "2026-09-05T13:55:23.952489+00:00",
+      "body_length": 24973,
       "capabilities": [
         "Overview",
         "When to Use This Skill",
@@ -1013,8 +1013,8 @@
       ],
       "file_path": "Skills/Clinical/ClinicalLlmEvaluationBenchmarking_Agent/SKILL.md",
       "relative_path": "Clinical/ClinicalLlmEvaluationBenchmarking_Agent/SKILL.md",
-      "last_modified": "2026-06-15T10:48:06.326939+00:00",
-      "body_length": 42190,
+      "last_modified": "2026-09-05T14:02:53.140785+00:00",
+      "body_length": 121875,
       "capabilities": [
         "Overview",
         "When to Use This Skill",
@@ -1039,8 +1039,8 @@
       ],
       "file_path": "Skills/Clinical/ClinicalLlmPatientEducation_Agent/SKILL.md",
       "relative_path": "Clinical/ClinicalLlmPatientEducation_Agent/SKILL.md",
-      "last_modified": "2026-06-15T10:48:06.326939+00:00",
-      "body_length": 6305,
+      "last_modified": "2026-08-27T01:10:12.263691+00:00",
+      "body_length": 10760,
       "capabilities": [
         "Overview",
         "When to Use This Skill",
@@ -1337,8 +1337,8 @@
       ],
       "file_path": "Skills/Clinical/Clinical_NLP/SKILL.md",
       "relative_path": "Clinical/Clinical_NLP/SKILL.md",
-      "last_modified": "2026-06-15T10:48:06.326939+00:00",
-      "body_length": 31347,
+      "last_modified": "2026-09-05T14:06:26.866780+00:00",
+      "body_length": 48543,
       "capabilities": [
         "When to Use This Skill",
         "Core Capabilities",
@@ -1359,8 +1359,8 @@
       ],
       "file_path": "Skills/Clinical/Clinical_Note_Summarization/SKILL.md",
       "relative_path": "Clinical/Clinical_Note_Summarization/SKILL.md",
-      "last_modified": "2026-06-06T10:45:00.842468+00:00",
-      "body_length": 10029,
+      "last_modified": "2026-09-04T13:18:52.940610+00:00",
+      "body_length": 14053,
       "capabilities": [
         "At-a-Glance",
         "Inputs",
@@ -1483,8 +1483,8 @@
       ],
       "file_path": "Skills/Clinical/Medical_Imaging/Multimodal_Analysis/SKILL.md",
       "relative_path": "Clinical/Medical_Imaging/Multimodal_Analysis/SKILL.md",
-      "last_modified": "2026-06-14T10:35:35.814178+00:00",
-      "body_length": 2984,
+      "last_modified": "2026-09-01T13:16:52.532319+00:00",
+      "body_length": 12192,
       "capabilities": [
         "When to Use This Skill",
         "Core Capabilities",
@@ -1505,8 +1505,8 @@
       ],
       "file_path": "Skills/Clinical/Multimodal_Radpath_Fusion_Agent/SKILL.md",
       "relative_path": "Clinical/Multimodal_Radpath_Fusion_Agent/SKILL.md",
-      "last_modified": "2026-02-26T15:10:19.028820+00:00",
-      "body_length": 6783,
+      "last_modified": "2026-07-08T10:36:22.491173+00:00",
+      "body_length": 7123,
       "capabilities": [
         "When to Use This Skill",
         "Core Capabilities",
@@ -1524,7 +1524,8 @@
         "Special Considerations",
         "Explainability Methods",
         "Quality Control",
-        "Author"
+        "Author",
+        "References"
       ]
     },
     {
@@ -1560,17 +1561,36 @@
       ],
       "file_path": "Skills/Clinical/Oncology/Precision_Oncology_Agent/SKILL.md",
       "relative_path": "Clinical/Oncology/Precision_Oncology_Agent/SKILL.md",
-      "last_modified": "2026-06-06T10:45:00.842468+00:00",
-      "body_length": 6884,
+      "last_modified": "2026-07-10T10:57:11.603041+00:00",
+      "body_length": 8604,
       "capabilities": [
         "At-a-Glance",
         "Inputs",
         "Outputs",
         "Core Capabilities",
+        "GI Cancer AI Support",
+        "GI Cancer AI/LLM Management",
         "Workflow",
         "Guardrails",
         "References"
       ]
+    },
+    {
+      "name": "ophthalmology-llm-safety-evaluation",
+      "description": "Evaluate ophthalmology LLM answers to CME or board-style questions for correctness, omissions, harm risk, guideline consistency, and clinician review.",
+      "tool_type": "",
+      "primary_tool": "",
+      "measurable_outcome": "Execute skill workflow successfully with valid output within 15 minutes.",
+      "allowed-tools": [
+        "read_file",
+        "run_shell_command",
+        "web_fetch"
+      ],
+      "file_path": "Skills/Clinical/OphthalmologyLlmSafetyEvaluation_Agent/SKILL.md",
+      "relative_path": "Clinical/OphthalmologyLlmSafetyEvaluation_Agent/SKILL.md",
+      "last_modified": "2026-08-25T23:00:54.283862+00:00",
+      "body_length": 6191,
+      "capabilities": []
     },
     {
       "name": "prior-auth-coworker",
@@ -1584,8 +1604,8 @@
       ],
       "file_path": "Skills/Clinical/Prior_Authorization/SKILL.md",
       "relative_path": "Clinical/Prior_Authorization/SKILL.md",
-      "last_modified": "2026-06-05T10:53:26.017574+00:00",
-      "body_length": 2304,
+      "last_modified": "2026-08-03T10:44:58.638435+00:00",
+      "body_length": 2334,
       "capabilities": [
         "When to Use This Skill",
         "Core Capabilities",
@@ -1654,8 +1674,8 @@
       ],
       "file_path": "Skills/Clinical/PsychiatryKnowledgeFusedReasoning_Agent/SKILL.md",
       "relative_path": "Clinical/PsychiatryKnowledgeFusedReasoning_Agent/SKILL.md",
-      "last_modified": "2026-06-12T10:39:23.760317+00:00",
-      "body_length": 7147,
+      "last_modified": "2026-08-25T23:00:54.283862+00:00",
+      "body_length": 14898,
       "capabilities": [
         "Overview",
         "When to Use This Skill",
@@ -1676,8 +1696,8 @@
       ],
       "file_path": "Skills/Clinical/Radiology/RadGPT/SKILL.md",
       "relative_path": "Clinical/Radiology/RadGPT/SKILL.md",
-      "last_modified": "2026-06-13T10:44:37.304668+00:00",
-      "body_length": 2122,
+      "last_modified": "2026-07-19T10:46:19.259215+00:00",
+      "body_length": 2446,
       "capabilities": [
         "When to Use",
         "Core Capabilities",
@@ -1698,8 +1718,8 @@
       ],
       "file_path": "Skills/Clinical/Safety/AI_Safety_Auditor/SKILL.md",
       "relative_path": "Clinical/Safety/AI_Safety_Auditor/SKILL.md",
-      "last_modified": "2026-05-30T10:43:01.970368+00:00",
-      "body_length": 12866,
+      "last_modified": "2026-07-19T10:46:19.259215+00:00",
+      "body_length": 13404,
       "capabilities": [
         "When to Use This Skill",
         "Core Capabilities",
@@ -1742,8 +1762,8 @@
       ],
       "file_path": "Skills/Clinical/TestTimeKnowledgeClinicalLlm_Agent/SKILL.md",
       "relative_path": "Clinical/TestTimeKnowledgeClinicalLlm_Agent/SKILL.md",
-      "last_modified": "2026-06-15T10:48:06.327939+00:00",
-      "body_length": 6592,
+      "last_modified": "2026-09-05T14:04:19.697354+00:00",
+      "body_length": 21586,
       "capabilities": [
         "Overview",
         "When to Use This Skill",
@@ -2343,8 +2363,8 @@
       ],
       "file_path": "Skills/Drug_Discovery/BiomedMultiAlignmentFoundationModel_Agent/SKILL.md",
       "relative_path": "Drug_Discovery/BiomedMultiAlignmentFoundationModel_Agent/SKILL.md",
-      "last_modified": "2026-06-08T10:39:40.797169+00:00",
-      "body_length": 6587,
+      "last_modified": "2026-07-07T10:52:28.950791+00:00",
+      "body_length": 8468,
       "capabilities": [
         "Overview",
         "When to Use This Skill",
@@ -9729,6 +9749,29 @@
       ]
     },
     {
+      "name": "biomed-multi-alignment-foundation-model",
+      "description": "Use IBM biomed.omics.bl.sm.ma-ted-458m for setup, modality routing, embeddings, retrieval, and drug-discovery workflows across proteins, small molecules, and single-cell data.",
+      "tool_type": "",
+      "primary_tool": "",
+      "measurable_outcome": "Execute skill workflow successfully with valid output within 15 minutes.",
+      "allowed-tools": [
+        "read_file",
+        "run_shell_command",
+        "web_fetch"
+      ],
+      "file_path": "Skills/Foundation_Models/BiomedMultiAlignmentFoundationModel_Agent/SKILL.md",
+      "relative_path": "Foundation_Models/BiomedMultiAlignmentFoundationModel_Agent/SKILL.md",
+      "last_modified": "2026-08-27T17:29:55.902176+00:00",
+      "body_length": 11514,
+      "capabilities": [
+        "Overview",
+        "When to Use This Skill",
+        "Core Capabilities",
+        "Inputs / Outputs",
+        "References"
+      ]
+    },
+    {
       "name": "stack-single-cell-icl-agent",
       "description": "Apply Arc Institute Stack, a single-cell foundation model that performs in-context learning at inference time without per-task fine-tuning.",
       "tool_type": "",
@@ -9741,8 +9784,8 @@
       ],
       "file_path": "Skills/Foundation_Models/StackSingleCellIclAgent_Agent/SKILL.md",
       "relative_path": "Foundation_Models/StackSingleCellIclAgent_Agent/SKILL.md",
-      "last_modified": "2026-06-08T10:39:40.797169+00:00",
-      "body_length": 6330,
+      "last_modified": "2026-08-27T17:29:55.902176+00:00",
+      "body_length": 15166,
       "capabilities": [
         "Overview",
         "When to Use This Skill",
@@ -10323,8 +10366,8 @@
       ],
       "file_path": "Skills/Genomics/PrecisionGroundedVariantSummarization_Agent/SKILL.md",
       "relative_path": "Genomics/PrecisionGroundedVariantSummarization_Agent/SKILL.md",
-      "last_modified": "2026-06-15T10:48:06.327939+00:00",
-      "body_length": 8801,
+      "last_modified": "2026-09-05T14:05:18.192535+00:00",
+      "body_length": 25131,
       "capabilities": [
         "Overview",
         "When to Use This Skill",
@@ -10412,8 +10455,8 @@
       ],
       "file_path": "Skills/Genomics/Scprint2FoundationModelAgent_Agent/SKILL.md",
       "relative_path": "Genomics/Scprint2FoundationModelAgent_Agent/SKILL.md",
-      "last_modified": "2026-05-03T04:02:58.315651+00:00",
-      "body_length": 3571,
+      "last_modified": "2026-07-18T10:45:33.795362+00:00",
+      "body_length": 4171,
       "capabilities": [
         "Overview",
         "When to Use This Skill",
@@ -16681,8 +16724,8 @@
       ],
       "file_path": "Skills/LLM_Research/SKILL.md",
       "relative_path": "LLM_Research/SKILL.md",
-      "last_modified": "2026-06-13T10:44:37.304668+00:00",
-      "body_length": 3670,
+      "last_modified": "2026-08-06T10:34:19.761326+00:00",
+      "body_length": 4125,
       "capabilities": [
         "Purpose",
         "Core Capabilities",
@@ -16919,8 +16962,8 @@
       ],
       "file_path": "Skills/MCP_Servers/PubmedNcbiMcpServer_Agent/SKILL.md",
       "relative_path": "MCP_Servers/PubmedNcbiMcpServer_Agent/SKILL.md",
-      "last_modified": "2026-06-17T10:40:56.489151+00:00",
-      "body_length": 6577,
+      "last_modified": "2026-08-27T17:29:55.902176+00:00",
+      "body_length": 11928,
       "capabilities": [
         "Overview",
         "When to Use This Skill",
@@ -18415,6 +18458,29 @@
       ]
     },
     {
+      "name": "gi-cancer-ai-management-agent",
+      "description": "Use clinician-governed AI workflows for GI cancer endoscopy, imaging, pathology, profiling, treatment selection, trials, and surveillance.",
+      "tool_type": "",
+      "primary_tool": "",
+      "measurable_outcome": "Execute skill workflow successfully with valid output within 15 minutes.",
+      "allowed-tools": [
+        "read_file",
+        "run_shell_command",
+        "web_fetch"
+      ],
+      "file_path": "Skills/Oncology/GiCancerAiManagementAgent_Agent/SKILL.md",
+      "relative_path": "Oncology/GiCancerAiManagementAgent_Agent/SKILL.md",
+      "last_modified": "2026-08-30T12:05:41.053290+00:00",
+      "body_length": 11601,
+      "capabilities": [
+        "Overview",
+        "When to Use This Skill",
+        "Core Capabilities",
+        "Inputs / Outputs",
+        "References"
+      ]
+    },
+    {
       "name": "hrd-analysis-agent",
       "description": "AI-powered homologous recombination deficiency (HRD) analysis for PARP inhibitor response prediction using genomic scarring signatures and BRCA pathway assessment.",
       "tool_type": "",
@@ -18670,12 +18736,13 @@
       ],
       "file_path": "Skills/Oncology/OncologyConsultSurvivalLlm_Agent/SKILL.md",
       "relative_path": "Oncology/OncologyConsultSurvivalLlm_Agent/SKILL.md",
-      "last_modified": "2026-06-15T10:48:06.327939+00:00",
-      "body_length": 6850,
+      "last_modified": "2026-09-05T14:00:32.884940+00:00",
+      "body_length": 32218,
       "capabilities": [
         "Overview",
         "When to Use This Skill",
         "Core Capabilities",
+        "Model Selection: Fine-Tuning Versus Zero-Shot",
         "Inputs / Outputs",
         "References"
       ]
@@ -18693,8 +18760,8 @@
       ],
       "file_path": "Skills/Oncology/OncologyNeurosymbolicTrialMatching_Agent/SKILL.md",
       "relative_path": "Oncology/OncologyNeurosymbolicTrialMatching_Agent/SKILL.md",
-      "last_modified": "2026-06-15T10:48:06.327939+00:00",
-      "body_length": 8107,
+      "last_modified": "2026-09-05T14:01:21.918794+00:00",
+      "body_length": 30452,
       "capabilities": [
         "Overview",
         "When to Use This Skill",
@@ -18830,6 +18897,33 @@
         "Quality Control",
         "Regulatory Considerations",
         "Author"
+      ]
+    },
+    {
+      "name": "rare-neoplasm-rwd-llm-extraction",
+      "description": "Extract provenance-linked, temporally normalized real-world oncology data from fragmented records for rare neoplasms, including bone sarcomas, with ontology mapping and human review.",
+      "tool_type": "",
+      "primary_tool": "",
+      "measurable_outcome": "Execute skill workflow successfully with valid output within 15 minutes.",
+      "allowed-tools": [
+        "read_file",
+        "run_shell_command",
+        "web_fetch"
+      ],
+      "file_path": "Skills/Oncology/RareNeoplasmRwdLlmExtraction_Agent/SKILL.md",
+      "relative_path": "Oncology/RareNeoplasmRwdLlmExtraction_Agent/SKILL.md",
+      "last_modified": "2026-09-05T13:57:46.146060+00:00",
+      "body_length": 30241,
+      "capabilities": [
+        "Overview",
+        "When to Use This Skill",
+        "Core Capabilities",
+        "Workflow",
+        "Inputs / Outputs",
+        "Inputs",
+        "Outputs",
+        "Minimum Candidate Record",
+        "References"
       ]
     },
     {
@@ -18995,8 +19089,8 @@
       ],
       "file_path": "Skills/Pathology_AI/DmmrCrcHistopathologyAgent_Agent/SKILL.md",
       "relative_path": "Pathology_AI/DmmrCrcHistopathologyAgent_Agent/SKILL.md",
-      "last_modified": "2026-06-15T10:48:06.327939+00:00",
-      "body_length": 6824,
+      "last_modified": "2026-09-05T14:07:24.596544+00:00",
+      "body_length": 22846,
       "capabilities": [
         "Overview",
         "When to Use This Skill",
@@ -19017,8 +19111,8 @@
       ],
       "file_path": "Skills/Pharma/Drug_Interaction/SKILL.md",
       "relative_path": "Pharma/Drug_Interaction/SKILL.md",
-      "last_modified": "2026-06-15T10:48:06.327939+00:00",
-      "body_length": 20242,
+      "last_modified": "2026-06-23T13:49:30.766856+00:00",
+      "body_length": 20824,
       "capabilities": [
         "When to Use This Skill",
         "Core Capabilities",

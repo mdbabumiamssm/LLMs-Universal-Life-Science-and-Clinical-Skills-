@@ -1,16 +1,3 @@
-<!--
-# COPYRIGHT NOTICE
-# This file is part of the "Universal Biomedical Skills" project.
-# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
-# All Rights Reserved.
-#
-# This code is proprietary and confidential.
-# Unauthorized copying of this file, via any medium is strictly prohibited.
-#
-# Provenance: Authenticated by MD BABU MIA
-
--->
-
 ---
 name: bio-literature
 description: Parse scholarly articles (PDF, DOI, URL) to extract metadata, GEO accessions,
@@ -24,6 +11,19 @@ allowed-tools:
 - run_shell_command
 ---
 
+<!--
+# COPYRIGHT NOTICE
+# This file is part of the "Universal Biomedical Skills" project.
+# Copyright (c) 2026 MD BABU MIA, PhD <md.babu.mia@mssm.edu>
+# All Rights Reserved.
+#
+# This code is proprietary and confidential.
+# Unauthorized copying of this file, via any medium is strictly prohibited.
+#
+# Provenance: Authenticated by MD BABU MIA
+
+-->
+
 # Literature Parsing Skill
 
 ## Purpose
@@ -33,7 +33,8 @@ Parse scientific literature (PDFs, URLs, DOIs) to extract GEO accessions and met
 ## Core Capabilities
 
 - **Medical Q&A dataset evaluation**: Build fine-grained review checklists and schemas for medical language model benchmarking that cover answer correctness, clinically relevant omissions, harm potential, item-level ambiguity, domain coverage, answer provenance, trustworthiness metrics, item-level error taxonomies, dataset quality checks before using benchmark results for medical LLM claims, domain-specific answer rubrics, dataset documentation, and benchmark reporting standards.
-- **Optional multi-source MCP literature workflow**: Search PubMed, Europe PMC, CORE, and OpenAlex; retrieve available full text; traverse citation networks; extract PICO elements; deduplicate records while retaining source provenance; and continue with available providers when an individual source fails.
+- **Fine-grained medical Q&A benchmark readiness**: Evaluate domain-specific medical Q&A datasets item by item before medical language model deployment using explicit error taxonomies, trustworthiness labels, domain stratification, expert adjudication, and dataset cards for documented benchmarking.
+- **Optional multi-source biomedical literature workflow**: Search PubMed, Europe PMC, CORE, and OpenAlex; use full-text fallbacks when the preferred source is unavailable; traverse citation networks; extract PICO elements; deduplicate records by DOI or PMID while retaining source-specific provenance; continue with available providers when an individual source fails; and prefer official NCBI access when reproducibility is more important than search breadth.
 
 ## Methodology
 

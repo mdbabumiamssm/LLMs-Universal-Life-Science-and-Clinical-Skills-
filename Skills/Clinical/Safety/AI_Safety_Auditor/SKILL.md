@@ -83,6 +83,8 @@ The **AI Safety Auditor** is a critical "human-in-the-loop" simulator and automa
 36. **Test-Time Knowledge Acquisition Recommendation Change Audit**: Requires explicit source retrieval for LLM medical decision support, source quality grading, conflict handling across retrieved sources, uncertainty reporting, and clinician override or sign-off whenever acquired knowledge changes recommendations.
 37. **Knowledge-Augmented Clinical Decision Support Gate**: Requires source vetting, retrieval provenance, conflict detection, hallucination checks, and evaluation against no-retrieval baselines before allowing test-time knowledge acquisition to support clinical recommendations.
 38. **Clinical Decision Support Test-Time Knowledge Acquisition Traceability Check**: Requires retrieved evidence provenance, separates acquired clinical facts from model priors, verifies source recency and clinical authority, and flags any case where added knowledge changes risk assessment or recommendations.
+39. **Professional-Society Guideline-Concordance Audit**: Maps each clinical recommendation to a specific professional-society statement and separately flags contradictions, omitted contraindications, outdated guidance, invented recommendations, and clinically material caveats.
+40. **Plastic Surgery Guideline-Concordance Review**: Compares AI chatbot plastic surgery recommendations against ASPS and AAPS society guidance, scoring omissions and potential harm risk before patient-facing use.
 
 ## Workflow
 
@@ -106,6 +108,7 @@ python3 Skills/Clinical/Safety/AI_Safety_Auditor/audit_output.py --input dischar
 - https://pubmed.ncbi.nlm.nih.gov/42042855/
 - https://pubmed.ncbi.nlm.nih.gov/41953846/
 - https://pubmed.ncbi.nlm.nih.gov/42039929/
+- https://pubmed.ncbi.nlm.nih.gov/41985209/
 
 
 <!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

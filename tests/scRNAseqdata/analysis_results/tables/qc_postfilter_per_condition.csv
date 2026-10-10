@@ -1,0 +1,5 @@
+condition,n_cells,median_genes,median_pct_mt
+Control,32239,1377.0,2.6423001
+Control_C1,2902,2405.0,2.9548893
+SCD,15001,1198.0,2.295852
+Thalassemia,9680,1423.0,2.6979246

@@ -47,6 +47,7 @@ This skill operationalizes scPRINT-2, a next-generation single-cell foundation m
 5. **Gene network inference** — Extract attention-derived gene-gene interaction scores for biological interpretation and pathway analysis.
 6. **Fine-tuning** — Optionally fine-tune the model on a user-provided labeled dataset for task-specific adaptation.
 7. **Benchmarking and comparison** — Produce side-by-side metrics versus other foundation models when a comparison is requested.
+8. **scPRINT-2 repository workflow** — Use the official `cantinilab/scPRINT-2` GitHub source for current installation and model-loading steps, then run embedding and annotation workflows only after checking AnnData compatibility, gene vocabulary overlap, and raw-count availability; compare outputs against requested scFoundation/Geneformer-style baselines without inventing benchmark results, and validate downstream clustering, integration, annotation, or transfer tasks with held-out labels and task-appropriate QC.
 
 ## Inputs / Outputs
 
@@ -67,3 +68,4 @@ This skill operationalizes scPRINT-2, a next-generation single-cell foundation m
 - Original scPRINT method (Cantini Lab): https://github.com/cantinilab/scPRINT
 - AnnData / scanpy ecosystem: https://github.com/scverse/scanpy
 - PyTorch: https://github.com/pytorch/pytorch
+- scPRINT-2 GitHub finding (2026-04-29): https://github.com/cantinilab/scPRINT-2

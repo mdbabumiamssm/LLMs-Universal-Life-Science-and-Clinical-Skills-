@@ -28,7 +28,9 @@ Use this skill when Bedrock is the production surface, not just a compatibility 
 
 ## Core Capabilities
 
-- For Strands Agents plus Amazon Bedrock AgentCore reference architectures, use the `aws-samples/sample-strands-agent-with-agentcore` pattern as a checklist for TypeScript chatbot boundaries, MCP and A2A integrations, browser and voice tools, identity and session boundaries, deployment topology, observability, and least-privilege IAM.
+- For Strands Agents plus Amazon Bedrock AgentCore reference architectures, use the `aws-samples/sample-strands-agent-with-agentcore` implementation pattern as a checklist for TypeScript agentic chatbot boundaries, MCP and A2A integrations, browser automation and voice-assistant tools, identity and session boundaries, IAM, guardrails, deployment topology, and observability checks.
+- Treat the Strands Agents plus Bedrock AgentCore sample as illustrative reference architecture, not production-ready application code, until MCP and A2A contracts, browser or voice assistant tool surfaces, IAM boundaries, deployment topology, and operational controls are mapped to the target workload.
+- Extend the `aws-samples/sample-strands-agent-with-agentcore` reference architecture into a production review by mapping MCP and A2A integration, isolating browser and voice tools at identity boundaries, documenting deployment topology and tracing, enforcing approval gates for write-capable actions, and hardening secrets, failure handling, observability, and rollout controls.
 - Apply the reference architecture to multi-agent chat applications by defining identity boundaries, session-state ownership and lifecycle, MCP and A2A contracts, browser and voice tool controls, end-to-end observability, and production hardening before TypeScript deployment.
 - Produce a concrete Strands Agents and Bedrock AgentCore topology that maps user and workload identity, IAM trust boundaries, session-state ownership, MCP and A2A integration points, browser and voice tools, deployment components, observability paths, and production-hardening controls.
 

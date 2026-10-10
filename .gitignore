@@ -110,3 +110,9 @@ platform/reports/
 # Claude Code
 # =============================================================================
 .claude/
+# --- repo-autopilot: keep bulky / re-downloadable / copyrighted data out of git ---
+tests/scRNAseqdata/GSE133181_RAW/
+tests/scRNAseqdata/extracted/
+tests/scRNAseqdata/analysis_results/checkpoints/
+tests/scRNAseqdata/manuscript.pdf
+*.tar.gz

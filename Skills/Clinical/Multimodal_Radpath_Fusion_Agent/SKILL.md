@@ -47,6 +47,8 @@ The **Multimodal Radpath Fusion Agent** integrates diverse clinical data sources
 
 6. **Clinical Decision Support**: AI-assisted tumor board recommendations.
 
+7. **Dermatology and Dermoscopic Image Triage**: Evaluate clinical and dermoscopic images for basal cell carcinoma and common mimickers as multimodal LLM decision support, with explicit image-quality constraints, differential diagnosis limits, and clinician-overread safeguards.
+
 ## Supported Modalities
 
 | Modality | Data Type | Features Extracted |
@@ -209,5 +211,8 @@ python3 Skills/Clinical/Multimodal_Radpath_Fusion_Agent/multimodal_fusion.py \
 
 AI Group - Biomedical AI Platform
 
+## References
+
+- https://pubmed.ncbi.nlm.nih.gov/41952838/
 
 <!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->
