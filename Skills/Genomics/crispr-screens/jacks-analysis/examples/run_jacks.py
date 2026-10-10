@@ -9,7 +9,6 @@
 # Provenance: Authenticated by MD BABU MIA
 
 import pandas as pd
-import numpy as np
 import matplotlib.pyplot as plt
 
 # For test data, use example files from JACKS repository:

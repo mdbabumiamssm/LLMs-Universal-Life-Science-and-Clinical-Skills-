@@ -8,9 +8,7 @@ Utilities for creating entries, uploading attachments, and managing notebook con
 import argparse
 import sys
 import yaml
-import os
 from pathlib import Path
-from datetime import datetime
 
 
 def load_config(config_path='config.yaml'):

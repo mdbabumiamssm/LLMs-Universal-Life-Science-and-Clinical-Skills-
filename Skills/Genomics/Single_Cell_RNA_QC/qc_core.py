@@ -17,7 +17,6 @@ while following scverse best practices from:
 https://www.sc-best-practices.org/preprocessing_visualization/quality_control.html
 """
 
-import anndata as ad
 import scanpy as sc
 import numpy as np
 from scipy.stats import median_abs_deviation

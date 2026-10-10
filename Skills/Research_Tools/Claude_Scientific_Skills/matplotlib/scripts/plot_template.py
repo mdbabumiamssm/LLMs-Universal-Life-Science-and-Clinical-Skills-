@@ -283,7 +283,6 @@ def create_violin_plot(data, ax=None):
 
 def create_3d_plot():
     """Create 3D surface plot."""
-    from mpl_toolkits.mplot3d import Axes3D
 
     fig = plt.figure(figsize=(12, 9))
     ax = fig.add_subplot(111, projection='3d')

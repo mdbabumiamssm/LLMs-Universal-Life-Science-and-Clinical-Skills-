@@ -12,7 +12,6 @@ Usage:
 from tdc.single_pred import ADME
 from tdc.multi_pred import DTI
 from tdc import Evaluator
-import pandas as pd
 
 
 def load_single_pred_example():
