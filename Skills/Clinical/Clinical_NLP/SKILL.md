@@ -136,6 +136,10 @@ The **Clinical NLP Skill** converts free-text clinical notes into structured dat
 101. **LLM-based patient outcome identification and timing**: Define the outcome schema before extracting clinician notes, identify patient outcomes with temporal anchors, preserve negation and uncertainty labels, link each outcome-time assertion to evidence spans, route ambiguous or discordant assertions to adjudication, and validate extracted outcome identity and timing against clinician-labeled references before downstream use.
 102. **Outcome-event timing extraction with patient-level evaluation**: Extend outcome extraction beyond entity detection by representing occurrence, onset, resolution, planned-versus-completed status, negation, experiencer, temporal intervals, and uncertainty for each outcome event; use patient-disjoint training, validation, and test splits; report span-level, event-level, and temporal-relation metrics separately; and route ambiguous, conflicting, or unsupported outcome-time assertions to clinician adjudication with the source span and proposed event and temporal labels preserved for review.
 
+103. **PECARN intra-abdominal injury input extraction**: Extract evidence-linked rule variables from emergency department notes separately from deterministic rule calculation; preserve absent, missing, uncertain, and conflicting findings; evaluate variable-level errors separately from final rule agreement; and verify study eligibility, implementation, and validation before claiming clinical applicability (see worked example below).
+
+104. **NSCLC metastasis classification**: Use oncology notes to classify overall metastasis (any site) and brain/CNS metastasis independently as present or absent. The [reviewed study](https://cancer.jmir.org/2026/1/e99573/) compared supervised fine-tuning of GatorTron-base with zero-shot MedGemma-27B-text-it and Llama 3.1-70B-Instruct, using registry labels for development and independent manually annotated radiology notes for validation. These compare modeling approaches, not architectures alone. Manual annotations accepted explicit or contextually supported metastatic involvement; unconfirmed suspicious findings were negative, as were explicit negative findings or notes without positive evidence. The study annotated no evidence spans or separate historical class. For this workflow, require source-note evidence spans for assertions, note dates, and supported event-time context; retain confirmed, suspected, negated, and historical mention distinctions where the annotation scheme supports them, separately from the binary target. Treat historical status as a temporal attribute, not automatic evidence of current disease; adjudicate unsupported mappings. For negatives based on absent documentation, record full-note review and a null span rather than inventing evidence. Predefine the target time window: the study used diagnosis ±30 days for registry comparison, but unrestricted longitudinal notes for independent validation. Keep every patient's notes and derived chunks together across training, validation, and test splits; tune thresholds only on validation patients. Report patient-level precision, recall, F1, and confusion matrices for each target, separately from note-level results, with patient-resampled confidence intervals and a prespecified aggregation rule. The study's independent patient reference was positive if any note was positive; all those patients had overall metastasis, limiting evaluation of negative cases. Distinguish registry disagreement from adjudicated extraction error.
+
 ## Workflow
 
 1.  **Input**: A string of clinical text or a text file.
@@ -153,10 +157,35 @@ python3 Skills/Clinical/Clinical_NLP/entity_extractor.py \
     --output entities.json
 ```
 
+### Worked example: PECARN intra-abdominal injury inputs
+
+**Verification status:** PMID 42893265 supplies the motivation for this example. Its primary record could not be retrieved during this update; study-specific eligibility criteria, rule implementation, and validation results remain unverified. Before documenting clinical applicability, inspect the full study and supplements to confirm age limits, trauma mechanism and timing, exclusions, sites, note selection, exact variable definitions and thresholds, missing-data handling, rule aggregation, reference standard, validation split, sample size, and reported results with uncertainty. Do not infer clinical readiness or performance from the title or substitute another PECARN study's results.
+
+**Synthetic ED note (ED-001, initial assessment):** “Child evaluated after blunt torso trauma. GCS 15. No abdominal wall bruising or seat belt sign. Abdomen nontender. Denies abdominal pain. No vomiting since injury. Breath sounds possibly diminished on the left.” No thoracic wall examination is documented.
+
+Extract each variable into `{variable, status, raw_value, note_id, assessment_time, evidence_span}`; retain exact spans and offsets when available. Use `present`, `absent`, `missing`, or `uncertain`; preserve conflicting assertions with their individual provenance for adjudication. Here all evidence refers to ED-001's initial assessment:
+
+| Adverse rule input | Extracted status/value | Evidence span |
+|---|---|---|
+| Abdominal wall trauma or seat belt sign | absent | “No abdominal wall bruising or seat belt sign” |
+| GCS <14 | absent; raw GCS = 15 | “GCS 15” |
+| Abdominal tenderness | absent | “Abdomen nontender” |
+| Thoracic wall trauma | missing | null; not documented |
+| Abdominal pain | absent | “Denies abdominal pain” |
+| Decreased breath sounds | uncertain | “Breath sounds possibly diminished on the left” |
+| Vomiting | absent | “No vomiting since injury” |
+
+**Separate calculation:** The seven inputs and GCS threshold follow the [original PECARN rule](https://pubmed.ncbi.nlm.nih.gov/23375510/). After eligibility is independently confirmed, deterministic code returns `very_low_risk` only when all seven adverse inputs are explicitly absent; any present input returns `not_very_low_risk`. If none is present but any is missing, uncertain, or conflicting, return `indeterminate` and retain the unresolved inputs. This abstention policy is an illustrative workflow safeguard, not a verified implementation from PMID 42893265. The example returns `indeterminate`, with thoracic wall trauma missing and decreased breath sounds uncertain. Do not impute either as absent, turn the rule into an unsupported numeric score, or interpret a positive input as an automatic CT order. Unconfirmed eligibility separately prevents clinical application.
+
+**Evaluation:** Against clinician-adjudicated notes, report per-variable confusion matrices, precision/recall, evidence-span correctness, and missing/uncertain/conflict handling errors. Separately compare deterministic rule outputs with outputs calculated from adjudicated inputs, reporting final agreement, false very-low-risk classifications, and indeterminate coverage with explicit denominators. Analyze cases where variable errors cancel out and leave the final classification unchanged. Rule agreement alone does not establish injury-outcome sensitivity or clinical safety; assess those only with confirmed outcome definitions and appropriate validation data.
+
 ## References
 
 *   https://pubmed.ncbi.nlm.nih.gov/42021926/
 *   https://pubmed.ncbi.nlm.nih.gov/41886942/
 *   https://pubmed.ncbi.nlm.nih.gov/42004490/
+*   https://pubmed.ncbi.nlm.nih.gov/23375510/ — Original PECARN intra-abdominal injury rule definitions.
+*   https://pubmed.ncbi.nlm.nih.gov/42893265/ — Automated calculation from ED notes; study-specific methods and validation pending primary-source verification.
+*   https://pubmed.ncbi.nlm.nih.gov/42886999/ — NSCLC metastasis classification; reviewed full text: https://cancer.jmir.org/2026/1/e99573/.
 
 <!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->
