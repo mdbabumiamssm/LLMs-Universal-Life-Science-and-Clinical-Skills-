@@ -13,7 +13,6 @@
 import cooler
 import cooltools
 import bioframe
-import numpy as np
 
 clr = cooler.Cooler('matrix.mcool::resolutions/10000')
 print(f'Loaded at {clr.binsize}bp resolution')

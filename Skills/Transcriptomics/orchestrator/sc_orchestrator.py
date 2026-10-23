@@ -11,10 +11,8 @@ Usage:
 from __future__ import annotations
 
 import argparse
-import json
 import logging
 import sys
-from datetime import datetime, timezone
 from pathlib import Path
 
 _PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent.parent
@@ -22,7 +20,6 @@ if str(_PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(_PROJECT_ROOT))
 
 from omicsclaw.common.report import (
-    DISCLAIMER,
     generate_report_footer,
     generate_report_header,
     write_result_json,

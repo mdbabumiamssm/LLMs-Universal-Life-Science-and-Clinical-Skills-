@@ -20,7 +20,7 @@ import argparse
 import matplotlib.pyplot as plt
 import networkx as nx
 import torch
-from typing import Optional, Union
+from typing import Optional
 import numpy as np
 
 

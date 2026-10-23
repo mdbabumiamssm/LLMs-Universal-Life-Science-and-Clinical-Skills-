@@ -9,7 +9,7 @@
 # Provenance: Authenticated by MD BABU MIA
 
 import numpy as np
-from typing import List, Tuple, Callable, Optional
+from typing import List, Tuple
 from dataclasses import dataclass
 
 @dataclass
@@ -98,7 +98,6 @@ class BayesianOptimizer:
 if __name__ == "__main__":
     import argparse
     import json
-    import ast
     import sys
 
     parser = argparse.ArgumentParser(description="Bayesian Optimization Agent")

@@ -11,8 +11,6 @@
 import json
 import argparse
 import re
-from collections import Counter
-import math
 
 # Try to import advanced libraries, fall back if missing
 try:
