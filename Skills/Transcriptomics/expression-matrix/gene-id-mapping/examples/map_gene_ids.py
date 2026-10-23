@@ -12,7 +12,6 @@
 '''Map between gene ID systems'''
 
 import mygene
-import pandas as pd
 
 def map_ensembl_to_symbol(ensembl_ids):
     '''Map Ensembl IDs to gene symbols'''

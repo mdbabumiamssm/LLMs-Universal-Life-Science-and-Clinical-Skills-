@@ -10,7 +10,7 @@
 
 '''Build a Neighbor Joining tree from a multiple sequence alignment'''
 
-from Bio import AlignIO, Phylo
+from Bio import Phylo
 from Bio.Phylo.TreeConstruction import DistanceCalculator, DistanceTreeConstructor
 from Bio.Align import MultipleSeqAlignment
 from Bio.Seq import Seq

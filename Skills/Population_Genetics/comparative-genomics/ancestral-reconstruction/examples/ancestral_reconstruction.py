@@ -10,7 +10,6 @@
 
 '''Ancestral sequence reconstruction'''
 
-import subprocess
 import os
 
 

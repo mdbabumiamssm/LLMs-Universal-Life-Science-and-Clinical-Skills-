@@ -22,7 +22,6 @@ Examples:
 import argparse
 import json
 import sys
-from pathlib import Path
 
 try:
     from pymatgen.core import Structure

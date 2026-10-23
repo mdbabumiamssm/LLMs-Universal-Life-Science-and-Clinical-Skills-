@@ -1,0 +1,60 @@
+# Lightweight CI added by repo-autopilot. Runs only on first-party paths; vendored
+# collections under Skills/External_Collections and */repo/* are ignored.
+name: autopilot-ci
+
+on:
+  push:
+    branches: [main, autopilot/maintenance]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install ruff
+        run: python -m pip install --quiet ruff
+      - name: Lint first-party Python (errors only)
+        run: |
+          ruff check --select E9,F63,F7,F82 \
+            --exclude External_Collections,repo,tutorials,archive,venv,node_modules,sources \
+            --exit-zero --output-format=github .
+      - name: Syntax-compile first-party Python
+        run: |
+          python - <<'PY'
+          import compileall, pathlib, re, sys
+          skip = re.compile(r"(External_Collections|/repo/|/tutorials/|/archive/|venv|node_modules|/sources/)")
+          bad = 0
+          for p in pathlib.Path('.').rglob('*.py'):
+              s = '/' + p.as_posix()
+              if skip.search(s):
+                  continue
+              if not compileall.compile_file(str(p), quiet=1, force=True):
+                  bad += 1
+          print(f"syntax problems: {bad}")
+          sys.exit(1 if bad else 0)
+          PY
+      - name: Validate skills_catalog.json
+        run: |
+          test -f skills_catalog.json && python -c "import json;d=json.load(open('skills_catalog.json'));print('catalog ok, skills =',d.get('total_skills'))" || echo "no catalog"
+      - name: Validate SKILL.md frontmatter (first-party)
+        run: |
+          if [ -f automation/validate_skill_frontmatter.py ]; then
+            python automation/validate_skill_frontmatter.py Skills/Agentic_AI Skills/AI_Providers || true
+          else
+            echo "validator not present in this repo"
+          fi

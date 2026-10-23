@@ -16,7 +16,6 @@ Dependencies: None (pure Python)
 import re
 import argparse
 from pathlib import Path
-from collections import defaultdict
 
 
 class CDSValidator:

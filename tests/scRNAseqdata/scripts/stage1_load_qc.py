@@ -4,13 +4,12 @@ Implements:  sc-standardize-input  ->  sc-qc  ->  sc-filter
 """
 import os
 import numpy as np
-import pandas as pd
 import scanpy as sc
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import seaborn as sns
-from common import EXTRACTED, FIG, TAB, CKPT, SAMPLES, COND_COLORS
+from common import EXTRACTED, FIG, TAB, CKPT, SAMPLES
 
 sc.settings.verbosity = 1
 sc.settings.figdir = FIG
