@@ -24,6 +24,27 @@ allowed-tools:
 
 # Cross-Validation for Biomedical Data
 
+## Core Capabilities
+
+- Compare numeric and embedding-based clinical risk-prediction pipelines with matched patient splits, leakage controls, comparable tuning budgets, discrimination, calibration, and computational cost assessment using the template below; do not assume either representation is superior.
+
+## Clinical Risk-Prediction Comparison Template
+
+The [reviewed study](https://academic.oup.com/jamiaopen/article/9/5/ooag199/8994315) compared 458 engineered numeric features with frozen embeddings of text-serialized versions of the same structured clinical variables, using XGBoost in both pipelines. Numeric inputs used category-specific summaries and imputation; semantic inputs omitted missing variables and used raw values (F1), qualitatively interpreted values (F2), or abnormal findings only (F3). Six encoders, three formats, and six prompt wrappers formed 108 semantic configurations per endpoint. Both pipelines used Optuna; the study's 30 trials per configuration did not constitute equal total search budgets.
+
+For each comparison, complete and enforce this evaluation template (requirements below are evaluation controls, not claims about the paper's results):
+
+| Field | Required specification |
+|-------|------------------------|
+| Clinical task | Cohort, endpoint, prediction time, observation window, horizon, exclusions, and identical source variables available to both representations. |
+| Pipelines | Numeric feature definitions and missingness rules; semantic serialization, prompt, frozen encoder identifier/version, truncation, and embedding dimensions. Keep the downstream classifier matched; document deviations from the study. |
+| Matched splits | Reuse identical patient-level training, tuning, calibration, and held-out test assignments across pipelines; keep repeated admissions together and apply temporal/site separation when required by deployment. |
+| Leakage controls | Exclude post-prediction information; fit imputation, scaling, feature selection, and any learned representation only within training folds. Select configurations and thresholds without test access; reserve separate calibration data. Document possible encoder pretraining overlap. |
+| Tuning budget | Prespecify comparable total trial or compute budgets, counting encoder/format/prompt selection as well as classifier tuning. Report search spaces, seeds, actual fits, and budget deviations; distinguish a broader search from a budget-matched comparison. |
+| Discrimination and calibration | Evaluate once on the same held-out patients: AUROC and AUPRC, paired uncertainty estimates, calibration curves, calibration intercept/slope, and Brier score. Fit any recalibration without test data and report before/after results. Compare patient-level false-positive/false-negative overlap at prespecified thresholds. |
+| Computational cost | Report feature/embedding generation, tuning, training, and inference time; hardware, peak memory, embedding/API charges, and storage. State cohort size, batch size, and caching assumptions. |
+| Interpretation | Report endpoint-specific tradeoffs and uncertainty without presuming a winner or generalizing a single-cohort result to other settings. |
+
 ## Why Nested CV Matters
 
 Simple train/test splits overestimate performance on small omics datasets. Nested CV provides unbiased estimates by separating hyperparameter tuning from performance evaluation.
@@ -146,3 +167,7 @@ scores = cross_val_score(pipe, X, y, cv=cv, scoring='roc_auc')
 
 
 <!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->
+
+## References
+
+- [Numeric versus embedding pipelines for optimized clinical risk prediction. JAMIA Open (2026).](https://pubmed.ncbi.nlm.nih.gov/42921350/)

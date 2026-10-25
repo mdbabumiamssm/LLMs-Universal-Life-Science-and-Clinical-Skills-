@@ -30,6 +30,10 @@ allowed-tools:
 
 The last mile of enterprise search. Takes raw results from multiple sources and produces a coherent, trustworthy answer.
 
+## Core Capabilities
+
+- **Biomedical evidence assembly:** Use the BioHarness-informed extension below to distinguish literature claims, knowledge-base entity records, and biological atlas measurements, with source-specific retrieval, identifier alignment, provenance, and explicit conflict handling.
+
 ## The Goal
 
 Transform this:
@@ -260,6 +264,22 @@ Want me to dig deeper into any specific aspect?
 [Coherent answer with sources]
 ```
 
+## Biomedical Evidence-Assembly Extension
+
+**Evidence basis and limits:** BioHarness demonstrates staged evidence assembly across literature, biomedical entity-mapping resources, and atlas measurements. The reviewed preprint methods (Sections 2.1–2.5; see References) combine original-question and hypothetical-abstract retrieval, deduplicate documents, and rerank against the original question. Insufficient grounding triggers read-only tool use and executable atlas queries; traces retain observations and available provenance. The hypothetical abstract is a retrieval aid, not evidence. The routing confidence proxy is not a calibrated probability of correctness. These method details were reviewed in the preprint, not the final journal manuscript.
+
+**Proposed implementation practices for this skill:** The requirements below extend that design; they are not claims that BioHarness implements or validates a complete provenance schema or general conflict-resolution system. Apply them when biomedical evidence is involved, rather than automatically applying the enterprise freshness and authority rankings above.
+
+| Evidence source | Retrieval requirement | Provenance to retain |
+|-----------------|-----------------------|----------------------|
+| Literature | Retrieve answer-bearing abstracts or passages; rerank against the actual question and distinguish reported findings from interpretation. | PMID/DOI or stable URL, publication/version date, exact supporting passage and location, query and retrieval date; mark abstract-only access. |
+| Knowledge bases | Resolve entities through native identifier/alias lookup; retrieve the relevant record or relation rather than substituting topically similar prose. | Resource and release, accession and namespace, query/tool parameters, returned record or relation, retrieval date, and supporting citations/evidence codes when supplied. |
+| Biological atlases | Query structured measurements for the requested gene, tissue/cell type, and condition; retain filters, thresholds, and aggregation operations. | Dataset accession/version, species, sample/cohort and assay context, annotation version, measurement field, units/normalization, returned records, query/code and derived output. Mark unavailable fields explicitly. |
+
+- **Align identifiers before joining:** Preserve the original mention alongside canonical identifiers, species, namespace, mapping resource/version, and mapping evidence. Resolve deprecated aliases; keep ambiguous or one-to-many mappings explicit. Align tissue/cell-type ontology terms and genome assembly for locus comparisons where relevant; do not merge records solely by matching display names.
+- **Preserve conflicts:** Compare claims only after checking entity identity, species, tissue/cell type, condition, assay, units, and release. Retain opposing claims with their source records and explain context differences or unresolved disagreement. Do not treat missing measurements as negative evidence, expression as proof of causality, or a database record citing a paper as independent corroboration. Prefer evidence appropriate to the question, not simply the newest source; qualify or withhold conclusions when support remains insufficient.
+- **Assemble an auditable answer:** Stop when the required evidence is sufficient; otherwise route the unresolved need to the appropriate source type. Link each final claim to its supporting passages, records, or computed measurements and preserve transformation lineage. Report access or mapping gaps rather than implying that unqueried resources supplied evidence.
+
 ## Anti-Patterns
 
 **Do not:**
@@ -279,5 +299,10 @@ Want me to dig deeper into any specific aspect?
 - Attribute all claims to sources
 - Offer to go deeper when result sets are large
 
+
+## References
+
+- BioHarness: Substrate-Aware Evidence Assembly for Biomedical Question Answering across Literature, Knowledge Bases, and Biological Atlases. *Bioinformatics*, 22 October 2026. https://pubmed.ncbi.nlm.nih.gov/42924887/
+- BioHarness methods reviewed: preprint version 1, Sections 2.1–2.5. https://arxiv.org/html/2606.19396v1 ; published abstract: https://doi.org/10.1093/bioinformatics/btag795
 
 <!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

@@ -47,6 +47,8 @@ The **Radiomics Pathomics Fusion Agent** integrates multimodal medical imaging d
 
 6. **Survival Prediction**: Multi-modal prognostic modeling.
 
+7. **Stage I NSCLC Postoperative Risk Stratification**: Apply the CT–pathology-report DLRTransformer example described below, with patient-level partitioning, modality ablations, missing-modality policies, and survival calibration.
+
 ## Supported Imaging Modalities
 
 | Modality | Features Extracted | Resolution |
@@ -100,6 +102,18 @@ python3 Skills/Oncology/Radiomics_Pathomics_Fusion_Agent/fusion_predict.py \
     --fusion_method attention \
     --output fusion_prediction/
 ```
+
+### Stage I NSCLC CT–Pathology Transformer Example
+
+**Reported design ([paper](https://pubs.rsna.org/doi/10.1148/rycan.250617))**: DLRTransformer combines patient-associated preoperative CT features, postoperative pathology report text, and clinical variables. Multiview 2.5D ResNet-50 features and volumetric radiomics represent CT; text-embedding-v3 followed by TransformerCoxNN produces 64-dimensional prognostic text features. Modality-specific MLPs feed a self-attention transformer fusion module. Whole-slide images serve a separate biologic interpretation analysis, not the fusion input. The endpoint is disease-free survival from surgery to recurrence or death, censoring event-free patients at last follow-up, capped at five years. The retrospective five-center design uses 412 training and 104 internal testing patients from one center, plus external cohorts of 151 and 227 patients from four other centers. Another 179 treated patients were reserved for treatment-benefit analysis. CT extractor selection used internal testing; the risk cutoff was training-derived and locked. Evaluation included four single-modality comparators and 3-/5-year calibration curves.
+
+**Implementation and evaluation requirements** (requirements for this skill, not assertions that every procedure was performed in the paper):
+
+* Pair CT, final pathology report, and clinical records by patient and index resection; document acquisition/report timing and prevent later outcome information from entering predictors.
+* Partition by patient before preprocessing or supervised representation learning; keep all scans, reports, slides, and derived samples from a patient together. Fit scaling, feature selection, survival-text training, and risk thresholds on training data only. Use a separate tuning partition or nested validation for architecture selection, and keep external centers untouched.
+* Compare CT-only, pathology-text-only, clinical-only, full fusion, and leave-one-modality-out variants on identical patient partitions; separate CT radiomics from learned CT features in ablations. Report discrimination with uncertainty rather than assuming fusion superiority.
+* Prespecify missing-modality handling: document exclusions and missingness by cohort; use a validated reduced-modality fallback or abstain when required inputs are absent. Evaluate each supported missing-input pattern separately; do not assume the reported transformer tolerates absent modalities.
+* Evaluate censoring-aware calibration at 3 and 5 years alongside C-index and time-dependent AUC in each held-out cohort. Fit any recalibration on a separate calibration set, and report its effect on untouched test data; a hazard score alone is not an absolute survival probability.
 
 ## Radiomic Feature Categories
 
@@ -219,3 +233,7 @@ AI Group - Biomedical AI Platform
 
 
 <!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->
+
+## References
+
+* Multimodal Transformer Integrating CT and Pathology for Postoperative Risk Stratification in Stage I Non-Small Cell Lung Cancer. Radiology: Imaging Cancer (2026). https://pubmed.ncbi.nlm.nih.gov/42886039/
