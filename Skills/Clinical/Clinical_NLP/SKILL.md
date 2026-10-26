@@ -154,11 +154,31 @@ The **Clinical NLP Skill** converts free-text clinical notes into structured dat
 
 108. **Assertion-aware pathology extraction**: Integrate capability 106 with the negation-scope audits in capabilities 105 and 107: retain negative receptor results as evidence-bearing observations, distinguish negated testing from negative assays, and evaluate assertion errors separately from derived TNBC classification errors (see breast pathology example).
 
+109. **GLLaucoMed candidate medication-extraction case study**: Evaluate staged LLM extraction of current glaucoma medications and proposed changes, with separate topical-eye and oral-patient schemas, temporal status, negation, source-span provenance, privacy controls, and clinician-adjudicated evaluation (see workflow extension below). Treat this as a candidate adaptation, not a validated capability of the basic extractor.
+
+110. **Specimen- and assay-aware breast biomarker extraction**: Apply the breast pathology example to ER, PR, and HER2 with specimen identity, assay context, and verbatim evidence spans. Preserve explicit unknown and equivocal states; review the referenced paper’s receptor definitions before adopting TNBC logic, and evaluate extracted observations separately from derived phenotype identification.
+
+111. **PECARN research eligibility and definition audit**: Extend the worked example with a source-linked eligibility checklist and variable dictionary before extraction. Record verified criteria separately from unresolved study details; retain evidence and missingness for each input, calculate the rule deterministically, and evaluate variable extraction independently from rule agreement. Undocumented findings must never become negative inputs.
+
 ## Workflow
 
 1.  **Input**: A string of clinical text or a text file.
 2.  **Process**: Tokenizes and matches against patterns/dictionaries.
 3.  **Output**: JSON list of entities with spans and types.
+
+### Glaucoma medication extraction: GLLaucoMed candidate adaptation
+
+**Evidence reviewed:** The supplied PMID 42927148 could not be retrieved. The [journal abstract](https://www.sciencedirect.com/science/article/pii/S2666914526003040) and indexed [preprint methods](https://www.medrxiv.org/content/10.64898/2026.06.12.26355525v1.full) were reviewed; confirm final-version details before claiming replication. The preprint describes extraction with supporting citations, validation against the note, conditional revision, and medication standardization. It separates current topical medications and proposed topical changes by eye, and current oral medications and proposed oral changes by patient. It reports Azure AI Foundry inference in HIPAA-compliant containers under an institutional Microsoft business associate agreement; this is a reported deployment arrangement, not an independent security audit or a guarantee for other deployments.
+
+**Local workflow extensions (not claimed paper features):**
+
+1. Define `{patient_id, note_id, encounter_date, raw_medication, normalized_ingredients, strength, dose, frequency, route, laterality, temporal_status, change_action, effective_time, negation, uncertainty, evidence_span, offsets, adjudication_status}` before extraction. Preserve combination-drug ingredients and raw abbreviations; leave undocumented dose, laterality, or timing unknown.
+2. Separate current, historical, stopped, planned, and uncertain use; record start/stop/dose-change actions without treating a proposed change as completed. Resolve relative timing against documented anchors. Distinguish explicit nonuse from missing documentation, allergy, and negated plans; retain conflicting assertions for adjudication. Require verbatim source spans for each asserted field and null spans with missingness reasons for undocumented fields.
+3. Run extraction, note-grounded validation, conditional correction, and terminology normalization with versioned prompts and mappings. Keep original spans alongside normalized values; model self-validation does not replace clinician review.
+4. Process PHI only in an institution-approved environment with applicable agreements, restricted access, protected storage/transport, controlled retention, and access auditing. Minimize PHI in prompts and logs; keep evidence spans inside the same protected boundary. Send only medication terminology to external vocabulary lookups. Verify endpoint retention and training-use settings rather than assuming them from the model name or paper title.
+5. Reserve patient-disjoint local test data; obtain two clinician labels with third-clinician adjudication of disagreements. Evaluate current versus proposed and topical versus oral extraction separately, using eye-level topical and patient-level oral denominators. Report presence precision/recall/F1 separately from positive-case exact match and Jaccard similarity, with denominators and uncertainty. Audit drug, dose, frequency, laterality, temporal status, negation, evidence-span correctness, abstentions, and unresolved cases separately.
+
+**Reported evaluation scope:** The [study abstract](https://pubmed.ncbi.nlm.nih.gov/42369494/) describes 1,250 subjects, two glaucoma-specialist graders plus a third adjudicator, clinician-stratified 10%/10%/80% development/validation/test sets, Gwet AC1, binary F1, and positive-case exact match/Jaccard evaluation. These extraction endpoints do not establish clinical safety, external generalization, or security effectiveness; report numerical results only with their verified model, task, unit, and denominator.
 
 ## Example Usage
 
@@ -173,11 +193,13 @@ python3 Skills/Clinical/Clinical_NLP/entity_extractor.py \
 
 ### Worked example: PECARN intra-abdominal injury inputs
 
-**Verification status:** PMID 42893265 supplies the motivation for this example. Its primary record could not be retrieved during this update; study-specific eligibility criteria, rule implementation, and validation results remain unverified. Before documenting clinical applicability, inspect the full study and supplements to confirm age limits, trauma mechanism and timing, exclusions, sites, note selection, exact variable definitions and thresholds, missing-data handling, rule aggregation, reference standard, validation split, sample size, and reported results with uncertainty. Do not infer clinical readiness or performance from the title or substitute another PECARN study's results.
+**Reviewed evidence and eligibility:** The [study abstract](https://pubmed.ncbi.nlm.nih.gov/42893265/) describes a retrospective secondary analysis of children with blunt abdominal trauma at two urban pediatric EDs; the analyzed cohort comprised 196 children with complete physician ED notes. OpenAI o1 extraction and rule outputs were compared with clinician-derived references. Full methods and supplements could not be retrieved during this update. Exact age bounds, injury-to-presentation window, exclusions, recruitment dates, note-completeness criteria, variable operational definitions, missing-data policy, and validation split remain unverified. Complete notes do not establish that every predictor was documented. Do not substitute the original rule's population for this study's eligibility criteria.
+
+**Eligibility and definition record (local workflow):** Before replication, document each inclusion/exclusion criterion with its source section, supported value, and verification status; classify each encounter as eligible, ineligible, or unresolved with note evidence. For each of the seven inputs below, record the study's exact definition, threshold, assessment window, accepted synonyms, and missingness convention in a versioned dictionary. The table uses original-rule definitions, not verified operational definitions from this LLM study. Retain raw GCS separately from the derived threshold flag; do not conflate abdominal pain with examination tenderness or thoracic wall trauma with decreased breath sounds. Unverified definitions remain explicit gaps rather than inferred study methods.
 
 **Synthetic ED note (ED-001, initial assessment):** “Child evaluated after blunt torso trauma. GCS 15. No abdominal wall bruising or seat belt sign. Abdomen nontender. Denies abdominal pain. No vomiting since injury. Breath sounds possibly diminished on the left.” No thoracic wall examination is documented.
 
-Extract each variable into `{variable, status, raw_value, note_id, assessment_time, evidence_span}`; retain exact spans and offsets when available. Use `present`, `absent`, `missing`, or `uncertain`; preserve conflicting assertions with their individual provenance for adjudication. Here all evidence refers to ED-001's initial assessment:
+Extract each variable into `{variable, status, raw_value, note_id, assessment_time, evidence_span, offsets, missingness_reason, definition_version}`; retain exact spans and offsets when available. Use `present`, `absent`, `missing`, or `uncertain`; preserve conflicting assertions with their individual provenance for adjudication. Here all evidence refers to ED-001's initial assessment:
 
 | Adverse rule input | Extracted status/value | Evidence span |
 |---|---|---|
@@ -191,7 +213,7 @@ Extract each variable into `{variable, status, raw_value, note_id, assessment_ti
 
 **Separate calculation:** The seven inputs and GCS threshold follow the [original PECARN rule](https://pubmed.ncbi.nlm.nih.gov/23375510/). After eligibility is independently confirmed, deterministic code returns `very_low_risk` only when all seven adverse inputs are explicitly absent; any present input returns `not_very_low_risk`. If none is present but any is missing, uncertain, or conflicting, return `indeterminate` and retain the unresolved inputs. This abstention policy is an illustrative workflow safeguard, not a verified implementation from PMID 42893265. The example returns `indeterminate`, with thoracic wall trauma missing and decreased breath sounds uncertain. Do not impute either as absent, turn the rule into an unsupported numeric score, or interpret a positive input as an automatic CT order. Unconfirmed eligibility separately prevents clinical application.
 
-**Evaluation:** Against clinician-adjudicated notes, report per-variable confusion matrices, precision/recall, evidence-span correctness, and missing/uncertain/conflict handling errors. Separately compare deterministic rule outputs with outputs calculated from adjudicated inputs, reporting final agreement, false very-low-risk classifications, and indeterminate coverage with explicit denominators. Analyze cases where variable errors cancel out and leave the final classification unchanged. Rule agreement alone does not establish injury-outcome sensitivity or clinical safety; assess those only with confirmed outcome definitions and appropriate validation data.
+**Evaluation:** Freeze prompts and definitions before evaluating patient-disjoint held-out notes. Validate the deterministic calculator independently using adjudicated input combinations, including missing and conflicting inputs. Against clinician-adjudicated notes, report per-variable confusion matrices, precision/recall, evidence-span correctness, and missing/uncertain/conflict handling errors. Separately compare deterministic rule outputs with outputs calculated from adjudicated inputs, reporting final agreement, false very-low-risk classifications, and indeterminate coverage with explicit denominators. Analyze cases where variable errors cancel out and leave the final classification unchanged. Rule agreement alone does not establish injury-outcome sensitivity or clinical safety; assess those only with confirmed outcome definitions and appropriate validation data.
 
 ### Worked example: breast pathology biomarkers and triple-negative classification
 
@@ -212,6 +234,8 @@ Extract each variable into `{variable, status, raw_value, note_id, assessment_ti
 | HER2 IHC | “HER2 IHC: 2+ (equivocal)” | equivocal |
 | HER2 ISH | “ISH pending” | pending; no result |
 
+**Example context (local safeguard):** Link all four observations to P-001, specimen A, with the collection and report dates above, retaining the identifying source span. ER and PR assay methods are `unknown` because the synthetic text does not name them; do not infer IHC from percentages. HER2 assay context is explicitly IHC or ISH. Record an explicitly unknown receptor result as `unknown`, distinct from missing documentation, pending testing, and an equivocal measured result; none establishes receptor negativity.
+
 **Separate derivation:** For the aligned specimen/time, emit `{label: TNBC, value: indeterminate, input_observation_ids: [...], rule_version: ..., reason: HER2 unresolved}`. Under this workflow's abstention policy, return `true` only with all three receptors confirmed negative, `false` with a confirmed positive receptor, and otherwise `indeterminate`; unresolved conflicts or alignment prevent classification. If HER2 were missing, keep it missing and the label indeterminate. A synthetic alternative with HER2 IHC 1+ and the same ER/PR findings would yield `true`. A report explicitly calling the tumor “triple-negative” is a separate extracted assertion to compare with the derived label, never a replacement for missing receptor evidence.
 
 **Study evaluation design:** The study compared GPT-4o mini, GPT-4.1 nano, GPT-5 nano, and Gemini 2.5 Flash-Lite on the same 532 TCGA/GDC reports using zero-shot, few-shot, and CoT prompting. Receptor labels were compared with manually curated references; tumor size used largest-dimension bins (<2, 2–5, >5 cm). Evaluation retained failures as “not reported,” used four receptor classes (positive, negative, equivocal, not reported), and reported accuracy, precision, recall, F1, and specificity. Receptor-accuracy intervals used 2000 report-level percentile bootstrap resamples, seed 42. TNBC classification was evaluated separately. Annotator counts/agreement and independent external validation were not supplied.
@@ -224,10 +248,12 @@ Extract each variable into `{variable, status, raw_value, note_id, assessment_ti
 *   https://pubmed.ncbi.nlm.nih.gov/41886942/
 *   https://pubmed.ncbi.nlm.nih.gov/42004490/
 *   https://pubmed.ncbi.nlm.nih.gov/23375510/ — Original PECARN intra-abdominal injury rule definitions.
-*   https://pubmed.ncbi.nlm.nih.gov/42893265/ — Automated calculation from ED notes; study-specific methods and validation pending primary-source verification.
+*   https://pubmed.ncbi.nlm.nih.gov/42893265/ — Automated calculation from ED notes; abstract reviewed, full eligibility and operational definitions pending verification. Publisher: https://www.sciencedirect.com/science/article/pii/S2688115226002006.
 *   https://pubmed.ncbi.nlm.nih.gov/42886999/ — NSCLC metastasis classification; reviewed full text: https://cancer.jmir.org/2026/1/e99573/.
 *   https://pubmed.ncbi.nlm.nih.gov/42914107/ — Label-efficient radiology negation detection through knowledge distillation; multisite internal validation. Reviewed full text: https://medinform.jmir.org/2026/1/e103912/.
 
 *   https://pubmed.ncbi.nlm.nih.gov/42913472/ — Breast pathology biomarker extraction and TNBC identification. Reviewed schema, methods, and evaluation: https://formative.jmir.org/2026/1/e97117/.
+
+*   https://pubmed.ncbi.nlm.nih.gov/42927148/ — GLLaucoMed candidate case study (supplied journal record; retrieval unavailable). Reviewed journal abstract: https://www.sciencedirect.com/science/article/pii/S2666914526003040; indexed preprint methods: https://www.medrxiv.org/content/10.64898/2026.06.12.26355525v1.full; preprint abstract: https://pubmed.ncbi.nlm.nih.gov/42369494/.
 
 <!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->

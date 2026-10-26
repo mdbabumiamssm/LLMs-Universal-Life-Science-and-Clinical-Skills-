@@ -49,6 +49,8 @@ The **Radiomics Pathomics Fusion Agent** integrates multimodal medical imaging d
 
 7. **Stage I NSCLC Postoperative Risk Stratification**: Apply the CT–pathology-report DLRTransformer example described below, with patient-level partitioning, modality ablations, missing-modality policies, and survival calibration.
 
+8. **Candidate CT-Plus-Pathology Transformer Case Study**: Consider PMID 42886039 for postoperative stage I NSCLC risk stratification after methods review confirms pathology input type, endpoint, prediction time, and validation design. The supplied bibliographic finding does not establish performance or validation details; verify the reported design below against the full methods before reuse. Align modalities by patient and index resection with documented acquisition timing. Recommended additional checks, unless explicitly reported, include CT-only and pathology-only versus fused baselines on identical patient splits; missing-modality exclusions, fallback or abstention policies, and evaluation of supported missing-input patterns; patient-level splitting before preprocessing with all derived samples kept together, training-only fitting and tuning, and exclusion of outcome-derived predictors. Match discrimination and calibration to the confirmed outcome: censoring-aware C-index/time-dependent AUC and calibration at prespecified horizons for survival, or AUROC/precision-recall and probability calibration for a fixed-horizon binary outcome with appropriate follow-up handling. Record paper-reported validation separately from these recommended checks and any locally performed validation.
+
 ## Supported Imaging Modalities
 
 | Modality | Features Extracted | Resolution |
