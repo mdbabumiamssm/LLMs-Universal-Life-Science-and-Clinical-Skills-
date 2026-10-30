@@ -7,8 +7,7 @@ chooseLowessSpan, and related utility functions.
 """
 
 import numpy as np
-from scipy import stats, interpolate
-import warnings
+from scipy import stats
 
 
 def squeeze_var(var, df, covariate=None, span=None, robust=False, winsor_tail_p=(0.05, 0.1), legacy=None):

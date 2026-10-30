@@ -12,7 +12,6 @@
 
 import cobra
 from cobra.flux_analysis import single_gene_deletion
-import pandas as pd
 
 
 def analyze_single_knockouts(model, growth_threshold=0.01):

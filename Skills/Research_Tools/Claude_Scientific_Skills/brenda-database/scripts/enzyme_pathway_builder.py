@@ -24,10 +24,8 @@ Usage:
 """
 
 import re
-import json
 import time
-from typing import List, Dict, Any, Optional, Set, Tuple
-from pathlib import Path
+from typing import List, Dict, Any
 
 try:
     import networkx as nx

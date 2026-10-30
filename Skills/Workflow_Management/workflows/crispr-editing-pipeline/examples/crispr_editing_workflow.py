@@ -17,7 +17,6 @@ Requires: biopython, pandas, numpy, matplotlib, primer3-py
 import re
 import json
 import pandas as pd
-import numpy as np
 import matplotlib.pyplot as plt
 from Bio.Seq import Seq
 from pathlib import Path

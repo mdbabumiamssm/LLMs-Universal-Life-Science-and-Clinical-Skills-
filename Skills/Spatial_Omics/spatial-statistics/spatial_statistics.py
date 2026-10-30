@@ -29,7 +29,6 @@ Usage:
 from __future__ import annotations
 
 import argparse
-import json
 import logging
 import subprocess
 import sys
@@ -59,7 +58,6 @@ from omicsclaw.common.report import (
 )
 from omicsclaw.spatial.adata_utils import (
     get_spatial_key,
-    require_preprocessed,
     require_spatial_coords,
     store_analysis_metadata,
 )

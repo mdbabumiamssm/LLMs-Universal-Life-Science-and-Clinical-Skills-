@@ -7,7 +7,6 @@ Customize the observation space, action space, and environment logic for your ta
 """
 
 import numpy as np
-import pufferlib
 from pufferlib import PufferEnv
 
 

@@ -11,7 +11,6 @@
 import pysam
 import numpy as np
 import argparse
-from collections import Counter
 
 def validate_bam(bam_file, sample_size=100000):
     bam = pysam.AlignmentFile(bam_file, 'rb')
