@@ -8,7 +8,7 @@
 #
 # Provenance: Authenticated by MD BABU MIA
 
-from typing import List, Dict, Optional
+from typing import List, Dict
 
 # MedPrompt Implementation (Microsoft Research / SOTA 2026)
 # Strategy: Dynamic Few-Shot + Chain of Thought + Ensemble

@@ -11,7 +11,6 @@
 '''Lineage tree reconstruction with Cassiopeia'''
 import cassiopeia as cas
 import pandas as pd
-import numpy as np
 
 # Option 1: Load pre-built character matrix
 # Rows = cells, Columns = barcode sites

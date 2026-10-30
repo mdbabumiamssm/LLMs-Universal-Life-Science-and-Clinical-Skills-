@@ -20,7 +20,7 @@ Capabilities:
 3. Optimize plate layouts.
 """
 
-from typing import Dict, List, Optional
+from typing import Dict, List
 
 class LabProtocolGenerator:
     def __init__(self, robot_type: str = "Opentrons_OT2"):

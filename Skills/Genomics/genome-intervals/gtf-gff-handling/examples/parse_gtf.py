@@ -11,7 +11,6 @@
 #!/usr/bin/env python3
 '''Parse GTF files and extract gene information using gtfparse.'''
 
-import gtfparse
 import pandas as pd
 
 # For demo, create a minimal GTF-like structure

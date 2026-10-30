@@ -23,7 +23,6 @@ Implemented Patterns:
 
 from typing import List, Dict, Any, Optional
 from abc import ABC, abstractmethod
-import math
 
 # --- Interfaces ---
 

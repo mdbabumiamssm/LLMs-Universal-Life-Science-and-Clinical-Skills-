@@ -34,9 +34,8 @@ Version: 2.0.0
 Date: January 2026
 """
 
-from typing import Dict, List, Optional, Tuple, Any
+from typing import Dict, List, Any
 from dataclasses import dataclass
-import math
 
 # --- RDKit Import with Fallback ---
 

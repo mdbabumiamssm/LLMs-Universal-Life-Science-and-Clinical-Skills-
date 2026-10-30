@@ -9,12 +9,11 @@ Usage:
     python gap_analyzer.py --docs-dir <path> [--output <path>]
 """
 
-import os
 import sys
 import argparse
 import json
 from pathlib import Path
-from typing import Dict, List, Set, Tuple
+from typing import Dict, List, Tuple
 from datetime import datetime
 
 

@@ -10,8 +10,7 @@
 
 import argparse
 import json
-import sys
-from typing import List, Dict, Any
+from typing import Dict, Any
 
 class CRISPRPredictor:
     """

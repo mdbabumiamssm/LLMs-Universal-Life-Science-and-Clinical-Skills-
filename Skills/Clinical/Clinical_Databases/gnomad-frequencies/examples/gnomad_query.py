@@ -11,7 +11,6 @@
 '''Query gnomAD for population allele frequencies'''
 
 import myvariant
-import pandas as pd
 
 mv = myvariant.MyVariantInfo()
 

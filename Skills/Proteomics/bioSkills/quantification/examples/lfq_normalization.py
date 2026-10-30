@@ -11,7 +11,6 @@
 '''Label-free quantification normalization'''
 import pandas as pd
 import numpy as np
-from scipy import stats
 
 intensity_matrix = pd.read_csv('intensity_matrix.csv', index_col=0)
 sample_cols = intensity_matrix.columns.tolist()
