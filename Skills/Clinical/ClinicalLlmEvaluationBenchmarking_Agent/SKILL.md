@@ -709,6 +709,16 @@ Use the systematic review and experimental benchmark of AI-generated clinical-no
 222. **Systematic-review taxonomy and evaluator validation for clinical notes**  
    For AI-generated clinical-note evaluation, score factuality, completeness, clinical usefulness, style, temporal consistency, hallucination, and potential harm as distinct dimensions; use blinded clinician review, report inter-rater reliability, and check each automated metric's correlation with human ratings for the dimension it is intended to measure.
 
+223. **Statistical study-design and analysis checklist (PMID 42962902)**  
+   Apply the following source-support checks before finalizing a comparative benchmark's analysis plan. Verification is limited to the PubMed abstract retrieved through Europe PMC; full-text recommendations remain unverified.
+
+   - **Unit of analysis and repeated outputs — supported for shared questions:** Treat the question as the unit of pairing when each source answers the same questions; responses across sources are correlated observations, not independent samples. The abstract's repeated-measures guidance concerns shared questions across sources, not explicitly repeated stochastic generations within a model-question pair; record that distinction and verify support before attributing a within-pair replication method to this paper.
+   - **Paired comparisons — supported:** Choose methods appropriate to the outcome and assumptions: Friedman or repeated-measures ANOVA for overall comparisons, followed by Wilcoxon signed-rank or paired t-test contrasts. Avoid independent-sample tests for this paired design. Report effect sizes; consider mixed-effects regression with a question random effect to account for pairing.
+   - **Multiplicity — supported:** Apply appropriate multiplicity correction to paired follow-up contrasts; the abstract does not specify a particular correction method.
+   - **Uncertainty estimates — not explicitly verified:** Check the benchmark's uncertainty-estimation plan and whether it respects pairing; effect sizes are supported, but a confidence-interval or resampling prescription is not established by the abstract.
+   - **Sample-size justification — not explicitly verified:** Check that the protocol documents its sample-size rationale and distinguishes question count from output count; the abstract discusses power consequences of ignoring pairing but provides no sample-size calculation or target.
+   - **Model selection versus final testing — not explicitly verified:** Check whether model/prompt selection data are separated from final testing and document any reuse; do not attribute a held-out testing or selection protocol to this paper without verifying the full text. Treat these unverified checklist topics as protocol audit questions, not established recommendations from this source.
+
 ## On-Prem Clinical LLM Deployment Risk Evaluation
 
 When an evaluation includes open-source reasoning model distillations, including distilled DeepSeek-R1 derivatives, for on-premises diagnosis tasks, treat comparative findings such as the 2026 J Med Syst study as a prompt for pre-deployment evaluation rather than as evidence of local clinical readiness, and document risk controls for:
@@ -760,3 +770,4 @@ When an evaluation includes open-source reasoning model distillations, including
 - PubMed: Gülhan Güner S, Tan Z, Gülpınar S. "Comparative performance of artificial intelligence models in intensive care nursing questions: an evaluation of ChatGPT, DeepSeek, and Google Gemini." BMC Nurs. 2026 May 2. https://pubmed.ncbi.nlm.nih.gov/42069581/
 - PubMed: Kabir R, Braud SC, Hinson CS, Nazerali RS. "Are large language models consistent with the ASPS and AAPS guidelines? A comparison of AI chatbot recommendations and plastic surgery clinical guidance." J Plast Reconstr Aesthet Surg. 2026 May. https://pubmed.ncbi.nlm.nih.gov/41985209/
 - PubMed: Clark KR. "Analysis of AI-Generated Radiography Responses Using a Closed-System LLM." Radiol Technol. 2026 May-Jun. https://pubmed.ncbi.nlm.nih.gov/42024724/
+- PubMed: Vahedi H, Jafarizadeh A. "Statistical Pitfalls in Large Language Model Evaluation: A Practical Guide to Study Design and Analysis." J Clin Epidemiol. 2026 Oct 30. https://pubmed.ncbi.nlm.nih.gov/42962902/
