@@ -11,7 +11,6 @@
 '''Perturb-seq analysis with Pertpy'''
 import scanpy as sc
 import pertpy as pt
-import pandas as pd
 
 # Load data
 adata = sc.read_h5ad('perturb_seq.h5ad')

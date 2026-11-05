@@ -10,10 +10,8 @@
 
 #!/usr/bin/env python3
 import argparse
-import sys
 import os
 import time
-import json
 from datetime import datetime
 
 def run_st_agent(image_path, h5ad_path, task, output_dir="."):

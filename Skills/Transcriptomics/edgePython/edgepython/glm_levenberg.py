@@ -6,8 +6,7 @@ Port of edgeR's mglmLevenberg and nbinomDeviance (C/C++ code reimplemented in Nu
 """
 
 import numpy as np
-from .compressed_matrix import (CompressedMatrix, compress_offsets,
-                                 compress_weights, compress_dispersions)
+from .compressed_matrix import (CompressedMatrix)
 
 
 def mglm_levenberg(y, design, dispersion=0, offset=0, weights=None,

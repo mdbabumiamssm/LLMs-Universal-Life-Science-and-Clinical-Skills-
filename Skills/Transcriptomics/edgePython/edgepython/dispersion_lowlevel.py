@@ -11,13 +11,11 @@ import numpy as np
 import warnings
 from scipy.special import gammaln, digamma, polygamma
 from scipy.optimize import minimize_scalar, minimize
-from scipy.interpolate import CubicSpline
 from numba import njit
 
 from .utils import (expand_as_matrix, systematic_subset, moving_average_by_col,
                     cut_with_min_n)
 from .expression import ave_log_cpm
-from .limma_port import is_fullrank
 
 
 def _cox_reid_adjust_from_xtwx(XtWX):
@@ -92,7 +90,7 @@ def adjusted_profile_lik_grid(grid_dispersions, y, design, offset, weights=None)
     -------
     ndarray of shape (ngenes, ngrid) — APL values.
     """
-    from .glm_fit import mglm_one_group, _expand_to_matrix
+    from .glm_fit import mglm_one_group
     from .utils import design_as_factor
 
     y = np.asarray(y, dtype=np.float64)

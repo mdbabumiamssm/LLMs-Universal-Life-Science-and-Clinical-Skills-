@@ -10,7 +10,6 @@
 
 import scvelo as scv
 import scanpy as sc
-import numpy as np
 
 scv.settings.verbosity = 3
 scv.settings.set_figure_params('scvelo')

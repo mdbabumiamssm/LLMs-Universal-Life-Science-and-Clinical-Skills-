@@ -12,7 +12,6 @@
 
 import subprocess
 import cobra
-from pathlib import Path
 
 
 def reconstruct_with_carveme(fasta_path, output_path, media='M9', grampos=False, verbose=False):

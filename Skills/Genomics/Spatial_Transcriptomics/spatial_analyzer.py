@@ -8,12 +8,9 @@
 #
 # Provenance: Authenticated by MD BABU MIA
 
-import os
 import scanpy as sc
-import pandas as pd
-import numpy as np
 import matplotlib.pyplot as plt
-from typing import Optional, List
+from typing import Optional
 
 class SpatialAnalyzer:
     """

@@ -7,7 +7,6 @@ Tests for the I/O schema types.
 Validates Pydantic model construction, serialization, and defaults.
 """
 
-import pytest
 from biokernel.schema.io_types import (
     AgentRequest,
     AgentResponse,

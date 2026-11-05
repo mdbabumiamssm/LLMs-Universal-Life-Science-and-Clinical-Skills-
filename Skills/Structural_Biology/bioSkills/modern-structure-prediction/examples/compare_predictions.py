@@ -68,7 +68,6 @@ def compare_multiple_predictions(pdb_files, labels=None):
 
 def extract_plddt_comparison(pdb_files, labels=None):
     '''Extract and compare pLDDT across predictions'''
-    from collections import defaultdict
 
     if labels is None:
         labels = [f'Model_{i}' for i in range(len(pdb_files))]

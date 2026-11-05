@@ -12,7 +12,6 @@
 import numpy as np
 import tifffile
 from scipy import ndimage
-from pathlib import Path
 
 def remove_hot_pixels(img, threshold=50):
     '''Remove hot pixels using median filter comparison'''

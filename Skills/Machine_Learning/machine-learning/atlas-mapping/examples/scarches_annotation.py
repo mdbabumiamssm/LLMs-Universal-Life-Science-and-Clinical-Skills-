@@ -12,7 +12,6 @@
 
 import scvi
 import scanpy as sc
-import pandas as pd
 
 adata_ref = sc.read_h5ad('reference.h5ad')
 print(f'Reference: {adata_ref.n_obs} cells, {adata_ref.n_vars} genes')

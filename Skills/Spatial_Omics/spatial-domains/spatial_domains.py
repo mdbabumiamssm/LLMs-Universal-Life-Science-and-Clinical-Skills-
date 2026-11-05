@@ -50,7 +50,7 @@ from omicsclaw.spatial.adata_utils import (
     store_analysis_metadata,
 )
 from omicsclaw.spatial.viz_utils import save_figure
-from omicsclaw.spatial.viz import VizParams, plot_features, plot_integration
+from omicsclaw.spatial.viz import VizParams, plot_features
 
 logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
 logger = logging.getLogger(__name__)

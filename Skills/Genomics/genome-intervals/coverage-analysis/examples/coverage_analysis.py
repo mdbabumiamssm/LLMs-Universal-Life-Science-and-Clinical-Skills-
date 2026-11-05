@@ -12,7 +12,6 @@
 '''Demonstrate coverage analysis with pybedtools.'''
 
 import pybedtools
-import subprocess
 
 # Create sample BED data for demonstration
 regions_str = '''chr1\t100\t500\tregion1\t0\t+

@@ -8,11 +8,9 @@ Port of edgeR's exactTest, equalizeLibSizes, q2qnbinom, splitIntoGroups.
 import math
 import numpy as np
 import pandas as pd
-from scipy.stats import nbinom, norm
-from scipy.special import gammaln, logsumexp
 from numba import njit
 
-from .utils import drop_empty_levels, binom_test
+from .utils import binom_test
 
 
 @njit(cache=True)
