@@ -17,7 +17,6 @@ CJK 字体自动检测与 matplotlib 配置
 """
 
 import os
-import sys
 
 # 确保非交互环境下不报错
 import matplotlib

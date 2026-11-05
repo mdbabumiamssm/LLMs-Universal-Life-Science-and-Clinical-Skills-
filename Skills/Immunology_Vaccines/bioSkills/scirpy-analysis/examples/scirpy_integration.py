@@ -12,7 +12,6 @@
 
 import scirpy as ir
 import scanpy as sc
-import pandas as pd
 
 # Load scRNA-seq data
 adata = sc.read_h5ad('scrnaseq.h5ad')

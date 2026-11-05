@@ -13,11 +13,11 @@ from scipy.optimize import minimize_scalar
 
 from .expression import ave_log_cpm
 from .utils import (expand_as_matrix, moving_average_by_col, cut_with_min_n,
-                    drop_empty_levels, systematic_subset)
+                    drop_empty_levels)
 from .smoothing import locfit_by_col, loess_by_col
-from .limma_port import squeeze_var, choose_lowess_span
+from .limma_port import squeeze_var
 from .dispersion_lowlevel import (
-    adjusted_profile_lik, adjusted_profile_lik_grid, maximize_interpolant,
+    adjusted_profile_lik_grid, maximize_interpolant,
     cond_log_lik_der_delta, common_cond_log_lik_der_delta,
     disp_cox_reid, disp_cox_reid_interpolate_tagwise,
     disp_cox_reid_spline_trend, disp_cox_reid_power_trend,

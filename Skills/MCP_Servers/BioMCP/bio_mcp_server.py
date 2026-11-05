@@ -8,7 +8,6 @@
 #
 # Provenance: Authenticated by MD BABU MIA
 
-import json
 from typing import Dict, Any
 
 # BioMCP Server

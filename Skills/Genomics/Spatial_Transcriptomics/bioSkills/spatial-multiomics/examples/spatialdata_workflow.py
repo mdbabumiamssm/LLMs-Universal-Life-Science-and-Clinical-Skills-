@@ -9,8 +9,7 @@
 # Provenance: Authenticated by MD BABU MIA
 
 '''Multi-modal spatial analysis with SpatialData'''
-import spatialdata as sd
-from spatialdata_io import xenium, visium_hd
+from spatialdata_io import xenium
 import scanpy as sc
 
 # Load Xenium data (10x subcellular platform)

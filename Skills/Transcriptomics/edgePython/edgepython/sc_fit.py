@@ -18,14 +18,11 @@ from __future__ import annotations
 import math
 import warnings
 from concurrent.futures import ProcessPoolExecutor
-from math import lgamma as _lgamma
-from typing import Any
 
 import numpy as np
 import pandas as pd
 from numba import njit
 from scipy.optimize import minimize as _minimize
-from scipy.special import digamma as _digamma, gammaln as _gammaln
 from scipy.stats import chi2 as _chi2
 
 from .normalization import calc_norm_factors
@@ -1200,7 +1197,6 @@ def glm_sc_fit(y, cell_meta=None, design=None, sample=None,
     # Non-zero cell counts per gene
     if hasattr(counts, 'nnz'):
         # sparse
-        from scipy.sparse import issparse
         nz_per_gene = np.diff(counts.indptr) if hasattr(counts, 'indptr') else \
             np.array([(counts[g, :] != 0).sum() for g in range(ngene)])
     else:

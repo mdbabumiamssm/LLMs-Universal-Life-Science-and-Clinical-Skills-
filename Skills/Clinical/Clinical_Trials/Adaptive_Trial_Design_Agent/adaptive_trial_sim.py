@@ -10,7 +10,7 @@
 
 import numpy as np
 from dataclasses import dataclass
-from typing import List, Dict
+from typing import List
 
 @dataclass
 class TrialArm:

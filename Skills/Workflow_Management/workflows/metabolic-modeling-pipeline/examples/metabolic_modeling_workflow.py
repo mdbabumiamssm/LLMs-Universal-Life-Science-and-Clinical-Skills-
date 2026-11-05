@@ -15,9 +15,7 @@ Covers reconstruction, curation, FBA, and gene essentiality.
 Requires: cobra, carveme, memote, pandas, numpy, matplotlib
 '''
 import subprocess
-import json
 import pandas as pd
-import numpy as np
 import matplotlib.pyplot as plt
 from pathlib import Path
 

@@ -12,7 +12,6 @@
 
 import subprocess
 import pandas as pd
-from collections import Counter
 
 
 def run_nextclade(sequences_fasta, dataset_dir, output_tsv):

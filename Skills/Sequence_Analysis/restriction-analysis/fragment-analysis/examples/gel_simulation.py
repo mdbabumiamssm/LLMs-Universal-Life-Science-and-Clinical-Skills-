@@ -11,7 +11,7 @@
 '''Simulate gel electrophoresis pattern'''
 
 from Bio import SeqIO
-from Bio.Restriction import EcoRI, BamHI, HindIII, RestrictionBatch, Analysis
+from Bio.Restriction import EcoRI, BamHI, HindIII
 
 record = SeqIO.read('sequence.fasta', 'fasta')
 seq = record.seq

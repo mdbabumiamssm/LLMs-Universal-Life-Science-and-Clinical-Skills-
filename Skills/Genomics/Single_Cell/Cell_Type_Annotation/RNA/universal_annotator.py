@@ -10,7 +10,7 @@
 
 import numpy as np
 import pandas as pd
-from typing import Optional, List, Union
+from typing import Optional
 
 try:
     import scanpy as sc

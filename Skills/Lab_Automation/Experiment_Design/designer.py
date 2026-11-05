@@ -8,7 +8,7 @@
 #
 # Provenance: Authenticated by MD BABU MIA
 
-from typing import List, Dict, Union
+from typing import List, Dict
 
 # Experiment Designer
 # Focus: Thermo Fisher / Lab Automation Partnership

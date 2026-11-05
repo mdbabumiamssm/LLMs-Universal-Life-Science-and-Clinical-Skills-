@@ -10,7 +10,6 @@
 
 '''Consensus hit calling from multiple methods'''
 import pandas as pd
-import numpy as np
 
 # Load results from different methods
 mageck = pd.read_csv('mageck.gene_summary.txt', sep='\t')

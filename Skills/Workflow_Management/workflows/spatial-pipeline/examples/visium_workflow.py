@@ -13,7 +13,6 @@
 import scanpy as sc
 import squidpy as sq
 import matplotlib.pyplot as plt
-import numpy as np
 import os
 
 sc.settings.verbosity = 1

@@ -14,7 +14,6 @@ import pandas as pd
 import numpy as np
 from sklearn.linear_model import LassoCV
 from sklearn.preprocessing import StandardScaler
-from sklearn.model_selection import StratifiedKFold
 
 expr = pd.read_csv('expression.csv', index_col=0)
 meta = pd.read_csv('metadata.csv', index_col=0)

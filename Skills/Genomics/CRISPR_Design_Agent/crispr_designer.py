@@ -19,7 +19,6 @@ Functionality:
 4. Check for off-targets (Mocked).
 """
 
-import re
 
 class CRISPRDesigner:
     def __init__(self):

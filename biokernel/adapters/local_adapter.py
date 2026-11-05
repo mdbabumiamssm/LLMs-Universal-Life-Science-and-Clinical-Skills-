@@ -11,7 +11,7 @@ API endpoint (e.g., vLLM, llama.cpp server, LM Studio).
 from __future__ import annotations
 
 import time
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, Optional
 
 from biokernel.interface.llm_provider import LLMProvider
 from biokernel.observability import get_logger
@@ -19,7 +19,6 @@ from biokernel.schema.io_types import (
     FinishReason,
     LLMRequest,
     LLMResponse,
-    ToolDefinition,
 )
 
 logger = get_logger("local_adapter")

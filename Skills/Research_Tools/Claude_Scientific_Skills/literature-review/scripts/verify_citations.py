@@ -8,7 +8,6 @@ import re
 import requests
 import json
 from typing import Dict, List, Tuple
-from urllib.parse import urlparse
 import time
 
 class CitationVerifier:
