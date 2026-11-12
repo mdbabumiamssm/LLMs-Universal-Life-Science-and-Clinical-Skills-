@@ -10,8 +10,6 @@
 
 import muon as mu
 import scanpy as sc
-import anndata as ad
-import numpy as np
 
 # Read 10X multiome data (RNA + ADT)
 # muon reads 10X filtered_feature_bc_matrix folder with both modalities

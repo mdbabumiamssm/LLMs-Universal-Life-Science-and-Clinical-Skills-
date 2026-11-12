@@ -8,9 +8,8 @@
 #
 # Provenance: Authenticated by MD BABU MIA
 
-from typing import List, Dict, Any
+from typing import List
 from dataclasses import dataclass
-import random
 
 @dataclass
 class PlanNode:
@@ -70,7 +69,6 @@ class PlanAndSolveAgent:
 # --- Example Usage ---
 if __name__ == "__main__":
     import argparse
-    import sys
     
     parser = argparse.ArgumentParser(description="Plan-and-Solve Agent")
     parser.add_argument("--query", required=True, help="Complex query to decompose and solve")

@@ -11,8 +11,6 @@
 '''Detect ribosome stalling sites from Ribo-seq data'''
 
 import numpy as np
-import pandas as pd
-from collections import defaultdict
 
 def find_pause_sites(occupancy_per_codon, zscore_threshold=3.0):
     '''Find positions with elevated ribosome occupancy

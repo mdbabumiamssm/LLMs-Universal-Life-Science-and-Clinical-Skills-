@@ -16,7 +16,6 @@ Includes a Mock LLM to demonstrate the "Thought -> Action -> Observation" loop.
 """
 
 import re
-import time
 
 class MockLLM:
     """Simulates an LLM that knows how to use a Calculator tool."""

@@ -8,11 +8,8 @@
 #
 # Provenance: Authenticated by MD BABU MIA
 
-import os
-import glob
 # import openslide # Requires system lib
-import numpy as np
-from typing import List, Tuple
+from typing import List
 
 class WSIAnalyzer:
     """

@@ -14,7 +14,6 @@ import sys
 from pathlib import Path
 
 import scanpy as sc
-import numpy as np
 import pandas as pd
 
 _PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent.parent
@@ -25,7 +24,6 @@ from omicsclaw.common.report import generate_report_header, generate_report_foot
 from omicsclaw.common.checksums import sha256_file
 from omicsclaw.singlecell.adata_utils import store_analysis_metadata
 from omicsclaw.singlecell.viz_utils import save_figure
-from omicsclaw.singlecell.dependency_manager import require, get
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt

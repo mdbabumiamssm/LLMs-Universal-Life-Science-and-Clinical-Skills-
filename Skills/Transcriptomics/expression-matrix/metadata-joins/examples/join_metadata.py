@@ -12,7 +12,6 @@
 '''Join sample metadata with expression data'''
 
 import pandas as pd
-import anndata as ad
 
 def join_metadata(counts_df, metadata_df, sample_col='sample_id'):
     '''Join metadata to count matrix columns'''

@@ -4,8 +4,6 @@ Implements:  sc-markers (wilcoxon)  ->  sc-pathway-scoring (AUCell lymphoid sig)
              ->  sc-cell-annotation (marker/score-based manual mapping)
 """
 import os
-import numpy as np
-import pandas as pd
 import scanpy as sc
 import matplotlib
 matplotlib.use("Agg")

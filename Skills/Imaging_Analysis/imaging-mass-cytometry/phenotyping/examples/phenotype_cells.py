@@ -12,7 +12,6 @@
 import anndata as ad
 import scanpy as sc
 import numpy as np
-import pandas as pd
 
 # Load data
 adata = ad.read_h5ad('imc_segmented.h5ad')

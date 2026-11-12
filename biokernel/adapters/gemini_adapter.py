@@ -14,7 +14,7 @@ from __future__ import annotations
 
 import os
 import time
-from typing import Any, AsyncIterator, Dict, List, Optional
+from typing import Any, Dict, Optional
 
 from biokernel.interface.llm_provider import LLMProvider
 from biokernel.observability import get_logger
@@ -22,9 +22,6 @@ from biokernel.schema.io_types import (
     FinishReason,
     LLMRequest,
     LLMResponse,
-    ToolCall,
-    ToolDefinition,
-    ToolResult,
 )
 
 logger = get_logger("gemini_adapter")
