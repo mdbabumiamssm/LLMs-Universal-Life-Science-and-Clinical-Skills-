@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-11-12T14:39:53.683931+00:00",
+  "generated_at": "2026-11-13T15:31:01.203339+00:00",
   "generator": "ARTIFICIALINTELLIGENCEGROUP-pipeline v1.0",
-  "total_skills": 1245,
+  "total_skills": 1248,
   "total_errors": 16,
   "skills": [
     {
@@ -2519,7 +2519,7 @@
       ],
       "file_path": "Skills/Drug_Discovery/AntiochVsEnsembleVirtualScreening_Agent/SKILL.md",
       "relative_path": "Drug_Discovery/AntiochVsEnsembleVirtualScreening_Agent/SKILL.md",
-      "last_modified": "2026-11-11T14:46:09.415055+00:00",
+      "last_modified": "2026-11-12T14:40:01.479654+00:00",
       "body_length": 12229,
       "capabilities": [
         "Overview",
@@ -3024,7 +3024,7 @@
       ],
       "file_path": "Skills/Drug_Discovery/PyriteProteinLigandPoseRanking_Agent/SKILL.md",
       "relative_path": "Drug_Discovery/PyriteProteinLigandPoseRanking_Agent/SKILL.md",
-      "last_modified": "2026-11-11T14:43:13.176039+00:00",
+      "last_modified": "2026-11-12T14:40:01.479654+00:00",
       "body_length": 8558,
       "capabilities": [
         "Overview",
@@ -17451,6 +17451,31 @@
       ]
     },
     {
+      "name": "grebi-biomedical-data-integration",
+      "description": "Integrate biomedical knowledge with GrEBI through ontology-aware identifier mapping, provenance-preserving graph queries, and verified HPC pipeline, API, and MCP workflows.",
+      "tool_type": "",
+      "primary_tool": "",
+      "measurable_outcome": "Execute skill workflow successfully with valid output within 15 minutes.",
+      "allowed-tools": [
+        "read_file",
+        "run_shell_command",
+        "web_fetch"
+      ],
+      "file_path": "Skills/MCP_Servers/GrebiBiomedicalDataIntegration_Agent/SKILL.md",
+      "relative_path": "MCP_Servers/GrebiBiomedicalDataIntegration_Agent/SKILL.md",
+      "last_modified": "2026-11-13T15:29:32.569281+00:00",
+      "body_length": 9999,
+      "capabilities": [
+        "Overview",
+        "When to Use This Skill",
+        "Core Capabilities",
+        "Query workflow",
+        "Aggregation workflow",
+        "Inputs / Outputs",
+        "References"
+      ]
+    },
+    {
       "name": "mcp-operations-2026",
       "description": "Implement and operate Model Context Protocol systems safely. Use when designing MCP clients or servers, selecting transports, configuring auth, onboarding remote servers, or enforcing approval and egress controls.",
       "tool_type": "",
@@ -17531,8 +17556,31 @@
       ],
       "file_path": "Skills/MCP_Servers/PubmedEuropePmcMcpRetrieval_Agent/SKILL.md",
       "relative_path": "MCP_Servers/PubmedEuropePmcMcpRetrieval_Agent/SKILL.md",
-      "last_modified": "2026-11-12T14:39:49.740754+00:00",
+      "last_modified": "2026-11-12T14:40:01.480654+00:00",
       "body_length": 7976,
+      "capabilities": [
+        "Overview",
+        "When to Use This Skill",
+        "Core Capabilities",
+        "Inputs / Outputs",
+        "References"
+      ]
+    },
+    {
+      "name": "pubmed-europe-pmc-mcp",
+      "description": "Search PubMed and Europe PMC through MCP, retrieve article metadata and available full text, resolve identifiers, and extract evidence with citations and MeSH-guided queries.",
+      "tool_type": "",
+      "primary_tool": "",
+      "measurable_outcome": "Execute skill workflow successfully with valid output within 15 minutes.",
+      "allowed-tools": [
+        "read_file",
+        "run_shell_command",
+        "web_fetch"
+      ],
+      "file_path": "Skills/MCP_Servers/PubmedEuropePmcMcp_Agent/SKILL.md",
+      "relative_path": "MCP_Servers/PubmedEuropePmcMcp_Agent/SKILL.md",
+      "last_modified": "2026-11-13T15:27:52.250037+00:00",
+      "body_length": 5892,
       "capabilities": [
         "Overview",
         "When to Use This Skill",
@@ -30584,6 +30632,29 @@
       "relative_path": "Spatial_Omics/DirectionAwareSpatialTranscriptomics_Agent/SKILL.md",
       "last_modified": "2026-10-21T13:06:57.550840+00:00",
       "body_length": 8726,
+      "capabilities": [
+        "Overview",
+        "When to Use This Skill",
+        "Core Capabilities",
+        "Inputs / Outputs",
+        "References"
+      ]
+    },
+    {
+      "name": "voice-histology-transcriptome-prediction",
+      "description": "Prepare H&E images for VOICE single-cell transcriptome prediction, verify model access and spatial alignment, and evaluate predicted expression against held-out measurements.",
+      "tool_type": "",
+      "primary_tool": "",
+      "measurable_outcome": "Execute skill workflow successfully with valid output within 15 minutes.",
+      "allowed-tools": [
+        "read_file",
+        "run_shell_command",
+        "web_fetch"
+      ],
+      "file_path": "Skills/Spatial_Omics/VoiceHistologyTranscriptomePrediction_Agent/SKILL.md",
+      "relative_path": "Spatial_Omics/VoiceHistologyTranscriptomePrediction_Agent/SKILL.md",
+      "last_modified": "2026-11-13T15:26:58.061583+00:00",
+      "body_length": 7675,
       "capabilities": [
         "Overview",
         "When to Use This Skill",

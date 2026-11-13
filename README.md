@@ -183,7 +183,7 @@ Copyright (c) 2026 MD BABU MIA, PhD. Open-source components are provided under t
 
 <!-- BEGIN: PIPELINE_INDEX -->
 
-_Auto-generated index. 1245 skills across 57 categories. Last refresh: 2026-11-12T14:39:53.683931+00:00._
+_Auto-generated index. 1248 skills across 57 categories. Last refresh: 2026-11-13T15:31:01.203339+00:00._
 
 ### 3D_Genomics (8)
 
@@ -615,13 +615,15 @@ _Auto-generated index. 1245 skills across 57 categories. Last refresh: 2026-11-1
 
 - **cellular-senescence-agent** — AI-powered analysis of cellular senescence for aging research, cancer therapy response, and senolytic drug development.
 
-### MCP_Servers (8)
+### MCP_Servers (10)
 
 - **bio-mcpmed-bioinformatics-server** — Model Context Protocol (MCP) server for bioinformatics web services like
 - **biocontext-ai-mcp-registry** — Use the BioContextAI Registry to discover, compare, and select biomedical MCP servers for bioinformatics, systems biology, and biomedical...
 - **biomcp-server** — MCP bio bridge
 - **biomed-agent-mcp** — A general-purpose biomedical knowledge assistant that connects to MCP biomedical data sources (OpenTargets, Monarch, MyGene, MyChem, MyDi...
+- **grebi-biomedical-data-integration** — Integrate biomedical knowledge with GrEBI through ontology-aware identifier mapping, provenance-preserving graph queries, and verified HP...
 - **mcp-operations-2026** — Implement and operate Model Context Protocol systems safely. Use when designing MCP clients or servers, selecting transports, configuring...
+- **pubmed-europe-pmc-mcp** — Search PubMed and Europe PMC through MCP, retrieve article metadata and available full text, resolve identifiers, and extract evidence wi...
 - **pubmed-europe-pmc-mcp-literature-retrieval** — Search PubMed and Europe PMC through MCP, retrieve article metadata and available full text, and preserve identifiers, citations, and MeS...
 - **pubmed-europe-pmc-mcp-retrieval** — Search PubMed and Europe PMC through MCP, retrieve article metadata and available full text, resolve identifiers, and verify citations wi...
 - **pubmed-ncbi-mcp-server** — Use the cyanheads PubMed MCP server to search PubMed, fetch metadata and full text, generate citations, inspect MeSH, and find related re...
@@ -911,7 +913,7 @@ _Auto-generated index. 1245 skills across 57 categories. Last refresh: 2026-11-1
 - **react-best-practices** — A comprehensive guide and rule set for writing clean, performant, and maintainable React code.
 - **semantic-code-indexing** — Indexes code into a knowledge graph, enabling natural language search, impact analysis, and architectural understanding for AI agents.
 
-### Spatial_Omics (16)
+### Spatial_Omics (17)
 
 - **bio-spatial-annotate** — Cell type annotation for spatial transcriptomics data using marker-based
 - **bio-spatial-cnv** — Copy number variation inference from spatial transcriptomics expression
@@ -929,6 +931,7 @@ _Auto-generated index. 1245 skills across 57 categories. Last refresh: 2026-11-1
 - **bio-spatial-trajectory** — Trajectory inference and pseudotime analysis for spatial transcriptomics
 - **bio-spatial-velocity** — RNA velocity and cellular dynamics analysis for spatial transcriptomics
 - **direction-aware-spatial-transcriptomics** — Prepare and evaluate spatial transcriptomics representations using spatially informative genes and directional cellular neighborhoods, wi...
+- **voice-histology-transcriptome-prediction** — Prepare H&E images for VOICE single-cell transcriptome prediction, verify model access and spatial alignment, and evaluate predicted expr...
 
 ### Structural_Biology (12)
 
