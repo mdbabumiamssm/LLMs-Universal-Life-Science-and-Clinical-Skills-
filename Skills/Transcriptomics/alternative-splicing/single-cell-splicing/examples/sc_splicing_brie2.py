@@ -14,8 +14,6 @@ Single-cell splicing analysis using BRIE2.
 Estimates PSI values with uncertainty quantification for sparse scRNA-seq data.
 '''
 
-import subprocess
-from pathlib import Path
 
 
 def prepare_splicing_events(gtf_file, output_file):

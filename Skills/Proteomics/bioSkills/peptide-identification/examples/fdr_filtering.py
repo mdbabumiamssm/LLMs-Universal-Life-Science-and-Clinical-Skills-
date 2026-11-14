@@ -10,7 +10,6 @@
 
 '''Calculate FDR and filter PSMs using target-decoy approach'''
 import pandas as pd
-import numpy as np
 
 psms = pd.read_csv('search_results.tsv', sep='\t')
 print(f'Loaded {len(psms)} PSMs')

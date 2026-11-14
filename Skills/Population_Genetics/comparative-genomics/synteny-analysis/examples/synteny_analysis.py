@@ -12,7 +12,6 @@
 
 import subprocess
 import pandas as pd
-from collections import defaultdict
 
 
 def prepare_gff_for_mcscanx(gff_file, output_file, species_prefix):

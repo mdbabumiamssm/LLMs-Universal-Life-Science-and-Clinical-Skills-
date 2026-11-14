@@ -20,8 +20,7 @@ Unlike ReAct (which interleaves thought/action), Plan-and-Solve:
 This is ideal for complex, multi-step tasks like "Design a protocol for X and then analyze Y".
 """
 
-from typing import List, Dict, Any, Optional
-import json
+from typing import List, Dict, Any
 import re
 
 # --- Interfaces ---

@@ -10,7 +10,6 @@
 
 '''Design guides for cytosine and adenine base editing'''
 
-from Bio.Seq import Seq
 import re
 
 # Editing window positions (1-indexed from PAM-distal end)

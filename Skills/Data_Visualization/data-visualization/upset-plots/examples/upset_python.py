@@ -12,7 +12,6 @@
 
 import matplotlib.pyplot as plt
 from upsetplot import from_contents, UpSet, plot
-import pandas as pd
 import numpy as np
 
 # --- ALTERNATIVE: Use real gene sets ---

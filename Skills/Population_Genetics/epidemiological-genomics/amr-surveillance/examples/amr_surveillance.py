@@ -12,7 +12,6 @@
 
 import subprocess
 import pandas as pd
-from collections import Counter
 
 
 def run_amrfinder(fasta_file, output_file, organism=None, protein=False):

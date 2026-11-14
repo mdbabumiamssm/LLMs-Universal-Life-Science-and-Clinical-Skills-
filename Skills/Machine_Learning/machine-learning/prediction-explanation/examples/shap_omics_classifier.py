@@ -15,7 +15,6 @@ import numpy as np
 import shap
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.preprocessing import StandardScaler
 import matplotlib.pyplot as plt
 
 expr = pd.read_csv('expression.csv', index_col=0)

@@ -8,7 +8,6 @@
 #
 # Provenance: Authenticated by MD BABU MIA
 
-import numpy as np
 
 def function_to_optimize(x):
     """

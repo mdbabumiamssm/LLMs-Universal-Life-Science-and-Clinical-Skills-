@@ -22,7 +22,6 @@ This implements a basic 'Genetic Algorithm' for Prompt Engineering.
 """
 
 import random
-import time
 
 class AutoPromptOptimizer:
     def __init__(self):

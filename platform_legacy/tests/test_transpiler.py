@@ -7,7 +7,6 @@ Tests for the USDL transpiler.
 Validates cross-platform compilation of skill specs.
 """
 
-import json
 import pytest
 from platform.optimizer.usdl_transpiler import (
     FieldSpec,
