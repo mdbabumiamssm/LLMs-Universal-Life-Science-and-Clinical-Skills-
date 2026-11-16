@@ -1,6 +1,10 @@
 ---
 name: evo2-genome-model
 description: Operate Arc Institute Evo 2 for long-context DNA sequence scoring, zero-shot variant effect analysis, genomic embeddings, sequence generation, and model deployment. Use when a task explicitly needs Evo 2, million-base genomic context, DNA likelihood comparisons, genomic foundation-model embeddings, or generated DNA candidates across species.
+measurable_outcome: 'Execute skill workflow successfully with valid output within 15 minutes.'
+allowed-tools:
+  - read_file
+  - run_shell_command
 ---
 
 # Evo 2 Genome Model
@@ -11,6 +15,7 @@ Use Evo 2 as a genomic foundation model, not as a substitute for experimental or
 
 1. Define the task before choosing a checkpoint:
    - score reference and alternate sequences for zero-shot variant effects;
+   - consider Evo2VED as a candidate source of precomputed variant scores alongside direct Evo 2 inference; before documenting retrieval examples, verify current database access, supported genome assemblies, coordinate and reference/alternate allele conventions, score definitions and direction, variant coverage, and database/model versioning against the database documentation. Record the release and retrieval date, and treat model-derived scores as supporting research evidence rather than standalone pathogenicity classifications;
    - extract embeddings for a downstream classifier or retrieval system;
    - generate sequence continuations or design candidates;
    - fine-tune on a documented task-specific dataset.
@@ -44,3 +49,7 @@ Return:
 - limitations and the next orthogonal validation step.
 
 Read `references/operations.md` for setup, checkpoint selection, examples, and canonical sources.
+
+## References
+
+- [Evo2VED: a database of DNA large language model-derived scores for variant interpretation](https://pubmed.ncbi.nlm.nih.gov/43021690/). Nucleic Acids Research, 2026 Nov 13.

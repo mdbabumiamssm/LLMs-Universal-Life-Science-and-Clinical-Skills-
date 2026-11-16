@@ -168,6 +168,8 @@ The **Clinical NLP Skill** converts free-text clinical notes into structured dat
 
 115. **Reproducible aged-care RAG extraction comparison**: Extend capability 113 with the schema, annotation, patient-separation, and run-record requirements below; compare field correctness and patient-note provenance on identical held-out patients, distinguishing reported study methods from local evaluation additions.
 
+116. **Verifiable chart summaries (candidate workflow)**: Extend provenance-linked extraction into summaries that link each generated statement to supporting record spans and note identifiers, preserving note and event dates, negation, uncertainty, and conflicting evidence. Before implementation, review the referenced paper’s full verification mechanism and evaluation protocol, including evidence-link construction, reviewer tasks, reference answers, and error assessment; the reviewed journal abstract establishes an extract-then-abstract approach with disease-specific summary bundles and physician question-answering comparisons against standard chart review, but does not resolve these details. For local evaluation, assess unsupported statements against their cited spans separately from clinically important omissions against clinician-adjudicated chart content, with separate denominators; citation presence alone does not establish support or completeness. Treat these safeguards as proposed extensions, not verified paper methods or an implemented feature of the basic extractor.
+
 ## Workflow
 
 1.  **Input**: A string of clinical text or a text file.
@@ -308,5 +310,7 @@ Extract each variable into `{variable, status, raw_value, note_id, assessment_ti
 *   https://pubmed.ncbi.nlm.nih.gov/42964527/ — Evaluating RAG Configurations for Clinical Information Extraction from EHR Notes: Aged Care Case Study. PubMed retrieval unavailable; journal Sections 2.3–2.5 and 3.1 reviewed for retrieval, schema, and annotation details; supplementary definitions remain unverified: https://link.springer.com/article/10.1007/s41666-026-00254-8.
 
 *   https://pubmed.ncbi.nlm.nih.gov/42961995/ — A framework for structuring Thai medical documents using systematized nomenclature of medicine clinical terms and large language models. Reviewed full text: https://europepmc.org/articles/PMC13722323/; https://doi.org/10.1371/journal.pdig.0001791.
+
+*   https://pubmed.ncbi.nlm.nih.gov/43024780/ — Verifiable summarization of electronic health records using large language models to support chart review. Journal abstract reviewed: https://doi.org/10.1093/jamia/ocag181; supplied PubMed record was inaccessible, and full verification and evaluation methods remain pending review before implementation.
 
 <!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->
