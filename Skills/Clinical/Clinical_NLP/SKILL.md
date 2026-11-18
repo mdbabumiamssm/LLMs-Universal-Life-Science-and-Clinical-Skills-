@@ -170,6 +170,12 @@ The **Clinical NLP Skill** converts free-text clinical notes into structured dat
 
 116. **Verifiable chart summaries (candidate workflow)**: Extend provenance-linked extraction into summaries that link each generated statement to supporting record spans and note identifiers, preserving note and event dates, negation, uncertainty, and conflicting evidence. Before implementation, review the referenced paper’s full verification mechanism and evaluation protocol, including evidence-link construction, reviewer tasks, reference answers, and error assessment; the reviewed journal abstract establishes an extract-then-abstract approach with disease-specific summary bundles and physician question-answering comparisons against standard chart review, but does not resolve these details. For local evaluation, assess unsupported statements against their cited spans separately from clinically important omissions against clinician-adjudicated chart content, with separate denominators; citation presence alone does not establish support or completeness. Treat these safeguards as proposed extensions, not verified paper methods or an implemented feature of the basic extractor.
 
+117. **Stroke-registry complication classification (candidate workflow)**: Map free text to registry categories with evidence spans, negation and uncertainty, clinician adjudication, and per-class error analysis; retain `unknown` for unsupported classifications (see worked example below). This is a proposed adaptation, not an implemented feature of the basic extractor.
+
+118. **Aged-care retrieval versus extraction failure audit**: Extend the controlled RAG comparison below with separate retrieval-relevance and note-grounded extraction audits, patient-disjoint evaluation, missing-field errors, and longitudinal temporal consistency. Compare each task with matched no-retrieval controls; retain regressions and unsupported assertions rather than assuming retrieval helps every task.
+
+119. **PECARN extraction-versus-calculation research evaluation**: Use the PECARN worked example below to evaluate LLM extraction separately from deterministic rule calculation. Before implementation, verify the cited paper and authoritative PECARN rule specification, including eligibility, predictor definitions, and classification logic; record unresolved details rather than inferring them. Preserve source-note identifiers, assessment times, and exact evidence spans for every variable; distinguish explicitly absent findings from undocumented, uncertain, or conflicting findings. On held-out clinician-reviewed records, validate each extracted variable and its evidence, then independently compare calculated classifications with those derived from clinician-adjudicated inputs, reporting false very-low-risk calls and indeterminate cases. These are proposed research safeguards, not an implemented or clinically validated extractor feature.
+
 ## Workflow
 
 1.  **Input**: A string of clinical text or a text file.
@@ -206,6 +212,13 @@ The **Clinical NLP Skill** converts free-text clinical notes into structured dat
 **Before implementation (local workflow):** Extract a source-linked configuration record from methods and supplements: corpus construction and train/test separation, embedding versions, chunk size/overlap/separators, similarity metric/filtering, top-k, reranking, prompt examples, generation settings, annotation protocol, evaluation unit, and metric averaging. Record unresolved values explicitly; framework defaults are version-dependent and must not be guessed. Supplements and exact defaults remain unverified here.
 
 **Controlled local comparison (proposed, not reported study outcomes):** Use the same clinician-adjudicated, patient-disjoint held-out notes across configurations; exclude test patients and labels from retrieval and demonstrations. Freeze model, schema, prompts, decoding, hardware, and token limits while varying one retrieval factor at a time; tune on separate development data. Include extraction from the same target note with identical demonstrations but no retrieved context. Report per-field accuracy and precision/recall/F1 with denominators and paired uncertainty; independently audit evidence-span correctness, attribution completeness, unsupported assertions, and missingness. Require target-patient note evidence, since retrieved examples cannot establish patient facts. Measure retrieval and end-to-end latency (median/p95), recording cache state and token counts. Select configurations by measured accuracy–attribution–latency tradeoffs and validate externally before generalizing.
+
+**Extraction evaluation extension (local protocol, not reported study procedures):**
+
+* For each frailty, malnutrition, and agitation configuration, retain the target note, retrieved passage identifiers/ranks/scores, prompt, raw output, and source-note spans. Independently judge whether relevant concept mappings exist in the knowledge base and whether top-k retrieval returns them; distinguish knowledge-base coverage gaps from ranking misses. Separately score incorrect or omitted fields despite adequate context, unsupported assertions, and parsing failures. Use adjudicated relevant context as a diagnostic control where available; errors may involve both stages, so do not assign every wrong output to retrieval.
+* Keep every patient's notes, chunks, and derived examples in one partition; audit patient overlap with the index and demonstrations before testing. Select settings on development patients only. On identical test patients, report paired per-task and per-field differences from the matched no-retrieval baseline, including negative differences and uncertainty. Zero-shot RAG is still retrieval-enabled, and the reviewed comparisons do not establish a benefit over no retrieval.
+* Count undocumented reference fields, explicit negatives, uncertain/conflicting fields, omitted outputs, and malformed outputs separately. Report false filling of missing fields and missed documented values with their denominators; retrieved examples must never supply a missing patient fact. Preserve exact target-note evidence and a null span with a reason when documentation is absent.
+* Retain note timestamps separately from supported event dates and historical/current/planned status. Audit cross-note contradictions, onset/resolution ordering, and unsupported date inference against adjudicated patient timelines. Preserve unresolved conflicts instead of forcing consistency; report temporal errors separately from entity accuracy. For time-bounded extraction, exclude notes unavailable at the cutoff from all configurations.
 
 ### Glaucoma medication extraction: GLLaucoMed candidate adaptation
 
@@ -291,6 +304,26 @@ Extract each variable into `{variable, status, raw_value, note_id, assessment_ti
 
 **Local evaluation additions:** Audit evidence-span correctness, specimen/time alignment, missing/equivocal handling, and extraction errors separately from derived TNBC agreement. Report indeterminate coverage and false TNBC calls with denominators. Reserve patient-disjoint evaluation data and adjudicate reference observations before calculating reference labels; these safeguards are workflow recommendations, not claimed study procedures.
 
+### Worked example: stroke-registry complication classification
+
+**Reviewed definitions:** [Online Resource 2](https://static-content.springer.com/esm/art%3A10.1007%2Fs10916-026-02486-y/MediaObjects/10916_2026_2486_MOESM2_ESM.pdf) specifies multilabel leaf assignment across adverse events, comorbidities, procedures, clinical findings, and other. Negated findings are excluded; suspected diagnoses receive diagnosis labels. Ambiguous entries still receive likely labels with an uncertainty flag; unclassifiable text receives a catch-all. These are operational text categories, not confirmed diagnoses. The local `unknown` policy below deliberately changes that forced-assignment convention.
+
+**Reviewed validation:** The [paper's methods](https://link.springer.com/article/10.1007/s10916-026-02486-y) describe a model-assisted 1,000-entry development reference reused for model/prompt selection. Frozen taxonomy and prompts were evaluated on 300 held-out entries enriched for rare predicted leaves. Two clinicians initially annotated independently before seeing model labels, but final consensus had GPT-5.4 labels visible, leaving potential anchoring bias. Entry-level holdout does not establish patient-disjoint validation. The public coronary-trial corpus demonstrated software applicability, not external clinical accuracy.
+
+**Local extraction and mapping contract:** Version the label dictionary, inclusion/exclusion rules, abbreviation meanings, and crosswalk to the target registry. Extract all supported concepts as `{entry_id, registry_timepoint, category, candidate_category, assertion, temporal_status, evidence_span, offsets, dictionary_version, mapping_status, adjudication_status}`. Require verbatim spans for assertions and preserve negation cues and scope. Distinguish suspected from confirmed events even when both map to the same paper category. Keep pre-existing conditions separate from acute complications. Map to a structured registry field only when its definition matches; otherwise retain the text-derived category with `no_structured_equivalent`. Do not infer an event from a procedure alone. Missing, conflicting, or uninterpretable evidence yields `category: unknown` with a reason, rather than an invented diagnosis or automatic “no complication.” A known concept outside the taxonomy is separately flagged as unmapped.
+
+**Synthetic discharge entry S-001:** “Pneumonia. No urinary tract infection. Possible recurrent event, type unclear.”
+
+| Exact evidence span | Local classification | Assertion/review |
+|---|---|---|
+| “Pneumonia” | `adverse_events/infection/pneumonia` | Affirmed text assertion; not independent clinical confirmation |
+| “No urinary tract infection” | No positive complication label; retain negated concept | Negated; preserve “No” and its scope |
+| “Possible recurrent event, type unclear” | `unknown` | Uncertain identity; clinician adjudication required |
+
+Do not infer recurrent stroke from registry context. Adjudicators review the original entry, candidate mappings, and definition conflicts; record the decision and supporting span, retaining `unknown` if unresolved. Suspected pneumonia would map to the pneumonia leaf under the paper's rules while retaining `assertion: suspected` locally.
+
+**Local evaluation additions:** Freeze prompts and mappings before patient-disjoint testing against independent dual clinician annotations with adjudicated disagreements. Report each class's support, TP/FP/FN, precision, recall, and F1 with uncertainty, alongside macro and micro summaries; account for sampling weights when enriching rare labels. Review false positives and missed labels by negation, suspicion, abbreviation, temporal context, hierarchy, and unsupported inference. Audit evidence-span correctness, structured-field mapping errors, unknown frequency, and adjudication outcomes separately. Report unresolved cases and rare-class denominators rather than hiding them in overall accuracy.
+
 ## References
 
 *   https://pubmed.ncbi.nlm.nih.gov/42021926/
@@ -307,10 +340,14 @@ Extract each variable into `{variable, status, raw_value, note_id, assessment_ti
 
 *   https://pubmed.ncbi.nlm.nih.gov/42965252/ — Scalable classification of infant breast milk feeding status from clinical notes using weak supervision and rule-based natural language processing. Reviewed indexed journal methods: https://academic.oup.com/jamiaopen/article/9/5/ooag211/9005644.
 
-*   https://pubmed.ncbi.nlm.nih.gov/42964527/ — Evaluating RAG Configurations for Clinical Information Extraction from EHR Notes: Aged Care Case Study. PubMed retrieval unavailable; journal Sections 2.3–2.5 and 3.1 reviewed for retrieval, schema, and annotation details; supplementary definitions remain unverified: https://link.springer.com/article/10.1007/s41666-026-00254-8.
+*   https://pubmed.ncbi.nlm.nih.gov/42964527/ — Evaluating RAG Configurations for Clinical Information Extraction from EHR Notes: Aged Care Case Study. PubMed retrieval unavailable; journal Sections 2.3–2.5 and 3.1–3.4 reviewed for retrieval, extraction, and configuration comparisons; supplementary definitions remain unverified: https://link.springer.com/article/10.1007/s41666-026-00254-8. No-retrieval controls and failure/temporal audits above are local evaluation additions.
 
 *   https://pubmed.ncbi.nlm.nih.gov/42961995/ — A framework for structuring Thai medical documents using systematized nomenclature of medicine clinical terms and large language models. Reviewed full text: https://europepmc.org/articles/PMC13722323/; https://doi.org/10.1371/journal.pdig.0001791.
 
 *   https://pubmed.ncbi.nlm.nih.gov/43024780/ — Verifiable summarization of electronic health records using large language models to support chart review. Journal abstract reviewed: https://doi.org/10.1093/jamia/ocag181; supplied PubMed record was inaccessible, and full verification and evaluation methods remain pending review before implementation.
+
+*   https://pubmed.ncbi.nlm.nih.gov/43037770/ — Decoding Complications: Large Language Model-Based Classification of Free-Text Entries in Clinical Stroke Registries. Reviewed journal methods and Online Resource 2 (annotation rules and label definitions): https://link.springer.com/article/10.1007/s10916-026-02486-y.
+
+*   https://pubmed.ncbi.nlm.nih.gov/42893265/ — Source finding for the PECARN extraction-versus-calculation research evaluation; verify full paper and authoritative rule specification before implementation.
 
 <!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->
