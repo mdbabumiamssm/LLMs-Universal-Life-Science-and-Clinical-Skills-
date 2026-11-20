@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-11-13T15:31:01.203339+00:00",
+  "generated_at": "2026-11-20T15:03:50.435700+00:00",
   "generator": "ARTIFICIALINTELLIGENCEGROUP-pipeline v1.0",
-  "total_skills": 1248,
+  "total_skills": 1253,
   "total_errors": 16,
   "skills": [
     {
@@ -1040,8 +1040,8 @@
       ],
       "file_path": "Skills/Clinical/ClinicalLlmEvaluationBenchmarking_Agent/SKILL.md",
       "relative_path": "Clinical/ClinicalLlmEvaluationBenchmarking_Agent/SKILL.md",
-      "last_modified": "2026-11-01T16:08:36.571620+00:00",
-      "body_length": 124408,
+      "last_modified": "2026-11-15T14:46:49.474549+00:00",
+      "body_length": 125651,
       "capabilities": [
         "Overview",
         "When to Use This Skill",
@@ -1364,8 +1364,8 @@
       ],
       "file_path": "Skills/Clinical/Clinical_NLP/SKILL.md",
       "relative_path": "Clinical/Clinical_NLP/SKILL.md",
-      "last_modified": "2026-11-04T14:12:42.112263+00:00",
-      "body_length": 87628,
+      "last_modified": "2026-11-18T14:16:05.773169+00:00",
+      "body_length": 97427,
       "capabilities": [
         "When to Use This Skill",
         "Core Capabilities",
@@ -1377,6 +1377,7 @@
         "Example Usage",
         "Worked example: PECARN intra-abdominal injury inputs",
         "Worked example: breast pathology biomarkers and triple-negative classification",
+        "Worked example: stroke-registry complication classification",
         "References"
       ]
     },
@@ -1923,8 +1924,8 @@
       ],
       "file_path": "Skills/Clinical/TestTimeKnowledgeClinicalLlm_Agent/SKILL.md",
       "relative_path": "Clinical/TestTimeKnowledgeClinicalLlm_Agent/SKILL.md",
-      "last_modified": "2026-10-10T13:40:11.157930+00:00",
-      "body_length": 21586,
+      "last_modified": "2026-11-15T14:46:12.221507+00:00",
+      "body_length": 22747,
       "capabilities": [
         "Overview",
         "When to Use This Skill",
@@ -10151,6 +10152,29 @@
       ]
     },
     {
+      "name": "single-cell-foundation-model-data-selection",
+      "description": "Audit and reproduce single-cell foundation-model data-selection experiments, documenting pretraining size, diversity, splits, and zero-shot or fine-tuned performance under controlled budgets.",
+      "tool_type": "",
+      "primary_tool": "",
+      "measurable_outcome": "Execute skill workflow successfully with valid output within 15 minutes.",
+      "allowed-tools": [
+        "read_file",
+        "run_shell_command",
+        "web_fetch"
+      ],
+      "file_path": "Skills/Foundation_Models/SingleCellFoundationModelDataSelection_Agent/SKILL.md",
+      "relative_path": "Foundation_Models/SingleCellFoundationModelDataSelection_Agent/SKILL.md",
+      "last_modified": "2026-11-19T14:04:27.674473+00:00",
+      "body_length": 8670,
+      "capabilities": [
+        "Overview",
+        "When to Use This Skill",
+        "Core Capabilities",
+        "Inputs / Outputs",
+        "References"
+      ]
+    },
+    {
       "name": "stack-single-cell-icl-agent",
       "description": "Apply Arc Institute Stack, a single-cell foundation model that performs in-context learning at inference time without per-task fine-tuning.",
       "tool_type": "",
@@ -13711,16 +13735,20 @@
       "description": "Operate Arc Institute Evo 2 for long-context DNA sequence scoring, zero-shot variant effect analysis, genomic embeddings, sequence generation, and model deployment. Use when a task explicitly needs Evo 2, million-base genomic context, DNA likelihood comparisons, genomic foundation-model embeddings, or generated DNA candidates across species.",
       "tool_type": "",
       "primary_tool": "",
-      "measurable_outcome": "",
-      "allowed-tools": [],
+      "measurable_outcome": "Execute skill workflow successfully with valid output within 15 minutes.",
+      "allowed-tools": [
+        "read_file",
+        "run_shell_command"
+      ],
       "file_path": "Skills/Genomics/evo2-genome-model/SKILL.md",
       "relative_path": "Genomics/evo2-genome-model/SKILL.md",
-      "last_modified": "2026-10-10T14:01:03.830263+00:00",
-      "body_length": 2323,
+      "last_modified": "2026-11-15T14:48:05.777840+00:00",
+      "body_length": 3050,
       "capabilities": [
         "Workflow",
         "Quality Controls",
-        "Output Contract"
+        "Output Contract",
+        "References"
       ]
     },
     {
@@ -17463,7 +17491,7 @@
       ],
       "file_path": "Skills/MCP_Servers/GrebiBiomedicalDataIntegration_Agent/SKILL.md",
       "relative_path": "MCP_Servers/GrebiBiomedicalDataIntegration_Agent/SKILL.md",
-      "last_modified": "2026-11-13T15:29:32.569281+00:00",
+      "last_modified": "2026-11-13T15:31:15.052755+00:00",
       "body_length": 9999,
       "capabilities": [
         "Overview",
@@ -17579,7 +17607,7 @@
       ],
       "file_path": "Skills/MCP_Servers/PubmedEuropePmcMcp_Agent/SKILL.md",
       "relative_path": "MCP_Servers/PubmedEuropePmcMcp_Agent/SKILL.md",
-      "last_modified": "2026-11-13T15:27:52.250037+00:00",
+      "last_modified": "2026-11-13T15:31:15.052755+00:00",
       "body_length": 5892,
       "capabilities": [
         "Overview",
@@ -17649,6 +17677,52 @@
       "relative_path": "Machine_Learning/ClinicalSelectivePredictionUnderImbalance_Agent/SKILL.md",
       "last_modified": "2026-10-28T14:20:20.491914+00:00",
       "body_length": 10634,
+      "capabilities": [
+        "Overview",
+        "When to Use This Skill",
+        "Core Capabilities",
+        "Inputs / Outputs",
+        "References"
+      ]
+    },
+    {
+      "name": "dynamic-survival-temporal-explanations",
+      "description": "Explain dynamic survival predictions with static and longitudinal covariates using hierarchical Shapley screening and temporal refinement, with checks for temporal availability, stability, and computational cost.",
+      "tool_type": "",
+      "primary_tool": "",
+      "measurable_outcome": "Execute skill workflow successfully with valid output within 15 minutes.",
+      "allowed-tools": [
+        "read_file",
+        "run_shell_command",
+        "web_fetch"
+      ],
+      "file_path": "Skills/Machine_Learning/DynamicSurvivalTemporalExplanations_Agent/SKILL.md",
+      "relative_path": "Machine_Learning/DynamicSurvivalTemporalExplanations_Agent/SKILL.md",
+      "last_modified": "2026-11-17T16:11:50.545300+00:00",
+      "body_length": 9901,
+      "capabilities": [
+        "Overview",
+        "When to Use This Skill",
+        "Core Capabilities",
+        "Inputs / Outputs",
+        "References"
+      ]
+    },
+    {
+      "name": "survival-model-selection-and-benchmarking",
+      "description": "Select and benchmark survival models across discrimination, prediction error, event-time accuracy, and dataset regimes while treating the model-selection objective as an experimental variable.",
+      "tool_type": "",
+      "primary_tool": "",
+      "measurable_outcome": "Execute skill workflow successfully with valid output within 15 minutes.",
+      "allowed-tools": [
+        "read_file",
+        "run_shell_command",
+        "web_fetch"
+      ],
+      "file_path": "Skills/Machine_Learning/SurvivalModelSelectionAndBenchmarking_Agent/SKILL.md",
+      "relative_path": "Machine_Learning/SurvivalModelSelectionAndBenchmarking_Agent/SKILL.md",
+      "last_modified": "2026-11-19T14:00:27.385150+00:00",
+      "body_length": 10161,
       "capabilities": [
         "Overview",
         "When to Use This Skill",
@@ -19390,8 +19464,8 @@
       ],
       "file_path": "Skills/Oncology/LongitudinalOncologyLlmEvaluation_Agent/SKILL.md",
       "relative_path": "Oncology/LongitudinalOncologyLlmEvaluation_Agent/SKILL.md",
-      "last_modified": "2026-10-27T15:16:32.443076+00:00",
-      "body_length": 8535,
+      "last_modified": "2026-11-18T14:11:57.647841+00:00",
+      "body_length": 10258,
       "capabilities": [
         "Overview",
         "When to Use This Skill",
@@ -19805,6 +19879,29 @@
       "relative_path": "Pathology_AI/DmmrCrcHistopathologyAgent_Agent/SKILL.md",
       "last_modified": "2026-10-10T13:40:11.159930+00:00",
       "body_length": 22846,
+      "capabilities": [
+        "Overview",
+        "When to Use This Skill",
+        "Core Capabilities",
+        "Inputs / Outputs",
+        "References"
+      ]
+    },
+    {
+      "name": "histology-foundation-model-tta-audit",
+      "description": "Audit whether eight-view geometric TTA improves histology foundation model inference using patient-separated comparisons of prediction quality, uncertainty, and cost at patch and slide levels.",
+      "tool_type": "",
+      "primary_tool": "",
+      "measurable_outcome": "Execute skill workflow successfully with valid output within 15 minutes.",
+      "allowed-tools": [
+        "read_file",
+        "run_shell_command",
+        "web_fetch"
+      ],
+      "file_path": "Skills/Pathology_AI/HistologyFoundationModelTtaAudit_Agent/SKILL.md",
+      "relative_path": "Pathology_AI/HistologyFoundationModelTtaAudit_Agent/SKILL.md",
+      "last_modified": "2026-11-17T16:13:02.763575+00:00",
+      "body_length": 10603,
       "capabilities": [
         "Overview",
         "When to Use This Skill",
@@ -30641,6 +30738,29 @@
       ]
     },
     {
+      "name": "rigid-motion-aware-spatial-cell-dynamics",
+      "description": "Assess spatial transcriptomics time courses for coordinate-frame artifacts and plan or evaluate horizontal flow matching of tissue geometry, molecular state, and cell abundance.",
+      "tool_type": "",
+      "primary_tool": "",
+      "measurable_outcome": "Execute skill workflow successfully with valid output within 15 minutes.",
+      "allowed-tools": [
+        "read_file",
+        "run_shell_command",
+        "web_fetch"
+      ],
+      "file_path": "Skills/Spatial_Omics/RigidMotionAwareSpatialCellDynamics_Agent/SKILL.md",
+      "relative_path": "Spatial_Omics/RigidMotionAwareSpatialCellDynamics_Agent/SKILL.md",
+      "last_modified": "2026-11-19T14:01:15.573416+00:00",
+      "body_length": 8121,
+      "capabilities": [
+        "Overview",
+        "When to Use This Skill",
+        "Core Capabilities",
+        "Inputs / Outputs",
+        "References"
+      ]
+    },
+    {
       "name": "voice-histology-transcriptome-prediction",
       "description": "Prepare H&E images for VOICE single-cell transcriptome prediction, verify model access and spatial alignment, and evaluate predicted expression against held-out measurements.",
       "tool_type": "",
@@ -30653,7 +30773,7 @@
       ],
       "file_path": "Skills/Spatial_Omics/VoiceHistologyTranscriptomePrediction_Agent/SKILL.md",
       "relative_path": "Spatial_Omics/VoiceHistologyTranscriptomePrediction_Agent/SKILL.md",
-      "last_modified": "2026-11-13T15:26:58.061583+00:00",
+      "last_modified": "2026-11-13T15:31:15.052755+00:00",
       "body_length": 7675,
       "capabilities": [
         "Overview",

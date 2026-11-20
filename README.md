@@ -183,7 +183,7 @@ Copyright (c) 2026 MD BABU MIA, PhD. Open-source components are provided under t
 
 <!-- BEGIN: PIPELINE_INDEX -->
 
-_Auto-generated index. 1248 skills across 57 categories. Last refresh: 2026-11-13T15:31:01.203339+00:00._
+_Auto-generated index. 1253 skills across 57 categories. Last refresh: 2026-11-20T15:03:50.435700+00:00._
 
 ### 3D_Genomics (8)
 
@@ -442,11 +442,12 @@ _Auto-generated index. 1248 skills across 57 categories. Last refresh: 2026-11-1
 - **consensus-interpret** — LLM-grounded biological interpretation of a verified typed consensus run. Reads the typed run dir + the original adata, runs inline per-c...
 - _... and 173 more in `Skills/External_Collections/`_
 
-### Foundation_Models (5)
+### Foundation_Models (6)
 
 - **biomed-multi-alignment-foundation-model** — Use IBM biomed.omics.bl.sm.ma-ted-458m for setup, modality routing, embeddings, retrieval, and drug-discovery workflows across proteins, ...
 - **heimdall-single-cell-tokenization-evaluation** — Evaluate how tokenization affects single-cell foundation models with Heimdall, reproducing documented comparisons under controlled prepro...
 - **longitudinal-ehr-time-to-event-evaluation** — Evaluate longitudinal EHR foundation models across health systems and prediction horizons, emphasizing censoring, leakage prevention, cal...
+- **single-cell-foundation-model-data-selection** — Audit and reproduce single-cell foundation-model data-selection experiments, documenting pretraining size, diversity, splits, and zero-sh...
 - **stack-single-cell-icl-agent** — Apply Arc Institute Stack, a single-cell foundation model that performs in-context learning at inference time without per-task fine-tuning.
 - **time-to-event-ehr-foundation-models** — Prepare longitudinal EHR cohorts and evaluate time-to-event foundation models for disease screening across health systems, with censoring...
 
@@ -628,7 +629,7 @@ _Auto-generated index. 1248 skills across 57 categories. Last refresh: 2026-11-1
 - **pubmed-europe-pmc-mcp-retrieval** — Search PubMed and Europe PMC through MCP, retrieve article metadata and available full text, resolve identifiers, and verify citations wi...
 - **pubmed-ncbi-mcp-server** — Use the cyanheads PubMed MCP server to search PubMed, fetch metadata and full text, generate citations, inspect MeSH, and find related re...
 
-### Machine_Learning (8)
+### Machine_Learning (10)
 
 - **agentomics-ml** — An autonomous agentic system for supervised machine learning model development, specifically tailored for biomedical data.
 - **bio-machine-learning-atlas-mapping** — Maps query single-cell data to reference atlases using scArches transfer learning with scVI and scANVI models. Transfers cell type labels...
@@ -638,6 +639,8 @@ _Auto-generated index. 1248 skills across 57 categories. Last refresh: 2026-11-1
 - **bio-machine-learning-prediction-explanation** — Explains machine learning predictions on omics data using SHAP values and LIME for feature attribution. Identifies which genes or feature...
 - **bio-machine-learning-survival-analysis** — Analyzes time-to-event data using Kaplan-Meier curves, log-rank tests, and Cox proportional hazards regression with lifelines. Builds sur...
 - **clinical-selective-prediction-under-imbalance** — Evaluate clinical deferral under class imbalance using class-conditional risk, coverage, minority errors, calibration, and paper-supporte...
+- **dynamic-survival-temporal-explanations** — Explain dynamic survival predictions with static and longitudinal covariates using hierarchical Shapley screening and temporal refinement...
+- **survival-model-selection-and-benchmarking** — Select and benchmark survival models across discrimination, prediction error, event-time accuracy, and dataset regimes while treating the...
 
 ### Mathematics (2)
 
@@ -724,10 +727,11 @@ _Auto-generated index. 1248 skills across 57 categories. Last refresh: 2026-11-1
 - **tumor-heterogeneity-agent** — AI-powered intratumor heterogeneity analysis for clonal architecture reconstruction, subclonal evolution tracking, and therapy resistance...
 - **tumor-mutational-burden-agent** — Calculates and harmonizes Tumor Mutational Burden (TMB) across platforms to predict immunotherapy response.
 
-### Pathology_AI (2)
+### Pathology_AI (3)
 
 - **computational-pathology-agent** — Analyze Whole Slide Images (WSI) for digital pathology, including tissue segmentation, feature extraction, and biomarker model planning.
 - **dmmr-crc-histopathology-agent** — Predict and validate colorectal cancer dMMR signals from H&E histopathology, including non-tumor and low-magnification WSI regions.
+- **histology-foundation-model-tta-audit** — Audit whether eight-view geometric TTA improves histology foundation model inference using patient-separated comparisons of prediction qu...
 
 ### Pharma (3)
 
@@ -913,7 +917,7 @@ _Auto-generated index. 1248 skills across 57 categories. Last refresh: 2026-11-1
 - **react-best-practices** — A comprehensive guide and rule set for writing clean, performant, and maintainable React code.
 - **semantic-code-indexing** — Indexes code into a knowledge graph, enabling natural language search, impact analysis, and architectural understanding for AI agents.
 
-### Spatial_Omics (17)
+### Spatial_Omics (18)
 
 - **bio-spatial-annotate** — Cell type annotation for spatial transcriptomics data using marker-based
 - **bio-spatial-cnv** — Copy number variation inference from spatial transcriptomics expression
@@ -931,6 +935,7 @@ _Auto-generated index. 1248 skills across 57 categories. Last refresh: 2026-11-1
 - **bio-spatial-trajectory** — Trajectory inference and pseudotime analysis for spatial transcriptomics
 - **bio-spatial-velocity** — RNA velocity and cellular dynamics analysis for spatial transcriptomics
 - **direction-aware-spatial-transcriptomics** — Prepare and evaluate spatial transcriptomics representations using spatially informative genes and directional cellular neighborhoods, wi...
+- **rigid-motion-aware-spatial-cell-dynamics** — Assess spatial transcriptomics time courses for coordinate-frame artifacts and plan or evaluate horizontal flow matching of tissue geomet...
 - **voice-histology-transcriptome-prediction** — Prepare H&E images for VOICE single-cell transcriptome prediction, verify model access and spatial alignment, and evaluate predicted expr...
 
 ### Structural_Biology (12)
