@@ -183,7 +183,7 @@ Copyright (c) 2026 MD BABU MIA, PhD. Open-source components are provided under t
 
 <!-- BEGIN: PIPELINE_INDEX -->
 
-_Auto-generated index. 1253 skills across 57 categories. Last refresh: 2026-11-20T15:03:50.435700+00:00._
+_Auto-generated index. 1257 skills across 57 categories. Last refresh: 2026-11-21T13:46:00.582864+00:00._
 
 ### 3D_Genomics (8)
 
@@ -308,11 +308,12 @@ _Auto-generated index. 1253 skills across 57 categories. Last refresh: 2026-11-2
 - **bio-data-visualization-upset-plots** — Create UpSet plots to visualize set intersections as an alternative to Venn diagrams using UpSetR or upsetplot. Use when comparing overla...
 - **bio-data-visualization-volcano-customization** — Create publication-ready volcano plots with custom thresholds, gene labels, and highlighting using ggplot2, EnhancedVolcano, or matplotli...
 
-### Drug_Discovery (28)
+### Drug_Discovery (29)
 
 - **agentd-drug-discovery** — Use the AgentD workflow to mine evidence, design molecules, and rank candidates with SAR plus ADMET annotations for early drug discovery ...
 - **antibody-design-agent** — An advanced agent for de novo antibody design and optimization using state-of-the-art protein language models (MAGE, RFdiffusion).
 - **antioch-vs-ensemble-virtual-screening** — Plan and run ANTIOCH-VS ensemble virtual screening from protein sequence or receptor structures through conformational selection, docking...
+- **bidirectional-drug-target-screening-audit** — Audit drug-to-target and target-to-drug rankings for model disagreement, recurring candidate preferences, correspondence, and selectivity...
 - **bio-admet-prediction** — Predicts ADMET properties using ADMETlab 3.0 API or DeepChem models. Estimates bioavailability, CYP inhibition, hERG liability, and 119 t...
 - **bio-medea-therapeutic-discovery** — An AI agent for therapeutic discovery that executes transparent, multi-step
 - **bio-molecular-descriptors** — Calculates molecular descriptors and fingerprints using RDKit. Computes Morgan fingerprints (ECFP), MACCS keys, Lipinski properties, QED ...
@@ -616,14 +617,16 @@ _Auto-generated index. 1253 skills across 57 categories. Last refresh: 2026-11-2
 
 - **cellular-senescence-agent** — AI-powered analysis of cellular senescence for aging research, cancer therapy response, and senolytic drug development.
 
-### MCP_Servers (10)
+### MCP_Servers (12)
 
 - **bio-mcpmed-bioinformatics-server** — Model Context Protocol (MCP) server for bioinformatics web services like
 - **biocontext-ai-mcp-registry** — Use the BioContextAI Registry to discover, compare, and select biomedical MCP servers for bioinformatics, systems biology, and biomedical...
 - **biomcp-server** — MCP bio bridge
 - **biomed-agent-mcp** — A general-purpose biomedical knowledge assistant that connects to MCP biomedical data sources (OpenTargets, Monarch, MyGene, MyChem, MyDi...
+- **genefoundry-biomedical-mcp-gateway** — Configure GeneFoundry biomedical MCP access, discover and route namespaced tools, and retrieve genetics and protein evidence with source ...
 - **grebi-biomedical-data-integration** — Integrate biomedical knowledge with GrEBI through ontology-aware identifier mapping, provenance-preserving graph queries, and verified HP...
 - **mcp-operations-2026** — Implement and operate Model Context Protocol systems safely. Use when designing MCP clients or servers, selecting transports, configuring...
+- **pubmed-europe-pmc-literature-mcp** — Connect to PubMed and Europe PMC through MCP to search biomedical literature, retrieve article metadata and available full text, and prod...
 - **pubmed-europe-pmc-mcp** — Search PubMed and Europe PMC through MCP, retrieve article metadata and available full text, resolve identifiers, and extract evidence wi...
 - **pubmed-europe-pmc-mcp-literature-retrieval** — Search PubMed and Europe PMC through MCP, retrieve article metadata and available full text, and preserve identifiers, citations, and MeS...
 - **pubmed-europe-pmc-mcp-retrieval** — Search PubMed and Europe PMC through MCP, retrieve article metadata and available full text, resolve identifiers, and verify citations wi...
@@ -799,7 +802,7 @@ _Auto-generated index. 1253 skills across 57 categories. Last refresh: 2026-11-2
 - **bio-proteomics-structural** — Structural proteomics and cross-linking MS analysis using XlinkX, pLink,
 - **deep-visual-proteomics-agent** — AI-driven integration of cellular imaging, laser microdissection, and ultra-sensitive mass spectrometry for spatially-resolved single-cel...
 
-### Research_Tools (216)
+### Research_Tools (217)
 
 - **bio-adaptyv** — Cloud laboratory platform for automated protein testing and validation.
 - **bio-aeon** — This skill should be used for time series machine learning tasks including
@@ -861,7 +864,7 @@ _Auto-generated index. 1253 skills across 57 categories. Last refresh: 2026-11-2
 - **bio-fluidsim** — Framework for computational fluid dynamics simulations using Python.
 - **bio-fred-economic-data** — Query FRED (Federal Reserve Economic Data) API for 800,000+ economic
 - **bio-gene-database** — Query NCBI Gene via E-utilities/Datasets API. Search by symbol/ID, retrieve
-- _... and 156 more in `Skills/Research_Tools/`_
+- _... and 157 more in `Skills/Research_Tools/`_
 
 ### Self_Driving_Labs (1)
 

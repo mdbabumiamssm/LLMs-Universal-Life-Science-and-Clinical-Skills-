@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-11-20T15:03:50.435700+00:00",
+  "generated_at": "2026-11-21T13:46:00.582864+00:00",
   "generator": "ARTIFICIALINTELLIGENCEGROUP-pipeline v1.0",
-  "total_skills": 1253,
+  "total_skills": 1257,
   "total_errors": 16,
   "skills": [
     {
@@ -2522,6 +2522,29 @@
       "relative_path": "Drug_Discovery/AntiochVsEnsembleVirtualScreening_Agent/SKILL.md",
       "last_modified": "2026-11-12T14:40:01.479654+00:00",
       "body_length": 12229,
+      "capabilities": [
+        "Overview",
+        "When to Use This Skill",
+        "Core Capabilities",
+        "Inputs / Outputs",
+        "References"
+      ]
+    },
+    {
+      "name": "bidirectional-drug-target-screening-audit",
+      "description": "Audit drug-to-target and target-to-drug rankings for model disagreement, recurring candidate preferences, correspondence, and selectivity before allocating experimental screening capacity.",
+      "tool_type": "",
+      "primary_tool": "",
+      "measurable_outcome": "Execute skill workflow successfully with valid output within 15 minutes.",
+      "allowed-tools": [
+        "read_file",
+        "run_shell_command",
+        "web_fetch"
+      ],
+      "file_path": "Skills/Drug_Discovery/BidirectionalDrugTargetScreeningAudit_Agent/SKILL.md",
+      "relative_path": "Drug_Discovery/BidirectionalDrugTargetScreeningAudit_Agent/SKILL.md",
+      "last_modified": "2026-11-21T13:43:04.117506+00:00",
+      "body_length": 9673,
       "capabilities": [
         "Overview",
         "When to Use This Skill",
@@ -17479,6 +17502,30 @@
       ]
     },
     {
+      "name": "genefoundry-biomedical-mcp-gateway",
+      "description": "Configure GeneFoundry biomedical MCP access, discover and route namespaced tools, and retrieve genetics and protein evidence with source provenance and explicit upstream failure handling.",
+      "tool_type": "",
+      "primary_tool": "",
+      "measurable_outcome": "Execute skill workflow successfully with valid output within 15 minutes.",
+      "allowed-tools": [
+        "read_file",
+        "run_shell_command",
+        "web_fetch"
+      ],
+      "file_path": "Skills/MCP_Servers/GenefoundryBiomedicalMcpGateway_Agent/SKILL.md",
+      "relative_path": "MCP_Servers/GenefoundryBiomedicalMcpGateway_Agent/SKILL.md",
+      "last_modified": "2026-11-21T13:45:10.828322+00:00",
+      "body_length": 9536,
+      "capabilities": [
+        "Overview",
+        "When to Use This Skill",
+        "Core Capabilities",
+        "Execution workflow and completion check",
+        "Inputs / Outputs",
+        "References"
+      ]
+    },
+    {
       "name": "grebi-biomedical-data-integration",
       "description": "Integrate biomedical knowledge with GrEBI through ontology-aware identifier mapping, provenance-preserving graph queries, and verified HPC pipeline, API, and MCP workflows.",
       "tool_type": "",
@@ -17543,6 +17590,32 @@
         "Core Capabilities",
         "Workflow",
         "Example Usage"
+      ]
+    },
+    {
+      "name": "pubmed-europe-pmc-literature-mcp",
+      "description": "Connect to PubMed and Europe PMC through MCP to search biomedical literature, retrieve article metadata and available full text, and produce source-linked citations and MeSH-informed results.",
+      "tool_type": "",
+      "primary_tool": "",
+      "measurable_outcome": "Execute skill workflow successfully with valid output within 15 minutes.",
+      "allowed-tools": [
+        "read_file",
+        "run_shell_command",
+        "web_fetch"
+      ],
+      "file_path": "Skills/MCP_Servers/PubmedEuropePmcLiteratureMcp_Agent/SKILL.md",
+      "relative_path": "MCP_Servers/PubmedEuropePmcLiteratureMcp_Agent/SKILL.md",
+      "last_modified": "2026-11-21T13:45:56.841259+00:00",
+      "body_length": 6997,
+      "capabilities": [
+        "Overview",
+        "When to Use This Skill",
+        "Core Capabilities",
+        "Installation and connection",
+        "Retrieval workflow",
+        "Error handling and completion",
+        "Inputs / Outputs",
+        "References"
       ]
     },
     {
@@ -28716,6 +28789,29 @@
       "relative_path": "Research_Tools/OntologyConstrainedBiomedicalMetadataStandardization_Agent/SKILL.md",
       "last_modified": "2026-10-24T22:11:12.602194+00:00",
       "body_length": 6908,
+      "capabilities": [
+        "Overview",
+        "When to Use This Skill",
+        "Core Capabilities",
+        "Inputs / Outputs",
+        "References"
+      ]
+    },
+    {
+      "name": "open-science-research-workbench",
+      "description": "Configure Open-Science projects, model backends and research tools, run reproducible Python/R analyses, and export artifacts with traceable inputs and execution evidence.",
+      "tool_type": "",
+      "primary_tool": "",
+      "measurable_outcome": "Execute skill workflow successfully with valid output within 15 minutes.",
+      "allowed-tools": [
+        "read_file",
+        "run_shell_command",
+        "web_fetch"
+      ],
+      "file_path": "Skills/Research_Tools/OpenScienceResearchWorkbench_Agent/SKILL.md",
+      "relative_path": "Research_Tools/OpenScienceResearchWorkbench_Agent/SKILL.md",
+      "last_modified": "2026-11-21T13:43:59.619423+00:00",
+      "body_length": 6678,
       "capabilities": [
         "Overview",
         "When to Use This Skill",
