@@ -13,7 +13,6 @@
 import subprocess
 import pandas as pd
 import numpy as np
-from pathlib import Path
 
 
 def run_mlst(fasta_files, scheme=None):

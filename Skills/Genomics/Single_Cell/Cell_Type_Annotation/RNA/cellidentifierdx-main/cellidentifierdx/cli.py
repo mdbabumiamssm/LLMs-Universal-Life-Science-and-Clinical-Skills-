@@ -10,7 +10,6 @@
 
 import pandas as pd
 import numpy as np
-from .utils import load_data
 from .scoring import bayesian_score
 
 def annotate_cell_types(reference_file, expr_file, sheet_name):

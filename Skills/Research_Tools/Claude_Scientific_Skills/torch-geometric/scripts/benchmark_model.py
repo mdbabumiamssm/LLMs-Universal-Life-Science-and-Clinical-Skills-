@@ -13,7 +13,7 @@ Usage:
 import argparse
 import torch
 import torch.nn.functional as F
-from torch_geometric.nn import GCNConv, GATConv, SAGEConv, GINConv
+from torch_geometric.nn import GCNConv, GATConv, SAGEConv
 from torch_geometric.datasets import Planetoid, TUDataset
 from torch_geometric.loader import DataLoader
 from torch_geometric.nn import global_mean_pool

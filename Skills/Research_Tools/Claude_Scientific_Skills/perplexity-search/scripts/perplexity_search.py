@@ -20,7 +20,7 @@ import os
 import sys
 import json
 import argparse
-from typing import Optional, Dict, Any, List
+from typing import Optional, Dict, Any
 
 
 def check_dependencies():

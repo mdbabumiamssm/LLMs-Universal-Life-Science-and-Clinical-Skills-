@@ -15,7 +15,6 @@ Reading, writing, and standardizing molecular structures.
 '''
 
 from rdkit import Chem
-from rdkit.Chem import AllChem
 from rdkit.Chem.MolStandardize import rdMolStandardize
 from rdkit.Chem.Draw import rdMolDraw2D
 from pathlib import Path

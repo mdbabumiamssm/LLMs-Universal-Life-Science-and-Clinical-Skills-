@@ -28,7 +28,7 @@ import os
 from dataclasses import dataclass, asdict
 from datetime import datetime
 from statistics import mean, stdev
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List
 
 # Adjust path to find platform module if running standalone
 if __name__ == "__main__":

@@ -37,14 +37,12 @@ from biokernel.schema.io_types import (
     AgentRequest,
     AgentResponse,
     AgentStep,
-    ExecutionMode,
     LLMRequest,
     ProviderName,
     SkillMetadata,
     SkillType,
     WorkflowDefinition,
     WorkflowStep,
-    WorkflowStatus,
 )
 
 

@@ -8,8 +8,6 @@
 #
 # Provenance: Authenticated by MD BABU MIA
 
-import os
-import re
 
 class SkillsPlanner:
     def __init__(self, plan_path="SKILLS_GAP_ANALYSIS_AND_IMPROVEMENT_PLAN_2026.md"):

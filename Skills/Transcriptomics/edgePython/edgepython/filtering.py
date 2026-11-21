@@ -6,7 +6,6 @@ Port of edgeR's filterByExpr.
 """
 
 import numpy as np
-import pandas as pd
 from .expression import cpm
 
 

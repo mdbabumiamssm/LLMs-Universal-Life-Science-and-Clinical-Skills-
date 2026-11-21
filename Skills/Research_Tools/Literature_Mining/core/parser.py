@@ -1,7 +1,6 @@
 """Parse different input types (URL, PDF, DOI) to extract text."""
 
 import re
-import tempfile
 from pathlib import Path
 from typing import Tuple
 import requests

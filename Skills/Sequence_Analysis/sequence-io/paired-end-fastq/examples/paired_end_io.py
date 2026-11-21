@@ -13,7 +13,6 @@
 
 from Bio import SeqIO
 import gzip
-from pathlib import Path
 
 def parse_paired_fastq(r1_path, r2_path):
     '''Parse paired FASTQ files together'''

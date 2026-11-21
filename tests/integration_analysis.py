@@ -10,7 +10,6 @@
 
 import scanpy as sc
 import anndata as ad
-import matplotlib.pyplot as plt
 import os
 
 # Set settings

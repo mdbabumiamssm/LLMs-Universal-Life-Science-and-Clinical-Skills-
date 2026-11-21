@@ -13,7 +13,6 @@
 
 import pandas as pd
 import anndata as ad
-import numpy as np
 
 def load_featurecounts(path):
     '''Load featureCounts output'''

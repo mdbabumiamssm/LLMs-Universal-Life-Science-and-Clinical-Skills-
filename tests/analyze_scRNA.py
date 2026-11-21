@@ -12,9 +12,6 @@ import sys
 import os
 import scanpy as sc
 import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
 import warnings
 
 # Suppress warnings for cleaner output

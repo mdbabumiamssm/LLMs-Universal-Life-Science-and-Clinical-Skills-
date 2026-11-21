@@ -9,7 +9,7 @@
 # Provenance: Authenticated by MD BABU MIA
 
 import numpy as np
-from typing import List, Dict
+from typing import List
 
 class SimpleVectorStore:
     """
