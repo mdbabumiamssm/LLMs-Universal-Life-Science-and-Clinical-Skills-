@@ -31,7 +31,7 @@ Version: 2.0.0
 Date: January 2026
 """
 
-from typing import List, Dict, Any, Optional, Callable, Tuple
+from typing import List, Dict, Any, Optional
 from dataclasses import dataclass, field
 from abc import ABC, abstractmethod
 from datetime import datetime

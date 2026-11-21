@@ -11,7 +11,7 @@
 import sys
 import os
 import json
-from typing import Dict, Any, Optional, List
+from typing import Dict, Any, List
 
 # Adjust path to find platform module
 current_dir = os.path.dirname(os.path.abspath(__file__))

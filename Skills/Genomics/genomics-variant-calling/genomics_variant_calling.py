@@ -19,10 +19,8 @@ import argparse
 import logging
 import random
 import sys
-from collections import Counter
 from pathlib import Path
 
-import numpy as np
 import pandas as pd
 
 _PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent.parent

@@ -10,8 +10,6 @@
 
 '''Python wrapper for local BLAST operations'''
 import subprocess
-import os
-from pathlib import Path
 
 def make_blast_db(fasta_file, db_name, db_type='nucl', parse_seqids=True):
     '''Create a BLAST database from a FASTA file'''

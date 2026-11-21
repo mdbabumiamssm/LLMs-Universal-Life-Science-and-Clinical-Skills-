@@ -12,7 +12,6 @@
 
 import scanpy as sc
 import tangram as tg
-import numpy as np
 import pandas as pd
 
 adata_sc = sc.read_h5ad('reference_scrna.h5ad')

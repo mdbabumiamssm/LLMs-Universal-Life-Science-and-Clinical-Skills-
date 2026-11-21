@@ -10,7 +10,6 @@
 
 '''Visualize spatial transcriptomics data'''
 
-import squidpy as sq
 import scanpy as sc
 import matplotlib.pyplot as plt
 

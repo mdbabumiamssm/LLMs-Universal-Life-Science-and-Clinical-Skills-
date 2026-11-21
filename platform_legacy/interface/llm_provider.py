@@ -11,14 +11,11 @@ interface to participate in the BioKernel orchestration layer.
 from __future__ import annotations
 
 from abc import ABC, abstractmethod
-from typing import Any, AsyncIterator, Dict, List, Optional
+from typing import Any, AsyncIterator, Dict, Optional
 
 from platform.schema.io_types import (
     LLMRequest,
     LLMResponse,
-    ToolCall,
-    ToolDefinition,
-    ToolResult,
 )
 
 

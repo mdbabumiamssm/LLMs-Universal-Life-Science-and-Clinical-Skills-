@@ -18,7 +18,6 @@ Use Case: Automated Lab Monitoring (Cell Culture Confluency).
 """
 
 import time
-import random
 
 class SimulatedVLM:
     """
