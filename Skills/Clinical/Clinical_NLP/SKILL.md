@@ -176,6 +176,8 @@ The **Clinical NLP Skill** converts free-text clinical notes into structured dat
 
 119. **PECARN extraction-versus-calculation research evaluation**: Use the PECARN worked example below to evaluate LLM extraction separately from deterministic rule calculation. Before implementation, verify the cited paper and authoritative PECARN rule specification, including eligibility, predictor definitions, and classification logic; record unresolved details rather than inferring them. Preserve source-note identifiers, assessment times, and exact evidence spans for every variable; distinguish explicitly absent findings from undocumented, uncertain, or conflicting findings. On held-out clinician-reviewed records, validate each extracted variable and its evidence, then independently compare calculated classifications with those derived from clinician-adjudicated inputs, reporting false very-low-risk calls and indeterminate cases. These are proposed research safeguards, not an implemented or clinically validated extractor feature.
 
+120. **Conversational standardized back-pain intake (candidate workflow)**: Use the crossover study as a candidate reference for interactive elicitation of structured patient responses, distinct from extracting existing clinical notes. Evaluate schema completeness, agreement against reference responses, missing-data handling, usability, and patient preference separately using the example below; student-proxy findings do not establish patient performance or an implemented extractor capability.
+
 ## Workflow
 
 1.  **Input**: A string of clinical text or a text file.
@@ -324,6 +326,20 @@ Do not infer recurrent stroke from registry context. Adjudicators review the ori
 
 **Local evaluation additions:** Freeze prompts and mappings before patient-disjoint testing against independent dual clinician annotations with adjudicated disagreements. Report each class's support, TP/FP/FN, precision, recall, and F1 with uncertainty, alongside macro and micro summaries; account for sampling weights when enriching rare labels. Review false positives and missed labels by negation, suspicion, abbreviation, temporal context, hierarchy, and unsupported inference. Audit evidence-span correctness, structured-field mapping errors, unknown frequency, and adjudication outcomes separately. Report unresolved cases and rare-class denominators rather than hiding them in overall accuracy.
 
+### Worked example: conversational back-pain intake
+
+**Reviewed methods and limits:** The [indexed abstract](https://europepmc.org/article/MED/43063990) describes a GPT-5.0 conversational agent collecting the 43-item NIH Recommended Minimal Dataset for chronic low back pain in a crossover comparison with standard forms, with 30 university students acting as patient proxies. Outcomes included completeness, correctness, efficiency, completion time, usability (System Usability Scale), perceived usefulness (Technology Acceptance Model), conversational quality, and preference. Full methods were inaccessible: reference-response construction, crossover order allocation, and missing-data rules remain unverified. Review these before reproducing the protocol. Reported completeness concerned items asked; it must not be interpreted as coverage of all applicable schema items. Student preference is not patient preference.
+
+**Local intake example (proposed evaluation, not reported study procedures):** Version the standardized questionnaire's item definitions, allowed values, and branching rules before elicitation. Store each item as `{item_id, value, response_status, dialogue_turn, verbatim_response, clarification_history}`. If a respondent says “I don't remember” to an applicable item, retain a null value with `response_status: unknown`; do not infer a negative or fill a plausible answer. Distinguish not asked, declined, unknown, not applicable under verified branching rules, and unresolved conflicting responses. Clarify ambiguous answers and preserve corrections with their supporting dialogue turns. This collects new information through interaction; note extraction instead requires evidence already present in a source document.
+
+Evaluate the following independently:
+
+* **Schema completeness:** Report items asked and valid responses captured against all applicable schema items, plus fully completed records. A present JSON key or null placeholder does not count as a completed response.
+* **Reference agreement:** Prespecify independent reference responses and adjudication rules; compare item-level values on paired agent/form records using the same item definitions and assessment window. Report mismatches and evaluable denominators, retaining missing cases in coverage reporting; form responses are a comparator, not automatically ground truth. Account for within-participant pairing and examine order effects in a crossover evaluation.
+* **Missing-data handling:** Audit each missingness category, unsupported fills, contradictory answers, and clarification outcomes separately from agreement on observed responses; do not silently exclude incomplete sessions.
+* **Usability:** Assess usability with a defined instrument such as the System Usability Scale; report completion time and burden separately from data correctness.
+* **Patient preference:** In a patient evaluation, collect agent/form/no-preference choices and reasons after both modes, with response denominators. Keep preference separate from usability and accuracy, and report student-proxy results separately from patient results.
+
 ## References
 
 *   https://pubmed.ncbi.nlm.nih.gov/42021926/
@@ -349,5 +365,7 @@ Do not infer recurrent stroke from registry context. Adjudicators review the ori
 *   https://pubmed.ncbi.nlm.nih.gov/43037770/ — Decoding Complications: Large Language Model-Based Classification of Free-Text Entries in Clinical Stroke Registries. Reviewed journal methods and Online Resource 2 (annotation rules and label definitions): https://link.springer.com/article/10.1007/s10916-026-02486-y.
 
 *   https://pubmed.ncbi.nlm.nih.gov/42893265/ — Source finding for the PECARN extraction-versus-calculation research evaluation; verify full paper and authoritative rule specification before implementation.
+
+*   https://pubmed.ncbi.nlm.nih.gov/43063990/ — Evaluating a Large Language Model Conversational Agent for Collecting Standardized Back Pain Data: A Cross-Over Study of Accuracy, Usability, and User Preference. Methods Inf Med, 2026 Nov 20. Abstract methods reviewed via Europe PMC: https://europepmc.org/article/MED/43063990; full methods unavailable: https://doi.org/10.1055/a-3009-7011. Student-proxy study; local evaluation additions above are not claimed study procedures.
 
 <!-- AUTHOR_SIGNATURE: 9a7f3c2e-MD-BABU-MIA-2026-MSSM-SECURE -->
