@@ -10,7 +10,6 @@
 
 import scanpy as sc
 import liana as li
-import pandas as pd
 import matplotlib.pyplot as plt
 
 adata = sc.read_h5ad('adata_annotated.h5ad')

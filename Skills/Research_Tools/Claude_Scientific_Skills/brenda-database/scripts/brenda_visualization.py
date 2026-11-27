@@ -23,9 +23,8 @@ Usage:
     plot_michaelis_menten("1.1.1.1", substrate="ethanol")
 """
 
-import math
 import numpy as np
-from typing import List, Dict, Any, Optional, Tuple
+from typing import List, Dict, Any
 import matplotlib.pyplot as plt
 import seaborn as sns
 from pathlib import Path

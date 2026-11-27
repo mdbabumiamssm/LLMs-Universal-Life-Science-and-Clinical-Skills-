@@ -11,7 +11,6 @@
 '''TCR-epitope specificity prediction'''
 
 import pandas as pd
-from difflib import SequenceMatcher
 
 
 def parse_tcr_sequences(tcr_data):

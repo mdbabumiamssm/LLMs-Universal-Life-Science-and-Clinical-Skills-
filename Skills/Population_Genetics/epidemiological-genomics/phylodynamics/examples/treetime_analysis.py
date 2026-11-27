@@ -11,7 +11,6 @@
 '''Time-scaled phylogenetics with TreeTime'''
 
 from datetime import datetime
-import pandas as pd
 
 
 def convert_to_decimal_year(date_str):

@@ -11,7 +11,7 @@
 '''Check sequence compatibility for Golden Gate cloning'''
 
 from Bio import SeqIO
-from Bio.Restriction import BsaI, BsmBI, BbsI, SapI, Analysis
+from Bio.Restriction import BsaI, BsmBI, BbsI, SapI
 
 record = SeqIO.read('insert.fasta', 'fasta')
 seq = record.seq

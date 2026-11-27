@@ -11,7 +11,6 @@
 '''Boruta all-relevant feature selection for biomarker discovery'''
 
 import pandas as pd
-import numpy as np
 from boruta import BorutaPy
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.feature_selection import SelectKBest, f_classif

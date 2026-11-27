@@ -14,7 +14,6 @@
 import scipy.sparse as sp
 import anndata as ad
 import numpy as np
-import pandas as pd
 
 def dense_to_sparse(dense_matrix):
     '''Convert dense matrix to sparse CSR format'''

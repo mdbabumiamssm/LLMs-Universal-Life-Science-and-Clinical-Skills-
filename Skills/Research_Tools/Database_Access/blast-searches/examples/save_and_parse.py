@@ -10,7 +10,6 @@
 
 '''Save BLAST results and parse later'''
 from Bio.Blast import NCBIWWW, NCBIXML
-from Bio import SeqIO
 
 def run_and_save_blast(sequence, output_file, program='blastn', database='nt'):
     '''Run BLAST and save XML results'''

@@ -19,7 +19,7 @@ and explanatory "Consultant Mode" (Claude).
 import sys
 import os
 import json
-from typing import List, Dict, Any
+from typing import Dict, Any
 
 # Adjust path to find platform module
 if __name__ == "__main__":

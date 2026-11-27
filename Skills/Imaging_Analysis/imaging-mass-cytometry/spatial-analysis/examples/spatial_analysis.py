@@ -11,7 +11,6 @@
 '''Spatial analysis of IMC data'''
 import squidpy as sq
 import anndata as ad
-import scanpy as sc
 
 # Load phenotyped data
 adata = ad.read_h5ad('imc_phenotyped.h5ad')

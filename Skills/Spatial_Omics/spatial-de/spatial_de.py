@@ -41,7 +41,6 @@ from omicsclaw.common.report import (
     write_result_json,
 )
 from omicsclaw.spatial.adata_utils import (
-    require_preprocessed,
     store_analysis_metadata,
 )
 from omicsclaw.spatial.viz_utils import save_figure

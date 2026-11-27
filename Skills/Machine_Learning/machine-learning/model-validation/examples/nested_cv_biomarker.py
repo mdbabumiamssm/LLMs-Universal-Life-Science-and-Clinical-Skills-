@@ -12,11 +12,11 @@
 
 import pandas as pd
 import numpy as np
-from sklearn.model_selection import StratifiedKFold, GridSearchCV, cross_val_predict
+from sklearn.model_selection import StratifiedKFold, GridSearchCV
 from sklearn.preprocessing import StandardScaler
 from sklearn.pipeline import Pipeline
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import roc_auc_score, classification_report
+from sklearn.metrics import roc_auc_score
 
 expr = pd.read_csv('expression.csv', index_col=0)
 meta = pd.read_csv('metadata.csv', index_col=0)

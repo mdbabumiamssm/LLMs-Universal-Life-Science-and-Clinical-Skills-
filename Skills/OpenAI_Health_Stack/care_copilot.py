@@ -9,9 +9,8 @@
 # Provenance: Authenticated by MD BABU MIA
 
 import json
-import os
 from dataclasses import dataclass
-from typing import List, Optional, Dict, Any
+from typing import List, Dict, Any
 
 # Mocking the OpenAI SDK structure for demonstration
 # In production: from openai import OpenAI

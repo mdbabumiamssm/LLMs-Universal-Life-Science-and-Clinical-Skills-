@@ -26,7 +26,6 @@ from pathlib import Path
 
 import numpy as np
 import pandas as pd
-from scipy import sparse
 
 warnings.filterwarnings("ignore", category=FutureWarning)
 
@@ -44,7 +43,6 @@ from omicsclaw.common.report import (
 )
 from omicsclaw.spatial.adata_utils import (
     get_spatial_key,
-    require_preprocessed,
     store_analysis_metadata,
 )
 from omicsclaw.spatial.dependency_manager import require

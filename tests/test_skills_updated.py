@@ -12,7 +12,6 @@
 import sys
 import os
 import unittest
-import json
 from datetime import datetime
 
 # Adjust path to include project root AND platform folder

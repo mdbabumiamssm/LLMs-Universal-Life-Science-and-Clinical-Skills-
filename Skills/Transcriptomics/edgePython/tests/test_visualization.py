@@ -45,7 +45,6 @@ class TestVisualizationSmoke:
 
     @pytest.fixture(scope="class")
     def viz_data(self):
-        import matplotlib.pyplot as plt
         y = pd.read_csv(f"{CSV_DIR}/test_data_part4.csv").values
         y[0:5, 1:3] = 0
         design = np.column_stack([np.ones(3),
