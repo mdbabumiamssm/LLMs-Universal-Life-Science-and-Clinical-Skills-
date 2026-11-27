@@ -1,7 +1,7 @@
 """Extract GEO accessions and metadata from text."""
 
 import re
-from typing import Dict, List, Set
+from typing import Dict, List
 
 
 def extract_geo_accessions(text: str) -> Dict[str, List[str]]:

@@ -11,7 +11,6 @@
 '''Load 10X Visium spatial transcriptomics data'''
 
 import squidpy as sq
-import scanpy as sc
 
 adata = sq.read.visium('spaceranger_output/')
 print(f'Loaded {adata.n_obs} spots, {adata.n_vars} genes')

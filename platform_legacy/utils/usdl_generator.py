@@ -11,7 +11,6 @@
 import os
 import ast
 import yaml
-import re
 from typing import Dict, Any
 
 class USDLGenerator:

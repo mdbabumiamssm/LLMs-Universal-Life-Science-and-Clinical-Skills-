@@ -26,14 +26,12 @@ Date: 2024
 """
 
 import os
-import sys
 import warnings
 import numpy as np
 import pandas as pd
 import scanpy as sc
 import matplotlib.pyplot as plt
 import seaborn as sns
-from scipy import sparse
 from scipy.stats import median_abs_deviation
 import anndata as ad
 

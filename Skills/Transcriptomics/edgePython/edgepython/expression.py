@@ -6,8 +6,7 @@ Port of edgeR's cpm, rpkm, tpm, aveLogCPM, cpmByGroup, rpkmByGroup.
 """
 
 import numpy as np
-import warnings
-from .utils import expand_as_matrix, add_prior_count
+from .utils import add_prior_count
 
 
 def cpm(y, lib_size=None, offset=None, log=False, prior_count=2,

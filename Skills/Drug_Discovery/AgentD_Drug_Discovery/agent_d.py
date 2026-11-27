@@ -18,7 +18,6 @@ and real property prediction via RDKit.
 
 import sys
 import os
-import json
 
 # Add sibling path for ChemCrow tools
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'ChemCrow_Tools')))

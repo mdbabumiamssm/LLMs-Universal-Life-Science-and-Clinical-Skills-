@@ -13,7 +13,6 @@
 
 import pandas as pd
 import matplotlib.pyplot as plt
-import numpy as np
 import sys
 
 def plot_cnv_profile(cnr_file, output_file='cnv_profile.png'):

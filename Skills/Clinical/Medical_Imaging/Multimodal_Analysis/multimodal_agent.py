@@ -18,7 +18,6 @@ Supports Gemini 1.5 Pro (Google) and GPT-4o (OpenAI) APIs.
 import argparse
 import json
 import os
-import sys
 from typing import Dict, Any
 
 def mock_vlm_inference(image_path: str, prompt: str, model: str) -> Dict[str, Any]:

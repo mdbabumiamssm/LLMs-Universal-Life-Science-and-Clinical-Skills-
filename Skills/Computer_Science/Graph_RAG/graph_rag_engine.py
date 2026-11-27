@@ -19,7 +19,6 @@ Use Case: Answering "How is Drug A related to Disease B?" via multi-hop pathways
 """
 
 import networkx as nx
-import json
 
 class GraphRAG:
     def __init__(self):

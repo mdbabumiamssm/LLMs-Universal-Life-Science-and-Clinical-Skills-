@@ -10,7 +10,7 @@
 
 import argparse
 import json
-from typing import List, Dict, Tuple, Any
+from typing import List, Dict, Any
 
 class DrugInteractionChecker:
     """

@@ -11,7 +11,6 @@
 '''Analyze phosphorylation sites from MaxQuant output'''
 import pandas as pd
 import numpy as np
-from collections import Counter
 
 phospho = pd.read_csv('Phospho (STY)Sites.txt', sep='\t', low_memory=False)
 print(f'Total sites: {len(phospho)}')

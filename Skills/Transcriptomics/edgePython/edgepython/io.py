@@ -1751,7 +1751,6 @@ def to_anndata(obj, adata=None):
             "Install with: pip install anndata"
         )
 
-    from .classes import DGEList, DGEExact, DGEGLM, DGELRT, TopTags
 
     # --- Extract counts if available ---
     counts = None

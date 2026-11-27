@@ -8,7 +8,6 @@ Port of edgeR's glmLRT, glmQLFTest, glmTreat.
 import numpy as np
 import pandas as pd
 from scipy.stats import chi2, f as f_dist
-from scipy.special import gammaln
 
 from .expression import ave_log_cpm
 from .limma_port import contrast_as_coef
@@ -204,9 +203,8 @@ def glm_treat(glmfit, coef=None, contrast=None, lfc=np.log2(1.2),
     -------
     dict (DGELRT-like) with table including p-values.
     """
-    from scipy.stats import norm as norm_dist, t as t_dist
+    from scipy.stats import norm as norm_dist
     from .glm_fit import glm_fit
-    from .compressed_matrix import CompressedMatrix
 
     if lfc < 0:
         raise ValueError("lfc has to be non-negative")

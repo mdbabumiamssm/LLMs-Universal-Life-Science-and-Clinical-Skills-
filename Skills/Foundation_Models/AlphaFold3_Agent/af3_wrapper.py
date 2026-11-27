@@ -10,7 +10,7 @@
 
 import os
 import json
-from typing import Optional, Dict
+from typing import Dict
 
 class AlphaFold3Wrapper:
     """

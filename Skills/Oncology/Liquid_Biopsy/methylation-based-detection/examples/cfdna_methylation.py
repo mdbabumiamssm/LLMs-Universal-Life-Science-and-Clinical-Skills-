@@ -16,7 +16,6 @@ cfDNA methylation analysis for cancer detection.
 import subprocess
 import pandas as pd
 import numpy as np
-from scipy import stats
 from scipy.optimize import nnls
 
 

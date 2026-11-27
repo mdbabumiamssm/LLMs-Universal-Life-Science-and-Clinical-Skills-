@@ -23,7 +23,6 @@ import argparse
 import logging
 import random
 import sys
-from collections import Counter
 from pathlib import Path
 
 import numpy as np
